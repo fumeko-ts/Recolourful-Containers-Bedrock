@@ -1,0 +1,4 @@
+{
+  "namespace": "anvil",
+  "anvil_screen@global.inventory_screen_common": {"$screen_content": "anvil_screen.anvil_panel"}
+}

@@ -1,0 +1,4 @@
+{
+  "namespace": "stonecutter",
+  "stonecutter_screen@global.inventory_screen_common": {"$screen_content": "stonecutter_screen.stonecutter_panel"}
+}
