@@ -11,6 +11,7 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [ 16, 16 ],
+          "animation_reset_name": "screen_animation_reset",
           "offset": [ 15, 47 ],
           "uv_size": [ 16, 16 ],
           "uv": "@portal.portal_0",

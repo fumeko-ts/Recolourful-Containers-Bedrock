@@ -11,6 +11,7 @@
           "size": [ 21, 21 ],
           "layer": 5,
           "offset": [ -7, 6 ],
+          "animation_reset_name": "screen_animation_reset",
           "uv_size": [ 21, 21 ],
           "uv": "@compass.compass_0",
           "anchor_from": "top_right",
