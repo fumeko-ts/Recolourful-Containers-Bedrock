@@ -191,44 +191,6 @@
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right"
         }
-      },
-      {
-        "mount_screen_bindings@common.text_edit_box": {
-          "size": ["100%", 28],
-          "max_length": 99,
-          "$text_edit_text_control": "text_control",
-          "$text_alignment": "center",
-          "controls": [
-            {
-              "text_control": {
-                "type": "label",
-                "layer": 9,
-                "text": "#item_name",
-                "visible": true,
-                "property_bag": {"#property_field": "#item_name"},
-                "localize": false,
-                "bindings": [
-                  {
-                    "binding_type"        : "view",
-                    "source_control_name" : "display_text",
-                    "source_property_name": "#item_name",
-                    "target_property_name": "#current_input_text"
-                  },
-                  {"binding_name": "#name_label", "binding_condition": "always"},
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#current_input_text + ('ui:' + ('%.1s' * #name_label)))",
-                    "target_property_name": "#item_name"
-                  }
-                ]
-              }
-            }
-          ],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "$place_holder_text": "Input here.."
-        }
       }
     ]
   },

@@ -57,6 +57,7 @@
                   "uv": "$uv_anim",
                   "uv_size": [12, 5],
                   "size": [12, 5],
+                  "animation_reset_name": "screen_animation_reset",
                   "offset": [-16, -31],
                   "texture": "$anim_sprite"
               }
@@ -153,6 +154,7 @@
                   "anchor_to": "center",
                   "uv": "$uv_anim",
                   "uv_size": [12, 5],
+                  "animation_reset_name": "screen_animation_reset",
                   "size": [12, 5],
                   "offset": [-16, -31],
                   "texture": "optifine/anim/villager/wandering"
@@ -195,23 +197,20 @@
       }
     ]
   },
-  "anim_0": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],   "next": "@villager_distinguisher.anim_1", "duration": 1.67 },
-  "anim_1": { "anim_type": "uv", "from": [0, 5],   "to": [0, 5],   "next": "@villager_distinguisher.anim_2", "duration": 1.0 },
-  "anim_2": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],   "next": "@villager_distinguisher.anim_3", "duration": 1.0 },
-  "anim_3": { "anim_type": "uv", "from": [0, 10],  "to": [0, 10],  "next": "@villager_distinguisher.anim_4", "duration": 0.33 },
-  "anim_4": { "anim_type": "uv", "from": [0, 20],  "to": [0, 20],  "next": "@villager_distinguisher.anim_5", "duration": 0.03 },
-  "anim_5": { "anim_type": "uv", "from": [0, 25],  "to": [0, 25],  "next": "@villager_distinguisher.anim_6", "duration": 0.03 },
-  "anim_6": { "anim_type": "uv", "from": [0, 30],  "to": [0, 30],  "next": "@villager_distinguisher.anim_7", "duration": 0.03 },
-  "anim_7": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],   "next": "@villager_distinguisher.wait_1", "duration": 1.0 },
-  "anim_8": { "anim_type": "uv", "from": [0, 15],  "to": [0, 15],  "next": "@villager_distinguisher.anim_0", "duration": 0.67 },
-  "wait_1": { "anim_type": "wait", "next": "@villager_distinguisher.anim_8", "duration": 2 },
+"anim_0": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],   "next": "@villager_distinguisher.anim_1", "duration": 5.0 },
+"anim_1": { "anim_type": "uv", "from": [0, 5],   "to": [0, 5],   "next": "@villager_distinguisher.anim_2", "duration": 3.0 },
+"anim_2": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],   "next": "@villager_distinguisher.anim_3", "duration": 3.0 },
+"anim_3": { "anim_type": "uv", "from": [0, 10],  "to": [0, 10],  "next": "@villager_distinguisher.anim_4", "duration": 1.0 },
+"anim_4": { "anim_type": "uv", "from": [0, 20],  "to": [0, 20],  "next": "@villager_distinguisher.anim_5", "duration": 0.1 },
+"anim_5": { "anim_type": "uv", "from": [0, 25],  "to": [0, 25],  "next": "@villager_distinguisher.anim_6", "duration": 0.1 },
+"anim_6": { "anim_type": "uv", "from": [0, 30],  "to": [0, 30],  "next": "@villager_distinguisher.anim_0", "duration": 0.1 },
 
-  "weaponsmith_anim_0": {"anim_type":"uv","from":[0,0],"to":[0,0],"next":"@villager_distinguisher.weaponsmith_anim_1","duration":1.00},
-  "weaponsmith_anim_1": {"anim_type":"uv","from":[0,5],"to":[0,5],"next":"@villager_distinguisher.weaponsmith_anim_2","duration":0.20},
-  "weaponsmith_anim_2": {"anim_type":"uv","from":[0,15],"to":[0,15],"next":"@villager_distinguisher.weaponsmith_anim_3","duration":0.02},
-  "weaponsmith_anim_3": {"anim_type":"uv","from":[0,20],"to":[0,20],"next":"@villager_distinguisher.weaponsmith_anim_4","duration":0.02},
-  "weaponsmith_anim_4": {"anim_type":"uv","from":[0,25],"to":[0,25],"next":"@villager_distinguisher.weaponsmith_anim_5","duration":0.02},
-  "weaponsmith_anim_5": {"anim_type":"uv","from":[0,0],"to":[0,0],"next":"@villager_distinguisher.weaponsmith_anim_wait","duration":0.60},
-  "weaponsmith_anim_6": {"anim_type":"uv","from":[0,10],"to":[0,10],"next":"@villager_distinguisher.weaponsmith_anim_0","duration":0.40},
-  "weaponsmith_anim_wait": {"anim_type": "wait", "duration": 2, "next": "@villager_distinguisher.weaponsmith_anim_6"}
+"weaponsmith_anim_0": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],    "next": "@villager_distinguisher.weaponsmith_anim_1", "duration": 5.0 },
+"weaponsmith_anim_1": { "anim_type": "uv", "from": [0, 5],   "to": [0, 5],    "next": "@villager_distinguisher.weaponsmith_anim_2", "duration": 1.0 },
+"weaponsmith_anim_2": { "anim_type": "uv", "from": [0, 15],  "to": [0, 15],   "next": "@villager_distinguisher.weaponsmith_anim_3", "duration": 0.1 },
+"weaponsmith_anim_3": { "anim_type": "uv", "from": [0, 20],  "to": [0, 20],   "next": "@villager_distinguisher.weaponsmith_anim_4", "duration": 0.1 },
+"weaponsmith_anim_4": { "anim_type": "uv", "from": [0, 25],  "to": [0, 25],   "next": "@villager_distinguisher.weaponsmith_anim_5", "duration": 0.1 },
+"weaponsmith_anim_5": { "anim_type": "uv", "from": [0, 0],   "to": [0, 0],    "next": "@villager_distinguisher.weaponsmith_anim_6", "duration": 3.0 },
+"weaponsmith_anim_6": { "anim_type": "uv", "from": [0, 10],  "to": [0, 10],   "next": "@villager_distinguisher.weaponsmith_anim_0", "duration": 2.0 }
+
 }
