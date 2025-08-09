@@ -591,8 +591,8 @@
 
 // text colors for the button in the enchanting table also rgb and rgba max value is 1.0
 "$enchant_light_green": [0.475, 0.95, 0.11875],
-"$enchant_light_yellow": [1.0, 1.0, 0.5],
-"$enchant_light_brown": [0.392, 0.357, 0.275, 1.0],
+"$enchant_light_yellow": [0.404, 0.365, 0.286],
+"$enchant_light_brown":[0.200, 0.180, 0.145],
 "$enchant_dark_green": [0.318, 0.475, 0.216],
 
 "$smoker_search_tab_index": 0,

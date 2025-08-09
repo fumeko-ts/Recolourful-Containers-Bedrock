@@ -4,23 +4,6 @@
     "layer": 1,
     "size": [ 176, 166 ],
     "$screen_controls": [
-      {
-        "redstone_activated@screen_content.redstone_activated_bindings": {
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "layer": 16,
-          "$image_size":[ 56, 56 ],
-          "offset": [24, 15],
-          "alpha": 0.4,
-          "$arrow_texture": "textures/atemp/button_highlight.png",
-          "bindings": [
-            {
-              "binding_name": "(#redstone_arrow_texture = 'textures/ui/redstone_arrow_powered')",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
       {"base_panel@screen_content.container_base": {"$crafter_screen": true}},
       {
         "main_vertical_stack@global.empty_stack": {

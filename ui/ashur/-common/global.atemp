@@ -168,7 +168,8 @@
     "size": [ 14, 14 ],
     "anchor_to": "top_right",
     "anchor_from": "top_right",
-    "offset": [ -1, 1 ],
+    "$close_button_offset": [ -2, 1 ],
+    "offset": "$close_button_offset",
     "$close_button_panel_size|default": [ 14, 14 ],
     "controls": [
       {"default@global.close_button_panel": {"$close_button_texture": "textures/atemp/close_button.png"}},
@@ -342,8 +343,7 @@
       }
     ]
   },
-  "close_button_panel": {
-    "type": "panel",
+  "close_button_panel@global.empty_panel": {
     "layer": 1,
     "size": "$close_button_panel_size",
     "$button_alpha|default": 1,

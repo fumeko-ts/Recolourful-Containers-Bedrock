@@ -156,7 +156,7 @@
   "cell_texture@screen_content.image_element": {
     "size": [ 18, 18 ],
     "nineslice_size": 1,
-    "texture": "assets/minecraft/textures/gui/sprites/container/slot.png"
+    "texture": "assets/minecraft/textures/gui/sprites/container/slot"
   },
   "sprite_bindings@global.empty_panel": {
     "size": [ 18, 18 ],
@@ -165,7 +165,7 @@
       {
         "slot@screen_content.image_element": {
           "nineslice_size": 1,
-          "texture": "assets/minecraft/textures/gui/sprites/container/slot.png",
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot",
           "layer": 3,
           "size": [ 18, 18 ]
         }

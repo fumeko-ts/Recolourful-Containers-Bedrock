@@ -1,10 +1,5 @@
 {
   "ui_defs": [
-    "ui/animated/compass.atemp",
-    "ui/animated/container_extensions.atemp",
-    "ui/animated/ender_eye_animation.atemp",
-    "ui/animated/portral.atemp",
-    "ui/animated/sawblade.atemp",
     "ui/ashur/anvil_screen.atemp",
     "ui/ashur/barrel_screen.atemp",
     "ui/ashur/beacon_screen.atemp",
@@ -52,6 +47,18 @@
     "ui/ashur/-common/templates/toggles/toggle.atemp",
     "ui/ashur/furnace_recipe/furnace_recipe_book.atemp",
     "ui/ashur/furnace_recipe/furnace_tab_toggles/smoker_tab_toggles.atemp",
-    "ui/ashur/furnace_recipe/recipe_content/smoker_grid_items.atemp"
+    "ui/ashur/furnace_recipe/recipe_content/smoker_grid_items.atemp",
+    "ui/ashur/vi_tul-common/animations/compass.atemp",
+    "ui/ashur/vi_tul-common/animations/container_extensions.atemp",
+    "ui/ashur/vi_tul-common/animations/ender_eye_animation.atemp",
+    "ui/ashur/vi_tul-common/animations/portral.atemp",
+    "ui/ashur/vi_tul-common/animations/sawblade.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/donkey_screen.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/horse_screen.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/illama_screen.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/mount.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/mule_screen.atemp",
+    "ui/ashur/vi_tul-common/animations/mounts/trader_illama_screen.atemp",
+    "ui/ashur/vi_tul-common/animations/villager/villager_distinguisher.atemp"
   ]
 }
