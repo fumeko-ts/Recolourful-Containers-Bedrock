@@ -1,93 +1,24 @@
-{
-  "namespace": "crafting_textures",
-  "empty_image@screen_content.image_element": {
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$background_image_control_name",
-        "resolve_sibling_scope": true,
-        "source_property_name": "(#container_item_background = $texture_index)",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-  "main_cell_panel": {
-    "type": "image",
-    "size": "$item_renderer_panel_size",
-    "$cell_images_binding_condition|default": "visible",
-    "$cell_image_size|default": [ "default", "default" ],
-    "controls": [
-      {
-        "item_render@common.item_renderer": {
-          "layer": 16,
-          "size": "$item_renderer_size",
-          "offset": "$item_renderer_offset",
-          "anchor_to": "center",
-          "anchor_from": "center"
-        }
-      },
-      {"stack_count@common.stack_count_label": {"layer": 20}},
-      {"cell_image_classic@crafting_textures.empty_image": {"$texture_index": 0}},
-      {"cell_image_normal@crafting_textures.empty_image": {"$texture_index": 1}},
-      {"cell_image_invert@crafting_textures.empty_image": {"$texture_index": 2}},
-      {"cell_image_selected@crafting_textures.empty_image": {"$texture_index": 4}},
-      {
-        "cell_image_red@crafting_textures.empty_image": {
-          "nineslice_size": [ 1, 1, 1, 1 ],
-          "texture": "textures/atemp/cell_transparent_image_red.png",
-          "size": "$cell_image_size",
-          "$texture_index": 3,
-          "layer": 10,
-          "controls": [
-            {
-              "white@global.empty_image": {
-                "texture": "textures/atemp/white",
-                "size": [ "100% - 1px", "100% - 1px" ],
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 0.2,
-                "layer": 12
-              }
-            }
-          ]
-        }
-      },
-      {
-        "cell_image_darkgrey@crafting_textures.empty_image": {
-          "nineslice_size": [ 1, 1, 1, 1 ],
-          "texture": "textures/atemp/cell_transparent_image_red.png",
-          "size": "$cell_image_size",
-          "$texture_index": 7,
-          "layer": 10,
-          "controls": [
-            {
-              "white@global.empty_image": {
-                "texture": "textures/atemp/white",
-                "size": [ "100% - 1px", "100% - 1px" ],
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "alpha": 0.2,
-                "layer": 12
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "bindings": [
-      {
-        "binding_name": "#container_item_background",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name",
-        "binding_condition": "$cell_images_binding_condition"
-      }
-    ]
-  },
-  "crafting_input_grid_item@global.inventory_container_item_recipe": {
-    "$item_collection_name": "crafting_input_items",
-    "$background_images": "crafting_textures.main_cell_panel",
-    "$item_renderer_binding_condition": "always",
-    "$button_ref": "crafting.inventory_container_slot_button"
-  },
-  "output_cell_textures@crafting_textures.main_cell_panel": {"$cell_images_binding_condition": "always"}
-}
+/**
+// © 2025 ashura_tepes – All Rights Reserved.
+//
+// This is a specially crafted version of Java containers by ashura_temps, also known as ashura_tepes,
+// created as part of a collaborative test.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// Deobfuscating or modifying this UI breaks the license and is forbidden.
+//
+// By using it, you agree to these terms.
+*/
+
+
+
+{"\u006e\u0061\u006d\u0065\u0073\u0070\u0061\u0063\u0065":"\u0063\u0072\u0061\u0066\u0074\u0069\u006e\u0067\u005f\u0074\u0065\u0078\u0074\u0075\u0072\u0065\u0073","\u0065\u006d\u0070\u0074\u0079\u005f\u0069\u006d\u0061\u0067\u0065\u0040\u0073\u0063\u0072\u0065\u0065\u006e\u005f\u0063\u006f\u006e\u0074\u0065\u006e\u0074\u002e\u0069\u006d\u0061\u0067\u0065\u005f\u0065\u006c\u0065\u006d\u0065\u006e\u0074":{"\u0073\u0069\u007a\u0065":[16,16],"\u006b\u0065\u0065\u0070\u005f\u0072\u0061\u0074\u0069\u006f":true,"\u0061\u006e\u0063\u0068\u006f\u0072\u005f\u0066\u0072\u006f\u006d":"\u0063\u0065\u006e\u0074\u0065\u0072","\u0061\u006e\u0063\u0068\u006f\u0072\u005f\u0074\u006f":"\u0063\u0065\u006e\u0074\u0065\u0072","\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073":[{"\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0074\u0079\u0070\u0065":"\u0076\u0069\u0065\u0077","\u0069\u0067\u006e\u006f\u0072\u0065\u0064":"\u0028\u0024\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073\u005f\u006e\u0065\u0065\u0064\u0065\u0064\u0020\u003d\u0020\u0066\u0061\u006c\u0073\u0065\u0029","\u0073\u006f\u0075\u0072\u0063\u0065\u005f\u0063\u006f\u006e\u0074\u0072\u006f\u006c\u005f\u006e\u0061\u006d\u0065":"\u0024\u0062\u0061\u0063\u006b\u0067\u0072\u006f\u0075\u006e\u0064\u005f\u0069\u006d\u0061\u0067\u0065\u005f\u0063\u006f\u006e\u0074\u0072\u006f\u006c\u005f\u006e\u0061\u006d\u0065","\u0072\u0065\u0073\u006f\u006c\u0076\u0065\u005f\u0073\u0069\u0062\u006c\u0069\u006e\u0067\u005f\u0073\u0063\u006f\u0070\u0065":true,"\u0073\u006f\u0075\u0072\u0063\u0065\u005f\u0070\u0072\u006f\u0070\u0065\u0072\u0074\u0079\u005f\u006e\u0061\u006d\u0065":"\u0028\u0023\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0065\u0072\u005f\u0069\u0074\u0065\u006d\u005f\u0062\u0061\u0063\u006b\u0067\u0072\u006f\u0075\u006e\u0064\u0020\u003d\u0020\u0024\u0074\u0065\u0078\u0074\u0075\u0072\u0065\u005f\u0069\u006e\u0064\u0065\u0078\u0029","\u0074\u0061\u0072\u0067\u0065\u0074\u005f\u0070\u0072\u006f\u0070\u0065\u0072\u0074\u0079\u005f\u006e\u0061\u006d\u0065":"\u0023\u0076\u0069\u0073\u0069\u0062\u006c\u0065"}]},"\u006d\u0061\u0069\u006e\u005f\u0063\u0065\u006c\u006c\u005f\u0070\u0061\u006e\u0065\u006c":{"\u0074\u0079\u0070\u0065":"\u0069\u006d\u0061\u0067\u0065","\u0073\u0069\u007a\u0065":"\u0024\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0065\u0072\u005f\u0070\u0061\u006e\u0065\u006c\u005f\u0073\u0069\u007a\u0065","\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u0073\u005f\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006e\u0064\u0069\u0074\u0069\u006f\u006e\u007c\u0064\u0065\u0066\u0061\u0075\u006c\u0074":"\u0076\u0069\u0073\u0069\u0062\u006c\u0065","\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u005f\u0073\u0069\u007a\u0065\u007c\u0064\u0065\u0066\u0061\u0075\u006c\u0074":["\u0064\u0065\u0066\u0061\u0075\u006c\u0074","\u0064\u0065\u0066\u0061\u0075\u006c\u0074"],"\u0024\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073\u005f\u006e\u0065\u0065\u0064\u0065\u0064\u007c\u0064\u0065\u0066\u0061\u0075\u006c\u0074":true,"\u0063\u006f\u006e\u0074\u0072\u006f\u006c\u0073":[{"\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0040\u0063\u006f\u006d\u006d\u006f\u006e\u002e\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0065\u0072":{"\u006c\u0061\u0079\u0065\u0072":16,"\u0073\u0069\u007a\u0065":"\u0024\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0065\u0072\u005f\u0073\u0069\u007a\u0065","\u006f\u0066\u0066\u0073\u0065\u0074":"\u0024\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0065\u0072\u005f\u006f\u0066\u0066\u0073\u0065\u0074","\u0061\u006e\u0063\u0068\u006f\u0072\u005f\u0074\u006f":"\u0063\u0065\u006e\u0074\u0065\u0072","\u0061\u006e\u0063\u0068\u006f\u0072\u005f\u0066\u0072\u006f\u006d":"\u0063\u0065\u006e\u0074\u0065\u0072"}},{"\u0073\u0074\u0061\u0063\u006b\u005f\u0063\u006f\u0075\u006e\u0074\u0040\u0063\u006f\u006d\u006d\u006f\u006e\u002e\u0073\u0074\u0061\u0063\u006b\u005f\u0063\u006f\u0075\u006e\u0074\u005f\u006c\u0061\u0062\u0065\u006c":{"\u006c\u0061\u0079\u0065\u0072":20}},{"cell_image_classic@crafting_textures.empty_image":{"$texture_index":0}},{"cell_image_normal@crafting_textures.empty_image":{"$texture_index":1}},{"cell_image_invert@crafting_textures.empty_image":{"$texture_index":2}},{"cell_image_selected@crafting_textures.empty_image":{"$texture_index":4}},{"cell_image_red@crafting_textures.empty_image":{"\u006e\u0069\u006e\u0065\u0073\u006c\u0069\u0063\u0065\u005f\u0073\u0069\u007a\u0065":[1,1,1,1],"texture":"textures/atemp/cell_transparent_image_red.png","\u0073\u0069\u007a\u0065":"\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u005f\u0073\u0069\u007a\u0065","$texture_index":3,"\u006c\u0061\u0079\u0065\u0072":10,"\u0063\u006f\u006e\u0074\u0072\u006f\u006c\u0073":[{"white@crafting_textures.empty_image":{"texture":"textures/atemp/white","\u0024\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073\u005f\u006e\u0065\u0065\u0064\u0065\u0064":false,"\u0061\u006c\u0070\u0068\u0061":0.2,"\u006c\u0061\u0079\u0065\u0072":12}}]}},{"cell_image_darkgrey@crafting_textures.empty_image":{"\u006e\u0069\u006e\u0065\u0073\u006c\u0069\u0063\u0065\u005f\u0073\u0069\u007a\u0065":[1,1,1,1],"texture":"textures/atemp/cell_transparent_image_red.png","\u0073\u0069\u007a\u0065":"\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u005f\u0073\u0069\u007a\u0065","$texture_index":7,"\u006c\u0061\u0079\u0065\u0072":10,"\u0063\u006f\u006e\u0074\u0072\u006f\u006c\u0073":[{"white@crafting_textures.empty_image":{"texture":"textures/atemp/white","\u0024\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073\u005f\u006e\u0065\u0065\u0064\u0065\u0064":false,"\u0061\u006c\u0070\u0068\u0061":0.2,"\u006c\u0061\u0079\u0065\u0072":12}}]}}],"\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u0073":[{"\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u006e\u0061\u006d\u0065":"\u0023\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0065\u0072\u005f\u0069\u0074\u0065\u006d\u005f\u0062\u0061\u0063\u006b\u0067\u0072\u006f\u0075\u006e\u0064","\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0074\u0079\u0070\u0065":"\u0063\u006f\u006c\u006c\u0065\u0063\u0074\u0069\u006f\u006e","\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006c\u006c\u0065\u0063\u0074\u0069\u006f\u006e\u005f\u006e\u0061\u006d\u0065":"\u0024\u0069\u0074\u0065\u006d\u005f\u0063\u006f\u006c\u006c\u0065\u0063\u0074\u0069\u006f\u006e\u005f\u006e\u0061\u006d\u0065","\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006e\u0064\u0069\u0074\u0069\u006f\u006e":"\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u0073\u005f\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006e\u0064\u0069\u0074\u0069\u006f\u006e"}]},"\u0063\u0072\u0061\u0066\u0074\u0069\u006e\u0067\u005f\u0069\u006e\u0070\u0075\u0074\u005f\u0067\u0072\u0069\u0064\u005f\u0069\u0074\u0065\u006d\u0040\u0067\u006c\u006f\u0062\u0061\u006c\u002e\u0069\u006e\u0076\u0065\u006e\u0074\u006f\u0072\u0079\u005f\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0065\u0072\u005f\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u0063\u0069\u0070\u0065":{"\u0024\u0069\u0074\u0065\u006d\u005f\u0063\u006f\u006c\u006c\u0065\u0063\u0074\u0069\u006f\u006e\u005f\u006e\u0061\u006d\u0065":"\u0063\u0072\u0061\u0066\u0074\u0069\u006e\u0067\u005f\u0069\u006e\u0070\u0075\u0074\u005f\u0069\u0074\u0065\u006d\u0073","\u0024\u0062\u0061\u0063\u006b\u0067\u0072\u006f\u0075\u006e\u0064\u005f\u0069\u006d\u0061\u0067\u0065\u0073":"\u0063\u0072\u0061\u0066\u0074\u0069\u006e\u0067\u005f\u0074\u0065\u0078\u0074\u0075\u0072\u0065\u0073\u002e\u006d\u0061\u0069\u006e\u005f\u0063\u0065\u006c\u006c\u005f\u0070\u0061\u006e\u0065\u006c","\u0024\u0069\u0074\u0065\u006d\u005f\u0072\u0065\u006e\u0064\u0065\u0072\u0065\u0072\u005f\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006e\u0064\u0069\u0074\u0069\u006f\u006e":"\u0061\u006c\u0077\u0061\u0079\u0073","\u0024\u0062\u0075\u0074\u0074\u006f\u006e\u005f\u0072\u0065\u0066":"\u0063\u0072\u0061\u0066\u0074\u0069\u006e\u0067\u002e\u0069\u006e\u0076\u0065\u006e\u0074\u006f\u0072\u0079\u005f\u0063\u006f\u006e\u0074\u0061\u0069\u006e\u0065\u0072\u005f\u0073\u006c\u006f\u0074\u005f\u0062\u0075\u0074\u0074\u006f\u006e"},"output_cell_textures@crafting_textures.main_cell_panel":{"\u0024\u0063\u0065\u006c\u006c\u005f\u0069\u006d\u0061\u0067\u0065\u0073\u005f\u0062\u0069\u006e\u0064\u0069\u006e\u0067\u005f\u0063\u006f\u006e\u0064\u0069\u0074\u0069\u006f\u006e":"\u0061\u006c\u0077\u0061\u0079\u0073"}}

@@ -1,7 +1,7 @@
 {
    "format_version": 2,
    "header": {    
-      "name": "§cR§6e§eC§ao§bl§9o§5u§dr§4f§2u§3l §fContainers",
+      "name": "ReColourful Containers",
       "description": "§3By Vi_Tul",
       "uuid": "6d55c9b0-c450-48e0-be2d-037d419d96c2",
       "version": [1, 0, 0],
@@ -16,7 +16,7 @@
       }
    ],
     "metadata": {
-      "ui_author": ["Ashura_temps"],
+      "ui_author": ["Ashura_temps","ashura_tepes"],
       "url": "https://discord.gg/sFnE7zv75t"
     }
  }

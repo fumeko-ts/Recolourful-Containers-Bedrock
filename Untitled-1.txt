@@ -1,5 +1,0 @@
-ui:entity.donkey.name0
-ui:entity.mule.name0
-ui:entity.horse.name0
-ui:entity.trader_llama.name0
-ui:entity.llama.name0
