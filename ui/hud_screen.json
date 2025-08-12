@@ -1,0 +1,24 @@
+{/*
+  "full_progress_bar@screen_content.image_element": {
+    "texture": "textures/gui/icons",
+    "clip_direction": "left",
+    "clip_pixelperfect": false,
+    "uv": [0, 69],
+    "uv_size": [182, 5],
+    "bindings": [
+      {
+        "binding_name": "#exp_progress",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+  "empty_progress_bar@screen_content.image_element": {
+    "uv": [0, 64],
+    "uv_size": [182, 5],
+    "texture": "textures/gui/icons.png"
+  },
+
+  "progress_bar_nub@global.empty_image": {"alpha": 0}*/
+}

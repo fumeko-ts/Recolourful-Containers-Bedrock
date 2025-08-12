@@ -1,0 +1,34 @@
+{
+  "namespace": "book",
+
+
+  "book_screen@common.base_screen": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$screen_content": "book_screen.max_page_is_28",
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.4,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.book_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.book_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.prev_page",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.next_page",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}
