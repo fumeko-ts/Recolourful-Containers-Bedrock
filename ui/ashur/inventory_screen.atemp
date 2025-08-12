@@ -1,6 +1,8 @@
 {
   "namespace": "inventory_screen",
   "screen_base@global.root_panel": {
+    "anchor_to": "center",
+    "anchor_from": "center",
     "controls": [
       {
         "base_horizontal_Stack@global.empty_stack": {

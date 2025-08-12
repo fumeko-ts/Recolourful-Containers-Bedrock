@@ -4,7 +4,7 @@
     "size": [276, 166],    
 
     "$screen_controls": [
-      {"villager_distinguisher@villager_distinguisher.villager_panel":{}},
+      {"villager_distinguisher@villager_profession_detector.villager_panel":{}},
       {"trade_scroll@tradeing_screen.scroll_panel": {}},
       {
         "trade_main_inventory_half@global.empty_stack": {

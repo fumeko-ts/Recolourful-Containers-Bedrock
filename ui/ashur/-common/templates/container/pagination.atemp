@@ -35,39 +35,39 @@
     "clips_children": true,
     "size": [ 125, 100.4 ],
     "controls": [
-      {"grid@$page_content": {"offset": "$ov", "layer": 4}}
+      {"1@$page_content": {"offset": "$content_offset"}}
     ]
   },
-  "page_1@page_template": {"$ov": [ 0, 0 ]},
-  "page_2@page_template": {"$ov": [ 0, -100 ]},
-  "page_3@page_template": {"$ov": [ 0, -200 ]},
-  "page_4@page_template": {"$ov": [ 0, -300 ]},
-  "page_5@page_template": {"$ov": [ 0, -400 ]},
-  "page_6@page_template": {"$ov": [ 0, -500 ]},
-  "page_7@page_template": {"$ov": [ 0, -600 ]},
-  "page_8@page_template": {"$ov": [ 0, -700 ]},
-  "page_9@page_template": {"$ov": [ 0, -800 ]},
-  "page_10@page_template": {"$ov": [ 0, -900 ]},
-  "page_11@page_template": {"$ov": [ 0, -1000 ]},
-  "page_12@page_template": {"$ov": [ 0, -1100 ]},
-  "page_13@page_template": {"$ov": [ 0, -1200 ]},
-  "page_14@page_template": {"$ov": [ 0, -1300 ]},
-  "page_15@page_template": {"$ov": [ 0, -1400 ]},
-  "page_16@page_template": {"$ov": [ 0, -1500 ]},
-  "page_17@page_template": {"$ov": [ 0, -1600 ]},
-  "page_18@page_template": {"$ov": [ 0, -1700 ]},
-  "page_19@page_template": {"$ov": [ 0, -1800 ]},
-  "page_20@page_template": {"$ov": [ 0, -1900 ]},
-  "page_21@page_template": {"$ov": [ 0, -2000 ]},
-  "page_22@page_template": {"$ov": [ 0, -2100 ]},
-  "page_23@page_template": {"$ov": [ 0, -2200 ]},
-  "page_24@page_template": {"$ov": [ 0, -2300 ]},
-  "page_25@page_template": {"$ov": [ 0, -2400 ]},
-  "page_26@page_template": {"$ov": [ 0, -2500 ]},
-  "page_27@page_template": {"$ov": [ 0, -2600 ]},
-  "page_28@page_template": {"$ov": [ 0, -2700 ]},
+  "page_1@page_template": {"$content_offset": [ 0, 0 ]},
+  "page_2@page_template": {"$content_offset": [ 0, -100 ]},
+  "page_3@page_template": {"$content_offset": [ 0, -200 ]},
+  "page_4@page_template": {"$content_offset": [ 0, -300 ]},
+  "page_5@page_template": {"$content_offset": [ 0, -400 ]},
+  "page_6@page_template": {"$content_offset": [ 0, -500 ]},
+  "page_7@page_template": {"$content_offset": [ 0, -600 ]},
+  "page_8@page_template": {"$content_offset": [ 0, -700 ]},
+  "page_9@page_template": {"$content_offset": [ 0, -800 ]},
+  "page_10@page_template": {"$content_offset": [ 0, -900 ]},
+  "page_11@page_template": {"$content_offset": [ 0, -1000 ]},
+  "page_12@page_template": {"$content_offset": [ 0, -1100 ]},
+  "page_13@page_template": {"$content_offset": [ 0, -1200 ]},
+  "page_14@page_template": {"$content_offset": [ 0, -1300 ]},
+  "page_15@page_template": {"$content_offset": [ 0, -1400 ]},
+  "page_16@page_template": {"$content_offset": [ 0, -1500 ]},
+  "page_17@page_template": {"$content_offset": [ 0, -1600 ]},
+  "page_18@page_template": {"$content_offset": [ 0, -1700 ]},
+  "page_19@page_template": {"$content_offset": [ 0, -1800 ]},
+  "page_20@page_template": {"$content_offset": [ 0, -1900 ]},
+  "page_21@page_template": {"$content_offset": [ 0, -2000 ]},
+  "page_22@page_template": {"$content_offset": [ 0, -2100 ]},
+  "page_23@page_template": {"$content_offset": [ 0, -2200 ]},
+  "page_24@page_template": {"$content_offset": [ 0, -2300 ]},
+  "page_25@page_template": {"$content_offset": [ 0, -2400 ]},
+  "page_26@page_template": {"$content_offset": [ 0, -2500 ]},
+  "page_27@page_template": {"$content_offset": [ 0, -2600 ]},
+  "page_28@page_template": {"$content_offset": [ 0, -2700 ]},
   "base_page_logic@global.empty_panel": {
-    "$current_page": 1,
+    "$current_page": 1,   
     "$page_counter": "('pagination.index_' + ($current_page + 1))",
     "$page_contents": "('pagination.page_' + $current_page)",
     "controls": [
@@ -128,7 +128,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "text": "#text",
-    "property_bag": {"#visible": false}
+    "visible": false
   },
   "page_count_label@pagination.count_template": {
     "bindings": [
@@ -194,6 +194,5 @@
         "target_property_name": "#visible"
       }
     ]
-  },
-  "max_page_is_28@pagination.base_page_logic": {"$is_in_recipe_inventory|default": false, "$page_content": "global.empty_panel"}
+  }
 }

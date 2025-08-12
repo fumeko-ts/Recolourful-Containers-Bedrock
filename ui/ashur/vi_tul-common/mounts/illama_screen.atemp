@@ -89,30 +89,6 @@
             }
           ]
         }
-      },
-      {
-        "test@global.empty_label":{
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 40,
-          "size": ["default", 10],
-          "text": "#text",
-          "color": "cyan",
-          "bindings":[
-            {
-              "binding_name"           : "#item_id_aux",
-              "binding_type"           : "collection",
-              "binding_condition"      : "always",
-              "binding_collection_name": "horse_equip_items"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "('a_' + (#item_id_aux / 65536))",
-              "target_property_name": "#text"
-            }
-          ]
-        }
       }
     ]
   },

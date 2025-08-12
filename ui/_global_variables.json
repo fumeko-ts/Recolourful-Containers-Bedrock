@@ -645,7 +645,7 @@
       }
     ],
   "$recipe_book_contents": [
-    {"offset_content@$page_contents": {"offset": [ 0.9, -1.6 ]}},
+    {"offset_content@$page_contents": {"offset": [ 0.9, -1.6 ], "layer": 4}},
     {
       "holder@global.empty_stack": {
         "orientation": "vertical",
