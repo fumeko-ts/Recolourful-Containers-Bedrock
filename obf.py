@@ -1,6 +1,7 @@
 import os
 import json
 import re
+
 HEADER_COMMENT = """/**
 // © 2025 ashura_tepes – All Rights Reserved.
 //
@@ -21,14 +22,20 @@ HEADER_COMMENT = """/**
 //
 // By using it, you agree to these terms.
 */
-
 """
 
 def unicode_escape_string(s):
-    return "".join(f"\\u{ord(c):04x}" for c in s)
+    def repl(match):
+        ch = match.group(0)
+        return f"\\u{ord(ch):04x}"
+    return re.sub(r"(?<!\\)\\u[0-9a-fA-F]{4}|.", 
+                  lambda m: m.group(0) if m.group(0).startswith("\\u") else f"\\u{ord(m.group(0)):04x}",
+                  s)
+
 def is_text_or_texture_key(key):
     key_lower = key.lower()
     return "text" in key_lower or "texture" in key_lower
+
 def should_preserve_value(key, value):
     if isinstance(value, str) and is_text_or_texture_key(key):
         return True
@@ -38,18 +45,13 @@ def should_preserve_value(key, value):
     ):
         return True
     return False
+
 def process_object(obj):
     if isinstance(obj, dict):
         new_dict = {}
         for key, value in obj.items():
-            if is_text_or_texture_key(key):
-                new_key = key
-            else:
-                new_key = unicode_escape_string(key)
-            if should_preserve_value(key, value):
-                new_value = value
-            else:
-                new_value = process_object(value)
+            new_key = key if is_text_or_texture_key(key) else unicode_escape_string(key)
+            new_value = value if should_preserve_value(key, value) else process_object(value)
             new_dict[new_key] = new_value
         return new_dict
     elif isinstance(obj, list):
@@ -58,6 +60,7 @@ def process_object(obj):
         return unicode_escape_string(obj)
     else:
         return obj
+
 def obfuscate_json_file(file_path):
     filename = os.path.basename(file_path).lower()
     if filename == "manifest.json":
@@ -66,28 +69,24 @@ def obfuscate_json_file(file_path):
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
-        content_no_header = content
         match = re.match(r"/\*[\s\S]*?\*/\s*", content)
         if match:
-            content_no_header = content[match.end() :]
-        data = json.loads(content_no_header)
+            content = content[match.end():]
+        data = json.loads(content)
         processed_data = process_object(data)
         json_str = json.dumps(processed_data, separators=(",", ":"))
-        json_str = re.sub(r"\\\\u([0-9a-fA-F]{4})", r"\\u\1", json_str)
         with open(file_path, "w", encoding="utf-8") as f:
-            f.write(HEADER_COMMENT)
-            f.write("\n")  
-            f.write("\n")
-            f.write(json_str)
-            f.write("\n")
+            f.write(HEADER_COMMENT + "\n\n" + json_str + "\n")
         print(f"Obfuscated file: {file_path}")
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
+
 def process_directory(root_dir):
     for root, _, files in os.walk(root_dir):
         for file in files:
             if file.lower().endswith((".json", ".atemp")):
                 obfuscate_json_file(os.path.join(root, file))
+
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.abspath(__file__))
     print(f"Starting obfuscation in: {base_dir}")

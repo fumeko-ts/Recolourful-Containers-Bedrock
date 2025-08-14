@@ -488,7 +488,7 @@
                     {
                     "search@crafting_common.text_edit_control": {
                       "$text_box_size": [90, 12],
-                      "$place_holder_text": "ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§z",
+                      "$place_holder_text": "",
                       "$text_edit_box_label_offset": [0, -1],
                       "$text_background_default": "global.empty_image",
                       "$text_background_hover": "global.empty_image"

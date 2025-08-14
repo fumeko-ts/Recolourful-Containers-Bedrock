@@ -585,6 +585,8 @@
 
 
 
+"$is_recolorful_containers": true,
+
 
 //this is the container title text i belive its rgba max value is 1.0
 "$title_text_color": [0.247, 0.247, 0.247, 1.0],
@@ -594,6 +596,8 @@
 "$enchant_light_yellow": [0.404, 0.365, 0.286],
 "$enchant_light_brown":[0.200, 0.180, 0.145],
 "$enchant_dark_green": [0.318, 0.475, 0.216],
+
+"$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667],
 
 "$smoker_search_tab_index": 0,
 "$direction": "right",
