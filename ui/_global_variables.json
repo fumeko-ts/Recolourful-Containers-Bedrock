@@ -31,6 +31,9 @@
   example - "$nature_tab_texture": "mangrove_leaves"
 */
 
+"$is_recolorful_containers": true,
+
+
 "$nature_tab_texture": "pearlescent_froglight",
 
 // Show or hide the exit button on container screens (true/false)
@@ -585,7 +588,6 @@
 
 
 
-"$is_recolorful_containers": true,
 
 
 //this is the container title text i belive its rgba max value is 1.0
