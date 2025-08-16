@@ -8,9 +8,11 @@
 
 
   "full_progress_bar@screen_content.image_element": {
-    "texture": "textures/ui/experience_bar_full.png",
+    "texture": "textures/exp_full",
+    "uv": "@hud.asprite",
+    "uv_size": [182, 5],
     "size": [ 182, 5 ],
-    "keep_ratio": true,
+    "layer": 40,
     "clip_direction": "left",
     "clip_pixelperfect": true,
     "bindings": [
@@ -21,6 +23,11 @@
       }
     ]
   },
+
+  "asprite": {
+		"anim_type": "aseprite_flip_book",
+		"initial_uv": [0, 0]
+	},
 
   "empty_progress_bar@screen_content.image_element": {
     "texture": "textures/ui/experience_bar_empty"

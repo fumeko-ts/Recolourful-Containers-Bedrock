@@ -57,7 +57,6 @@
                       "color": "$text_box_text_color",
                       "locked_color": "$locked_color",
                       "font_size": "normal",
-                      "shadow": true,
                       "text_alignment": "left",
                       "property_bag": {"#property_field": "#item_name"},
                       "$text_edit_box_content_binding_type|default": "global",
