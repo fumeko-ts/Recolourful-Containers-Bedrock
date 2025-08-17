@@ -64,6 +64,7 @@
                       "$text_edit_box_binding_condition|default": "visible",
                       "text": "#item_name",
                       "enable_profanity_filter": false,
+                      "shadow": true,
                       "localize": false,
                       "bindings": [
                         {

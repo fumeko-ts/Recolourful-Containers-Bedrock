@@ -290,7 +290,7 @@
       {
         "anvil_text_box@text_edit_box.text_field": {
           "offset": [-1, -1],
-          "$text_panel_size_minus_1px|default": [109, 16],
+          "$text_panel_size_minus_1px|default": [106, 16],
           "$text_edit_box_label_size": ["default", 10],
           "property_bag": {"#property_field": "#item_name"},
           "$shadow": true,

@@ -135,11 +135,16 @@
     "variables": {
       "requires": "($blast_furnace_sprite = 'lit_progress')",
       "$uv_size": [14, 14],
-      "$uv": [0, 0]
+      "$blast_furnace_sprite_src": "textures/blast_furnace_lit",
+      "$uv": "@blast_furnace_screen.burn_lit"
     },
     "bindings": [ {"binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always"} ]
   },
 
+  "burn_lit": {
+		"anim_type": "aseprite_flip_book",
+		"initial_uv": [0, 0]
+	},
   "arrow_progress@blast_furnace_screen.blast_furnace_image_controls": {
     "size": [24, 16],
     "$blast_furnace_sprite": "burn_progress",

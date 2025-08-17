@@ -180,8 +180,13 @@
     "variables": {
       "requires": "($furnace_sprite = 'lit_progress')",
       "$uv_size": [14, 14],
-      "$uv": [0, 0]
+      "$furnace_sprite_src": "textures/furnace_burn_lit",
+      "$uv": "@furnace_screen.burn_lit"
     },
     "bindings": [ {"binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always"} ]
-  }
+  },
+  "burn_lit": {
+		"anim_type": "aseprite_flip_book",
+		"initial_uv": [0, 0]
+	}
 }

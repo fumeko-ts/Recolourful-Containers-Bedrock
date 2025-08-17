@@ -252,7 +252,7 @@
     ]
   },
   "scroll_panel@scroll_panel.common_container_scrolling_panel": {
-    "$scroll_size": [12, 75],
+    "$scroll_size": [12, 56],
     "size": [73, 56],
     "offset": [1, 0.4],
     "$misc_scroller_offset": [-1, -1],
