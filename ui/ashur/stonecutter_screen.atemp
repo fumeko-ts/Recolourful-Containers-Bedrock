@@ -59,9 +59,9 @@
                     "scroll_panel@scroll_panel.common_container_scrolling_panel": {
                       "size": [80, 54],
                       "$scroll_size": [12, 75],
-                      "$scrolling_pane_offset": [0, 0],
+                      "$scrolling_pane_offset": [0, 0.2],
                       "$scroll_view_port_size": [79, 54.2],
-                      "$misc_scroller_offset": [0, -1],
+                      "$misc_scroller_offset": [0, -0.8],
                       "$scroll_track_offset": [0, -0.2],
                       "$scrolling_pane_size": ["100%", "100%"],
                       "$scroll_box_mouse_image_control": "screen_content.cutter_scroll_box_image",
