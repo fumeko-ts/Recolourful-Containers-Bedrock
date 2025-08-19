@@ -1,0 +1,178 @@
+{
+  "namespace": "slider",
+  "slider_box": {
+    "type": "slider_box",
+    "layer": 4,
+    "size": "$slider_box_size",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "default_control": "default",
+    "hover_control": "hover",
+    "locked_control": "indent",
+    "indent_control": "indent",
+    "controls": [
+      {
+        "default@$slider_box_layout": {
+          "layer": 2
+        }
+      },
+      {
+        "hover@$slider_box_hover_layout": {
+          "layer": 3
+        }
+      },
+      {
+        "indent@$slider_box_indent_layout": {
+          "layer": 4
+        }
+      }
+    ]
+  },
+
+  "slider": {
+    "type": "slider",
+
+    "$default_focus_precedence|default": 0,
+    "default_focus_precedence": "$default_focus_precedence",
+
+    "$slider_select_on_hover|default": false,
+    "slider_select_on_hover": "$slider_select_on_hover",
+
+    "layer": 1,
+    "always_listen_to_input": false,
+    "always_handle_pointer": true,
+    "slider_box_control": "slider_box",
+
+    // Slider box
+    "$slider_box_layout|default": "slider.slider_button_layout",
+    "$slider_box_hover_layout|default": "slider.slider_button_hover_layout",
+    "$slider_box_locked_layout|default": "slider.slider_button_locked_layout",
+    "$slider_box_indent_layout|default": "slider.slider_button_indent_layout",
+    "$slider_box_size|default": [ 10, 16 ],
+
+    // Slider
+    "$slider_track_button|default": "button.slider_skip_track",
+    "$slider_steps|default": 1,
+
+    "slider_name": "$slider_name",
+    "slider_track_button": "$slider_name",
+    "slider_direction": "vertical",
+    "slider_steps": "$slider_steps",
+    "$slider_binding_type|default": "global",
+    "$slider_binding_condition|default": "visible",
+    "$slider_value_binding_name|default": "#slider_value",
+    "$slider_steps_binding_type|default": "global",
+    "$slider_steps_binding_condition|default": "visible",
+    "$slider_steps_binding_name|default": "#slider_steps",
+    "$slider_enabled_binding_type|default": "none",
+    "$slider_enabled_binding_condition|default": "visible",
+    "$slider_enabled_binding_name|default": "#slider_enabled",
+    "$slider_timeout_binding_type|default": "none",
+    "$slider_timeout_binding_condition|default": "once",
+    "$slider_timeout_binding_name|default": "#slider_timeout",
+
+    "$slider_small_decrease_button|default": "slider.small_decrease",
+    "$slider_small_increase_button|default": "slider.small_increase",
+    "$slider_selected_button|default": "slider.selected",
+    "$slider_deselected_button|default": "slider.deselected",
+
+    "slider_small_decrease_button": "$slider_small_decrease_button",
+    "slider_small_increase_button": "$slider_small_increase_button",
+    "slider_selected_button": "$slider_selected_button",
+    "slider_deselected_button": "$slider_deselected_button",
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$slider_name",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$slider_selected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$slider_deselected_button",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_up",
+        "to_button_id": "$slider_small_decrease_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      },
+      {
+        "from_button_id": "button.menu_down",
+        "to_button_id": "$slider_small_increase_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "not_gaze",
+        "ignore_input_scope": true
+      }
+    ],
+    "controls": [
+      {
+        "slider_box@slider.slider_box": {
+          "$slider_box_layout": "$slider_box_layout",
+          "$slider_box_size": "$slider_box_size",
+          "$slider_track_button": "$slider_name"
+        }
+      }
+    ],
+    "property_bag": {
+      "#slider_steps": 1,
+      "#slider_value": 0,
+      "#slider_timeout": 0.25
+    },
+    "bindings": [
+      {
+        "binding_type": "$slider_steps_binding_type",
+        "binding_condition": "$slider_steps_binding_condition",
+        "binding_name": "$slider_steps_binding_name",
+        "binding_name_override": "#slider_steps"
+      },
+      {
+        "binding_type": "$slider_binding_type",
+        "binding_condition": "$slider_binding_condition",
+        "binding_name": "$slider_value_binding_name",
+        "binding_name_override": "#slider_value"
+      },
+      {
+        "binding_type": "$slider_enabled_binding_type",
+        "binding_condition": "$slider_enabled_binding_condition",
+        "binding_name": "$slider_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_type": "$slider_timeout_binding_type",
+        "binding_condition": "$slider_timeout_binding_condition",
+        "binding_name": "$slider_timeout_binding_name",
+        "binding_name_override": "#slider_timeout"
+      }
+    ]
+  },
+  "slider_button_state": {
+    "type": "image",
+    "layer": 2,
+    "texture": "textures/ui/slider_button_default"
+  },
+
+  "slider_button_layout@slider.slider_button_state": {
+    "texture": "textures/ui/slider_button_default"
+  },
+
+  "slider_button_hover_layout@slider.slider_button_state": {
+    "texture": "textures/ui/slider_button_hover"
+  },
+
+  "slider_button_locked_layout@slider.slider_button_state": {
+    "texture": "textures/ui/slider_button_locked"
+  },
+
+  "slider_button_indent_layout@slider.slider_button_state": {
+    "texture": "textures/ui/slider_button_indent"
+  }
+}

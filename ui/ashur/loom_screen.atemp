@@ -124,15 +124,11 @@
   "pattern_panel@global.empty_panel": {
     "size": [18, 18],
     "controls": [
+      { "pattern_slot@global.container_item": {"$item_collection": "loom_material_items"} },
       {
-        "pattern_slot@global.container_item": {
-          "$item_collection": "loom_material_items"
-        }
-      },
-      {
-        "img@loom_screen.item_empty_image":{
-            "$item_collection": "loom_material_items",
-            "$current_cell_texture": "assets/minecraft/textures/gui/sprites/container/loom/pattern_slot.png"
+        "img@loom_screen.item_empty_image": {
+          "$item_collection"     : "loom_material_items",
+          "$current_cell_texture": "assets/minecraft/textures/gui/sprites/container/loom/pattern_slot.png"
         }
       }
     ]
@@ -212,7 +208,7 @@
       },
       {
         "pressed@loom_screen.button_template": {
-          "$image_src": "assets/minecraft/textures/gui/sprites/container/loom/pattern_selected.png"
+          "$image_src": "assets/minecraft/textures/gui/sprites/container/loom/pattern.png"
         }
       }
     ]
@@ -256,10 +252,10 @@
     ]
   },
   "scroll_panel@scroll_panel.common_container_scrolling_panel": {
-    "$scroll_size": [12, 75],
-    "size": [72, 56],
-    "offset": [0, 0.4],
-    "$misc_scroller_offset": [0, -1],
+    "$scroll_size": [12, 56],
+    "size": [73, 56],
+    "offset": [1, 0.4],
+    "$misc_scroller_offset": [-1, -1],
     "$scroll_view_port_size": [71, 56.2],
     "$scroll_track_offset": [0, -0.2],
     "anchor_to": "bottom_right",
