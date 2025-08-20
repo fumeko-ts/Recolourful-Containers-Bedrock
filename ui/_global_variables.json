@@ -1,53 +1,11 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use) you may only edit this file because it contains variables that are intended to be modified.
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
-/*
-  Valid leaf texture options (must be lowercase):
+  /* start */
+  "$is_recolorful_containers": true,
 
-  - oak_leaves
-  - spruce_leaves
-  - acacia_leaves
-  - azalea_leaves
-  - birch_leaves
-  - cherry_leaves
-  - dark_oak_leaves
-  - flowering_azalea_leaves
-  - jungle_leaves
-  - mangrove_leaves
-  -- or eany other block really
-
-  example - "$nature_tab_texture": "mangrove_leaves"
-*/
-
-"$is_recolorful_containers": true,
-
-
-"$nature_tab_texture": "pearlescent_froglight",
-
-// Show or hide the exit button on container screens (true/false)
-"$Exit_panel_enabled": true,
-
-// Set container UI transparency (range: 0.0 - 1.0)
-"$container_opacity": 1,
-
-
-
-
-// --- Read-only below this line ---
-
-
+  "$nature_tab_texture": "pearlescent_froglight",
+  "$Exit_panel_enabled": true,
+  "$container_opacity": 1,
+  /* end */
 //}
 
 
@@ -590,10 +548,9 @@
 
 
 
-//this is the container title text i belive its rgba max value is 1.0
 "$title_text_color": [0.247, 0.247, 0.247, 1.0],
 
-// text colors for the button in the enchanting table also rgb and rgba max value is 1.0
+// text colors for the button in the enchanting table also rgb or rgba max value is 1.0
 "$enchant_light_green": [0.475, 0.95, 0.11875],
 "$enchant_light_yellow": [0.404, 0.365, 0.286],
 "$enchant_light_brown":[0.200, 0.180, 0.145],
