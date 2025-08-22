@@ -17,6 +17,9 @@
       },
       { "common_panel@screen_content.container_base": {"$stonecutter_screen": true} },
       {
+        "scroll_panel@stonecutter_screen.scroll_grid": {}
+      },
+      {
         "stonecutter_top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 69],
@@ -56,21 +59,7 @@
                     "filler_2@global.empty_panel": { "size": [14, "fill"] }
                   },
                   {
-                    "scroll_panel@scroll_panel.common_container_scrolling_panel": {
-                      "size": [80, 54],
-                      "$scroll_size": [12, 75],
-                      "$scrolling_pane_offset": [0, 0.2],
-                      "$scroll_view_port_size": [79, 54.2],
-                      "$misc_scroller_offset": [0, -0.8],
-                      "$scroll_track_offset": [0, -0.2],
-                      "$scrolling_pane_size": ["100%", "100%"],
-                      "$scroll_box_mouse_image_control": "screen_content.cutter_scroll_box_image",
-                      "$scroll_box_touch_image_control": "screen_content.cutter_scroll_box_image",
-                      "$scrolling_content": "stonecutter_screen.grid_holder"
-                    }
-                  },
-                  {
-                    "filler_3@global.empty_panel": { "size": [11, "fill"] }
+                    "filler_3@global.empty_panel": { "size": [91, "fill"] }
                   },
                   {
                     "output_stack@global.empty_stack": {
@@ -140,13 +129,12 @@
     ]
   },
   "button_sprite_template@screen_content.image_element": {
-    "size": ["100%", "100%"],
+    "size": [16, 18],
     "nineslice_size": 2,
+    "keep_ratio": true,
     "texture": "$sprite",
-    "fill": true,
     "layer": 4,
-    "offset": [1, 1],
-    "clip_pixelperfect": true
+    "offset": [1, 1]
   },
   "stone_slot_button": {
     "type": "button",
@@ -156,6 +144,7 @@
     "bindings": [
       {"binding_type": "collection_details", "binding_collection_name": "stones", "binding_condition": "once"}
     ],
+    "size": [16, 18],
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
@@ -193,15 +182,14 @@
       },
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
-    "size": [16, 17.9],
     "controls": [
       {
         "item_renderer@common.item_renderer": {
-          "size": [15, 17],
+          "size": [15, 15],
           "anchor_to": "center",
           "anchor_from": "center",
+          "offset": [1.2, 1.2],
           "layer": 6,
-          "offset": [1.4, 2],
           "bindings": [
             {
               "binding_name"           : "#item_id_aux",
@@ -229,11 +217,38 @@
       }
     ]
   },
+
+  "scroll_grid@scroll_panel.common_container_scrolling_panel": {
+    "$scroll_size": [12, 56],
+    "size": [80, 56],
+    "offset": [3, -39.6],
+    "$scroll_view_port_size": [79, 54.2],
+    "$scrolling_pane_size": [ "100%", "100%" ],
+    "$scroll_track_offset": [32.2, -1],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "$scroll_box_mouse_image_control": "stonecutter_screen.scroller",
+    "$scroll_box_touch_image_control": "stonecutter_screen.scroller",
+    "$scrolling_content": "stonecutter_screen.grid_holder"
+  },
+//16x18
+  "scroller@screen_content.image_element": {
+    "tiled": true, 
+    "nineslice_size":[6,6,6,7],
+    "tiled_scale": [1, 1],
+    "offset": [2, 0.8],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/scroller.png",
+    "size": [ 12, "100%" ]
+  },
+
   "grid_holder": {
     "type": "panel",
     "size": [64, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
+    "offset": [0, -1.4],
     "controls": [
       {
         "scroll_buffer@global.empty_panel": { "size": [64, "100%sm"] }
@@ -242,7 +257,6 @@
         "grid": {
           "type": "grid",
           "size": [64, "default"],
-          "offset": [0, -1.2],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "collection_name": "stones",

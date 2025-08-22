@@ -265,7 +265,7 @@
 
   "scroller@screen_content.image_element": {
     "tiled": true, 
-    "nineslice_size":[ 6, 6, 6, 7 ],
+    "nineslice_size":[ 6, 7, 6, 6 ],
     "tiled_scale": [1, 1],
     "offset": [2, 0.8],
     "anchor_to": "center",
