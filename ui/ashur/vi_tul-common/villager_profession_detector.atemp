@@ -14,7 +14,7 @@
           "$profession_sprite": "armorer",
           "$entity_index"     : "ui:a",
           "$profession"       : "armor",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$anim_sprite"      : "optifine/anim/villager/default/armorer"
         }
       },
       {
@@ -151,7 +151,7 @@
                 "uv_size": [12, 5],
                 "size": [12, 5],
                 "animation_reset_name": "screen_animation_reset",
-                "offset": [-16, -31],
+                "offset": [-16, -31.2],
                 "texture": "$anim_sprite"
               }
             },
@@ -246,7 +246,7 @@
                 "uv_size": [12, 5],
                 "animation_reset_name": "screen_animation_reset",
                 "size": [12, 5],
-                "offset": [-16, -31],
+                "offset": [-16, -31.2],
                 "texture": "optifine/anim/villager/wandering"
               }
             },

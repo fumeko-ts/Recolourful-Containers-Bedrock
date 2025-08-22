@@ -211,8 +211,9 @@
         "centered_panel": {
           "type": "panel",
           "size": "$scroll_size",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "allow_clipping": false,
           "offset": "$scroll_track_offset",
           "controls": [
             { "track@scroll_panel.scrollbar_track": {"layer": 4, "anchor_from": "center", "anchor_to": "center"} },

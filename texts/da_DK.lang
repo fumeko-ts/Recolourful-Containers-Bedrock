@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Våbensmed
 atemp.entity.villager.mason=Mason
 atemp.entity.villager.unskilled=Ufaglært landsbyboer
 entity.wandering_trader.name=§zHandelsrejsende
+
+ashur.mode.manifest=Lys tilstand

@@ -1,0 +1,5 @@
+{
+"containers": "minecraft:trader_llama",
+"textures": {"minecraft:textures/gui/container/horse.png": "optifine/gui/container/horse/llama/trader_llama.png"},
+"match": {"@entity": {"none_of": [{"@body_armor_item": {}}], "@ChestedHorse": 1}}
+}

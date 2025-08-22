@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Waffenschmied
 atemp.entity.villager.mason=Steinmetz
 atemp.entity.villager.unskilled=Dorfbewohner
 entity.wandering_trader.name=§zFahrender Händler
+
+ashur.mode.manifest=Hellmodus

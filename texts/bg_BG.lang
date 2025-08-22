@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Ковач на оръжия
 atemp.entity.villager.mason=Зидар
 atemp.entity.villager.unskilled=Неквалифициран селянин
 entity.wandering_trader.name=§zСтранстващ търговец
+
+ashur.mode.manifest=Светъл режим

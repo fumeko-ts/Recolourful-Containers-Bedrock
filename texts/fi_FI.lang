@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Aseseppä
 atemp.entity.villager.mason=Mason
 atemp.entity.villager.unskilled=Taitamaton kyläläinen
 entity.wandering_trader.name=§zKuljeskeleva kauppias
+
+ashur.mode.manifest=Vaalea tila

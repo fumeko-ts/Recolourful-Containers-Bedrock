@@ -1,0 +1,4 @@
+{
+  "containers": "minecraft:horse",
+  "textures": {"minecraft:textures/gui/container/horse.png": "optifine/gui/container/horse/horse.png"}
+}

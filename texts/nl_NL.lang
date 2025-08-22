@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Wapensmid
 atemp.entity.villager.mason=Metselaar
 atemp.entity.villager.unskilled=Ongeschoolde dorpeling
 entity.wandering_trader.name=§zZwervende handelaar
+
+ashur.mode.manifest=Lichtmodus

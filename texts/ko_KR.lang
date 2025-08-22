@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=무기 제조인
 atemp.entity.villager.mason=석공
 atemp.entity.villager.unskilled=손재주 없는 주민
 entity.wandering_trader.name=§z떠돌이 상인
+
+ashur.mode.manifest=라이트 모드

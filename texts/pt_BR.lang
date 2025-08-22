@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Armeiro
 atemp.entity.villager.mason=Pedreiro
 atemp.entity.villager.unskilled=Aldeão Inexperiente
 entity.wandering_trader.name=§zVendedor Ambulante
+
+ashur.mode.manifest=Modo Claro

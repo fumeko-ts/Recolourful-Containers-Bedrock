@@ -18,6 +18,18 @@
     "metadata": {
       "ui_author": ["Ashura_temps","ashura_tepes"],
       "url": "https://discord.gg/sFnE7zv75t"
+    },
+  "subpacks" :[
+    {
+      "folder_name":"light",
+      "name":"light mode",
+      "memory_tier":1
+    },
+    {
+      "folder_name":"dark",
+      "name":"dark mode",
+      "memory_tier":2
     }
+  ]
  }
  

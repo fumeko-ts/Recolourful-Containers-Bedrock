@@ -59,3 +59,5 @@ atemp.entity.villager.weapon=Weapon Smith
 atemp.entity.villager.mason=Mason
 atemp.entity.villager.unskilled=Unskilled Villager
 entity.wandering_trader.name=§zWandering Trader
+
+ashur.mode.manifest=Light Mode

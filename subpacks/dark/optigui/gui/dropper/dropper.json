@@ -1,0 +1,6 @@
+{
+  "containers": "minecraft:dropper",
+  "textures": {
+    "minecraft:textures/gui/container/dispenser.png": "optifine/gui/container/dropper/dropper.png"
+  }
+}

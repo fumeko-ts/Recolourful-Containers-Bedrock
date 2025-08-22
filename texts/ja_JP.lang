@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=武器鍛冶
 atemp.entity.villager.mason=石工
 atemp.entity.villager.unskilled=未熟な村人
 entity.wandering_trader.name=§z行商人
+
+ashur.mode.manifest=ライトモード

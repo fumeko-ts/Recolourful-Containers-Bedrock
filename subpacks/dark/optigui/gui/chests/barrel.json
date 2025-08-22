@@ -1,0 +1,6 @@
+{
+  "containers": "minecraft:barrel",
+  "textures": {
+    "minecraft:textures/gui/container/generic_54.png": "optigui:gui/chests/barrel.png"
+  }
+}

@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Оружейник
 atemp.entity.villager.mason=Каменщик
 atemp.entity.villager.unskilled=Селянин-неумеха
 entity.wandering_trader.name=§zБродячий торговец
+
+ashur.mode.manifest=Светлый режим

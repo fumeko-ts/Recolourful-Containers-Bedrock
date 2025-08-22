@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=武器鍛工
 atemp.entity.villager.mason=石匠
 atemp.entity.villager.unskilled=不熟練的村民
 entity.wandering_trader.name=§z流浪商人
+
+ashur.mode.manifest=淺色模式

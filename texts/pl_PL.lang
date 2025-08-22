@@ -58,3 +58,5 @@ atemp.entity.villager.weapon=Zbrojmistrz
 atemp.entity.villager.mason=Kamieniarz
 atemp.entity.villager.unskilled=Niedoświadczony osadnik
 entity.wandering_trader.name=§zKupiec wędrowny
+
+ashur.mode.manifest=Jasny tryb

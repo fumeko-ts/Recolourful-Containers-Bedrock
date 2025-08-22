@@ -1,0 +1,1 @@
+{"containers": "minecraft:lime_shulker_box", "textures": {"minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/lime_label.png"}, "match": {"@screen": {"@title": {"none_of": [{"@translate":{}}]}}}}

@@ -1,0 +1,1 @@
+{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/plains/armorer.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:armorer", "@type": "minecraft:plains"}}}}

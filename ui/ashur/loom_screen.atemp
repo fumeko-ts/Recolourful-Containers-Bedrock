@@ -225,8 +225,7 @@
           "keep_ratio": true,
           "layer": 10,
           "texture": "#texture",
-          "offset": [-0.2, -0.2],
-          "size": [6, 12],
+          "size": [5, 10],
           "bindings": [
             {"binding_name": "#banner_patterns", "binding_type": "collection", "binding_collection_name": "patterns"},
             {
@@ -243,37 +242,46 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "keep_ratio": true,
-          "offset": [-0.2, -0.2],
           "texture": "textures/atemp/banner_patterns/banner_bg.png",
-          "size": [6, 12],
+          "size": [5, 10],
           "layer": 6
         }
       }
     ]
   },
   "scroll_panel@scroll_panel.common_container_scrolling_panel": {
-    "$scroll_size": [12, 56],
-    "size": [73, 56],
+    "$scroll_size": [12, 56.2],
+    "size": [73, 56.2],
     "offset": [1, 0.4],
-    "$misc_scroller_offset": [-1, -1],
     "$scroll_view_port_size": [71, 56.2],
-    "$scroll_track_offset": [0, -0.2],
+    "$scrolling_pane_size": [ "100%", "100%" ],
+    "$scroll_track_offset": [27.6, -1],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
-    "$scrolling_pane_size": ["100%", "100%"],
-    "$scroll_box_mouse_image_control": "screen_content.scroll_box_image",
-    "$scroll_box_touch_image_control": "screen_content.scroll_box_image",
+    "$scroll_box_mouse_image_control": "loom_screen.scroller",
+    "$scroll_box_touch_image_control": "loom_screen.scroller",
     "$scrolling_content": "loom_screen.scroll_grid_holder"
+  },
+
+  "scroller@screen_content.image_element": {
+    "tiled": true, 
+    "nineslice_size":[ 6, 6, 6, 7 ],
+    "tiled_scale": [1, 1],
+    "offset": [2, 0.8],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "texture": "assets/minecraft/textures/gui/sprites/container/loom/scroller.png",
+    "size": [ 12, "100%" ]
   },
   "scroll_grid_holder": {
     "type": "panel",
     "size": [56, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [0, -0.4],
+    "offset": [0, -0.2],
     "controls": [
       {
-        "scroll_buffer@global.empty_panel": { "size": [56, "100%sm"] }
+        "scroll_buffer@global.empty_panel": { "size": [56, "100%sm"] }// litraly dose nothing
       },
       {
         "scroll_grid": {

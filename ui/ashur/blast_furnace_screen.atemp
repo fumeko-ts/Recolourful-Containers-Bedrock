@@ -128,7 +128,7 @@
     "keep_ratio": true,
     "clip_pixelperfect": true,
     "$uv_size": [],
-
+    "clip_offset": [0, -1],
     "$uv": [0, 0],
     "uv_size": "$uv_size",
     "uv": "$uv",
