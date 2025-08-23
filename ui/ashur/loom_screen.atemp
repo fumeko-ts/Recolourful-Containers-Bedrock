@@ -273,8 +273,8 @@
                   {
                     "binding_type": "collection",
                     "binding_condition": "always",
-                    "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_normal')",
                     "binding_collection_name": "$collection_name",
+                    "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_normal')",
                     "binding_name_override": "#visible"
                   }
                 ]
@@ -289,8 +289,8 @@
                   {
                     "binding_type": "collection",
                     "binding_condition": "always",
-                    "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_invert')",
                     "binding_collection_name": "$collection_name",
+                    "binding_name": "(#pattern_cell_background_texture = 'textures/ui/cell_image_invert')",
                     "binding_name_override": "#visible"
                   }
                 ]
@@ -455,7 +455,33 @@
               "mapping_type": "pressed"
             }
           ],
-          "controls": []
+          "hover_control": "hover",
+          "controls": [
+            {
+              "hover@global.empty_panel": {
+                "size": [14, 14],
+                "controls": [
+                  {
+                    "hover@screen_content.image_element":{
+                      "size": [14, 14],
+                      "offset": [1, 1],
+                      "nineslice_size": 1,
+                      "texture": "assets/minecraft/textures/gui/sprites/container/loom/pattern_highlighted.png",
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_condition": "always",
+                          "binding_collection_name": "$collection_name",
+                          "binding_name": "(not (#pattern_cell_background_texture = 'textures/ui/cell_image_invert'))",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     ]
