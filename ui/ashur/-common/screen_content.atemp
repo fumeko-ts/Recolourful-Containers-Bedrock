@@ -207,10 +207,10 @@
     "uv_size": [276, 166],
     "texture": "assets/minecraft/textures/gui/container/villager"
   },
-  "edit_box_indent@screen_content.image_element": {
+  "anvil_edit_box@screen_content.image_element": {
     "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field_disabled"
   },
-  "edit_box_indent_hover@screen_content.image_element": {
+  "anvil_edit_box_hover@screen_content.image_element": {
     "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field"
   },
   "armor_overlay@screen_content.image_element": {
@@ -441,9 +441,7 @@
     ]
   },
   "anvil_text_field@screen_content.image_element": {
-    "nineslice_size": 2,
-    "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field_disabled.png",
-    "size": [110, 16]
+    "texture": "assets/minecraft/textures/gui/sprites/container/anvil/text_field_disabled.png"
   },
   "anvil_text_field_highlighted@screen_content.image_element": {
     "nineslice_size": 2,

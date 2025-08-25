@@ -1,19 +1,6 @@
 {
   "namespace": "crafting_common",
-  "text_edit_control@text_edit_box.text_field": {
-    "size": "$var_text_box_size",
-    "property_bag": {"#property_field": "#item_name"},    
-    "$var_text_panel_size": "$var_text_box_size",
-    "$var_text_box_size": [81, 14],
-    "$var_text_edit_box_label_size": ["default", 8],
-    "$var_text_edit_box_label_offset": [3, 0],
-    "$var_text_clear_button_enabled": true,
-    "$var_text_background_default": "screen_content.text_field",
-    "$var_text_background_hover": "screen_content.text_field_highlighted",
-    "$var_text_edit_binding_name": "#text_box_item_name",
-    "$var_place_holder_text": "§o§8§7Search..."
-
-  },
+  "text_edit_control@global.empty_panel": {},
   "player_renderer_panel": {
     "type": "panel",
     "size": [34, 45],

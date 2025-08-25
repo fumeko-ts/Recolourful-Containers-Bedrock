@@ -119,44 +119,7 @@
                       ]
                     }
                   },
-                  {
-                    "exp_holder@global.empty_panel": {
-                      "size": [102, 5],
-                      "controls": [
-                        {
-                          "empty_progress_bar@screen_content.image_element": {
-                            "size": [102, 5],
-                            "anchor_to": "center",
-                            "anchor_from": "center",
-                            "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_background.png",
-                            "layer": 7,
-                            "controls": [
-                              {
-                                "white_progress_bar@screen_content.image_element": {
-                                  "size": [102, 5],
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
-                                  "texture": "assets/minecraft/textures/gui/sprites/container/villager/experience_bar_current.png",
-                                  "clip_direction": "left",
-                                  "clip_pixelperfect": true,
-                                  "layer": 8,
-                                  "bindings": [
-                                    {
-                                      "binding_name"         : "#exp_possible_progress",
-                                      "binding_name_override": "#clip_ratio",
-                                      "binding_type"         : "global",
-                                      "binding_condition"    : "always"
-                                    }
-                                  ]
-                                }
-                              }
-                            ],
-                            "bindings": [ {"binding_name": "#exp_bar_visible", "binding_name_override": "#visible"} ]
-                          }
-                        }
-                      ]
-                    }
-                  }
+                  {"exp_bar@trade_global.exp_bars":{}}
                 ]
               }
             },
@@ -205,8 +168,9 @@
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#trade_toggle_state",
     "$toggle_enabled_binding_type": "global",
+
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
-    "$toggle_enabled_binding_condition": "always_when_visible"
+    "$toggle_enabled_binding_condition": "always"
   },
   "scroll_panel@scroll_panel.new_scrolling_panel": {
     "size": [120, 142],

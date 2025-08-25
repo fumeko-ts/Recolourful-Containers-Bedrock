@@ -288,22 +288,18 @@
     "size": [110, 16],
     "controls": [
       {
-        "anvil_text_box@text_edit_box.text_field": {
-          "offset": [-1, -1],
-          "$text_panel_size_minus_1px|default": [106, 16],
-          "$text_edit_box_label_size": ["default", 10],
-          "property_bag": {"#property_field": "#item_name"},
-          "max_length": 30,
-          "$text_clear_button_enabled": false,
-          "$text_box_bg_offset": [1, 1],
-          "layer": 6,
-          "$text_clear_offset": [14, 1],
-          "$text_edit_box_label_offset": [4, 2],
-          "$text_box_text_color": [0.6667, 0.6667, 0.6667, 1],
+        "text_edit_control@text_edit_box.text_edit_box": {
+          "property_bag": {
+            "#property_field": "#item_name"
+          },
+          "max_length": 300000,
+          "$text_box_text_color": [0.231, 0.231, 0.231, 1],
+
           "$text_background_locked": "screen_content.anvil_text_field",
-          "$text_background_default": "screen_content.anvil_text_field_highlighted",
-          "$text_background_hover": "screen_content.anvil_text_field_highlighted",
-          "$text_edit_binding_name": "#text_box_item_name"
+          "$text_background_default": "screen_content.anvil_edit_box_hover",
+          "$text_background_hover": "screen_content.anvil_edit_box_hover",
+          "$text_edit_binding_name": "#text_box_item_name",
+          "$text_edit_box_label_size": [ "default", 10 ]
         }
       }
     ]
