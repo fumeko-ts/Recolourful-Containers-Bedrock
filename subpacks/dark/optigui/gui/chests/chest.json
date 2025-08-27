@@ -1,6 +1,4 @@
 {
   "containers": "minecraft:chest",
-  "textures": {
-    "minecraft:textures/gui/container/generic_54.png": "optifine/gui/container/chests/chest.png"
-  }
+  "textures": {"minecraft:textures/gui/container/generic_54.png": "optifine/gui/container/chests/chest.png"}
 }

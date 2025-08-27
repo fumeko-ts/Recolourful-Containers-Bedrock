@@ -1,32 +1,22 @@
 {
   "namespace": "hud",
-
-  "asprite": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
-  "empty_progress_bar@screen_content.image_element": {
-    "texture": "textures/ui/experience_bar_empty"
-  },
-
-  //new/test
-
+  "asprite": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]},
+  "empty_progress_bar@screen_content.image_element": {"texture": "textures/ui/experience_bar_empty"},
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar": {
-    "size": ["100%c", 5],
+    "size": [ "100%c", 5 ],
     "controls": [
       {
         "xp_fill_texture": {
           "type": "image",
           "clip_direction": "left",
-          "texture": "textures/exp_full",
+          "texture": "textures/ui/ashur/animations/exp_full",
           "uv": "@hud.asprite",
           "layer": 2,
-          "uv_size": [182, 5],
-          "size": [182, 5],
+          "uv_size": [ 182, 5 ],
+          "size": [ 182, 5 ],
           "clip_pixelperfect": true,
           "bindings": [
-            {
-              "binding_name"         : "#exp_progress",
-              "binding_name_override": "#clip_ratio",
-              "binding_type"         : "global"
-            }
+            {"binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global"}
           ],
           "controls": [
             {
@@ -49,11 +39,7 @@
                             "size": [ "100%c", 5 ],
                             "layer": 7,
                             "controls": [
-                              {
-                                "hotbar@hotbar_chooser": {
-                                  "offset": [ 4, 16 ]
-                                }
-                              }
+                              {"hotbar@hotbar_chooser": {"offset": [ 4, 16 ]}}
                             ]
                           }
                         }

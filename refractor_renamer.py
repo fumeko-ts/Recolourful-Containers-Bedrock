@@ -240,20 +240,6 @@ def search_text_in_files(root_dir, search_text):
     if not found_any:
         print(f"No occurrences of '{search_text}' found in any files.")
 
-
-def run_ui_defs():
-    ui_script_path = os.path.join("_ui_defs-updater.py")
-    if os.path.isfile(ui_script_path):
-        print(f"Running {ui_script_path} ...")
-        try:
-            subprocess.run([os.sys.executable, ui_script_path], check=True)
-            print("_ui_defs-updater.py completed successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"_ui_defs-updater.py failed with error: {e}")
-    else:
-        print(f"{ui_script_path} not found, skipping run.")
-
-
 def load_rr_config(config_path="rr.config"):
     if not os.path.exists(config_path):
         print(f"Config file '{config_path}' not found.")
@@ -338,4 +324,3 @@ if __name__ == "__main__":
                     refactor_text_in_files(root_dir, replacements)
                 break
 
-    run_ui_defs()

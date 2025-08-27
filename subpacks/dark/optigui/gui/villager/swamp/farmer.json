@@ -1,1 +1,7 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/swamp/farmer.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:farmer", "@type": "minecraft:swamp"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/swamp/farmer.png"
+  },
+  "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:farmer", "@type": "minecraft:swamp"}}}
+}

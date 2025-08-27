@@ -1,1 +1,9 @@
-{"containers": "minecraft:light_blue_shulker_box", "textures": {"minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/light_blue.png"}, "match": {"@screen": {"@title": {"any_of": [{"@translate":{}}]}}}}
+{
+  "containers": "minecraft:light_blue_shulker_box",
+  "textures": {
+    "minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/light_blue.png"
+  },
+  "match": {"@screen": {"@title": {"any_of": [
+          {"@translate": {}}
+        ]}}}
+}

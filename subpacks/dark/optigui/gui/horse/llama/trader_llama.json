@@ -1,5 +1,7 @@
 {
-"containers": "minecraft:trader_llama",
-"textures": {"minecraft:textures/gui/container/horse.png": "optigui:gui/horse/llama/ztrader_llama.png"},
-"match": {"@entity": {"none_of": [{"@body_armor_item": {}}], "@ChestedHorse": 0}}
+  "containers": "minecraft:trader_llama",
+  "textures": {"minecraft:textures/gui/container/horse.png": "optigui:gui/horse/llama/ztrader_llama.png"},
+  "match": {"@entity": {"none_of": [
+        {"@body_armor_item": {}}
+      ], "@ChestedHorse": 0}}
 }

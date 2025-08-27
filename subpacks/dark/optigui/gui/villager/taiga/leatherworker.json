@@ -1,1 +1,9 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/taiga/leatherworker.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:leatherworker", "@type": "minecraft:taiga"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/taiga/leatherworker.png"
+  },
+  "match": {
+    "@entity": {"@VillagerData": {"@profession": "minecraft:leatherworker", "@type": "minecraft:taiga"}}
+  }
+}

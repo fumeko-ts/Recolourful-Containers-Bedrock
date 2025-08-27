@@ -1,6 +1,4 @@
 {
   "containers": "minecraft:ender_chest",
-  "textures": {
-    "textures/gui/container/generic_54.png": "optifine/gui/container/chests/ender.png"
-  }
+  "textures": {"textures/gui/container/generic_54.png": "optifine/gui/container/chests/ender.png"}
 }

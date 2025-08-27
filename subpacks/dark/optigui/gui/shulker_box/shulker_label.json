@@ -1,1 +1,7 @@
-{"containers": "minecraft:shulker_box", "textures": {"minecraft:textures/gui/container/shulker_box.png": "optigui/gui/shulker_box/shulker_label.png"}, "match": {"@screen": {"@title": {"none_of": [{"@translate":{}}]}}}}
+{
+  "containers": "minecraft:shulker_box",
+  "textures": {"minecraft:textures/gui/container/shulker_box.png": "optigui/gui/shulker_box/shulker_label.png"},
+  "match": {"@screen": {"@title": {"none_of": [
+          {"@translate": {}}
+        ]}}}
+}

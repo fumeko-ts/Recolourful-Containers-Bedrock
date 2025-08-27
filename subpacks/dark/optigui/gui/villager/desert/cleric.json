@@ -1,1 +1,7 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/desert/cleric.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:cleric", "@type": "minecraft:desert"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/desert/cleric.png"
+  },
+  "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:cleric", "@type": "minecraft:desert"}}}
+}

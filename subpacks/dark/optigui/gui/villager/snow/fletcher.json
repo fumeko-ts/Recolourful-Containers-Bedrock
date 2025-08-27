@@ -1,1 +1,7 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/snow/fletcher.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:fletcher", "@type": "minecraft:snow"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/snow/fletcher.png"
+  },
+  "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:fletcher", "@type": "minecraft:snow"}}}
+}

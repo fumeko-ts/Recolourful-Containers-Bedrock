@@ -1,1 +1,9 @@
-{"containers": "minecraft:pink_shulker_box", "textures": {"minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/pink_label.png"}, "match": {"@screen": {"@title": {"none_of": [{"@translate":{}}]}}}}
+{
+  "containers": "minecraft:pink_shulker_box",
+  "textures": {
+    "minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/pink_label.png"
+  },
+  "match": {"@screen": {"@title": {"none_of": [
+          {"@translate": {}}
+        ]}}}
+}

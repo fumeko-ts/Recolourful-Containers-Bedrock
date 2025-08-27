@@ -1,104 +1,174 @@
 {
   "namespace": "scroll_panel",
-  "new_scroll_bar_and_track@global.empty_panel": {
-    "size": "$scroll_stack_size",
-    "anchor_from": "right_middle",
-    "anchor_to": "right_middle",
-    "layer": 8,
+  "scroll_panel@global.empty_panel": {
     "controls": [
       {
-        "centered_panel@global.empty_panel": {
-          "size": "$scroll_stack_size",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "offset": "$bar_and_track_offset",
-          "layer": 10,
-          "controls": [
-            { "track@scroll_panel.new_scrollbar_track": {"layer": 2, "anchor_from": "center", "anchor_to": "center"} },
-            {
-              "scroll_box@global.empty_panel": {
-                "controls": [
-                  {
-                    "box": {
-                      "type": "scrollbar_box",
-                      "layer": 5,
-                      "anchor_from": "top_middle",
-                      "anchor_to": "top_middle",
-                      "contained": true,
-                      "draggable": "vertical",
-                      "button_mappings": [
-                        {
-                          "from_button_id": "button.menu_select",
-                          "to_button_id": "button.menu_select",
-                          "mapping_type": "pressed",
-                          "button_up_right_of_first_refusal": true
-                        }
-                      ],
-                      "controls": [
-                        { "mouse_box@$scroll_box_mouse_image_control": {"visible": "$scroll_box_visible"} }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
+        "scroll_base@scroll_panel.scroll_panel_base": {
+          "size"  : "$scrolling_pane_size",
+          "offset": "$scrolling_pane_offset"
         }
       }
-    ]
-  },
-  "new_scrolling_panel": {
-    "type": "scroll_view",
-    "size": ["100%", "100%"],
-    "scroll_speed": 6,
-    "scrollbar_track_button": "button.scrollbar_skip_track",
-    "scrollbar_touch_button": "button.scrollbar_touch",
-    "always_listen_to_input": true,
-    "always_handle_pointer": true,
-    "always_handle_scrolling": false,
-    "scrollbar_always_visible": false,
-    "scrollbar_track": "track",
-    "scrollbar_box": "box",
-    "scroll_content": "scrolling_content",
-    "scroll_view_port": "scrolling_view_port",
-    "scroll_box_and_track_panel": "centered_panel",
-    "jump_to_bottom_on_update": false,
-    "$scroll_stack_size|default": [10, 140],
-    "$scroll_view_port_size|default": [88, 140.2],
+    ],
+    "$scrolling_pane_size|default": ["100%", "100%"],
+    "$scrolling_pane_offset|default": [0, 0],
+    "$scroll_view_control_size|default": ["100%", "100%"],
+    "$scroll_view_port_size|default": ["100%", "100%"],
+    "$scroll_view_port_offset|default": [0, 0],
     "$view_port_size|default": ["fill", "100%"],
     "$scroll_size|default": [4, "100%"],
     "$scroll_box_size|default": ["100%", "100%"],
-    "$scroll_view_stack_panel_size|default": ["100%", "100%"],
-    "$scroll_bar_left_padding|default": [2, "fill"],
-    "$bar_and_track_offset|default": [0, 0],
-    "$scroll_viewport_offset|default": [0, 0],
+    "$wider_scroll_area|default": false,
     "$scroll_box_visible|default": true,
-    "$scroll_box_mouse_image_control|default": "common.scrollbar_box_image",
+    "$scroll_track_offset": [0, 0],
+    "$scroll_box_image_control": "global.empty_image"
+  },
+  "scroll_panel_base": {
+    "type": "input_panel",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$scroll_panel_consume_hover_events|default": true,
+    "consume_hover_events": "$scroll_panel_consume_hover_events",
+    "$scroll_view_name|default": "scroll_view",
+    "tts_ignore_count": true,
     "controls": [
       {
-        "stack_panel@global.empty_stack": {
-          "orientation": "horizontal",
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "size": "$scroll_view_stack_panel_size",
+        "$scroll_view_name": {
+          "type": "scroll_view",
+          "size": "$scroll_view_control_size",
+          "$scroll_view_control_anchor|default": "center",
+          "anchor_to": "$scroll_view_control_anchor",
+          "anchor_from": "$scroll_view_control_anchor",
+          "scroll_speed": 6,
+          "scrollbar_track_button": "button.scrollbar_skip_track",
+          "scrollbar_touch_button": "button.scrollbar_touch",
+          "always_listen_to_input": true,
+          "always_handle_pointer": true,
+          "always_handle_scrolling": false,
+          "scrollbar_always_visible": false,
+          "scrollbar_track": "track",
+          "scrollbar_box": "box",
+          "scroll_content": "scrolling_content",
+          "scroll_view_port": "scrolling_view_port",
+          "scroll_box_and_track_panel": "bar_and_track",
+          "jump_to_bottom_on_update": false,
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.scrollbar_touch",
+              "mapping_type": "pressed",
+              "button_up_right_of_first_refusal": true
+            }
+          ],
           "controls": [
             {
-              "scroll_viewport_holder@global.empty_panel": {
-                "size": "$view_port_size",
-                "anchor_to": "left_middle",
-                "anchor_from": "left_middle",
+              "panel@global.empty_panel": {
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "$view_port_size|default": ["100%", "100%"],
                 "clips_children": true,
                 "controls": [
                   {
-                    "scrolling_view_port@global.empty_panel": {
-                      "size": "$scroll_view_port_size",
-                      "offset": "$scroll_viewport_offset",
+                    "viewport@global.empty_panel": {
+                      "size": "$view_port_size",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
                       "clips_children": true,
+                      "$scrolling_content_anchor_from|default": "top_left",
+                      "$scrolling_content_anchor_to|default": "top_left",
                       "controls": [
                         {
-                          "scrolling_content@$scrolling_content": {
-                            "anchor_to"  : "top_middle",
-                            "anchor_from": "top_middle"
+                          "scrolling_view_port@global.empty_panel": {
+                            "layer": 1,
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "clips_children": true,
+                            "offset": "$scroll_view_port_offset",
+                            "size": "$scroll_view_port_size",
+                            "controls": [
+                              {
+                                "scrolling_content@$scrolling_content": {
+                                  "layer": 2,
+                                  "anchor_from": "$scrolling_content_anchor_from",
+                                  "anchor_to": "$scrolling_content_anchor_to"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bar_and_track@global.empty_panel": {
+                      "clips_children": true,
+                      "size": "$scrolling_pane_size",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "controls": [
+                        {
+                          "centered_panel@global.empty_panel": {
+                            "size": "$scroll_size",
+                            "anchor_to": "center",
+                            "anchor_from": "center",
+                            "allow_clipping": false,
+                            "offset": "$scroll_track_offset",
+                            "controls": [
+                              {
+                                "track": {
+                                  "type": "scroll_track",
+                                  "size": "$scroll_track_sise",
+                                  "$scroll_track_sise|default": ["default", "default"],
+                                  "layer": 4,
+                                  "anchor_from": "center",
+                                  "anchor_to": "center",
+                                  "controls": [
+                                    {"bar_indent@global.empty_panel": {}}
+                                  ],
+                                  "button_mappings": [
+                                    {
+                                      "from_button_id": "button.menu_select",
+                                      "to_button_id": "button.scrollbar_skip_track",
+                                      "mapping_type": "pressed"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "scroll_box": {
+                                  "type": "panel",
+                                  "layer": 5,
+                                  "anchor_from": "center",
+                                  "anchor_to": "center",
+                                  "controls": [
+                                    {
+                                      "box": {
+                                        "type": "scrollbar_box",
+                                        "anchor_to": "top_left",
+                                        "anchor_from": "top_left",
+                                        "layer": 1,
+                                        "visible": "$scroll_box_visible",
+                                        "contained": true,
+                                        "draggable": "vertical",
+                                        "button_mappings": [
+                                          {
+                                            "from_button_id": "button.menu_select",
+                                            "to_button_id": "button.menu_select",
+                                            "mapping_type": "pressed",
+                                            "button_up_right_of_first_refusal": true
+                                          }
+                                        ],
+                                        "controls": [
+                                          {
+                                            "mouse_box@$scroll_box_image_control": {
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -106,118 +176,7 @@
                   }
                 ]
               }
-            },
-            { "filler@global.empty_panel": {"size": "$scroll_bar_left_padding"} },
-            {"bar_and_track@scroll_panel.new_scroll_bar_and_track": {}}
-          ]
-        }
-      }
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.scrollbar_touch",
-        "mapping_type": "pressed",
-        "button_up_right_of_first_refusal": true
-      }
-    ]
-  },
-  "new_scrollbar_track": {
-    "type": "scroll_track",
-    "button_mappings": [
-      {"from_button_id": "button.menu_select", "to_button_id": "button.scrollbar_skip_track", "mapping_type": "pressed"}
-    ]
-  },
-  "common_container_scrolling_panel@common.scrolling_panel": {
-    "$scroll_track_offset": [0, 0],
-    "$scroll_track_image_control": "common.empty_panel",
-    "$scroll_box_mouse_image_control": "$scroll_box_image_control",
-    "$scroll_box_touch_image_control": "$scroll_box_image_control",
-    "controls": [
-      {
-        "scroll_base@scroll_panel.common_container_scrolling_panel_base": {
-          "size"  : "$scrolling_pane_size",
-          "offset": "$scrolling_pane_offset"
-        }
-      }
-    ]
-  },
-  "common_container_scrolling_panel_base@common.scrolling_panel_base": {
-    "controls": [
-      {
-        "$scroll_view_name@common.scroll_view_control": {
-          "controls": [
-            {
-              "panel": {
-                "type": "panel",
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "$view_port_size|default": ["100%", "100%"],
-                "clips_children": true,
-                "controls": [
-                  {"viewport@scroll_panel.common_container_viewport": {}},
-                  {"bar_and_track@scroll_panel.common_container_bar_and_track": {}}
-                ]
-              }
             }
-          ]
-        }
-      }
-    ]
-  },
-  "common_container_viewport@common.scroll_background_and_viewport": {
-    "controls": [
-      {
-        "scrolling_view_port": {
-          "layer": 1,
-          "type": "panel",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "clips_children": true,
-          "offset": "$scroll_view_port_offset",
-          "size": "$scroll_view_port_size",
-          "controls": [
-            {
-              "scrolling_content@$scrolling_content": {
-                "layer": 2,
-                "$scrolling_content_anchor_from|default": "top_left",
-                "$scrolling_content_anchor_to|default": "top_left",
-                "anchor_from": "$scrolling_content_anchor_from",
-                "anchor_to": "$scrolling_content_anchor_to"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "scrollbar_track": {
-    "type": "scroll_track",
-    "size": "$scroll_track_sise",
-    "$scroll_track_sise|default": ["default", "default"],
-    "button_mappings": [
-      {"from_button_id": "button.menu_select", "to_button_id": "button.scrollbar_skip_track", "mapping_type": "pressed"}
-    ],
-    "controls": [
-      { "bar_indent@$scroll_track_image_control": {"visible": "$scroll_box_visible"} }
-    ]
-  },
-  "common_container_bar_and_track@common.scroll_bar_and_track": {
-    "size": "$scrolling_pane_size",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "controls": [
-      {
-        "centered_panel": {
-          "type": "panel",
-          "size": "$scroll_size",
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "allow_clipping": false,
-          "offset": "$scroll_track_offset",
-          "controls": [
-            { "track@scroll_panel.scrollbar_track": {"layer": 4, "anchor_from": "center", "anchor_to": "center"} },
-            { "scroll_box@common.scroll_box": {"layer": 5, "anchor_from": "center", "anchor_to": "center"} }
           ]
         }
       }

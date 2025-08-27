@@ -1,1 +1,9 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/jungle/weaponsmith.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:weaponsmith", "@type": "minecraft:jungle"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/jungle/weaponsmith.png"
+  },
+  "match": {
+    "@entity": {"@VillagerData": {"@profession": "minecraft:weaponsmith", "@type": "minecraft:jungle"}}
+  }
+}

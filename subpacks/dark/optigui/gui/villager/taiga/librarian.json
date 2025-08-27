@@ -1,1 +1,7 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/taiga/librarian.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:librarian", "@type": "minecraft:taiga"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/taiga/librarian.png"
+  },
+  "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:librarian", "@type": "minecraft:taiga"}}}
+}

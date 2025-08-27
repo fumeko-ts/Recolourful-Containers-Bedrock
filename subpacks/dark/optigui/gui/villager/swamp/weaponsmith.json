@@ -1,1 +1,7 @@
-{"containers": "minecraft:villager","textures": {"minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/swamp/weaponsmith.png"}, "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:weaponsmith", "@type": "minecraft:swamp"}}}}
+{
+  "containers": "minecraft:villager",
+  "textures": {
+    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/swamp/weaponsmith.png"
+  },
+  "match": {"@entity": {"@VillagerData": {"@profession": "minecraft:weaponsmith", "@type": "minecraft:swamp"}}}
+}

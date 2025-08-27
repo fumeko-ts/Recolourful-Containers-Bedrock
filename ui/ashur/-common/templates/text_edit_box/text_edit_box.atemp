@@ -76,7 +76,6 @@
                           }
                         }
                       ],
-
                       "bindings": [
                         {
                           "binding_type": "view",
@@ -100,17 +99,14 @@
           "$disabled_color|default": "$color",
           "controls": [
             {
-              "edit_box_indent@$text_background_locked": {
-                "$color": "$disabled_color",
-                "$alpha": "$disabled_alpha"
-              }
+              "edit_box_indent@$text_background_locked": {"$color": "$disabled_color", "$alpha": "$disabled_alpha"}
             }
           ]
         }
       },
-      { "default@$text_background_default": {} },
-      { "hover@$text_background_hover": {} },
-      { "pressed@$text_background_hover": {} }
+      {"default@$text_background_default": {}},
+      {"hover@$text_background_hover": {}},
+      {"pressed@$text_background_hover": {}}
     ]
   }
 }
