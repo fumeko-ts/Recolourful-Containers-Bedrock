@@ -1,4 +1,0 @@
-{
-  "containers": "minecraft:large_christmas_chest",
-  "textures": {"textures/gui/container/generic_54.png": "optifine/gui/container/chests/large_christmas_chest.png"}
-}

@@ -1,5 +1,0 @@
-{
-  "containers": [ "minecraft:llama", "minecraft:trader_llama" ],
-  "textures": {"minecraft:textures/gui/container/horse.png": "optigui:gui/horse/llama/cyan.png"},
-  "match": {"@entity": {"@body_armor_item": {"@id": "minecraft:cyan_carpet"}, "@ChestedHorse": 0}}
-}

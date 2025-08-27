@@ -1,7 +1,0 @@
-{
-  "containers": "minecraft:gray_shulker_box",
-  "textures": {"minecraft:textures/gui/container/shulker_box.png": "optifine/gui/container/shulker_box/gray.png"},
-  "match": {"@screen": {"@title": {"any_of": [
-          {"@translate": {}}
-        ]}}}
-}

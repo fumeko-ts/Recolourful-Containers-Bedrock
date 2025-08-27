@@ -1,9 +1,0 @@
-{
-  "containers": "minecraft:villager",
-  "textures": {
-    "minecraft:textures/gui/container/villager.png": "optifine/gui/container/villager/savanna/cartographer.png"
-  },
-  "match": {
-    "@entity": {"@VillagerData": {"@profession": "minecraft:cartographer", "@type": "minecraft:savanna"}}
-  }
-}

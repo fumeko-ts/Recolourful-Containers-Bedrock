@@ -1,5 +1,0 @@
-{
-  "containers": [ "minecraft:mule", "minecraft:donkey" ],
-  "textures": {"minecraft:textures/gui/container/horse.png": "optifine/gui/container/horse/donkey.png"},
-  "match": {"@entity": {"@ChestedHorse": 1}}
-}

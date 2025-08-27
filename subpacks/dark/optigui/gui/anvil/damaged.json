@@ -1,4 +1,0 @@
-{
-  "containers": "minecraft:damaged_anvil",
-  "textures": {"minecraft:textures/gui/container/anvil.png": "optigui:gui/anvil/damaged.png"}
-}

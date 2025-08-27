@@ -1,4 +1,0 @@
-{
-  "containers": "minecraft:chipped_anvil",
-  "textures": {"minecraft:textures/gui/container/anvil.png": "optigui:gui/anvil/chipped.png"}
-}

@@ -1,6 +1,0 @@
-{
-  "containers": "minecraft:trapped_chest",
-  "textures": {
-    "minecraft:textures/gui/container/generic_54.png": "optifine/gui/container/chests/atrapped_chest.png"
-  }
-}

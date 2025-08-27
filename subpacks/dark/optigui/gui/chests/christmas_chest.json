@@ -1,6 +1,0 @@
-{
-  "containers": "minecraft:christmas_chest",
-  "textures": {
-    "minecraft:textures/gui/container/generic_54.png": "optifine/gui/container/chests/christmas_chest.png"
-  }
-}

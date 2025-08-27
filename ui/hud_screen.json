@@ -6,8 +6,7 @@
     "size": [ "100%c", 5 ],
     "controls": [
       {
-        "xp_fill_texture": {
-          "type": "image",
+        "xp_fill_texture@global.empty_image": {
           "clip_direction": "left",
           "texture": "textures/ui/ashur/animations/exp_full",
           "uv": "@hud.asprite",
@@ -20,26 +19,26 @@
           ],
           "controls": [
             {
-              "progress_bar_nub@progress_bar_nub": {
+              "progress_bar_nub@hud.progress_bar_nub": {
                 "size": [ "100%c - 10px", 5 ],
                 "max_size": [ 190, 5 ],
                 "layer": 3,
                 "controls": [
                   {
-                    "horse_jump_rend@horse_jump_renderer": {
+                    "horse_jump_rend@hud.horse_jump_renderer": {
                       "anchor_from": "bottom_middle",
                       "anchor_to": "bottom_middle",
                       "size": [ "100%c", 5 ],
                       "layer": 7,
                       "controls": [
                         {
-                          "dash_rend@dash_renderer": {
+                          "dash_rend@hud.dash_renderer": {
                             "anchor_from": "bottom_middle",
                             "anchor_to": "bottom_middle",
                             "size": [ "100%c", 5 ],
                             "layer": 7,
                             "controls": [
-                              {"hotbar@hotbar_chooser": {"offset": [ 4, 16 ]}}
+                              {"hotbar@hud.hotbar_chooser": {"offset": [ 4, 16 ]}}
                             ]
                           }
                         }

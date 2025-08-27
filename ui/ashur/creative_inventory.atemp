@@ -77,7 +77,7 @@
       }
     ]
   },
-  "scroll_panel@scroll_panel.common_container_scrolling_panel": {
+  "scroll_panel@scroll_panel.scroll_panel": {
     "offset": [ 0.4, 5.4 ],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -87,8 +87,7 @@
     "$scroll_view_port_size": [ 180, 90.2 ],
     "$scroll_track_offset": [ -1, -0.2 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_box_mouse_image_control": "screen_content.creative_scroll_box_image",
-    "$scroll_box_touch_image_control": "screen_content.creative_scroll_box_image",
+    "$scroll_box_image_control": "screen_content.creative_scroll_box_image",
     "$scrolling_content": "creative_inventory.scroll_grid_holder"
   },
   "scroll_grid_holder": {

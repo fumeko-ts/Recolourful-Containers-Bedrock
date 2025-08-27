@@ -1,5 +1,0 @@
-{
-  "containers": "minecraft:player",
-  "textures": {"minecraft:textures/gui/container/inventory.png": "optigui:gui/inventory/twoslots.png"},
-  "if": {"@mods": {"@charmofundying": {}}}
-}

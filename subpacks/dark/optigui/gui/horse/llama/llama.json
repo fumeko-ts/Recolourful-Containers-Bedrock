@@ -1,7 +1,0 @@
-{
-  "containers": "minecraft:llama",
-  "textures": {"minecraft:textures/gui/container/horse.png": "optigui:gui/horse/llama/zllama.png"},
-  "match": {"@entity": {"none_of": [
-        {"@body_armor_item": {}}
-      ], "@ChestedHorse": 0}}
-}

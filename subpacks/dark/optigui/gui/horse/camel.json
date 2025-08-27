@@ -1,4 +1,0 @@
-{
-  "containers": [ "minecraft:camel", "minecraft:skeleton_horse", "zombie_horse" ],
-  "textures": {"minecraft:textures/gui/container/horse.png": "optigui:gui/horse/saddle.png"}
-}
