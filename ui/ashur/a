@@ -1,0 +1,180 @@
+  "main": {
+    "type": "panel",
+    "layer": 4000,
+    "size": ["100%cm", "100%cm"],
+    "$template|default": "furnace_screen.template",
+    "controls": [
+      {"100@$template": {"$hover_text": "99","$min_ratio": 0,"$max_ratio": 0.01}},
+      {"99@$template": {"$hover_text": "98","$min_ratio": 0.01,"$max_ratio": 0.02}},
+      {"98@$template": {"$hover_text": "97","$min_ratio": 0.02,"$max_ratio": 0.03}},
+      {"97@$template": {"$hover_text": "96","$min_ratio": 0.03,"$max_ratio": 0.04}},
+      {"96@$template": {"$hover_text": "95","$min_ratio": 0.04,"$max_ratio": 0.05}},
+      {"95@$template": {"$hover_text": "94","$min_ratio": 0.05,"$max_ratio": 0.06}},
+      {"94@$template": {"$hover_text": "93","$min_ratio": 0.06,"$max_ratio": 0.07}},
+      {"93@$template": {"$hover_text": "92","$min_ratio": 0.07,"$max_ratio": 0.08}},
+      {"92@$template": {"$hover_text": "91","$min_ratio": 0.08,"$max_ratio": 0.09}},
+      {"91@$template": {"$hover_text": "90","$min_ratio": 0.09,"$max_ratio": 0.10}},
+      {"90@$template": {"$hover_text": "89","$min_ratio": 0.10,"$max_ratio": 0.11}},
+      {"89@$template": {"$hover_text": "88","$min_ratio": 0.11,"$max_ratio": 0.12}},
+      {"87@$template": {"$hover_text": "87","$min_ratio": 0.12,"$max_ratio": 0.13}},
+      {"86@$template": {"$hover_text": "86","$min_ratio": 0.13,"$max_ratio": 0.14}},
+      {"85@$template": {"$hover_text": "85","$min_ratio": 0.14,"$max_ratio": 0.15}},
+      {"84@$template": {"$hover_text": "84","$min_ratio": 0.15,"$max_ratio": 0.16}},
+      {"83@$template": {"$hover_text": "83","$min_ratio": 0.16,"$max_ratio": 0.17}},
+      {"82@$template": {"$hover_text": "82","$min_ratio": 0.17,"$max_ratio": 0.18}},
+      {"81@$template": {"$hover_text": "81","$min_ratio": 0.18,"$max_ratio": 0.19}},
+      {"80@$template": {"$hover_text": "80","$min_ratio": 0.19,"$max_ratio": 0.20}},
+      {"79@$template": {"$hover_text": "79","$min_ratio": 0.20,"$max_ratio": 0.21}},
+      {"78@$template": {"$hover_text": "78","$min_ratio": 0.21,"$max_ratio": 0.22}},
+      {"77@$template": {"$hover_text": "77","$min_ratio": 0.22,"$max_ratio": 0.23}},
+      {"76@$template": {"$hover_text": "76","$min_ratio": 0.23,"$max_ratio": 0.24}},
+      {"75@$template": {"$hover_text": "75","$min_ratio": 0.24,"$max_ratio": 0.25}},
+      {"74@$template": {"$hover_text": "74","$min_ratio": 0.25,"$max_ratio": 0.26}},
+      {"73@$template": {"$hover_text": "73","$min_ratio": 0.26,"$max_ratio": 0.27}},
+      {"72@$template": {"$hover_text": "72","$min_ratio": 0.27,"$max_ratio": 0.28}},
+      {"71@$template": {"$hover_text": "71","$min_ratio": 0.28,"$max_ratio": 0.29}},
+      {"70@$template": {"$hover_text": "70","$min_ratio": 0.29,"$max_ratio": 0.30}},
+      {"69@$template": {"$hover_text": "69","$min_ratio": 0.30,"$max_ratio": 0.31}},
+      {"68@$template": {"$hover_text": "68","$min_ratio": 0.31,"$max_ratio": 0.32}},
+      {"67@$template": {"$hover_text": "67","$min_ratio": 0.32,"$max_ratio": 0.33}},
+      {"66@$template": {"$hover_text": "66","$min_ratio": 0.33,"$max_ratio": 0.34}},
+      {"65@$template": {"$hover_text": "65","$min_ratio": 0.34,"$max_ratio": 0.35}},
+      {"64@$template": {"$hover_text": "64","$min_ratio": 0.35,"$max_ratio": 0.36}},
+      {"63@$template": {"$hover_text": "63","$min_ratio": 0.36,"$max_ratio": 0.37}},
+      {"62@$template": {"$hover_text": "62","$min_ratio": 0.37,"$max_ratio": 0.38}},
+      {"61@$template": {"$hover_text": "61","$min_ratio": 0.38,"$max_ratio": 0.39}},
+      {"60@$template": {"$hover_text": "60","$min_ratio": 0.39,"$max_ratio": 0.40}},
+      {"59@$template": {"$hover_text": "59","$min_ratio": 0.40,"$max_ratio": 0.41}},
+      {"58@$template": {"$hover_text": "58","$min_ratio": 0.41,"$max_ratio": 0.42}},
+      {"57@$template": {"$hover_text": "57","$min_ratio": 0.42,"$max_ratio": 0.43}},
+      {"56@$template": {"$hover_text": "56","$min_ratio": 0.43,"$max_ratio": 0.44}},
+      {"55@$template": {"$hover_text": "55","$min_ratio": 0.44,"$max_ratio": 0.45}},
+      {"54@$template": {"$hover_text": "54","$min_ratio": 0.45,"$max_ratio": 0.46}},
+      {"53@$template": {"$hover_text": "53","$min_ratio": 0.46,"$max_ratio": 0.47}},
+      {"52@$template": {"$hover_text": "52","$min_ratio": 0.47,"$max_ratio": 0.48}},
+      {"51@$template": {"$hover_text": "51","$min_ratio": 0.48,"$max_ratio": 0.49}},
+      {"50@$template": {"$hover_text": "50","$min_ratio": 0.49,"$max_ratio": 0.50}},
+      {"49@$template": {"$hover_text": "49","$min_ratio": 0.50,"$max_ratio": 0.51}},
+      {"48@$template": {"$hover_text": "48","$min_ratio": 0.51,"$max_ratio": 0.52}},
+      {"47@$template": {"$hover_text": "47","$min_ratio": 0.52,"$max_ratio": 0.53}},
+      {"46@$template": {"$hover_text": "46","$min_ratio": 0.53,"$max_ratio": 0.54}},
+      {"45@$template": {"$hover_text": "45","$min_ratio": 0.54,"$max_ratio": 0.55}},
+      {"44@$template": {"$hover_text": "44","$min_ratio": 0.55,"$max_ratio": 0.56}},
+      {"43@$template": {"$hover_text": "43","$min_ratio": 0.56,"$max_ratio": 0.57}},
+      {"42@$template": {"$hover_text": "42","$min_ratio": 0.57,"$max_ratio": 0.58}},
+      {"41@$template": {"$hover_text": "41","$min_ratio": 0.58,"$max_ratio": 0.59}},
+      {"40@$template": {"$hover_text": "40","$min_ratio": 0.59,"$max_ratio": 0.60}},
+      {"39@$template": {"$hover_text": "39","$min_ratio": 0.60,"$max_ratio": 0.61}},
+      {"38@$template": {"$hover_text": "38","$min_ratio": 0.61,"$max_ratio": 0.62}},
+      {"37@$template": {"$hover_text": "37","$min_ratio": 0.62,"$max_ratio": 0.63}},
+      {"36@$template": {"$hover_text": "36","$min_ratio": 0.63,"$max_ratio": 0.64}},
+      {"35@$template": {"$hover_text": "35","$min_ratio": 0.64,"$max_ratio": 0.65}},
+      {"34@$template": {"$hover_text": "34","$min_ratio": 0.65,"$max_ratio": 0.66}},
+      {"33@$template": {"$hover_text": "33","$min_ratio": 0.66,"$max_ratio": 0.67}},
+      {"32@$template": {"$hover_text": "32","$min_ratio": 0.67,"$max_ratio": 0.68}},
+      {"31@$template": {"$hover_text": "31","$min_ratio": 0.68,"$max_ratio": 0.69}},
+      {"30@$template": {"$hover_text": "30","$min_ratio": 0.69,"$max_ratio": 0.70}},
+      {"29@$template": {"$hover_text": "29","$min_ratio": 0.70,"$max_ratio": 0.71}},
+      {"28@$template": {"$hover_text": "28","$min_ratio": 0.71,"$max_ratio": 0.72}},
+      {"27@$template": {"$hover_text": "27","$min_ratio": 0.72,"$max_ratio": 0.73}},
+      {"26@$template": {"$hover_text": "26","$min_ratio": 0.73,"$max_ratio": 0.74}},
+      {"25@$template": {"$hover_text": "25","$min_ratio": 0.74,"$max_ratio": 0.75}},
+      {"24@$template": {"$hover_text": "24","$min_ratio": 0.75,"$max_ratio": 0.76}},
+      {"23@$template": {"$hover_text": "23","$min_ratio": 0.76,"$max_ratio": 0.77}},
+      {"22@$template": {"$hover_text": "22","$min_ratio": 0.77,"$max_ratio": 0.78}},
+      {"21@$template": {"$hover_text": "21","$min_ratio": 0.78,"$max_ratio": 0.79}},
+      {"20@$template": {"$hover_text": "20","$min_ratio": 0.79,"$max_ratio": 0.80}},
+      {"19@$template": {"$hover_text": "19","$min_ratio": 0.80,"$max_ratio": 0.81}},
+      {"18@$template": {"$hover_text": "18","$min_ratio": 0.81,"$max_ratio": 0.82}},
+      {"17@$template": {"$hover_text": "17","$min_ratio": 0.82,"$max_ratio": 0.83}},
+      {"16@$template": {"$hover_text": "16","$min_ratio": 0.83,"$max_ratio": 0.84}},
+      {"15@$template": {"$hover_text": "15","$min_ratio": 0.84,"$max_ratio": 0.85}},
+      {"14@$template": {"$hover_text": "14","$min_ratio": 0.85,"$max_ratio": 0.86}},
+      {"13@$template": {"$hover_text": "13","$min_ratio": 0.86,"$max_ratio": 0.87}},
+      {"12@$template": {"$hover_text": "12","$min_ratio": 0.87,"$max_ratio": 0.88}},
+      {"11@$template": {"$hover_text": "11","$min_ratio": 0.88,"$max_ratio": 0.89}},
+      {"10@$template": {"$hover_text": "10","$min_ratio": 0.89,"$max_ratio": 0.90}},
+      {"9@$template": {"$hover_text": "9","$min_ratio": 0.90,"$max_ratio": 0.91}},
+      {"8@$template": {"$hover_text": "8","$min_ratio": 0.91,"$max_ratio": 0.92}},
+      {"7@$template": {"$hover_text": "7","$min_ratio": 0.92,"$max_ratio": 0.93}},
+      {"6@$template": {"$hover_text": "6","$min_ratio": 0.93,"$max_ratio": 0.94}},
+      {"5@$template": {"$hover_text": "5","$min_ratio": 0.94,"$max_ratio": 0.95}},
+      {"4@$template": {"$hover_text": "4","$min_ratio": 0.95,"$max_ratio": 0.96}},
+      {"3@$template": {"$hover_text": "3","$min_ratio": 0.96,"$max_ratio": 0.97}},
+      {"2@$template": {"$hover_text": "2","$min_ratio": 0.97,"$max_ratio": 0.98}},
+      {"1@$template": {"$hover_text": "1","$min_ratio": 0.98,"$max_ratio": 0.99}},
+      {"0@$template": {"$hover_text": "0","$min_ratio": 0.99,"$max_ratio": 1.00}}
+    ]
+  },
+
+  "template": {
+    "type": "button",
+    "size": [ 0, 0 ],
+    "layer": -10,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "locked_control": "",
+    "always_listen_to_input": true,
+    "follows_cursor": true,
+    "always_handle_pointer": true,
+    "consume_hover_events": false,
+    "focus_enabled": false,
+    "focus_magnet_enabled": false,
+    "$hover_text|default": "",
+    "bindings": [
+      {
+        "binding_name"         : "#furnace_flame_ratio",
+        "binding_type"     : "global",
+        "binding_condition"    : "always"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#furnace_flame_ratio < $max_ratio) and (#furnace_flame_ratio > $min_ratio)) or (#furnace_flame_ratio = $max_ratio))",
+        "target_property_name": "#visible",
+        "binding_condition"    : "always"
+      }
+    ],
+    "controls": [
+      {
+        "tdrp_no_collection": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "allow_clipping": false,
+          "size": [ "100%cm", "100%cm" ],
+          "offset": [ 9, 9 ],
+          "controls": [
+            {
+              "tooltip_solid_bg": {
+                "layer": 199,
+                "allow_clipping": false,
+                "size": [ "100%sm + 8px", "100%sm + 8px" ],
+                "type": "panel",
+                "controls": [
+                  {"default1": { "type": "image", "texture": "textures/ui/purpleBorder"}},
+                  {
+                    "tooltip_text_float_no_collection": {
+                      "type": "label",
+                      "text": "#label_text",
+                      "layer": 200,
+                      "allow_clipping": false,
+                      "property_bag": { "#hover_text": "$hover_text" },
+                      "bindings": [
+                        { "binding_name": "#hover_text" },
+                        {
+                          "source_property_name": "#hover_text",
+                          "target_property_name": "#label_text",
+                          "binding_type": "view",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

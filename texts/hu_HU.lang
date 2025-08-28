@@ -60,3 +60,14 @@ atemp.entity.villager.unskilled=Képzetlen falusi
 entity.wandering_trader.name=§zVándorkereskedő
 
 ashur.mode.manifest=Világos mód
+
+trade.level.1=index_1
+trade.level.2=index_2
+trade.level.3=index_3
+trade.level.4=index_4
+trade.level.5=index_5
+atemp.trade.level.1= - Kezdő
+atemp.trade.level.2= - Tanuló
+atemp.trade.level.3= - Iparos
+atemp.trade.level.4= - Szakértő
+atemp.trade.level.5= - Mester

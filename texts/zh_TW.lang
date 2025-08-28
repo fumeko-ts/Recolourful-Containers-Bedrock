@@ -60,3 +60,14 @@ atemp.entity.villager.unskilled=不熟練的村民
 entity.wandering_trader.name=§z流浪商人
 
 ashur.mode.manifest=淺色模式
+
+trade.level.1=index_1
+trade.level.2=index_2
+trade.level.3=index_3
+trade.level.4=index_4
+trade.level.5=index_5
+atemp.trade.level.1= - 初學者
+atemp.trade.level.2= - 學徒
+atemp.trade.level.3= - 老手
+atemp.trade.level.4= - 專家
+atemp.trade.level.5= - 大師

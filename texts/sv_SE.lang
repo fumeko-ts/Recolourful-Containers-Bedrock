@@ -60,3 +60,14 @@ atemp.entity.villager.unskilled=Outbildad bybo
 entity.wandering_trader.name=§zHandelsresande
 
 ashur.mode.manifest=Ljust läge
+
+trade.level.1=index_1
+trade.level.2=index_2
+trade.level.3=index_3
+trade.level.4=index_4
+trade.level.5=index_5
+atemp.trade.level.1= - Novis
+atemp.trade.level.2= - Lärling
+atemp.trade.level.3= - Gesäll
+atemp.trade.level.4= - Expert
+atemp.trade.level.5= - Mästare

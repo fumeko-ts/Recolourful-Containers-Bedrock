@@ -165,40 +165,58 @@
                     "label_holder@global.empty_stack": {
                       "max_size": [ 134, 10 ],
                       "min_size": [ 0, 10 ],
-                      "offset": [ 0, 5 ],
+                      "offset": [ 1, 5 ],
                       "orientation": "horizontal",
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
                       "controls": [
                         {
                           "first_label@global.empty_panel": {
-                            "size": [ "100%c + 1px", 10 ],
+                            "size": [ "100%c", 10 ],
                             "controls": [
                               {
-                                "label@global.empty_label": {"text": "$profession_text", "size": [ "default", 10 ], "color": "$title_text_color", "layer": 14}
+                                "label@global.empty_label": {
+                                  "text": "$profession_text", 
+                                  "size": [ "default", 10 ], 
+                                  "color": "$title_text_color", 
+                                  "layer": 14
+                                }
                               }
                             ]
                           }
                         },
                         {
                           "second_label@global.empty_panel": {
-                            "size": [ "100%c + 1px", 10 ],
+                            "size": [ "100%c", 10 ],
                             "controls": [
                               {
-                                "label@global.empty_label": {
-                                  "text": "#name_label_text_final",
-                                  "size": [ "default", 10 ],
-                                  "color": "$title_text_color",
-                                  "layer": 14,
-                                  "bindings": [
-                                    {"binding_name": "#name_label", "binding_condition": "once"},
-                                    {
-                                      "binding_type": "view",
-                                      "binding_condition": "once",
-                                      "source_property_name": "(('ui:' + #name_label) - ('%.4s' * ('ui:' + #name_label)))",
-                                      "target_property_name": "#name_label_text_final"
-                                    }
-                                  ]
+                                "1@villager_profession_detector.secondary_label": {
+                                  "$secondary_label_text": "atemp.trade.level.1",
+                                  "$visiblilty_binding_value": "index_1"
+                                }
+                              },
+                              {
+                                "2@villager_profession_detector.secondary_label": {
+                                  "$secondary_label_text": "atemp.trade.level.2",
+                                  "$visiblilty_binding_value": "index_2"
+                                }
+                              },
+                              {
+                                "3@villager_profession_detector.secondary_label": {
+                                  "$secondary_label_text": "atemp.trade.level.3",
+                                  "$visiblilty_binding_value": "index_3"
+                                }
+                              },
+                              {
+                                "4@villager_profession_detector.secondary_label": {
+                                  "$secondary_label_text": "atemp.trade.level.4",
+                                  "$visiblilty_binding_value": "index_4"
+                                }
+                              },
+                              {
+                                "5@villager_profession_detector.secondary_label": {
+                                  "$secondary_label_text": "atemp.trade.level.5",
+                                  "$visiblilty_binding_value": "index_5"
                                 }
                               }
                             ]
@@ -269,6 +287,22 @@
           ],
           "bindings": [ {"binding_name": "(not #exp_bar_visible)", "binding_name_override": "#visible"} ]
         }
+      }
+    ]
+  },
+
+  "secondary_label@global.empty_label": {
+    "text": "$secondary_label_text",
+    "size": [ "default", 10 ],
+    "color": "$title_text_color",
+    "layer": 14,
+    "bindings": [
+      {"binding_name": "#name_label", "binding_condition": "always"},
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(#name_label - ('%.4s' * #name_label) = $visiblilty_binding_value)",
+        "target_property_name": "#visible"
       }
     ]
   },

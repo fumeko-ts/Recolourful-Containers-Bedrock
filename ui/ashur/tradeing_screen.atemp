@@ -115,8 +115,7 @@
     "orientation": "vertical",
     "size": [ "100%", "default" ],
     "factory": {"name": "selected_pack_factory", "control_name": "tradeing_screen.trade_toggle"},
-    "$trade_collection_name": "trades",
-    "collection_name": "$trade_collection_name",
+    "collection_name": "trades",
     "bindings": [
       {
         "binding_name": "#trade_tier_total",

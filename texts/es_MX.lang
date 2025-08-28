@@ -60,3 +60,14 @@ atemp.entity.villager.unskilled=Aldeano no cualificado
 entity.wandering_trader.name=§zcomerciante errante
 
 ashur.mode.manifest=Modo Claro
+
+trade.level.1=index_1
+trade.level.2=index_2
+trade.level.3=index_3
+trade.level.4=index_4
+trade.level.5=index_5
+atemp.trade.level.1= - Novato
+atemp.trade.level.2= - Aprendiz
+atemp.trade.level.3= - Viajero
+atemp.trade.level.4= - Experto
+atemp.trade.level.5= - Maestro
