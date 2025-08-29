@@ -78,18 +78,29 @@
     ]
   },
   "scroll_panel@scroll_panel.scroll_panel": {
+    "$scroll_track_offset": [ 81, -0.4 ],
     "offset": [ 0.4, 5.4 ],
     "anchor_to": "center",
     "anchor_from": "center",
-    "$scroll_size": [ 12, "110px - 4px" ],
+    "$scroll_size": [ 12, 112 ],
     "size": [ 181, 112 ],
-    "$misc_scroller_offset": [ 0, -0.2 ],
     "$scroll_view_port_size": [ 180, 90.2 ],
-    "$scroll_track_offset": [ -1, -0.2 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_box_image_control": "screen_content.creative_scroll_box_image",
+    "$scroll_box_image_control": "creative_inventory.scroller",
     "$scrolling_content": "creative_inventory.scroll_grid_holder"
   },
+  
+  "scroller@screen_content.image_element": {
+    "tiled": true,
+    "nineslice_size": [ 6, 7, 6, 6 ],
+    "tiled_scale": [ 1, 1 ],
+    "offset": [ 2, 0 ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "texture": "assets/minecraft/textures/gui/sprites/container/creative_inventory/scroller.png",
+    "size": [ 12, "100% - 2px" ]
+  },
+
   "scroll_grid_holder": {
     "type": "panel",
     "size": [ 162, "100%cm" ],
@@ -328,15 +339,34 @@
                 "orientation": "horizontal",
                 "size": [ 116, "default" ],
                 "controls": [
-                  {
-                    "search@crafting_common.text_edit_control": {
-                      "$text_box_size": [ 90, 12 ],
-                      "$place_holder_text": "",
-                      "$text_edit_box_label_offset": [ 0, -1 ],
-                      "$text_background_default": "global.empty_image",
-                      "$text_background_hover": "global.empty_image"
-                    }
-                  },
+                  
+                {
+                  "text_edit_panel@global.empty_panel": {
+                    "size": [ 90, 12 ],
+                    "controls": [
+                      {
+                        "text_edit_control@text_edit_box.text_edit_box": {  
+                          "size": [ 90, 12 ],
+                          "property_bag": {"#property_field": "#item_name"},
+                          "max_length": 300000,
+                          "anchor_from": "center",
+                          "anchor_to": "center",                        
+                          "$text_box_text_color": "white",
+                          "$text_edit_box_label_offset": [1, 0.4],
+                          "$text_clear_button_enabled": false,
+                          "$place_holder_text": "",
+
+                          "$text_background_locked": "global.empty_image",
+                          "$text_background_default": "global.empty_image",
+                          "$text_background_hover": "global.empty_image",
+
+                          "$text_edit_binding_name": "#text_box_item_name",
+                          "$text_edit_box_label_size": [ "default", 10 ]
+                        }
+                      }
+                    ]
+                  }
+                },
                   {"filler_2@global.empty_panel": {"size": [ 26, "default" ]}}
                 ]
               }

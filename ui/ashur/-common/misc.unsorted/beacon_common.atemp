@@ -1,72 +1,92 @@
 {
   "namespace": "beacon_common",
   "toggle_button@common.toggle": {
-    "size": [ 22, 22 ],
+    "size": [22, 22],
     "layer": 1,
     "focus_wrap_enabled": false,
     "$toggle_name": "$button_name",
-    "$unchecked_control": "beacon_common.button_unchecked_default",
-    "$checked_control": "beacon_common.button_checked",
-    "$unchecked_hover_control": "beacon_common.button_unchecked_hover",
-    "$checked_hover_control": "beacon_common.button_checked_hover",
-    "$unchecked_locked_control": "beacon_common.button_locked",
-    "$checked_locked_control": "beacon_common.button_locked",
-    "$unchecked_locked_hover_control": "beacon_common.button_locked_hover",
-    "$checked_locked_hover_control": "beacon_common.button_locked_hover",
+
+    "checked_control": "checked",
+    "unchecked_control": "unchecked",
+    "checked_hover_control": "checked_hover",
+    "unchecked_hover_control": "unchecked_hover",
+    
+    "checked_locked_control": "locked_default",
+    "unchecked_locked_control": "locked_default",
+    "checked_locked_hover_control": "locked_hover",
+    "unchecked_locked_hover_control": "locked_hover",
+
+    "$hover_control|default": [
+      {"hover_text@beacon_common.hover_text": {}}
+    ],
     "bindings": [
       {
-        "binding_name": "#button_visible",
-        "binding_name_override": "#visible",
+        "binding_name"           : "#button_visible",
+        "binding_name_override"  : "#visible",
         "binding_collection_name": "$button_name",
-        "binding_type": "collection"
+        "binding_type"           : "collection"
       },
-      {"binding_collection_name": "$button_name", "binding_type": "collection_details"},
       {
-        "binding_type": "collection",
-        "binding_name": "#selected",
         "binding_collection_name": "$button_name",
-        "binding_name_override": "#toggle_state"
+        "binding_type"           : "collection_details"
+      },
+      {
+        "binding_type"           : "collection",
+        "binding_name"           : "#selected",
+        "binding_collection_name": "$button_name",
+        "binding_name_override"  : "#toggle_state"
       }
     ],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "pressed"
+        "to_button_id"  : "button.menu_ok",
+        "mapping_type"  : "pressed"
       },
-      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
-    ]
-  },
-  "hover_text@common.hover_text": {
-    "bindings": [
       {
-        "binding_name": "#button_hover",
-        "binding_name_override": "#hover_text",
-        "binding_collection_name": "$button_name",
-        "binding_type": "collection"
+        "from_button_id": "button.menu_ok",
+        "to_button_id"  : "button.menu_ok",
+        "mapping_type"  : "pressed"
+      }
+    ],
+    "controls": [
+      {"unchecked@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"}},
+      {"checked@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"}},
+      {"locked_default@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"}},
+      {
+        "unchecked_hover@beacon_common.image_base": {
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png",
+          "controls": "$hover_control"
+        }
+      },
+      {
+        "checked_hover@beacon_common.image_base": {
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png",
+          "controls": "$hover_control"
+        }
+      },
+      {
+        "locked_hover@beacon_common.image_base": {
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png",
+          "controls": "$hover_control"
+        }
       }
     ]
   },
-  "image_base@screen_content.image_element": {"size": [ 22, 22 ], "offset": [ 1, 1 ], "nineslice_size": 1},
-  "button_unchecked_default@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button.png"},
-  "button_locked@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png"},
-  "button_checked@beacon_common.image_base": {"texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png"},
-  "button_unchecked_hover@beacon_common.image_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted.png",
-    "controls": [
-      {"hover_text@beacon_common.hover_text": {}}
+
+  "hover_text@common.hover_text": {
+    "bindings": [
+      {
+        "binding_name"           : "#button_hover",
+        "binding_name_override"  : "#hover_text",
+        "binding_collection_name": "$button_name",
+        "binding_type"           : "collection"
+      }
     ]
   },
-  "button_checked_hover@beacon_common.image_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected.png",
-    "controls": [
-      {"hover_text@beacon_common.hover_text": {}}
-    ]
-  },
-  "button_locked_hover@beacon_common.image_base": {
-    "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled.png",
-    "controls": [
-      {"hover_text@beacon_common.hover_text": {}}
-    ]
+  "image_base@screen_content.image_element": {
+    "size": [22, 22],
+    "offset": [1, 1],
+    "nineslice_size": 1
   }
 }

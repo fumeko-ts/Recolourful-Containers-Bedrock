@@ -81,7 +81,14 @@
                 "anchor_from": "bottom_left",
                 "controls": [
                   {
-                    "locked_scroll_box@screen_content.cutter_scroll_box_image_disabled": {
+                    "locked_scroll_box@screen_content.image_element": {
+                      "allow_clipping": true,
+                      "texture": "assets/minecraft/textures/gui/sprites/container/stonecutter/scroller_disabled.png",
+                      "size": [ 12, 15 ],
+                      "alpha": 1,
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 5,
                       "bindings": [
                         {
                           "binding_name": "(#stone_selector_total_items < 13)",

@@ -65,6 +65,7 @@
                         {
                           "place_holder_control@$place_holder_control": {
                             "layer": 1,
+                            "shadow": true,
                             "size": "$placeholder_label_size",
                             "offset": "$text_edit_box_label_offset",
                             "min_size": "$text_edit_box_label_min_size",

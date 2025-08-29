@@ -58,7 +58,7 @@
         "root_panel@global.root_panel": {
           "controls": [
             {"recipe_base@screen_content.recipe_book": {"layer": 1}},
-            {"base_page_control@page_count.page": {}}
+            {"base_page_control@page_count.page": {"offset": [-1, 0]}}
           ]
         }
       }

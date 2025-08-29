@@ -1,3 +1,72 @@
+  "text_edit_box": {
+					"type": "edit_box",
+					"text_box_name": "#message_text_box",
+					"max_length": 2147483647,
+					"can_be_deselected": true,
+					"text_control": "text_control",
+					"always_listening": true,
+					"focus_enabled": true,
+					"size": [80, 20],
+          "$button_mappings|default": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.keyboard_toggle",
+              "handle_select": true,
+              "handle_deselect": false,
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.text_edit_box_selected",
+              "handle_select": false,
+              "handle_deselect": true,
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_select",
+              "handle_select": false,
+              "handle_deselect": true,
+              "mapping_type": "global"
+            }
+          ],
+					"layer": 300,
+					"anchor_from": "center",
+					"anchor_to": "center",
+					"button_mappings": "$button_mappings",
+					"controls": [
+						{
+							"text_control": {
+								"type": "label",
+								"layer": 900,
+								"text": "#item_name",
+								"property_bag": {
+									"#property_field": "#item_name"
+								},
+								"bindings": [
+									{
+										"binding_type": "view",
+										"source_control_name": "display_text",
+										"source_property_name": "#item_name",
+										"target_property_name": "#current_input_text"
+									},      
+                  {
+                    "binding_collection_name": "$icon_collection_name",
+                    "binding_name": "#icon_path",
+                    "binding_name_override": "#text",
+                    "binding_type": "collection"
+                  },
+									{
+										"binding_type": "view",
+										"source_property_name": "(#current_input_text + #text)",
+										"target_property_name": "#item_name"
+									}
+								]
+							}
+						}
+					]
+				}
+  
   "main": {
     "type": "panel",
     "layer": 4000,
@@ -178,3 +247,8 @@
       }
     ]
   }
+
+
+  			
+				
+			
