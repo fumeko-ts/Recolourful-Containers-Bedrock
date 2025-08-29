@@ -67,9 +67,7 @@ trade.level.3=index_3
 trade.level.4=index_4
 trade.level.5=index_5
 atemp.trade.level.1= - Novice
-#changed this from Apprentice because it was to long
 atemp.trade.level.2= - Trainee
-#changed this from Journeyman because it was to long
 atemp.trade.level.3= - Skilled
 
 atemp.trade.level.4= - Expert
