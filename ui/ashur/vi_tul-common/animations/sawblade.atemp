@@ -1,0 +1,17 @@
+{
+  "namespace": "sawblade",
+  "sawblade_0": {
+    "anim_type": "uv",
+    "from": [ 0, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@sawblade.sawblade_1",
+    "duration": 0.05
+  },
+  "sawblade_1": {
+    "anim_type": "uv",
+    "from": [ 0, 67 ],
+    "to": [ 0, 67 ],
+    "next": "@sawblade.sawblade_0",
+    "duration": 0.05
+  }
+}

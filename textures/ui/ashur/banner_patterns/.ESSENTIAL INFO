@@ -1,0 +1,3 @@
+The images in this folder are resized to a 5×10 ratio and since UI textures dont use anti aliasing they appear slightly choppy.
+However its better to render the banner patterns this way because in a scroll panel the vanilla ones tend to move around a lot
+and its less lagy than the vanilla way because the vanilla ones are entitys

@@ -1,0 +1,469 @@
+{
+  "namespace": "beacon_screen",
+  "beacon_panel@container_common.container_details": {
+    "size": [ 230, 219 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$screen_controls": [
+      {"base@screen_content.container_base": {"$beacon_screen": true}},
+      {
+        "beacon_top_half@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 230, 129 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 21 ]}},
+            {
+              "top_panel_buttons@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 230, 72 ],
+                "controls": [
+                  {"filler_1@global.empty_panel": {"size": [ 52, "fill" ]}},
+                  {
+                    "main_buttons@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 46, 72 ],
+                      "controls": [
+                        {
+                          "row_1@global.empty_stack": {
+                            "orientation": "horizontal",
+                            "size": [ 46, 22 ],
+                            "controls": [
+                              {
+                                "speed@beacon_screen.primary_button_base": {"$button_name": "speed", "$effect_icon_source": "assets/minecraft/textures/mob_effect/speed"}
+                              },
+                              {"filler_1@global.empty_panel": {"size": [ 2, "fill" ]}},
+                              {
+                                "haste@beacon_screen.primary_button_base": {"$button_name": "haste", "$effect_icon_source": "assets/minecraft/textures/mob_effect/haste"}
+                              }
+                            ]
+                          }
+                        },
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 3 ]}},
+                        {
+                          "row_2@global.empty_stack": {
+                            "orientation": "horizontal",
+                            "size": [ 46, 22 ],
+                            "controls": [
+                              {
+                                "1@beacon_screen.primary_button_base": {"$button_name": "resist", "$effect_icon_source": "assets/minecraft/textures/mob_effect/resistance"}
+                              },
+                              {"filler_1@global.empty_panel": {"size": [ 2, "fill" ]}},
+                              {
+                                "2@beacon_screen.primary_button_base": {"$button_name": "jump", "$effect_icon_source": "assets/minecraft/textures/mob_effect/jump_boost"}
+                              }
+                            ]
+                          }
+                        },
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 3 ]}},
+                        {
+                          "row_2@global.empty_stack": {
+                            "orientation": "horizontal",
+                            "size": [ 46, 22 ],
+                            "controls": [
+                              {"filler_1@global.empty_panel": {"size": [ 12, "fill" ]}},
+                              {
+                                "1@beacon_screen.primary_button_base": {"$button_name": "strength", "$effect_icon_source": "assets/minecraft/textures/mob_effect/strength"}
+                              },
+                              {"filler_2@global.empty_panel": {"size": [ 12, "fill" ]}}
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {"filler_2@global.empty_panel": {"size": [ 45, "fill" ]}},
+                  {
+                    "secondary_buttons@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 46, 72 ],
+                      "controls": [
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 25 ]}},
+                        {
+                          "secondary_buttons_holder@global.empty_stack": {
+                            "orientation": "horizontal",
+                            "size": [ 46, 22 ],
+                            "controls": [
+                              {
+                                "1@beacon_screen.secondary_button_base": {
+                                  "$button_name": "regen",
+                                  "$effect_icon_source": "assets/minecraft/textures/mob_effect/regeneration"
+                                }
+                              },
+                              {"filler_1@global.empty_panel": {"size": [ 2, "fill" ]}},
+                              {
+                                "2@beacon_screen.secondary_button_base": {"$button_name": "extra", "$image_control": "beacon_screen.secondary_effect_images"}
+                              }
+                            ]
+                          }
+                        },
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 23 ]}}
+                      ]
+                    }
+                  },
+                  {"filler_3@global.empty_panel": {"size": [ 41, "fill" ]}}
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "input_slot_holder@global.empty_stack": {
+          "orientation": "vertical",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ 153, 27 ],
+          "controls": [
+            {"input_top_filler@global.empty_panel": {"size": [ "fill", 109 ]}},
+            {
+              "slot_push@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 153, 18 ],
+                "controls": [
+                  {"filler_1@global.empty_panel": {"size": [ 135, "fill" ]}},
+                  {"input@global.container_item": {"$item_collection": "beacon_payment_items"}}
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "beacon_inventory@global.empty_stack": {
+          "orientation": "horizontal",
+          "size": [ 230, 83 ],
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ 35, "fill" ]}},
+            {
+              "inventory_bottom_half_with_label@global.empty_stack": {
+                "orientation": "vertical",
+                "size": [ 162, 83 ],
+                "controls": [
+                  {
+                    "inventory_grid": {
+                      "type": "grid",
+                      "size": [ 162, 54 ],
+                      "grid_dimensions": [ 9, 3 ],
+                      "$item_collection_name": "inventory_items",
+                      "grid_item_template": "global.grid_item",
+                      "collection_name": "inventory_items"
+                    }
+                  },
+                  {"below_inventory_grid_spacing@global.empty_panel": {"size": [ "fill", 4 ]}},
+                  {"hotbar@global.hotbar": {}},
+                  {"hotbar_bottom_spacing@global.empty_panel": {"size": [ "fill", 7 ]}}
+                ]
+              }
+            },
+            {"filler_2@global.empty_panel": {"size": [ 33, "fill" ]}}
+          ]
+        }
+      },
+      {
+        "confirm_and_exit_buttons@global.empty_stack": {
+          "orientation": "vertical",
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "size": [ 67, 114 ],
+          "controls": [
+            {
+              "buttons_stack@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 67, 22 ],
+                "controls": [
+                  {
+                    "confirm_panel@beacon_screen.confirm_and_exit_button_template": {
+                      "$button_texture": "assets/minecraft/textures/gui/sprites/container/beacon/confirm",
+                      "$button_name": "confirm"
+                    }
+                  },
+                  {"filler_1@global.empty_panel": {"size": [ 4, "fill" ]}},
+                  {
+                    "cancel_panel@beacon_screen.confirm_and_exit_button_template": {
+                      "$button_texture": "assets/minecraft/textures/gui/sprites/container/beacon/cancel",
+                      "$button_name": "cancel"
+                    }
+                  },
+                  {"filler_2@global.empty_panel": {"size": [ 19, "fill" ]}}
+                ]
+              }
+            },
+            {"filler_1@global.empty_panel": {"size": [ "fill", "fill" ]}}
+          ]
+        }
+      },
+      {
+        "label_holder@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 230, 21 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 9 ]}},
+            {
+              "labels@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 230, 11 ],
+                "controls": [
+                  {"filler_1@global.empty_panel": {"size": [ 26, "fill" ]}},
+                  {"primary_label@global.empty_panel": {"size": [ 99, "fill" ]}},
+                  {"secondary_label@global.empty_panel": {"size": [ 105, "fill" ]}}
+                ]
+              }
+            },
+            {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
+          ]
+        }
+      },
+      {
+        "usable_items_panel@global.empty_panel": {
+          "size": [ 104, 18 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "controls": [
+            {
+              "netherite@beacon_screen.item_renderer": {
+                "offset": [ 20, 109 ],
+                "property_bag": {"#item_id_aux": 48627712},
+                "bindings": [ {"binding_name": "#supports_netherite", "binding_name_override": "#visible"} ]
+              }
+            },
+            {
+              "emerald@beacon_screen.item_renderer": {"offset": [ 41, 109 ], "property_bag": {"#item_id_aux": 25427968}}
+            },
+            {
+              "diamond@beacon_screen.item_renderer": {"offset": [ 63, 109 ], "property_bag": {"#item_id_aux": 17301504}}
+            },
+            {
+              "gold@beacon_screen.item_renderer": {"offset": [ 86, 109 ], "property_bag": {"#item_id_aux": 17432576}}
+            },
+            {
+              "iron@beacon_screen.item_renderer": {"offset": [ 108, 109 ], "property_bag": {"#item_id_aux": 17367040}}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+  "primary_button_base@global.empty_panel": {
+    "size": [ 22, 22 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {"toggle_button@beacon_common.toggle_button": {}},
+      {
+        "effect_texture@screen_content.image_element": {
+          "size": [ 18, 18 ],
+          "texture": "$effect_icon_source",
+          "offset": [ 1, 1 ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "secondary_button_base@global.empty_panel": {
+    "size": [ 22, 22 ],
+    "$image_control|default": "global.empty_image",
+    "$effect_icon_source|default": "",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {"1@beacon_common.toggle_button": {}},
+      {"$image_control@$image_control": {}},
+      {
+        "effect_texture@screen_content.image_element": {
+          "size": [ 18, 18 ],
+          "texture": "$effect_icon_source",
+          "offset": [ 1, 1 ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#button_visible",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "$button_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "secondary_effect_images@global.empty_panel": {
+    "size": [ 18, 18 ],
+    "controls": [
+      {
+        "1@beacon_screen.secondary_effect_base": {"$effect_name": "speed", "$effect_icon_source": "assets/minecraft/textures/mob_effect/speed"}
+      },
+      {
+        "2@beacon_screen.secondary_effect_base": {"$effect_name": "haste", "$effect_icon_source": "assets/minecraft/textures/mob_effect/haste"}
+      },
+      {
+        "3@beacon_screen.secondary_effect_base": {"$effect_name": "resist", "$effect_icon_source": "assets/minecraft/textures/mob_effect/resistance"}
+      },
+      {
+        "4@beacon_screen.secondary_effect_base": {"$effect_name": "jump", "$effect_icon_source": "assets/minecraft/textures/mob_effect/jump_boost"}
+      },
+      {
+        "5@beacon_screen.secondary_effect_base": {"$effect_name": "strength", "$effect_icon_source": "assets/minecraft/textures/mob_effect/strength"}
+      }
+    ]
+  },
+  "secondary_effect_base@screen_content.image_element": {
+    "size": [ 18, 18 ],
+    "$effect_icon_source|default": "",
+    "texture": "$effect_icon_source",
+    "offset": [ 1, 1 ],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$effect_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  "confirm_and_exit_button_template@global.empty_panel": {
+    "size": [ 22, 22 ],
+    "layer": 4,
+    "$button_texture|default": "",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {"1@beacon_common.toggle_button": {}},
+      {"2@beacon_screen.confirm_and_exit_button_active": {}},
+      {"3@beacon_screen.confirm_and_exit_button_inactive": {}},
+      {
+        "4@screen_content.image_element": {
+          "texture": "$button_texture",
+          "layer": 5,
+          "offset": [ 1, 1 ],
+          "keep_ratio": true,
+          "size": [ 18, 18 ]
+        }
+      }
+    ]
+  },
+  "confirm_and_exit_button_active@beacon_screen.confirm_and_exit_button_base": {
+    "$button_active": "#active",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
+    ]
+  },
+  "confirm_and_exit_button_inactive@beacon_screen.confirm_and_exit_button_base": {
+    "$button_active": "#inactive",
+    "pressed_control": "",
+    "button_mappings": [],
+    "controls": [
+      {
+        "default@screen_content.image_element": {
+          "offset": [ 1, 1 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ 22, 22 ]
+        }
+      },
+      {
+        "hover@screen_content.image_element": {
+          "offset": [ 1, 1 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_disabled",
+          "size": [ 22, 22 ],
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "bindings": [
+                  {
+                    "binding_name": "#button_hover",
+                    "binding_name_override": "#hover_text",
+                    "binding_collection_name": "$button_name",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "confirm_and_exit_button_base@common.button": {
+    "size": [ 22, 22 ],
+    "layer": 0,
+    "focus_wrap_enabled": false,
+    "bindings": [
+      {
+        "binding_name": "$button_active",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      },
+      {"binding_collection_name": "$button_name", "binding_type": "collection_details"}
+    ],
+    "controls": [
+      {
+        "default@screen_content.image_element": {
+          "offset": [ 1, 1 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button",
+          "size": [ 22, 22 ]
+        }
+      },
+      {
+        "hover@screen_content.image_element": {
+          "offset": [ 1, 1 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_highlighted",
+          "size": [ 22, 22 ]
+        }
+      },
+      {
+        "pressed@screen_content.image_element": {
+          "offset": [ 1, 1 ],
+          "texture": "assets/minecraft/textures/gui/sprites/container/beacon/button_selected",
+          "size": [ 22, 22 ]
+        }
+      }
+    ]
+  }
+}

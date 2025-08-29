@@ -1,0 +1,179 @@
+{
+  "namespace": "horse_screen",
+  "horse_panel@container_common.container_details": {
+    "size": [ 176, 166 ],
+    "$screen_controls": [
+      {"common_panel@screen_content.container_base": {"$horse_screen": true}},
+      {
+        "mount_input_slots@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 25, 53 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
+            {
+              "cell_holder_images@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 25, 36 ],
+                "controls": [
+                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
+                  {
+                    "cell_main@global.empty_stack": {
+                      "orientation": "vertical",
+                      "size": [ 18, 36 ],
+                      "controls": [
+                        {"saddle_slot@horse_screen.sprite_bindings": {"$img_src": "saddle", "$needs": "#has_saddle_slot"}},
+                        {
+                          "horse_armor_slot@horse_screen.sprite_bindings": {"$img_src": "horse_armor", "$needs": "#has_armor_and_saddle_slot"}
+                        },
+                        {
+                          "llama_armor_slot@horse_screen.sprite_bindings": {"$img_src": "llama_armor", "$needs": "#has_only_carpet_slot"}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "mount_grid@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 25, 53 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
+            {
+              "cell_holder_images@global.empty_stack": {
+                "orientation": "horizontal",
+                "size": [ 25, 36 ],
+                "controls": [
+                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
+                  {
+                    "cell_main@global.empty_stack": {
+                      "orientation": "vertical",
+                      "max_size": [ 18, 36 ],
+                      "min_size": [ 18, 18 ],
+                      "controls": [
+                        {
+                          "equip_grid": {
+                            "type": "grid",
+                            "layer": 9,
+                            "collection_name": "horse_equip_items",
+                            "grid_item_template": "global.container_item",
+                            "grid_dimension_binding": "#equip_grid_dimensions",
+                            "$item_collection": "horse_equip_items",
+                            "bindings": [ {"binding_name": "#equip_grid_dimensions"} ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {"expanding_filler@global.empty_panel": {"size": [ "fill", "fill" ]}}
+          ]
+        }
+      },
+      {
+        "inventory@global.empty_panel": {
+          "size": [ 97, 71 ],
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "controls": [
+            {
+              "inventory_grid": {
+                "type": "grid",
+                "anchor_to": "bottom_left",
+                "anchor_from": "bottom_left",
+                "collection_name": "container_items",
+                "grid_item_template": "global.container_item",
+                "grid_dimension_binding": "#inv_grid_dimensions",
+                "$cell_overlay_ref": "horse_screen.cell_texture",
+                "$item_collection": "container_items",
+                "bindings": [ {"binding_name": "#inv_grid_dimensions"} ]
+              }
+            }
+          ],
+          "bindings": [ {"binding_name": "#is_chested", "binding_name_override": "#visible"} ]
+        }
+      },
+      {
+        "horse_renderer@global.empty_panel": {
+          "offset": [ 25, 14 ],
+          "size": [ 54, 54 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "horse_float@global.empty_panel": {
+                "size": [ "30%", "30%" ],
+                "offset": [ 0, "30%" ],
+                "controls": [
+                  {
+                    "horse@global.custom_renderer": {
+                      "$type": "live_horse_renderer",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@common.screen_exit_size_animation_push",
+                        "@common.screen_exit_size_animation_pop",
+                        "@common.screen_entrance_size_animation_push",
+                        "@common.screen_entrance_size_animation_pop"
+                      ],
+                      "bindings": [ {"binding_name": "#entity_id"} ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label_holding_stack@global.empty_stack": {
+          "orientation": "vertical",
+          "size": [ 176, 17 ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "controls": [
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            {"smithing_label@global.empty_panel": {"size": [ 176, 11 ]}}
+          ]
+        }
+      },
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
+    ]
+  },
+  "cell_texture@screen_content.image_element": {
+    "size": [ 18, 18 ],
+    "nineslice_size": 1,
+    "texture": "assets/minecraft/textures/gui/sprites/container/slot"
+  },
+  "sprite_bindings@global.empty_panel": {
+    "size": [ 18, 18 ],
+    "$overlay": "('assets/minecraft/textures/gui/sprites/container/slot/' + $img_src)",
+    "controls": [
+      {
+        "slot@screen_content.image_element": {
+          "nineslice_size": 1,
+          "texture": "assets/minecraft/textures/gui/sprites/container/slot",
+          "layer": 3,
+          "size": [ 18, 18 ]
+        }
+      },
+      {
+        "saddle_slot@screen_content.image_element": {"texture": "$overlay", "layer": 5, "size": [ 16, 16 ]}
+      }
+    ],
+    "bindings": [ {"binding_name": "$needs", "binding_name_override": "#visible"} ]
+  }
+}

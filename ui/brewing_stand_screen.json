@@ -1,0 +1,4 @@
+{
+  "namespace": "brewing_stand",
+  "brewing_stand_screen@global.inventory_screen_common": {"$screen_content": "brewing_stand_screen.brewing_panel"}
+}

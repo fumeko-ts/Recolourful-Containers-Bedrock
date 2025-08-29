@@ -1,0 +1,4 @@
+{
+  "namespace": "horse",
+  "horse_screen@global.inventory_screen_common": {"$screen_content": "mount.mount"}
+}

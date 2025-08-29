@@ -1,0 +1,4 @@
+{
+  "namespace": "beacon",
+  "beacon_screen@global.inventory_screen_common": {"$screen_content": "beacon_screen.beacon_panel"}
+}
