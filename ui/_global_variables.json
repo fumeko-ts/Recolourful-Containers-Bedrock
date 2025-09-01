@@ -44,6 +44,7 @@
 
 
 
+"$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
 
 // --- Read-only below this line ---
 
@@ -589,9 +590,6 @@
 
 
 
-
-//this is the container title text i belive its rgba max value is 1.0
-"$title_text_color": [0.247, 0.247, 0.247, 1.0],
 
 // text colors for the button in the enchanting table also rgb and rgba max value is 1.0
 "$enchant_light_green": [0.475, 0.95, 0.11875],

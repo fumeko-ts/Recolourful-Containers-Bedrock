@@ -43,6 +43,9 @@
 "$container_opacity": 1,
 
 //////// Text colors ////////
+"$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
+
+
 "$light_button_default_text_color": [ 1, 1, 1 ],
 
 "$light_toggle_default_text_color": [ 1, 1, 1 ],
