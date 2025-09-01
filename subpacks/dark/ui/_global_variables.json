@@ -688,7 +688,7 @@
 
 // Internal use – changing content below will break some UI
 "$jc:dev": true,
-  "$enchant_selectable_button_mappings": [
+    "$enchant_selectable_button_mappings": [
       {"from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed"},
       {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused"},
       {
@@ -698,7 +698,7 @@
         "ignored"       : "(not $is_ps4)"
       }
     ],
-"$recipe_book_contents": [
+  "$recipe_book_contents": [
     {"offset_content@$page_contents": {"offset": [ 0.9, -1.6 ], "layer": 4}},
     {
       "holder@global.empty_stack": {
@@ -716,16 +716,34 @@
               "size": [ 111, 18 ],
               "controls": [
                 {
-                  "holder@global.empty_panel": {
+                  "text_edit_panel@global.empty_panel": {
                     "size": [ 81, 18 ],
                     "controls": [
                       {
-                        "search_box@crafting_common.text_edit_control": {"anchor_to": "center", "anchor_from": "center", "layer": 2}
+                        "text_edit_control@text_edit_box.text_edit_box": {  
+                          "size": [ 81, 14 ],
+                          "property_bag": {"#property_field": "#item_name"},
+                          "max_length": 300000,
+                          "anchor_from": "center",
+                          "anchor_to": "center",     
+                          "$text_clear_button_offset": [3, 0],                     
+                          "$text_box_text_color": "white",
+                          "$text_edit_box_label_offset": [1, 0.4],
+                          "$text_clear_button_enabled": true,
+                          "$place_holder_text": "§o§8§7Search...",
+
+                          "$text_background_locked": "screen_content.text_field",
+                          "$text_background_default": "screen_content.text_field",
+                          "$text_background_hover": "screen_content.text_field_highlighted",
+
+                          "$text_edit_binding_name": "#text_box_item_name",
+                          "$text_edit_box_label_size": [ "default", 10 ]
+                        }
                       }
                     ]
                   }
                 },
-                {"buffer_2@global.empty_panel": {"size": [ 4, "default" ]}},
+                {"buffer_2@global.empty_panel": {"size": [ 4, "fill" ]}},
                 {"filter@crafting_common.filter_toggle": {}}
               ]
             }
@@ -749,7 +767,7 @@
               "layer": 20,
               "controls": [
                 {"buffer@global.empty_panel": {"size": [ 18, 0 ], "ignored": "(not ($current_page = 1))"}},// only a filler here because stack panels of the horizontal origin inherintly want to move its items left
-                                                                                                         // eany space on the right is auto filled  
+                                                                                                           // eany space on the right is auto filled  
                 {"left@pagination.tepes_left_button": {}},
                 {
                   "buffer1@global.empty_panel": {
