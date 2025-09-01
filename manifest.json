@@ -22,13 +22,13 @@
   "subpacks" :[
     {
       "folder_name":"light",
-      "name":"light mode",
-      "memory_tier":1
+      "name":"§lLight mode§r",
+      "memory_tier":2
     },
     {
       "folder_name":"dark",
-      "name":"dark mode",
-      "memory_tier":2
+      "name":"§lDark mode§r",
+      "memory_tier":1
     }
   ]
  }

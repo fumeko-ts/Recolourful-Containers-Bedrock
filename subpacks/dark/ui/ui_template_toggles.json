@@ -1,0 +1,15 @@
+{
+  "namespace": "common_toggles",
+  "dark_template_toggle": {
+    "$default_text_color": [ 1, 1, 1 ]
+  },
+  "light_template_toggle": {
+    "$default_text_color": [ 1, 1, 1 ]
+  },
+  "dark_ui_toggle_collection": {
+    "$default_text_color": [ 1, 1, 1 ]
+  },
+  "light_ui_toggle_collection": {
+    "$default_text_color": [ 1, 1, 1 ]
+  }
+}
