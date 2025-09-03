@@ -1,15 +1,7 @@
 {
   "namespace": "filter_menu",
-  "filter_option_button_content/filter_type_and_selected_panel/filter_type_label": {
-    "color": [ 1, 1, 1 ]
-  },
-  "filter_option_button_content/filter_type_and_selected_panel/selected_label": {
-    "color": [ 1, 1, 1 ]
-  },
-  "filter_title_bar_content/centered_filter_title_label/filter_title_label": {
-    "color": [ 1, 1, 1 ]
-  },
-  "filter_title_bar_content/centered_x/close_x_image": {
-    "color": [ 1, 1, 1 ]
-  }
+  "filter_option_button_content/filter_type_and_selected_panel/filter_type_label": {"color": [ 1, 1, 1 ]},
+  "filter_option_button_content/filter_type_and_selected_panel/selected_label": {"color": [ 1, 1, 1 ]},
+  "filter_title_bar_content/centered_filter_title_label/filter_title_label": {"color": [ 1, 1, 1 ]},
+  "filter_title_bar_content/centered_x/close_x_image": {"color": [ 1, 1, 1 ]}
 }

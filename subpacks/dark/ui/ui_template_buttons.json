@@ -1,12 +1,6 @@
 {
   "namespace": "common_buttons",
-  "light_text_button": {
-    "$default_text_color": [ 1, 1, 1 ]
-  },
-  "light_content_button": {
-    "$default_text_color": [ 1, 1, 1 ]
-  },
-  "no_background_content_button": {
-    "$default_text_color": [ 1, 1, 1 ]
-  }
+  "light_text_button": {"$default_text_color": [ 1, 1, 1 ]},
+  "light_content_button": {"$default_text_color": [ 1, 1, 1 ]},
+  "no_background_content_button": {"$default_text_color": [ 1, 1, 1 ]}
 }

@@ -4,190 +4,152 @@
     "orientation": "horizontal",
     "anchor_to": "center",
     "anchor_from": "center",
-    "min_size": [176, 166],
-    "max_size": [360, 166],
+    "min_size": [ 176, 166 ],
+    "max_size": [ 360, 166 ],
     "$is_furnace_screen|default": true,
     "controls": [
-        {
+      {
         "main_furnace_contents@container_common.container_details": {
-          "size": [176, 166],
+          "size": [ 176, 166 ],
           "$screen_controls": [
-              {
+            {
               "furnace_inventory_side@global.empty_panel": {
-                "size": [176, 166],
+                "size": [ 176, 166 ],
                 "controls": [
-                    {
-                    "common_panel@screen_content.container_base": { "$furnace_screen": "$is_furnace_screen" }
-                    },
-                    {
+                  {"common_panel@screen_content.container_base": {"$furnace_screen": "$is_furnace_screen"}},
+                  {
                     "furnace_top_half@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [176, 70],
+                      "size": [ 176, 70 ],
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "controls": [
-                          {
-                          "filler_1@global.empty_panel": { "size": ["fill", 6] }
-                          },
-                          {
-                          "filler@global.empty_panel": { "size": ["fill", 10] }
-                          },
-                          {
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+                        {"filler@global.empty_panel": {"size": [ "fill", 10 ]}},
+                        {
                           "main_content@global.empty_stack": {
                             "orientation": "horizontal",
-                            "size": [176, 54],
+                            "size": [ 176, 54 ],
                             "controls": [
-                                {
-                                "filler_1@global.empty_panel": { "size": [55, "fill"] }
-                                },
-                                {
+                              {"filler_1@global.empty_panel": {"size": [ 55, "fill" ]}},
+                              {
                                 "inputs@global.empty_stack": {
                                   "orientation": "vertical",
-                                  "size": [18, 54],
+                                  "size": [ 18, 54 ],
                                   "controls": [
-                                      {
-                                      "smelt_input_item@global.container_item": { "$item_collection": "furnace_ingredient_items" }
-                                      },
-                                      {
+                                    {"smelt_input_item@global.container_item": {"$item_collection": "furnace_ingredient_items"}},
+                                    {
                                       "flame_buffer_and_holder": {
                                         "type": "panel",
-                                        "size": [18, 18],
+                                        "size": [ 18, 18 ],
                                         "controls": [
-                                            {
-                                            "flame_progress@furnace_screen.furnace_image_controls": { "$is_progress_arrow": false }
-                                            }
-                                          ]
-                                        }
-                                      },
-                                      {
-                                      "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" }
+                                          {"flame_progress@furnace_screen.furnace_image_controls": {"$is_progress_arrow": false}}
+                                        ]
                                       }
-                                    ]
-                                  }
-                                },
-                                {
-                                "filler_2@global.empty_panel": { "size": [6, "fill"] }
-                                },
-                                {
+                                    },
+                                    {"fuel_input_item@global.container_item": {"$item_collection": "furnace_fuel_items"}}
+                                  ]
+                                }
+                              },
+                              {"filler_2@global.empty_panel": {"size": [ 6, "fill" ]}},
+                              {
                                 "arrow_holder@global.empty_stack": {
                                   "orientation": "vertical",
-                                  "size": [24, 54],
+                                  "size": [ 24, 54 ],
                                   "controls": [
-                                      {
-                                      "filler_1@global.empty_panel": { "size": ["fill", 18] }
-                                      },
-                                      {
+                                    {"filler_1@global.empty_panel": {"size": [ "fill", 18 ]}},
+                                    {
                                       "arrow_holder@global.empty_panel": {
-                                        "size": [24, 16],
+                                        "size": [ 24, 16 ],
                                         "controls": [
-                                            {
+                                          {
                                             "arrow_sprite@screen_content.image_element": {
                                               "layer": 5,
-                                              "texture": "assets/minecraft/textures/gui/sprites/container/furnace/burn_progress",
+                                              "texture": "assets/sprite_assets/container/furnace/burn_progress",
                                               "clip_direction": "left",
                                               "keep_ratio": true,
-                                              "uv": [0, 0],
-                                              "size": [24, 16],
+                                              "uv": [ 0, 0 ],
+                                              "size": [ 24, 16 ],
                                               "bindings": [
-                                                  {
+                                                {
                                                   "binding_name": "#furnace_arrow_ratio",
                                                   "binding_name_override": "#clip_ratio",
                                                   "binding_condition": "always"
-                                                  }
-                                                ]
-                                              }
+                                                }
+                                              ]
                                             }
-                                          ]
-                                        }
-                                      },
-                                      {
-                                      "filler_2@global.empty_panel": { "size": ["fill", 20] }
+                                          }
+                                        ]
                                       }
-                                    ]
-                                  }
-                                },
-                                {
-                                "filler_3@global.empty_panel": { "size": [8, "fill"] }
-                                },
-                                {
+                                    },
+                                    {"filler_2@global.empty_panel": {"size": [ "fill", 20 ]}}
+                                  ]
+                                }
+                              },
+                              {"filler_3@global.empty_panel": {"size": [ 8, "fill" ]}},
+                              {
                                 "item_output_holder@global.empty_stack": {
                                   "orientation": "vertical",
-                                  "size": [26, 54],
+                                  "size": [ 26, 54 ],
                                   "controls": [
-                                      {
-                                      "filler_1@global.empty_panel": { "size": ["fill", 14] }
-                                      },
-                                      {
+                                    {"filler_1@global.empty_panel": {"size": [ "fill", 14 ]}},
+                                    {
                                       "cell_holder@global.empty_panel": {
-                                        "size": [26, 26],
+                                        "size": [ 26, 26 ],
                                         "controls": [
-                                            {
-                                            "output_item@global.container_item": {
-                                              "anchor_to": "center",
-                                              "anchor_from": "center",
-                                              "$item_collection": "furnace_output_items"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      },
-                                      {
-                                      "filler_2@global.empty_panel": { "size": ["fill", 14] }
+                                          {
+                                            "output_item@global.container_item": {"anchor_to": "center", "anchor_from": "center", "$item_collection": "furnace_output_items"}
+                                          }
+                                        ]
                                       }
-                                    ]
-                                  }
-                                },
-                                {
-                                "filler_4@global.empty_panel": { "size": [35, "fill"] }
+                                    },
+                                    {"filler_2@global.empty_panel": {"size": [ "fill", 14 ]}}
+                                  ]
                                 }
-                              ]
-                            }
+                              },
+                              {"filler_4@global.empty_panel": {"size": [ 35, "fill" ]}}
+                            ]
                           }
-                        ]
-                      }
-                    },
-                    {
-                    "bottom@crafting_screen.inventory_bottom_half_with_label": {
-                      "anchor_to": "bottom_middle",
-                      "anchor_from": "bottom_middle"
-                      }
+                        }
+                      ]
                     }
-                  ]
-                }
+                  },
+                  {
+                    "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
-      ]
-    },
+      }
+    ]
+  },
   "furnace_image_controls@global.empty_panel": {
-    "size": ["100%c + 1px", "100%c + 1px"],
+    "size": [ "100%c + 1px", "100%c + 1px" ],
     "controls": [
-        {
+      {
         "flame_sprite@screen_content.image_element": {
           "layer": 3,
           "texture": "textures/ui/ashur/animations/furnace_burn_lit",
           "clip_direction": "down",
           "keep_ratio": true,
           "uv": "@furnace_screen.burn_lit",
-          "size": [14, 14],
-          "uv_size": [14, 14],
-          "offset": [-1, 0],
+          "size": [ 14, 14 ],
+          "uv_size": [ 14, 14 ],
+          "offset": [ -1, 0 ],
           "anchor_to": "center",
           "anchor_from": "center",
           "bindings": [
-              {
+            {
               "binding_name": "#furnace_flame_ratio",
               "binding_name_override": "#clip_ratio",
               "binding_condition": "always"
-              }
-            ]
-          }
+            }
+          ]
         }
-      ]
-    },
-  "burn_lit": {
-    "anim_type": "aseprite_flip_book",
-    "initial_uv": [0, 0]
-    }
-  }
+      }
+    ]
+  },
+  "burn_lit": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]}
+}

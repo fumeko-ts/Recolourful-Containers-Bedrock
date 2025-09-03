@@ -1,0 +1,83 @@
+{
+  "namespace": "camel_screen",
+  "camel_screen@global.root_panel": {
+    "size": [ 176, 166 ],
+    "layer": 1,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$carpet_id|default": -1,
+    "controls": [
+      {
+        "ui@screen_content.image_element": {
+          "size": [ 176, 166 ],
+          "layer": 2,
+          "uv_size": [ 176, 166 ],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "texture": "assets/advanced_sprites/llama_no_chest/saddle"
+        }
+      },
+      {
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      },
+      {
+        "saddle_slot": {
+          "type": "grid",
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "layer": 7,
+          "grid_dimensions": [ 1, 1 ],
+          "size": [ 18, 18 ],
+          "offset": [ 7, 17 ],
+          "collection_name": "$item_collection",
+          "$item_collection|default": "horse_equip_items",
+          "controls": [
+            {
+              "0@global.container_item": {"$cell_overlay_ref": "camel_screen.saddle_slot_uv", "grid_position": [ 0, 0 ]}
+            }
+          ]
+        }
+      },
+      {
+        "camel_renderer@global.empty_panel": {
+          "offset": [ 25, 14 ],
+          "size": [ 54, 54 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "horse_float@global.empty_panel": {
+                "size": [ "30%", "30%" ],
+                "offset": [ 0, "30%" ],
+                "controls": [
+                  {
+                    "horse@global.custom_renderer": {
+                      "$type": "live_horse_renderer",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anims": [
+                        "@common.screen_exit_size_animation_push",
+                        "@common.screen_exit_size_animation_pop",
+                        "@common.screen_entrance_size_animation_push",
+                        "@common.screen_entrance_size_animation_pop"
+                      ],
+                      "bindings": [ {"binding_name": "#entity_id"} ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "saddle_slot_uv@screen_content.image_element": {
+    "size": [ 18, 18 ],
+    "texture": "assets/advanced_sprites/horse/horse",
+    "uv": [ 18, 220 ],
+    "uv_size": [ 18, 18 ],
+    "layer": 5
+  }
+}

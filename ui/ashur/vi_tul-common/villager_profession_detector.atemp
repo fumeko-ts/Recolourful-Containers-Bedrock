@@ -8,23 +8,21 @@
     "$profession_sprite|default": "",
     "$anim_sprite|default": "",
     "controls": [
-      {
-        "close@global.close_button": { "offset": [-8, 6] }
-      },
+      { "close@global.close_button": { "offset": [-8, 6] } },
       {
         "1@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "armorer",
-          "$entity_index"     : "ui:a",
-          "$profession"       : "armor",
-          "$anim_sprite"      : "optifine/anim/villager/default/armorer"
+          "$entity_index": "ui:a",
+          "$profession": "armor",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/armorer"
         }
       },
       {
         "2@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "butcher",
-          "$entity_index"     : "ui:b",
-          "$profession"       : "butcher",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:b",
+          "$profession": "butcher",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
@@ -32,47 +30,47 @@
           "$profession_sprite": "cartographer",
           "$entity_index": "ui:c",
           "$profession": "cartographer",
-          "$anim_sprite": "optifine/anim/villager/default/cartographer"
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/cartographer"
         }
       },
       {
         "4@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "cleric",
-          "$entity_index"     : "ui:d",
-          "$profession"       : "cleric",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:d",
+          "$profession": "cleric",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
         "5@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "farmer",
-          "$entity_index"     : "ui:e",
-          "$profession"       : "farmer",
-          "$anim_sprite"      : "optifine/anim/villager/default/farmer"
+          "$entity_index": "ui:e",
+          "$profession": "farmer",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"
         }
       },
       {
         "6@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "fisherman",
-          "$entity_index"     : "ui:f",
-          "$profession"       : "fisherman",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:f",
+          "$profession": "fisherman",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
         "7@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "fletcher",
-          "$entity_index"     : "ui:g",
-          "$profession"       : "fletcher",
-          "$anim_sprite"      : "optifine/anim/villager/default/fletcher"
+          "$entity_index": "ui:g",
+          "$profession": "fletcher",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/fletcher"
         }
       },
       {
         "8@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "leatherworker",
-          "$entity_index"     : "ui:h",
-          "$profession"       : "leather",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:h",
+          "$profession": "leather",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
@@ -80,23 +78,23 @@
           "$profession_sprite": "librarian",
           "$entity_index": "ui:i",
           "$profession": "librarian",
-          "$anim_sprite": "optifine/anim/villager/default/librarian"
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/librarian"
         }
       },
       {
         "10@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "shepherd",
-          "$entity_index"     : "ui:j",
-          "$profession"       : "shepherd",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:j",
+          "$profession": "shepherd",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
         "11@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "toolsmith",
-          "$entity_index"     : "ui:k",
-          "$profession"       : "tool",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:k",
+          "$profession": "tool",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       },
       {
@@ -105,15 +103,15 @@
           "$uv_anim": "@villager_profession_detector.weaponsmith_anim_0",
           "$entity_index": "ui:l",
           "$profession": "weapon",
-          "$anim_sprite": "optifine/anim/villager/default/weaponsmith"
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/weaponsmith"
         }
       },
       {
         "13@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "mason",
-          "$entity_index"     : "ui:m",
-          "$profession"       : "mason",
-          "$anim_sprite"      : "optifine/anim/villager/default/default"
+          "$entity_index": "ui:m",
+          "$profession": "mason",
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
         }
       }
     ]
@@ -140,21 +138,39 @@
                 "anchor_to": "center",
                 "anchor_from": "center",
                 "allow_debug_missing_texture": false,
-                "$container_texture": "('optifine/gui/container/villager/plains/' + $profession_sprite)",
+                "$container_texture": "('assets/advanced_sprites/villager/' + $villager_biome + '/' + $profession_sprite)",
                 "texture": "$container_texture"
               }
             },
+
             {
-              "eye_animation@screen_content.image_element": {
-                "layer": 20,
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "uv": "$uv_anim",
-                "uv_size": [12, 5],
-                "size": [12, 5],
-                "animation_reset_name": "screen_animation_reset",
-                "offset": [-16, -31.2],
-                "texture": "$anim_sprite"
+              "eye_holder@global.empty_panel": {
+                "size": [160, 54],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "eye_base@global.empty_panel": {
+                      "size": [12, 5],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "controls": [
+                        {
+                          "eye_animation@screen_content.image_element": {
+                            "layer": 20,
+                            "uv": "$uv_anim",
+                            "uv_size": [12, 5],
+                            "anchor_from": "center",
+                            "animation_reset_name": "screen_animation_reset",
+                            "anchor_to": "center",
+                            "size": [12, 5],
+                            "texture": "$anim_sprite"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             {
@@ -165,9 +181,9 @@
                 "controls": [
                   {
                     "label_holder@global.empty_stack": {
-                      "max_size": [134, 10],
+                      "max_size": [134, 10],// note depending on the lang used the text may get to long
                       "min_size": [0, 10],
-                      "offset": [1, 5],
+                      "offset": "$villager_label_offset",
                       "orientation": "horizontal",
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
@@ -232,14 +248,11 @@
             }
           ],
           "bindings": [
-            {
-              "binding_name"     : "#name_label",
-              "binding_condition": "always"
-            },
+            { "binding_name": "#name_label", "binding_condition": "always" },
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "(('ui:' + ('%.1s' * #name_label)) = $entity_index_main)",
+              "source_property_name": "(('ui:' + (('%.4s' * #name_label) - 'id:')) = $entity_index_main)",
               "target_property_name": "#visible"
             }
           ]
@@ -253,19 +266,36 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "allow_debug_missing_texture": false,
-          "texture": "assets/minecraft/textures/gui/container/villager",
+          "texture": "assets/advanced_sprites/villager/trader",
           "controls": [
             {
-              "eye_animation@screen_content.image_element": {
-                "layer": 20,
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "uv": "$uv_anim",
-                "uv_size": [12, 5],
-                "animation_reset_name": "screen_animation_reset",
-                "size": [12, 5],
-                "offset": [-16, -31.2],
-                "texture": "optifine/anim/villager/wandering"
+              "eye_holder@global.empty_panel": {
+                "size": [160, 54],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                  {
+                    "eye_base@global.empty_panel": {
+                      "size": [12, 5],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "controls": [
+                        {
+                          "eye_animation@screen_content.image_element": {
+                            "layer": 20,
+                            "uv": "$uv_anim",
+                            "uv_size": [12, 5],
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "animation_reset_name": "screen_animation_reset",
+                            "size": [12, 5],
+                            "texture": "assets/advanced_sprites/animated/villager/wandering"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             {
@@ -276,31 +306,20 @@
                 "controls": [
                   {
                     "label@global.empty_label": {
-                      "text": "#name_label",
+                      "text": "entity.wandering_trader.name",
                       "size": ["default", 10],
                       "offset": [0, 5],
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
                       "color": "$trade_title_text_color",
-                      "layer": 14,
-                      "bindings": [
-                        {
-                          "binding_name"     : "#name_label",
-                          "binding_condition": "once"
-                        }
-                      ]
+                      "layer": 14
                     }
                   }
                 ]
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name"         : "(not #exp_bar_visible)",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": [{ "binding_name": "(not #exp_bar_visible)", "binding_name_override": "#visible" }]
         }
       }
     ]
@@ -311,7 +330,7 @@
     "color": "$trade_title_text_color",
     "layer": 14,
     "bindings": [
-      {"binding_name": "#name_label", "binding_condition": "always"},
+      { "binding_name": "#name_label", "binding_condition": "always" },
       {
         "binding_type": "view",
         "binding_condition": "always",

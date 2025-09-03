@@ -4,12 +4,12 @@
     "$text_background_locked|default": "global.empty_panel",
     "$color|default": "white",
     "controls": [
-        {
+      {
         "centering_panel": {
           "type": "panel",
-          "size": ["100% - 6px", "100% - 4px"],
+          "size": [ "100% - 6px", "100% - 4px" ],
           "controls": [
-              {
+            {
               "clipper_panel": {
                 "type": "panel",
                 "size": "$text_edit_clipping_panel_size",
@@ -19,7 +19,7 @@
                 "clips_children": true,
                 "$disabled_color|default": "$color",
                 "controls": [
-                    {
+                  {
                     "$text_edit_text_control@common.text_edit_box_label": {
                       "layer": 1,
                       "size": "$text_edit_box_label_size",
@@ -31,38 +31,38 @@
                       "$text_alpha|default": "$alpha",
                       "$locked_text_alpha|default": "$disabled_alpha",
                       "$locked_color|default": "$disabled_color"
-                      }
-                    },
-                    {
+                    }
+                  },
+                  {
                     "clear_text_button_panel": {
                       "type": "panel",
-                      "size": ["100%", "100%"],
+                      "size": [ "100%", "100%" ],
                       "visible": "$text_clear_button_enabled",
                       "controls": [
-                          {
+                        {
                           "clear_text_button@common.clear_text_button": {
                             "anchor_from": "right_middle",
                             "anchor_to": "right_middle",
                             "size": "$text_clear_button_size",
                             "offset": "$text_clear_button_offset",
                             "bindings": [
-                                {
+                              {
                                 "binding_type": "global",
                                 "binding_name": "#show_clear_text_button",
                                 "binding_name_override": "#visible"
-                                }
-                              ]
-                            }
+                              }
+                            ]
                           }
-                        ]
-                      }
-                    },
-                    {
+                        }
+                      ]
+                    }
+                  },
+                  {
                     "visibility_panel": {
                       "type": "panel",
                       "$placeholder_label_size|default": "$text_edit_box_label_size",
                       "controls": [
-                          {
+                        {
                           "place_holder_control@$place_holder_control": {
                             "layer": 1,
                             "shadow": true,
@@ -74,55 +74,40 @@
                             "$text_alpha|default": "$alpha",
                             "$locked_text_alpha|default": "$disabled_alpha",
                             "$locked_color|default": "$disabled_color"
-                            }
                           }
-                        ],
+                        }
+                      ],
                       "bindings": [
-                          {
+                        {
                           "binding_type": "view",
                           "source_control_name": "$text_edit_text_control",
                           "source_property_name": "(#item_name = '')",
                           "target_property_name": "#visible",
                           "resolve_sibling_scope": true
-                          }
-                        ]
-                      }
+                        }
+                      ]
                     }
-                  ]
-                }
+                  }
+                ]
               }
-            ]
-          }
-        },
-        {
+            }
+          ]
+        }
+      },
+      {
         "locked": {
           "type": "panel",
           "$disabled_color|default": "$color",
           "controls": [
-              {
-              "edit_box_indent@$text_background_locked": {
-                "$color": "$disabled_color",
-                "$alpha": "$disabled_alpha"
-                }
-              }
-            ]
-          }
-        },
-        {
-        "default@$text_background_default": {
-
-          }
-        },
-        {
-        "hover@$text_background_hover": {
-
-          }
-        },
-        {
-        "pressed@$text_background_hover": {
-
-          }
+            {
+              "edit_box_indent@$text_background_locked": {"$color": "$disabled_color", "$alpha": "$disabled_alpha"}
+            }
+          ]
         }
-      ]
-    }
+      },
+      {"default@$text_background_default": {}},
+      {"hover@$text_background_hover": {}},
+      {"pressed@$text_background_hover": {}}
+    ]
   }
+}

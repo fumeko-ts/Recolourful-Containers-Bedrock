@@ -13,43 +13,78 @@
 // By using it, you agree to these terms.
 
 {
-/*
-  Valid leaf texture options (must be lowercase):
+  "$is_recolorful_containers": true,
 
-  - oak_leaves
-  - spruce_leaves
-  - acacia_leaves
-  - azalea_leaves
-  - birch_leaves
-  - cherry_leaves
-  - dark_oak_leaves
-  - flowering_azalea_leaves
-  - jungle_leaves
-  - mangrove_leaves
-  -- or eany other block really
+  // note dont modify i have not configured the eyes yet
+  "$villager_biome": "plains",
+  //_valid options for this are.
+  //` plains
+  //` savanna
+  //` snow
+  //` swamp
+  //` taiga
+  //` desert
+  //` jungle
 
-  example - "$nature_tab_texture": "mangrove_leaves"
-*/
+  "$villager_label_offset": [3, 6],
+  "$trades_label_offset": [0, 5],
 
-"$is_recolorful_containers": true,
+  "$nature_tab_texture": "pearlescent_froglight",
+  // Show or hide the exit button on container screens (true/false)
+  "$Exit_panel_enabled": true,
+  // Set container UI transparency (range: 0.0 - 1.0)
+  "$container_opacity": 1,
+  "$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
 
+  // edit buttons offsets sizes and textures
+  // note it will always be layd out like-
+  //size
+  //offset
+  //layer
+  //textures
+  //nineslice
 
-"$nature_tab_texture": "pearlescent_froglight",
 
-// Show or hide the exit button on container screens (true/false)
-"$Exit_panel_enabled": true,
+  // once these are configured i will make them only appear for mobile users or people useing pocket ui layout
+  
+  // creative inventory tab
+  "$creative_inventory_exit_size": [14, 14],
+  "$creative_inventory_exit_offset": [-2, 1],
+  "$creative_inventory_exit_layer": 30,
+  "$creative_inventory_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  //can be like [1, 1, 1, 1] or like a normal int no array for example "$creative_inventory_exit_texture_nineslice": 1, that would basicly set it to [1, 1, 1, 1]
+  "$creative_inventory_exit_texture_nineslice": "",
 
-// Set container UI transparency (range: 0.0 - 1.0)
-"$container_opacity": 1,
+  // creative misc tabs
+  "$creative_misc_exit_size": [14, 14],
+  "$creative_misc_exit_offset": [-2, 1],
+  "$creative_misc_exit_layer": 30,
+  "$creative_misc_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  "$creative_misc_exit_texture_nineslice": "",
 
+  // creative search tab
+  "$creative_search_exit_size": [14, 14],
+  "$creative_search_exit_offset": [-2, 1],
+  "$creative_search_exit_layer": 30,
+  "$creative_search_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  "$creative_search_exit_texture_nineslice": "",
 
 
-"$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
 
-// --- Read-only below this line ---
 
 
-//}
 
 
 
@@ -109,574 +144,92 @@
 
 
 
+  // --- Read-only below this line ---
 
+  //}
 
+  "$close_control": "global.close_button_panel",
+  // text colors for the button in the enchanting table also rgb and rgba max value is 1.0
+  "$enchant_light_green": [0.475, 0.95, 0.11875],
+  "$enchant_light_yellow": [0.404, 0.365, 0.286],
+  "$enchant_light_brown": [0.2, 0.18, 0.145],
+  "$enchant_dark_green": [0.318, 0.475, 0.216],
 
+  "$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667],
 
+  "$smoker_search_tab_index": 0,
+  "$direction": "right",
 
+  "$creative_recipe_book": false,
+  // Required for container textures – do not edit
+  "$loom_screen": false,
+  "$anvil_screen": false,
+  "$barrel_screen": false,
+  "$beacon_screen": false,
+  "$blast_furnace_screen": false,
+  "$brewing_stand_screen": false,
+  "$cartography_screen": false,
+  "$crafting_screen": false,
+  "$crafter_screen": false,
+  "$dispenser_screen": false,
+  "$dropper_screen": false,
+  "$enchanting_screen": false,
+  "$furnace_screen": false,
+  "$double_chest_screen": false,
+  "$grindstone_screen": false,
+  "$hopper_screen": false,
+  "$horse_screen": false,
+  "$inventory_screen": false,
+  "$shulker_screen": false,
+  "$smithing_screen": false,
+  "$smoker_screen": false,
+  "$stonecutter_screen": false,
+  "$tradeing_screen": false,
+  "$recipe_book": false,
+  "$small_chest_screen": false,
+  "$ender_chest_screen": false,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// text colors for the button in the enchanting table also rgb and rgba max value is 1.0
-"$enchant_light_green": [0.475, 0.95, 0.11875],
-"$enchant_light_yellow": [0.404, 0.365, 0.286],
-"$enchant_light_brown":[0.200, 0.180, 0.145],
-"$enchant_dark_green": [0.318, 0.475, 0.216],
-
-"$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667],
-
-"$smoker_search_tab_index": 0,
-"$direction": "right",
-
-"$creative_recipe_book": false,
-// Required for container textures – do not edit
-"$loom_screen": false,
-"$anvil_screen": false,
-"$barrel_screen": false,
-"$beacon_screen": false,
-"$blast_furnace_screen": false,
-"$brewing_stand_screen": false,
-"$cartography_screen": false,
-"$crafting_screen": false,
-"$crafter_screen": false,
-"$dispenser_screen": false,
-"$dropper_screen": false,
-"$enchanting_screen": false,
-"$furnace_screen": false,
-"$double_chest_screen": false,
-"$grindstone_screen": false,
-"$hopper_screen": false,
-"$horse_screen": false,
-"$inventory_screen": false,
-"$shulker_screen": false,
-"$smithing_screen": false,
-"$smoker_screen": false,
-"$stonecutter_screen": false,
-"$tradeing_screen": false,
-"$recipe_book": false,
-"$small_chest_screen": false,
-"$ender_chest_screen": false,
-
-
-
-
-
-
-// Internal use – changing content below will break some UI
-"$jc:dev": true,
-    "$enchant_selectable_button_mappings": [
-      {"from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused"},
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id"  : "button.menu_ok",
-        "mapping_type"  : "focused",
-        "ignored"       : "(not $is_ps4)"
-      }
-    ],
+  // Internal use – changing content below will break some UI
+  "$jc:dev": true,
+  "$enchant_selectable_button_mappings": [
+    { "from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed" },
+    { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },
+    {
+      "from_button_id": "button.controller_back",
+      "to_button_id": "button.menu_ok",
+      "mapping_type": "focused",
+      "ignored": "(not $is_ps4)"
+    }
+  ],
   "$recipe_book_contents": [
-    {"offset_content@$page_contents": {"offset": [ 0.9, -1.6 ], "layer": 4}},
+    { "offset_content@$page_contents": { "offset": [0.9, -1.6], "layer": 4 } },
     {
       "holder@global.empty_stack": {
         "orientation": "vertical",
         "ignored": "($is_in_recipe_inventory = false)",
         "anchor_to": "top_middle",
         "anchor_from": "top_middle",
-        "size": [ 111, 30 ],
-        "offset": [ 8, 0 ],
+        "size": [111, 30],
+        "offset": [8, 0],
         "controls": [
-          {"buffer_1@global.empty_panel": {"size": [ 111, 11 ]}},
+          { "buffer_1@global.empty_panel": { "size": [111, 11] } },
           {
             "search_and_filter@global.empty_stack": {
               "orientation": "horizontal",
-              "size": [ 111, 18 ],
+              "size": [111, 18],
               "controls": [
                 {
                   "text_edit_panel@global.empty_panel": {
-                    "size": [ 81, 18 ],
+                    "size": [81, 18],
                     "controls": [
                       {
-                        "text_edit_control@text_edit_box.text_edit_box": {  
-                          "size": [ 81, 14 ],
-                          "property_bag": {"#property_field": "#item_name"},
+                        "text_edit_control@text_edit_box.text_edit_box": {
+                          "size": [81, 14],
+                          "property_bag": { "#property_field": "#item_name" },
                           "max_length": 300000,
                           "anchor_from": "center",
-                          "anchor_to": "center",     
-                          "$text_clear_button_offset": [3, 0],                     
+                          "anchor_to": "center",
+                          "$text_clear_button_offset": [3, 0],
                           "$text_box_text_color": "white",
                           "$text_edit_box_label_offset": [1, 0.4],
                           "$text_clear_button_enabled": true,
@@ -687,14 +240,14 @@
                           "$text_background_hover": "screen_content.text_field_highlighted",
 
                           "$text_edit_binding_name": "#text_box_item_name",
-                          "$text_edit_box_label_size": [ "default", 10 ]
+                          "$text_edit_box_label_size": ["default", 10]
                         }
                       }
                     ]
                   }
                 },
-                {"buffer_2@global.empty_panel": {"size": [ 4, "fill" ]}},
-                {"filter@crafting_common.filter_toggle": {}}
+                { "buffer_2@global.empty_panel": { "size": [4, "fill"] } },
+                { "filter@crafting_common.filter_toggle": {} }
               ]
             }
           }
@@ -706,33 +259,32 @@
         "orientation": "vertical",
         "anchor_to": "bottom_middle",
         "anchor_from": "bottom_middle",
-        "size": [ 77, 30 ],
+        "size": [77, 30],
         "controls": [
           {
             "stack@global.empty_stack": {
               "orientation": "horizontal",
-              "size": [ 77, 17 ],
+              "size": [77, 17],
               "anchor_to": "bottom_middle",
               "anchor_from": "bottom_middle",
               "layer": 20,
               "controls": [
-                {"buffer@global.empty_panel": {"size": [ 18, 0 ], "ignored": "(not ($current_page = 1))"}},// only a filler here because stack panels of the horizontal origin inherintly want to move its items left
-                                                                                                           // eany space on the right is auto filled  
-                {"left@pagination.tepes_left_button": {}},
+                { "buffer@global.empty_panel": { "size": [18, 0], "ignored": "(not ($current_page = 1))" } },
+                { "left@pagination.tepes_left_button": {} },
                 {
                   "buffer1@global.empty_panel": {
-                    "size": [ 43, 17 ],
+                    "size": [43, 17],
                     "controls": [
-                      {"label@pagination.page_count_label": {}},
-                      {"max_page_label@pagination.max_page_label": {}}
+                      { "label@pagination.page_count_label": {} },
+                      { "max_page_label@pagination.max_page_label": {} }
                     ]
                   }
                 },
-                {"right@pagination.tepes_right_button": {}}
+                { "right@pagination.tepes_right_button": {} }
               ]
             }
           },
-          {"buffer_fill_1@global.empty_panel": {"size": [ 65, 13 ]}}
+          { "buffer_fill_1@global.empty_panel": { "size": [65, 13] } }
         ]
       }
     }
