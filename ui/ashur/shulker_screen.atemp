@@ -4,7 +4,6 @@
     "size": [ 176, 166 ],//36.2% on each side for screen type
     "$screen_controls": [
       {"shulker_color@shulker_color.shulker_color":{}},
-      {"common_panel@screen_content.container_base": {"$shulker_screen": true}},
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",

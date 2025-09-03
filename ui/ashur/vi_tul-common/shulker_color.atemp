@@ -1,0 +1,53 @@
+{
+  "namespace": "shulker_color",
+  "shulker_color@global.root_panel": {// this was made within 3 ish hours so im not 100% it compleately works only languages i have tested was ja_JP and en_US
+    "size": [176, 166],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$screen_route|default": "$container_title",
+    "layer": 1,
+    "controls": [
+      { "1@shulker_color.colored_bindings": { "$shulker_id": "ui:§f§r", "$shulker_texel": "white" } }, //white
+      { "2@shulker_color.colored_bindings": { "$shulker_id": "ui:§p§r", "$shulker_texel": "orange" } }, //orange
+      { "3@shulker_color.colored_bindings": { "$shulker_id": "ui:§5§r", "$shulker_texel": "magenta" } }, //magenta
+      { "4@shulker_color.colored_bindings": { "$shulker_id": "ui:§b§r", "$shulker_texel": "light_blue" } }, //light blue
+      { "5@shulker_color.colored_bindings": { "$shulker_id": "ui:§e§r", "$shulker_texel": "yellow" } }, //yellow
+      { "6@shulker_color.colored_bindings": { "$shulker_id": "ui:§a§r", "$shulker_texel": "lime" } }, //lime
+      { "7@shulker_color.colored_bindings": { "$shulker_id": "ui:§d§r", "$shulker_texel": "pink" } }, //pink
+      { "8@shulker_color.colored_bindings": { "$shulker_id": "ui:§8§r", "$shulker_texel": "gray" } }, //grey
+      { "9@shulker_color.colored_bindings": { "$shulker_id": "ui:§7§r", "$shulker_texel": "light_gray" } }, //silver/light grey
+      { "10@shulker_color.colored_bindings": { "$shulker_id": "ui:§3§r", "$shulker_texel": "cyan" } }, //cyan
+      { "11@shulker_color.colored_bindings": { "$shulker_id": "ui:§u§r", "$shulker_texel": "purple" } }, //purple
+      { "12@shulker_color.colored_bindings": { "$shulker_id": "ui:§9§r", "$shulker_texel": "blue" } }, //blue
+      { "13@shulker_color.colored_bindings": { "$shulker_id": "ui:§n§r", "$shulker_texel": "brown" } }, //brown
+      { "14@shulker_color.colored_bindings": { "$shulker_id": "ui:§2§r", "$shulker_texel": "green" } }, //green
+      { "15@shulker_color.colored_bindings": { "$shulker_id": "ui:§c§r", "$shulker_texel": "red" } }, //red
+      { "16@shulker_color.colored_bindings": { "$shulker_id": "ui:§0§r", "$shulker_texel": "black" } }, //black
+
+      { "17@shulker_color.colored_bindings": { "$shulker_id": "ui:contai", "$shulker_texel": "default" } } //default shulker
+    ]
+  },
+
+  "colored_bindings@screen_content.image_element": {
+    "$shulker_texture|default": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
+    "size": [176, 166],
+    "layer": 1,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "uv_size": [176, 166],
+    "texture": "$shulker_texture",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(('%.9s' * ('ui:' + $screen_route + (#item_id_aux - #item_id_aux))) = $shulker_id)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}
