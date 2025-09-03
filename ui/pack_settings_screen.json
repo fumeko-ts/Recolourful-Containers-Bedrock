@@ -1,4 +1,4 @@
-{
+{/*
   "namespace": "pack_settings",
   "background@common.screen_background": {
     "alpha": 1,
@@ -298,5 +298,5 @@
         }
       }
     ]
-  }
+  }*/
 }
