@@ -3,7 +3,7 @@
   "shulker_box@container_common.container_details": {
     "size": [ 176, 166 ],//36.2% on each side for screen type
     "$screen_controls": [
-      {"shulker_color@shulker_color.shulker_color":{}},
+      {"shulker_color@shulker_color_detector.shulker_color_detector":{}},
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",

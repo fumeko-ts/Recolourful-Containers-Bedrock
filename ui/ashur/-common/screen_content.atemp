@@ -6,9 +6,6 @@
     "$size": [ 176, 166 ],
     "variables": [
       {"requires": "($anvil_screen = true)", "$container": "anvil"},
-      {"requires": "($barrel_screen = true)", "$container": "container_extensions.barrel"},
-      {"requires": "($small_chest_screen = true)", "$container": "container_extensions.small_chest"},
-      {"requires": "($ender_chest_screen = true)", "$container": "container_extensions.ender_chest"},
       {"requires": "($beacon_screen = true)", "$container": "beacon", "$size": [ 230, 219 ]},
       {"requires": "($blast_furnace_screen = true)", "$container": "blast_furnace"},
       {"requires": "($brewing_stand_screen = true)", "$container": "brewing_stand"},
@@ -23,11 +20,9 @@
       {"requires": "($grindstone_screen = true)", "$container": "grindstone"},
       {"requires": "($hopper_screen = true)", "$container": "hopper", "$size": [ 176, 133 ]},
       {"requires": "($loom_screen = true)", "$container": "loom"},
-      {"requires": "($shulker_screen = true)", "$container": "shulker_box"},
       {"requires": "($smithing_screen = true)", "$container": "smithing"},
       {"requires": "($smoker_screen = true)", "$container": "smoker"},
       {"requires": "($stonecutter_screen = true)", "$container": "stonecutter"},
-      {"requires": "($tradeing_screen = true)", "$container": "trade", "$size": [ 276, 166 ]},
       {"requires": "($inventory_screen = true)", "$container": "inventory"}
     ],
     "controls": [

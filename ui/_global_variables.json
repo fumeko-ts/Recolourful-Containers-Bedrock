@@ -147,7 +147,8 @@
   // --- Read-only below this line ---
 
   //}
-
+  
+  "$chest_texture": "('assets/' + $ui_is)",
   "$close_control": "global.close_button_panel",
   // text colors for the button in the enchanting table also rgb and rgba max value is 1.0
   "$enchant_light_green": [0.475, 0.95, 0.11875],
