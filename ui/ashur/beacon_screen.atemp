@@ -173,13 +173,13 @@
                 "size": [67, 22],
                 "controls": [
                   {
-                    "confirm_panel@beacon_screen.confirm_and_exit_button_template": {
+                    "confirm_panel@beacon_screen.advanced_buttons_template": {
                       "$button_name": "confirm"
                     }
                   },
                   { "filler_1@global.empty_panel": { "size": [4, "fill"] } },
                   {
-                    "cancel_panel@beacon_screen.confirm_and_exit_button_template": {
+                    "cancel_panel@beacon_screen.advanced_buttons_template": {
                       "$button_name": "cancel"
                     }
                   },
@@ -247,6 +247,32 @@
             }
           ]
         }
+      },
+      {
+        "beacon_secondary_underlay_bg@global.empty_panel": {
+          "size": [63, 72],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "test@global.empty_image": {
+                "size": [26, 28],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "texture": "assets/beacon_button_sprites/beacon_secondary_underlay",
+                "bindings": [
+                  {
+                    "binding_name": "#button_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always",
+                    "binding_collection_name": "extra",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   },
@@ -258,13 +284,10 @@
     "anchor_from": "top_left"
   },
 
-
-
   // note below is severly unoptimised i am currently doing it tho
-  "confirm_and_exit_button_template@global.empty_panel": {
+  "advanced_buttons_template@global.empty_panel": {
     "size": [22, 22],
     "layer": 4,
-    "$button_texture|default": "('assets/sprite_assets/container/beacon/' + $button_name)",
     "bindings": [
       {
         "binding_type": "collection",
@@ -274,54 +297,10 @@
       }
     ],
     "controls": [
-      { "1@beacon_screen.toggle_button": {} },
-      { "2@beacon_screen.confirm_and_exit_button_active": {} },
-      { "3@beacon_screen.confirm_and_exit_button_inactive": {} },
-      {
-        "4@screen_content.image_element": {
-          "texture": "$button_texture",
-          "layer": 5,
-          "offset": [1, 1],
-          "keep_ratio": true,
-          "size": [18, 18]
-        }
-      }
+      { "1@beacon_screen.toggle_button": {} }
     ]
   },
-  "confirm_and_exit_button_active@beacon_screen.confirm_and_exit_template": {
-    "$button_active": "#active",
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "pressed"
-      },
-      { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
-    ]
-  },
-  "confirm_and_exit_button_inactive@beacon_screen.confirm_and_exit_template": {
-    "$button_active": "#inactive",
-    "button_mappings": []
-  },
-  "confirm_and_exit_template@common.button": {
-    "size": [22, 22],
-    "layer": 0,
-    "focus_wrap_enabled": false,
-    "bindings": [
-      {
-        "binding_name": "$button_active",
-        "binding_name_override": "#visible",
-        "binding_collection_name": "$button_name",
-        "binding_type": "collection"
-      },
-      { "binding_collection_name": "$button_name", "binding_type": "collection_details" }
-    ],
-    "controls": [
-      { "default@global.empty_panel": { "size": [22, 22] } },
-      { "hover@global.empty_panel": { "size": [22, 22] } },
-      { "pressed@global.empty_panel": { "size": [22, 22] } }
-    ]
-  },
+
   "toggle_button@common.toggle": {
     "size": [22, 22],
     "layer": 1,
@@ -359,13 +338,35 @@
       },
       { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
     ],
+    "$unchecked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
+    "$checked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
+    "$locked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
+    "$unchecked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
+    "$checked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
+    "$locked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
+
     "controls": [
-      { "unchecked@beacon_screen.image_base": {} },
-      { "checked@beacon_screen.image_base": {} },
-      { "locked_default@beacon_screen.image_base": {} },
-      { "unchecked_hover@beacon_screen.image_base": { "controls": "$hover_control" } },
-      { "checked_hover@beacon_screen.image_base": { "controls": "$hover_control" } },
-      { "locked_hover@beacon_screen.image_base": { "controls": "$hover_control" } }
+      { "unchecked@beacon_screen.advanced_icons": { "$button_texture": "$unchecked_advanced" } },
+      { "checked@beacon_screen.advanced_icons": { "$button_texture": "$checked_advanced" } },
+      { "locked_default@beacon_screen.advanced_icons": { "$button_texture": "$locked_advanced" } },
+      {
+        "unchecked_hover@beacon_screen.advanced_icons": {
+          "$button_texture": "$unchecked_hover_advanced",
+          "controls": "$hover_control"
+        }
+      },
+      {
+        "checked_hover@beacon_screen.advanced_icons": {
+          "$button_texture": "$checked_hover_advanced",
+          "controls": "$hover_control"
+        }
+      },
+      {
+        "locked_hover@beacon_screen.advanced_icons": {
+          "$button_texture": "$locked_hover_advanced",
+          "controls": "$hover_control"
+        }
+      }
     ]
   },
   "hover_text@common.hover_text": {
@@ -378,5 +379,12 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": { "size": [22, 22], "offset": [1, 1], "nineslice_size": 1 }
+
+  "advanced_icons@screen_content.image_element": {
+    "texture": "$button_texture",
+    "layer": 5,
+    "offset": [1, 1],
+    "keep_ratio": true,
+    "size": [18, 18]
+  }
 }

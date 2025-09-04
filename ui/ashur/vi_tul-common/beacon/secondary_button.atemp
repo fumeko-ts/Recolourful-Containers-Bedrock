@@ -43,6 +43,7 @@
             {
               "binding_name": "#button_visible",
               "binding_name_override": "#visible",
+              "binding_condition": "always",
               "binding_collection_name": "$button_name",
               "binding_type": "collection"
             },
