@@ -59,6 +59,7 @@
     "ui/ashur/vi_tul-common/mounts/illama_screen.atemp",
     "ui/ashur/vi_tul-common/mounts/mule_screen.atemp",
     "assets/sprite_assets/widget/button.mcmeta",
+    "ui/ashur/vi_tul-common/beacon/primary_button.atemp",
     "ui/ashur/vi_tul-common/mounts/trader_illama_screen.atemp"
   ]
 }

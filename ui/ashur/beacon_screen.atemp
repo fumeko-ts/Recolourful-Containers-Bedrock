@@ -31,11 +31,11 @@
                             "size": [ 46, 22 ],
                             "controls": [
                               {
-                                "speed@beacon_screen.primary_button_base": {"$button_name": "speed", "$effect_icon_source": "assets/sprites/effects/speed"}
+                                "speed@primary_button.primary_button": {"$button_name": "speed"}
                               },
                               {"filler_1@global.empty_panel": {"size": [ 2, "fill" ]}},
                               {
-                                "haste@beacon_screen.primary_button_base": {"$button_name": "haste", "$effect_icon_source": "assets/sprites/effects/haste"}
+                                "haste@primary_button.primary_button": {"$button_name": "haste"}
                               }
                             ]
                           }
@@ -47,11 +47,11 @@
                             "size": [ 46, 22 ],
                             "controls": [
                               {
-                                "1@beacon_screen.primary_button_base": {"$button_name": "resist", "$effect_icon_source": "assets/sprites/effects/resistance"}
+                                "1@primary_button.primary_button": {"$button_name": "resist"}
                               },
                               {"filler_1@global.empty_panel": {"size": [ 2, "fill" ]}},
                               {
-                                "2@beacon_screen.primary_button_base": {"$button_name": "jump", "$effect_icon_source": "assets/sprites/effects/jump_boost"}
+                                "2@primary_button.primary_button": {"$button_name": "jump"}
                               }
                             ]
                           }
@@ -64,7 +64,7 @@
                             "controls": [
                               {"filler_1@global.empty_panel": {"size": [ 12, "fill" ]}},
                               {
-                                "1@beacon_screen.primary_button_base": {"$button_name": "strength", "$effect_icon_source": "assets/sprites/effects/strength"}
+                                "1@primary_button.primary_button": {"$button_name": "strength"}
                               },
                               {"filler_2@global.empty_panel": {"size": [ 12, "fill" ]}}
                             ]
@@ -247,38 +247,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left"
   },
-  "primary_button_base@global.empty_panel": {
-    "size": [ 22, 22 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "bindings": [
-      {
-        "binding_type": "collection",
-        "binding_name": "#active",
-        "binding_collection_name": "$button_name",
-        "binding_name_override": "#enabled"
-      }
-    ],
-    "controls": [
-      {"toggle_button@beacon_common.toggle_button": {}},
-      {
-        "effect_texture@screen_content.image_element": {
-          "size": [ 18, 18 ],
-          "texture": "$effect_icon_source",
-          "offset": [ 1, 1 ],
-          "layer": 3,
-          "bindings": [
-            {
-              "binding_name": "#button_visible",
-              "binding_name_override": "#visible",
-              "binding_collection_name": "$button_name",
-              "binding_type": "collection"
-            }
-          ]
-        }
-      }
-    ]
-  },
+
   "secondary_button_base@global.empty_panel": {
     "size": [ 22, 22 ],
     "$image_control|default": "global.empty_image",
