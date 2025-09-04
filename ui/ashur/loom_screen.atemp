@@ -1,49 +1,55 @@
 {
   "namespace": "loom_screen",
   "loom_panel@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"common_panel@screen_content.container_base": {"$loom_screen": true}},
+      { "common_panel@screen_content.container_base": { "$loom_screen": true } },
       {
         "loom_top_half@global.empty_panel": {
-          "size": [ 176, 78 ],
+          "size": [176, 78],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
             {
               "inputs_and_label@global.empty_stack": {
                 "orientation": "vertical",
-                "size": [ 50, 62 ],
+                "size": [50, 62],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ "fill", 4 ]}},
-                  {"smithing_label@global.empty_panel": {"size": [ "fill", 21 ]}},
+                  { "filler_1@global.empty_panel": { "size": ["fill", 4] } },
+                  { "smithing_label@global.empty_panel": { "size": ["fill", 21] } },
                   {
                     "input_top@global.empty_stack": {
                       "orientation": "horizontal",
-                      "size": [ 50, 18 ],
+                      "size": [50, 18],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ 12, "fill" ]}},
+                        { "filler_1@global.empty_panel": { "size": [12, "fill"] } },
                         {
-                          "banner_slot@global.container_item": {"$item_collection": "loom_input_items", "$cell_overlay_ref": "loom_screen.banner_empty_image"}
+                          "banner_slot@global.container_item": {
+                            "$item_collection": "loom_input_items",
+                            "$cell_overlay_ref": "loom_screen.banner_empty_image"
+                          }
                         },
-                        {"filler_2@global.empty_panel": {"size": [ 2, "fill" ]}},
+                        { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
                         {
-                          "dye_slot@global.container_item": {"$item_collection": "loom_dye_items", "$cell_overlay_ref": "loom_screen.dye_empty_image"}
+                          "dye_slot@global.container_item": {
+                            "$item_collection": "loom_dye_items",
+                            "$cell_overlay_ref": "loom_screen.dye_empty_image"
+                          }
                         }
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}},
+                  { "filler_2@global.empty_panel": { "size": ["fill", 1] } },
                   {
                     "input_bottom@global.empty_stack": {
                       "orientation": "horizontal",
-                      "size": [ 50, 18 ],
+                      "size": [50, 18],
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ 22, "fill" ]}},
-                        {"pattern_panel@loom_screen.pattern_panel": {}},
-                        {"filler_2@global.empty_panel": {"size": [ 10, "fill" ]}}
+                        { "filler_1@global.empty_panel": { "size": [22, "fill"] } },
+                        { "pattern_panel@loom_screen.pattern_panel": {} },
+                        { "filler_2@global.empty_panel": { "size": [10, "fill"] } }
                       ]
                     }
                   }
@@ -52,7 +58,7 @@
             },
             {
               "scroll_panel@global.empty_panel": {
-                "size": [ 131, 69 ],
+                "size": [131, 69],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
@@ -97,7 +103,7 @@
             },
             {
               "output_holder@global.empty_panel": {
-                "size": [ 34, 74 ],
+                "size": [34, 74],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
                 "controls": [
@@ -114,12 +120,15 @@
             },
             {
               "banner_viewer@global.empty_panel": {
-                "size": [ 35, 48 ],
+                "size": [35, 48],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
                 "controls": [
                   {
-                    "result_banner_renderer@loom_screen.result_banner_renderer": {"anchor_to": "bottom_left", "anchor_from": "bottom_left"}
+                    "result_banner_renderer@loom_screen.result_banner_renderer": {
+                      "anchor_to": "bottom_left",
+                      "anchor_from": "bottom_left"
+                    }
                   }
                 ]
               }
@@ -128,18 +137,73 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@crafting_screen.inventory_bottom_half_with_label": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
+      },
+      {
+        "disabled_scroll_box@global.empty_panel": {
+          "size": [57, 28],
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "controls": [
+            {
+              "disabled_box@screen_content.image_element": {
+                "texture": "assets/sprite_assets/container/loom/scroller_disabled",
+                "size": [12, 15],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "loom_input_items",
+                    "binding_name": "#item_id_aux",
+                    "binding_name_override": "#loom_input_id"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "loom_dye_items",
+                    "binding_name": "#item_id_aux",
+                    "binding_name_override": "#loom_dye_id"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(#loom_dye_id = -1)",
+                    "target_property_name": "#dye_id"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(#loom_input_id = -1)",
+                    "target_property_name": "#banner_id"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "disabled_box",
+              "source_property_name": "(#dye_id or #banner_id = true)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
   "pattern_panel@global.empty_panel": {
-    "size": [ 18, 18 ],
+    "size": [18, 18],
     "controls": [
-      {"pattern_slot@global.container_item": {"$item_collection": "loom_material_items"}},
+      { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
       {
         "img@loom_screen.item_empty_image": {
           "$item_collection": "loom_material_items",
-          "$current_cell_texture": "assets/sprite_assets/container/loom/pattern_slot.png"
+          "$current_cell_texture": "assets/sprite_assets/container/loom/pattern_slot"
         }
       }
     ]
@@ -147,8 +211,8 @@
   "item_empty_image": {
     "type": "image",
     "texture": "$current_cell_texture",
-    "uv_size": [ 16, 16 ],
-    "size": [ 16, 16 ],
+    "uv_size": [16, 16],
+    "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
     "bindings": [
@@ -160,12 +224,16 @@
       }
     ]
   },
-  "banner_empty_image@loom_screen.item_empty_image": {"$current_cell_texture|default": "assets/sprite_assets/container/loom/banner_slot.png"},
-  "dye_empty_image@loom_screen.item_empty_image": {"$current_cell_texture|default": "assets/sprite_assets/container/loom/dye_slot.png"},
+  "banner_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprite_assets/container/loom/banner_slot"
+  },
+  "dye_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprite_assets/container/loom/dye_slot"
+  },
   "result_banner_renderer": {
     "type": "custom",
     "renderer": "banner_pattern_renderer",
-    "size": [ 20, 40 ],
+    "size": [20, 40],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "bindings": [
@@ -182,12 +250,12 @@
     ]
   },
   "scroll_panel@scroll_panel.scroll_panel": {
-    "$scroll_size": [ 12, 56.2 ],
-    "size": [ 73, 56.2 ],
-    "offset": [ 1, 0.4 ],
-    "$scroll_view_port_size": [ 71, 56.2 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_track_offset": [ 27.6, -1 ],
+    "$scroll_size": [12, 56.2],
+    "size": [73, 56.2],
+    "offset": [1, 0.4],
+    "$scroll_view_port_size": [71, 56.2],
+    "$scrolling_pane_size": ["100%", "100%"],
+    "$scroll_track_offset": [27.6, -1],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "$scroll_box_image_control": "loom_screen.scroller",
@@ -196,26 +264,26 @@
   },
   "scroller@screen_content.image_element": {
     "tiled": true,
-    "nineslice_size": [ 6, 7, 6, 6 ],
-    "tiled_scale": [ 1, 1 ],
-    "offset": [ 2, 0.8 ],
+    "nineslice_size": [6, 7, 6, 6],
+    "tiled_scale": [1, 1],
+    "offset": [2, 0.8],
     "anchor_to": "center",
     "anchor_from": "center",
-    "texture": "assets/sprite_assets/container/loom/scroller.png",
-    "size": [ 12, "100%" ]
+    "texture": "assets/sprite_assets/container/loom/scroller",
+    "size": [12, "100%"]
   },
   "scroll_grid_holder": {
     "type": "panel",
-    "size": [ 56, "100%cm" ],
+    "size": [56, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [ 0, -0.2 ],
+    "offset": [0, -0.2],
     "controls": [
-      {"scroll_buffer@global.empty_panel": {"size": [ 56, "100%sm" ]}},
+      { "scroll_buffer@global.empty_panel": { "size": [56, "100%sm"] } },
       {
         "scroll_grid": {
           "type": "grid",
-          "size": [ 56, "default" ],
+          "size": [56, "default"],
           "collection_name": "$collection_name",
           "anchor_to": "center",
           "anchor_from": "center",
@@ -238,21 +306,21 @@
   },
   "pattern_button": {
     "type": "input_panel",
-    "size": [ 14, 14 ],
+    "size": [14, 14],
     "$background_image_control_name|default": "bg",
     "controls": [
       {
         "$background_image_control_name": {
           "type": "panel",
-          "size": [ 14, 14 ],
-          "offset": [ 1, 0 ],
+          "size": [14, 14],
+          "offset": [1, 0],
           "layer": 1,
           "controls": [
             {
               "default@screen_content.image_element": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "nineslice_size": 1,
-                "texture": "assets/sprite_assets/container/loom/pattern.png",
+                "texture": "assets/sprite_assets/container/loom/pattern",
                 "bindings": [
                   {
                     "binding_type": "collection",
@@ -266,9 +334,9 @@
             },
             {
               "selected@screen_content.image_element": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "nineslice_size": 1,
-                "texture": "assets/sprite_assets/container/loom/pattern_selected.png",
+                "texture": "assets/sprite_assets/container/loom/pattern_selected",
                 "bindings": [
                   {
                     "binding_type": "collection",
@@ -290,8 +358,8 @@
           "keep_ratio": true,
           "layer": 10,
           "texture": "#texture",
-          "size": [ 5, 10 ],
-          "offset": [ 1, 0 ],
+          "size": [5, 10],
+          "offset": [1, 0],
           "bindings": [
             {
               "binding_name": "#banner_patterns",
@@ -312,9 +380,9 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "keep_ratio": true,
-          "offset": [ 1, 0 ],
-          "texture": "textures/ui/ashur/banner_patterns/banner_bg.png",
-          "size": [ 5, 10 ],
+          "offset": [1, 0],
+          "texture": "textures/ui/ashur/banner_patterns/banner_bg",
+          "size": [5, 10],
           "layer": 6
         }
       },
@@ -322,7 +390,7 @@
         "pattern_slot_button": {
           "type": "button",
           "$focus_id|default": "",
-          "offset": [ 0, -1 ],
+          "offset": [0, -1],
           "$focus_override_down|default": "",
           "$focus_override_up|default": "",
           "$focus_override_left|default": "",
@@ -434,20 +502,20 @@
               "to_button_id": "button.pattern_select",
               "mapping_type": "pressed"
             },
-            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
           ],
           "hover_control": "hover",
           "controls": [
             {
               "hover@global.empty_panel": {
-                "size": [ 14, 14 ],
+                "size": [14, 14],
                 "controls": [
                   {
                     "hover@screen_content.image_element": {
-                      "size": [ 14, 14 ],
-                      "offset": [ 1, 1 ],
+                      "size": [14, 14],
+                      "offset": [1, 1],
                       "nineslice_size": 1,
-                      "texture": "assets/sprite_assets/container/loom/pattern_highlighted.png",
+                      "texture": "assets/sprite_assets/container/loom/pattern_highlighted",
                       "bindings": [
                         {
                           "binding_type": "collection",
