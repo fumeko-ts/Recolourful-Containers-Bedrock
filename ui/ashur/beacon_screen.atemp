@@ -285,25 +285,10 @@
   },
 
   // note below is severly unoptimised i am currently doing it tho
-  "advanced_buttons_template@global.empty_panel": {
+
+  "advanced_buttons_template@common.toggle": {
     "size": [22, 22],
     "layer": 4,
-    "bindings": [
-      {
-        "binding_type": "collection",
-        "binding_name": "#active",
-        "binding_collection_name": "$button_name",
-        "binding_name_override": "#enabled"
-      }
-    ],
-    "controls": [
-      { "1@beacon_screen.toggle_button": {} }
-    ]
-  },
-
-  "toggle_button@common.toggle": {
-    "size": [22, 22],
-    "layer": 1,
     "focus_wrap_enabled": false,
     "$toggle_name": "$button_name",
     "checked_control": "checked",
@@ -316,13 +301,19 @@
     "unchecked_locked_hover_control": "locked_hover",
     "$hover_control|default": [{ "hover_text@beacon_screen.hover_text": {} }],
     "bindings": [
+      { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      },
       {
         "binding_name": "#button_visible",
         "binding_name_override": "#visible",
         "binding_collection_name": "$button_name",
         "binding_type": "collection"
       },
-      { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
       {
         "binding_type": "collection",
         "binding_name": "#selected",
