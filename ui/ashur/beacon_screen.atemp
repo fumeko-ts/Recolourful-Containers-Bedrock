@@ -334,6 +334,7 @@
                       "layer": 32,
                       "anchor_from": "right_middle",
                       "anchor_to": "left_middle",
+                      "clip_pixelperfect": true,
 
                       "controls": [
                         {

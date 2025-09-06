@@ -110,8 +110,8 @@
                 "$unchecked_hover_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_hover')",
                 "$checked_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
                 "$checked_hover_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
-                "$locked_default_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
-                "$locked_hover_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
+                "$locked_default_sprite|default": "textures/ui/white",
+                "$locked_hover_sprite|default": "textures/ui/white",
                 "controls": [
                   {
                     "unchecked@primary_button.image_base": {
