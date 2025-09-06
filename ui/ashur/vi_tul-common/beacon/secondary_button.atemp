@@ -33,7 +33,7 @@
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
-          "$disabled_placeholder|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
+          "$disabled_placeholder|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_locked')",
           "button_mappings": [
             {
               "to_button_id": "button.container_slot_hovered",
@@ -131,11 +131,9 @@
                   { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
                 ],
                 "$unchecked_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_unchecked')",
-                "$unchecked_hover_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_hover')",
+                "$unchecked_hover_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_unchecked_hover')",
                 "$checked_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
                 "$checked_hover_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
-                "$locked_default_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
-                "$locked_hover_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
                 "controls": [
                   {
                     "unchecked@secondary_button.image_base": {
@@ -158,17 +156,6 @@
                       "controls": [{ "hover_text@secondary_button.hover_text": {} }],
                       "$texture": "$checked_hover_sprite"
                     }
-                  },
-                  {
-                    "locked_default@secondary_button.image_base": {
-                      "$texture": "$locked_default_sprite"
-                    }
-                  },
-                  {
-                    "locked_hover@secondary_button.image_base": {
-                      "controls": [{ "hover_text@secondary_button.hover_text": {} }],
-                      "$texture": "$locked_hover_sprite"
-                    }
                   }
                 ]
               }
@@ -188,6 +175,7 @@
     ]
   },
   "hover_text@common.hover_text": {
+    "layer": 999,
     "bindings": [
       {
         "binding_name": "#button_hover",
