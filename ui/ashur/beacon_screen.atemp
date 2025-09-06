@@ -413,10 +413,10 @@
     ],
     "$unchecked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
     "$checked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
-    "$locked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
+    "$locked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
     "$unchecked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
     "$checked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
-    "$locked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
+    "$locked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
 
     "controls": [
       { "unchecked@beacon_screen.advanced_icons": { "$button_texture": "$unchecked_advanced" } },
