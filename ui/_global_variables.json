@@ -190,6 +190,25 @@
   "$small_chest_screen": false,
   "$ender_chest_screen": false,
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   // Internal use – changing content below will break some UI
   "$jc:dev": true,
   "$enchant_selectable_button_mappings": [

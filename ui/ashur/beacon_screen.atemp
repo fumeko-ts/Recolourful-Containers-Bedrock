@@ -223,27 +223,38 @@
             {
               "netherite@beacon_screen.item_renderer": {
                 "offset": [20, 109],
-                "property_bag": { "#item_id_aux": 48627712 },
+                "$text_translatable": "item.netherite_ingot.name",
+                "$item_property": { "#item_id_aux": 48627712 },
                 "bindings": [{ "binding_name": "#supports_netherite", "binding_name_override": "#visible" }]
               }
             },
             {
               "emerald@beacon_screen.item_renderer": {
                 "offset": [41, 109],
-                "property_bag": { "#item_id_aux": 25427968 }
+                "$text_translatable": "item.emerald.name",
+                "$item_property": { "#item_id_aux": 25427968 }
               }
             },
             {
               "diamond@beacon_screen.item_renderer": {
                 "offset": [63, 109],
-                "property_bag": { "#item_id_aux": 17301504 }
+                "$text_translatable": "item.diamond.name",
+                "$item_property": { "#item_id_aux": 17301504 }
               }
             },
             {
-              "gold@beacon_screen.item_renderer": { "offset": [86, 109], "property_bag": { "#item_id_aux": 17432576 } }
+              "gold@beacon_screen.item_renderer": {
+                "offset": [86, 109],
+                "$text_translatable": "item.gold_ingot.name",
+                "$item_property": { "#item_id_aux": 17432576 }
+              }
             },
             {
-              "iron@beacon_screen.item_renderer": { "offset": [108, 109], "property_bag": { "#item_id_aux": 17367040 } }
+              "iron@beacon_screen.item_renderer": {
+                "offset": [108, 109],
+                "$text_translatable": "item.iron_ingot.name",
+                "$item_property": { "#item_id_aux": 17367040 }
+              }
             }
           ]
         }
@@ -276,12 +287,82 @@
       }
     ]
   },
-  "item_renderer": {
-    "type": "custom",
-    "renderer": "inventory_item_renderer",
+  "item_renderer@global.empty_panel": {
     "size": [16, 16],
     "anchor_to": "top_left",
-    "anchor_from": "top_left"
+    "anchor_from": "top_left",
+    "$item_property|default": {},
+    "$text_translatable|default": "",
+    "controls": [
+      {
+        "hover_button": {
+          "type": "button",
+          "layer": 4,
+          "size": [16, 16],
+          "default_focus_precedence": 1,
+          "hover_control": "hover_text",
+          "consume_event": false,
+          "button_mappings": [
+            {
+              "to_button_id": "button.container_slot_hovered",
+              "mapping_type": "pressed",
+              "consume_event": false
+            }
+          ],
+          "controls": [
+            {
+              "hover_text": {
+                "type": "button",
+                "layer": 32,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "locked_control": "locked",
+
+                "follows_cursor": "(not $touch)",
+                "always_handle_pointer": "(not $touch)",
+                "focus_enabled": false,
+                "consume_event": false,
+                "consume_hover_events": false,
+
+                "controls": [
+                  {
+                    "1": {
+                      "type": "image",
+                      "texture": "textures/ui/purpleBorder",
+                      "size": ["100%c + 8px", "100%c + 8px"],
+                      "layer": 32,
+                      "anchor_from": "right_middle",
+                      "anchor_to": "left_middle",
+
+                      "controls": [
+                        {
+                          "text": {
+                            "type": "label",
+                            "text": "$text_translatable",
+                            "localize": true,
+                            "layer": 1,
+                            "color": "$item_hover_text_color"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_renderer": {
+          "type": "custom",
+          "renderer": "inventory_item_renderer",
+          "size": [16, 16],
+          "property_bag": "$item_property"
+        }
+      }
+    ]
   },
 
   // note below is severly unoptimised i am currently doing it tho

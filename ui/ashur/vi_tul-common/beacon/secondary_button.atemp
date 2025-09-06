@@ -24,7 +24,8 @@
 
   "secondary_button_template@global.empty_panel": {
     "size": [22, 22],
-    "controls": [      {
+    "controls": [
+      {
         "hover_button": {
           "type": "button",
           "layer": 4,

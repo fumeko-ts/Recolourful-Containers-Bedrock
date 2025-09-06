@@ -44,7 +44,6 @@
                   { "filler_1@global.empty_panel": { "size": ["fill", 36] } },
                   {
                     "input_1@global.container_item": {
-                      "$background_images": "tradeing_screen.trade_arrow_deny",
                       "$item_collection": "trade2_result_item",
                       "$button_ref": "button_mappings.trade_result_item_slot_button"
                     }
@@ -250,24 +249,6 @@
         }
       },
       { "buffer@global.empty_panel": { "size": ["fill", 0.4] } }
-    ]
-  },
-  "trade_arrow_deny@global.empty_image": {
-    "offset": [-37, -0.2],
-    "size": [28, 21],
-    "keep_ratio": true,
-    "texture": "assets/sprite_assets/container/villager/out_of_stock.png",
-    "layer": 4,
-    "anchor_to": "left_middle",
-    "anchor_from": "left_middle",
-    "bindings": [
-      {
-        "binding_name": "(not #item_valid)",
-        "binding_name_override": "#visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection",
-        "binding_condition": "always"
-      }
     ]
   }
 }
