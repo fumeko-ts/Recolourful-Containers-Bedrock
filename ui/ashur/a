@@ -177,7 +177,24 @@
       {"0@$template": {"$hover_text": "0","$min_ratio": 0.99,"$max_ratio": 1.00}}
     ]
   },
-
+  "ratio@global.empty_panel": {
+    "size": ["default", "default"],
+    "layer": 200,
+    "bindings": [
+      
+      {
+        "binding_name"         : "#furnace_flame_ratio",
+        "binding_type"     : "global",
+        "binding_condition"    : "always"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#furnace_flame_ratio < $max_ratio) and (#furnace_flame_ratio > $min_ratio)) or (#furnace_flame_ratio = $max_ratio))",
+        "target_property_name": "#visible",
+        "binding_condition"    : "always"
+      }
+    ]
+  },
   "template": {
     "type": "button",
     "size": [ 0, 0 ],
