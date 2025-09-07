@@ -1,49 +1,72 @@
-// © 2025 ashura_tepes – All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use) you may only edit this file because it contains variables that are intended to be modified.
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using it, you agree to these terms.
-
 {
-/*
-  Valid leaf texture options (must be lowercase):
+  "$is_recolorful_containers": true,
 
-  - oak_leaves
-  - spruce_leaves
-  - acacia_leaves
-  - azalea_leaves
-  - birch_leaves
-  - cherry_leaves
-  - dark_oak_leaves
-  - flowering_azalea_leaves
-  - jungle_leaves
-  - mangrove_leaves
-  -- or eany other block really
+  // note dont modify i have not configured the eyes yet
+  "$villager_biome": "plains",
+  //_valid options for this are.
+  //` plains
+  //` savanna
+  //` snow
+  //` swamp
+  //` taiga
+  //` desert
+  //` jungle
 
-  example - "$nature_tab_texture": "mangrove_leaves"
-*/
+  "$villager_label_offset": [3, 6],
+  "$trades_label_offset": [0, 5],
 
-"$is_recolorful_containers": true,
+  "$nature_tab_texture": "pearlescent_froglight",
+  // Show or hide the exit button on container screens (true/false)
+  "$Exit_panel_enabled": true,
+  // Set container UI transparency (range: 0.0 - 1.0)
+  "$container_opacity": 1,
+  "$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
+
+  // edit buttons offsets sizes and textures
+  // note it will always be layd out like-
+  //size
+  //offset
+  //layer
+  //textures
+  //nineslice
 
 
-"$nature_tab_texture": "pearlescent_froglight",
+  // once these are configured i will make them only appear for mobile users or people useing pocket ui layout
+  
+  // creative inventory tab
+  "$creative_inventory_exit_size": [14, 14],
+  "$creative_inventory_exit_offset": [-2, 1],
+  "$creative_inventory_exit_layer": 30,
+  "$creative_inventory_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  //can be like [1, 1, 1, 1] or like a normal int no array for example "$creative_inventory_exit_texture_nineslice": 1, that would basicly set it to [1, 1, 1, 1]
+  "$creative_inventory_exit_texture_nineslice": "",
 
-// Show or hide the exit button on container screens (true/false)
-"$Exit_panel_enabled": true,
+  // creative misc tabs
+  "$creative_misc_exit_size": [14, 14],
+  "$creative_misc_exit_offset": [-2, 1],
+  "$creative_misc_exit_layer": 30,
+  "$creative_misc_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  "$creative_misc_exit_texture_nineslice": "",
 
-// Set container UI transparency (range: 0.0 - 1.0)
-"$container_opacity": 1,
+  // creative search tab
+  "$creative_search_exit_size": [14, 14],
+  "$creative_search_exit_offset": [-2, 1],
+  "$creative_search_exit_layer": 30,
+  "$creative_search_exit_textures": [
+    { "default@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }, // only pngs can be used
+    { "hover@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" } },
+    { "pressed@$close_control": { "$close_button_texture": "textures/ui/ashur/close_button.png" } }
+  ],
+  "$creative_search_exit_texture_nineslice": "",
 
-//////// Text colors ////////
-"$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
 
 
 "$light_button_default_text_color": [ 1, 1, 1 ],
@@ -100,6 +123,8 @@
 
 // --- Read-only below this line ---
 
+  "$chest_texture": "('assets/' + $ui_is)",
+  "$close_control": "global.close_button_panel"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ,
 
 //}
 

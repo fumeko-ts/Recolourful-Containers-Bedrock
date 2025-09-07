@@ -119,6 +119,17 @@
                       ]
                     }
                   }
+                ],
+                "bindings": [
+                  { "binding_type": "collection_details" },
+                  { "binding_name": "#double_slash_visible" },
+                  { "binding_name": "#single_slash_visible" },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(#double_slash_visible or #single_slash_visible)",
+                    "target_property_name": "#visible"
+                  }
                 ]
               }
             }
