@@ -1,9 +1,9 @@
 {
-  "namespace": "chest_raft",
-  "chest_raft@container_common.container_details": {
+  "namespace": "barrel",
+  "barrel@container_common.container_details": {
     "size": [192, 174],
     "$screen_controls": [
-      { "ui_is@chest_detector.chest_ui_template": { "$ui_is": "chest_raft" } },
+      { "ui_is@chest_detector.chest_template": { "$ui_is": "barrel" } },
       {
         "main_holder@global.empty_stack": {
           "orientation": "vertical",
@@ -21,7 +21,7 @@
                       "size": [176, 166],
                       "controls": [
                         {
-                          "chest_raft_top_half@global.empty_stack": {
+                          "barrel_top_half@global.empty_stack": {
                             "orientation": "vertical",
                             "size": [176, 77],
                             "anchor_from": "top_middle",
@@ -45,7 +45,7 @@
                                   "controls": [
                                     { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                                     {
-                                      "chest_raft_grid": {
+                                      "barrel_grid": {
                                         "type": "grid",
                                         "size": [162, 54],
                                         "grid_dimensions": [9, 3],

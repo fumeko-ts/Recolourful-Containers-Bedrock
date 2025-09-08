@@ -1,9 +1,41 @@
-      {
-        "a@common.item_renderer": {
-          "size": [16, 16],
-          "bindings": [{ "binding_type": "collection_details" }, { "binding_name": "#item_id_aux" }]
-        }
-      },
+"text_control": {
+  "type": "label",
+  "layer": 900,
+  "text": "#item_name",
+  "property_bag": {
+    "#property_field": "#item_name",
+    "#local_variable": "$container_title"
+  },
+  "bindings": [
+    { "binding_name": "#local_variable" },
+    {
+      "binding_type": "view",
+      "binding_condition": "always",
+      "source_property_name": "#local_variable",
+      "target_property_name": "#item_name"
+    }
+  ]
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       {
         "text_edit_box": {
           "type": "edit_box",

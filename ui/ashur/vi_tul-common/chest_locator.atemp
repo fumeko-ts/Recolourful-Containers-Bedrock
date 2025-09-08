@@ -5,22 +5,53 @@
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
+    "$chest_texture|default": "",
     "controls": [
-      { "small_chest@chest_detector.chest_bindings": { "$screen": "small_chest.small_chest", "$screen_id": "ui:container.chest0" } },
-      { "barrel@chest_detector.chest_bindings": { "$screen": "barrel.barrel", "$screen_id": "ui:container.barrel0" } },
-      { "ender_chest@chest_detector.chest_bindings": { "$screen": "ender_chest.ender_chest", "$screen_id": "ui:container.enderchest0" } },
-      { "chest_minecart@chest_detector.chest_bindings": { "$screen": "chest_minecart.chest_minecart", "$screen_id": "ui:entity.chest_minecart.name0" } },
-      { "chest_boat@chest_detector.chest_bindings": { "$screen": "chest_boat.chest_boat", "$screen_id": "ui:entity.chest_boat.name0" } },
-      { "chest_raft@chest_detector.chest_bindings": { "$screen": "chest_raft.chest_raft", "$screen_id": "ui:entity.chest_raft.name0" } }
+      {
+        "1@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/small_chest",
+          "$screen_id": "ui:container.chest0"
+        }
+      },
+      {
+        "2@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_minecart",
+          "$screen_id": "ui:entity.chest_minecart.name0"
+        }
+      },
+      {
+        "3@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_boat",
+          "$screen_id": "ui:entity.chest_boat.name0"
+        }
+      },
+      {
+        "4@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_raft",
+          "$screen_id": "ui:entity.chest_raft.name0"
+        }
+      },
+      {
+        "custom_rename@screen_content.image_element": {
+          "size": [192, 174],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "texture": "assets/small_chest"
+        }
+      }
     ]
   },
-  "chest_bindings@container_common.container_details": {
+  "chest_bindings@global.empty_panel": {
     "size": [192, 174],
-    "$screen_controls": [
+    "controls": [
       {
-        "screen@$screen": {
+        "chest_ui_template@screen_content.image_element": {
+          "size": [192, 174],
+          "anchor_from": "center",
           "anchor_to": "center",
-          "anchor_from": "center"
+          "layer": 2,
+          "texture": "$chest_texture"
         }
       }
     ],
@@ -40,7 +71,7 @@
       }
     ]
   },
-  "chest_ui_template@screen_content.image_element":{
+  "chest_template@screen_content.image_element": {
     "size": [192, 174],
     "anchor_from": "center",
     "anchor_to": "center",
