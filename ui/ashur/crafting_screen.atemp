@@ -53,6 +53,18 @@
     "type": "panel",
     "size": [ 147, 166 ],
     "controls": [
+      {
+        "search_index@global.empty_label":{
+          "text": "$text",
+          "$text": "('$search_index=' + $search_index + '§z')",
+          "layer": 200,
+          "color": "red",
+          "ignored": true,
+          "size": ["default",10],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
       {"tab_stack@crafting_common.crafting_survival_tabs": {}},
       {
         "root_panel@global.root_panel": {

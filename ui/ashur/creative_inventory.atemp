@@ -137,43 +137,59 @@
       }
     ]
   },
-  "icon_control@screen_content.image_element": {
-    "texture": "$icon_for_tab",
-    "size": "$tab_icon_size",
-    "$icon_for_tab": "",
-    "keep_ratio": true,
-    "$tab_icon_size": [17, 17],
-    "offset": [0, 1],
-    "variables": [
+  "item_renderer@global.custom_renderer": {
+    "$type": "inventory_item_renderer",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 7,
+    "property_bag": {"#item_id_aux": "($item_identifier * 65536)"}
+  },
+  "icon_control@global.empty_panel": {
+    "size": [16, 16],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      // if you want to customise these items you can use this to get the item ids https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/ 
+      // it dosent work with most other packs so use it sepratly
+      // once you have the raw id divide it by 65536 and the output will be your final id
+      // we use the id derived like that because its more stable to version updates
+      // just keep in mind that if someone uses this texture pack with a addon that has custom items of eany kind the item ids will invalidate/randomise
       {
-        "requires": "($tab_view_binding_name = search_tab_toggle)",
-        "$tab_icon_size": [16, 16],
-        "$icon_for_tab": "textures/ui/ashur/item/compass_28.png"
+        "inventory@creative_inventory.item_renderer":{
+          "$item_identifier": 54,
+          "visible": "($tab_view_binding_name = 'inventory_tab_toggle')"
+        }
+      }, 
+      {
+        "search@creative_inventory.item_renderer":{
+          "$item_identifier": 417,
+          "visible": "($tab_view_binding_name = 'search_tab_toggle')"
+        }
       },
       {
-        "requires": "($tab_view_binding_name = equipment_tab_toggle)",
-        "$tab_icon_size": [16, 16],
-        "$icon_for_tab": "textures/ui/ashur/item/iron_sword.png"
+        "items@creative_inventory.item_renderer":{
+          "$item_identifier": 398,
+          "visible": "($tab_view_binding_name = 'items_tab_toggle')"
+        }
       },
       {
-        "requires": "($tab_view_binding_name = nature_tab_toggle)",
-        "$tab_icon_size": [18, 18],
-        "$icon_for_tab": "('textures/ui/ashur/block/' + $nature_tab_texture)"
+        "equipment@creative_inventory.item_renderer":{
+          "$item_identifier": 331,
+          "visible": "($tab_view_binding_name = 'equipment_tab_toggle')"
+        }
       },
       {
-        "requires": "($tab_view_binding_name = items_tab_toggle)",
-        "$tab_icon_size": [16, 16],
-        "$icon_for_tab": "textures/ui/ashur/item/redstone"
+        "nature@creative_inventory.item_renderer":{
+          "$item_identifier": -469,
+          "visible": "($tab_view_binding_name = 'nature_tab_toggle')"
+        }
       },
       {
-        "requires": "($tab_view_binding_name = construction_tab_toggle)",
-        "$tab_icon_size": [18, 18],
-        "$icon_for_tab": "textures/ui/ashur/icon_recipe_construction"
-      },
-      {
-        "requires": "($tab_view_binding_name = inventory_tab_toggle)",
-        "$tab_icon_size": [18, 18],
-        "$icon_for_tab": "textures/ui/ashur/block/chest"
+        "construction@creative_inventory.item_renderer":{
+          "$item_identifier": 45,
+          "visible": "($tab_view_binding_name = 'construction_tab_toggle')"
+        }
       }
     ]
   },
@@ -228,7 +244,7 @@
     "$toggle_default_state": true,
     "$checked_offset|default": [0, 2],
     "$tab_view_binding_name": "inventory_tab_toggle",
-    "$toggle_group_forced_index": "($search_index + 1)"
+    "$toggle_group_forced_index": 6 // set to 6 because search index is 5
   },
   "tab_base_template@global.empty_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
   "inventory_page@creative_inventory.tab_base_template": {
