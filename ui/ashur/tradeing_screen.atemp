@@ -218,7 +218,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "allow_clipping": false,
-    "offset": [1, 1],
+    "offset": [0, 2],
     "layer": 5,
     "texture": "assets/sprite_assets/container/villager/scroller",
     "size": [6, "100%"]
@@ -229,7 +229,7 @@
     "size": [88, "100%c"],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [0, -1],
+    "offset": [0, 0],
     "controls": [
       {
         "trade_buttons@common.root_panel": {
