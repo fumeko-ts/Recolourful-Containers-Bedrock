@@ -8,7 +8,7 @@
     "$profession_sprite|default": "",
     "$anim_sprite|default": "",
     "controls": [
-      { "close@global.close_button": { "offset": [-8, 6] } },
+      { "close@global.close_button": { "offset": [0, 6] } },
       {
         "1@villager_profession_detector.gui_bindings": {
           "$profession_sprite": "armorer",
@@ -175,15 +175,15 @@
             },
             {
               "label_container@global.empty_panel": {
-                "size": [171, 166],
+                "size": [170, 166],
                 "anchor_to": "right_middle",
                 "anchor_from": "right_middle",
                 "controls": [
                   {
                     "label_holder@global.empty_stack": {
-                      "max_size": [171, 10], // note depending on the lang used the text may get to long
+                      "max_size": [170, 10], // note depending on the lang used the text may get to long
                       "min_size": [0, 10],
-                      "offset": [0, 6],
+                      "offset": [0, 5],
                       "orientation": "horizontal",
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
@@ -300,9 +300,9 @@
             },
             {
               "label_holder@global.empty_panel": {
-                "size": [171, 166],
+                "size": [170, 166],
                 "anchor_to": "right_middle",
-                "offset": [0, 6],
+                "offset": [0, 5],
                 "anchor_from": "right_middle",
                 "controls": [
                   {
