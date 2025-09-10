@@ -96,7 +96,7 @@
   "blast_furnace_image_controls@global.empty_image": {
     "layer": 3,
     "texture": "$blast_furnace_sprite_src",
-    "$blast_furnace_sprite_src": "('assets/gui/sprites/container/blast_furnace/' + $blast_furnace_sprite)",
+    "$blast_furnace_sprite_src": "('assets/sprite_assets/container/blast_furnace/' + $blast_furnace_sprite)",
     "clip_direction": "$houkou",
     "keep_ratio": true,
     "clip_pixelperfect": true,

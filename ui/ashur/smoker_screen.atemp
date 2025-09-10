@@ -132,7 +132,7 @@
   "smoker_image_controls@global.empty_image": {
     "layer": 3,
     "texture": "$smoker_sprite_src",
-    "$smoker_sprite_src": "('assets/gui/sprites/container/smoker/' + $smoker_sprite)",
+    "$smoker_sprite_src": "('assets/sprite_assets/container/smoker/' + $smoker_sprite)",// we severly overcomplicate this because why not
     "clip_direction": "$houkou",
     "keep_ratio": true,
     "clip_pixelperfect": true,
