@@ -82,7 +82,7 @@
     ]
   },
   "scroll_panel@scroll_panel.scroll_panel": {
-    "$scroll_track_offset": [81, -0.4],
+    "$scroll_track_offset": [81.2, -0.4],
     "offset": [0.4, 5.4],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -393,6 +393,7 @@
                             "$text_edit_box_label_offset": [1, 0.4],
                             "$text_clear_button_enabled": false,
                             "$place_holder_text": "",
+                            "$text_edit_clipping_panel_size": ["100%", 16],
                             "$text_background_locked": "global.empty_image",
                             "$text_background_default": "global.empty_image",
                             "$text_background_hover": "global.empty_image",
