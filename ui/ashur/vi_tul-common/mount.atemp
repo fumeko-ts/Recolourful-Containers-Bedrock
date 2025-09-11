@@ -1,14 +1,23 @@
 {
   "namespace": "mount",
   "mount@global.empty_panel": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
+    "$mount_1|default": "ui:entity.llama.name0",
+    "$mount_2|default": "ui:entity.donkey.name0",
+    "$mount_3|default": "ui:entity.mule.name0",
+    "$mount_4|default": "ui:entity.horse.name0",
+    "$mount_5|default": "ui:entity.camel.name0",
+    "$mount_6|default": "ui:entity.trader_llama.name0",
     "controls": [
-      {"close@global.close_button": {"$close_button_offset": [ 2.2, 5 ]}},
+      { "close@global.close_button": { "$close_button_offset": [2.2, 5] } },
       {
-        "illama@mount.mount_screen_bindings": {"$screen": "illama_screen.illama_screen", "$screen_id": "ui:entity.llama.name0"}
+        "illama@mount.mount_screen_bindings": {
+          "$screen": "illama_screen.illama_screen",
+          "$screen_id": "ui:entity.llama.name0"
+        }
       },
       {
         "trader_illama@mount.mount_screen_bindings": {
@@ -17,24 +26,77 @@
         }
       },
       {
-        "donkey@mount.mount_screen_bindings": {"$screen": "donkey_screen.donkey_screen", "$screen_id": "ui:entity.donkey.name0"}
+        "donkey@mount.mount_screen_bindings": {
+          "$screen": "donkey_screen.donkey_screen",
+          "$screen_id": "ui:entity.donkey.name0"
+        }
       },
       {
-        "mule@mount.mount_screen_bindings": {"$screen": "mule_screen.mule_screen", "$screen_id": "ui:entity.mule.name0"}
+        "mule@mount.mount_screen_bindings": {
+          "$screen": "mule_screen.mule_screen",
+          "$screen_id": "ui:entity.mule.name0"
+        }
       },
       {
-        "horse@mount.mount_screen_bindings": {"$screen": "horse_screen.horse_screen", "$screen_id": "ui:entity.horse.name0"}
+        "horse@mount.mount_screen_bindings": {
+          "$screen": "horse_screen.horse_screen",
+          "$screen_id": "ui:entity.horse.name0"
+        }
       },
       {
-        "camel@mount.mount_screen_bindings": {"$screen": "camel_screen.camel_screen", "$screen_id": "ui:entity.camel.name0"}
+        "camel@mount.mount_screen_bindings": {
+          "$screen": "camel_screen.camel_screen",
+          "$screen_id": "ui:entity.camel.name0"
+        }
+      },
+      {
+        "root_panel@container_common.container_details": {
+          "layer": 1,
+          "size": [176, 166],
+          "$screen_controls": [
+            { "horse_section_label@horse.horse_label": {} },
+            { "inv_panel@horse.inv_panel": {} },
+
+            {
+              "equipment@horse.equip_panel": {
+                "offset": [7, 18]
+              }
+            },
+            {
+              "renderer@horse.horse_renderer": {
+                "offset": [25, 18]
+              }
+            },
+
+            { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid_template@common.hotbar_grid_template": {} }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "horse_equip_items"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux))",
+              "target_property_name": "#screen_binding"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(not ((#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
   "mount_screen_bindings@container_common.container_details": {
-    "size": [ 176, 166 ],
-    "$screen_controls": [
-      {"screen@$screen": {}}
-    ],
+    "size": [176, 166],
+    "$screen_controls": [{ "screen@$screen": {} }],
     "anchor_to": "center",
     "anchor_from": "center",
     "bindings": [

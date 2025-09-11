@@ -8,6 +8,17 @@
     "$profession_sprite|default": "",
     "$anim_sprite|default": "",
     "controls": [
+      {
+        "ui@screen_content.image_element": {
+          "size": [276, 166],
+          "layer": 1,
+          "uv_size": [276, 166],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "allow_debug_missing_texture": false,
+          "texture": "assets/sprites/villager.png"
+        }
+      },
       { "close@global.close_button": { "offset": [0, 6] } },
       {
         "1@villager_profession_detector.gui_bindings": {
