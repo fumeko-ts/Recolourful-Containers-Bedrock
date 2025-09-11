@@ -20,10 +20,40 @@
         }
       },
       {
+        "eye_holder@global.empty_panel": {
+          "size": [160, 54],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "controls": [
+            {
+              "eye_base@global.empty_panel": {
+                "size": [12, 5],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "controls": [
+                  {
+                    "eye_animation@screen_content.image_element": {
+                      "layer": 3,
+                      "uv": "@villager_profession_detector.anim_0",
+                      "uv_size": [12, 5],
+                      "anchor_from": "center",
+                      "animation_reset_name": "screen_animation_reset",
+                      "anchor_to": "center",
+                      "size": [12, 5],
+                      "texture": "assets/advanced_sprites/animated/villager/default/default.png"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
         "label_string_subtraction_bypass@villager_profession_detector.label_bypass": {}
       },
-      {"close@global.close_button": { "offset": [0, 6] } },
-      
+      { "close@global.close_button": { "offset": [0, 6] } },
+
       {"1@villager_profession_detector.gui_bindings": {"$profession_sprite": "armorer","$entity_index": "ui:a","$profession": "armor","$anim_sprite": "assets/advanced_sprites/animated/villager/default/armorer"}},
       {"2@villager_profession_detector.gui_bindings": {"$profession_sprite": "butcher","$entity_index": "ui:b","$profession": "butcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
       {"3@villager_profession_detector.gui_bindings": {"$profession_sprite": "cartographer","$entity_index": "ui:c","$profession": "cartographer","$anim_sprite": "assets/advanced_sprites/animated/villager/default/cartographer"}},
@@ -36,7 +66,7 @@
       {"10@villager_profession_detector.gui_bindings": {"$profession_sprite": "shepherd","$entity_index": "ui:j","$profession": "shepherd","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
       {"11@villager_profession_detector.gui_bindings": {"$profession_sprite": "toolsmith","$entity_index": "ui:k","$profession": "tool","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
       {"12@villager_profession_detector.gui_bindings": {"$profession_sprite": "weaponsmith","$uv_anim": "@villager_profession_detector.weaponsmith_anim_0","$entity_index": "ui:l","$profession": "weapon","$anim_sprite": "assets/advanced_sprites/animated/villager/default/weaponsmith"}},
-      {"13@villager_profession_detector.gui_bindings": {"$profession_sprite": "mason","$entity_index": "ui:m","$profession": "mason","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}}
+      {"13@villager_profession_detector.gui_bindings": {"$profession_sprite": "mason","$entity_index": "ui:m","$profession": "mason","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"} }
     ]
   },
   "gui_bindings@global.empty_panel": {
@@ -130,36 +160,11 @@
                           "second_label@global.empty_panel": {
                             "size": ["100%c", 10],
                             "controls": [
-                              {
-                                "1@villager_profession_detector.secondary_label": {
-                                  "$secondary_label_text": "atemp.trade.level.1",
-                                  "$visiblilty_binding_value": "index_1"
-                                }
-                              },
-                              {
-                                "2@villager_profession_detector.secondary_label": {
-                                  "$secondary_label_text": "atemp.trade.level.2",
-                                  "$visiblilty_binding_value": "index_2"
-                                }
-                              },
-                              {
-                                "3@villager_profession_detector.secondary_label": {
-                                  "$secondary_label_text": "atemp.trade.level.3",
-                                  "$visiblilty_binding_value": "index_3"
-                                }
-                              },
-                              {
-                                "4@villager_profession_detector.secondary_label": {
-                                  "$secondary_label_text": "atemp.trade.level.4",
-                                  "$visiblilty_binding_value": "index_4"
-                                }
-                              },
-                              {
-                                "5@villager_profession_detector.secondary_label": {
-                                  "$secondary_label_text": "atemp.trade.level.5",
-                                  "$visiblilty_binding_value": "index_5"
-                                }
-                              }
+                              {"1@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.1","$visiblilty_binding_value": "index_1"}},
+                              {"2@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.2","$visiblilty_binding_value": "index_2"}},
+                              {"3@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.3","$visiblilty_binding_value": "index_3"}},
+                              {"4@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.4","$visiblilty_binding_value": "index_4"}},
+                              {"5@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.5","$visiblilty_binding_value": "index_5"}}
                             ]
                           }
                         }
@@ -292,12 +297,7 @@
                           "binding_name": "#name_label",
                           "binding_condition": "always"
                         },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_property_name": "(#name_label - 'index_1')",
-                          "target_property_name": "#index_1"
-                        },
+                        {"binding_type": "view","binding_condition": "always","source_property_name": "(#name_label - 'index_1')","target_property_name": "#index_1"},
                         {"binding_type": "view","binding_condition": "always","source_property_name": "(#index_1 - 'index_2')","target_property_name": "#index_2"},
                         {"binding_type": "view","binding_condition": "always","source_property_name": "(#index_2 - 'index_3')","target_property_name": "#index_3"},
                         {"binding_type": "view","binding_condition": "always","source_property_name": "(#index_3 - 'index_4')","target_property_name": "#index_4"},

@@ -13,6 +13,7 @@
     "$mount_6|default": "ui:entity.trader_llama.name0",
     "controls": [
       { "close@global.close_button": { "$close_button_offset": [2.2, 5] } },
+
       {
         "illama@mount.mount_screen_bindings": {
           "$screen": "illama_screen.illama_screen",
@@ -50,11 +51,10 @@
         }
       },
       {
-        "root_panel@container_common.container_details": {
+        "custom_rename@container_common.container_details": {
           "layer": 1,
           "size": [176, 166],
           "$screen_controls": [
-            { "horse_section_label@horse.horse_label": {} },
             { "inv_panel@horse.inv_panel": {} },
 
             {
@@ -67,8 +67,13 @@
                 "offset": [25, 18]
               }
             },
+            {
+              "bottom@crafting_screen.inventory_bottom_half_with_label": {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle"
+              }
+            },
 
-            { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
             { "hotbar_grid_template@common.hotbar_grid_template": {} }
           ],
           "bindings": [
