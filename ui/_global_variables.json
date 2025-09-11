@@ -15,7 +15,6 @@
   "$villager_label_offset": [3, 6],
   "$trades_label_offset": [0, 5],
 
-  "$nature_tab_texture": "pearlescent_froglight",
   // Show or hide the exit button on container screens (true/false)
   "$Exit_panel_enabled": true,
   // Set container UI transparency (range: 0.0 - 1.0)
@@ -212,7 +211,6 @@
     {
       "holder@global.empty_stack": {
         "orientation": "vertical",
-        "ignored": "($is_in_recipe_inventory = false)",
         "anchor_to": "top_middle",
         "anchor_from": "top_middle",
         "size": [111, 30],

@@ -1,9 +1,19 @@
 {
   //basicly just entrypoints
-  "large_chest_screen@global.container_screen": { "$screen_content": "double_chest_screen.double_chest" },
-  "shulker_box_screen@global.container_screen": { "$screen_content": "shulker_screen.shulker_box" },
-  "ender_chest_screen@global.container_screen": { "$screen_content": "ender_chest.ender_chest" },
-  "barrel_screen@global.container_screen": { "$screen_content": "barrel.barrel" },
+  "large_chest_screen@global.container_screen": {
+    "$screen_content": "double_chest_screen.double_chest"
+  },
+  "shulker_box_screen@global.container_screen": {
+    "$screen_content": "shulker_screen.shulker_box"
+  },
+  "ender_chest_screen@global.container_screen": {
+    "$screen_content": "ender_chest.ender_chest"
+  },
+  "barrel_screen@global.container_screen": {
+    "$screen_content": "barrel.barrel"
+  },
 
-  "small_chest_screen@global.container_screen": { "$screen_content": "small_chest.small_chest" }
+  "small_chest_screen@global.container_screen": {
+    "$screen_content": "small_chest.small_chest"
+  }
 }

@@ -1,5 +1,4 @@
 {
-  "namespace": "hud",
   "asprite": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]},
   "empty_progress_bar@screen_content.image_element": {"texture": "textures/ui/experience_bar_empty"},
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar": {

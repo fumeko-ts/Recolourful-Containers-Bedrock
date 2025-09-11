@@ -1,4 +1,5 @@
 {
-  "namespace": "grindstone",
-  "grindstone_screen@global.container_screen": {"$screen_content": "grindstone_screen.grindstone_panel"}
+  "grindstone_screen@global.container_screen": {
+    "$screen_content": "grindstone_screen.grindstone_panel"
+  }
 }

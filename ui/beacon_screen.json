@@ -1,4 +1,5 @@
 {
-  "namespace": "beacon",
-  "beacon_screen@global.container_screen": {"$screen_content": "beacon_screen.beacon_panel"}
+  "beacon_screen@global.container_screen": {
+    "$screen_content": "beacon_screen.beacon_panel"
+  }
 }

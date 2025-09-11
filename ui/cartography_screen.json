@@ -1,4 +1,5 @@
 {
-  "namespace": "cartography",
-  "cartography_screen@global.container_screen": {"$screen_content": "cartography_screen.cartography_panel"}
+  "cartography_screen@global.container_screen": {
+    "$screen_content": "cartography_screen.cartography_panel"
+  }
 }

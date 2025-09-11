@@ -1,4 +1,5 @@
 {
-  "namespace": "horse",
-  "horse_screen@global.container_screen": {"$screen_content": "mount.mount"}
+  "horse_screen@global.container_screen": {
+    "$screen_content": "mount.mount"
+  }
 }

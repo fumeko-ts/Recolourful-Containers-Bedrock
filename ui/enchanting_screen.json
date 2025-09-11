@@ -1,3 +1,5 @@
 {
-  "enchanting_screen@global.container_screen": {"$screen_content": "enchanting_screen.enchanting_panel"}
+  "enchanting_screen@global.container_screen": {
+    "$screen_content": "enchanting_screen.enchanting_panel"
+  }
 }
