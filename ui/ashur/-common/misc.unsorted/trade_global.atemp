@@ -339,6 +339,17 @@
           "offset": [-23, 0],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
+
+          "$unchecked_locked|default": "($source_folder + 'toggle_unchecked_locked')",
+          "$unchecked_locked_highlighted|default": "($source_folder + 'toggle_unchecked_locked_highlighted')",
+          "$checked_locked|default": "($source_folder + 'toggle_checked_locked')",
+          "$checked_locked_highlighted|default": "($source_folder + 'toggle_checked_locked_highlighted')",
+
+          "$alpha|default": 1,
+          "variables": {
+            "requires": "(($image_texture = $unchecked_locked) or ($image_texture = $unchecked_locked_highlighted) or ($image_texture = $checked_locked) or ($image_texture = $checked_locked_highlighted))",
+            "$alpha|default": 0.3
+          },
           "controls": [
             {
               "filler_1@global.empty_panel": { "size": ["fill", 4] }
@@ -348,10 +359,14 @@
                 "size": [10, 9],
                 "controls": [
                   {
-                    "arrow_default@screen_content.trade_arrow": {}
+                    "arrow_default@screen_content.trade_arrow": {
+                      "alpha": "$alpha"
+                    }
                   },
                   {
-                    "arrow_deny@screen_content.trade_cross_out": {}
+                    "arrow_deny@screen_content.trade_cross_out": {
+                      "alpha": "$alpha"
+                    }
                   }
                 ]
               }
@@ -389,15 +404,51 @@
       },
       { "to_button_id": "button.trade_toggle_hovered", "mapping_type": "pressed" }
     ],
-    "$unchecked_control": "screen_content.trade_toggle_unchecked",
-    "$checked_control": "screen_content.trade_toggle_checked",
-    "$unchecked_hover_control": "screen_content.trade_toggle_hover",
-    "$checked_hover_control": "screen_content.trade_toggle_hover",
-    "$unchecked_locked_control": "global.empty_image",
-    "$unchecked_locked_hover_control": "global.empty_image",
-    "$checked_locked_control": "global.empty_image",
-    "$checked_locked_hover_control": "global.empty_image"
+    "$unchecked_control": "trade_global.unchecked_control",
+    "$checked_control": "trade_global.checked_control",
+
+    "$unchecked_hover_control": "trade_global.unchecked_hover_control",
+    "$checked_hover_control": "trade_global.checked_hover_control",
+
+    "$unchecked_locked_control": "trade_global.unchecked_locked_control",
+    "$unchecked_locked_hover_control": "trade_global.unchecked_locked_hover_control",
+
+    "$checked_locked_control": "trade_global.checked_locked_control",
+    "$checked_locked_hover_control": "trade_global.checked_locked_hover_control"
   },
+  "unchecked_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked"
+  },
+  "checked_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_selected"
+  },
+  "unchecked_hover_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unselected_highlight"
+  },
+  "checked_hover_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_selected_highlight"
+  },
+  "unchecked_locked_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked_locked"
+  },
+  "unchecked_locked_hover_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked_locked_highlighted"
+  },
+  "checked_locked_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_checked_locked"
+  },
+  "checked_locked_hover_control@trade_global.button_state_common": {
+    "layer": 4,
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_checked_locked_highlighted"
+  },
+
   "button_state_common@global.empty_image": {
     "texture": "$image_texture",
     "nineslice_size": [2, 2, 2, 2],

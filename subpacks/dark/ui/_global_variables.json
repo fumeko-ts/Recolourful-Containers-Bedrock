@@ -69,6 +69,7 @@
 
 
 
+          "$source_folder": "assets/sprite_assets/container/villager/toggle/",
 "$light_button_default_text_color": [ 1, 1, 1 ],
 
 "$light_toggle_default_text_color": [ 1, 1, 1 ],
