@@ -202,8 +202,8 @@
     "anchor_from": "top_left",
     "size": [100, 144],
     "offset": [4, 18],
-    "$scroll_size": [6, 140],
-    "$scroll_track_offset": [42, -1],
+    "$scroll_size": [6, 139],
+    "$scroll_track_offset": [42, -1.4],//fix??
     "$scroll_view_port_size": [92, 140.6],
     "$scrolling_pane_size": ["100%", "100%"],
     "$collection_name": "trade_tiers",
