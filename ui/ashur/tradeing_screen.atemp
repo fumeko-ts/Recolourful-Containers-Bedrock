@@ -204,7 +204,7 @@
     "offset": [4, 18],
     "$scroll_size": [6, 139],
     "$scroll_track_offset": [42, -1.4],//fix??
-    "$scroll_view_port_size": [92, 140.6],
+    "$scroll_view_port_size": [92, 140.4],
     "$scrolling_pane_size": ["100%", "100%"],
     "$collection_name": "trade_tiers",
     "$scroll_box_image_control": "tradeing_screen.trade_scroller",
