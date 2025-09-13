@@ -339,17 +339,6 @@
           "offset": [-23, 0],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
-
-          "$unchecked_locked|default": "($source_folder + 'toggle_unchecked_locked')",
-          "$unchecked_locked_highlighted|default": "($source_folder + 'toggle_unchecked_locked_highlighted')",
-          "$checked_locked|default": "($source_folder + 'toggle_checked_locked')",
-          "$checked_locked_highlighted|default": "($source_folder + 'toggle_checked_locked_highlighted')",
-
-          "$alpha|default": 1,
-          "variables": {
-            "requires": "(($image_texture = $unchecked_locked) or ($image_texture = $unchecked_locked_highlighted) or ($image_texture = $checked_locked) or ($image_texture = $checked_locked_highlighted))",
-            "$alpha|default": 0.3
-          },
           "controls": [
             {
               "filler_1@global.empty_panel": { "size": ["fill", 4] }
@@ -359,14 +348,7 @@
                 "size": [10, 9],
                 "controls": [
                   {
-                    "arrow_default@screen_content.trade_arrow": {
-                      "alpha": "$alpha"
-                    }
-                  },
-                  {
-                    "arrow_deny@screen_content.trade_cross_out": {
-                      "alpha": "$alpha"
-                    }
+                    "arrow_deny@screen_content.trade_cross_out": {}
                   }
                 ]
               }
@@ -418,35 +400,35 @@
   },
   "unchecked_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked"
   },
   "checked_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_selected"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/checked"
   },
   "unchecked_hover_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unselected_highlight"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked_hover"
   },
   "checked_hover_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_selected_highlight"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/checked_hover"
   },
   "unchecked_locked_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked_locked"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked_locked"
   },
   "unchecked_locked_hover_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_unchecked_locked_highlighted"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked_locked"
   },
   "checked_locked_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_checked_locked"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked_locked"
   },
   "checked_locked_hover_control@trade_global.button_state_common": {
     "layer": 4,
-    "$image_texture": "assets/sprite_assets/container/villager/toggle/toggle_checked_locked_highlighted"
+    "$image_texture": "assets/sprite_assets/container/villager/toggle/unchecked_locked"
   },
 
   "button_state_common@global.empty_image": {
