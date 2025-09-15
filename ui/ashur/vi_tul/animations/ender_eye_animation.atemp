@@ -1,0 +1,22 @@
+{
+  "namespace": "eye_animation",
+  "eye_uv_template": {
+    "anim_type": "uv",
+    "from": "$frame",
+    "to": "$frame",
+    "duration": "$frame_time",
+    "next": "(@eye_animation. + $next_frame)"
+  },
+  "eye_0@eye_animation.eye_uv_template": { "$frame": [0, 0], "$next_frame": "eye_1", "$frame_time": 1 },
+  "eye_1@eye_animation.eye_uv_template": { "$frame": [0, 30], "$next_frame": "eye_2", "$frame_time": 0.1 },
+  "eye_2@eye_animation.eye_uv_template": { "$frame": [0, 40], "$next_frame": "eye_3", "$frame_time": 0.5 },
+  "eye_3@eye_animation.eye_uv_template": { "$frame": [0, 30], "$next_frame": "eye_4", "$frame_time": 0.1 },
+  "eye_4@eye_animation.eye_uv_template": { "$frame": [0, 0], "$next_frame": "eye_5", "$frame_time": 0.05 },
+  "eye_5@eye_animation.eye_uv_template": { "$frame": [0, 50], "$next_frame": "eye_6", "$frame_time": 0.1 },
+  "eye_6@eye_animation.eye_uv_template": { "$frame": [0, 60], "$next_frame": "eye_7", "$frame_time": 0.5 },
+  "eye_7@eye_animation.eye_uv_template": { "$frame": [0, 70], "$next_frame": "eye_8", "$frame_time": 0.1 },
+  "eye_8@eye_animation.eye_uv_template": { "$frame": [0, 20], "$next_frame": "eye_9", "$frame_time": 0.1 },
+  "eye_9@eye_animation.eye_uv_template": { "$frame": [0, 10], "$next_frame": "eye_10", "$frame_time": 0.1 },
+  "eye_10@eye_animation.eye_uv_template": { "$frame": [0, 0], "$next_frame": "eye_11", "$frame_time": 6 },
+  "eye_11@eye_animation.eye_uv_template": { "$frame": [0, 80], "$next_frame": "eye_0", "$frame_time": 1 }
+}

@@ -1,44 +1,44 @@
 {
-  "asprite": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]},
-  "empty_progress_bar@screen_content.image_element": {"texture": "textures/ui/experience_bar_empty"},
+  "empty_progress_bar@screen_content.image_element": { "texture": "textures/ui/experience_bar_empty" },
   "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar": {
-    "size": [ "100%c", 5 ],
+    "size": ["100%c", 5],
     "controls": [
       {
         "xp_fill_texture@global.empty_image": {
           "clip_direction": "left",
           "texture": "textures/ui/ashur/animations/exp_full",
-          "uv": "@hud.asprite",
+          "uv": {
+            "anim_type": "aseprite_flip_book", 
+            "initial_uv": [0, 0] 
+          },
           "layer": 2,
-          "uv_size": [ 182, 5 ],
-          "size": [ 182, 5 ],
+          "uv_size": [182, 5],
+          "size": [182, 5],
           "clip_pixelperfect": true,
           "bindings": [
-            {"binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global"}
+            { "binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global" }
           ],
           "controls": [
             {
               "progress_bar_nub@hud.progress_bar_nub": {
-                "size": [ "100%c - 10px", 5 ],
-                "max_size": [ 190, 5 ],
+                "size": ["100%c - 10px", 5],
+                "max_size": [190, 5],
                 "layer": 3,
                 "controls": [
                   {
                     "horse_jump_rend@hud.horse_jump_renderer": {
                       "anchor_from": "bottom_middle",
                       "anchor_to": "bottom_middle",
-                      "size": [ "100%c", 5 ],
+                      "size": ["100%c", 5],
                       "layer": 7,
                       "controls": [
                         {
                           "dash_rend@hud.dash_renderer": {
                             "anchor_from": "bottom_middle",
                             "anchor_to": "bottom_middle",
-                            "size": [ "100%c", 5 ],
+                            "size": ["100%c", 5],
                             "layer": 7,
-                            "controls": [
-                              {"hotbar@hud.hotbar_chooser": {"offset": [ 4, 16 ]}}
-                            ]
+                            "controls": [{ "hotbar@hud.hotbar_chooser": { "offset": [4, 16] } }]
                           }
                         }
                       ]

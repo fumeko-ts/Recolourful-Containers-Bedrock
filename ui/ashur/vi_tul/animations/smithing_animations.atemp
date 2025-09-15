@@ -1,0 +1,179 @@
+{
+  "namespace": "smithing_animations",
+
+  //---------------------------------------------------------------------------
+  // #region hammer animation
+  //---------------------------------------------------------------------------
+
+  "uv_anim_base": {
+    "anim_type": "uv",
+    "easing": "in_out_sine",
+    "from": "$frame", // since from and to are refrenceing the same variable means they use the same input value meaning that the swap between each frame is instant
+    "to": "$frame",
+    "duration": "$frame_time",
+    "next": "(@smithing_animations. + $next_frame)",
+    "$frame_time": 0.05 // this is the duration for each frame note it can be changed by adding the property to seprate frames like smithing_hammer_animation0
+  },
+
+  "smithing_hammer_animation0@smithing_animations.uv_anim_base": {
+    "$frame": [0, 0],
+    "$next_frame": "smithing_hammer_animation1",
+    "$frame_time": 8
+  },
+
+  "smithing_hammer_animation1@smithing_animations.uv_anim_base": {"$frame": [0, 23],"$next_frame": "smithing_hammer_animation2"},
+  "smithing_hammer_animation2@smithing_animations.uv_anim_base": {"$frame": [0, 46],"$next_frame": "smithing_hammer_animation3"},
+  "smithing_hammer_animation3@smithing_animations.uv_anim_base": {"$frame": [0, 69],"$next_frame": "smithing_hammer_animation4"},
+  "smithing_hammer_animation4@smithing_animations.uv_anim_base": {"$frame": [0, 92],"$next_frame": "smithing_hammer_animation5"},
+  "smithing_hammer_animation5@smithing_animations.uv_anim_base": {"$frame": [0, 115],"$next_frame": "smithing_hammer_animation6"},
+  "smithing_hammer_animation6@smithing_animations.uv_anim_base": {"$frame": [0, 138],"$next_frame": "smithing_hammer_animation7"},
+  "smithing_hammer_animation7@smithing_animations.uv_anim_base": {"$frame": [0, 161],"$next_frame": "smithing_hammer_animation8"},
+  "smithing_hammer_animation8@smithing_animations.uv_anim_base": {"$frame": [0, 184],"$next_frame": "smithing_hammer_animation9"},
+  "smithing_hammer_animation9@smithing_animations.uv_anim_base": {"$frame": [0, 207],"$next_frame": "smithing_hammer_animation10"},
+  "smithing_hammer_animation10@smithing_animations.uv_anim_base": {"$frame": [0, 230],"$next_frame": "smithing_hammer_animation11"},
+  "smithing_hammer_animation11@smithing_animations.uv_anim_base": {"$frame": [0, 253],"$next_frame": "smithing_hammer_animation12"},
+  "smithing_hammer_animation12@smithing_animations.uv_anim_base": {"$frame": [0, 276],"$next_frame": "smithing_hammer_animation13"},
+  "smithing_hammer_animation13@smithing_animations.uv_anim_base": {"$frame": [0, 299],"$next_frame": "smithing_hammer_animation14"},
+  "smithing_hammer_animation14@smithing_animations.uv_anim_base": {"$frame": [0, 322],"$next_frame": "smithing_hammer_animation0"},
+
+  // #endregion
+
+  //---------------------------------------------------------------------------
+  // #region cell animations
+  //---------------------------------------------------------------------------
+
+  "smithing_template_fade_out_hold@smithing_animations.smithing_template_hold": {
+    "to": 1,
+    "from": 1,
+    "next": "@smithing_animations.smithing_fade_out"
+  },
+  "smithing_fade_out@smithing_animations.smithing_template_in_out": {
+    "to": 0,
+    "from": 1,
+    "next": "@smithing_animations.smithing_fade_in_hold"
+  },
+  "smithing_fade_in_hold@smithing_animations.smithing_template_hold": {
+    "to": 0,
+    "from": 0,
+    "next": "@smithing_animations.smithing_fade_in"
+  },
+  "smithing_fade_in@smithing_animations.smithing_template_in_out": {
+    "to": 1,
+    "from": 0,
+    "next": "@smithing_animations.smithing_template_fade_out_hold"
+  },
+
+  // #endregion
+
+  // cell definitions
+
+  "template_input@screen_content.image_element": {
+    "layer": 1,
+    "size": [16, 16],
+    "texture": "$cell_texture",
+    "propagate_alpha": true
+  },
+  "smithing_template_item_overlay@global.empty_panel": {
+    "size": [16, 16],
+    "controls": [
+      {
+        "template_vertical@smithing_animations.template_input": {
+          "$cell_texture": "textures/ui/ashur/smithing_icons/template_vertical",
+          "alpha": "@smithing_animations.smithing_template_fade_out_hold"
+        }
+      },
+      {
+        "template_horizontal@smithing_animations.template_input": {
+          "$cell_texture": "textures/ui/ashur/smithing_icons/template_horizontal",
+          "alpha": "@smithing_animations.smithing_fade_in_hold"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#show_input_overlay_templates",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "material_overlay@smithing_table_screen.smpthing_custom_overlay": {
+    "texture": "textures/ui/ashur/smithing_icons/smithing_ore.png",
+    "$cell_collection": "smithing_table_material_items"
+  },
+
+  "smithing_template_hold": {
+    "anim_type": "alpha",
+    "easing": "linear"
+  },
+  "smithing_template_in_out": {
+    "anim_type": "alpha",
+    "duration": 0.22,
+    "easing": "linear"
+  },
+
+
+  "armor_overlay": {
+    "type": "panel",
+    "layer": 1,
+    "$cell_collection|default": "none",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "smithing_table_input_items",
+        "binding_name": "#item_id_aux"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(#item_id_aux = -1)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "size": [16, 16],
+    "controls": [
+//{
+//  "template_image1@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/1.png",
+//    "alpha": "@smithing_animations.image1_hold"
+//  }
+//},
+//{
+//  "template_image2@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/2.png",
+//    "alpha": "@smithing_animations.image2_hold"
+//  }
+//},
+//{
+//  "template_image3@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/3.png",
+//    "alpha": "@smithing_animations.image3_hold"
+//  }
+//},
+//{
+//  "template_image4@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/4.png",
+//    "alpha": "@smithing_animations.image4_hold"
+//  }
+//},
+//{
+//  "template_image5@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/5.png",
+//    "alpha": "@smithing_animations.image5_hold"
+//  }
+//},
+//{
+//  "template_image6@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/6.png",
+//    "alpha": "@smithing_animations.image6_hold"
+//  }
+//},
+//{
+//  "template_image7@smithing_animations.template_input": {
+//    "$cell_texture": "textures/ui/ashur/smithing_icons/a/7.png",
+//    "alpha": "@smithing_animations.image7_hold"
+//  }
+//}
+    ]
+  }
+}
