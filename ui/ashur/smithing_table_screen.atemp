@@ -1,13 +1,6 @@
 {
   "namespace": "smithing_table_screen",
-
-
-
-  "smpthing_custom_overlay@screen_content.image_element": {
-  },
   "smithing_table_panel@container_common.container_details": {
-    "type": "panel",
-    "layer": 2,
     "size": [176, 166],
     "$screen_controls": [
       {
@@ -20,23 +13,20 @@
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "animation_reset_name": "screen_animation_reset",
-          "uv": "@smithing_animations.smithing_hammer_animation0",
-          "disable_anim_fast_forward": true
+          "uv": "@smithing_animations.0"
         }
       },
       { "common_panel@screen_content.container_base": { "$smithing_screen": true } },
       {
-        "result_item_preview_inner": {
-          "type": "panel",
+        "result_item_preview_inner@global.empty_panel": {
           "size": [30, 24],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
           "offset": [-17, -40],
           "controls": [
             {
-              "smithing_preview_renderer": {
-                "type": "custom",
-                "renderer": "equipment_preview_renderer",
+              "smithing_preview_renderer@global.custom_renderer": {
+                "$type": "equipment_preview_renderer",
                 "animation_reset_name": "screen_animation_reset",
                 "anims": [
                   "@common.screen_exit_size_animation_push",
@@ -111,21 +101,21 @@
                         {
                           "template_item_slot@global.container_item": {
                             "grid_position": [0, 0],
-                            "$cell_overlay_ref": "smithing_animations.armor_overlay",
+                            "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_template_items"
                           }
                         },
                         {
                           "input_item_slot@global.container_item": {
                             "grid_position": [1, 0],
-                            "$cell_overlay_ref": "smithing_animations.armor_overlay",
+                            "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_input_items"
                           }
                         },
                         {
                           "material_item_slot@global.container_item": {
                             "grid_position": [2, 0],
-                            "$cell_overlay_ref": "smithing_animations.armor_overlay",
+                            "$cell_overlay_ref": "smithing_animations.slot_overlay",
                             "$item_collection": "smithing_table_material_items"
                           }
                         },
