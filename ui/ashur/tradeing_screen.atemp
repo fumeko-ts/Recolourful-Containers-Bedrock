@@ -162,6 +162,28 @@
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right"
         }
+      },
+      {
+        "trade_not_possible@global.empty_panel": {
+          "size": [94, 131],
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "controls": [
+            {
+              "control_holder@global.empty_panel": {
+                "size": [28, 21],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [
+                  {
+                    "a@villager_not_tradeable.trade_selector_stack_panel": {
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   },
@@ -203,7 +225,7 @@
     "size": [100, 144],
     "offset": [4, 18],
     "$scroll_size": [6, 139],
-    "$scroll_track_offset": [42, -1.4],//fix??
+    "$scroll_track_offset": [42, -1.4], //fix??
     "$scroll_view_port_size": [92, 140.4],
     "$scrolling_pane_size": ["100%", "100%"],
     "$collection_name": "trade_tiers",

@@ -58,6 +58,7 @@
     "assets/sprite_assets/widget/button.mcmeta",
     "ui/ashur/vi_tul/mounts/mule_screen.atemp",
     "ui/ashur/vi_tul/mounts/trader_illama_screen.atemp",
-    "ui/ashur/vi_tul/animations/smithing_animations.atemp"
+    "ui/ashur/vi_tul/animations/smithing_animations.atemp",
+    "ui/ashur/vi_tul/villager_not_tradeable.atemp"
   ]
 }
