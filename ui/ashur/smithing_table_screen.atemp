@@ -131,6 +131,37 @@
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle"
         }
+      },
+      {
+        "craft_not_possible@global.empty_panel": {
+          "size": [93, 67],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "arrow_holder@global.empty_panel": {
+                "size": [28, 21],
+                "anchor_to": "bottom_right",
+                "anchor_from": "bottom_right",
+                "controls": [
+                  {
+                    "cross_out_icon_image@screen_content.image_element": {
+                      "texture": "assets/sprite_assets/container/smithing/error.png",
+                      "size": [28, 21],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#cross_out_icon",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   }
