@@ -32,7 +32,6 @@
   },
   "cell_button_prototype": {
     "type": "button",
-    "offset": [-1, -1],
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -159,8 +158,8 @@
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ],
     "controls": [
-      { "hover@$highlight_control": { "offset": [1, 1] } },
-      { "pressed@$highlight_control": { "offset": [1, 1] } }
+      { "hover@$highlight_control": {} },
+      { "pressed@$highlight_control": {} }
     ]
   },
   "stack_count_label": {

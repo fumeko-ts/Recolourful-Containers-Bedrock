@@ -11,43 +11,167 @@
     "$frame_time": 0.05 // this is the duration for each frame note it can be changed by adding the property to seprate frames like 0
   },
 
-  "0@smithing_animations.uv_anim_base": {"$frame": [0, 0],"$next_frame": "1","$frame_time": 8},
+  "0@smithing_animations.uv_anim_base": { "$frame": [0, 0], "$next_frame": "1", "$frame_time": 8 },
 
-  "1@smithing_animations.uv_anim_base": {"$frame": [0, 23],"$next_frame": "2"},
-  "2@smithing_animations.uv_anim_base": {"$frame": [0, 46],"$next_frame": "3"},
-  "3@smithing_animations.uv_anim_base": {"$frame": [0, 69],"$next_frame": "4"},
-  "4@smithing_animations.uv_anim_base": {"$frame": [0, 92],"$next_frame": "5"},
-  "5@smithing_animations.uv_anim_base": {"$frame": [0, 115],"$next_frame": "6"},
-  "6@smithing_animations.uv_anim_base": {"$frame": [0, 138],"$next_frame": "7"},
-  "7@smithing_animations.uv_anim_base": {"$frame": [0, 161],"$next_frame": "8"},
-  "8@smithing_animations.uv_anim_base": {"$frame": [0, 184],"$next_frame": "9"},
-  "9@smithing_animations.uv_anim_base": {"$frame": [0, 207],"$next_frame": "10"},
-  "10@smithing_animations.uv_anim_base": {"$frame": [0, 230],"$next_frame": "11"},
-  "11@smithing_animations.uv_anim_base": {"$frame": [0, 253],"$next_frame": "12"},
-  "12@smithing_animations.uv_anim_base": {"$frame": [0, 276],"$next_frame": "13"},
-  "13@smithing_animations.uv_anim_base": {"$frame": [0, 299],"$next_frame": "14"},
-  "14@smithing_animations.uv_anim_base": {"$frame": [0, 322],"$next_frame": "0"},
+  "1@smithing_animations.uv_anim_base": { "$frame": [0, 23], "$next_frame": "2" },
+  "2@smithing_animations.uv_anim_base": { "$frame": [0, 46], "$next_frame": "3" },
+  "3@smithing_animations.uv_anim_base": { "$frame": [0, 69], "$next_frame": "4" },
+  "4@smithing_animations.uv_anim_base": { "$frame": [0, 92], "$next_frame": "5" },
+  "5@smithing_animations.uv_anim_base": { "$frame": [0, 115], "$next_frame": "6" },
+  "6@smithing_animations.uv_anim_base": { "$frame": [0, 138], "$next_frame": "7" },
+  "7@smithing_animations.uv_anim_base": { "$frame": [0, 161], "$next_frame": "8" },
+  "8@smithing_animations.uv_anim_base": { "$frame": [0, 184], "$next_frame": "9" },
+  "9@smithing_animations.uv_anim_base": { "$frame": [0, 207], "$next_frame": "10" },
+  "10@smithing_animations.uv_anim_base": { "$frame": [0, 230], "$next_frame": "11" },
+  "11@smithing_animations.uv_anim_base": { "$frame": [0, 253], "$next_frame": "12" },
+  "12@smithing_animations.uv_anim_base": { "$frame": [0, 276], "$next_frame": "13" },
+  "13@smithing_animations.uv_anim_base": { "$frame": [0, 299], "$next_frame": "14" },
+  "14@smithing_animations.uv_anim_base": { "$frame": [0, 322], "$next_frame": "0" },
 
   "slot_overlay@global.empty_panel": {
     "layer": 1,
     "size": [16, 16],
+    "$upgrade_template|default": 717,
     "controls": [
       {
-        "template_slot@smithing_animations.slot_sprite_renderer": {
+        "template_slot@global.empty_panel": {
           "ignored": "(not ($item_collection = smithing_table_template_items))",
-          "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_template_slot"
+
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "smithing_table_template_items",
+              "binding_name": "#item_id_aux"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(#item_id_aux = -1)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "1@smithing_animations.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_template_slot"
+              }
+            }
+          ]
         }
       },
       {
-        "equipment_slot@smithing_animations.slot_sprite_renderer": {
+        "equipment_slot@global.empty_panel": {
           "ignored": "(not ($item_collection = smithing_table_input_items))",
-          "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_equipment_slot"
+
+          "controls": [
+            {
+              "1@smithing_animations.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/only_armor",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_input_items",
+                    "binding_name_override": "#smithing_equipment_slot",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_template_items",
+                    "binding_name_override": "#smithing_table_template_items",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(((not ((#smithing_table_template_items / 65536) = $upgrade_template) and (not (#smithing_table_template_items = -1)))) and (#smithing_equipment_slot = -1))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "2@smithing_animations.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_equipment_slot",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_input_items",
+                    "binding_name_override": "#smithing_equipment_slot",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_template_items",
+                    "binding_name_override": "#smithing_table_template_items",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "((((#smithing_table_template_items / 65536) = $upgrade_template) and (not (#smithing_table_template_items = -1))) and (#smithing_equipment_slot = -1))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
-        "material_slot@smithing_animations.slot_sprite_renderer": {
+        "material_slot@global.empty_panel": {
           "ignored": "(not ($item_collection = smithing_table_material_items))",
-          "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_material_slot"
+          "controls": [
+            {
+              "1@smithing_animations.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_material_slot",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_material_items",
+                    "binding_name_override": "#smithing_material_slot",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_template_items",
+                    "binding_name_override": "#smithing_table_template_items",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(((not ((#smithing_table_template_items / 65536) = $upgrade_template) and (not (#smithing_table_template_items = -1)))) and (#smithing_material_slot = -1))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "2@smithing_animations.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/netherite",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_material_items",
+                    "binding_name_override": "#netherite",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "smithing_table_template_items",
+                    "binding_name_override": "#smithing_table_template_items",
+                    "binding_name": "#item_id_aux"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "((((#smithing_table_template_items / 65536) = $upgrade_template) and (not (#smithing_table_template_items = -1))) and (#netherite = -1))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     ]
@@ -56,23 +180,11 @@
     "layer": 1,
     "size": [16, 16],
     "texture": "$slot_spritesheet",
+    "disable_anim_fast_forward": true,
     "uv": {
       "anim_type": "aseprite_flip_book",
       "initial_uv": [0, 0]
     },
-    "uv_size": [16, 16],
-    "bindings": [
-      {
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection",
-        "binding_name": "#item_id_aux"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always",
-        "source_property_name": "(#item_id_aux = -1)",
-        "target_property_name": "#visible"
-      }
-    ]
+    "uv_size": [16, 16]
   }
 }

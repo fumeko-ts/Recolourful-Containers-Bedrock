@@ -53,7 +53,6 @@
   "cell_image_panel/cell_image_selected": {"ignored": true},
   "container_slot_button_prototype": {
     "type": "button",
-    "offset": [ -1, -1 ],
     "$focus_id|default": "",
     "$focus_override_down|default": "",
     "$focus_override_up|default": "",
@@ -180,13 +179,12 @@
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
     "controls": [
-      {"hover@$highlight_control": {"offset": [ 1, 1 ]}},
-      {"pressed@$highlight_control": {"offset": [ 1, 1 ]}}
+      {"hover@$highlight_control": {}},
+      {"pressed@$highlight_control": {}}
     ]
   },
   "container_item": {
     "type": "input_panel",
-    "$white_highlight_slot_offset": [ 1, 1 ],
     "size": [ 18, 18 ],
     "layer": 1,
     "$cell_image_size|default": [ 18, 18 ],
@@ -255,7 +253,6 @@
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
           "size": "$item_renderer_size",
-          "offset": [ 1, 1 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "layer": 6
