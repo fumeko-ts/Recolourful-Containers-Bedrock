@@ -27,8 +27,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 4 ]}},
-            {"smithing_label@global.empty_panel": {"size": [ 176, 9 ]}},
+            {"filler@global.empty_panel": {"size": [ "fill", 13 ]}},
             {
               "main_stack@global.empty_stack": {
                 "orientation": "horizontal",

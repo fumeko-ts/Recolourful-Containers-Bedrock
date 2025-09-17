@@ -41,17 +41,7 @@
                             "anchor_from": "top_middle",
                             "anchor_to": "top_middle",
                             "controls": [
-                              {
-                                "label_holder@global.empty_stack": {
-                                  "orientation": "horizontal",
-                                  "size": [176, 17],
-                                  "controls": [
-                                    { "filler_1@global.empty_panel": { "size": [8, "fill"] } },
-                                    { "chest_label_holder@global.empty_panel": { "size": [57, 7] } },
-                                    { "filler_2@global.empty_panel": { "size": [111, "fill"] } }
-                                  ]
-                                }
-                              },
+                              {"filler@global.empty_panel": {"size": [176, 17]}},
                               {
                                 "chest_grid_holder@global.empty_stack": {
                                   "orientation": "horizontal",

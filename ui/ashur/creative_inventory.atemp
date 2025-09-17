@@ -256,15 +256,6 @@
           "anchor_from": "center",
           "controls": [
             {
-              "close@global.close_button": {
-                "$close_button_panel_size": "$creative_inventory_exit_size",
-                "$close_button_offset": "$creative_inventory_exit_offset",
-                "$close_button_layer": "$creative_inventory_exit_layer",
-                "$close_button_textures": "$creative_inventory_exit_textures",
-                "$close_button_texture_nineslice": "$creative_inventory_exit_texture_nineslice"
-              }
-            },
-            {
               "inventory_top_half_creative@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [125, 50],
@@ -327,15 +318,6 @@
           "anchor_from": "center",
           "size": [195, 136],
           "controls": [
-            {
-              "close@global.close_button": {
-                "$close_button_panel_size": "$creative_misc_exit_size",
-                "$close_button_offset": "$creative_misc_exit_offset",
-                "$close_button_layer": "$creative_misc_exit_layer",
-                "$close_button_textures": "$creative_misc_exit_textures",
-                "$close_button_texture_nineslice": "$creative_misc_exit_texture_nineslice"
-              }
-            },
             {
               "stack_1@global.empty_stack": {
                 "orientation": "horizontal",
@@ -417,15 +399,6 @@
           "anchor_from": "center",
           "size": [195, 136],
           "controls": [
-            {
-              "close@global.close_button": {
-                "$close_button_panel_size": "$creative_search_exit_size",
-                "$close_button_offset": "$creative_search_exit_offset",
-                "$close_button_layer": "$creative_search_exit_layer",
-                "$close_button_textures": "$creative_search_exit_textures",
-                "$close_button_texture_nineslice": "$creative_search_exit_texture_nineslice"
-              }
-            },
             {
               "stack_1@global.empty_stack": {
                 "orientation": "horizontal",

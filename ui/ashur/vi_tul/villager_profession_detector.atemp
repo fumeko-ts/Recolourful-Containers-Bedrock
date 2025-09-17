@@ -52,7 +52,6 @@
       {
         "label_string_subtraction_bypass@villager_profession_detector.label_bypass": {}
       },
-      { "close@global.close_button": { "offset": [0, 6] } },
 
       {"1@villager_profession_detector.gui_bindings": {"$profession_sprite": "armorer","$entity_index": "ui:a","$profession": "armor","$anim_sprite": "assets/advanced_sprites/animated/villager/default/armorer"}},
       {"2@villager_profession_detector.gui_bindings": {"$profession_sprite": "butcher","$entity_index": "ui:b","$profession": "butcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},

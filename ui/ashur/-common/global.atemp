@@ -163,30 +163,6 @@
       { "pressed@$highlight_control": { "offset": [1, 1] } }
     ]
   },
-  "close_button@common.close_button": {
-    "layer": "$close_button_layer",
-    "$close_button_layer|default": 20,
-    "size": [14, 14],
-    "anchor_to": "top_right",
-    "anchor_from": "top_right",
-    "offset": "$close_button_offset",
-    "$close_button_panel_size|default": [14, 14],
-    "$close_button_offset|default": [-2, 1],
-    "controls": "$close_button_textures",
-    "$close_button_texture_nineslice|default": "",
-    "$close_button_textures|default": [
-      {
-        "default@global.close_button_panel": { "$close_button_texture": "textures/ui/ashur/close_button.png" }
-      },
-      {
-        "hover@global.close_button_panel": { "$close_button_texture": "textures/ui/ashur/close_button_hover.png" }
-      },
-      {
-        "pressed@global.close_button_panel": { "$close_button_texture": "textures/ui/ashur/close_button.png" }
-      }
-    ],
-    "ignored": "($Exit_panel_enabled = false)"
-  },
   "stack_count_label": {
     "type": "label",
     "color": "$item_stack_count_color",
@@ -355,12 +331,6 @@
       }
     ]
   },
-  "close_button_panel@global.empty_panel": {
-    "layer": 12,
-    "size": "$close_button_panel_size",
-    "$button_alpha|default": 1,
-    "controls": [{ "close_button_image@screen_content.close_button_image": { "alpha": "$button_alpha" } }]
-  },
   "inventory_selected_stack_size_text": {
     "type": "label",
     "offset": [0, 1],
@@ -515,101 +485,101 @@
             {
               //Desktop Texel Size: [376, 250]
               "requires": "$desktop_screen",
-              "$narrow_screen_size": [ 280, "100% - 10px" ], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [ 282, "100% - 50px" ], // Play Screen
-              "$tabbed_upsell_screen_size": [ 310, 173 ], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": [ 267, 240 ], // Realms Create
-              "$large_screen_size": [ 317, "100% - 10px" ], // Multiplayer Invitations
-              "$store_screen_size": [ "100% - 4px", "100% - 4px" ], // Store Home
-              "$skin_pack_screen_size": [ "100% - 4px", "100% - 50px" ], // Skin Pack
-              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ], // Texture Pack
-              "$upsell_screen_size": [ "177%y - 208.5px", "100% - 4px" ], // Skin Pack Upsell
-              "$create_world_upsell_screen_size": [ 360, 183 ],
-              "$create_realm_upsell_screen_size": [ 360, 183 ],
-              "$create_realm_upsell_play_screen_size": [ 360, 213 ],
-              "$max_create_world_upsell_screen_size": [ 360, "100% - 4px" ],
-              "$min_resource_pack_screen_size": [ 372, 232.4 ],
-              "$max_resource_pack_screen_size": [ 400, 246 ],
-              "$max_upsell_screen_size": [ 250, 259.125 ],
-              "$rating_prompt_screen_size": [ 250, 87 ],
-              "$max_skin_pack_screen_size": [ 310, "56.25%x - 65.25px + 118.5px" ],
-              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Picker, Command Block screen
-              "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
-              "$xbl_immediate_signin_screen_size": [ 317, 158 ], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [ 317, 158 ], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [ 316, 161 ], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [ 364, 182 ], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 50px" ], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [ 317, 146 ], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [ 260, "100% - 50px" ], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
-              "$tall_modal_screen_size": [ 204, 172 ],
-              "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
-              "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
-              "$custom_templates_screen_size": [ "70%", "85%" ], //Custom Templates Screen
-              "$world_modal_screen_size": [ 290, 100 ], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": [ "60%", "85%" ], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [ 290, 160 ], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [ 300, 100 ], //custom gamepad disconnected modal size, to contain all languages in title
-              "$storage_migration_progress_size": [ 290, 100 ],
-              "$store_modal_screen_size": [ "80%", "80%" ],
-              "$csb_upsell_screen_size": [ "90%", "60%x" ]
+              "$narrow_screen_size": [280, "100% - 10px"], // Realms Pending Invitations, Add Players
+              "$play_screen_size": [282, "100% - 50px"], // Play Screen
+              "$tabbed_upsell_screen_size": [310, 173], // Trial Tabbed Upsell Screen
+              "$realms_create_screen_size": [267, 240], // Realms Create
+              "$large_screen_size": [317, "100% - 10px"], // Multiplayer Invitations
+              "$store_screen_size": ["100% - 4px", "100% - 4px"], // Store Home
+              "$skin_pack_screen_size": ["100% - 4px", "100% - 50px"], // Skin Pack
+              "$resource_pack_screen_size": ["100% - 50px", "45%x + 65px"], // Texture Pack
+              "$upsell_screen_size": ["177%y - 208.5px", "100% - 4px"], // Skin Pack Upsell
+              "$create_world_upsell_screen_size": [360, 183],
+              "$create_realm_upsell_screen_size": [360, 183],
+              "$create_realm_upsell_play_screen_size": [360, 213],
+              "$max_create_world_upsell_screen_size": [360, "100% - 4px"],
+              "$min_resource_pack_screen_size": [372, 232.4],
+              "$max_resource_pack_screen_size": [400, 246],
+              "$max_upsell_screen_size": [250, 259.125],
+              "$rating_prompt_screen_size": [250, 87],
+              "$max_skin_pack_screen_size": [310, "56.25%x - 65.25px + 118.5px"],
+              "$extra_large_screen_size": ["100% - 4px", "100% - 4px"], // Skin Picker, Command Block screen
+              "$extra_large_max_screen_size": [370, "100% - 50px"],
+              "$xbl_immediate_signin_screen_size": [317, 158], // XBL Immediate Signin Popup
+              "$xbl_optional_signin_screen_size": [317, 158], // XBL Optional Signin Popup
+              "$xbl_console_signin_screen_size": [316, 161], // XBL Console Signin Popup
+              "$xbl_console_qr_signin_screen_size": [364, 182], // XBL Console QR Signin Popup
+              "$xbl_console_signin_succeeded_screen_size": [230, "100% - 50px"], // XBL Console Signin Succeeded Popup
+              "$xbl_first_launch_screen_size": [317, 146], // Trial Upsell
+              "$xbl_gamer_profile_screen_size": [260, "100% - 50px"], // XBL Console Signin Succeeded Popup
+              "$modal_screen_size": [204, 140], // Pop-up dialogue boxes and modal progress screens
+              "$tall_modal_screen_size": [204, 172],
+              "$patch_notes_screen_size": [300, "100% - 4px"], // Patch Notes Screen
+              "$mob_effect_screen_size": ["90%", "90%"], // Mob Effect Screen
+              "$purchase_coin_screen_size": ["90%", "17%x + 82px"], //Coin Purchase Screen
+              "$purchase_coin_screen_size_extended": ["90%", "17%x + 117px"], //Coin Purchase Screen, with FAQ
+              "$purchase_coin_screen_size_not_enough": ["90%", "17%x + 97px"], //Coin Purchase Screen, when not enough coins for current purchase
+              "$purchase_coin_screen_size_extended_not_enough": ["90%", "17%x + 132px"], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
+              "$choose_realm_screen_size": ["70%", "85%"], //Choose Realm Screen
+              "$custom_templates_screen_size": ["70%", "85%"], //Custom Templates Screen
+              "$world_modal_screen_size": [290, 100], // world convert and world loading modal progress screens
+              "$day_one_experience_intro_screen_size": ["60%", "85%"], // Day One Experience intro popup
+              "$day_one_experience_import_progress_screen_size": ["80%", "90%"], // Day One Experience import progress modal screen
+              "$world_conversion_complete_screen_size": [290, 160], // World Conversion complete modal screen
+              "$gamepad_disconnect_screen_size": [300, 100], //custom gamepad disconnected modal size, to contain all languages in title
+              "$storage_migration_progress_size": [290, 100],
+              "$store_modal_screen_size": ["80%", "80%"],
+              "$csb_upsell_screen_size": ["90%", "60%x"]
             },
             // PE edition and VR
             {
               //Pocket Texel Size:  [320, 210]
               "requires": "($pocket_screen)",
-              "$narrow_screen_size": [ "90.3225%", "100% - 4px" ], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [ "83.4375%", "100% - 4px" ], // Play Screen
-              "$tabbed_upsell_screen_size": [ 310, 173 ], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": [ "71.2766%", "100% - 4px" ], // Realms Create
-              "$large_screen_size": [ "70.3215%", "100% - 4px" ], // Multiplayer Invitations
-              "$store_screen_size": [ "100% - 4px", "100% - 4px" ], // Store Home, purchase Skin Pack
-              "$skin_pack_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Pack
-              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ], // Texture Pack
-              "$upsell_screen_size": [ "100% - 76px", "100% - 4px" ], // Skin Pack Upsell
-              "$create_world_upsell_screen_size": [ "100% - 4px", 223 ],
-              "$create_realm_upsell_screen_size": [ "100% - 4px", 223 ],
-              "$create_realm_upsell_play_screen_size": [ "100% - 4px", 219 ],
-              "$max_create_world_upsell_screen_size": [ "100% - 4px", "100% - 4px" ],
-              "$min_resource_pack_screen_size": [ 306, 202.7 ],
-              "$max_resource_pack_screen_size": [ 313.3, 206 ],
-              "$max_upsell_screen_size": [ "100% - 76px", "56.25%x + 118.5px" ],
-              "$max_skin_pack_screen_size": [ "100% - 4px", "56.25%x - 65.25px + 118.5px" ],
-              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Picker, Command Block screen
-              "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
-              "$xbl_immediate_signin_screen_size": [ 316, 153 ], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [ 316, 153 ], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [ 316, 161 ], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [ 364, 182 ], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 4px" ], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [ 316, 146 ], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [ 316, "100% - 4px" ], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
-              "$rating_prompt_screen_size": [ 250, 87 ],
-              "$tall_modal_screen_size": [ 204, 172 ],
-              "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
-              "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
-              "$custom_templates_screen_size": [ "70%", "85%" ], //Custom Templates Screen
-              "$world_modal_screen_size": [ 290, 100 ], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": [ "60%", "85%" ], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [ 290, 160 ], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [ 300, 100 ], //custom gamepad disconnected modal size, to contain all languages in title
-              "$storage_migration_progress_size": [ 290, 100 ],
-              "$store_modal_screen_size": [ "100% - 20px", "100% - 20px" ],
-              "$csb_upsell_screen_size": [ "100%-4px", "100%-4px" ]
+              "$narrow_screen_size": ["90.3225%", "100% - 4px"], // Realms Pending Invitations, Add Players
+              "$play_screen_size": ["83.4375%", "100% - 4px"], // Play Screen
+              "$tabbed_upsell_screen_size": [310, 173], // Trial Tabbed Upsell Screen
+              "$realms_create_screen_size": ["71.2766%", "100% - 4px"], // Realms Create
+              "$large_screen_size": ["70.3215%", "100% - 4px"], // Multiplayer Invitations
+              "$store_screen_size": ["100% - 4px", "100% - 4px"], // Store Home, purchase Skin Pack
+              "$skin_pack_screen_size": ["100% - 4px", "100% - 4px"], // Skin Pack
+              "$resource_pack_screen_size": ["100% - 50px", "45%x + 65px"], // Texture Pack
+              "$upsell_screen_size": ["100% - 76px", "100% - 4px"], // Skin Pack Upsell
+              "$create_world_upsell_screen_size": ["100% - 4px", 223],
+              "$create_realm_upsell_screen_size": ["100% - 4px", 223],
+              "$create_realm_upsell_play_screen_size": ["100% - 4px", 219],
+              "$max_create_world_upsell_screen_size": ["100% - 4px", "100% - 4px"],
+              "$min_resource_pack_screen_size": [306, 202.7],
+              "$max_resource_pack_screen_size": [313.3, 206],
+              "$max_upsell_screen_size": ["100% - 76px", "56.25%x + 118.5px"],
+              "$max_skin_pack_screen_size": ["100% - 4px", "56.25%x - 65.25px + 118.5px"],
+              "$extra_large_screen_size": ["100% - 4px", "100% - 4px"], // Skin Picker, Command Block screen
+              "$extra_large_max_screen_size": [370, "100% - 50px"],
+              "$xbl_immediate_signin_screen_size": [316, 153], // XBL Immediate Signin Popup
+              "$xbl_optional_signin_screen_size": [316, 153], // XBL Optional Signin Popup
+              "$xbl_console_signin_screen_size": [316, 161], // XBL Console Signin Popup
+              "$xbl_console_qr_signin_screen_size": [364, 182], // XBL Console QR Signin Popup
+              "$xbl_console_signin_succeeded_screen_size": [230, "100% - 4px"], // XBL Console Signin Succeeded Popup
+              "$xbl_first_launch_screen_size": [316, 146], // Trial Upsell
+              "$xbl_gamer_profile_screen_size": [316, "100% - 4px"], // XBL Console Signin Succeeded Popup
+              "$modal_screen_size": [204, 140], // Pop-up dialogue boxes and modal progress screens
+              "$rating_prompt_screen_size": [250, 87],
+              "$tall_modal_screen_size": [204, 172],
+              "$patch_notes_screen_size": [300, "100% - 4px"], // Patch Notes Screen
+              "$mob_effect_screen_size": ["90%", "90%"], // Mob Effect Screen
+              "$purchase_coin_screen_size": ["90%", "17%x + 82px"], //Coin Purchase Screen
+              "$purchase_coin_screen_size_extended": ["90%", "17%x + 117px"], //Coin Purchase Screen, with FAQ
+              "$purchase_coin_screen_size_not_enough": ["90%", "17%x + 97px"], //Coin Purchase Screen, when not enough coins for current purchase
+              "$purchase_coin_screen_size_extended_not_enough": ["90%", "17%x + 132px"], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
+              "$choose_realm_screen_size": ["70%", "85%"], //Choose Realm Screen
+              "$custom_templates_screen_size": ["70%", "85%"], //Custom Templates Screen
+              "$world_modal_screen_size": [290, 100], // world convert and world loading modal progress screens
+              "$day_one_experience_intro_screen_size": ["60%", "85%"], // Day One Experience intro popup
+              "$day_one_experience_import_progress_screen_size": ["80%", "90%"], // Day One Experience import progress modal screen
+              "$world_conversion_complete_screen_size": [290, 160], // World Conversion complete modal screen
+              "$gamepad_disconnect_screen_size": [300, 100], //custom gamepad disconnected modal size, to contain all languages in title
+              "$storage_migration_progress_size": [290, 100],
+              "$store_modal_screen_size": ["100% - 20px", "100% - 20px"],
+              "$csb_upsell_screen_size": ["100%-4px", "100%-4px"]
             }
           ],
           "button_mappings": [
@@ -639,6 +609,59 @@
             }
           ],
           "controls": [
+            {
+              "exit_pane@common.close_button": {
+                "size": [100, "100%"],
+                "offset": [5, 0],
+                "anchor_to": "right_middle",
+                "anchor_from": "right_middle",
+                "anims": [
+                  "@common.container_screen_exit_animation_push",
+                  "@common.container_screen_exit_animation_pop",
+                  "@common.container_screen_entrance_animation_push",
+                  "@common.container_screen_entrance_animation_pop",
+                  "@common.screen_exit_animation_push_fade",
+                  "@common.screen_exit_animation_pop_fade",
+                  "@common.screen_entrance_animation_push_fade",
+                  "@common.screen_entrance_animation_pop_fade"
+                ],
+                "controls": [
+                  {
+                    "default@global.empty_image": {
+                      "texture": "textures/ui/white",
+                      "color": "black",
+                      "size": ["100%", "100%"],
+                      "nineslice_size": 1,
+                      "fill": true,
+                      "alpha": 0.3
+                    }
+                  },
+                  {
+                    "hover@global.empty_image": {
+                      "texture": "textures/ui/white",
+                      "color": "black",
+                      "size": ["100%", "100%"],
+                      "nineslice_size": 1,
+                      "fill": true,
+                      "alpha": 0.3,
+                      "controls": [
+                        { "hover_text@global.hover_text": { "property_bag": { "#hover_text": "close screen" } } }
+                      ]
+                    }
+                  },
+                  {
+                    "pressed@global.empty_image": {
+                      "texture": "textures/ui/white",
+                      "color": "black",
+                      "size": ["100%", "100%"],
+                      "nineslice_size": 1,
+                      "fill": true,
+                      "alpha": 0.3
+                    }
+                  }
+                ]
+              }
+            },
             {
               "bg_no_safezone_screen_panel@$screen_bg_content": {
                 "anims": "$background_animations",
@@ -806,23 +829,23 @@
     "size": "$cell_size",
     "$cell_size": [18, 18]
   },
-    "storage_bar_grabbed": {
+  "storage_bar_grabbed": {
     "type": "custom",
     "renderer": "progress_bar_renderer",
-    "size": [ 13, 1 ],
+    "size": [13, 1],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [ 0, -2.6 ],
-    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
-    "full_storage_color": [ 1.0, 0.4, 0.4 ],
-    "property_bag": {"drop_shadow": false, "is_storage_bar": true},
+    "offset": [0, -2.6],
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": { "drop_shadow": false, "is_storage_bar": true },
     "controls": [
       {
         "bg@global.empty_image": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [ 0, 1 ],
-          "size": [ "default", "default" ],
+          "offset": [0, 1],
+          "size": ["default", "default"],
           "bindings": [
             {
               "binding_name": "#selected_item_storage_visible",
@@ -854,20 +877,20 @@
   "durability_bar_grabbed": {
     "type": "custom",
     "renderer": "progress_bar_renderer",
-    "size": [ 13, 1 ],
+    "size": [13, 1],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [ 1, -2.6 ],
-    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
-    "full_storage_color": [ 1.0, 0.4, 0.4 ],
-    "property_bag": {"drop_shadow": false, "is_durability": true, "round_value": true},
+    "offset": [1, -2.6],
+    "primary_color": [0.4, 0.4, 1.0, 1.0],
+    "full_storage_color": [1.0, 0.4, 0.4],
+    "property_bag": { "drop_shadow": false, "is_durability": true, "round_value": true },
     "controls": [
       {
         "bg@global.empty_image": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [ 0, 1 ],
-          "size": [ "default", "default" ],
+          "offset": [0, 1],
+          "size": ["default", "default"],
           "bindings": [
             {
               "binding_name": "#selected_item_durability_visible",

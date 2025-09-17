@@ -72,16 +72,7 @@
           "anchor_from": "top_left",
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 15] } },
-            {
-              "label_holding_stack@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [176, 12],
-                "controls": [
-                  { "filler_1@global.empty_panel": { "size": [44, "fill"] } },
-                  { "smithing_label@global.empty_panel": { "size": [132, "fill"] } }
-                ]
-              }
-            },
+            { "filler@global.empty_panel": { "size": [176, 12] } },
             { "filler_2@global.empty_panel": { "size": ["fill", 20] } },
             {
               "label_holding_stack@global.empty_stack": {

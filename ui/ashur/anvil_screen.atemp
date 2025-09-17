@@ -11,17 +11,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
-            {
-              "anvil_label_dynamic?@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [176, 14],
-                "controls": [
-                  { "filler_1@global.empty_panel": { "size": [60, "fill"] } },
-                  { "chest_label_holder@global.empty_panel": { "size": [116, 14] } }
-                ]
-              }
-            },
+            { "filler_1?@global.empty_panel": { "size": [176, 20] } },
             {
               "anvil_text_edit@global.empty_stack": {
                 "orientation": "horizontal",
@@ -105,11 +95,11 @@
       },
       {
         "cost@global.empty_panel": {
-          // if you want to move this left decrease the width if you want to move it right increase 
+          // if you want to move this left decrease the width if you want to move it right increase
           // if you want to move it up decrease the height ect
           "size": [
             167, //width
-            79   //height
+            79 //height
           ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",

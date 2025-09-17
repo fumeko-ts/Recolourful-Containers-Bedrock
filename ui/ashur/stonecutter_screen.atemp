@@ -24,8 +24,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 5 ]}},
-            {"smithing_label@global.empty_panel": {"size": [ "fill", 10 ]}},
+            {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
             {
               "container_main@global.empty_stack": {
                 "orientation": "horizontal",
@@ -43,8 +42,7 @@
                       ]
                     }
                   },
-                  {"filler_2@global.empty_panel": {"size": [ 14, "fill" ]}},
-                  {"filler_3@global.empty_panel": {"size": [ 91, "fill" ]}},
+                  {"filler_3@global.empty_panel": {"size": [ 105, "fill" ]}},
                   {
                     "output_stack@global.empty_stack": {
                       "orientation": "vertical",
