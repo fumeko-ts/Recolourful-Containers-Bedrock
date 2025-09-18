@@ -1,9 +1,14 @@
 {
-  "namespace": "horse_screen",
-  "horse_panel@container_common.container_details": {
+  "namespace": "mount_misc",
+  "horse_panel@global.empty_panel": {
     "size": [176, 166],
-    "$screen_controls": [
-      { "common_panel@screen_content.container_base": { "$horse_screen": true } },
+    "controls": [
+      {
+        "horse@screen_content.image_element": {
+          "uv_size": [176, 166],
+          "texture": "textures/ui/ashur/horse.png"
+        }
+      },
       {
         "mount_input_slots@global.empty_stack": {
           "orientation": "vertical",
@@ -24,19 +29,19 @@
                       "size": [18, 36],
                       "controls": [
                         {
-                          "saddle_slot@horse_screen.sprite_bindings": {
+                          "saddle_slot@mount_misc.sprite_bindings": {
                             "$img_src": "saddle",
                             "$needs": "#has_saddle_slot"
                           }
                         },
                         {
-                          "horse_armor_slot@horse_screen.sprite_bindings": {
+                          "horse_armor_slot@mount_misc.sprite_bindings": {
                             "$img_src": "horse_armor",
                             "$needs": "#has_armor_and_saddle_slot"
                           }
                         },
                         {
-                          "llama_armor_slot@horse_screen.sprite_bindings": {
+                          "llama_armor_slot@mount_misc.sprite_bindings": {
                             "$img_src": "llama_armor",
                             "$needs": "#has_only_carpet_slot"
                           }
@@ -109,7 +114,7 @@
                 "collection_name": "container_items",
                 "grid_item_template": "global.container_item",
                 "grid_dimension_binding": "#inv_grid_dimensions",
-                "$cell_overlay_ref": "horse_screen.cell_texture",
+                "$cell_overlay_ref": "mount_misc.cell_texture",
                 "$item_collection": "container_items",
                 "bindings": [{ "binding_name": "#inv_grid_dimensions" }]
               }
@@ -152,34 +157,6 @@
         }
       },
       {
-        "label_holding_stack@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [176, 17],
-          "anchor_to": "top_middle",
-          "anchor_from": "top_middle",
-          "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
-            {
-              "smithing_label@global.empty_panel": {
-                "size": [176, 11],
-                "controls": [
-                  {
-                    "sithing_label@global.empty_label": {
-                      "anchor_to": "top_left",
-                      "anchor_from": "top_left",
-                      "layer": 5,
-                      "offset": [8, -1],
-                      "text": "$container_title",
-                      "color": "$title_text_color"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
         "bottom@crafting_screen.inventory_bottom_half_with_label": {
           "anchor_to": "bottom_middle",
           "anchor_from": "bottom_middle"
@@ -190,16 +167,16 @@
   "cell_texture@screen_content.image_element": {
     "size": [18, 18],
     "nineslice_size": 1,
-    "texture": "assets/minecraft/textures/gui/sprites/container/slot.png"
+    "texture": "assets/sprite_assets/empty_slot"
   },
   "sprite_bindings@global.empty_panel": {
     "size": [18, 18],
-    "$overlay": "('assets/minecraft/textures/gui/sprites/container/slot/' + $img_src)",
+    "$overlay": "('textures/ui/ashur/' + $img_src)",
     "controls": [
       {
         "slot@screen_content.image_element": {
           "nineslice_size": 1,
-          "texture": "assets/minecraft/textures/gui/sprites/container/slot.png",
+          "texture": "assets/sprite_assets/empty_slot",
           "layer": 3,
           "size": [18, 18]
         }
