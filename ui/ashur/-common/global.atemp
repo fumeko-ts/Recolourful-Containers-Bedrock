@@ -157,10 +157,7 @@
       { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ],
-    "controls": [
-      { "hover@$highlight_control": {} },
-      { "pressed@$highlight_control": {} }
-    ]
+    "controls": [{ "hover@$highlight_control": {} }, { "pressed@$highlight_control": {} }]
   },
   "stack_count_label": {
     "type": "label",
@@ -612,52 +609,18 @@
               "exit_pane@common.close_button": {
                 "size": [100, "100%"],
                 "offset": [5, 0],
-                "anchor_to": "right_middle",
-                "anchor_from": "right_middle",
-                "anims": [
-                  "@common.container_screen_exit_animation_push",
-                  "@common.container_screen_exit_animation_pop",
-                  "@common.container_screen_entrance_animation_push",
-                  "@common.container_screen_entrance_animation_pop",
-                  "@common.screen_exit_animation_push_fade",
-                  "@common.screen_exit_animation_pop_fade",
-                  "@common.screen_entrance_animation_push_fade",
-                  "@common.screen_entrance_animation_pop_fade"
-                ],
+                "anchor_to": "top_right",
+                "anchor_from": "top_right",
                 "controls": [
+                  {"default@global.empty_panel": {}},
                   {
-                    "default@global.empty_image": {
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "size": ["100%", "100%"],
-                      "nineslice_size": 1,
-                      "fill": true,
-                      "alpha": 0.3
-                    }
-                  },
-                  {
-                    "hover@global.empty_image": {
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "size": ["100%", "100%"],
-                      "nineslice_size": 1,
-                      "fill": true,
-                      "alpha": 0.3,
+                    "hover@global.empty_panel": {
                       "controls": [
                         { "hover_text@global.hover_text": { "property_bag": { "#hover_text": "close screen" } } }
                       ]
                     }
                   },
-                  {
-                    "pressed@global.empty_image": {
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "size": ["100%", "100%"],
-                      "nineslice_size": 1,
-                      "fill": true,
-                      "alpha": 0.3
-                    }
-                  }
+                  {"pressed@global.empty_panel": {}}
                 ]
               }
             },
@@ -693,6 +656,7 @@
       }
     ]
   },
+
   "inventory_selected_icon_button": {
     "type": "button",
     "anchor_from": "center",
