@@ -607,7 +607,12 @@
           "controls": [
             {
               "exit_pane@common.close_button": {
-                "size": [100, "100%"],
+                "size": "$close_size",
+                "$close_size": [100, "100%"],
+                "variables": {
+                  "requires": "($touch or $pocket_edition)",
+                  "$close_size": [60, "100%"]
+                },
                 "offset": [5, 0],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",

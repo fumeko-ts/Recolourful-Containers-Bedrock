@@ -52,7 +52,7 @@
         "custom_rename@container_common.container_details": {
           "layer": 1,
           "size": [176, 166],
-          "$screen_controls": [{"horse@mount_misc.horse_panel": {}}],
+          "$screen_controls": [{ "horse@mount_misc.horse_panel": {} }],
           "bindings": [
             {
               "binding_name": "#item_id_aux",
@@ -68,7 +68,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "(not ((#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
+              "source_property_name": "(not ((#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = $mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
               "target_property_name": "#visible"
             }
           ]
