@@ -6,7 +6,7 @@
       {
         "horse@screen_content.image_element": {
           "uv_size": [176, 166],
-          "texture": "textures/ui/ashur/horse.png"
+          "texture": "assets/sprites/horse.png"
         }
       },
       {
@@ -167,16 +167,16 @@
   "cell_texture@screen_content.image_element": {
     "size": [18, 18],
     "nineslice_size": 1,
-    "texture": "assets/sprite_assets/empty_slot"
+    "texture": "assets/sprite_assets/container/slot"
   },
   "sprite_bindings@global.empty_panel": {
     "size": [18, 18],
-    "$overlay": "('textures/ui/ashur/' + $img_src)",
+    "$overlay": "('assets/sprite_assets/container/slot/' + $img_src)",
     "controls": [
       {
         "slot@screen_content.image_element": {
           "nineslice_size": 1,
-          "texture": "assets/sprite_assets/empty_slot",
+          "texture": "assets/sprite_assets/container/slot",
           "layer": 3,
           "size": [18, 18]
         }

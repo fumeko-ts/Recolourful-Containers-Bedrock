@@ -104,7 +104,7 @@
       {
         "requires": "($tab_view_binding_name = search_tab_toggle)",
         "$tab_icon_size": [25, 16],
-        "$icon_for_tab": "textures/ui/ashur/item/compass_28.png"
+        "$icon_for_tab": "textures/ui/ashur/icon_recipe_search"
       },
       {
         "requires": "($tab_view_binding_name = equipment_tab_toggle)",
@@ -113,13 +113,13 @@
       },
       {
         "requires": "($tab_view_binding_name = nature_tab_toggle)",
-        "$tab_icon_size": [22, 14],
+        "$tab_icon_size": [25, 16],
         "$icon_for_tab": "textures/ui/ashur/icon_recipe_nature"
       },
       {
         "requires": "($tab_view_binding_name = items_tab_toggle)",
-        "$tab_icon_size": [16, 16],
-        "$icon_for_tab": "textures/ui/ashur/item/redstone"
+        "$tab_icon_size": [25, 16],
+        "$icon_for_tab": "textures/ui/ashur/icon_recipe_item"
       },
       {
         "requires": "($tab_view_binding_name = construction_tab_toggle)",

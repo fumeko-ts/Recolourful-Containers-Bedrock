@@ -203,7 +203,7 @@
       {
         "img@loom_screen.item_empty_image": {
           "$item_collection": "loom_material_items",
-          "$current_cell_texture": "assets/sprite_assets/container/loom/pattern_slot"
+          "$current_cell_texture": "assets/sprite_assets/container/slot/banner_pattern"
         }
       }
     ]
@@ -225,10 +225,10 @@
     ]
   },
   "banner_empty_image@loom_screen.item_empty_image": {
-    "$current_cell_texture|default": "assets/sprite_assets/container/loom/banner_slot"
+    "$current_cell_texture|default": "assets/sprite_assets/container/slot/banner"
   },
   "dye_empty_image@loom_screen.item_empty_image": {
-    "$current_cell_texture|default": "assets/sprite_assets/container/loom/dye_slot"
+    "$current_cell_texture|default": "assets/sprite_assets/container/slot/dye"
   },
   "result_banner_renderer": {
     "type": "custom",

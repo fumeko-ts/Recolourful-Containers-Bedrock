@@ -5,7 +5,7 @@
     "$screen_controls": [
       {
         "anvil_hammer_anim@screen_content.image_element": {
-          "texture": "textures/ui/ashur/animations/smithing.png",
+          "texture": "assets/advanced_sprites/animated/smithing.png",
           "uv_size": [23, 23],
           "size": [23, 23],
           "layer": 6,

@@ -95,7 +95,7 @@
     "layer": 5,
     "anchor_from": "center",
     "anchor_to": "center",
-    "texture": "textures/ui/ashur/animations/crafter",
+    "texture": "assets/sprite_assets/container/crafter/powered_redstone",
     "size": [174, 6],
     "bindings": [
       {

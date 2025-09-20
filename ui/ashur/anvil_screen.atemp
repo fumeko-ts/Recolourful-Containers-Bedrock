@@ -156,7 +156,7 @@
       },
       {
         "anvil_hammer_anim@screen_content.image_element": {
-          "texture": "textures/ui/ashur/animations/anvil.png",
+          "texture": "assets/advanced_sprites/animated/anvil.png",
           "uv_size": [23, 23],
           "size": [23, 23],
           "layer": 6,
