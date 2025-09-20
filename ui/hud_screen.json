@@ -4,21 +4,63 @@
     "size": ["100%c", 5],
     "controls": [
       {
-        "xp_fill_texture@global.empty_image": {
-          "clip_direction": "left",
-          "texture": "textures/ui/ashur/animations/exp_full",
-          "uv": {
-            "anim_type": "aseprite_flip_book", 
-            "initial_uv": [0, 0] 
-          },
-          "layer": 2,
-          "uv_size": [182, 5],
-          "size": [182, 5],
-          "clip_pixelperfect": true,
-          "bindings": [
-            { "binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global" }
-          ],
+        "exp": {
+          "type": "panel",
+          "size": ["100%c", 5],
           "controls": [
+            {
+              "regular": {
+                "type": "panel",
+                "size": ["100%c", 5],
+                "bindings": [{"binding_name": "(not #inventory_touch_button)", "binding_name_override": "#visible", "binding_type": "global"}],
+                "controls": [
+                  {
+                    "regular_empty@screen_content.image_element": {
+                      "texture": "textures/ui/experience_bar_empty",
+                      "size": [182, 5],
+                      "uv_size": [182, 5]
+                    }
+                  },
+                  {
+                    "regular_full@global.empty_image": {
+                      "clip_direction": "left",
+                      "texture": "textures/ui/ashur/animations/exp_full",
+                      "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+                      "uv_size": [182, 5],
+                      "size": [182, 5],
+                      "clip_pixelperfect": true,
+                      "bindings": [{"binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global"}]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "mobile": {
+                "type": "panel",
+                "size": ["100%c", 5],
+                "bindings": [{"binding_name": "(#inventory_touch_button)", "binding_name_override": "#visible", "binding_type": "global"}],
+                "controls": [
+                  {
+                    "mobile_empty@screen_content.image_element": {
+                      "texture": "textures/ui/experience_bar_mobile_empty",
+                      "size": [202, 5],
+                      "uv_size": [202, 5]
+                    }
+                  },                  {
+                    "mobile_full@global.empty_image": {
+                      "clip_direction": "left",
+                      "texture": "textures/ui/ashur/animations/exp_mobile_full",
+                      "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+                      "uv_size": [202, 5],
+                      "size": [202, 5],
+                      "clip_pixelperfect": true,
+                      "bindings": [{"binding_name": "#exp_progress", "binding_name_override": "#clip_ratio", "binding_type": "global"}]
+                    }
+                  }
+                ]
+              }
+            },
             {
               "progress_bar_nub@hud.progress_bar_nub": {
                 "size": ["100%c - 10px", 5],
