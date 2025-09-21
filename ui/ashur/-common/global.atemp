@@ -611,11 +611,31 @@
                 "$close_size": [100, "100%"],
                 "variables": {
                   "requires": "($touch or $pocket_edition)",
-                  "$close_size": [60, "100%"]
+                  "$close_size": [60, "60%"]
                 },
                 "offset": [5, 0],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
+                "controls": [
+                  {"default@global.empty_panel": {}},
+                  {
+                    "hover@global.empty_panel": {
+                      "controls": [
+                        { "hover_text@global.hover_text": { "property_bag": { "#hover_text": "close screen" } } }
+                      ]
+                    }
+                  },
+                  {"pressed@global.empty_panel": {}}
+                ]
+              }
+            },
+            {
+              "exit_pane@common.close_button": {
+                "size": [60, "60%"],
+                "ignored": "(not ($touch or $pocket_edition))",
+                "offset": [-5, 0],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
                 "controls": [
                   {"default@global.empty_panel": {}},
                   {
