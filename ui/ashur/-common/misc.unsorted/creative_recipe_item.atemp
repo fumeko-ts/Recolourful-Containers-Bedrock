@@ -329,6 +329,6 @@
   },
   "slot@creative_recipe_item.cell_image": {
     "nineslice_size": [1, 1, 1, 1],
-    "texture": "assets/sprite_assets/empty_slot.png"
+    "texture": "assets/sprite_assets/container/slot"
   }
 }
