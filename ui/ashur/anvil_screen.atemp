@@ -251,6 +251,8 @@
           "property_bag": { "#property_field": "#item_name" },
           "max_length": 300000,
           "$text_box_text_color": [0.231, 0.231, 0.231, 1],
+          //"$text_clear_button_enabled": true,
+          //"$text_clear_button_offset": [5, -0.4],
           "$text_background_locked": "screen_content.anvil_text_field",
           "$text_background_default": "screen_content.anvil_edit_box_hover",
           "$text_background_hover": "screen_content.anvil_edit_box_hover",
