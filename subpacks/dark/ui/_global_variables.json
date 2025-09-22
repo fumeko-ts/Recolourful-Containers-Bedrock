@@ -15,7 +15,6 @@
   "$villager_label_offset": [3, 6],
   "$trades_label_offset": [0, 5],
 
-  "$nature_tab_texture": "pearlescent_froglight",
   // Show or hide the exit button on container screens (true/false)
   "$Exit_panel_enabled": true,
   // Set container UI transparency (range: 0.0 - 1.0)

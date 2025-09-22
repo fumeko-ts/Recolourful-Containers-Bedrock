@@ -630,10 +630,13 @@
                 "controls": [
                   {"default@global.empty_panel": {}},
                   {
-                    "hover@global.empty_panel": {
-                      "controls": [
-                        {"hover_text@global.hover_text": {"property_bag": {"#hover_text": "close screen"}}}
-                      ]
+                    "hover@global.empty_image": {
+                      "size": ["100%", "100%"],
+                      "layer": 2,
+                      "texture": "textures/ui/white",
+                      "color": "black",
+                      "nineslice_size": 1,
+                      "alpha": 0.25
                     }
                   },
                   {"pressed@global.empty_panel": {}}
