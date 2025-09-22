@@ -24,7 +24,7 @@
       {"light_gray@trader_illama_screen.gui_bindings": {"$carpet": "light_gray", "$carpet_id": -604}},
       {"white@trader_illama_screen.gui_bindings": {"$carpet": "white", "$carpet_id": 171}},
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       },
       {"carpet_slot@trader_illama_screen.carpet_slot": {}},
       {

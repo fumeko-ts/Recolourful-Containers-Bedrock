@@ -4,13 +4,7 @@
     "size": [22, 22],
     "variables": {
       "requires": "($button_name = 'regen')",
-      "$controls": [
-        {
-          "1@secondary_button.secondary_button_template": {
-            "$effect_name": "regen"
-          }
-        }
-      ]
+      "$controls": [{ "1@secondary_button.secondary_button_template": { "$effect_name": "regen" } }]
     },
     "controls": "$controls",
     "$controls": [
@@ -21,7 +15,6 @@
       { "5@secondary_button.secondary_button_template": { "$effect_name": "strength" } }
     ]
   },
-
   "secondary_button_template@global.empty_panel": {
     "size": [22, 22],
     "controls": [
@@ -30,23 +23,19 @@
           "type": "button",
           "layer": 4,
           "size": [22, 22],
+          "offset": [1, 1],
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
           "$disabled_placeholder|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_locked')",
           "button_mappings": [
-            {
-              "to_button_id": "button.container_slot_hovered",
-              "mapping_type": "pressed",
-              "consume_event": false
-            }
+            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
           ],
           "controls": [
             {
               "underlay_disabled@screen_content.image_element": {
                 "texture": "$disabled_placeholder",
                 "size": [22, 22],
-                "offset": [1, 1],
                 "layer": 3
               }
             },
@@ -82,7 +71,6 @@
       {
         "toggle_holder@global.empty_panel": {
           "size": [22, 22],
-
           "bindings": [
             {
               "binding_type": "collection",
@@ -96,6 +84,7 @@
               "toggle_button@common.toggle": {
                 "size": [22, 22],
                 "layer": 1,
+                "offset": [1, 1],
                 "focus_wrap_enabled": false,
                 "$toggle_name": "$button_name",
                 "checked_control": "checked",
@@ -135,22 +124,14 @@
                 "$checked_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
                 "$checked_hover_sprite|default": "('assets/beacon_button_sprites/secondary/secondary_' + $effect_name + '_checked')",
                 "controls": [
-                  {
-                    "unchecked@secondary_button.image_base": {
-                      "$texture": "$unchecked_sprite"
-                    }
-                  },
+                  { "unchecked@secondary_button.image_base": { "$texture": "$unchecked_sprite" } },
                   {
                     "unchecked_hover@secondary_button.image_base": {
                       "controls": [{ "hover_text@secondary_button.hover_text": {} }],
                       "$texture": "$unchecked_hover_sprite"
                     }
                   },
-                  {
-                    "checked@secondary_button.image_base": {
-                      "$texture": "$checked_sprite"
-                    }
-                  },
+                  { "checked@secondary_button.image_base": { "$texture": "$checked_sprite" } },
                   {
                     "checked_hover@secondary_button.image_base": {
                       "controls": [{ "hover_text@secondary_button.hover_text": {} }],
@@ -185,9 +166,5 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": {
-    "texture": "$texture",
-    "size": [22, 22],
-    "offset": [1, 1]
-  }
+  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22] }
 }

@@ -251,12 +251,7 @@
         "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
       },
       {
-        "container_item_lock_overlay@common.container_item_lock_overlay": {
-          "size": "$item_renderer_size",
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "layer": 6
-        }
+        "container_item_lock_overlay@common.container_item_lock_overlay": {"size": "$item_renderer_size", "anchor_to": "top_left", "anchor_from": "top_left", "layer": 6}
       },
       {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
       {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}

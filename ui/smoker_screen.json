@@ -1,5 +1,1 @@
-{
-  "smoker_screen@global.container_screen": {
-    "$screen_content": "smoker_screen.smoker_panel"
-  }
-}
+{"smoker_screen@global.container_screen": {"$screen_content": "smoker_screen.smoker_panel"}}

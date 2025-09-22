@@ -1,9 +1,9 @@
 {
   "namespace": "shulker_screen",
   "shulker_box@container_common.container_details": {
-    "size": [ 176, 166 ],//36.2% on each side for screen type
+    "size": [ 176, 166 ],
     "$screen_controls": [
-      {"shulker_color@shulker_color_detector.shulker_color_detector":{}},
+      {"shulker_color@shulker_color_detector.shulker_color_detector": {}},
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -36,7 +36,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   }

@@ -2,9 +2,9 @@
   "namespace": "global",
   "highlight_slot": {
     "type": "panel",
-    "$white_highlight_offset": [0, 0],
+    "$white_highlight_offset": [ 0, 0 ],
     "$slot_vars": "screen_content.highlight_slot",
-    "variables": { "requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel" },
+    "variables": {"requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel"},
     "controls": [
       {
         "highlight@$slot_vars": {
@@ -154,15 +154,18 @@
         "to_button_id": "button.coalesce_stack",
         "mapping_type": "double_pressed"
       },
-      { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+      {"to_button_id": "button.shape_drawing", "mapping_type": "pressed"},
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
-    "controls": [{ "hover@$highlight_control": {} }, { "pressed@$highlight_control": {} }]
+    "controls": [
+      {"hover@$highlight_control": {}},
+      {"pressed@$highlight_control": {}}
+    ]
   },
   "stack_count_label": {
     "type": "label",
     "color": "$item_stack_count_color",
-    "offset": [0, 1],
+    "offset": [ 0, 1 ],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "layer": 7,
@@ -179,15 +182,15 @@
       }
     ]
   },
-  "grid_item@common.container_item": { "$grid_item_collection_name": "hotbar_items" },
+  "grid_item@common.container_item": {"$grid_item_collection_name": "hotbar_items"},
   "hotbar": {
     "type": "grid",
-    "size": [162, 18],
+    "size": [ 162, 18 ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": "$hotbar_offset",
-    "$hotbar_offset": [0, -4],
-    "grid_dimensions": [9, 1],
+    "$hotbar_offset": [ 0, -4 ],
+    "grid_dimensions": [ 9, 1 ],
     "grid_item_template": "global.grid_item",
     "$item_collection_name": "hotbar_items",
     "collection_name": "hotbar_items"
@@ -205,57 +208,52 @@
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
-            { "$background_image_control_name@$background_images": { "layer": 1 } },
-            { "durability_bar@common.durability_bar": { "layer": "$bar_layer" } },
-            { "storage_bar@common.storage_bar": { "layer": "$bar_layer" } },
-            { "$overlay_image_control_name@$overlay_images": { "layer": 9 } }
+            {"$background_image_control_name@$background_images": {"layer": 1}},
+            {"durability_bar@common.durability_bar": {"layer": "$bar_layer"}},
+            {"storage_bar@common.storage_bar": {"layer": "$bar_layer"}},
+            {"$overlay_image_control_name@$overlay_images": {"layer": 9}}
           ]
         }
       },
-      { "item_cell_overlay_ref@$cell_overlay_ref": { "layer": 3 } },
-      { "item_selected_image@common.slot_selected": { "layer": 4 } },
+      {"item_cell_overlay_ref@$cell_overlay_ref": {"layer": 3}},
+      {"item_selected_image@common.slot_selected": {"layer": 4}},
       {
-        "item_button_ref@$button_ref": {
-          "tts_ignore_count": true,
-          "tts_skip_message": true,
-          "tts_inherit_siblings": true,
-          "layer": 5
-        }
+        "item_button_ref@$button_ref": {"tts_ignore_count": true, "tts_skip_message": true, "tts_inherit_siblings": true, "layer": 5}
       },
       {
         "container_item_lock_overlay@common.container_item_lock_overlay": {
           "size": "$item_renderer_size",
-          "offset": [1, 1],
+          "offset": [ 1, 1 ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "layer": 6
         }
       },
-      { "item_lock_cell_image@common.item_lock_cell_image": { "layer": 2 } },
-      { "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 } }
+      {"item_lock_cell_image@common.item_lock_cell_image": {"layer": 2}},
+      {"bundle_slot_panel@gameplay.bundle_slot_panel": {"layer": 10}}
     ]
   },
   "inventory_panel_bottom_half_with_label@global.empty_panel": {
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
-    "size": ["100%", 93],
+    "size": [ "100%", 93 ],
     "controls": [
       {
         "inventory_panel": {
           "type": "panel",
-          "size": [88, 83],
+          "size": [ 88, 83 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "controls": [
             {
               "inventory_grid": {
                 "type": "grid",
-                "size": [162, 54],
+                "size": [ 162, 54 ],
                 "anchor_from": "bottom_middle",
                 "anchor_to": "bottom_middle",
                 "offset": "$inventory_offset",
-                "$inventory_offset": [0, -26],
-                "grid_dimensions": [9, 3],
+                "$inventory_offset": [ 0, -26 ],
+                "grid_dimensions": [ 9, 3 ],
                 "$item_collection_name": "inventory_items",
                 "grid_item_template": "global.grid_item",
                 "collection_name": "inventory_items"
@@ -268,7 +266,7 @@
         "inventory_label@section_heading_label": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [7, 3],
+          "offset": [ 7, 3 ],
           "layer": 2,
           "text": "atemp.container.inventory"
         }
@@ -277,8 +275,8 @@
   },
   "inventory_selected_icon@common.item_renderer": {
     "layer": 50,
-    "size": [16, 16],
-    "offset": [-1, -2],
+    "size": [ 16, 16 ],
+    "offset": [ -1, -2 ],
     "bindings": [
       {
         "binding_name": "#inventory_selected_item",
@@ -329,34 +327,57 @@
   },
   "inventory_selected_stack_size_text": {
     "type": "label",
-    "offset": [0, 1],
+    "offset": [ 0, 1 ],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
     "layer": 5000003,
     "shadow": true,
     "color": "$selected_item_stack_count_color",
     "text": "#inventory_selected_item_stack_count",
-    "bindings": [{ "binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible" }]
+    "bindings": [
+      {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
+    ]
   },
   "inventory_icon_panel": {
     "type": "panel",
     "controls": [
-      { "selected_item_icon@global.inventory_selected_icon": {} },
-      { "selected_stack_size_text@global.inventory_selected_stack_size_text": {} },
-      { "selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {} },
+      {"selected_item_icon@global.inventory_selected_icon": {}},
+      {"selected_stack_size_text@global.inventory_selected_stack_size_text": {}},
+      {"selected_item_lock_overlay@common.inventory_selected_item_lock_overlay": {}},
       {
-        "hover_text@global.hover_text": {
-          "layer": 59,
-          "bindings": [{ "binding_name": "#using_touch", "binding_name_override": "#visible" }]
-        }
+        "hover_text@global.hover_text": {"layer": 59, "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]}
       }
+    ]
+  },
+  "inventory_bottom_half@global.empty_stack": {
+    "orientation": "vertical",
+    "size": [ 162, 95 ],
+    "offset": "$grid_cell_offset",
+    "$grid_cell_offset": [ 0, 0 ],
+    "$inventory_panel_offset|default": "bottom_middle",
+    "anchor_to": "$inventory_panel_offset",
+    "anchor_from": "$inventory_panel_offset",
+    "controls": [
+      {"filler_0@global.empty_panel": {"size": [ "default", 12 ]}},
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [ 162, 54 ],
+          "grid_dimensions": [ 9, 3 ],
+          "$item_collection_name": "inventory_items",
+          "grid_item_template": "global.grid_item",
+          "collection_name": "inventory_items"
+        }
+      },
+      {"filler_1@global.empty_panel": {"size": [ "default", 4 ]}},
+      {"hotbar@global.hotbar": {}},
+      {"filler_2@global.empty_panel": {"size": [ "default", 7 ]}}
     ]
   },
   "container_screen": {
     "type": "screen",
-    "size": ["100%", "100%"],
+    "size": [ "100%", "100%" ],
     "$screen_bg_content|default": "screen_content.screen_background",
-
     "$screen_animations|default": [
       "@common.container_screen_exit_animation_push",
       "@common.container_screen_exit_animation_pop",
@@ -367,7 +388,6 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-
     "cache_screen": true,
     "send_telemetry": false,
     "load_screen_immediately": true,
@@ -378,7 +398,6 @@
     "is_showing_menu": true,
     "close_on_player_hurt": true,
     "gamepad_cursor": true,
-
     "$screen_content|default": "common.base_screen_empty_panel",
     "$background_animations|default": [
       "@common.screen_exit_animation_push_alpha",
@@ -463,7 +482,7 @@
         "to_button_id": "button.focus_right",
         "mapping_type": "global"
       },
-      { "from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global" }
+      {"from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global"}
     ],
     "$additional_screen_content|default": "common.base_screen_empty_panel",
     "$use_loading_bars|default": true,
@@ -476,106 +495,101 @@
           "prevent_touch_input": false,
           "ttsSectionContainer": true,
           "variables": [
-            // Screen sizes - you should be using one of these unless explicitly told otherwise - in which case that size should be added as a variable here
-            // Win10
             {
-              //Desktop Texel Size: [376, 250]
               "requires": "$desktop_screen",
-              "$narrow_screen_size": [280, "100% - 10px"], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [282, "100% - 50px"], // Play Screen
-              "$tabbed_upsell_screen_size": [310, 173], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": [267, 240], // Realms Create
-              "$large_screen_size": [317, "100% - 10px"], // Multiplayer Invitations
-              "$store_screen_size": ["100% - 4px", "100% - 4px"], // Store Home
-              "$skin_pack_screen_size": ["100% - 4px", "100% - 50px"], // Skin Pack
-              "$resource_pack_screen_size": ["100% - 50px", "45%x + 65px"], // Texture Pack
-              "$upsell_screen_size": ["177%y - 208.5px", "100% - 4px"], // Skin Pack Upsell
-              "$create_world_upsell_screen_size": [360, 183],
-              "$create_realm_upsell_screen_size": [360, 183],
-              "$create_realm_upsell_play_screen_size": [360, 213],
-              "$max_create_world_upsell_screen_size": [360, "100% - 4px"],
-              "$min_resource_pack_screen_size": [372, 232.4],
-              "$max_resource_pack_screen_size": [400, 246],
-              "$max_upsell_screen_size": [250, 259.125],
-              "$rating_prompt_screen_size": [250, 87],
-              "$max_skin_pack_screen_size": [310, "56.25%x - 65.25px + 118.5px"],
-              "$extra_large_screen_size": ["100% - 4px", "100% - 4px"], // Skin Picker, Command Block screen
-              "$extra_large_max_screen_size": [370, "100% - 50px"],
-              "$xbl_immediate_signin_screen_size": [317, 158], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [317, 158], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [316, 161], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [364, 182], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [230, "100% - 50px"], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [317, 146], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [260, "100% - 50px"], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [204, 140], // Pop-up dialogue boxes and modal progress screens
-              "$tall_modal_screen_size": [204, 172],
-              "$patch_notes_screen_size": [300, "100% - 4px"], // Patch Notes Screen
-              "$mob_effect_screen_size": ["90%", "90%"], // Mob Effect Screen
-              "$purchase_coin_screen_size": ["90%", "17%x + 82px"], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": ["90%", "17%x + 117px"], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": ["90%", "17%x + 97px"], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": ["90%", "17%x + 132px"], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": ["70%", "85%"], //Choose Realm Screen
-              "$custom_templates_screen_size": ["70%", "85%"], //Custom Templates Screen
-              "$world_modal_screen_size": [290, 100], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": ["60%", "85%"], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": ["80%", "90%"], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [290, 160], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [300, 100], //custom gamepad disconnected modal size, to contain all languages in title
-              "$storage_migration_progress_size": [290, 100],
-              "$store_modal_screen_size": ["80%", "80%"],
-              "$csb_upsell_screen_size": ["90%", "60%x"]
+              "$narrow_screen_size": [ 280, "100% - 10px" ],
+              "$play_screen_size": [ 282, "100% - 50px" ],
+              "$tabbed_upsell_screen_size": [ 310, 173 ],
+              "$realms_create_screen_size": [ 267, 240 ],
+              "$large_screen_size": [ 317, "100% - 10px" ],
+              "$store_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$skin_pack_screen_size": [ "100% - 4px", "100% - 50px" ],
+              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ],
+              "$upsell_screen_size": [ "177%y - 208.5px", "100% - 4px" ],
+              "$create_world_upsell_screen_size": [ 360, 183 ],
+              "$create_realm_upsell_screen_size": [ 360, 183 ],
+              "$create_realm_upsell_play_screen_size": [ 360, 213 ],
+              "$max_create_world_upsell_screen_size": [ 360, "100% - 4px" ],
+              "$min_resource_pack_screen_size": [ 372, 232.4 ],
+              "$max_resource_pack_screen_size": [ 400, 246 ],
+              "$max_upsell_screen_size": [ 250, 259.125 ],
+              "$rating_prompt_screen_size": [ 250, 87 ],
+              "$max_skin_pack_screen_size": [ 310, "56.25%x - 65.25px + 118.5px" ],
+              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
+              "$xbl_immediate_signin_screen_size": [ 317, 158 ],
+              "$xbl_optional_signin_screen_size": [ 317, 158 ],
+              "$xbl_console_signin_screen_size": [ 316, 161 ],
+              "$xbl_console_qr_signin_screen_size": [ 364, 182 ],
+              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 50px" ],
+              "$xbl_first_launch_screen_size": [ 317, 146 ],
+              "$xbl_gamer_profile_screen_size": [ 260, "100% - 50px" ],
+              "$modal_screen_size": [ 204, 140 ],
+              "$tall_modal_screen_size": [ 204, 172 ],
+              "$patch_notes_screen_size": [ 300, "100% - 4px" ],
+              "$mob_effect_screen_size": [ "90%", "90%" ],
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ],
+              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ],
+              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ],
+              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ],
+              "$choose_realm_screen_size": [ "70%", "85%" ],
+              "$custom_templates_screen_size": [ "70%", "85%" ],
+              "$world_modal_screen_size": [ 290, 100 ],
+              "$day_one_experience_intro_screen_size": [ "60%", "85%" ],
+              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ],
+              "$world_conversion_complete_screen_size": [ 290, 160 ],
+              "$gamepad_disconnect_screen_size": [ 300, 100 ],
+              "$storage_migration_progress_size": [ 290, 100 ],
+              "$store_modal_screen_size": [ "80%", "80%" ],
+              "$csb_upsell_screen_size": [ "90%", "60%x" ]
             },
-            // PE edition and VR
             {
-              //Pocket Texel Size:  [320, 210]
               "requires": "($pocket_screen)",
-              "$narrow_screen_size": ["90.3225%", "100% - 4px"], // Realms Pending Invitations, Add Players
-              "$play_screen_size": ["83.4375%", "100% - 4px"], // Play Screen
-              "$tabbed_upsell_screen_size": [310, 173], // Trial Tabbed Upsell Screen
-              "$realms_create_screen_size": ["71.2766%", "100% - 4px"], // Realms Create
-              "$large_screen_size": ["70.3215%", "100% - 4px"], // Multiplayer Invitations
-              "$store_screen_size": ["100% - 4px", "100% - 4px"], // Store Home, purchase Skin Pack
-              "$skin_pack_screen_size": ["100% - 4px", "100% - 4px"], // Skin Pack
-              "$resource_pack_screen_size": ["100% - 50px", "45%x + 65px"], // Texture Pack
-              "$upsell_screen_size": ["100% - 76px", "100% - 4px"], // Skin Pack Upsell
-              "$create_world_upsell_screen_size": ["100% - 4px", 223],
-              "$create_realm_upsell_screen_size": ["100% - 4px", 223],
-              "$create_realm_upsell_play_screen_size": ["100% - 4px", 219],
-              "$max_create_world_upsell_screen_size": ["100% - 4px", "100% - 4px"],
-              "$min_resource_pack_screen_size": [306, 202.7],
-              "$max_resource_pack_screen_size": [313.3, 206],
-              "$max_upsell_screen_size": ["100% - 76px", "56.25%x + 118.5px"],
-              "$max_skin_pack_screen_size": ["100% - 4px", "56.25%x - 65.25px + 118.5px"],
-              "$extra_large_screen_size": ["100% - 4px", "100% - 4px"], // Skin Picker, Command Block screen
-              "$extra_large_max_screen_size": [370, "100% - 50px"],
-              "$xbl_immediate_signin_screen_size": [316, 153], // XBL Immediate Signin Popup
-              "$xbl_optional_signin_screen_size": [316, 153], // XBL Optional Signin Popup
-              "$xbl_console_signin_screen_size": [316, 161], // XBL Console Signin Popup
-              "$xbl_console_qr_signin_screen_size": [364, 182], // XBL Console QR Signin Popup
-              "$xbl_console_signin_succeeded_screen_size": [230, "100% - 4px"], // XBL Console Signin Succeeded Popup
-              "$xbl_first_launch_screen_size": [316, 146], // Trial Upsell
-              "$xbl_gamer_profile_screen_size": [316, "100% - 4px"], // XBL Console Signin Succeeded Popup
-              "$modal_screen_size": [204, 140], // Pop-up dialogue boxes and modal progress screens
-              "$rating_prompt_screen_size": [250, 87],
-              "$tall_modal_screen_size": [204, 172],
-              "$patch_notes_screen_size": [300, "100% - 4px"], // Patch Notes Screen
-              "$mob_effect_screen_size": ["90%", "90%"], // Mob Effect Screen
-              "$purchase_coin_screen_size": ["90%", "17%x + 82px"], //Coin Purchase Screen
-              "$purchase_coin_screen_size_extended": ["90%", "17%x + 117px"], //Coin Purchase Screen, with FAQ
-              "$purchase_coin_screen_size_not_enough": ["90%", "17%x + 97px"], //Coin Purchase Screen, when not enough coins for current purchase
-              "$purchase_coin_screen_size_extended_not_enough": ["90%", "17%x + 132px"], //Coin Purchase Screen, when not enough coins for current purchase, with FAQ
-              "$choose_realm_screen_size": ["70%", "85%"], //Choose Realm Screen
-              "$custom_templates_screen_size": ["70%", "85%"], //Custom Templates Screen
-              "$world_modal_screen_size": [290, 100], // world convert and world loading modal progress screens
-              "$day_one_experience_intro_screen_size": ["60%", "85%"], // Day One Experience intro popup
-              "$day_one_experience_import_progress_screen_size": ["80%", "90%"], // Day One Experience import progress modal screen
-              "$world_conversion_complete_screen_size": [290, 160], // World Conversion complete modal screen
-              "$gamepad_disconnect_screen_size": [300, 100], //custom gamepad disconnected modal size, to contain all languages in title
-              "$storage_migration_progress_size": [290, 100],
-              "$store_modal_screen_size": ["100% - 20px", "100% - 20px"],
-              "$csb_upsell_screen_size": ["100%-4px", "100%-4px"]
+              "$narrow_screen_size": [ "90.3225%", "100% - 4px" ],
+              "$play_screen_size": [ "83.4375%", "100% - 4px" ],
+              "$tabbed_upsell_screen_size": [ 310, 173 ],
+              "$realms_create_screen_size": [ "71.2766%", "100% - 4px" ],
+              "$large_screen_size": [ "70.3215%", "100% - 4px" ],
+              "$store_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$skin_pack_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ],
+              "$upsell_screen_size": [ "100% - 76px", "100% - 4px" ],
+              "$create_world_upsell_screen_size": [ "100% - 4px", 223 ],
+              "$create_realm_upsell_screen_size": [ "100% - 4px", 223 ],
+              "$create_realm_upsell_play_screen_size": [ "100% - 4px", 219 ],
+              "$max_create_world_upsell_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$min_resource_pack_screen_size": [ 306, 202.7 ],
+              "$max_resource_pack_screen_size": [ 313.3, 206 ],
+              "$max_upsell_screen_size": [ "100% - 76px", "56.25%x + 118.5px" ],
+              "$max_skin_pack_screen_size": [ "100% - 4px", "56.25%x - 65.25px + 118.5px" ],
+              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ],
+              "$extra_large_max_screen_size": [ 370, "100% - 50px" ],
+              "$xbl_immediate_signin_screen_size": [ 316, 153 ],
+              "$xbl_optional_signin_screen_size": [ 316, 153 ],
+              "$xbl_console_signin_screen_size": [ 316, 161 ],
+              "$xbl_console_qr_signin_screen_size": [ 364, 182 ],
+              "$xbl_console_signin_succeeded_screen_size": [ 230, "100% - 4px" ],
+              "$xbl_first_launch_screen_size": [ 316, 146 ],
+              "$xbl_gamer_profile_screen_size": [ 316, "100% - 4px" ],
+              "$modal_screen_size": [ 204, 140 ],
+              "$rating_prompt_screen_size": [ 250, 87 ],
+              "$tall_modal_screen_size": [ 204, 172 ],
+              "$patch_notes_screen_size": [ 300, "100% - 4px" ],
+              "$mob_effect_screen_size": [ "90%", "90%" ],
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ],
+              "$purchase_coin_screen_size_extended": [ "90%", "17%x + 117px" ],
+              "$purchase_coin_screen_size_not_enough": [ "90%", "17%x + 97px" ],
+              "$purchase_coin_screen_size_extended_not_enough": [ "90%", "17%x + 132px" ],
+              "$choose_realm_screen_size": [ "70%", "85%" ],
+              "$custom_templates_screen_size": [ "70%", "85%" ],
+              "$world_modal_screen_size": [ 290, 100 ],
+              "$day_one_experience_intro_screen_size": [ "60%", "85%" ],
+              "$day_one_experience_import_progress_screen_size": [ "80%", "90%" ],
+              "$world_conversion_complete_screen_size": [ 290, 160 ],
+              "$gamepad_disconnect_screen_size": [ 300, 100 ],
+              "$storage_migration_progress_size": [ 290, 100 ],
+              "$store_modal_screen_size": [ "100% - 20px", "100% - 20px" ],
+              "$csb_upsell_screen_size": [ "100%-4px", "100%-4px" ]
             }
           ],
           "button_mappings": [
@@ -608,12 +622,9 @@
             {
               "exit_pane@common.close_button": {
                 "size": "$close_size",
-                "$close_size": [100, "100%"],
-                "variables": {
-                  "requires": "($touch or $pocket_edition)",
-                  "$close_size": [60, "60%"]
-                },
-                "offset": [5, 0],
+                "$close_size": [ 100, "100%" ],
+                "variables": {"requires": "($touch or $pocket_edition)", "$close_size": [ 60, "60%" ]},
+                "offset": [ 5, 0 ],
                 "anchor_to": "top_right",
                 "anchor_from": "top_right",
                 "controls": [
@@ -621,7 +632,7 @@
                   {
                     "hover@global.empty_panel": {
                       "controls": [
-                        { "hover_text@global.hover_text": { "property_bag": { "#hover_text": "close screen" } } }
+                        {"hover_text@global.hover_text": {"property_bag": {"#hover_text": "close screen"}}}
                       ]
                     }
                   },
@@ -631,9 +642,9 @@
             },
             {
               "exit_pane@common.close_button": {
-                "size": [60, "60%"],
+                "size": [ 60, "60%" ],
                 "ignored": "(not ($touch or $pocket_edition))",
-                "offset": [-5, 0],
+                "offset": [ -5, 0 ],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
@@ -641,7 +652,7 @@
                   {
                     "hover@global.empty_panel": {
                       "controls": [
-                        { "hover_text@global.hover_text": { "property_bag": { "#hover_text": "close screen" } } }
+                        {"hover_text@global.hover_text": {"property_bag": {"#hover_text": "close screen"}}}
                       ]
                     }
                   },
@@ -681,7 +692,6 @@
       }
     ]
   },
-
   "inventory_selected_icon_button": {
     "type": "button",
     "anchor_from": "center",
@@ -691,7 +701,7 @@
     "hover_control": "hover",
     "pressed_control": "pressed",
     "layer": -10,
-    "size": [16, 16],
+    "size": [ 16, 16 ],
     "follows_cursor": true,
     "sound_name": "random.click",
     "sound_volume": 1.0,
@@ -700,11 +710,11 @@
     "$durability_bar_required|default": true,
     "$storage_bar_required|default": true,
     "controls": [
-      { "default@global.inventory_icon_panel": {} },
-      { "pressed@global.inventory_icon_panel": {} },
-      { "hover@global.inventory_icon_panel": {} },
-      { "durability_bar_grabbed@global.durability_bar_grabbed": {} },
-      { "storage_bar_grabbed@global.storage_bar_grabbed": {} }
+      {"default@global.inventory_icon_panel": {}},
+      {"pressed@global.inventory_icon_panel": {}},
+      {"hover@global.inventory_icon_panel": {}},
+      {"durability_bar_grabbed@global.durability_bar_grabbed": {}},
+      {"storage_bar_grabbed@global.storage_bar_grabbed": {}}
     ]
   },
   "hover_text": {
@@ -727,7 +737,7 @@
   "root_panel": {
     "type": "input_panel",
     "size": "$size",
-    "$size": [176, 166],
+    "$size": [ 176, 166 ],
     "anchor_from": "center",
     "anchor_to": "center",
     "button_mappings": [
@@ -746,8 +756,8 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      { "from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global" },
-      { "from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global" },
+      {"from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global"},
+      {"from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global"},
       {
         "from_button_id": "button.arrow_down",
         "to_button_id": "button.arrow_key",
@@ -779,7 +789,7 @@
         "to_button_id": "button.container_reset_held",
         "mapping_type": "pressed"
       },
-      { "from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global" },
+      {"from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global"},
       {
         "from_button_id": "button.turn_down",
         "to_button_id": "button.scroll_down",
@@ -807,33 +817,29 @@
       }
     ]
   },
-  "empty_panel": { "type": "panel" },
-  "empty_label": { "type": "label" },
-  "empty_image": { "type": "image" },
-  "empty_stack": { "type": "stack_panel" },
-  "custom_renderer": { "type": "custom", "renderer": "$type" },
-  "container_item@common.container_item": {
-    "$item_collection_name": "$item_collection",
-    "size": "$cell_size",
-    "$cell_size": [18, 18]
-  },
+  "empty_panel": {"type": "panel"},
+  "empty_label": {"type": "label"},
+  "empty_image": {"type": "image"},
+  "empty_stack": {"type": "stack_panel"},
+  "custom_renderer": {"type": "custom", "renderer": "$type"},
+  "container_item@common.container_item": {"$item_collection_name": "$item_collection", "size": "$cell_size", "$cell_size": [ 18, 18 ]},
   "storage_bar_grabbed": {
     "type": "custom",
     "renderer": "progress_bar_renderer",
-    "size": [13, 1],
+    "size": [ 13, 1 ],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [0, -2.6],
-    "primary_color": [0.4, 0.4, 1.0, 1.0],
-    "full_storage_color": [1.0, 0.4, 0.4],
-    "property_bag": { "drop_shadow": false, "is_storage_bar": true },
+    "offset": [ 0, -2.6 ],
+    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
+    "full_storage_color": [ 1.0, 0.4, 0.4 ],
+    "property_bag": {"drop_shadow": false, "is_storage_bar": true},
     "controls": [
       {
         "bg@global.empty_image": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [0, 1],
-          "size": ["default", "default"],
+          "offset": [ 0, 1 ],
+          "size": [ "default", "default" ],
           "bindings": [
             {
               "binding_name": "#selected_item_storage_visible",
@@ -865,20 +871,20 @@
   "durability_bar_grabbed": {
     "type": "custom",
     "renderer": "progress_bar_renderer",
-    "size": [13, 1],
+    "size": [ 13, 1 ],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "offset": [1, -2.6],
-    "primary_color": [0.4, 0.4, 1.0, 1.0],
-    "full_storage_color": [1.0, 0.4, 0.4],
-    "property_bag": { "drop_shadow": false, "is_durability": true, "round_value": true },
+    "offset": [ 1, -2.6 ],
+    "primary_color": [ 0.4, 0.4, 1.0, 1.0 ],
+    "full_storage_color": [ 1.0, 0.4, 0.4 ],
+    "property_bag": {"drop_shadow": false, "is_durability": true, "round_value": true},
     "controls": [
       {
         "bg@global.empty_image": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
-          "offset": [0, 1],
-          "size": ["default", "default"],
+          "offset": [ 0, 1 ],
+          "size": [ "default", "default" ],
           "bindings": [
             {
               "binding_name": "#selected_item_durability_visible",

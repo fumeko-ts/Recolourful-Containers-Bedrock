@@ -1,81 +1,77 @@
 {
   "namespace": "blast_furnace_screen",
   "blast_furnace_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
-      { "common_panel@screen_content.container_base": { "$blast_furnace_screen": true } },
+      {"common_panel@screen_content.container_base": {"$blast_furnace_screen": true}},
       {
         "blast_furnace_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 70],
+          "size": [ 176, 70 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "controls": [
-            { "filler@global.empty_panel": { "size": [176, 16] } },
+            {"filler@global.empty_panel": {"size": [ 176, 16 ]}},
             {
               "main_content@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 54],
+                "size": [ 176, 54 ],
                 "controls": [
-                  { "filler_1@global.empty_panel": { "size": [55, "fill"] } },
+                  {"filler_1@global.empty_panel": {"size": [ 55, "fill" ]}},
                   {
                     "inputs@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 54],
+                      "size": [ 18, 54 ],
                       "controls": [
-                        {
-                          "smelt_input_item@global.container_item": { "$item_collection": "furnace_ingredient_items" }
-                        },
+                        {"smelt_input_item@global.container_item": {"$item_collection": "furnace_ingredient_items"}},
                         {
                           "flame_buffer_and_holder": {
                             "type": "input_panel",
                             "contained": true,
-                            "size": [18, 18],
-                            "controls": [{ "smelt_flame_progress@blast_furnace_screen.flame_progress": {} }]
+                            "size": [ 18, 18 ],
+                            "controls": [
+                              {"smelt_flame_progress@blast_furnace_screen.flame_progress": {}}
+                            ]
                           }
                         },
-                        { "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" } }
+                        {"fuel_input_item@global.container_item": {"$item_collection": "furnace_fuel_items"}}
                       ]
                     }
                   },
-                  { "filler_2@global.empty_panel": { "size": [6, "fill"] } },
+                  {"filler_2@global.empty_panel": {"size": [ 6, "fill" ]}},
                   {
                     "arrow_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [24, 54],
+                      "size": [ 24, 54 ],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
-                        { "arrow_progress@blast_furnace_screen.arrow_progress": {} },
-                        { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 18 ]}},
+                        {"arrow_progress@blast_furnace_screen.arrow_progress": {}},
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 20 ]}}
                       ]
                     }
                   },
-                  { "filler_3@global.empty_panel": { "size": [8, "fill"] } },
+                  {"filler_3@global.empty_panel": {"size": [ 8, "fill" ]}},
                   {
                     "item_output_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [26, 54],
+                      "size": [ 26, 54 ],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 14] } },
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 14 ]}},
                         {
                           "cell_holder@global.empty_panel": {
-                            "size": [26, 26],
+                            "size": [ 26, 26 ],
                             "controls": [
                               {
-                                "output_item@global.container_item": {
-                                  "anchor_to": "center",
-                                  "anchor_from": "center",
-                                  "$item_collection": "furnace_output_items"
-                                }
+                                "output_item@global.container_item": {"anchor_to": "center", "anchor_from": "center", "$item_collection": "furnace_output_items"}
                               }
                             ]
                           }
                         },
-                        { "filler_2@global.empty_panel": { "size": ["fill", 14] } }
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 14 ]}}
                       ]
                     }
                   },
-                  { "filler_4@global.empty_panel": { "size": [35, "fill"] } }
+                  {"filler_4@global.empty_panel": {"size": [ 35, "fill" ]}}
                 ]
               }
             }
@@ -83,10 +79,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   },
@@ -98,28 +91,30 @@
     "keep_ratio": true,
     "clip_pixelperfect": true,
     "$uv_size": [],
-    "clip_offset": [0, -1],
-    "$uv": [0, 0],
+    "clip_offset": [ 0, -1 ],
+    "$uv": [ 0, 0 ],
     "uv_size": "$uv_size",
     "uv": "$uv",
     "variables": {
       "requires": "($blast_furnace_sprite = 'lit_progress')",
-      "$uv_size": [14, 14],
+      "$uv_size": [ 14, 14 ],
       "$blast_furnace_sprite_src": "textures/ui/ashur/animations/blast_furnace_lit",
       "$uv": "@blast_furnace_screen.burn_lit"
     },
-    "bindings": [{ "binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always" }]
+    "bindings": [
+      {"binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always"}
+    ]
   },
-  "burn_lit": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+  "burn_lit": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]},
   "arrow_progress@blast_furnace_screen.blast_furnace_image_controls": {
-    "size": [24, 16],
+    "size": [ 24, 16 ],
     "$blast_furnace_sprite": "burn_progress",
     "$source": "#furnace_arrow_ratio",
     "$houkou": "left"
   },
   "flame_progress@blast_furnace_screen.blast_furnace_image_controls": {
-    "size": [14, 14],
-    "offset": [-1, 0],
+    "size": [ 14, 14 ],
+    "offset": [ -1, 0 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "$blast_furnace_sprite": "lit_progress",

@@ -1,5 +1,1 @@
-{
-  "trade_screen@global.container_screen": {
-    "$screen_content": "tradeing_screen.screen_panel"
-  }
-}
+{"trade_screen@global.container_screen": {"$screen_content": "tradeing_screen.screen_panel"}}

@@ -1,40 +1,37 @@
 {
   "namespace": "dispenser_screen",
   "dispenser_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
-      { "common_panel@screen_content.container_base": { "layer": 1, "$dispenser_screen": true } },
+      {"common_panel@screen_content.container_base": {"layer": 1, "$dispenser_screen": true}},
       {
         "4@screen_content.image_element": {
-          "size": [51, 68],
-          "uv_size": [51, 68],
+          "size": [ 51, 68 ],
+          "uv_size": [ 51, 68 ],
           "animation_reset_name": "screen_animation_reset",
           "disable_anim_fast_forward": true,
           "layer": 6,
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "offset": [-8, -41],
+          "offset": [ -8, -41 ],
           "texture": "assets/advanced_sprites/animated/dispenser/dispenser_bow.png",
-          "uv": [0, 154],
+          "uv": [ 0, 154 ],
           "alpha": "@dispenser_screen.bow_20"
         }
       },
       {
         "redstone@global.empty_panel": {
-          "size": [117, 77],
+          "size": [ 117, 77 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
             {
               "1@screen_content.image_element": {
-                "size": [117, 77],
-                "uv_size": [117, 77],
+                "size": [ 117, 77 ],
+                "uv_size": [ 117, 77 ],
                 "layer": 4,
                 "texture": "textures/ui/ashur/animations/dispenser",
-                "uv": {
-                  "anim_type": "aseprite_flip_book",
-                  "initial_uv": [0, 0]
-                }
+                "uv": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]}
               }
             }
           ]
@@ -43,28 +40,28 @@
       {
         "dispenser_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 70],
+          "size": [ 176, 70 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 6] } },
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
             {
               "dispenser_main_content@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 64],
+                "size": [ 176, 64 ],
                 "controls": [
-                  { "filler_2@global.empty_panel": { "size": [61, "fill"] } },
+                  {"filler_2@global.empty_panel": {"size": [ 61, "fill" ]}},
                   {
                     "label_and_grid_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [54, 64],
+                      "size": [ 54, 64 ],
                       "controls": [
-                        { "dispenser_label_holder@global.empty_panel": { "size": [54, 10] } },
+                        {"dispenser_label_holder@global.empty_panel": {"size": [ 54, 10 ]}},
                         {
                           "dispenser_item_input": {
                             "type": "grid",
-                            "size": [54, 54],
-                            "grid_dimensions": [3, 3],
+                            "size": [ 54, 54 ],
+                            "grid_dimensions": [ 3, 3 ],
                             "collection_name": "container_items",
                             "grid_item_template": "common.container_item",
                             "$item_collection_name": "container_items"
@@ -73,7 +70,7 @@
                       ]
                     }
                   },
-                  { "filler_3@global.empty_panel": { "size": [61, "fill"] } }
+                  {"filler_3@global.empty_panel": {"size": [ 61, "fill" ]}}
                 ]
               }
             }
@@ -81,10 +78,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   },
@@ -96,8 +90,8 @@
     "duration": "$frame_time",
     "next": "(@dispenser_screen. + $next_frame)"
   },
-  "bow_20@dispenser_screen.bow_uv_template": { "$frame": [0, 0], "$next_frame": "bow_21", "$frame_time": 10 },
-  "bow_21@dispenser_screen.bow_uv_template": { "$frame": [0, 68], "$next_frame": "bow_22", "$frame_time": 0.1 },
-  "bow_22@dispenser_screen.bow_uv_template": { "$frame": [0, 136], "$next_frame": "bow_23", "$frame_time": 1 },
-  "bow_23@dispenser_screen.bow_uv_template": { "$frame": [0, 68], "$next_frame": "bow_20", "$frame_time": 0.1 }
+  "bow_20@dispenser_screen.bow_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "bow_21", "$frame_time": 10},
+  "bow_21@dispenser_screen.bow_uv_template": {"$frame": [ 0, 68 ], "$next_frame": "bow_22", "$frame_time": 0.1},
+  "bow_22@dispenser_screen.bow_uv_template": {"$frame": [ 0, 136 ], "$next_frame": "bow_23", "$frame_time": 1},
+  "bow_23@dispenser_screen.bow_uv_template": {"$frame": [ 0, 68 ], "$next_frame": "bow_20", "$frame_time": 0.1}
 }

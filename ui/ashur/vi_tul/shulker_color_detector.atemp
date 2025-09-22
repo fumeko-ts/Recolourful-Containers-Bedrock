@@ -1,53 +1,83 @@
 {
   "namespace": "shulker_color_detector",
   "shulker_color_detector@global.root_panel": {
-    // this was made within 3 ish hours so im not 100% it compleately works only languages i have tested was ja_JP and en_US
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 1,
     "controls": [
-      { "1@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§f§r", "$shulker_texel": "white" } }, //white
-      { "2@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§p§r", "$shulker_texel": "orange" } }, //orange
-      { "3@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§5§r", "$shulker_texel": "magenta" } }, //magenta
-      { "4@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§b§r", "$shulker_texel": "light_blue" } }, //light blue
-      { "5@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§e§r", "$shulker_texel": "yellow" } }, //yellow
-      { "6@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§a§r", "$shulker_texel": "lime" } }, //lime
-      { "7@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§d§r", "$shulker_texel": "pink" } }, //pink
-      { "8@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§8§r", "$shulker_texel": "gray" } }, //grey
-      { "9@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§7§r", "$shulker_texel": "light_gray" } }, //silver/light grey
-      { "10@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§3§r", "$shulker_texel": "cyan" } }, //cyan
-      { "11@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§u§r", "$shulker_texel": "purple" } }, //purple
-      { "12@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§9§r", "$shulker_texel": "blue" } }, //blue
-      { "13@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§n§r", "$shulker_texel": "brown" } }, //brown
-      { "14@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§2§r", "$shulker_texel": "green" } }, //green
-      { "15@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§c§r", "$shulker_texel": "red" } }, //red
-      { "16@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:§0§r", "$shulker_texel": "black" } }, //black
-
-      { "17@shulker_color_detector.colored_bindings": { "$shulker_id": "ui:contai", "$shulker_texel": "default" } }, //default shulker
-
       {
-        "custom_renamed@screen_content.image_element": {// shulker with a custom name
-          "size": [176, 166],
+        "1@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7f\u00a7r", "$shulker_texel": "white"}
+      },
+      {
+        "2@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7p\u00a7r", "$shulker_texel": "orange"}
+      },
+      {
+        "3@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a75\u00a7r", "$shulker_texel": "magenta"}
+      },
+      {
+        "4@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7b\u00a7r", "$shulker_texel": "light_blue"}
+      },
+      {
+        "5@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7e\u00a7r", "$shulker_texel": "yellow"}
+      },
+      {
+        "6@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7a\u00a7r", "$shulker_texel": "lime"}
+      },
+      {
+        "7@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7d\u00a7r", "$shulker_texel": "pink"}
+      },
+      {
+        "8@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a78\u00a7r", "$shulker_texel": "gray"}
+      },
+      {
+        "9@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a77\u00a7r", "$shulker_texel": "light_gray"}
+      },
+      {
+        "10@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a73\u00a7r", "$shulker_texel": "cyan"}
+      },
+      {
+        "11@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7u\u00a7r", "$shulker_texel": "purple"}
+      },
+      {
+        "12@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a79\u00a7r", "$shulker_texel": "blue"}
+      },
+      {
+        "13@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7n\u00a7r", "$shulker_texel": "brown"}
+      },
+      {
+        "14@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a72\u00a7r", "$shulker_texel": "green"}
+      },
+      {
+        "15@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7c\u00a7r", "$shulker_texel": "red"}
+      },
+      {
+        "16@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a70\u00a7r", "$shulker_texel": "black"}
+      },
+      {
+        "17@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:contai", "$shulker_texel": "default"}
+      },
+      {
+        "custom_renamed@screen_content.image_element": {
+          "size": [ 176, 166 ],
           "layer": 1,
           "anchor_from": "center",
           "anchor_to": "center",
-          "uv_size": [176, 166],
+          "uv_size": [ 176, 166 ],
           "texture": "assets/shulker-underlay"
         }
       }
     ]
   },
-
   "colored_bindings@screen_content.image_element": {
     "$shulker_texture|default": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "layer": 2,
     "anchor_from": "center",
     "anchor_to": "center",
-    "uv_size": [176, 166],
+    "uv_size": [ 176, 166 ],
     "texture": "$shulker_texture",
-    "property_bag": { "#screen_route": "$container_title" },
+    "property_bag": {"#screen_route": "$container_title"},
     "bindings": [
       {
         "binding_name": "#item_id_aux",

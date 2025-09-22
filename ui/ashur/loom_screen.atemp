@@ -48,7 +48,20 @@
                       "size": [50, 18],
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": [22, "fill"] } },
-                        { "pattern_panel@loom_screen.pattern_panel": {} },
+                        {
+                          "pattern_panel@global.empty_panel": {
+                            "size": [18, 18],
+                            "controls": [
+                              { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
+                              {
+                                "img@loom_screen.item_empty_image": {
+                                  "$item_collection": "loom_material_items",
+                                  "$current_cell_texture": "assets/sprite_assets/container/slot/banner_pattern"
+                                }
+                              }
+                            ]
+                          }
+                        },
                         { "filler_2@global.empty_panel": { "size": [10, "fill"] } }
                       ]
                     }
@@ -125,9 +138,24 @@
                 "anchor_from": "top_right",
                 "controls": [
                   {
-                    "result_banner_renderer@loom_screen.result_banner_renderer": {
+                    "result_banner_renderer": {
+                      "type": "custom",
+                      "renderer": "banner_pattern_renderer",
+                      "size": [20, 40],
+                      "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
-                      "anchor_from": "bottom_left"
+                      "bindings": [
+                        {
+                          "binding_name": "#result_patterns",
+                          "binding_name_override": "#banner_patterns",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#result_colors",
+                          "binding_name_override": "#banner_colors",
+                          "binding_condition": "always_when_visible"
+                        }
+                      ]
                     }
                   }
                 ]
@@ -137,10 +165,7 @@
         }
       },
       {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
+        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
       },
       {
         "disabled_scroll_box@global.empty_panel": {
@@ -196,18 +221,6 @@
       }
     ]
   },
-  "pattern_panel@global.empty_panel": {
-    "size": [18, 18],
-    "controls": [
-      { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
-      {
-        "img@loom_screen.item_empty_image": {
-          "$item_collection": "loom_material_items",
-          "$current_cell_texture": "assets/sprite_assets/container/slot/banner_pattern"
-        }
-      }
-    ]
-  },
   "item_empty_image": {
     "type": "image",
     "texture": "$current_cell_texture",
@@ -230,25 +243,7 @@
   "dye_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/sprite_assets/container/slot/dye"
   },
-  "result_banner_renderer": {
-    "type": "custom",
-    "renderer": "banner_pattern_renderer",
-    "size": [20, 40],
-    "anchor_from": "bottom_left",
-    "anchor_to": "bottom_left",
-    "bindings": [
-      {
-        "binding_name": "#result_patterns",
-        "binding_name_override": "#banner_patterns",
-        "binding_condition": "always_when_visible"
-      },
-      {
-        "binding_name": "#result_colors",
-        "binding_name_override": "#banner_colors",
-        "binding_condition": "always_when_visible"
-      }
-    ]
-  },
+
   "scroll_panel@scroll_panel.scroll_panel": {
     "$scroll_size": [12, 56.2],
     "size": [73, 56.2],

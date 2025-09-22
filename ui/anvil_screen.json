@@ -1,5 +1,1 @@
-{
-  "anvil_screen@global.container_screen": {
-    "$screen_content": "anvil_screen.anvil_panel"
-  }
-}
+{"anvil_screen@global.container_screen": {"$screen_content": "anvil_screen.anvil_panel"}}

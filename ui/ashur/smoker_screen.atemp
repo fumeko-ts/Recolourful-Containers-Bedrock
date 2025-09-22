@@ -24,17 +24,7 @@
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "controls": [
-                        {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
-                        {
-                          "label_stack@global.empty_stack": {
-                            "orientation": "horizontal",
-                            "size": [ 176, 10 ],
-                            "controls": [
-                              {"filler_1@global.empty_panel": {"size": [ 67, "fill" ]}},
-                              {"label_holder@global.empty_panel": {"size": [ 109, 10 ]}}
-                            ]
-                          }
-                        },
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 16 ]}},
                         {
                           "main_content@global.empty_stack": {
                             "orientation": "horizontal",
@@ -119,7 +109,7 @@
                     }
                   },
                   {
-                    "bottom@crafting_screen.inventory_bottom_half_with_label": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+                    "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
                   }
                 ]
               }
@@ -132,7 +122,7 @@
   "smoker_image_controls@global.empty_image": {
     "layer": 3,
     "texture": "$smoker_sprite_src",
-    "$smoker_sprite_src": "('assets/sprite_assets/container/smoker/' + $smoker_sprite)",// we severly overcomplicate this because why not
+    "$smoker_sprite_src": "('assets/sprite_assets/container/smoker/' + $smoker_sprite)",
     "clip_direction": "$houkou",
     "keep_ratio": true,
     "clip_pixelperfect": true,

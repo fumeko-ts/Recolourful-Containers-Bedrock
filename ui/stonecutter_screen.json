@@ -1,5 +1,3 @@
 {
-  "stonecutter_screen@global.container_screen": {
-    "$screen_content": "stonecutter_screen.stonecutter_panel"
-  }
+  "stonecutter_screen@global.container_screen": {"$screen_content": "stonecutter_screen.stonecutter_panel"}
 }

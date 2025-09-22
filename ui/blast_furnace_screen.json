@@ -1,5 +1,3 @@
 {
-  "blast_furnace_screen@global.container_screen": {
-    "$screen_content": "blast_furnace_screen.blast_furnace_panel"
-  }
+  "blast_furnace_screen@global.container_screen": {"$screen_content": "blast_furnace_screen.blast_furnace_panel"}
 }

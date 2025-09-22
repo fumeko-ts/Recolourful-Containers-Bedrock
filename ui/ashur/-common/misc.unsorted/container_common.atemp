@@ -4,12 +4,7 @@
     "anchor_to": "center",
     "anchor_from": "center",
     "controls": [
-      {
-        "screen@global.empty_panel": {
-          "size": ["100%", "100%"],
-          "controls": "$screen_controls"
-        }
-      },
+      {"screen@global.empty_panel": {"size": [ "100%", "100%" ], "controls": "$screen_controls"}},
       {"2@common.selected_item_details_factory": {}},
       {"3@common.item_lock_notification_factory": {}},
       {"4@common.flying_item_renderer": {"layer": 12}},
