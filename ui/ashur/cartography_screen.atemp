@@ -107,7 +107,7 @@
                         },
                         {
                           "8@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/map",
+                            "$map_src": "assets/sprite_assets/container/cartography_table/locked_map",
                             "$mode": "locked"
                           }
                         }
