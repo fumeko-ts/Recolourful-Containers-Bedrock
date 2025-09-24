@@ -129,16 +129,23 @@
       }
     ]
   },
+
+
+  
   "text_field@screen_content.image_element": {
     "nineslice_size": 1,
-    "texture": "assets/sprite_assets/widget/text_field",
+    "texture": "assets/sprite_assets/recipe_book/text_field",
     "size": [ "100%", "100%" ]
   },
   "text_field_highlighted@screen_content.image_element": {
     "nineslice_size": 1,
-    "texture": "assets/sprite_assets/widget/text_field_highlighted",
+    "texture": "assets/sprite_assets/recipe_book/text_field_highlighted",
     "size": [ "100%", "100%" ]
   },
+
+
+
+
   "anvil_text_field@screen_content.image_element": {"texture": "assets/sprite_assets/container/anvil/text_field_disabled"},
   "anvil_text_field_highlighted@screen_content.image_element": {
     "nineslice_size": 2,

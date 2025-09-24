@@ -55,59 +55,59 @@
                       "size": [66, 66],
                       "controls": [
                         {
-                          "1@screen_content.image_element": {
+                          "1@cartography_screen.map_image": {
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
                             "layer": 3,
                             "texture": "assets/sprite_assets/container/cartography_table/duplicated_map",
                             "size": [50, 66],
-                            "bindings": [{ "binding_name": "#is_clone_mode", "binding_name_override": "#visible" }]
+                            "$mode": "clone"
                           }
                         },
                         {
-                          "2@screen_content.image_element": {
+                          "2@cartography_screen.map_image": {
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
                             "layer": 5,
                             "offset": [0, 14],
                             "texture": "assets/sprite_assets/container/cartography_table/duplicated_map",
                             "size": [50, 66],
-                            "bindings": [{ "binding_name": "#is_clone_mode", "binding_name_override": "#visible" }]
+                            "$mode": "clone"
                           }
                         },
                         {
                           "3@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/map",
                             "$mode": "none"
                           }
                         },
                         {
                           "4@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/map",
                             "$mode": "rename"
                           }
                         },
                         {
                           "5@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/map",
                             "$mode": "basic_map"
                           }
                         },
                         {
                           "6@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/map",
                             "$mode": "locator_map"
                           }
                         },
                         {
                           "7@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/scaled_map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/scaled_map",
                             "$mode": "extend"
                           }
                         },
                         {
                           "8@cartography_screen.map_image": {
-                            "$map_src": "assets/sprite_assets/container/cartography_table/locked_map",
+                            "$map_sprite": "assets/sprite_assets/container/cartography_table/locked_map",
                             "$mode": "locked"
                           }
                         }
@@ -192,7 +192,7 @@
     ]
   },
   "map_image@screen_content.image_element": {
-    "texture": "$map_src",
+    "texture": "$map_sprite",
     "bindings": [{ "binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible" }]
   }
 }
