@@ -1,10 +1,9 @@
 {
   "namespace": "global",
-  "highlight_slot": {
-    "type": "panel",
+  "highlight_slot@global.empty_panel": {
     "$white_highlight_offset": [ 0, 0 ],
     "$slot_vars": "screen_content.highlight_slot",
-    "variables": {"requires": "($recipe_book = true)", "$slot_vars": "common.empty_panel"},
+    "variables": {"requires": "($recipe_book = true)", "$slot_vars": "global.empty_panel"},
     "controls": [
       {
         "highlight@$slot_vars": {
@@ -203,8 +202,7 @@
     "$bar_layer|default": 20,
     "controls": [
       {
-        "item_cell": {
-          "type": "panel",
+        "item_cell@global.empty_panel": {
           "size": "$cell_image_size",
           "layer": 0,
           "controls": [
@@ -239,8 +237,7 @@
     "size": [ "100%", 93 ],
     "controls": [
       {
-        "inventory_panel": {
-          "type": "panel",
+        "inventory_panel@global.empty_panel": {
           "size": [ 88, 83 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
@@ -325,8 +322,7 @@
       }
     ]
   },
-  "inventory_selected_stack_size_text": {
-    "type": "label",
+  "inventory_selected_stack_size_text@global.empty_label": {
     "offset": [ 0, 1 ],
     "anchor_to": "bottom_right",
     "anchor_from": "bottom_right",
@@ -338,8 +334,7 @@
       {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
     ]
   },
-  "inventory_icon_panel": {
-    "type": "panel",
+  "inventory_icon_panel@global.empty_panel": {
     "controls": [
       {"selected_item_icon@global.inventory_selected_icon": {}},
       {"selected_stack_size_text@global.inventory_selected_stack_size_text": {}},
@@ -630,7 +625,7 @@
                 "controls": [
                   {"default@global.empty_panel": {}},
                   {
-                    "hover@global.empty_image": {
+                    "hover@screen_content.image_element": {
                       "size": ["100%", "100%"],
                       "layer": 2,
                       "texture": "textures/ui/white",
@@ -653,7 +648,7 @@
                 "controls": [
                   {"default@global.empty_panel": {}},
                   {
-                    "hover@global.empty_image": {
+                    "hover@screen_content.image_element": {
                       "size": ["100%", "100%"],
                       "layer": 2,
                       "texture": "textures/ui/white",
@@ -723,10 +718,9 @@
       {"storage_bar_grabbed@global.storage_bar_grabbed": {}}
     ]
   },
-  "hover_text": {
+  "hover_text@global.custom_renderer": {
     "$hover_text_max_width|default": 0,
-    "type": "custom",
-    "renderer": "hover_text_renderer",
+    "$type": "hover_text_renderer",
     "hover_text_max_width": "$hover_text_max_width",
     "layer": 5000,
     "allow_clipping": false,
@@ -829,9 +823,8 @@
   "empty_stack": {"type": "stack_panel"},
   "custom_renderer": {"type": "custom", "renderer": "$type"},
   "container_item@common.container_item": {"$item_collection_name": "$item_collection", "size": "$cell_size", "$cell_size": [ 18, 18 ]},
-  "storage_bar_grabbed": {
-    "type": "custom",
-    "renderer": "progress_bar_renderer",
+  "storage_bar_grabbed@global.custom_renderer": {
+    "$type": "progress_bar_renderer",
     "size": [ 13, 1 ],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
@@ -841,7 +834,7 @@
     "property_bag": {"drop_shadow": false, "is_storage_bar": true},
     "controls": [
       {
-        "bg@global.empty_image": {
+        "bg@screen_content.image_element": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
           "offset": [ 0, 1 ],
@@ -874,9 +867,8 @@
       }
     ]
   },
-  "durability_bar_grabbed": {
-    "type": "custom",
-    "renderer": "progress_bar_renderer",
+  "durability_bar_grabbed@global.custom_renderer": {
+    "$type": "progress_bar_renderer",
     "size": [ 13, 1 ],
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
@@ -886,7 +878,7 @@
     "property_bag": {"drop_shadow": false, "is_durability": true, "round_value": true},
     "controls": [
       {
-        "bg@global.empty_image": {
+        "bg@screen_content.image_element": {
           "texture": "textures/ui/ashur/durability_underlay",
           "layer": -1,
           "offset": [ 0, 1 ],

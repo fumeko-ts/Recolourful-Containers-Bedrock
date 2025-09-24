@@ -1,7 +1,6 @@
 {
   "namespace": "toggle",
-  "tab_panel": {
-    "type": "panel",
+  "tab_panel@global.empty_panel": {
     "$tab_content|default": "global.empty_panel",
     "$texture_sould_keep_ratio|default": false,
     "$toggle_hover_text|default": "null",
@@ -22,8 +21,7 @@
         }
       },
       {
-        "tab_content_sizer": {
-          "type": "panel",
+        "tab_content_sizer@global.empty_panel": {
           "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
           "size": "$tab_content_size",
           "controls": [
@@ -33,8 +31,7 @@
       }
     ]
   },
-  "tab_toggle": {
-    "type": "panel",
+  "tab_toggle@global.empty_panel": {
     "anchor_to": "center",
     "anchor_from": "center",
     "$tab_panel|default": "toggle.tab_panel",

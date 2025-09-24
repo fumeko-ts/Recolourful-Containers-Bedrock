@@ -126,8 +126,7 @@
                                 }
                               },
                               {
-                                "scroll_box": {
-                                  "type": "panel",
+                                "scroll_box@global.empty_panel": {
                                   "layer": 5,
                                   "anchor_from": "center",
                                   "anchor_to": "center",

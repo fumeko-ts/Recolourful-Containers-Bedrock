@@ -1,9 +1,7 @@
 {
   "namespace": "cartography_screen",
   "cartography_panel@container_common.container_details": {
-    "type": "panel",
     "size": [176, 166],
-    "layer": 2,
     "$screen_controls": [
       {
         "compass@screen_content.image_element": {

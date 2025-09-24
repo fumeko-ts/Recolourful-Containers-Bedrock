@@ -156,15 +156,13 @@
     "$overlay_image_control_name|default": "overlay",
     "controls": [
       {
-        "item_cell": {
-          "type": "panel",
+        "item_cell@global.empty_panel": {
           "size": [ 18, 18 ],
           "layer": 0,
           "controls": [
             {"$background_image_control_name@$background_images": {"layer": 1}},
             {
-              "item": {
-                "type": "panel",
+              "item@global.empty_panel": {
                 "size": "$item_renderer_panel_size",
                 "layer": 0,
                 "controls": [
@@ -261,7 +259,7 @@
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ]
   },
-  "cell_image@global.empty_image": {
+  "cell_image@screen_content.image_element": {
     "size": [ "default", "default" ],
     "bindings": [
       {
@@ -272,8 +270,7 @@
       }
     ]
   },
-  "recipe_container_cell_images": {
-    "type": "panel",
+  "recipe_container_cell_images@global.empty_panel": {
     "size": [ 18, 18 ],
     "controls": [
       {

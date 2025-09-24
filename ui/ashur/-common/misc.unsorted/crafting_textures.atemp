@@ -16,8 +16,7 @@
       }
     ]
   },
-  "main_cell_panel": {
-    "type": "image",
+  "main_cell_panel@global.empty_panel": {
     "size": "$item_renderer_panel_size",
     "$cell_images_binding_condition|default": "visible",
     "$cell_image_size|default": [ 18, 18 ],

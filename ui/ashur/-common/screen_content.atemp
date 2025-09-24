@@ -1,6 +1,6 @@
 {
   "namespace": "screen_content",
-  "image_element": {"type": "image", "alpha": "$container_opacity"},
+  "image_element@global.empty_image": { "alpha": "$container_opacity"},
   "container_base@global.root_panel": {
     "size": "$size",
     "$size": [ 176, 166 ],

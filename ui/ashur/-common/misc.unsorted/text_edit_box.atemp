@@ -5,13 +5,11 @@
     "$color|default": "white",
     "controls": [
       {
-        "centering_panel": {
-          "type": "panel",
+        "centering_panel@global.empty_panel": {
           "size": [ "100% - 6px", "100% - 4px" ],
           "controls": [
             {
-              "clipper_panel": {
-                "type": "panel",
+              "clipper_panel@global.empty_panel": {
                 "size": "$text_edit_clipping_panel_size",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
@@ -34,8 +32,7 @@
                     }
                   },
                   {
-                    "clear_text_button_panel": {
-                      "type": "panel",
+                    "clear_text_button_panel@global.empty_panel": {
                       "size": [ "100%", "100%" ],
                       "visible": "$text_clear_button_enabled",
                       "controls": [
@@ -58,8 +55,7 @@
                     }
                   },
                   {
-                    "visibility_panel": {
-                      "type": "panel",
+                    "visibility_panel@global.empty_panel": {
                       "$placeholder_label_size|default": "$text_edit_box_label_size",
                       "controls": [
                         {
@@ -95,8 +91,7 @@
         }
       },
       {
-        "locked": {
-          "type": "panel",
+        "locked@global.empty_panel": {
           "$disabled_color|default": "$color",
           "controls": [
             {

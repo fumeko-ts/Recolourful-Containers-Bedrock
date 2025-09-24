@@ -327,9 +327,8 @@
         }
       },
       {
-        "item_renderer": {
-          "type": "custom",
-          "renderer": "inventory_item_renderer",
+        "item_renderer@global.custom_renderer": {
+          "$type": "inventory_item_renderer",
           "size": [ 16, 16 ],
           "property_bag": "$item_property"
         }

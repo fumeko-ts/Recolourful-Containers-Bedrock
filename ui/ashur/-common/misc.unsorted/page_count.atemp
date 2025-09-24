@@ -1,4 +1,7 @@
 {
   "namespace": "page_count",
-  "page@pagination.base_page_logic": {"$is_in_recipe_inventory": true, "$page_content": "recipe_grid.recipe_grid"}
+  "page@pagination.base_page_logic": {
+    "$is_in_recipe_inventory": true,
+    "$page_content": "recipe_grid.recipe_grid"
+  }
 }

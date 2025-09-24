@@ -8,34 +8,25 @@
           "anchor_to": "center",
           "anchor_from": "center",
           "min_size": [176, 166],
-          "max_size": [325, 166],
+          "max_size": [359, 166],
           "layer": 1,
           "controls": [
             {
-              "1@global.empty_panel": {
+              "2@global.empty_panel": {
                 "size": ["100%c", 166],
                 "controls": [
                   {
-                    "2@global.empty_panel": {
-                      "size": [149, 166],
+                    "3@global.empty_stack": {
+                      "size": [183, 166],
+                      "orientation": "horizontal",
                       "controls": [
+                        { "tab_stack@crafting_common.crafting_survival_tabs": {} },// 35 width
                         {
-                          "3@global.empty_panel": {
-                            "size": [147, 166],
-                            "controls": [
-                              { "tab_stack@crafting_common.crafting_survival_tabs": {} },
-                              {
-                                "root_panel@global.root_panel": {
-                                  "controls": [
-                                    { "recipe_base@screen_content.recipe_book": { "layer": 1 } },
-                                    { "base_page_control@page_count.page": { "offset": [-1, 0] } }
-                                  ]
-                                }
-                              }
-                            ]
+                          "recipe_base@screen_content.recipe_book": {//147 width
+                            "controls": [{ "pages@page_count.page": {"offset": [-1, 0]} }]
                           }
                         },
-                        { "4@global.empty_panel": { "size": [2, "fill"] } }
+                        { "4@global.empty_panel": { "size": [1, "fill"] } }//1 width
                       ],
                       "bindings": [
                         {
@@ -192,7 +183,6 @@
                       "$grid_cell_offset": [0, 0],
                       "anchor_to": "bottom_middle",
                       "anchor_from": "bottom_middle",
-                      "$is_creative_survival_tab|default": true,
                       "controls": [
                         { "filler_0@global.empty_panel": { "size": ["fill", 12] } },
                         {

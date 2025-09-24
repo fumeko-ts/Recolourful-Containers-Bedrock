@@ -12,7 +12,7 @@
           "anchor_to": "top_middle",
           "controls": [
             {
-              "1@global.empty_image": {
+              "1@screen_content.image_element": {
                 "size": [ 176, 77 ],
                 "uv_size": [ 176, 77 ],
                 "layer": 4,

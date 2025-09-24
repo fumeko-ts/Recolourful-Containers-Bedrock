@@ -25,9 +25,7 @@
                       "controls": [
                         {"smelt_input_item@global.container_item": {"$item_collection": "furnace_ingredient_items"}},
                         {
-                          "flame_buffer_and_holder": {
-                            "type": "input_panel",
-                            "contained": true,
+                          "flame_holder@global.empty_panel": {
                             "size": [ 18, 18 ],
                             "controls": [
                               {"smelt_flame_progress@blast_furnace_screen.flame_progress": {}}

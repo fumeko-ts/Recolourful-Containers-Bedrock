@@ -138,9 +138,8 @@
                 "anchor_from": "top_right",
                 "controls": [
                   {
-                    "result_banner_renderer": {
-                      "type": "custom",
-                      "renderer": "banner_pattern_renderer",
+                    "result_banner_renderer@global.custom_renderer": {
+                      "$type": "banner_pattern_renderer",
                       "size": [20, 40],
                       "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
@@ -221,8 +220,7 @@
       }
     ]
   },
-  "item_empty_image": {
-    "type": "image",
+  "item_empty_image@screen_content.image_element": {
     "texture": "$current_cell_texture",
     "uv_size": [16, 16],
     "size": [16, 16],
@@ -267,8 +265,7 @@
     "texture": "assets/sprite_assets/container/loom/scroller",
     "size": [12, "100%"]
   },
-  "scroll_grid_holder": {
-    "type": "panel",
+  "scroll_grid_holder@global.empty_panel": {
     "size": [56, "100%cm"],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -305,8 +302,7 @@
     "$background_image_control_name|default": "bg",
     "controls": [
       {
-        "$background_image_control_name": {
-          "type": "panel",
+        "$background_image_control_name@global.empty_panel": {
           "size": [14, 14],
           "offset": [1, 0],
           "layer": 1,
@@ -347,7 +343,7 @@
         }
       },
       {
-        "banner_template@global.empty_image": {
+        "banner_template@screen_content.image_element": {
           "anchor_to": "center",
           "anchor_from": "center",
           "keep_ratio": true,
@@ -371,7 +367,7 @@
         }
       },
       {
-        "banner_bg@global.empty_image": {
+        "banner_bg@screen_content.image_element": {
           "anchor_to": "center",
           "anchor_from": "center",
           "keep_ratio": true,

@@ -56,15 +56,6 @@
                       "controls": [
                         {
                           "cross_out_icon@screen_content.image_element": {
-                            "texture": "",
-                            "allow_debug_missing_texture": false,
-                            "size": [ 28, 21 ],
-                            "keep_ratio": true,
-                            "bindings": [ {"binding_name": "(not #cross_out_icon)", "binding_name_override": "#visible"} ]
-                          }
-                        },
-                        {
-                          "cross_out_icon@screen_content.image_element": {
                             "texture": "assets/sprite_assets/container/anvil/error.png",
                             "size": [ 28, 21 ],
                             "keep_ratio": true,
@@ -177,8 +168,7 @@
   "hammer_12@anvil_screen.uv_anim_base": {"$frame": [ 0, 276 ], "$next_frame": "hammer_13", "$frame_time": 0.05},
   "hammer_13@anvil_screen.uv_anim_base": {"$frame": [ 0, 299 ], "$next_frame": "hammer_14", "$frame_time": 0.05},
   "hammer_14@anvil_screen.uv_anim_base": {"$frame": [ 0, 322 ], "$next_frame": "hammer_0", "$frame_time": 0.05},
-  "text_edit_panel": {
-    "type": "panel",
+  "text_edit_panel@global.empty_panel": {
     "size": [ 110, 16 ],
     "controls": [
       {
@@ -196,8 +186,7 @@
     ]
   },
   "cell_vertical@global.empty_stack": {"$stacking": "vertical", "orientation": "$stacking", "size": [ 18, 21 ]},
-  "cost_label": {
-    "type": "label",
+  "cost_label@global.empty_label": {
     "shadow": true,
     "layer": 10,
     "text": "#text",

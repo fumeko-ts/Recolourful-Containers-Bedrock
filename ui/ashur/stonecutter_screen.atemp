@@ -282,8 +282,7 @@
     "texture": "assets/sprite_assets/container/stonecutter/scroller.png",
     "size": [ 12, "100%" ]
   },
-  "grid_holder": {
-    "type": "panel",
+  "grid_holder@global.empty_panel": {
     "size": [ 64, "100%cm" ],
     "anchor_to": "center",
     "anchor_from": "center",
