@@ -273,8 +273,7 @@
     ]
   },
 
-  "item_overlay_image": {
-    "type": "image",
+  "item_overlay_image@screen_content.image_element": {
     "size": [7, 7],
     "offset": [-1, -1],
     "anchor_from": "bottom_right",
@@ -289,7 +288,7 @@
       }
     ]
   },
-  "cell_image@global.empty_image": {
+  "cell_image@screen_content.image_element": {
     "size": ["default", "default"],
     "layer": 1,
     "bindings": [
