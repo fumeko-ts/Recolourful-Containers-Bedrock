@@ -20,13 +20,14 @@
                       "size": [183, 166],
                       "orientation": "horizontal",
                       "controls": [
-                        { "tab_stack@crafting_common.crafting_survival_tabs": {} },// 35 width
+                        { "tab_stack@crafting_common.crafting_survival_tabs": {} }, // 35 width
                         {
-                          "recipe_base@screen_content.recipe_book": {//147 width
-                            "controls": [{ "pages@page_count.page": {"offset": [-1, 0]} }]
+                          "recipe_base@screen_content.recipe_book": {
+                            //147 width
+                            "controls": [{ "pages@page_count.page": { "offset": [-1, 0] } }]
                           }
                         },
-                        { "4@global.empty_panel": { "size": [1, "fill"] } }//1 width
+                        { "4@global.empty_panel": { "size": [1, "fill"] } } //1 width
                       ],
                       "bindings": [
                         {
@@ -53,6 +54,60 @@
                 "size": [176, 166],
                 "controls": [
                   { "container@screen_content.container_base": { "$crafting_screen": true } },
+                  {
+                    "mobile_craft_holder@global.empty_panel": {
+                      // pocket edition players will need this because its hard to craft without it
+                      "size": [92, 56],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "controls": [
+                        {
+                          "craft_all_mobile": {
+                            "type": "button",
+                            "ignored": "(not ($touch or $pocket_edition))",// if you want to test it then comment out this line
+
+                            "default_control": "default",
+                            "hover_control": "hover",
+                            "pressed_control": "pressed",
+
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+
+                            "size": [35, 26],
+                            "layer": 7,
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "mapping_type": "pressed",
+                                "to_button_id": "button.crafting_output_tertiary"
+                              }
+                            ],
+                            "property_bag": {
+                              "#collection_index": 0,
+                              "#collection_name": "crafting_output_items"
+                            },
+                            "controls": [
+                              { "default@screen_content.mobile_easy_craft_table_default": {} },
+                              { "pressed@screen_content.mobile_easy_craft_table_pressed": {} },
+                              {
+                                "hover@screen_content.mobile_easy_craft_table_hover": {
+                                  "controls": [
+                                    {
+                                      "com@global.hover_text": {
+                                        "property_bag": {
+                                          "#hover_text": "fast craft"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
                   {
                     "crafting_top_stack@global.empty_panel": {
                       "size": [176, 166],

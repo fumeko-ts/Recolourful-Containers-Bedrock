@@ -49,6 +49,61 @@
                 "controls": [
                   { "container@screen_content.container_base": { "$inventory_screen": true } },
                   {
+                    "mobile_craft_holder@global.empty_panel": {
+                      // pocket edition players will need this because its hard to craft without it
+                      "size": [42, 47],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "controls": [
+                        {
+                          "craft_all_mobile": {
+                            "type": "button",
+
+                            "ignored": "(not ($touch or $pocket_edition))",// if you want to test it then comment out this line
+                            
+                            "default_control": "default",
+                            "hover_control": "hover",
+                            "pressed_control": "pressed",
+
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+
+                            "size": [17, 22],
+                            "layer": 7,
+                            "button_mappings": [
+                              {
+                                "from_button_id": "button.menu_select",
+                                "mapping_type": "pressed",
+                                "to_button_id": "button.crafting_output_tertiary"
+                              }
+                            ],
+                            "property_bag": {
+                              "#collection_index": 0,
+                              "#collection_name": "crafting_output_items"
+                            },
+                            "controls": [
+                              { "default@screen_content.mobile_easy_craft_default": {} },
+                              { "pressed@screen_content.mobile_easy_craft_pressed": {} },
+                              {
+                                "hover@screen_content.mobile_easy_craft_hover": {
+                                  "controls": [
+                                    {
+                                      "com@global.hover_text": {
+                                        "property_bag": {
+                                          "#hover_text": "fast craft"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
                     "inventory_crafting_stack@global.empty_panel": {
                       "size": [176, 166],
                       "controls": [
