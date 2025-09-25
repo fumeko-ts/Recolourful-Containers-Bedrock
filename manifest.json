@@ -17,18 +17,18 @@
    ],
     "metadata": {
       "ui_author": ["Ashura_temps","ashura_tepes"],
-      "url": "https://discord.gg/sFnE7zv75t"
+      "url": "https://www.planetminecraft.com/member/ashura_tepes/"
     },
   "subpacks" :[
-    {
-      "folder_name":"light",
-      "name":"§lLight mode§r",
-      "memory_tier":2
-    },
     {
       "folder_name":"dark",
       "name":"§lDark mode§r",
       "memory_tier":1
+    },
+    {
+      "folder_name":"light",
+      "name":"§lLight mode§r",
+      "memory_tier":2
     }
   ]
  }

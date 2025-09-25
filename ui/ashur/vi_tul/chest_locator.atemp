@@ -1,0 +1,69 @@
+{
+  "namespace": "chest_detector",
+  "chest@global.root_panel": {
+    "size": [ 192, 174 ],
+    "layer": 1,
+    "$screen|default": "global.empty_panel",
+    "$screen_route|default": "$container_title",
+    "$chest_texture|default": "",
+    "controls": [
+      {
+        "1@chest_detector.chest_bindings": {"$chest_texture": "assets/small_chest", "$screen_id": "ui:container.chest0"}
+      },
+      {
+        "2@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_minecart", "$screen_id": "ui:entity.chest_minecart.name0"}
+      },
+      {
+        "3@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_boat", "$screen_id": "ui:entity.chest_boat.name0"}
+      },
+      {
+        "4@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_raft", "$screen_id": "ui:entity.chest_raft.name0"}
+      },
+      {
+        "custom_rename@screen_content.image_element": {
+          "size": [ 192, 174 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "texture": "assets/small_chest"
+        }
+      }
+    ]
+  },
+  "chest_bindings@global.empty_panel": {
+    "size": [ 192, 174 ],
+    "controls": [
+      {
+        "chest_ui_template@screen_content.image_element": {
+          "size": [ 192, 174 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 2,
+          "texture": "$chest_texture"
+        }
+      }
+    ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux)) = $screen_id)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "chest_template@screen_content.image_element": {
+    "size": [ 192, 174 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "texture": "$chest_texture"
+  }
+}

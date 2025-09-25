@@ -1,4 +1,1 @@
-{
-  "namespace": "smoker",
-  "smoker_screen@furnace.furnace_screen": { "$is_smoker": true }
-  }
+{"smoker_screen@global.container_screen": {"$screen_content": "smoker_screen.smoker_panel"}}

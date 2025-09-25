@@ -1,4 +1,0 @@
-1, the chest-minecart UI and the chest-boat UI are exactly the same as the small chest in the code, so you can’t really tell them apart
-2, changeing ui size for pocket ui would mean a rewrite of the entire texture packs ui wich would take a long time so its probaly best to leave it as is - this info may change depending on what info i can find
-3, about the label within the trade ui currently its being centerd within the right panel inside a invisible panel sized 176x166 and same for the exp bar however if i offset the label and have a villager with state like master the label would be off center and offseting the label by profession, and master, novice ect could be very laggy in pocket edition
-4, Also, I cant see out of my right eye very well and Im about 30–40% blind in my left, so its pretty hard for me to spot misaligned elements so Pointing them out is really appreciated.

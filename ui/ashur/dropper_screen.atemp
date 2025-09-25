@@ -2,450 +2,136 @@
   "namespace": "dropper_screen",
   "dropper_panel@container_common.container_details": {
     "type": "panel",
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
-        {
-        "redstone@dropper_screen.redstone": {
-
-          }
-        },
-        {
-        "common_panel@screen_content.container_base": {
-          "layer": 1,
-          "$dropper_screen": true
-          }
-        },
-        {
+      {"common_panel@screen_content.container_base": {"layer": 1, "$dropper_screen": true}},
+      {
+        "redstone@global.empty_panel": {
+          "size": [ 176, 77 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "1@screen_content.image_element": {
+                "size": [ 176, 77 ],
+                "uv_size": [ 176, 77 ],
+                "layer": 4,
+                "texture": "textures/ui/ashur/animations/dropper",
+                "uv": {"anim_type": "aseprite_flip_book", "initial_uv": [ 0, 0 ]}
+              }
+            },
+            {
+              "4@dropper_screen.dropper_piston_template": {
+                "size": [ 16, 32 ],
+                "uv_size": [ 16, 32 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -28, 19 ],
+                "texture": "assets/advanced_sprites/animated/dropper/piston_1",
+                "alpha": "@dropper_screen.piston_10"
+              }
+            },
+            {
+              "6@dropper_screen.dropper_piston_template": {
+                "size": [ 32, 16 ],
+                "uv_size": [ 32, 16 ],
+                "offset": [ -28, -8 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "texture": "assets/advanced_sprites/animated/dropper/piston_2",
+                "alpha": "@dropper_screen.piston_20"
+              }
+            }
+          ]
+        }
+      },
+      {
         "dropper_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 70],
+          "size": [ 176, 70 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-              {
-              "filler_1@global.empty_panel": { "size": ["fill", 6] }
-              },
-              {
+            {"filler_1@global.empty_panel": {"size": [ "fill", 6 ]}},
+            {
               "dropper_main_content@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 64],
+                "size": [ 176, 64 ],
                 "controls": [
-                    {
-                    "filler_2@global.empty_panel": { "size": [61, "fill"] }
-                    },
-                    {
+                  {"filler_2@global.empty_panel": {"size": [ 61, "fill" ]}},
+                  {
                     "label_and_grid_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [54, 64],
+                      "size": [ 54, 64 ],
                       "controls": [
-                          {
-                          "dropper_label_holder@global.empty_panel": { "size": [54, 10] }
-                          },
-                          {
+                        {"dropper_label_holder@global.empty_panel": {"size": [ 54, 10 ]}},
+                        {
                           "dropper_item_input": {
                             "type": "grid",
-                            "size": [54, 54],
-                            "grid_dimensions": [3, 3],
+                            "size": [ 54, 54 ],
+                            "grid_dimensions": [ 3, 3 ],
                             "collection_name": "container_items",
                             "grid_item_template": "common.container_item",
                             "$item_collection_name": "container_items"
-                            }
                           }
-                        ]
-                      }
-                    },
-                    {
-                    "filler_3@global.empty_panel": { "size": [61, "fill"] }
+                        }
+                      ]
                     }
-                  ]
-                }
+                  },
+                  {"filler_3@global.empty_panel": {"size": [ 61, "fill" ]}}
+                ]
               }
-            ]
-          }
-        },
-        {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-          }
+            }
+          ]
         }
-      ]
-    },
-  "redstone@global.empty_panel": {
-    "size": [176, 77],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
-    "controls": [
-        {
-        "1@screen_content.image_element": {
-          "size": [176, 77],
-          "uv_size": [176, 77],
-          "animation_reset_name": "screen_animation_reset",
-          "disable_anim_fast_forward": true,
-          "layer": 4,
-          "texture": "optifine/anim/dropper/dropper.png",
-          "uv": [0, 0],
-          "alpha": "@dropper_screen.redstone_image1_fade_out"
-          }
-        },
-        {
-        "2@screen_content.image_element": {
-          "size": [176, 77],
-          "uv_size": [176, 77],
-          "animation_reset_name": "screen_animation_reset",
-          "disable_anim_fast_forward": true,
-          "layer": 3,
-          "texture": "optifine/anim/dropper/dropper.png",
-          "uv": [0, 77],
-          "alpha": "@dropper_screen.redstone_image2_wait"
-          }
-        },
-        {
-        "3@screen_content.image_element": {
-          "size": [176, 77],
-          "uv_size": [176, 77],
-          "animation_reset_name": "screen_animation_reset",
-          "disable_anim_fast_forward": true,
-          "layer": 2,
-          "texture": "optifine/anim/dropper/dropper.png",
-          "uv": [0, 154],
-          "alpha": "@dropper_screen.redstone_image3_wait"
-          }
-        },
-        {
-        "4@screen_content.image_element": {
-          "size": [16, 32],
-          "uv_size": [16, 32],
-          "animation_reset_name": "screen_animation_reset",
-          "disable_anim_fast_forward": true,
-          "layer": 5,
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "offset": [-28, 19],
-          "texture": "optifine/anim/dropper/piston_1.png",
-          "uv": [0, 0],
-          "alpha": "@dropper_screen.piston_10"
-          }
-        },
-        {
-        "6@screen_content.image_element": {
-          "size": [32, 16],
-          "uv_size": [32, 16],
-          "animation_reset_name": "screen_animation_reset",
-          "disable_anim_fast_forward": true,
-          "layer": 5,
-          "offset": [-28, -8],
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "texture": "optifine/anim/dropper/piston_2.png",
-          "uv": [0, 0],
-          "alpha": "@dropper_screen.piston_20"
-          }
-        }
-      ]
-    },
-  "redstone_image1_fade_out": {
-    "anim_type": "alpha",
-    "from": 1.0,
-    "to": 0.1,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image1_fade_in"
-    },
-  "redstone_image1_fade_in": {
-    "anim_type": "alpha",
-    "from": 0.1,
-    "to": 1.0,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image1_fade_out"
-    },
-  "redstone_image2_wait": {
-    "anim_type": "alpha",
-    "from": 0.1,
-    "to": 0.1,
-    "duration": 0.9,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image2_fade_in"
-    },
-  "redstone_image2_fade_in": {
-    "anim_type": "alpha",
-    "from": 0.1,
-    "to": 1.0,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image2_fade_out"
-    },
-  "redstone_image2_fade_out": {
-    "anim_type": "alpha",
-    "from": 1.0,
-    "to": 0.1,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image2_fade_in"
-    },
-  "redstone_image3_wait": {
-    "anim_type": "alpha",
-    "from": 0.1,
-    "to": 0.1,
-    "duration": 1.9,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image3_fade_in"
-    },
-  "redstone_image3_fade_in": {
-    "anim_type": "alpha",
-    "from": 0.1,
-    "to": 1.0,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image3_fade_out"
-    },
-  "redstone_image3_fade_out": {
-    "anim_type": "alpha",
-    "from": 1.0,
-    "to": 0.1,
-    "duration": 1.5,
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.redstone_image3_fade_in"
-    },
-  "piston_10": {
+      },
+      {
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
+    ]
+  },
+  "dropper_piston_template@screen_content.image_element": {
+    "uv": [ 0, 0 ],
+    "animation_reset_name": "screen_animation_reset",
+    "disable_anim_fast_forward": true,
+    "layer": 5
+  },
+  "piston_uv_template": {
     "anim_type": "uv",
-    "from": [0, 0],
+    "from": "$frame",
+    "to": "$frame",
     "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_11",
-    "duration": 9
-    },
-  "piston_11": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_12",
-    "duration": 0.05
-    },
-  "piston_12": {
-    "anim_type": "uv",
-    "from": [0, 64],
-    "to": [0, 64],
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.piston_13",
-    "duration": 2
-    },
-  "piston_13": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_14",
-    "duration": 0.05
-    },
-  "piston_14": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_15",
-    "duration": 10
-    },
-  "piston_15": {
-    "anim_type": "uv",
-    "from": [0, 96],
-    "easing": "in_out_sine",
-    "to": [0, 96],
-    "next": "@dropper_screen.piston_16",
-    "duration": 1
-    },
-  "piston_16": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "to": [0, 0],
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.piston_17",
-    "duration": 5
-    },
-  "piston_17": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_18",
-    "duration": 0.05
-    },
-  "piston_18": {
-    "anim_type": "uv",
-    "from": [0, 64],
-    "to": [0, 64],
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.piston_19",
-    "duration": 2
-    },
-  "piston_19": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_110",
-    "duration": 0.05
-    },
-  "piston_110": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_111",
-    "duration": 10
-    },
-  "piston_111": {
-    "anim_type": "uv",
-    "easing": "in_out_sine",
-    "from": [0, 32],
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_112",
-    "duration": 0.05
-    },
-  "piston_112": {
-    "anim_type": "uv",
-    "from": [0, 64],
-    "easing": "in_out_sine",
-    "to": [0, 64],
-    "next": "@dropper_screen.piston_113",
-    "duration": 2
-    },
-  "piston_113": {
-    "anim_type": "uv",
-    "easing": "in_out_sine",
-    "from": [0, 32],
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_114",
-    "duration": 0.05
-    },
-  "piston_114": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_10",
-    "duration": 1
-    },
-  "piston_20": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "to": [0, 0],
-    "easing": "in_out_sine",
-    "next": "@dropper_screen.piston_21",
-    "duration": 9.200000000000001
-    },
-  "piston_21": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_22",
-    "duration": 0.05
-    },
-  "piston_22": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_23",
-    "duration": 2
-    },
-  "piston_23": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_24",
-    "duration": 0.05
-    },
-  "piston_24": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_25",
-    "duration": 10
-    },
-  "piston_25": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_26",
-    "duration": 1
-    },
-  "piston_26": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_27",
-    "duration": 5
-    },
-  "piston_27": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_28",
-    "duration": 0.05
-    },
-  "piston_28": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_29",
-    "duration": 2
-    },
-  "piston_29": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_210",
-    "duration": 0.05
-    },
-  "piston_210": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_211",
-    "duration": 10
-    },
-  "piston_211": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_212",
-    "duration": 0.05
-    },
-  "piston_212": {
-    "anim_type": "uv",
-    "from": [0, 32],
-    "easing": "in_out_sine",
-    "to": [0, 32],
-    "next": "@dropper_screen.piston_213",
-    "duration": 2
-    },
-  "piston_213": {
-    "anim_type": "uv",
-    "from": [0, 16],
-    "easing": "in_out_sine",
-    "to": [0, 16],
-    "next": "@dropper_screen.piston_214",
-    "duration": 0.05
-    },
-  "piston_214": {
-    "anim_type": "uv",
-    "from": [0, 0],
-    "easing": "in_out_sine",
-    "to": [0, 0],
-    "next": "@dropper_screen.piston_20",
-    "duration": 0.8
-    }
-  }
+    "duration": "$frame_time",
+    "next": "(@dropper_screen. + $next_frame)"
+  },
+  "piston_10@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_11", "$frame_time": 9},
+  "piston_11@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_12", "$frame_time": 0.05},
+  "piston_12@dropper_screen.piston_uv_template": {"$frame": [ 0, 64 ], "$next_frame": "piston_13", "$frame_time": 2},
+  "piston_13@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_14", "$frame_time": 0.05},
+  "piston_14@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_15", "$frame_time": 10},
+  "piston_15@dropper_screen.piston_uv_template": {"$frame": [ 0, 96 ], "$next_frame": "piston_16", "$frame_time": 1},
+  "piston_16@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_17", "$frame_time": 5},
+  "piston_17@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_18", "$frame_time": 0.05},
+  "piston_18@dropper_screen.piston_uv_template": {"$frame": [ 0, 64 ], "$next_frame": "piston_19", "$frame_time": 2},
+  "piston_19@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_110", "$frame_time": 0.05},
+  "piston_110@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_111", "$frame_time": 10},
+  "piston_111@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_112", "$frame_time": 0.05},
+  "piston_112@dropper_screen.piston_uv_template": {"$frame": [ 0, 64 ], "$next_frame": "piston_113", "$frame_time": 2},
+  "piston_113@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_114", "$frame_time": 0.05},
+  "piston_114@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_10", "$frame_time": 1},
+  "piston_20@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_21", "$frame_time": 9.200000000000001},
+  "piston_21@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_22", "$frame_time": 0.05},
+  "piston_22@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_23", "$frame_time": 2},
+  "piston_23@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_24", "$frame_time": 0.05},
+  "piston_24@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_25", "$frame_time": 10},
+  "piston_25@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_26", "$frame_time": 1},
+  "piston_26@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_27", "$frame_time": 5},
+  "piston_27@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_28", "$frame_time": 0.05},
+  "piston_28@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_29", "$frame_time": 2},
+  "piston_29@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_210", "$frame_time": 0.05},
+  "piston_210@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_211", "$frame_time": 10},
+  "piston_211@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_212", "$frame_time": 0.05},
+  "piston_212@dropper_screen.piston_uv_template": {"$frame": [ 0, 32 ], "$next_frame": "piston_213", "$frame_time": 2},
+  "piston_213@dropper_screen.piston_uv_template": {"$frame": [ 0, 16 ], "$next_frame": "piston_214", "$frame_time": 0.05},
+  "piston_214@dropper_screen.piston_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "piston_20", "$frame_time": 0.8}
+}

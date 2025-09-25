@@ -1,15 +1,7 @@
 {
   "namespace": "store_inventory",
-  "subscriptions_text_panel/subscriptions_text": {
-    "color": [ 1, 1, 1 ]
-  },
-  "dropdown_button_content/title_label": {
-    "color": [ 1, 1, 1 ]
-  },
-  "dropdown_button_content/count_panel/count": {
-    "color": [ 1, 1, 1 ]
-  },
-  "dropdown_button_content/right_carrot/right": {
-    "color": [ 1, 1, 1 ]
-  }
+  "subscriptions_text_panel/subscriptions_text": {"color": [ 1, 1, 1 ]},
+  "dropdown_button_content/title_label": {"color": [ 1, 1, 1 ]},
+  "dropdown_button_content/count_panel/count": {"color": [ 1, 1, 1 ]},
+  "dropdown_button_content/right_carrot/right": {"color": [ 1, 1, 1 ]}
 }

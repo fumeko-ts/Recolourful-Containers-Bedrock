@@ -1,50 +1,7 @@
 {
   "namespace": "page_count",
-  "page": {
-    "type": "panel",
-    "controls": [
-        {
-        "page@pagination.base_page_logic": {
-          "$is_in_recipe_inventory": true,
-          "$page_content": "recipe_grid.recipe_grid"
-          }
-        }
-      ]
-    },
-  "label_test": {
-    "type": "label",
-    "text": "#text",
-    "layer": 500,
-    "controls": [
-        {
-        "data_control": {
-          "type": "panel",
-          "size": [0, 0],
-          "property_bag": { "#test": "" },
-          "bindings": [
-              {
-              "binding_name": "#recipe_book_total_items",
-              "binding_name_override": "#maximum_grid_items",
-              "binding_type": "collection",
-              "binding_collection_name": "recipe_book"
-              },
-              {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "('ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§z' + ((#maximum_grid_items > 0) * ((#maximum_grid_items / 20) + 1)))",
-              "target_property_name": "#test"
-              }
-            ]
-          }
-        }
-      ],
-    "bindings": [
-        {
-        "binding_type": "view",
-        "source_control_name": "data_control",
-        "source_property_name": "#test",
-        "target_property_name": "#text"
-        }
-      ]
-    }
+  "page@pagination.base_page_logic": {
+    "$is_in_recipe_inventory": true,
+    "$page_content": "recipe_grid.recipe_grid"
   }
+}

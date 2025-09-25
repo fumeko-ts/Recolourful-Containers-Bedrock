@@ -1,123 +1,86 @@
 {
   "namespace": "grindstone_screen",
   "grindstone_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
-        {
-        "common_panel@screen_content.container_base": { "$grindstone_screen": true }
-        },
-        {
+      {"common_panel@screen_content.container_base": {"$grindstone_screen": true}},
+      {
         "grindstone_top_stack@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 57],
+          "size": [ 176, 57 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-              {
-              "filler_1@global.empty_panel": { "size": ["fill", 6] }
-              },
-              {
-              "smithing_label@global.empty_panel": { "size": [176, 12] }
-              },
-              {
+            {"filler_1@global.empty_panel": {"size": [ "fill", 18 ]}},
+            {
               "input_holder@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 39],
+                "size": [ 176, 39 ],
                 "controls": [
-                    {
-                    "filler_1@global.empty_panel": { "size": [48, "fill"] }
-                    },
-                    {
+                  {"filler_1@global.empty_panel": {"size": [ 48, "fill" ]}},
+                  {
                     "cells@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 39],
+                      "size": [ 18, 39 ],
                       "controls": [
-                          {
-                          "1@global.container_item": { "$item_collection": "grindstone_input_items" }
-                          },
-                          {
-                          "filler_1@global.empty_panel": { "size": ["fill", 3] }
-                          },
-                          {
-                          "2@global.container_item": { "$item_collection": "grindstone_additional_items" }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                    "filler_2@global.empty_panel": { "size": [26, "fill"] }
-                    },
-                    {
+                        {"1@global.container_item": {"$item_collection": "grindstone_input_items"}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 3 ]}},
+                        {"2@global.container_item": {"$item_collection": "grindstone_additional_items"}}
+                      ]
+                    }
+                  },
+                  {"filler_2@global.empty_panel": {"size": [ 26, "fill" ]}},
+                  {
                     "arrow_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [28, 39],
+                      "size": [ 28, 39 ],
                       "controls": [
-                          {
-                          "filler_1@global.empty_panel": { "size": ["fill", 13] }
-                          },
-                          {
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 13 ]}},
+                        {
                           "arrow_panel@global.empty_panel": {
-                            "size": [28, 21],
+                            "size": [ 28, 21 ],
                             "controls": [
-                                {
+                              {
                                 "cross_out_icon@screen_content.image_element": {
-                                  "texture": "assets/minecraft/textures/gui/sprites/container/grindstone/error.png",
-                                  "size": [28, 21],
-                                  "bindings": [
-                                      {
-                                      "binding_name": "#cross_out_icon",
-                                      "binding_name_override": "#visible"
-                                      }
-                                    ]
-                                  }
+                                  "texture": "assets/sprite_assets/container/grindstone/error.png",
+                                  "size": [ 28, 21 ],
+                                  "bindings": [ {"binding_name": "#cross_out_icon", "binding_name_override": "#visible"} ]
                                 }
-                              ]
-                            }
-                          },
-                          {
-                          "filler_1@global.empty_panel": { "size": ["fill", 5] }
+                              }
+                            ]
                           }
-                        ]
-                      }
-                    },
-                    {
-                    "filler_3@global.empty_panel": { "size": [8, "fill"] }
-                    },
-                    {
+                        },
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 5 ]}}
+                      ]
+                    }
+                  },
+                  {"filler_3@global.empty_panel": {"size": [ 8, "fill" ]}},
+                  {
                     "output_holder@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 39],
+                      "size": [ 18, 39 ],
                       "controls": [
-                          {
-                          "filler_1@global.empty_panel": { "size": ["fill", 15] }
-                          },
-                          {
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
+                        {
                           "result_item_slot@global.container_item": {
                             "$item_collection": "grindstone_result_items",
                             "$button_ref": "button_mappings.grindstone_output_slot_button"
-                            }
-                          },
-                          {
-                          "filler_2@global.empty_panel": { "size": ["fill", 6] }
                           }
-                        ]
-                      }
-                    },
-                    {
-                    "filler_4@global.empty_panel": { "size": [30, "fill"] }
+                        },
+                        {"filler_2@global.empty_panel": {"size": [ "fill", 6 ]}}
+                      ]
                     }
-                  ]
-                }
+                  },
+                  {"filler_4@global.empty_panel": {"size": [ 30, "fill" ]}}
+                ]
               }
-            ]
-          }
-        },
-        {
-        "bottom@crafting_screen.inventory_bottom_half_with_label": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-          }
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+      }
+    ]
   }
+}

@@ -1,0 +1,95 @@
+{
+  "namespace": "shulker_color_detector",
+  "shulker_color_detector@global.root_panel": {
+    "size": [ 176, 166 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "controls": [
+      {
+        "1@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7f\u00a7r", "$shulker_texel": "white"}
+      },
+      {
+        "2@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7p\u00a7r", "$shulker_texel": "orange"}
+      },
+      {
+        "3@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a75\u00a7r", "$shulker_texel": "magenta"}
+      },
+      {
+        "4@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7b\u00a7r", "$shulker_texel": "light_blue"}
+      },
+      {
+        "5@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7e\u00a7r", "$shulker_texel": "yellow"}
+      },
+      {
+        "6@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7a\u00a7r", "$shulker_texel": "lime"}
+      },
+      {
+        "7@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7d\u00a7r", "$shulker_texel": "pink"}
+      },
+      {
+        "8@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a78\u00a7r", "$shulker_texel": "gray"}
+      },
+      {
+        "9@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a77\u00a7r", "$shulker_texel": "light_gray"}
+      },
+      {
+        "10@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a73\u00a7r", "$shulker_texel": "cyan"}
+      },
+      {
+        "11@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7u\u00a7r", "$shulker_texel": "purple"}
+      },
+      {
+        "12@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a79\u00a7r", "$shulker_texel": "blue"}
+      },
+      {
+        "13@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7n\u00a7r", "$shulker_texel": "brown"}
+      },
+      {
+        "14@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a72\u00a7r", "$shulker_texel": "green"}
+      },
+      {
+        "15@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a7c\u00a7r", "$shulker_texel": "red"}
+      },
+      {
+        "16@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:\u00a70\u00a7r", "$shulker_texel": "black"}
+      },
+      {
+        "17@shulker_color_detector.colored_bindings": {"$shulker_id": "ui:contai", "$shulker_texel": "default"}
+      },
+      {
+        "custom_renamed@screen_content.image_element": {
+          "size": [ 176, 166 ],
+          "layer": 1,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "uv_size": [ 176, 166 ],
+          "texture": "assets/shulker-underlay"
+        }
+      }
+    ]
+  },
+  "colored_bindings@screen_content.image_element": {
+    "$shulker_texture|default": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
+    "size": [ 176, 166 ],
+    "layer": 2,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "uv_size": [ 176, 166 ],
+    "texture": "$shulker_texture",
+    "property_bag": {"#screen_route": "$container_title"},
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(('%.9s' * ('ui:' + #screen_route + (#item_id_aux - #item_id_aux))) = $shulker_id)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

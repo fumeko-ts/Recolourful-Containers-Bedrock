@@ -1,0 +1,12 @@
+{
+  "namespace": "sawblade",
+  "sawblade_uv_template": {
+    "anim_type": "uv",
+    "from": "$frame",
+    "to": "$frame",
+    "duration": 0.05,
+    "next": "(@sawblade. + $next_frame)"
+  },
+  "sawblade_0@sawblade.sawblade_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "sawblade_1"},
+  "sawblade_1@sawblade.sawblade_uv_template": {"$frame": [ 0, 67 ], "$next_frame": "sawblade_0"}
+}
