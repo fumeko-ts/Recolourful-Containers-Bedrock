@@ -1,8 +1,8 @@
 {
   "$is_recolorful_containers": true,
 
-  "$recipe_edit_text_color": "white",
-  /*
+  "$recipe_edit_text_color": [0.5725, 0.5725, 0.5725, 1.0],
+/*
   valid options for  $recipe_edit_text_color is -
     
     white
@@ -21,10 +21,10 @@
   or just rgba like  [0.247, 0.247, 0.247, 1.0] i think [0.247, 0.247, 1.0] also works
 */
 
-  "$recipe_edit_placeholder_text_color": "§o§8§3", // color codes only
+  "$recipe_edit_placeholder_text_color": "§o§7", // color codes only
 
+  "$recipe_page_count_color": [0.95686, 0.95686, 0.95686, 1.0],
 
-  "$recipe_page_count_color": "white",
   "$villager_biome": "plains",
 
   // Set container UI transparency (range: 0.0 - 1.0)

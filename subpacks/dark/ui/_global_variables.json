@@ -1,7 +1,7 @@
 {
   "$is_recolorful_containers": true,
 
-  "$recipe_edit_text_color": "white",//
+  "$recipe_edit_text_color": "white", 
 /*
   valid options for  $recipe_edit_text_color is -
     
@@ -19,12 +19,12 @@
     blue
    
   or just rgba like  [0.247, 0.247, 0.247, 1.0] i think [0.247, 0.247, 1.0] also works
-  
 */
 
   "$recipe_edit_placeholder_text_color": "§o§7", // color codes only
 
-  "$recipe_page_count_color": "white",
+  //is it possible to change colour of the shadow?
+  "$recipe_page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
 
   "$villager_biome": "plains",
 
