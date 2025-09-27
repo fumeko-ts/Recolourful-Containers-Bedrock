@@ -95,7 +95,7 @@
           "$profession_sprite": "fisherman",
           "$entity_index": "ui:f",
           "$profession": "fisherman",
-          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"
+          "$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"
         }
       },
       {
