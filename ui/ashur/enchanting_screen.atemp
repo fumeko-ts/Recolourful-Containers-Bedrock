@@ -166,7 +166,7 @@
     "$binding_collection|default": "#enchant_buttons",
     "controls": [
       {
-        "unselectable_button@container_common.base_button": {
+        "unselectable_button@enchanting_screen.button_common": {
           "default_control": "default",
           "pressed_control": "default",
           "hover_control": "hover",
@@ -181,13 +181,22 @@
       },
       { "bg@screen_content.enchanting_button_disabled": { "layer": 4 } },
       {
-        "selectable_button@container_common.base_button": {
+        "selectable_button@enchanting_screen.button_common": {
           "default_control": "default",
           "pressed_control": "default",
           "hover_control": "hover",
           "$visibility_binding_name": "#selectable_button_visibility",
           "layer": 12,
-          "button_mappings": "$enchant_selectable_button_mappings",
+          "button_mappings": [
+            { "from_button_id": "button.menu_select", "to_button_id": "button.menu_ok", "mapping_type": "pressed" },
+            { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" },
+            {
+              "from_button_id": "button.controller_back",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused",
+              "ignored": "(not $is_ps4)"
+            }
+          ],
           "controls": [
             { "default@enchanting_screen.selectable_button_controls": {} },
             {
@@ -287,6 +296,22 @@
       {
         "binding_collection_name": "#enchant_buttons",
         "binding_name": "#runes",
+        "binding_type": "collection"
+      }
+    ]
+  },
+
+  "button_common@common.button": {
+    "sound_volume": 0.0,
+    "layer": 22,
+    "size": [108, 19],
+    "bindings": [
+      { "binding_type": "collection_details", "binding_collection_name": "$binding_collection" },
+      {
+        "binding_name": "$visibility_binding_name",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_collection_name": "$binding_collection",
         "binding_type": "collection"
       }
     ]

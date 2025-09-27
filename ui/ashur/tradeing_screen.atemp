@@ -77,7 +77,7 @@
                       "layer": 14,
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
-                      "offset": "$trades_label_offset"
+                      "offset": [0, 5]
                     }
                   }
                 ]
