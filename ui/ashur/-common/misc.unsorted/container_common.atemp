@@ -3,6 +3,7 @@
   "container_details@global.empty_panel": {
     "anchor_to": "center",
     "anchor_from": "center",
+    "layer": 5,// so that the exit buttons will render below
     "controls": [
       {"screen@global.empty_panel": {"size": [ "100%", "100%" ], "controls": "$screen_controls"}},
       {"2@common.selected_item_details_factory": {}},

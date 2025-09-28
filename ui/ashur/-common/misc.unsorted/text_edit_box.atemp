@@ -3,10 +3,13 @@
   "text_edit_box@common.text_edit_box": {
     "$text_background_locked|default": "global.empty_panel",
     "$color|default": "white",
+    "$extra_contents|default": "global.empty_panel",
+    "$place_holder_text|default": "",
+    "place_holder_control": "visibility_panel",
     "controls": [
       {
         "centering_panel@global.empty_panel": {
-          "size": [ "100% - 6px", "100% - 4px" ],
+          "size": ["100% - 6px", "100% - 4px"],
           "controls": [
             {
               "clipper_panel@global.empty_panel": {
@@ -33,7 +36,7 @@
                   },
                   {
                     "clear_text_button_panel@global.empty_panel": {
-                      "size": [ "100%", "100%" ],
+                      "size": ["100%", "100%"],
                       "visible": "$text_clear_button_enabled",
                       "controls": [
                         {
@@ -53,36 +56,6 @@
                         }
                       ]
                     }
-                  },
-                  {
-                    "visibility_panel@global.empty_panel": {
-                      "$placeholder_label_size|default": "$text_edit_box_label_size",
-                      "controls": [
-                        {
-                          "place_holder_control@$place_holder_control": {
-                            "layer": 1,
-                            "shadow": true,
-                            "size": "$placeholder_label_size",
-                            "offset": "$text_edit_box_label_offset",
-                            "min_size": "$text_edit_box_label_min_size",
-                            "anchor_from": "$text_edit_box_label_anchor_point",
-                            "anchor_to": "$text_edit_box_label_anchor_point",
-                            "$text_alpha|default": "$alpha",
-                            "$locked_text_alpha|default": "$disabled_alpha",
-                            "$locked_color|default": "$disabled_color"
-                          }
-                        }
-                      ],
-                      "bindings": [
-                        {
-                          "binding_type": "view",
-                          "source_control_name": "$text_edit_text_control",
-                          "source_property_name": "(#item_name = '')",
-                          "target_property_name": "#visible",
-                          "resolve_sibling_scope": true
-                        }
-                      ]
-                    }
                   }
                 ]
               }
@@ -95,14 +68,71 @@
           "$disabled_color|default": "$color",
           "controls": [
             {
-              "edit_box_indent@$text_background_locked": {"$color": "$disabled_color", "$alpha": "$disabled_alpha"}
+              "edit_box_indent@$text_background_locked": { "$color": "$disabled_color", "$alpha": "$disabled_alpha" }
             }
           ]
         }
       },
-      {"default@$text_background_default": {}},
-      {"hover@$text_background_hover": {}},
-      {"pressed@$text_background_hover": {}}
+      { "default@$text_background_default": {} },
+      { "hover@$text_background_hover": {} },
+      { "pressed@$text_background_hover": {} },
+      {
+        "visibility_panel@global.empty_panel": {
+          "size": ["100% - 6px", "100% - 4px"],
+          "controls": [
+            {
+              "1@$extra_contents": {
+                "offset": [1, 0.4],
+                "controls": [
+                  {
+                    "overlay@text_edit_box.placeholder_template": {
+                      "color": "$recipe_edit_text_color",
+                      "layer": 7
+                    }
+                  },
+                  {
+                    "underlay@text_edit_box.placeholder_template": {
+                      "color": "$recipe_edit_shadow_text_color",
+                      "layer": 5,
+                      "offset": [0.8, 1]
+                    }
+                  }
+                ]
+              }
+            },
+
+            {
+              "2@common.text_edit_box_place_holder_label": {
+                "ignored": "($extra_contents = 'text_edit_box.placeholder_label')",
+                "layer": 1,
+                "shadow": true,
+                "size": ["default", 10],
+                "offset": "$text_edit_box_label_offset",
+                "anchor_from": "$text_edit_box_label_anchor_point",
+                "anchor_to": "$text_edit_box_label_anchor_point"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$text_edit_text_control",
+              "source_property_name": "(#item_name = '')",
+              "target_property_name": "#visible",
+              "resolve_sibling_scope": true
+            }
+          ]
+        }
+      }
     ]
+  },
+  "placeholder_label@global.empty_panel": {},
+  "placeholder_template@global.empty_label": {
+    "font_size": "normal",
+    "text_alignment": "left",
+    "size": ["100%", 10],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "text": "$place_holder_text"
   }
 }
