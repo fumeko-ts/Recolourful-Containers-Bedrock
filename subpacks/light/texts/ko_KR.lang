@@ -148,3 +148,4 @@ action.interact.wax_off=§8왁스 끄기
 action.interact.drop_item=§8아이템 떨어뜨리기
 action.interact.allay=§8알레이에게 아이템 주기
 action.interact.exit.raft=§8뗏목을 떠나기
+realmsSettingsScreen.searchBox=§o검색 중...

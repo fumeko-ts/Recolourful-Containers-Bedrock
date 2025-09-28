@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rZelená škatuľa shulkera-
 tile.shulkerBoxRed.name=§c§rČervená škatuľa shulkera-
 tile.shulkerBoxBlack.name=§0§rČierna škatuľa shulkera-
 container.shulkerbox=§z§rŠkatuľa shulkera
+
+realmsSettingsScreen.searchBox=§oHľadať...

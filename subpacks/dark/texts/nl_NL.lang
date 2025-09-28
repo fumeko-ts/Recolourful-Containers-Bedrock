@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rGroene Sjoelkerdoos-
 tile.shulkerBoxRed.name=§c§rRode Sjoelkerdoos-
 tile.shulkerBoxBlack.name=§0§rZwarte Sjoelkerdoos-
 container.shulkerbox=§z§rSjoelkerdoos
+
+realmsSettingsScreen.searchBox=§oZoeken...

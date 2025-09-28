@@ -148,3 +148,4 @@ action.interact.wax_off=§8Odvoskovat
 action.interact.drop_item=§8Zahodit předmět
 action.interact.allay=§8Dát předmět nádeníkovi
 action.interact.exit.raft=§8Opustit Raft
+realmsSettingsScreen.searchBox=§oHledat...

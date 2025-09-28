@@ -2,7 +2,6 @@
   "namespace": "text_edit_box",
   "text_edit_box@common.text_edit_box": {
     "$text_background_locked|default": "global.empty_panel",
-    "$color|default": "white",
     "$extra_contents|default": "global.empty_panel",
     "$place_holder_text|default": "",
     "place_holder_control": "visibility_panel",
@@ -18,7 +17,6 @@
                 "anchor_to": "left_middle",
                 "offset": "$text_offset",
                 "clips_children": true,
-                "$disabled_color|default": "$color",
                 "controls": [
                   {
                     "$text_edit_text_control@common.text_edit_box_label": {
@@ -28,10 +26,7 @@
                       "min_size": "$text_edit_box_label_min_size",
                       "anchor_from": "$text_edit_box_label_anchor_point",
                       "anchor_to": "$text_edit_box_label_anchor_point",
-                      "font_size": "$font_size",
-                      "$text_alpha|default": "$alpha",
-                      "$locked_text_alpha|default": "$disabled_alpha",
-                      "$locked_color|default": "$disabled_color"
+                      "font_size": "$font_size"
                     }
                   },
                   {
@@ -130,6 +125,7 @@
   "placeholder_template@global.empty_label": {
     "font_size": "normal",
     "text_alignment": "left",
+    "localize": true,
     "size": ["100%", 10],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",

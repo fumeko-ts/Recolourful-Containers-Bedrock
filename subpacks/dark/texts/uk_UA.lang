@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rЗелений ящик шалкера-
 tile.shulkerBoxRed.name=§c§rЧервоний ящик шалкера-
 tile.shulkerBoxBlack.name=§0§rЧорний ящик шалкера-
 container.shulkerbox=§z§rЯщик шалкера
+
+realmsSettingsScreen.searchBox=§oПошук…

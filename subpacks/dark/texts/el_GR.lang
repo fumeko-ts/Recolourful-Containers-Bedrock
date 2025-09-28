@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rΠράσινο κιβώτιο Shulker-
 tile.shulkerBoxRed.name=§c§rΚόκκινο κιβώτιο Shulker-
 tile.shulkerBoxBlack.name=§0§rΜαύρο κιβώτιο Shulker-
 container.shulkerbox=§z§rΚιβώτιο Shulker
+
+realmsSettingsScreen.searchBox=§oΑναζήτηση...

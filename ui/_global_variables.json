@@ -3,8 +3,8 @@
 
   "$recipe_edit_shadow_text_color": [0.717765, 0.717765, 0.717765],
 
-  //for some reason, it controls "Search..." colour instead of edit text now
-  //its not really a problem, tbh default white for edit text works the best
+  "$recipe_text_box_content_color": [0.247, 0.247, 0.247, 1.0],// actual text boxes content color
+
   "$recipe_edit_text_color": [0.8392, 0.8392, 0.8392, 1.0],
 
 
@@ -2845,7 +2845,8 @@
                           "$text_clear_button_offset": [3, 0],
                           "$text_edit_box_label_offset": [1, 0.4],
                           "$text_clear_button_enabled": true,
-                          "$place_holder_text": "§oSearch...",
+                          "$text_box_text_color": "$recipe_text_box_content_color",
+                          "$place_holder_text": "realmsSettingsScreen.searchBox",
                           "$extra_contents": "text_edit_box.placeholder_label",
                           "$text_background_locked": "screen_content.text_field",
                           "$text_background_default": "screen_content.text_field",

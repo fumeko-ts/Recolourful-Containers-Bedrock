@@ -148,3 +148,4 @@ action.interact.wax_off=§8Wachs abnehmen
 action.interact.drop_item=§8Gegenstand fallenlassen
 action.interact.allay=§8Gegenstand dem Hilfsgeist geben
 action.interact.exit.raft=§8Floß verlassen
+realmsSettingsScreen.searchBox=§oSuche...

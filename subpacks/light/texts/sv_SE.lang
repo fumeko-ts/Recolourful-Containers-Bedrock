@@ -148,3 +148,4 @@ action.interact.wax_off=§8Vaxa av
 action.interact.drop_item=§8Släpp föremål
 action.interact.allay=§8Ge föremål till hjälpare
 action.interact.exit.raft=§8Lämna flotten
+realmsSettingsScreen.searchBox=§oSök ...

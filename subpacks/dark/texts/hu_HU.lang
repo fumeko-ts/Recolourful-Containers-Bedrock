@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rZöld Shulker-doboz-
 tile.shulkerBoxRed.name=§c§rPiros Shulker-doboz-
 tile.shulkerBoxBlack.name=§0§rFekete Shulker-doboz-
 container.shulkerbox=§z§rShulker-doboz
+
+realmsSettingsScreen.searchBox=§oKeresés...

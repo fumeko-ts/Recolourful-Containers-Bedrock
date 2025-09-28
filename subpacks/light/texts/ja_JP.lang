@@ -148,3 +148,4 @@ action.interact.wax_off=§8錆止めオフ
 action.interact.drop_item=§8アイテムを落とす
 action.interact.allay=§8アレイにアイテムを渡す
 action.interact.exit.raft=§8イカダを降りる
+realmsSettingsScreen.searchBox=§o検索…

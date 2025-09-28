@@ -148,3 +148,4 @@ action.interact.wax_off=§8Viaszozás ki
 action.interact.drop_item=§8Tárgy eldobása
 action.interact.allay=§8Tárgy átadása egy munkásnak
 action.interact.exit.raft=§8Tutaj elhagyása
+realmsSettingsScreen.searchBox=§oKeresés...

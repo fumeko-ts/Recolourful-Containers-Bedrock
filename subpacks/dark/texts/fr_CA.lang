@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rBoîte de Shulker verte-
 tile.shulkerBoxRed.name=§c§rBoîte de Shulker rouge-
 tile.shulkerBoxBlack.name=§0§rBoîte de Shulker noire-
 container.shulkerbox=§z§rBoîte de Shulker
+
+realmsSettingsScreen.searchBox=§oRecherche...

@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rKotak Shulker Hijau-
 tile.shulkerBoxRed.name=§c§rKotak Shulker Merah-
 tile.shulkerBoxBlack.name=§0§rKotak Shulker Hitam-
 container.shulkerbox=§z§rKotak Shulker
+
+realmsSettingsScreen.searchBox=§oCari...

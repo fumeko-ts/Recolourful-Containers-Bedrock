@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rZelená krabice z krabicovce-
 tile.shulkerBoxRed.name=§c§rČervená krabice z krabicovce-
 tile.shulkerBoxBlack.name=§0§rČerná krabice z krabicovce-
 container.shulkerbox=§z§rKrabice z krabicovce
+
+realmsSettingsScreen.searchBox=§oHledat...

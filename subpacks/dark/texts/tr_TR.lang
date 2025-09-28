@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rYeşil Shulker Kutusu-
 tile.shulkerBoxRed.name=§c§rKırmızı Shulker Kutusu-
 tile.shulkerBoxBlack.name=§0§rSiyah Shulker Kutusu-
 container.shulkerbox=§z§rShulker Kutusu
+
+realmsSettingsScreen.searchBox=§oAra...

@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§r绿色潜影盒-
 tile.shulkerBoxRed.name=§c§r红色潜影盒-
 tile.shulkerBoxBlack.name=§0§r黑色潜影盒-
 container.shulkerbox=§z§r潜影盒
+
+realmsSettingsScreen.searchBox=§o搜索...

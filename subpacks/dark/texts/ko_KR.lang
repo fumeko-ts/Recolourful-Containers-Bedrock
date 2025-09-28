@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§r녹색 셜커 상자-
 tile.shulkerBoxRed.name=§c§r빨간색 셜커 상자-
 tile.shulkerBoxBlack.name=§0§r검은색 셜커 상자-
 container.shulkerbox=§z§r셜커 상자
+
+realmsSettingsScreen.searchBox=§o검색 중...

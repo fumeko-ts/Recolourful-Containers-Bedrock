@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rЗелена кутия на потайник-
 tile.shulkerBoxRed.name=§c§rЧервена кутия на потайник-
 tile.shulkerBoxBlack.name=§0§rЧерна кутия на потайник-
 container.shulkerbox=§z§rКутия на потайник
+
+realmsSettingsScreen.searchBox=§oТърсене...

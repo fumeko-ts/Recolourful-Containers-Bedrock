@@ -90,3 +90,5 @@ tile.shulkerBoxGreen.name=§2§rVihreä kuoripiilijälaatikko-
 tile.shulkerBoxRed.name=§c§rPunainen kuoripiilijälaatikko-
 tile.shulkerBoxBlack.name=§0§rMusta kuoripiilijälaatikko-
 container.shulkerbox=§z§rKuoripiilijälaatikko
+
+realmsSettingsScreen.searchBox=§oHae...
