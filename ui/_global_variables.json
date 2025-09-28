@@ -1,12 +1,16 @@
 {
   "$is_recolorful_containers": true,
 
-  "$recipe_edit_shadow_text_color": [0.475, 0.95, 0.11875],
-  "$recipe_edit_text_color": [0.5725, 0.5725, 0.5725, 1.0],
+  "$recipe_edit_shadow_text_color": [0.717765, 0.717765, 0.717765],
 
-  "$page_count_shadow_color": [0.475, 0.95, 0.11875],
+  //for some reason, it controls "Search..." colour instead of edit text now
+  //its not really a problem, tbh default white for edit text works the best
+  "$recipe_edit_text_color": [0.8392, 0.8392, 0.8392, 1.0],
 
-  "$recipe_page_count_color": /*[0.95686, 0.95686, 0.95686, 1.0]*/ "black",
+
+  "$page_count_shadow_color": [0.717765, 0.717765, 0.717765],
+  "$recipe_page_count_color": [0.95686, 0.95686, 0.95686, 1.0],
+
   "$villager_biome": "plains",
 
   // Set container UI transparency (range: 0.0 - 1.0)

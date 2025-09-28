@@ -1,12 +1,12 @@
 {
   "$is_recolorful_containers": true,
 
-  "$recipe_edit_shadow_text_color": [0.475, 0.95, 0.11875],
-  "$recipe_edit_text_color": [0.5725, 0.5725, 0.5725, 1.0],
+  "$recipe_edit_shadow_text_color": [0.5725, 0.5725, 0.5725, 1.0],
+  "$recipe_edit_text_color": [0.67059, 0.67059, 0.67059, 1.0],
 
 
-  "$page_count_shadow_color": [0.475, 0.95, 0.11875],
-  "$recipe_page_count_color": /*[0.7647, 0.7647, 0.7647, 1.0]*/"black",
+  "$page_count_shadow_color": [0.5725, 0.5725, 0.5725, 1.0],
+  "$recipe_page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
 
   "$villager_biome": "plains",
 
