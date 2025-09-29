@@ -44,21 +44,32 @@
       }
     ]
   },
-  "java_tooltip_test": {
-    "type": "panel",
-    "size": ["200%c", "200%c"],
-    "layer": 50,
-    "allow_clipping": false,
+  "tooltip_rarity_binds@global.empty_panel": {
+    "size": ["100%c", "100%c"],
+    "$tooltip|default": "",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [26, 26],
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_condition": "always",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "((('%.3s' * #hover_text) = $item_rarity) or (('%.6s' * #hover_text) = $renamed_rarity))",
+        "target_property_name": "#visible"
+      }
+    ],
     "controls": [
       {
-        "background": {
-          "type": "image",
-          "anchor_from": "bottom_right",
-          "anchor_to": "bottom_right",
-          "offset": [26, 26],
-          "texture": "textures/ui/purpleBorder",
-          "layer": 1,
+        "q@screen_content.image_element": {
+          "texture": "$tooltip",
           "size": ["100%c + 10px", "100%c + 10px"],
+          "nineslice_size": 3,
           "controls": [
             {
               "hover_text@global.empty_label": {
@@ -73,13 +84,6 @@
                     "binding_condition": "always",
                     "binding_type": "collection",
                     "binding_collection_name": "$item_collection_name"
-                  },
-                  {
-                    // we could also add the items durability but it may cause lag
-                    "binding_type": "view",
-                    "source_property_name": "(#hover_text  - '\n\u00a79\u00a79craftingScreen.tab.equipment\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.construction\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.nature\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.items\u00a7r' - '\n\u00a79\u00a79craftingScreen.tab.commandsl\u00a7r')",
-                    "target_property_name": "#hover_text",
-                    "binding_condition": "once"
                   }
                 ]
               }
@@ -98,6 +102,109 @@
               "binding_condition": "always",
               "source_property_name": "(not (#hover_text = ''))",
               "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "java_tooltip_test": {
+    "type": "panel",
+    "size": ["200%c", "200%c"],
+    "layer": 50,
+    "allow_clipping": false,
+    "controls": [
+      {
+        "common@global.tooltip_rarity_binds": {
+          "$item_rarity": "§f",
+          "$renamed_rarity": "§o§f",
+          "$tooltip": "textures/common"
+        }
+      },
+      {
+        "uncommon@global.tooltip_rarity_binds": {
+          "$item_rarity": "§e",
+          "$renamed_rarity": "§o§e",
+          "$tooltip": "textures/uncommon"
+        }
+      },
+      {
+        "rare@global.tooltip_rarity_binds": {
+          "$item_rarity": "§b",
+          "$renamed_rarity": "§o§b",
+          "$tooltip": "textures/rare"
+        }
+      },
+      {
+        "epic@global.tooltip_rarity_binds": {
+          "$item_rarity": "§d",
+          "$renamed_rarity": "§o§d",
+          "$tooltip": "textures/epic"
+        }
+      },
+
+      {
+        "tooltip_rarity_binds@global.empty_panel": {
+          "size": ["100%c", "100%c"],
+          "$tooltip|default": "textures/common",
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [26, 26],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_condition": "always",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(not ((('%.3s' * #hover_text) = '§f') or (('%.6s' * #hover_text) = '§o§f') or (('%.3s' * #hover_text) = '§e') or (('%.6s' * #hover_text) = '§o§e') or (('%.3s' * #hover_text) = '§b') or (('%.6s' * #hover_text) = '§o§b') or (('%.3s' * #hover_text) = '§d') or (('%.6s' * #hover_text) = '§o§d')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "q@screen_content.image_element": {
+                "texture": "$tooltip",
+                "size": ["100%c + 10px", "100%c + 10px"],
+                "nineslice_size": 3,
+                "controls": [
+                  {
+                    "hover_text@global.empty_label": {
+                      "size": ["default", "default"],
+                      "layer": 30,
+                      "text": "#hover_text",
+
+                      "bindings": [
+                        {
+                          "binding_name": "$hover_text_binding_name",
+                          "binding_name_override": "#hover_text",
+                          "binding_condition": "always",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  }
+                ],
+
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_condition": "always",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_type": "view",
+                    "binding_condition": "always",
+                    "source_property_name": "(not (#hover_text = ''))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
             }
           ]
         }
