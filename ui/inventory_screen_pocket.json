@@ -1,5 +1,9 @@
 {
-  "inventory_screen_pocket_base@global.container_screen": {
+  "crafting_screen_pocket@crafting_pocket.inventory_screen_repl": {"$current_screen|default": "crafting_screen.screen_base"},
+  "inventory_screen_pocket@crafting_pocket.inventory_screen_repl": {"$current_screen|default": "inventory_screen.screen_base"},
+  "crafting_screens@container_common.container_details": { "$screen_controls": [{ "screen@$current_screen": {} }] },
+  "inventory_screen_repl@global.container_screen": {
+    "$screen_content": "crafting_pocket.crafting_screens",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -91,7 +95,5 @@
         "mapping_type": "focused"
       }
     ]
-  },
-  "crafting_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {"$screen_content": "crafting_screen.screen_base", "$inventory_gui": false},
-  "inventory_screen_pocket@crafting_pocket.inventory_screen_pocket_base": {"$screen_content": "inventory_screen.screen_base", "$inventory_gui": true}
+  }
 }

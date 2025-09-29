@@ -1,9 +1,7 @@
 {
-  "crafting_screen@crafting.inventory_screen_repl": {"$current_screen|default": "crafting_screen.screen_base"},
-  "inventory_screen@crafting.inventory_screen_repl": {"$current_screen|default": "inventory_screen.screen_base"},
-  "crafting_screens@container_common.container_details": {"$screen_controls": [
-      {"screen@$current_screen": {}}
-    ]},
+  "crafting_screen@crafting.inventory_screen_repl": { "$current_screen|default": "crafting_screen.screen_base" },
+  "inventory_screen@crafting.inventory_screen_repl": { "$current_screen|default": "inventory_screen.screen_base" },
+  "crafting_screens@container_common.container_details": { "$screen_controls": [{ "screen@$current_screen": {} }] },
   "inventory_screen_repl@global.container_screen": {
     "$screen_content": "crafting.crafting_screens",
     "button_mappings": [
