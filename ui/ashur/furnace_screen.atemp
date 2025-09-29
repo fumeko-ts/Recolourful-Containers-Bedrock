@@ -12,6 +12,14 @@
         "main_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
+      {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
             {
               "furnace_inventory_side@global.empty_panel": {
                 "size": [176, 166],

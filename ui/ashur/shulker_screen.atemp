@@ -3,6 +3,14 @@
   "shulker_box@container_common.container_details": {
     "size": [ 176, 166 ],
     "$screen_controls": [
+      {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
       {"shulker_color@shulker_color_detector.shulker_color_detector": {}},
       {
         "shulker_top_half@global.empty_stack": {

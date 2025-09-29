@@ -3,6 +3,14 @@
   "hopper_panel@container_common.container_details": {
     "size": [ 176, 133 ],
     "$screen_controls": [
+      {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
       {"common_panel@screen_content.container_base": {"$hopper_screen": true}},
       {
         "hopper_top_half@global.empty_stack": {

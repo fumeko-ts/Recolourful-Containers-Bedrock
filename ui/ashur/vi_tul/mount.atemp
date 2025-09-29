@@ -1,7 +1,7 @@
 {
   "namespace": "mount",
   "mount@global.empty_panel": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
@@ -13,7 +13,10 @@
     "$mount_6|default": "ui:entity.trader_llama.name0",
     "controls": [
       {
-        "illama@mount.mount_screen_bindings": {"$screen": "illama_screen.illama_screen", "$screen_id": "ui:entity.llama.name0"}
+        "illama@mount.mount_screen_bindings": {
+          "$screen": "illama_screen.illama_screen",
+          "$screen_id": "ui:entity.llama.name0"
+        }
       },
       {
         "trader_illama@mount.mount_screen_bindings": {
@@ -22,23 +25,43 @@
         }
       },
       {
-        "donkey@mount.mount_screen_bindings": {"$screen": "donkey_screen.donkey_screen", "$screen_id": "ui:entity.donkey.name0"}
+        "donkey@mount.mount_screen_bindings": {
+          "$screen": "donkey_screen.donkey_screen",
+          "$screen_id": "ui:entity.donkey.name0"
+        }
       },
       {
-        "mule@mount.mount_screen_bindings": {"$screen": "mule_screen.mule_screen", "$screen_id": "ui:entity.mule.name0"}
+        "mule@mount.mount_screen_bindings": {
+          "$screen": "mule_screen.mule_screen",
+          "$screen_id": "ui:entity.mule.name0"
+        }
       },
       {
-        "horse@mount.mount_screen_bindings": {"$screen": "horse_screen.horse_screen", "$screen_id": "ui:entity.horse.name0"}
+        "horse@mount.mount_screen_bindings": {
+          "$screen": "horse_screen.horse_screen",
+          "$screen_id": "ui:entity.horse.name0"
+        }
       },
       {
-        "camel@mount.mount_screen_bindings": {"$screen": "camel_screen.camel_screen", "$screen_id": "ui:entity.camel.name0"}
+        "camel@mount.mount_screen_bindings": {
+          "$screen": "camel_screen.camel_screen",
+          "$screen_id": "ui:entity.camel.name0"
+        }
       },
       {
         "custom_rename@container_common.container_details": {
           "layer": 1,
-          "size": [ 176, 166 ],
+          "size": [176, 166],
           "$screen_controls": [
-            {"horse@mount_misc.horse_panel": {}}
+            {
+              "close@global.close_button": {
+                "offset": [12, 0],
+                "$pressed": "textures/ui/ashur/close_pressed",
+                "$default": "textures/ui/ashur/close_default",
+                "$hover": "textures/ui/ashur/close_hover"
+              }
+            },
+            { "horse@mount_misc.horse_panel": {} }
           ],
           "bindings": [
             {
@@ -64,9 +87,17 @@
     ]
   },
   "mount_screen_bindings@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_controls": [
-      {"screen@$screen": {}}
+      {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      { "screen@$screen": {} }
     ],
     "anchor_to": "center",
     "anchor_from": "center",

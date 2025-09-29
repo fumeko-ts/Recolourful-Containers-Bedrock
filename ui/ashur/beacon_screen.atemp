@@ -5,6 +5,14 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "$screen_controls": [
+      {
+        "close@global.close_button": {
+          "offset": [5, 1],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
       {"base@screen_content.container_base": {"$beacon_screen": true}},
       {
         "beacon_top_half@global.empty_stack": {

@@ -1,41 +1,64 @@
 {
   "namespace": "chest_detector",
   "chest@global.root_panel": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
     "$chest_texture|default": "",
+    "$close_position|default": [12, 0],
     "controls": [
       {
-        "1@chest_detector.chest_bindings": {"$chest_texture": "assets/small_chest", "$screen_id": "ui:container.chest0"}
+        "1@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/small_chest",
+          "$close_position": [4, 8],
+          "$screen_id": "ui:container.chest0"
+        }
       },
       {
-        "2@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_minecart", "$screen_id": "ui:entity.chest_minecart.name0"}
+        "2@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_minecart",
+          "$screen_id": "ui:entity.chest_minecart.name0"
+        }
       },
       {
-        "3@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_boat", "$screen_id": "ui:entity.chest_boat.name0"}
+        "3@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_boat",
+          "$screen_id": "ui:entity.chest_boat.name0"
+        }
       },
       {
-        "4@chest_detector.chest_bindings": {"$chest_texture": "assets/chest_raft", "$screen_id": "ui:entity.chest_raft.name0"}
+        "4@chest_detector.chest_bindings": {
+          "$chest_texture": "assets/chest_raft",
+          "$screen_id": "ui:entity.chest_raft.name0"
+        }
       },
       {
         "custom_rename@screen_content.image_element": {
-          "size": [ 192, 174 ],
+          "size": [192, 174],
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 1,
+          "$close_position": [4, 8],
           "texture": "assets/small_chest"
         }
       }
     ]
   },
   "chest_bindings@global.empty_panel": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "controls": [
       {
+        "close@global.close_button": {
+          "offset": "$close_position",
+          "$pressed": "textures/ui/ashur/close_pressed", // if you wanted you could move these to each numberd control above to theme the sprites
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
         "chest_ui_template@screen_content.image_element": {
-          "size": [ 192, 174 ],
+          "size": [192, 174],
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 2,
@@ -60,7 +83,7 @@
     ]
   },
   "chest_template@screen_content.image_element": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 1,

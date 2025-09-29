@@ -618,103 +618,6 @@
           ],
           "controls": [
             {
-              "exit_pane@common.close_button": {
-                "size": "$close_size",
-                "layer": 1,
-                "$close_size": [100, "100%"],
-                "variables": {
-                  "requires": "($touch or $pocket_edition)",
-                  "$close_size": [60, "60%"],
-                  "$mobile_exit_alpha|default": 0.3
-                },
-                "offset": [5, 0],
-                "anchor_to": "top_right",
-                "anchor_from": "top_right",
-                "$mobile_exit_alpha|default": 0,
-                "controls": [
-                  {
-                    "default@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": "$mobile_exit_alpha"
-                    }
-                  },
-                  {
-                    "hover@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": 0.25
-                    }
-                  },
-                  {
-                    "pressed@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": "$mobile_exit_alpha"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "exit_pane@common.close_button": {
-                "size": "$close_size",
-                "variables": {
-                  "requires": "($touch or $pocket_edition)",
-                  "$close_size": [60, "60%"],
-                  "$mobile_exit_alpha|default": 0.3
-                },
-                
-                "layer": 1,
-                "ignored": "(not ($touch or $pocket_edition))",
-                "offset": [-5, 0],
-                "anchor_to": "top_left",
-                "anchor_from": "top_left",
-                "$mobile_exit_alpha|default": 0,
-                "controls": [
-                  {
-                    "default@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": "$mobile_exit_alpha"
-                    }
-                  },
-                  {
-                    "hover@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": 0.25
-                    }
-                  },
-                  {
-                    "pressed@screen_content.image_element": {
-                      "size": ["100%", "100%"],
-                      "layer": 2,
-                      "texture": "textures/ui/white",
-                      "color": "black",
-                      "nineslice_size": 1,
-                      "alpha": "$mobile_exit_alpha"
-                    }
-                  }
-                ]
-              }
-            },
-            {
               "bg_no_safezone_screen_panel@$screen_bg_content": {
                 "anims": "$background_animations",
                 "animation_reset_name": "screen_animation_reset",
@@ -787,6 +690,23 @@
       }
     ]
   },
+
+  "close_button@common.close_button": {
+    "size": [11, 11],
+    "layer": 1,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "$default|default": "",
+    "$hover|default": "",
+    "$pressed|default": "",
+    "visible": "($touch or $pocket_edition or $pocket_screen)",
+    "controls": [
+      {"default@screen_content.image_element": {"size": ["default", "default"],"texture": "$default"}},
+      {"hover@screen_content.image_element"  : {"size": ["default", "default"],"texture": "$hover"  }},
+      {"pressed@screen_content.image_element": {"size": ["default", "default"],"texture": "$pressed"}}
+    ]
+  },
+
   "root_panel": {
     "type": "input_panel",
     "size": "$size",

@@ -4,6 +4,14 @@
     "size": [ 176, 166 ],
     "$screen_controls": [
       {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
         "sawblade@screen_content.image_element": {
           "texture": "assets/advanced_sprites/animated/sawblade.png",
           "anchor_from": "top_middle",

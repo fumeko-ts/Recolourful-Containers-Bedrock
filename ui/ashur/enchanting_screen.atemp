@@ -5,6 +5,14 @@
     "layer": 5,
     "$screen_controls": [
       {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
         "portal@screen_content.image_element": {
           "layer": 5,
           "texture": "assets/advanced_sprites/animated/enchant.png",

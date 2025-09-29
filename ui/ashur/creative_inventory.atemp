@@ -223,6 +223,14 @@
   "inventory_page@creative_inventory.tab_base_template": {
     "controls": [
       {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
         "inventory_tab_base@screen_content.creative_inventory": {
           "size": [ 195, 136 ],
           "anchor_to": "center",
@@ -279,6 +287,14 @@
   "misc_page@creative_inventory.tab_base_template": {
     "controls": [
       {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
         "misc_tab_base@screen_content.creative_inventory_misc": {
           "anchor_to": "center",
           "anchor_from": "center",
@@ -312,6 +328,14 @@
   },
   "search_page@creative_inventory.tab_base_template": {
     "controls": [
+      {
+        "close@global.close_button": {
+          "offset": [12, 0],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
       {
         "search_holder@global.empty_stack": {
           "orientation": "vertical",
