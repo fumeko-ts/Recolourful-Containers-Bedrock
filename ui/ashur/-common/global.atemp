@@ -4,22 +4,22 @@
     "$white_highlight_offset": [0, 0],
     "$slot_vars": "screen_content.highlight_slot",
     "variables": { "requires": "($recipe_book = true)", "$slot_vars": "global.empty_panel" },
-    "$ホバーテキストオフセット|default": "bundle_",
+  //  "$ホバーテキストオフセット|default": "bundle_",
     "controls": [
       {
         "highlight@$slot_vars": {
           "offset": "$white_highlight_offset",
           "$hover_text_binding_name|default": "#hover_text",
-          "$tooltip_renderer|default": "($ホバーテキストオフセット + tooltip_renderer)",
+    //      "$tooltip_renderer|default": "($ホバーテキストオフセット + tooltip_renderer)",
           "controls": [
-            {
+            /*{
               "hover_text_java@global.custom_renderer": {
                 "allow_clipping": false,
-                "$type": "$tooltip_renderer", // this is the first of its kind in minecraft bedrock
+                "$type": "$tooltip_renderer", 
                 "layer": 500,
                 "controls": [{ "java_tooltip_test@global.java_tooltip_test": {} }]
               }
-            },
+            },*/
 
             {
               "hover_text@common.hover_text": {
@@ -32,11 +32,11 @@
                     "binding_condition": "always",
                     "binding_type": "collection",
                     "binding_collection_name": "$item_collection_name"
-                  },
+                  }/*,
                   {
                     "binding_name": "#using_touch",
                     "binding_name_override": "#visible"
-                  }
+                  }*/
                 ]
               }
             }
