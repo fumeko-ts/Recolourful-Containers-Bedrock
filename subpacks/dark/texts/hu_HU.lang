@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rFekete Shulker-doboz
 container.shulkerbox=§z§rShulker-doboz
 
 realmsSettingsScreen.searchBox=§oKeresés...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

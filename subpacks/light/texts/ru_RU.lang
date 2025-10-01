@@ -149,3 +149,7 @@ action.interact.drop_item=§8Выбросить предмет
 action.interact.allay=§8Дать предмет спешику
 action.interact.exit.raft=§8Покинуть плот
 realmsSettingsScreen.searchBox=§oПоиск...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

@@ -149,3 +149,7 @@ action.interact.drop_item=§8Jatuhkan Item
 action.interact.allay=§8Berikan item ke Allay
 action.interact.exit.raft=§8Tinggalkan Rakit
 realmsSettingsScreen.searchBox=§oCari...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

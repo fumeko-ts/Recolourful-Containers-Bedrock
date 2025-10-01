@@ -149,3 +149,7 @@ action.interact.drop_item=§8Upuść przedmiot
 action.interact.allay=§8Daj przedmiot Allajowi
 action.interact.exit.raft=§8Opuść tratwę
 realmsSettingsScreen.searchBox=§oSzukaj...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

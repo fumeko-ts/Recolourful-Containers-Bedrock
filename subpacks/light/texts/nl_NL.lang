@@ -149,3 +149,7 @@ action.interact.drop_item=§8Item laten vallen
 action.interact.allay=§8Voorwerp geven aan Hulpje
 action.interact.exit.raft=§8Vlot verlaten
 realmsSettingsScreen.searchBox=§oZoeken...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

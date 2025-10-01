@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rΜαύρο κιβώτιο Shulker
 container.shulkerbox=§z§rΚιβώτιο Shulker
 
 realmsSettingsScreen.searchBox=§oΑναζήτηση...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

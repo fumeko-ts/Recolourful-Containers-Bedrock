@@ -149,3 +149,7 @@ action.interact.drop_item=§8Jeter objet
 action.interact.allay=§8Donner un objet à l'allay
 action.interact.exit.raft=§8Descendre du radeau
 realmsSettingsScreen.searchBox=§oRecherche...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

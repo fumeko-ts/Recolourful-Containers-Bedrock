@@ -149,3 +149,7 @@ action.interact.drop_item=§8Soltar objeto
 action.interact.allay=§8Regala un artículo al ayudante
 action.interact.exit.raft=§8Abandonar balsa
 realmsSettingsScreen.searchBox=§oBuscar...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

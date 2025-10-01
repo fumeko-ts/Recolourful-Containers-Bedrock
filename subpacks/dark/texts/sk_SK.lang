@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rČierna škatuľa shulkera
 container.shulkerbox=§z§rŠkatuľa shulkera
 
 realmsSettingsScreen.searchBox=§oHľadať...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

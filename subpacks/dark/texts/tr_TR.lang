@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rSiyah Shulker Kutusu
 container.shulkerbox=§z§rShulker Kutusu
 
 realmsSettingsScreen.searchBox=§oAra...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

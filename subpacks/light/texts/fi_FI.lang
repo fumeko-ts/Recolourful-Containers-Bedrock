@@ -149,3 +149,7 @@ action.interact.drop_item=§8Pudota esine
 action.interact.allay=§8Anna esine apurille
 action.interact.exit.raft=§8Poistu lautalta
 realmsSettingsScreen.searchBox=§oHae...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

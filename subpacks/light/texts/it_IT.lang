@@ -149,3 +149,7 @@ action.interact.drop_item=§8Rilascia oggetto
 action.interact.allay=§8Consegna l'oggetto all'alleato
 action.interact.exit.raft=§8Abbandona la zattera
 realmsSettingsScreen.searchBox=§oCerca...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

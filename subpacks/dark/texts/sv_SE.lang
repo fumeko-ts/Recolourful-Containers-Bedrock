@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rSvart shulkerlåda
 container.shulkerbox=§z§rShulkerlåda
 
 realmsSettingsScreen.searchBox=§oSök ...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

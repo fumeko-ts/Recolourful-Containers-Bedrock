@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§rZwarte Sjoelkerdoos
 container.shulkerbox=§z§rSjoelkerdoos
 
 realmsSettingsScreen.searchBox=§oZoeken...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

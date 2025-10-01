@@ -149,3 +149,7 @@ action.interact.drop_item=§8アイテムを落とす
 action.interact.allay=§8アレイにアイテムを渡す
 action.interact.exit.raft=§8イカダを降りる
 realmsSettingsScreen.searchBox=§o検索…
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

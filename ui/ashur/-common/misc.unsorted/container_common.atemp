@@ -11,7 +11,8 @@
       {"4@common.flying_item_renderer": {"layer": 12}},
       {"7@container_common.item_flying_selected": {}},
       {"8@common.gamepad_cursor_button": {}},
-      {"9@common.inventory_take_progress_icon_button": {}}
+      {"8@common.stack_splitting_overlay":{}},
+      {"10@common.inventory_take_progress_icon_button": {}}
     ]
   },
   "held_flying_renderer@global.empty_panel": {

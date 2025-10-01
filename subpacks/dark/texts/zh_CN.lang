@@ -92,3 +92,7 @@ tile.shulkerBoxBlack.name=§0§r黑色潜影盒
 container.shulkerbox=§z§r潜影盒
 
 realmsSettingsScreen.searchBox=§o搜索...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:

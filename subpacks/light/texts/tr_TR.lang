@@ -149,3 +149,7 @@ action.interact.drop_item=§8Eşyayı Bırakın
 action.interact.allay=§8Yardımcıya eşya ver
 action.interact.exit.raft=§8Saldan Ayrıl
 realmsSettingsScreen.searchBox=§oAra...
+craftingScreen.tab.construction=id:
+craftingScreen.tab.nature=id:
+craftingScreen.tab.equipment=id:
+craftingScreen.tab.items=id:
