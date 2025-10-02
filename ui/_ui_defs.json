@@ -61,6 +61,7 @@
     "ui/ashur/vi_tul/animations/smithing_animations.atemp",
     "ui/ashur/vi_tul/villager_not_tradeable.atemp",
     "ui/ashur/vi_tul/mounts/mount_misc.atemp",
-    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp"
+    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",
+    "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp"
   ]
 }

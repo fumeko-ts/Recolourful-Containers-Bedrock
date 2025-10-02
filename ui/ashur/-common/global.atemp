@@ -604,7 +604,7 @@
       },
       { "from_button_id": "button.chat", "to_button_id": "button.chat", "mapping_type": "global" }
     ],
-    "$additional_screen_content|default": "common.base_screen_empty_panel",
+    "$additional_screen_content|default": "stack_splitting_overlay.stack_splitting_overlay",
     "$use_loading_bars|default": true,
     "$is_full_screen_layout|default": false,
     "controls": [
