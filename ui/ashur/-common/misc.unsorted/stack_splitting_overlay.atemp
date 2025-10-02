@@ -10,7 +10,7 @@
       {
         "progressive_select_progress_bar_underlay@screen_content.image_element": {
           "layer": 1,
-          "texture": "textures/stack_progress_bar_left_side_arrow",
+          "texture": "textures/stack_split_underlay",
           "max_size": [128, 17],
           "size": ["default", "default"]
         }
@@ -18,7 +18,7 @@
       {
         "progressive_select_progress_bar@screen_content.image_element": {
           "layer": 2,
-          "texture": "textures/stack_progress_bar_fill",
+          "texture": "textures/stack_split_progress",
           "size": ["default", "default"],
           "max_size": [122, 17],
           "clip_direction": "left",
