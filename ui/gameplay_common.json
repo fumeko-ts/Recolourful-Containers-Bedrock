@@ -80,7 +80,7 @@
       },
       {
         "bundle_selected_item_background_colour@global.empty_image": {
-          "texture": "textures/ui/touch_ui_selected_slot",
+          "texture": "textures/bundle_selected_slot",
           "size": [18, 18],
           "layer": 1,
           "nineslice_size": 1,

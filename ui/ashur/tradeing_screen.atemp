@@ -12,7 +12,21 @@
         }
       },
       {"villager_distinguisher@villager_profession_detector.villager_panel": {}},
-      {"trade_scroll@tradeing_screen.scroll_panel": {}},
+      {
+        "scroll_panel@scroll_panel.scroll_panel": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "size": [ 100, 144 ],
+          "offset": [ 4, 18 ],
+          "$scroll_size": [ 6, 139 ],
+          "$scroll_track_offset": [ 42, -1.4 ],
+          "$scroll_view_port_size": [ 92, 140.4 ],
+          "$scrolling_pane_size": [ "100%", "100%" ],
+          "$collection_name": "trade_tiers",
+          "$scroll_box_image_control": "tradeing_screen.trade_scroller",
+          "$scrolling_content": "tradeing_screen.grid_holder"
+        }
+      },
       {
         "trade_main_inventory_half@global.empty_stack": {
           "orientation": "horizontal",
@@ -38,7 +52,7 @@
                 "size": [ 18, 55 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ "fill", 36 ]}},
-                  {"input_1@global.container_item": {"$item_collection": "trade2_ingredient2_item"}},
+                  {"input_2@global.container_item": {"$item_collection": "trade2_ingredient2_item"}},
                   {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
                 ]
               }
@@ -50,12 +64,7 @@
                 "size": [ 18, 55 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ "fill", 36 ]}},
-                  {
-                    "input_1@global.container_item": {
-                      "$item_collection": "trade2_result_item",
-                      "$button_ref": "button_mappings.trade_result_item_slot_button"
-                    }
-                  },
+                  {"result@global.container_item": {"$item_collection": "trade2_result_item","$button_ref": "button_mappings.trade_result_item_slot_button"}},
                   {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
                 ]
               }
@@ -177,7 +186,7 @@
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
-                  {"a@villager_not_tradeable.trade_selector_stack_panel": {}}
+                  {"a@selected_trade_invalid.invalid_trade_arrow_collection": {}}
                 ]
               }
             }
@@ -217,19 +226,6 @@
     "$toggle_enabled_binding_type": "global",
     "$toggle_enabled_binding_name": "#trade_toggle_enabled",
     "$toggle_enabled_binding_condition": "always"
-  },
-  "scroll_panel@scroll_panel.scroll_panel": {
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "size": [ 100, 144 ],
-    "offset": [ 4, 18 ],
-    "$scroll_size": [ 6, 139 ],
-    "$scroll_track_offset": [ 42, -1.4 ],
-    "$scroll_view_port_size": [ 92, 140.4 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$collection_name": "trade_tiers",
-    "$scroll_box_image_control": "tradeing_screen.trade_scroller",
-    "$scrolling_content": "tradeing_screen.grid_holder"
   },
   "trade_scroller@screen_content.image_element": {
     "tiled": true,

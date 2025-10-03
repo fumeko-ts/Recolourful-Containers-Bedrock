@@ -237,8 +237,8 @@
     ]
   },
   "dust_template@global.empty_panel": {
-    "$texture_selectable": "('assets/sprites/level_' + $button_index)",
-    "$texture_unselectable": "('assets/sprites/level_' + $button_index + '_disabled')",
+    "$texture_selectable": "('assets/sprite_assets/container/enchanting_table/level_' + $button_index)",
+    "$texture_unselectable": "('assets/sprite_assets/container/enchanting_table/level_' + $button_index + '_disabled')",
     "controls": [
       {
         "dust_sel@enchanting_screen.dust_image": {

@@ -1,14 +1,14 @@
 {
   "namespace": "primary_button",
   "primary_button@global.empty_panel": {
-    "size": [22, 22], 
+    "size": [22, 22],
     "controls": [
       {
         "hover_button": {
           "type": "button",
           "layer": 4,
           "size": [22, 22],
-    "offset": [1, 1],
+          "offset": [1, 1],
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
@@ -69,7 +69,7 @@
               "toggle_button@common.toggle": {
                 "size": [22, 22],
                 "layer": 1,
-    "offset": [1, 1],
+                "offset": [1, 1],
                 "focus_wrap_enabled": false,
                 "$toggle_name": "$button_name",
                 "checked_control": "checked",
@@ -130,7 +130,7 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22]},
+  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22] },
   "hover_text@common.hover_text": {
     "layer": 999,
     "bindings": [
