@@ -76,11 +76,10 @@
                           "pattern_panel@global.empty_panel": {
                             "size": [18, 18],
                             "controls": [
-                              { "pattern_slot@global.container_item": { "$item_collection": "loom_material_items" } },
                               {
-                                "img@loom_screen.item_empty_image": {
+                                "pattern_slot@global.container_item": {
                                   "$item_collection": "loom_material_items",
-                                  "$current_cell_texture": "assets/sprite_assets/container/slot/banner_pattern"
+                                  "$cell_overlay_ref": "loom_screen.banner_pattern_empty_image"
                                 }
                               }
                             ]
@@ -117,19 +116,7 @@
                         {
                           "binding_type": "view",
                           "binding_condition": "always",
-                          "source_property_name": "(not (#loom_input_id = -1))",
-                          "target_property_name": "#has_input_item"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_property_name": "(not (#loom_dye_id = -1))",
-                          "target_property_name": "#slot_has_banner"
-                        },
-                        {
-                          "binding_type": "view",
-                          "binding_condition": "always",
-                          "source_property_name": "((#slot_has_banner = true) and (#has_input_item = true))",
+                          "source_property_name": "((not (#loom_dye_id = -1)) and (not (#loom_input_id = -1)))",
                           "target_property_name": "#visible"
                         }
                       ]
@@ -201,42 +188,27 @@
                 "texture": "assets/sprite_assets/container/loom/scroller_disabled",
                 "size": [12, 15],
                 "anchor_from": "bottom_left",
-                "anchor_to": "bottom_left",
-                "bindings": [
-                  {
-                    "binding_type": "collection",
-                    "binding_collection_name": "loom_input_items",
-                    "binding_name": "#item_id_aux",
-                    "binding_name_override": "#loom_input_id"
-                  },
-                  {
-                    "binding_type": "collection",
-                    "binding_collection_name": "loom_dye_items",
-                    "binding_name": "#item_id_aux",
-                    "binding_name_override": "#loom_dye_id"
-                  },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#loom_dye_id = -1)",
-                    "target_property_name": "#dye_id"
-                  },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#loom_input_id = -1)",
-                    "target_property_name": "#banner_id"
-                  }
-                ]
+                "anchor_to": "bottom_left"
               }
             }
           ],
           "bindings": [
             {
+              "binding_type": "collection",
+              "binding_collection_name": "loom_input_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#loom_input_id"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "loom_dye_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#loom_dye_id"
+            },
+            {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_control_name": "disabled_box",
-              "source_property_name": "(#dye_id or #banner_id = true)",
+              "source_property_name": "((#loom_dye_id = -1) or (#loom_input_id = -1))",
               "target_property_name": "#visible"
             }
           ]
@@ -264,6 +236,9 @@
   },
   "dye_empty_image@loom_screen.item_empty_image": {
     "$current_cell_texture|default": "assets/sprite_assets/container/slot/dye"
+  },
+  "banner_pattern_empty_image@loom_screen.item_empty_image": {
+    "$current_cell_texture|default": "assets/sprite_assets/container/slot/banner_pattern"
   },
 
   "scroll_panel@scroll_panel.scroll_panel": {

@@ -95,7 +95,7 @@
             },
             {
               "binding_type": "view",
-              "binding_condition": "always",
+              "binding_condition": "always_when_visible",
               "source_property_name": "(#hover_text - '\n§9§9id:')",
               "target_property_name": "#hover_text"
             }

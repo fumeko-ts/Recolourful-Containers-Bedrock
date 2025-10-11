@@ -25,17 +25,63 @@
     "$is_furnace_screen|default": true,
     "controls": [
       {
+        "recipe_book@global.empty_stack": {
+          "size": [184, 166],
+          "orientation": "horizontal",
+          "visible": false,
+          "ignored": "(not $smelting_recipes)",
+          "controls": [
+            {
+              "tab_stack@furnace_tabs.furnace_tabs": {
+                "$4_tabs": true
+              }
+            },
+            {
+              "recipe_base@screen_content.recipe_book": {
+                "controls": [{ "pages@furnace_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
+              }
+            },
+            { "filler@global.empty_panel": { "size": [2, 166] } }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "furnace_recipe_2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "main_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
-      {
-        "close@global.close_button": {
-          "offset": [12, 0],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+            {
+              "layout_holder@global.empty_panel": {
+                "size": [40, 52],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "ignored": "(not $smelting_recipes)",
+                "controls": [
+                  {
+                    "layout@smelting_common.layout_toggle": {
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "layer": 10
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "close@global.close_button": {
+                "offset": [12, 0],
+                "$pressed": "textures/ui/ashur/close_pressed",
+                "$default": "textures/ui/ashur/close_default",
+                "$hover": "textures/ui/ashur/close_hover"
+              }
+            },
             {
               "furnace_inventory_side@global.empty_panel": {
                 "size": [176, 166],

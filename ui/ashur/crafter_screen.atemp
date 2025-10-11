@@ -101,7 +101,6 @@
                             "size": [54, 54],
                             "grid_dimensions": [3, 3],
                             "$item_collection_name": "container_items",
-                            "$background_images|default": "global.empty_image",
                             "collection_name": "container_items",
                             "grid_item_template": "common.container_item"
                           }
