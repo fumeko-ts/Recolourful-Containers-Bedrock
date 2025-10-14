@@ -1,7 +1,7 @@
 {
   "$is_recolorful_containers": true,
   
-  "$smelting_recipes": true,//this toggles the furnace, smoker, blast furnaces recipe books
+  "$smelting_recipes": false,//this toggles the furnace, smoker, blast furnaces recipe books
 
   "$recipe_edit_shadow_text_color": [0.5725, 0.5725, 0.5725, 1.0],
   "$recipe_edit_text_color": [0.67059, 0.67059, 0.67059, 1.0],
