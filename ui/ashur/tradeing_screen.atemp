@@ -27,7 +27,7 @@
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      {"villager_distinguisher@villager_profession_detector.villager_panel": {}},
+      {"villager_distinguisher@recolourful_villager.villager_panel": {}},
       {
         "scroll_panel@scroll_panel.scroll_panel": {
           "anchor_to": "top_left",

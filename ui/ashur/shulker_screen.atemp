@@ -27,7 +27,7 @@
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      {"shulker_color@shulker_color_detector.shulker_color_detector": {}},
+      {"shulker_color@recolourful_shulker.recolourful_shulker": {}},
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",

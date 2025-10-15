@@ -1,0 +1,397 @@
+{
+  "namespace": "bundle",
+  "bundle_cell_image@global.empty_panel": {
+    "controls": [
+      { "cell_item_image@recolourful_bundle.slots": {} },
+      {
+        "highlight_panel@global.empty_panel": {
+          "controls": [
+            {
+              "bundle_selected_item_background_colour_green@screen_content.highlight_slot": {
+                "layer": 1,
+                "bindings": [
+                  {
+                    "binding_name": "(not #using_touch)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_selected_item_background_colour_blue@common.cell_image_selected": {
+                "layer": 1,
+                "visible": false,
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_selected_bundle_item_slot",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bundle_tooltip_slot_button@common.container_slot_button_prototype": {
+    "$pressed_button_name": "button.tapped_bundle_item_icon",
+    "size": ["100%", "100%"],
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.hide_bundle_tooltip",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+  "bundle_tooltip_slot_classic@global.empty_panel": {
+    "size": [18, 18],
+    "controls": [
+      {
+        "item_in_bundle_tooltip_pocket@common.container_item": {
+          "size": [18, 18],
+          "offset": [3, 0],
+          "$background_images|default": "bundle.bundle_cell_image",
+          "$button_ref|default": "bundle.bundle_tooltip_slot_button",
+          "bindings": [
+            {
+              "binding_name": "#show_bundle_item_slot",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "more_hidden_items_label@global.empty_label": {
+          "size": ["default", 10],
+          "offset": [3, 0],
+          "color": "$item_stack_count_color",
+          "layer": 2,
+          "text": "#more_hidden_items_text",
+          "bindings": [
+            {
+              "binding_name": "#is_hidden_items_label",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#more_hidden_items_text",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "bundle_tooltip@global.empty_panel": {
+    "size": ["100%cm", "100%cm"],
+    "min_size": [86, 58],
+    "layer": 50,
+
+    "controls": [
+      {
+        "background@recolourful_bundle.colors": {}
+      },
+      {
+        "header_stack@global.empty_stack": {
+          "orientation": "horizontal",
+          "size": ["default", 15],
+          "offset": [5, 5],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 2,
+          "controls": [
+            {
+              "bundle_label@global.empty_label": {
+                "layer": 4,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "shadow": true,
+                "text": "#bundle_name",
+                "min_size": [77, "default"],
+                "bindings": [
+                  {
+                    "binding_name": "#bundle_name",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "close_button@common.close_button": {
+                "$pressed_button_name": "button.hide_bundle_tooltip",
+                "size": [8, 8],
+                "layer": 2,
+                "button_mappings": [
+                  {
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "focused"
+                  },
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_up",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "global"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@common.close_button_panel": {
+                      "$close_button_texture": "textures/ui/close_button_default_light"
+                    }
+                  },
+                  {
+                    "hover@common.close_button_panel": {
+                      "$close_button_texture": "textures/ui/close_button_hover_light"
+                    }
+                  },
+                  {
+                    "pressed@common.close_button_panel": {
+                      "$close_button_texture": "textures/ui/close_button_pressed_light"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#show_bundle_tooltip_pocket",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "wrapper@global.empty_panel": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "size": ["100%sm", "100%c"],
+          "controls": [
+            {
+              "vertical_layout_stack@global.empty_stack": {
+                "orientation": "vertical",
+                "size": ["100%", "100%c"],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 2,
+                "controls": [
+                  { "header_padding@global.empty_panel": { "layer": 3, "size": [0, 18], "offset": [5, 100] } },
+                  {
+                    "horisontal_layout_stack@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": ["100%", "100%c"],
+                      "layer": 3,
+                      "controls": [
+                        { "left_padding@global.empty_panel": { "size": ["50% - 34px", 1], "layer": 4 } },
+                        {
+                          "body_stack@global.empty_stack": {
+                            "orientation": "vertical",
+                            "size": ["100%c", "100%c"],
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left",
+                            "layer": 4,
+                            "controls": [
+                              {
+                                "item_grid": {
+                                  "type": "grid",
+                                  "layer": 3,
+                                  "grid_dimension_binding": "#bundle_tooltip_grid_dimensions",
+                                  "collection_name": "$item_collection_name",
+                                  "grid_item_template": "bundle.bundle_tooltip_slot_classic",
+                                  "$item_collection_name": "bundle_items",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#bundle_tooltip_grid_dimensions",
+                                      "binding_condition": "always_when_visible"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "info_message@global.empty_panel": {
+                                  // set its alpha to 0 for now because its not really needed and dosent look all that good with the colored bg
+                                  "alpha": 0,
+                                  "size": [77, 10],
+
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#is_selected_bundle_empty",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "footer_panel@global.empty_panel": {
+                                  "layer": 3,
+                                  "anchor_from": "bottom_middle",
+                                  "anchor_to": "bottom_middle",
+                                  "size": [76, 15],
+                                  "controls": [
+                                    {
+                                      "weight_bar@global.empty_panel": {
+                                        "layer": 4,
+                                        "anchor_from": "bottom_middle",
+                                        "anchor_to": "bottom_middle",
+                                        "offset": [1, 4],
+                                        "size": [76, 12],
+                                        "controls": [
+                                          {
+                                            "empty_message@global.empty_label": {
+                                              "color": "$sub_header_text_color",
+                                              "layer": 5,
+                                              "text": "item.bundle.empty",
+                                              "shadow": true,
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#is_selected_bundle_empty",
+                                                  "binding_name_override": "#visible"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "weight_bar_fill@global.empty_image": {
+                                              "layer": 5,
+                                              "nineslice_size": 2,
+                                              "texture": "textures/bundles/bundle_progress.png",
+                                              "clip_direction": "left",
+                                              "clip_pixelperfect": false,
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#bundle_weight_bar_ratio",
+                                                  "binding_name_override": "#clip_ratio",
+                                                  "binding_condition": "always_when_visible"
+                                                },
+                                                {
+                                                  "binding_name": "(not #is_selected_bundle_full)",
+                                                  "binding_name_override": "#visible"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "weight_bar_full@global.empty_image": {
+                                              "layer": 5,
+                                              "nineslice_size": 2,
+                                              "texture": "textures/bundles/bundle_full_progress.png",
+                                              "controls": [
+                                                {
+                                                  "full_label@global.empty_label": {
+                                                    "color": "$sub_header_text_color",
+                                                    "layer": 2,
+                                                    "text": "item.bundle.full",
+                                                    "shadow": true
+                                                  }
+                                                }
+                                              ],
+                                              "bindings": [
+                                                {
+                                                  "binding_name": "#is_selected_bundle_full",
+                                                  "binding_name_override": "#visible"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "weight_bar_border@global.empty_image": {
+                                              "nineslice_size": 4,
+                                              "alpha": 0.4,
+                                              "texture": "textures/bundles/empty_stack_progress_bar.png",
+                                              "layer": 5
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -22,6 +22,11 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "collection_name": "recipe_book",
+
+
+    "$pc_tooltip_offset|default": [31, 3],// tooltips offset
+
+    
     "grid_rescaling_type": "horizontal",
     "grid_item_template": "recipe_grid.recipe_container_item",
     "bindings": [
@@ -262,10 +267,7 @@
           "controls": [
             {
               "highlight_slot@global.highlight_slot": {
-                "$slot_vars": "global.empty_panel",
-                "$mobile_tooltip_anchor|default": "left_middle",
-                "$pc_tooltip_offset|default": [30, 30],
-                "$mobile_tooltip_offset|default": [23, 0]
+                "$slot_vars": "global.empty_panel"
               }
             }
           ]

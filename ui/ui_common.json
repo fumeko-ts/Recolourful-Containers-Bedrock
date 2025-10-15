@@ -87,8 +87,13 @@
     "focus_magnet_enabled": true,
     "$highlight_control|default": "global.highlight_slot",
     "default_focus_precedence": 1,
-    "hover_control": "hover",
+    "hover_control": "$hover_control",
+    "$hover_control": "hover",
     "pressed_control": "pressed",
+    "variables": {
+      "requires": "$touch",
+      "$hover_control": ""
+    },
     "layer": 1,
     "bindings": [
       {
@@ -192,7 +197,7 @@
       { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
       { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ],
-    "controls": [{ "hover@$highlight_control": {} }, { "pressed@$highlight_control": {} }]
+    "controls": [{ "hover@$highlight_control": { "ignored": "$touch" } }, { "pressed@$highlight_control": {} }]
   },
   "container_item": {
     "type": "input_panel",

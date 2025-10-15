@@ -15,7 +15,7 @@
 */
 
 {
-  "namespace": "mount",
+  "namespace": "recolourful_mount",
   "mount@global.empty_panel": {
     "size": [176, 166],
     "layer": 1,
@@ -28,12 +28,12 @@
     "$mount_5|default": "ui:entity.camel.name0",
     "$mount_6|default": "ui:entity.trader_llama.name0",
     "controls": [
-      {"illama@mount.mount_screen_bindings"       :{"$screen":"illama_screen.illama_screen"              ,"$screen_id":"ui:entity.llama.name0"       }},
-      {"trader_illama@mount.mount_screen_bindings":{"$screen":"trader_illama_screen.trader_illama_screen","$screen_id":"ui:entity.trader_llama.name0"}},
-      {"donkey@mount.mount_screen_bindings"       :{"$screen":"donkey_screen.donkey_screen"              ,"$screen_id":"ui:entity.donkey.name0"      }},
-      {"mule@mount.mount_screen_bindings"         :{"$screen":"mule_screen.mule_screen"                  ,"$screen_id":"ui:entity.mule.name0"        }},
-      {"horse@mount.mount_screen_bindings"        :{"$screen":"horse_screen.horse_screen"                ,"$screen_id":"ui:entity.horse.name0"       }},
-      {"camel@mount.mount_screen_bindings"        :{"$screen":"camel_screen.camel_screen"                ,"$screen_id":"ui:entity.camel.name0"       }},
+      {"illama@recolourful_mount.mount_screen_bindings"       :{"$screen":"illama_screen.illama_screen"              ,"$screen_id":"ui:entity.llama.name0"       }},
+      {"trader_illama@recolourful_mount.mount_screen_bindings":{"$screen":"trader_illama_screen.trader_illama_screen","$screen_id":"ui:entity.trader_llama.name0"}},
+      {"donkey@recolourful_mount.mount_screen_bindings"       :{"$screen":"donkey_screen.donkey_screen"              ,"$screen_id":"ui:entity.donkey.name0"      }},
+      {"mule@recolourful_mount.mount_screen_bindings"         :{"$screen":"mule_screen.mule_screen"                  ,"$screen_id":"ui:entity.mule.name0"        }},
+      {"horse@recolourful_mount.mount_screen_bindings"        :{"$screen":"horse_screen.horse_screen"                ,"$screen_id":"ui:entity.horse.name0"       }},
+      {"camel@recolourful_mount.mount_screen_bindings"        :{"$screen":"camel_screen.camel_screen"                ,"$screen_id":"ui:entity.camel.name0"       }},
       {
         "custom_rename@container_common.container_details": {
           "layer": 1,

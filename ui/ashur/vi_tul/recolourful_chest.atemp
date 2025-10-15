@@ -15,7 +15,7 @@
 */
 
 {
-  "namespace": "chest_detector",
+  "namespace": "recolourful_chest",
   "chest@global.root_panel": {
     "size": [192, 174],
     "layer": 1,
@@ -25,26 +25,26 @@
     "$close_position|default": [12, 0],
     "controls": [
       {
-        "1@chest_detector.chest_bindings": {
+        "1@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/small_chest",
           "$close_position": [4, 8],
           "$screen_id": "ui:container.chest0"
         }
       },
       {
-        "2@chest_detector.chest_bindings": {
+        "2@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/chest_minecart",
           "$screen_id": "ui:entity.chest_minecart.name0"
         }
       },
       {
-        "3@chest_detector.chest_bindings": {
+        "3@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/chest_boat",
           "$screen_id": "ui:entity.chest_boat.name0"
         }
       },
       {
-        "4@chest_detector.chest_bindings": {
+        "4@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/chest_raft",
           "$screen_id": "ui:entity.chest_raft.name0"
         }

@@ -1,0 +1,98 @@
+{
+  "namespace": "selected_item",
+
+  "selected_item_details_factory": {
+    "type": "factory",
+    "control_name": "@selected_item.selected_item_details"
+  },
+  "selected_item_details@global.empty_image": {
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": ["100%c", "100%c"],
+    "offset": [0, -16],
+    "layer": 30,
+    "controls": [
+      {
+        "mobile_common@selected_item.mobile_tooltip_base": {
+          "$item_rarity": "§f",
+          "$renamed_rarity": "§o§f",
+          "$tooltip": "textures/common"
+        }
+      },
+      {
+        "mobile_uncommon@selected_item.mobile_tooltip_base": {
+          "$item_rarity": "§e",
+          "$renamed_rarity": "§o§e",
+          "$tooltip": "textures/uncommon"
+        }
+      },
+      {
+        "mobile_rare@selected_item.mobile_tooltip_base": {
+          "$item_rarity": "§b",
+          "$renamed_rarity": "§o§b",
+          "$tooltip": "textures/rare"
+        }
+      },
+      {
+        "mobile_epic@selected_item.mobile_tooltip_base": {
+          "$item_rarity": "§d",
+          "$renamed_rarity": "§o§d",
+          "$tooltip": "textures/epic"
+        }
+      },
+
+      {
+        "no_color_code@selected_item.mobile_tooltip_base": {
+          "$bindings": [
+            {
+              "binding_name": "#selected_hover_text"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "((not (('%.2s' * #selected_hover_text) = '§')) and (not (#selected_hover_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "$tooltip": "textures/common"
+        }
+      }
+    ]
+  },
+  "anim_item_details_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_quint",
+    "destroy_at_end": "selected_item_details",
+    "duration": 2,
+    "from": 1.0,
+    "to": 0
+  },
+  "mobile_tooltip_base@screen_content.image_element": {
+    "texture": "$tooltip",
+    "size": ["100%c + 8px", "100%c + 8px"],
+    "alpha": "@selected_item.anim_item_details_alpha",
+    "nineslice_size": 3,
+    "controls": [
+      {
+        "hover_text@global.empty_label": {
+          "size": ["default", "default"],
+          "text": "#selected_hover_text",
+          "alpha": "@selected_item.anim_item_details_alpha",
+          "localize": false
+        }
+      }
+    ],
+    "bindings": "$bindings",
+    "$bindings": [
+      {
+        "binding_name": "#selected_hover_text"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(((('%.3s' * #selected_hover_text) = $item_rarity) or (('%.6s' * #selected_hover_text) = $renamed_rarity)) and (not (#selected_hover_text = '')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

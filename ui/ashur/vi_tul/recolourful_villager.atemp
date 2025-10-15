@@ -15,7 +15,7 @@
 */
 
 {
-  "namespace": "villager_profession_detector",
+  "namespace": "recolourful_villager",
   "villager_panel@global.root_panel": {
     "size": [276, 166],
     "layer": 1,
@@ -49,7 +49,7 @@
                   {
                     "eye_animation@screen_content.image_element": {
                       "layer": 3,
-                      "uv": "@villager_profession_detector.default_eyes_0",
+                      "uv": "@recolourful_villager.default_eyes_0",
                       "uv_size": [12, 5],
                       "anchor_from": "center",
                       "animation_reset_name": "screen_animation_reset",
@@ -107,11 +107,11 @@
                     "second_label@global.empty_panel": {
                       "size": ["100%c", 10],
                       "controls": [
-                        {"tier_1@villager_profession_detector.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.1","$villager_tier_index": "index_1"}},
-                        {"tier_2@villager_profession_detector.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.2","$villager_tier_index": "index_2"}},
-                        {"tier_3@villager_profession_detector.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.3","$villager_tier_index": "index_3"}},
-                        {"tier_4@villager_profession_detector.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.4","$villager_tier_index": "index_4"}},
-                        {"tier_5@villager_profession_detector.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.5","$villager_tier_index": "index_5"}}
+                        {"tier_1@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.1","$villager_tier_index": "index_1"}},
+                        {"tier_2@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.2","$villager_tier_index": "index_2"}},
+                        {"tier_3@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.3","$villager_tier_index": "index_3"}},
+                        {"tier_4@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.4","$villager_tier_index": "index_4"}},
+                        {"tier_5@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.5","$villager_tier_index": "index_5"}}
                       ]
                     }
                   }
@@ -121,19 +121,19 @@
           ]
         }
       },
-      {"1@villager_profession_detector.gui_bindings":{"$profession_sprite":"armorer","$entity_index":"ui:a","$profession":"armor","$anim_sprite": "assets/advanced_sprites/animated/villager/default/armorer"}},
-      {"2@villager_profession_detector.gui_bindings":{"$profession_sprite":"butcher","$entity_index":"ui:b","$profession":"butcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
-      {"3@villager_profession_detector.gui_bindings":{"$profession_sprite":"cartographer","$entity_index":"ui:c","$profession":"cartographer","$anim_sprite": "assets/advanced_sprites/animated/villager/default/cartographer"}},
-      {"4@villager_profession_detector.gui_bindings":{"$profession_sprite":"cleric","$entity_index":"ui:d","$profession":"cleric","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
-      {"5@villager_profession_detector.gui_bindings":{"$profession_sprite":"farmer","$entity_index":"ui:e","$profession":"farmer","$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"}},
-      {"6@villager_profession_detector.gui_bindings":{"$profession_sprite":"fisherman","$entity_index":"ui:f","$profession":"fisherman","$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"}},
-      {"7@villager_profession_detector.gui_bindings":{"$profession_sprite":"fletcher","$entity_index":"ui:g","$profession":"fletcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/fletcher"}},
-      {"8@villager_profession_detector.gui_bindings":{"$profession_sprite":"leatherworker","$entity_index":"ui:h","$profession":"leather","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
-      {"9@villager_profession_detector.gui_bindings":{"$profession_sprite":"librarian","$entity_index":"ui:i","$profession":"librarian","$anim_sprite": "assets/advanced_sprites/animated/villager/default/librarian"}},
-      {"10@villager_profession_detector.gui_bindings":{"$profession_sprite":"shepherd","$entity_index":"ui:j","$profession":"shepherd","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
-      {"11@villager_profession_detector.gui_bindings":{"$profession_sprite":"toolsmith","$entity_index":"ui:k","$profession":"tool","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
-      {"12@villager_profession_detector.gui_bindings":{"$profession_sprite":"weaponsmith","$uv_anim":"@villager_profession_detector.weaponsmith_eyes_0","$entity_index":"ui:l","$profession": "weapon","$anim_sprite": "assets/advanced_sprites/animated/villager/default/weaponsmith"      }},
-      {"13@villager_profession_detector.gui_bindings":{"$profession_sprite":"mason","$entity_index":"ui:m","$profession":"mason","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}}
+      {"1@recolourful_villager.gui_bindings":{"$profession_sprite":"armorer","$entity_index":"ui:a","$profession":"armor","$anim_sprite": "assets/advanced_sprites/animated/villager/default/armorer"}},
+      {"2@recolourful_villager.gui_bindings":{"$profession_sprite":"butcher","$entity_index":"ui:b","$profession":"butcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
+      {"3@recolourful_villager.gui_bindings":{"$profession_sprite":"cartographer","$entity_index":"ui:c","$profession":"cartographer","$anim_sprite": "assets/advanced_sprites/animated/villager/default/cartographer"}},
+      {"4@recolourful_villager.gui_bindings":{"$profession_sprite":"cleric","$entity_index":"ui:d","$profession":"cleric","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
+      {"5@recolourful_villager.gui_bindings":{"$profession_sprite":"farmer","$entity_index":"ui:e","$profession":"farmer","$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"}},
+      {"6@recolourful_villager.gui_bindings":{"$profession_sprite":"fisherman","$entity_index":"ui:f","$profession":"fisherman","$anim_sprite": "assets/advanced_sprites/animated/villager/default/farmer"}},
+      {"7@recolourful_villager.gui_bindings":{"$profession_sprite":"fletcher","$entity_index":"ui:g","$profession":"fletcher","$anim_sprite": "assets/advanced_sprites/animated/villager/default/fletcher"}},
+      {"8@recolourful_villager.gui_bindings":{"$profession_sprite":"leatherworker","$entity_index":"ui:h","$profession":"leather","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
+      {"9@recolourful_villager.gui_bindings":{"$profession_sprite":"librarian","$entity_index":"ui:i","$profession":"librarian","$anim_sprite": "assets/advanced_sprites/animated/villager/default/librarian"}},
+      {"10@recolourful_villager.gui_bindings":{"$profession_sprite":"shepherd","$entity_index":"ui:j","$profession":"shepherd","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
+      {"11@recolourful_villager.gui_bindings":{"$profession_sprite":"toolsmith","$entity_index":"ui:k","$profession":"tool","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}},
+      {"12@recolourful_villager.gui_bindings":{"$profession_sprite":"weaponsmith","$uv_anim":"@recolourful_villager.weaponsmith_eyes_0","$entity_index":"ui:l","$profession": "weapon","$anim_sprite": "assets/advanced_sprites/animated/villager/default/weaponsmith"      }},
+      {"13@recolourful_villager.gui_bindings":{"$profession_sprite":"mason","$entity_index":"ui:m","$profession":"mason","$anim_sprite": "assets/advanced_sprites/animated/villager/default/default"}}
     ]
   },
   "gui_bindings@global.empty_panel": {
@@ -142,7 +142,7 @@
     "anchor_to": "center",
     "$entity_index_main|default": "$entity_index",
     "$profession_text|default": "(atemp.entity.villager. + $profession)",
-    "$uv_anim|default": "@villager_profession_detector.default_eyes_0",
+    "$uv_anim|default": "@recolourful_villager.default_eyes_0",
     "controls": [
       {
         "main@global.empty_panel": {
@@ -218,11 +218,11 @@
                           "second_label@global.empty_panel": {
                             "size": ["100%c", 10],
                             "controls": [
-                              {"1@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.1","$visiblilty_binding_value": "index_1"}},
-                              {"2@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.2","$visiblilty_binding_value": "index_2"}},
-                              {"3@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.3","$visiblilty_binding_value": "index_3"}},
-                              {"4@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.4","$visiblilty_binding_value": "index_4"}},
-                              {"5@villager_profession_detector.secondary_label": {"$secondary_label_text": "atemp.trade.level.5","$visiblilty_binding_value": "index_5"}}
+                              {"1@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.1","$visiblilty_binding_value": "index_1"}},
+                              {"2@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.2","$visiblilty_binding_value": "index_2"}},
+                              {"3@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.3","$visiblilty_binding_value": "index_3"}},
+                              {"4@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.4","$visiblilty_binding_value": "index_4"}},
+                              {"5@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.5","$visiblilty_binding_value": "index_5"}}
                             ]
                           }
                         }
@@ -345,21 +345,21 @@
     "from": "$frame",
     "to": "$frame",
     "duration": "$frame_time",
-    "next": "(@villager_profession_detector. + $next_frame)"
+    "next": "(@recolourful_villager. + $next_frame)"
   },
-  "default_eyes_0@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,0],"$next_frame":"default_eyes_1","$frame_time":5.0},
-  "default_eyes_1@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,5],"$next_frame":"default_eyes_2","$frame_time":3.0},
-  "default_eyes_2@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,0],"$next_frame":"default_eyes_3","$frame_time":3.0},
-  "default_eyes_3@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,10],"$next_frame":"default_eyes_4","$frame_time":1.0},
-  "default_eyes_4@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,20],"$next_frame":"default_eyes_5","$frame_time":0.1},
-  "default_eyes_5@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,25],"$next_frame":"default_eyes_6","$frame_time":0.1},
-  "default_eyes_6@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,30],"$next_frame":"default_eyes_0","$frame_time":0.1},
+  "default_eyes_0@recolourful_villager.villager_uv_anim_template":{"$frame":[0,0],"$next_frame":"default_eyes_1","$frame_time":5.0},
+  "default_eyes_1@recolourful_villager.villager_uv_anim_template":{"$frame":[0,5],"$next_frame":"default_eyes_2","$frame_time":3.0},
+  "default_eyes_2@recolourful_villager.villager_uv_anim_template":{"$frame":[0,0],"$next_frame":"default_eyes_3","$frame_time":3.0},
+  "default_eyes_3@recolourful_villager.villager_uv_anim_template":{"$frame":[0,10],"$next_frame":"default_eyes_4","$frame_time":1.0},
+  "default_eyes_4@recolourful_villager.villager_uv_anim_template":{"$frame":[0,20],"$next_frame":"default_eyes_5","$frame_time":0.1},
+  "default_eyes_5@recolourful_villager.villager_uv_anim_template":{"$frame":[0,25],"$next_frame":"default_eyes_6","$frame_time":0.1},
+  "default_eyes_6@recolourful_villager.villager_uv_anim_template":{"$frame":[0,30],"$next_frame":"default_eyes_0","$frame_time":0.1},
 
-  "weaponsmith_eyes_0@villager_profession_detector.villager_uv_anim_template":{"$frame":[0, 0],"$next_frame":"weaponsmith_eyes_1","$frame_time":5.0},
-  "weaponsmith_eyes_1@villager_profession_detector.villager_uv_anim_template":{"$frame":[0, 5],"$next_frame":"weaponsmith_eyes_2","$frame_time":1.0},
-  "weaponsmith_eyes_2@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,15],"$next_frame":"weaponsmith_eyes_3","$frame_time":0.1},
-  "weaponsmith_eyes_3@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,20],"$next_frame":"weaponsmith_eyes_4","$frame_time":0.1},
-  "weaponsmith_eyes_4@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,25],"$next_frame":"weaponsmith_eyes_5","$frame_time":0.1},
-  "weaponsmith_eyes_5@villager_profession_detector.villager_uv_anim_template":{"$frame":[0, 0],"$next_frame":"weaponsmith_eyes_6","$frame_time":3.0},
-  "weaponsmith_eyes_6@villager_profession_detector.villager_uv_anim_template":{"$frame":[0,10],"$next_frame":"weaponsmith_eyes_0","$frame_time":2.0}
+  "weaponsmith_eyes_0@recolourful_villager.villager_uv_anim_template":{"$frame":[0, 0],"$next_frame":"weaponsmith_eyes_1","$frame_time":5.0},
+  "weaponsmith_eyes_1@recolourful_villager.villager_uv_anim_template":{"$frame":[0, 5],"$next_frame":"weaponsmith_eyes_2","$frame_time":1.0},
+  "weaponsmith_eyes_2@recolourful_villager.villager_uv_anim_template":{"$frame":[0,15],"$next_frame":"weaponsmith_eyes_3","$frame_time":0.1},
+  "weaponsmith_eyes_3@recolourful_villager.villager_uv_anim_template":{"$frame":[0,20],"$next_frame":"weaponsmith_eyes_4","$frame_time":0.1},
+  "weaponsmith_eyes_4@recolourful_villager.villager_uv_anim_template":{"$frame":[0,25],"$next_frame":"weaponsmith_eyes_5","$frame_time":0.1},
+  "weaponsmith_eyes_5@recolourful_villager.villager_uv_anim_template":{"$frame":[0, 0],"$next_frame":"weaponsmith_eyes_6","$frame_time":3.0},
+  "weaponsmith_eyes_6@recolourful_villager.villager_uv_anim_template":{"$frame":[0,10],"$next_frame":"weaponsmith_eyes_0","$frame_time":2.0}
 }
