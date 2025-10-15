@@ -21,6 +21,10 @@
     "anchor_from": "center",
     "layer": 5, // so that the exit buttons will render below
     "controls": [
+      { "4@common.flying_item_renderer": { "layer": 12 } },
+      { "7@container_common.item_flying_selected": {} },
+      { "8@common.gamepad_cursor_button": {} },
+      { "10@common.inventory_take_progress_icon_button": {} },
       { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } }
     ]
   },
@@ -127,21 +131,13 @@
   "item_remover": {
     "type": "toggle",
     "size": [18, 18],
-    "unchecked_control": "default",
+    "unchecked_control": "",
+    "checked_control": "",
     "unchecked_hover_control": "default_hover",
-    "checked_control": "default",
     "checked_hover_control": "default_hover",
     "$white_highlight_slot_offset": [1, 1],
     "controls": [
-      {
-        "default_hover@screen_content.highlight_slot": {
-          "size": [16, 16],
-          "controls": [
-            { "tooltip@common.hover_text": { "layer": 100, "property_bag": { "#hover_text": "destroy item" } } }
-          ]
-        }
-      },
-      { "default@global.empty_image": {} }
+      {"default_hover@screen_content.highlight_slot":{"size": [16, 16]}}
     ],
     "button_mappings": [
       {

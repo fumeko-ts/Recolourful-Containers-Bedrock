@@ -20,10 +20,8 @@
     "$white_highlight_offset": [0, 0],
     "$slot_vars": "screen_content.highlight_slot",
 
+    "$pc_tooltip_offset|default": [29, 3], // tooltips offset
 
-    "$pc_tooltip_offset|default": [29, 3],// tooltips offset
-
-    
     "controls": [
       {
         "highlight@$slot_vars": {
@@ -627,37 +625,83 @@
           ],
           "button_mappings": [
             {
-              "from_button_id": "button.menu_up",
-              "to_button_id": "button.menu_up",
-              "mapping_type": "global",
-              "scope": "view"
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed"
             },
             {
-              "from_button_id": "button.menu_down",
-              "to_button_id": "button.menu_down",
-              "mapping_type": "global",
-              "scope": "view"
+              "from_button_id": "button.menu_secondary_select",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed"
             },
             {
-              "from_button_id": "button.menu_left",
-              "to_button_id": "button.menu_left",
-              "mapping_type": "global",
-              "scope": "view"
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global" },
+            { "from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global" },
+            {
+              "from_button_id": "button.arrow_down",
+              "to_button_id": "button.arrow_key",
+              "mapping_type": "global"
             },
             {
-              "from_button_id": "button.menu_right",
-              "to_button_id": "button.menu_right",
-              "mapping_type": "global",
-              "scope": "view"
+              "from_button_id": "button.arrow_left",
+              "to_button_id": "button.arrow_key",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.arrow_right",
+              "to_button_id": "button.arrow_key",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.controller_back",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed",
+              "ignored": "(not $is_ps4)"
+            },
+            {
+              "from_button_id": "button.controller_select",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.controller_secondary_select",
+              "to_button_id": "button.container_reset_held",
+              "mapping_type": "pressed"
+            },
+            { "from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global" },
+            {
+              "from_button_id": "button.turn_down",
+              "to_button_id": "button.scroll_down",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.turn_left",
+              "to_button_id": "button.scroll_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.turn_right",
+              "to_button_id": "button.scroll_right",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_left",
+              "to_button_id": "button.inventory_left",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.inventory_right",
+              "to_button_id": "button.inventory_right",
+              "mapping_type": "global"
             }
           ],
           "controls": [
-            { "3@common.item_lock_notification_factory": {} },
-            { "4@common.flying_item_renderer": { "layer": 12 } },
+            { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
             { "selected_item_details_factory@selected_item.selected_item_details_factory": {} },
-            { "7@container_common.item_flying_selected": {} },
-            { "8@common.gamepad_cursor_button": {} },
-            { "10@common.inventory_take_progress_icon_button": {} },
             {
               "bg_no_safezone_screen_panel@$screen_bg_content": {
                 "anims": "$background_animations",
@@ -753,83 +797,7 @@
     "size": "$size",
     "$size": [176, 166],
     "anchor_from": "center",
-    "anchor_to": "center",
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      { "from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global" },
-      { "from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global" },
-      {
-        "from_button_id": "button.arrow_down",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_left",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.arrow_right",
-        "to_button_id": "button.arrow_key",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      { "from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global" },
-      {
-        "from_button_id": "button.turn_down",
-        "to_button_id": "button.scroll_down",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.turn_left",
-        "to_button_id": "button.scroll_left",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.turn_right",
-        "to_button_id": "button.scroll_right",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.inventory_left",
-        "to_button_id": "button.inventory_left",
-        "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.inventory_right",
-        "to_button_id": "button.inventory_right",
-        "mapping_type": "global"
-      }
-    ]
+    "anchor_to": "center"
   },
   "empty_panel": { "type": "panel" },
   "empty_label": { "type": "label" },

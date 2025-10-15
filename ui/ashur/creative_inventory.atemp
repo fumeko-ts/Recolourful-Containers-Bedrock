@@ -213,7 +213,6 @@
     "size": [26, 32],
     "$toggle_binding_type": "global",
     "$toggle_focus_enabled": true,
-    "$needs_hover_text": true,
     "$toggle_name": "navigation_tab",
     "$tab_icon": "creative_inventory.icon_control",
     "$toggle_state_binding_name": "#toggle_state",
@@ -221,38 +220,32 @@
   },
   "search_tab@creative_inventory.top_tab": {
     "$is_top_right_tab": true,
-    "$toggle_hover_text": "Search Items",
     "$tab_view_binding_name": "search_tab_toggle",
     "$toggle_group_forced_index": "$search_index",
     "$toggle_state_binding_name": "#is_left_tab_search"
   },
   "equipment_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Equipment Items",
     "$tab_view_binding_name": "equipment_tab_toggle",
     "$toggle_group_forced_index": "$equipment_index",
     "$toggle_state_binding_name": "#is_left_tab_equipment"
   },
   "nature_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Nature Items",
     "$tab_view_binding_name": "nature_tab_toggle",
     "$toggle_group_forced_index": "$nature_index",
     "$toggle_state_binding_name": "#is_left_tab_nature"
   },
   "items_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Misc Items",
     "$tab_view_binding_name": "items_tab_toggle",
     "$toggle_group_forced_index": "$items_index",
     "$toggle_state_binding_name": "#is_left_tab_items"
   },
   "construction_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Construction Items",
     "$is_top_left_tab": true,
     "$tab_view_binding_name": "construction_tab_toggle",
     "$toggle_group_forced_index": "$construction_index",
     "$toggle_state_binding_name": "#is_left_tab_construct"
   },
   "inventory_tab@creative_inventory.top_tab": {
-    "$toggle_hover_text": "Inventory",
     "$is_bottom_right_tab": true,
     "$unchecked_offset|default": [0, -2],
     "$toggle_default_state": true,

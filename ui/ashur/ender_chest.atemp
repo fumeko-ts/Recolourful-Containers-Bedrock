@@ -20,20 +20,27 @@
     "size": [192, 174],
     "$screen_controls": [
       {
-        "close@global.close_button": {
-          "offset": [4, 8],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
-      {
-        "chest_template@screen_content.image_element": {
+        "root@global.root_panel": {
           "size": [192, 174],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 1,
-          "texture": "assets/ender_chest"
+          "controls": [
+            {
+              "close@global.close_button": {
+                "offset": [4, 8],
+                "$pressed": "textures/ui/ashur/close_pressed",
+                "$default": "textures/ui/ashur/close_default",
+                "$hover": "textures/ui/ashur/close_hover"
+              }
+            },
+            {
+              "chest_template@screen_content.image_element": {
+                "size": [192, 174],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 1,
+                "texture": "assets/ender_chest"
+              }
+            }
+          ]
         }
       },
       {
