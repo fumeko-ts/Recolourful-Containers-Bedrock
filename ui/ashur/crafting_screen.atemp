@@ -113,19 +113,7 @@
                             "controls": [
                               { "default@screen_content.mobile_easy_craft_table_default": {} },
                               { "pressed@screen_content.mobile_easy_craft_table_pressed": {} },
-                              {
-                                "hover@screen_content.mobile_easy_craft_table_hover": {
-                                  "controls": [
-                                    {
-                                      "com@global.hover_text": {
-                                        "property_bag": {
-                                          "#hover_text": "fast craft"
-                                        }
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
+                              { "hover@screen_content.mobile_easy_craft_table_hover": {} }
                             ]
                           }
                         }

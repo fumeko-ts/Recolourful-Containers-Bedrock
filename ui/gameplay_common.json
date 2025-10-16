@@ -1,7 +1,7 @@
 // the bundles ui
 {
   "namespace": "gameplay",
-  "bundle_slot_panel@global.empty_panel": {
+  "bundle_slot_panel@global.empty_panel": {// basicly the opend bundle icon in the open bundles slot
     "size": ["100%", "100%"],
     "layer": 1,
     "controls": [
@@ -93,7 +93,7 @@
             },
 
             {
-              "tooltip@bundle.bundle_tooltip": {
+              "secondary_tooltip@bundle.bundle_tooltip": {
                 "bindings": [
                   {"binding_name": "#is_selected_bundle_empty"},
                   {
