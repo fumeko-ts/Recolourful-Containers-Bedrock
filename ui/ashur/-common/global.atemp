@@ -777,18 +777,41 @@
   },
 
   "close_button@common.close_button": {
-    "size": [11, 11],
+    "size": [14, 14],
     "layer": 1,
     "anchor_to": "top_right",
     "anchor_from": "top_right",
     "$default|default": "",
     "$hover|default": "",
     "$pressed|default": "",
-    "visible": "($touch or $pocket_edition or $pocket_screen)",
     "controls": [
-      { "default@screen_content.image_element": { "size": ["default", "default"], "texture": "$default" } },
-      { "hover@screen_content.image_element": { "size": ["default", "default"], "texture": "$hover" } },
-      { "pressed@screen_content.image_element": { "size": ["default", "default"], "texture": "$pressed" } }
+      {
+        "default@screen_content.image_element": {
+          "size": [11, 11],
+          "offset": [2, 2],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "$default"
+        }
+      },
+      {
+        "hover@screen_content.image_element": {
+          "size": [11, 11],
+          "offset": [2, 2],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "$hover"
+        }
+      },
+      {
+        "pressed@screen_content.image_element": {
+          "size": [11, 11],
+          "offset": [2, 2],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "texture": "$pressed"
+        }
+      }
     ]
   },
 

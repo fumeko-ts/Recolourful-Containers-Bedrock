@@ -25,7 +25,7 @@
           "controls": [
             {
               "close@global.close_button": {
-                "offset": [4, 8],
+                "offset": [5, 6],
                 "$pressed": "textures/ui/ashur/close_pressed",
                 "$default": "textures/ui/ashur/close_default",
                 "$hover": "textures/ui/ashur/close_hover"
