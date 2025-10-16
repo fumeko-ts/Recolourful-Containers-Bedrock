@@ -3,13 +3,13 @@
 
   "selected_item_details_factory": {
     "type": "factory",
-    "layer": 3000,
     "control_name": "@selected_item.selected_item_details"
   },
   "selected_item_details@global.empty_image": {
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
     "size": ["100%c", "100%c"],
+    "layer": 3000,
     "offset": [0, -16],
     "controls": [
       {
