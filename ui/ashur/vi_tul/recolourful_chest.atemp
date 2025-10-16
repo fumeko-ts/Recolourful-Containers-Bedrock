@@ -22,12 +22,12 @@
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
     "$chest_texture|default": "",
-    "$close_position|default": [13, -2],
+    "$close_position|default": [14, -4],
     "controls": [
       {
         "1@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/small_chest",
-          "$close_position": [5, 6],
+          "$close_position": [6, 4],
           "$screen_id": "ui:container.chest0"
         }
       },
@@ -55,7 +55,7 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 1,
-          "$close_position": [5, 6],
+          "$close_position": [6, 4],
           "texture": "assets/small_chest"
         }
       }

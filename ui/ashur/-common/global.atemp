@@ -777,7 +777,7 @@
   },
 
   "close_button@common.close_button": {
-    "size": [14, 14],
+    "size": [17, 17],
     "layer": 1,
     "anchor_to": "top_right",
     "anchor_from": "top_right",
@@ -788,7 +788,7 @@
       {
         "default@screen_content.image_element": {
           "size": [11, 11],
-          "offset": [2, 2],
+          "offset": [4, 4],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "texture": "$default"
@@ -797,7 +797,7 @@
       {
         "hover@screen_content.image_element": {
           "size": [11, 11],
-          "offset": [2, 2],
+          "offset": [4, 4],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "texture": "$hover"
@@ -806,7 +806,7 @@
       {
         "pressed@screen_content.image_element": {
           "size": [11, 11],
-          "offset": [2, 2],
+          "offset": [4, 4],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "texture": "$pressed"

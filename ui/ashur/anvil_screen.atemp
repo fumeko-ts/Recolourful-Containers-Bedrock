@@ -21,7 +21,7 @@
     "$screen_controls": [
       {
         "close@global.close_button": {
-          "offset": [13, -2],
+          "offset": [14, -4],
           "$pressed": "textures/ui/ashur/close_pressed",// doing it this way incase you want to change the exit sprite per gui
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
