@@ -29,7 +29,7 @@
                 "uv": [0, 256],
                 "uv_size": [16, 16],
                 "texture": "textures/compass_atlas",
-                "offset": [0, 0]
+                "offset": [-1, 0]
               }
             }
           ]

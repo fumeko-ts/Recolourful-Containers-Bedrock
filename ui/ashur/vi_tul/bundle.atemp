@@ -7,7 +7,7 @@
         "highlight_panel@global.empty_panel": {
           "controls": [
             {
-              "bundle_selected_item_background_colour_green@screen_content.highlight_slot": {
+              "highlight_slot@screen_content.highlight_slot": {
                 "layer": 1,
                 "bindings": [
                   {
@@ -18,7 +18,7 @@
               }
             },
             {
-              "bundle_selected_item_background_colour_blue@common.cell_image_selected": {
+              "pocket_selected_slot@common.cell_image_selected": {
                 "layer": 1,
                 "visible": false,
                 "bindings": [
@@ -282,7 +282,7 @@
                                 }
                               },
                               {
-                                "info_message@global.empty_panel": {
+                                "spacer@global.empty_panel": {
                                   "size": [77, 10],
                                   "bindings": [
                                     {
@@ -367,7 +367,7 @@
                                                       },
                                                       {
                                                         "binding_type": "view",
-                                                        "binding_condition": "always_when_visible",// even tho this operator is very long since its only calculateing true false and precessing 1 number it dosent lag
+                                                        "binding_condition": "always_when_visible",
                                                         "source_property_name": "((#ratio < $1) + (#ratio < $2) + (#ratio < $3) + (#ratio < $4) + (#ratio < $5) + (#ratio < $6) + (#ratio < $7) + (#ratio < $8) + (#ratio < $9) + (#ratio < $10) + (#ratio < $11) + (#ratio < $12) + (#ratio < $13) + (#ratio < $14) + (#ratio < $15) + (#ratio < $16) + (#ratio < $17) + (#ratio < $18) + (#ratio < $19) + (#ratio < $20) + (#ratio < $21) + (#ratio < $22) + (#ratio < $23) + (#ratio < $24) + (#ratio < $25) + (#ratio < $26) + (#ratio < $27) + (#ratio < $28) + (#ratio < $29) + (#ratio < $30) + (#ratio < $31) + (#ratio < $32) + (#ratio < $33) + (#ratio < $34) + (#ratio < $35) + (#ratio < $36) + (#ratio < $37) + (#ratio < $38) + (#ratio < $39) + (#ratio < $40) + (#ratio < $41) + (#ratio < $42) + (#ratio < $43) + (#ratio < $44) + (#ratio < $45) + (#ratio < $46) + (#ratio < $47) + (#ratio < $48) + (#ratio < $49) + (#ratio < $50) + (#ratio < $51) + (#ratio < $52) + (#ratio < $53) + (#ratio < $54) + (#ratio < $55) + (#ratio < $56) + (#ratio < $57) + (#ratio < $58) + (#ratio < $59) + (#ratio < $60) + (#ratio < $61) + (#ratio < $62) + (#ratio < $63) + (#ratio < $64) + (#ratio < $65) + (#ratio < $66) + (#ratio < $67) + (#ratio < $68) + (#ratio < $69) + (#ratio < $70) + (#ratio < $71) + (#ratio < $72) + (#ratio < $73) + (#ratio < $74) + (#ratio < $75) + (#ratio < $76) + (#ratio < $77) + (#ratio < $78) + (#ratio < $79) + (#ratio < $80) + (#ratio < $81) + (#ratio < $82) + (#ratio < $83) + (#ratio < $84) + (#ratio < $85) + (#ratio < $86) + (#ratio < $87) + (#ratio < $88) + (#ratio < $89) + (#ratio < $90) + (#ratio < $91) + (#ratio < $92) + (#ratio < $93) + (#ratio < $94) + (#ratio < $95) + (#ratio < $96) + (#ratio < $97) + (#ratio < $98) + (#ratio < $99) + (#ratio < $100))",
                                                         "target_property_name": "#100"
                                                       },

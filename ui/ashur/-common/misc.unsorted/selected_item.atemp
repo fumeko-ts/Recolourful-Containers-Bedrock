@@ -78,6 +78,7 @@
           "size": ["default", "default"],
           "text": "#selected_hover_text",
           "alpha": "@selected_item.anim_item_details_alpha",
+          //"shadow": true,
           "localize": false
         }
       }

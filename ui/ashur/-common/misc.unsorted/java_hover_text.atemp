@@ -72,7 +72,7 @@
   },
   "tooltip_base@screen_content.image_element": {
     "texture": "$tooltip",
-    "size": ["100%c + 10px", "100%c + 10px"],
+    "size": ["100%c + 8px", "100%c + 8px"],
     "nineslice_size": 3,
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
@@ -83,6 +83,7 @@
           "size": ["default", "default"],
           "layer": 30,
           "text": "#hover_text",
+        //  "shadow": true,
 
           "bindings": [
             {

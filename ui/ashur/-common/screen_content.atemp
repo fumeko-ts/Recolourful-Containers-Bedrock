@@ -159,6 +159,7 @@
     "controls": [
       {
         "tooltip@global.hover_text": {
+          "visible": "(not ($touch or $pocket_edition or $pocket_screen))",
           "bindings": [
             {
               "binding_name": "#hover_text",
@@ -188,14 +189,6 @@
     "size": ["100%", "100%"]
   },
 
-
-
-
-
-
-
-
-
   "mobile_easy_craft_default@screen_content.image_element": {
     "size": [17, 22],
     "layer": 5,
@@ -210,10 +203,6 @@
     "uv": [34, 0]
   },
 
-
-
-
-
   "mobile_easy_craft_table_default@screen_content.image_element": {
     "size": [35, 26],
     "layer": 5,
@@ -227,16 +216,6 @@
   "mobile_easy_craft_table_hover@screen_content.mobile_easy_craft_table_default": {
     "uv": [70, 0]
   },
-
-
-
-
-
-
-
-
-
-
 
   "anvil_text_field@screen_content.image_element": {
     "texture": "assets/sprite_assets/container/anvil/text_field_disabled"

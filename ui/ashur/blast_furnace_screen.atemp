@@ -22,66 +22,14 @@
     "anchor_from": "center",
     "min_size": [176, 166],
     "max_size": [360, 166],
-    "$is_blast_furnace_screen|default": true,
     "controls": [
-      {
-        "recipe_book@global.empty_stack": {
-          "size": [184, 166],
-          "orientation": "horizontal",
-          "ignored": "(not $smelting_recipes)",
-          "visible": false,
-          "controls": [
-            {
-              "tab_stack@furnace_tabs.furnace_tabs": {
-                "$second_tab_icons": [{ "1@furnace_tabs.tab_item_renderer": { "$item_id": 73 } }],
-                "$third_tab_icons": [
-                  { "1@furnace_tabs.tab_item_renderer": { "layer": 7, "offset": [5, 0], "$item_id": 378 } },
-                  { "2@furnace_tabs.tab_item_renderer": { "layer": 6, "offset": [-6, 0], "$item_id": 320 } }
-                ],
-                "$3_tabs": true
-              }
-            },
-            {
-              "recipe_base@screen_content.recipe_book": {
-                "controls": [{ "pages@blast_furnace_recipe_book.base_page_logic": { "offset": [-1, 0], "layer": 12 } }]
-              }
-            },
-            { "filler@global.empty_panel": { "size": [2, 166] } }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "furnace_recipe_2",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
       {
         "main_blast_furnace_contents@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
             {
-              "layout_holder@global.empty_panel": {
-                "size": [40, 52],
-                "anchor_from": "top_left",
-                "ignored": "(not $smelting_recipes)",
-                "anchor_to": "top_left",
-                "controls": [
-                  {
-                    "layout@smelting_common.layout_toggle": {
-                      "anchor_from": "bottom_right",
-                      "anchor_to": "bottom_right",
-                      "layer": 10
-                    }
-                  }
-                ]
-              }
-            },
-            {
               "close@global.close_button": {
-          "offset": [14, -4],
+                "offset": [14, -4],
                 "$pressed": "textures/ui/ashur/close_pressed",
                 "$default": "textures/ui/ashur/close_default",
                 "$hover": "textures/ui/ashur/close_hover"
@@ -115,7 +63,30 @@
                               {
                                 "flame_holder@global.empty_panel": {
                                   "size": [18, 18],
-                                  "controls": [{ "smelt_flame_progress@blast_furnace_screen.flame_progress": {} }]
+                                  "controls": [
+                                    {
+                                      "flame_progress@global.empty_image": {
+                                        "layer": 3,
+                                        "size": [14, 14],
+                                        "offset": [-1, 0],
+                                        "anchor_to": "center",
+                                        "anchor_from": "center",
+                                        "clip_direction": "down",
+                                        "keep_ratio": true,
+                                        "clip_pixelperfect": true,
+                                        "uv_size": [14, 14],
+                                        "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+                                        "texture": "textures/ui/ashur/animations/blast_furnace_lit",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#furnace_flame_ratio",
+                                            "binding_name_override": "#clip_ratio",
+                                            "binding_condition": "always"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               },
                               { "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" } }
@@ -129,7 +100,23 @@
                             "size": [24, 54],
                             "controls": [
                               { "filler_1@global.empty_panel": { "size": ["fill", 18] } },
-                              { "arrow_progress@blast_furnace_screen.arrow_progress": {} },
+                              {
+                                "arrow_progress@global.empty_image": {
+                                  "layer": 3,
+                                  "texture": "assets/sprite_assets/container/blast_furnace/burn_progress",
+                                  "clip_direction": "left",
+                                  "keep_ratio": true,
+                                  "size": [24, 16],
+                                  "clip_pixelperfect": true,
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#furnace_arrow_ratio",
+                                      "binding_name_override": "#clip_ratio",
+                                      "binding_condition": "always"
+                                    }
+                                  ]
+                                }
+                              },
                               { "filler_2@global.empty_panel": { "size": ["fill", 20] } }
                             ]
                           }
@@ -173,41 +160,5 @@
         }
       }
     ]
-  },
-  "blast_furnace_image_controls@global.empty_image": {
-    "layer": 3,
-    "texture": "$blast_furnace_sprite_src",
-    "$blast_furnace_sprite_src": "('assets/sprite_assets/container/blast_furnace/' + $blast_furnace_sprite)",
-    "clip_direction": "$houkou",
-    "keep_ratio": true,
-    "clip_pixelperfect": true,
-    "$uv_size": [],
-    "clip_offset": [0, -1],
-    "$uv": [0, 0],
-    "uv_size": "$uv_size",
-    "uv": "$uv",
-    "variables": {
-      "requires": "($blast_furnace_sprite = 'lit_progress')",
-      "$uv_size": [14, 14],
-      "$blast_furnace_sprite_src": "textures/ui/ashur/animations/blast_furnace_lit",
-      "$uv": "@blast_furnace_screen.burn_lit"
-    },
-    "bindings": [{ "binding_name": "$source", "binding_name_override": "#clip_ratio", "binding_condition": "always" }]
-  },
-  "burn_lit": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
-  "arrow_progress@blast_furnace_screen.blast_furnace_image_controls": {
-    "size": [24, 16],
-    "$blast_furnace_sprite": "burn_progress",
-    "$source": "#furnace_arrow_ratio",
-    "$houkou": "left"
-  },
-  "flame_progress@blast_furnace_screen.blast_furnace_image_controls": {
-    "size": [14, 14],
-    "offset": [-1, 0],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "$blast_furnace_sprite": "lit_progress",
-    "$source": "#furnace_flame_ratio",
-    "$houkou": "down"
   }
 }
