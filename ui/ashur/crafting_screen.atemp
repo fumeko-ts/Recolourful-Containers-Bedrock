@@ -71,7 +71,7 @@
                 "controls": [
                   {
                     "close@global.close_button": {
-          "offset": [14, -4],
+                      "offset": [14, -4],
                       "$pressed": "textures/ui/ashur/close_pressed",
                       "$default": "textures/ui/ashur/close_default",
                       "$hover": "textures/ui/ashur/close_hover"
@@ -80,7 +80,6 @@
                   { "container@screen_content.container_base": { "$crafting_screen": true } },
                   {
                     "mobile_craft_holder@global.empty_panel": {
-                      // pocket edition players will need this because its hard to craft without it
                       "size": [92, 56],
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
@@ -88,7 +87,7 @@
                         {
                           "craft_all_mobile": {
                             "type": "button",
-                            "ignored": "(not ($touch or $pocket_edition))", // if you want to test it then comment out this line
+                            "ignored": "(not ($touch or $pocket_edition or $pocket_screen))", 
 
                             "default_control": "default",
                             "hover_control": "hover",

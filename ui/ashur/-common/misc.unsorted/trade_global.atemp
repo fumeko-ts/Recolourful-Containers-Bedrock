@@ -161,7 +161,21 @@
             {
               "arrow_holder@global.empty_panel": {
                 "size": [10, 9],
-                "controls": [{ "arrow_deny@screen_content.trade_cross_out": {} }]
+                "controls": [
+                  {
+                    "trade_cross_out@screen_content.image_element": {
+                      "texture": "assets/sprite_assets/container/villager/trade_arrow_out_of_stock",
+                      "size": [10, 9],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 5,
+                      "bindings": [
+                        { "binding_type": "collection_details" },
+                        { "binding_name": "#trade_cross_out_visible", "binding_name_override": "#visible" }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             { "filler_2@global.empty_panel": { "size": ["fill", 7] } }
@@ -268,11 +282,21 @@
     "$checked_locked_control": "trade_global.locked_control",
     "$checked_locked_hover_control": "trade_global.locked_control"
   },
-  "unchecked_control@trade_global.button_state_common"      :{"$button_sprite":"assets/sprite_assets/container/villager/toggle/unchecked"       },
-  "checked_control@trade_global.button_state_common"        :{"$button_sprite":"assets/sprite_assets/container/villager/toggle/checked"         },
-  "unchecked_hover_control@trade_global.button_state_common":{"$button_sprite":"assets/sprite_assets/container/villager/toggle/unchecked_hover" },
-  "checked_hover_control@trade_global.button_state_common"  :{"$button_sprite":"assets/sprite_assets/container/villager/toggle/checked_hover"   },
-  "locked_control@trade_global.button_state_common"         :{"$button_sprite":"assets/sprite_assets/container/villager/toggle/unchecked_locked"},
+  "unchecked_control@trade_global.button_state_common": {
+    "$button_sprite": "assets/sprite_assets/container/villager/toggle/unchecked"
+  },
+  "checked_control@trade_global.button_state_common": {
+    "$button_sprite": "assets/sprite_assets/container/villager/toggle/checked"
+  },
+  "unchecked_hover_control@trade_global.button_state_common": {
+    "$button_sprite": "assets/sprite_assets/container/villager/toggle/unchecked_hover"
+  },
+  "checked_hover_control@trade_global.button_state_common": {
+    "$button_sprite": "assets/sprite_assets/container/villager/toggle/checked_hover"
+  },
+  "locked_control@trade_global.button_state_common": {
+    "$button_sprite": "assets/sprite_assets/container/villager/toggle/unchecked_locked"
+  },
   "button_state_common@global.empty_image": {
     "texture": "$button_sprite",
     "nineslice_size": [2, 2, 2, 2],

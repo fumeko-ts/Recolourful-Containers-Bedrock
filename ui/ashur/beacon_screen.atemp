@@ -194,29 +194,6 @@
         }
       },
       {
-        "label_holder@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [ 230, 21 ],
-          "anchor_to": "top_middle",
-          "anchor_from": "top_middle",
-          "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 9 ]}},
-            {
-              "labels@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [ 230, 11 ],
-                "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 26, "fill" ]}},
-                  {"primary_label@global.empty_panel": {"size": [ 99, "fill" ]}},
-                  {"secondary_label@global.empty_panel": {"size": [ 105, "fill" ]}}
-                ]
-              }
-            },
-            {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
-          ]
-        }
-      },
-      {
         "usable_items_panel@global.empty_panel": {
           "size": [ 104, 18 ],
           "anchor_to": "top_left",
@@ -225,7 +202,6 @@
             {
               "netherite@beacon_screen.item_renderer": {
                 "offset": [ 20, 109 ],
-                "$text_translatable": "item.netherite_ingot.name",
                 "$item_property": {"#item_id_aux": 48627712},
                 "bindings": [ {"binding_name": "#supports_netherite", "binding_name_override": "#visible"} ]
               }
@@ -233,28 +209,24 @@
             {
               "emerald@beacon_screen.item_renderer": {
                 "offset": [ 41, 109 ],
-                "$text_translatable": "item.emerald.name",
                 "$item_property": {"#item_id_aux": 25427968}
               }
             },
             {
               "diamond@beacon_screen.item_renderer": {
                 "offset": [ 63, 109 ],
-                "$text_translatable": "item.diamond.name",
                 "$item_property": {"#item_id_aux": 17301504}
               }
             },
             {
               "gold@beacon_screen.item_renderer": {
                 "offset": [ 86, 109 ],
-                "$text_translatable": "item.gold_ingot.name",
                 "$item_property": {"#item_id_aux": 17432576}
               }
             },
             {
               "iron@beacon_screen.item_renderer": {
                 "offset": [ 108, 109 ],
-                "$text_translatable": "item.iron_ingot.name",
                 "$item_property": {"#item_id_aux": 17367040}
               }
             }
@@ -294,62 +266,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "$item_property|default": {},
-    "$text_translatable|default": "",
     "controls": [
-      {
-        "hover_button": {
-          "type": "button",
-          "layer": 4,
-          "size": [ 16, 16 ],
-          "default_focus_precedence": 1,
-          "hover_control": "hover_text",
-          "consume_event": false,
-          "button_mappings": [
-            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false}
-          ],
-          "controls": [
-            {
-              "hover_text": {
-                "type": "button",
-                "layer": 32,
-                "default_control": "default",
-                "hover_control": "hover",
-                "pressed_control": "pressed",
-                "locked_control": "locked",
-                "follows_cursor": "(not $touch)",
-                "always_handle_pointer": "(not $touch)",
-                "focus_enabled": false,
-                "consume_event": false,
-                "consume_hover_events": false,
-                "controls": [
-                  {
-                    "1": {
-                      "type": "image",
-                      "texture": "textures/ui/purpleBorder",
-                      "size": [ "100%c + 8px", "100%c + 8px" ],
-                      "layer": 32,
-                      "anchor_from": "right_middle",
-                      "anchor_to": "left_middle",
-                      "clip_pixelperfect": true,
-                      "controls": [
-                        {
-                          "text": {
-                            "type": "label",
-                            "text": "$text_translatable",
-                            "localize": true,
-                            "layer": 1,
-                            "color": "$item_hover_text_color"
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
       {
         "item_renderer@global.custom_renderer": {
           "$type": "inventory_item_renderer",
@@ -364,14 +281,6 @@
     "layer": 4,
     "focus_wrap_enabled": false,
     "$toggle_name": "$button_name",
-    "checked_control": "checked",
-    "unchecked_control": "unchecked",
-    "checked_hover_control": "checked_hover",
-    "unchecked_hover_control": "unchecked_hover",
-    "checked_locked_control": "locked_default",
-    "unchecked_locked_control": "locked_default",
-    "checked_locked_hover_control": "locked_hover",
-    "unchecked_locked_hover_control": "locked_hover",
     "$hover_control|default": [
       {"hover_text@beacon_screen.hover_text": {}}
     ],
@@ -396,33 +305,35 @@
         "binding_name_override": "#toggle_state"
       }
     ],
+    
     "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "pressed"
-      },
-      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
+      {"from_button_id": "button.menu_select","to_button_id": "button.menu_ok","mapping_type": "pressed"},
+      {"from_button_id": "button.menu_ok"    ,"to_button_id": "button.menu_ok","mapping_type": "pressed"}
     ],
+
     "$unchecked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
     "$checked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
     "$locked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
     "$unchecked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
     "$checked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
     "$locked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
+
+    "checked_control": "checked",
+    "unchecked_control": "unchecked",
+    "checked_hover_control": "checked_hover",
+    "unchecked_hover_control": "unchecked_hover",
+    "checked_locked_control": "locked_default",
+    "unchecked_locked_control": "locked_default",
+    "checked_locked_hover_control": "locked_hover",
+    "unchecked_locked_hover_control": "locked_hover",
+    
     "controls": [
       {"unchecked@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_advanced"}},
       {"checked@beacon_screen.advanced_icons": {"$button_texture": "$checked_advanced"}},
       {"locked_default@beacon_screen.advanced_icons": {"$button_texture": "$locked_advanced"}},
-      {
-        "unchecked_hover@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_hover_advanced", "controls": "$hover_control"}
-      },
-      {
-        "checked_hover@beacon_screen.advanced_icons": {"$button_texture": "$checked_hover_advanced", "controls": "$hover_control"}
-      },
-      {
-        "locked_hover@beacon_screen.advanced_icons": {"$button_texture": "$locked_hover_advanced", "controls": "$hover_control"}
-      }
+      {"unchecked_hover@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_hover_advanced", "controls": "$hover_control"}},
+      {"checked_hover@beacon_screen.advanced_icons": {"$button_texture": "$checked_hover_advanced", "controls": "$hover_control"}},
+      {"locked_hover@beacon_screen.advanced_icons": {"$button_texture": "$locked_hover_advanced", "controls": "$hover_control"}}
     ]
   },
   "hover_text@common.hover_text": {

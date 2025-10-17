@@ -63,18 +63,17 @@
               "inventory@global.root_panel": {
                 "size": [176, 166],
                 "controls": [
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+                  {
+                    "close@global.close_button": {
+                      "offset": [14, -4],
+                      "$pressed": "textures/ui/ashur/close_pressed",
+                      "$default": "textures/ui/ashur/close_default",
+                      "$hover": "textures/ui/ashur/close_hover"
+                    }
+                  },
                   { "container@screen_content.container_base": { "$inventory_screen": true } },
                   {
                     "mobile_craft_holder@global.empty_panel": {
-                      // pocket edition players will need this because its hard to craft without it
                       "size": [42, 47],
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
@@ -83,8 +82,8 @@
                           "craft_all_mobile": {
                             "type": "button",
 
-                            "ignored": "(not ($touch or $pocket_edition))",// if you want to test it then comment out this line
-                            
+                            "ignored": "(not ($touch or $pocket_edition or $pocket_screen))",
+
                             "default_control": "default",
                             "hover_control": "hover",
                             "pressed_control": "pressed",
@@ -108,7 +107,7 @@
                             "controls": [
                               { "default@screen_content.mobile_easy_craft_default": {} },
                               { "pressed@screen_content.mobile_easy_craft_pressed": {} },
-                              { "hover@screen_content.mobile_easy_craft_hover": {}}
+                              { "hover@screen_content.mobile_easy_craft_hover": {} }
                             ]
                           }
                         }

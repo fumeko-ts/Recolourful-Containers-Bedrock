@@ -27,7 +27,7 @@
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      {"villager_distinguisher@recolourful_villager.villager_panel": {}},
+      {"villager_bg@recolourful_villager.villager_panel": {}},
       {
         "scroll_panel@scroll_panel.scroll_panel": {
           "anchor_to": "top_left",
@@ -202,7 +202,7 @@
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "controls": [
-                  {"a@selected_trade_invalid.invalid_trade_arrow_collection": {}}
+                  {"selected_trade_invalid@selected_trade_invalid.invalid_trade_arrow_collection": {}}
                 ]
               }
             }

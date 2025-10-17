@@ -220,7 +220,7 @@
       }
     ]
   },
-  "cell_vertical@global.empty_stack": { "$stacking": "vertical", "orientation": "$stacking", "size": [18, 21] },
+  "cell_vertical@global.empty_stack": { "orientation": "vertical", "size": [18, 21] },
   "cost_label@global.empty_label": {
     "shadow": true,
     "layer": 10,

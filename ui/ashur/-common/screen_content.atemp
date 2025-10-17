@@ -227,17 +227,6 @@
   },
   "crafting@screen_content.image_element": { "uv_size": [176, 166], "texture": "assets/sprites/crafting_table" },
   "inventory@screen_content.image_element": { "uv_size": [176, 166], "texture": "assets/sprites/inventory" },
-  "trade_cross_out@screen_content.image_element": {
-    "texture": "assets/sprite_assets/container/villager/trade_arrow_out_of_stock",
-    "size": [10, 9],
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "layer": 5,
-    "bindings": [
-      { "binding_type": "collection_details" },
-      { "binding_name": "#trade_cross_out_visible", "binding_name_override": "#visible" }
-    ]
-  },
   "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,
@@ -249,6 +238,5 @@
     "size": ["default", 2],
     "nineslice_size": 1,
     "texture": "assets/sprite_assets/container/villager/discount_strikethrough"
-  },
-  "red_cell_image@screen_content.image_element": { "texture": "textures/ui/cell_image_red" }
+  }
 }
