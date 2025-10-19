@@ -20,7 +20,7 @@
     "$white_highlight_offset": [0, 0],
     "$slot_vars": "screen_content.highlight_slot",
 
-    "$pc_tooltip_offset|default": [29, 3], // tooltips offset
+    "$pc_tooltip_offset|default": [26, 2], // tooltips offset
 
     "controls": [
       {

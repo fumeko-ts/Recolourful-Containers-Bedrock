@@ -17,7 +17,7 @@
 {
   "namespace": "crafting_common",
   "survival_tab_icon@global.empty_panel": {
-    "offset": [0.4, 0], // offsets all of the tab icons
+    "offset": [0.5, 0.5], // offsets all of the tab icons
     "controls": [
       {
         "search@global.empty_panel": {
