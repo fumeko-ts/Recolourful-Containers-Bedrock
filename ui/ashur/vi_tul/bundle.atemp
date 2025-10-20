@@ -152,6 +152,7 @@
     "min_size": [86, 58],
     "$item_collection_name|default": "bundle_items",
     "layer": 50,
+    "offset": [0, -26],
 
     "controls": [
       {
@@ -283,7 +284,7 @@
                               },
                               {
                                 "spacer@global.empty_panel": {
-                                  "size": [77, 10],
+                                  "size": [77, 18],
                                   "bindings": [
                                     {
                                       "binding_name": "#is_selected_bundle_empty",
@@ -362,7 +363,7 @@
                                                     "bindings": [
                                                       {
                                                         "binding_name": "#bundle_weight_bar_ratio",
-                                                        "binding_name_override": "#ratio", 
+                                                        "binding_name_override": "#ratio",
                                                         "binding_condition": "always_when_visible"
                                                       },
                                                       {

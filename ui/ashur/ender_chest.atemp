@@ -37,7 +37,7 @@
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "layer": 1,
-                "texture": "assets/ender_chest"
+                "texture": "assets/sprites/chests/ender_chest"
               }
             }
           ]

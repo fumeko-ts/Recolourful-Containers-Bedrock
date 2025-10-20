@@ -26,43 +26,48 @@
     "controls": [
       {
         "1@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/small_chest",
+          "$chest_texture": "assets/sprites/chests/small_chest",
           "$close_position": [6, 4],
           "$screen_id": "ui:container.chest0"
         }
       },
       {
         "2@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/chest_minecart",
+          "$chest_texture": "assets/sprites/chests/chest_minecart",
           "$screen_id": "ui:entity.chest_minecart.name0"
         }
       },
       {
         "3@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/chest_boat",
+          "$chest_texture": "assets/sprites/chests/chest_boat",
           "$screen_id": "ui:entity.chest_boat.name0"
         }
       },
       {
         "4@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/chest_raft",
+          "$chest_texture": "assets/sprites/chests/chest_raft",
           "$screen_id": "ui:entity.chest_raft.name0"
         }
       },
       {
-        "custom_rename@screen_content.image_element": {
-          "size": [192, 174],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 1,
+        "5@recolourful_chest.chest_bindings": {
           "$close_position": [6, 4],
-          "texture": "assets/small_chest"
+          "$chest_texture": "assets/sprites/chests/copper_chest",
+          "$screen_id": "ui:container.chestCopper0"
+        }
+      },
+      {
+        "custom_rename@screen_content.image_element": {
+          "$layer": 1,
+          "$close_position": [6, 4],
+          "texture": "assets/sprites/chests/small_chest"
         }
       }
     ]
   },
   "chest_bindings@global.empty_panel": {
     "size": [192, 174],
+    "$layer|default": 2,
     "controls": [
       {
         "close@global.close_button": {
@@ -77,14 +82,15 @@
           "size": [192, 174],
           "anchor_from": "center",
           "anchor_to": "center",
-          "layer": 2,
+          "layer": "$layer",
           "texture": "$chest_texture"
         }
       }
     ],
     "anchor_to": "center",
     "anchor_from": "center",
-    "bindings": [
+    "bindings": "$bindings",
+    "$bindings": [
       {
         "binding_name": "#item_id_aux",
         "binding_type": "collection",

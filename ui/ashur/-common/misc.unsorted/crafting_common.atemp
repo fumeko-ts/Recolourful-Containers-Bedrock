@@ -28,7 +28,7 @@
                 "size": [16, 16],
                 "uv": [0, 256],
                 "uv_size": [16, 16],
-                "texture": "textures/compass_atlas",
+                "texture": "textures/items/compass_atlas",
                 "offset": [-1, 0]
               }
             }
@@ -226,6 +226,7 @@
     "$toggle_base_offset_unchecked": [5, 3],
     "$toggle_base_offset_checked": [3, 3],
     "$toggle_binding_type": "global",
+    "$toggle_group_default_selected|default": "$search_index",
     "$toggle_focus_enabled": false,
     "$is_left_tab": true,
     "$toggle_name": "navigation_tab",
@@ -361,6 +362,7 @@
     "$toggle_binding_type": "global",
     "$toggle_name": "layout_toggle",
     "$tab_view_binding_name": "inventory_layout",
+    "$toggle_group_default_selected|default": "$survival_layout_index",
     "$toggle_state_binding_name": "#toggle_state"
   },
   "recipe_layout_toggle@global.empty_panel": {

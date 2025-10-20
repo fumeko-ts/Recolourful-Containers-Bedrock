@@ -144,14 +144,15 @@
               "binding_name": "#recipe_book_total_items",
               "binding_condition": "$binding_condition",
               "binding_type": "collection",
-              "binding_collection_name": "recipe_book"
-            },
+              "binding_collection_name": "recipe_book",
+              "binding_name_override": "#maximum_grid_items"
+            }/*,// removed for now because its unpredictable in the search tab
             {
               "binding_type": "view",
               "binding_condition": "always",
               "source_property_name": "(((#recipe_book_total_items + 8) / 9) * 9)",// i do this to ensure there is always a increment of exactly 9
               "target_property_name": "#maximum_grid_items"
-            }
+            }*/
           ]
         }
       }
@@ -215,11 +216,13 @@
     "$toggle_focus_enabled": true,
     "$toggle_name": "navigation_tab",
     "$tab_icon": "creative_inventory.icon_control",
+    "$toggle_group_default_selected|default": 6,
     "$toggle_state_binding_name": "#toggle_state",
     "$tab_content": "creative_inventory.icon_holder"
   },
   "search_tab@creative_inventory.top_tab": {
     "$is_top_right_tab": true,
+    "$toggle_default_state": true,
     "$tab_view_binding_name": "search_tab_toggle",
     "$toggle_group_forced_index": "$search_index",
     "$toggle_state_binding_name": "#is_left_tab_search"
@@ -248,12 +251,11 @@
   "inventory_tab@creative_inventory.top_tab": {
     "$is_bottom_right_tab": true,
     "$unchecked_offset|default": [0, -2],
-    "$toggle_default_state": true,
     "$checked_offset|default": [0, 2],
     "$tab_view_binding_name": "inventory_tab_toggle",
     "$toggle_group_forced_index": 6
   },
-  "tab_base_template@global.empty_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
+  "tab_base_template@common.root_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
   "inventory_page@creative_inventory.tab_base_template": {
     "controls": [
       {

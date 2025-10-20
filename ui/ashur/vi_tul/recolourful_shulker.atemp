@@ -46,7 +46,7 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "uv_size": [ 176, 166 ],
-          "texture": "assets/shulker-underlay"
+          "texture": "assets/sprites/chests/shulker-underlay"
         }
       }
     ]

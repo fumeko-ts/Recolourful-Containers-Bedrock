@@ -1,7 +1,8 @@
 // the bundles ui
 {
   "namespace": "gameplay",
-  "bundle_slot_panel@global.empty_panel": {// basicly the opend bundle icon in the open bundles slot
+  "bundle_slot_panel@global.empty_panel": {
+    // basicly the opend bundle icon in the open bundles slot
     "size": ["100%", "100%"],
     "layer": 1,
     "controls": [
@@ -75,36 +76,11 @@
           "controls": [
             {
               "tooltip@bundle.bundle_tooltip": {
-                "offset": [0, -26],
                 "bindings": [
-                  {"binding_name": "#is_selected_bundle_empty"},
                   {
                     "binding_name": "#show_bundle_tooltip_hover",
+                    "binding_name_override": "#visible",
                     "binding_condition": "always"
-                  },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#show_bundle_tooltip_hover and #is_selected_bundle_empty)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
-
-            {
-              "secondary_tooltip@bundle.bundle_tooltip": {
-                "bindings": [
-                  {"binding_name": "#is_selected_bundle_empty"},
-                  {
-                    "binding_name": "#show_bundle_tooltip_hover",
-                    "binding_condition": "always"
-                  },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "(#show_bundle_tooltip_hover and (not #is_selected_bundle_empty))",
-                    "target_property_name": "#visible"
                   }
                 ]
               }

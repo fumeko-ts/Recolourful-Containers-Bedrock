@@ -1,0 +1,67 @@
+/**
+// © 2025 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "recolourful_double_chest",
+  "double_chest@global.root_panel": {
+    "size": [176, 222],
+    "layer": 1,
+    "$screen_route|default": "$container_title",
+    "controls": [
+      {"1@recolourful_double_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/double_chest","$screen_id": "ui:container.chestDouble0"}},
+      {"2@recolourful_double_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/double_copper_chest","$screen_id": "ui:container.chestDoubleCopper0"}},
+      {
+        "custom_rename@screen_content.image_element": {
+          "size": [176, 222],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "texture": "assets/sprites/chests/double_chest"
+        }
+      }
+    ]
+  },
+  "chest_bindings@global.empty_panel": {
+    "size": [176, 222],
+    "$chest_texture|default": "",
+    "controls": [
+      {
+        "chest_ui_template@screen_content.image_element": {
+          "size": [176, 222],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 2,
+          "texture": "$chest_texture"
+        }
+      }
+    ],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux)) = $screen_id)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}
