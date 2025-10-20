@@ -157,7 +157,7 @@
                 "uv_size": [276, 166],
                 "anchor_to": "center",
                 "anchor_from": "center",
-                "$container_texture": "('assets/advanced_sprites/villager/' + $villager_biome + '/' + $profession_sprite)",
+                "$container_texture": "('assets/advanced_sprites/villager/plains/' + $profession_sprite)",
                 "texture": "$container_texture"
               }
             },
