@@ -47,7 +47,7 @@
               }
             }
           ],
-          "ignored": "($touch $pocket_edition)"// temp fix
+          "ignored": "($touch or $pocket_edition)"// temp fix
         }
       }
     ]
