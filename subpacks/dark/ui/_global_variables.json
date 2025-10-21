@@ -1,39 +1,32 @@
 {
-  "$is_recolorful_containers": true,
+  "$is_recolorful_containers": true, 
+  //set UI transparency 0.0 - 1.0
+  "$container_opacity": 1,
+
+
+
+
+
+
 
   "$recipe_edit_shadow_text_color": [0.5725, 0.5725, 0.5725, 1.0],
   "$recipe_edit_text_color": [0.67059, 0.67059, 0.67059, 1.0],
-
   "$recipe_text_box_content_color": [0.247, 0.247, 0.247, 1.0],
-
-
   "$page_count_shadow_color": [0.5725, 0.5725, 0.5725, 1.0],
   "$recipe_page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
-
-  "$villager_biome": "plains",
-
-  // Set container UI transparency (range: 0.0 - 1.0)
-  "$container_opacity": 1,
   "$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
-
   "$light_button_default_text_color": [1, 1, 1],
-
   "$light_toggle_default_text_color": [1, 1, 1],
   "$light_toggle_checked_default_text_color": [1, 1, 1],
-
   "$dark_button_secondary_default_text_color": [1, 1, 1, 1],
-
   "$title_text_color": [1, 1, 1],
   "$pocket_title_text_color": [1, 1, 1],
-
   "$tab_unchecked_text_color": [1, 1, 1],
   "$tab_unchecked_locked_text_color": [1, 1, 1],
-
   "$tab_checked_text_color": [1, 1, 1],
   "$tab_checked_hover_text_color": [1, 1, 1],
   "$tab_checked_locked_text_color": [1, 1, 1],
   "$tab_checked_locked_hover_text_color": [1, 1, 1],
-
   "$tab_unchecked_glyph_color": [1, 1, 1],
   "$tab_unchecked_hover_glyph_color": [1, 1, 1],
   "$tab_unchecked_locked_glyph_color": [1, 1, 1],
@@ -42,11 +35,9 @@
   "$tab_checked_hover_glyph_color": [1, 1, 1],
   "$tab_checked_locked_glyph_color": [1, 1, 1],
   "$tab_checked_locked_hover_glyph_color": [1, 1, 1],
-
   "$dark_body_text_color": [1, 1, 1],
-
   "$book_page_number_color": [0.665, 0.575, 0.475],
-
+  
   //////// Glyph colors ////////
   "$light_glyph_default_color": [1, 1, 1],
 
