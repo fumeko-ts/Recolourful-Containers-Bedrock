@@ -152,7 +152,7 @@
     "min_size": [86, 58],
     "$item_collection_name|default": "bundle_items",
     "layer": 50,
-    "offset": [0, -26],
+    "offset": [0, -10],
 
     "controls": [
       {

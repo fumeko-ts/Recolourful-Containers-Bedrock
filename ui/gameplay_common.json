@@ -71,7 +71,7 @@
       {
         "bundle_cursor_tooltip@global.custom_renderer": {
           "$type": "bundle_tooltip_renderer",
-          "size": ["100%cm", "100%cm"],
+          "size": ["100%c", "100%c - 26px"],
           "layer": 20,
           "controls": [
             {
