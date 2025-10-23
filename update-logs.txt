@@ -1078,7 +1078,7 @@
 // created as part of a collaborative test.
 //
 // This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp,
+// Do not modify, extract, reuse, or share any part of this UI — including .json, .atemp, (and this txt file)
 // layout structure, or design.
 //
 // Not allowed:
