@@ -179,7 +179,7 @@
       },
       {
         "search@creative_inventory.item_renderer": {
-          "$item_identifier": 417,
+          "$item_identifier": 416,// useing a id instead of a texture here gives us a excuse to bump the texture pack
           "visible": "($tab_view_binding_name = 'search_tab_toggle')"
         }
       },
