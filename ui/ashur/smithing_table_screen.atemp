@@ -133,7 +133,7 @@
                           }
                         },
                         {
-                          "result_item_slot@global.container_item": {"grid_position": [ 5, 0 ], "$item_collection": "smithing_table_result_items"}
+                          "result_item_slot@global.container_item": {"grid_position": [ 5, 0 ], "$item_collection": "smithing_table_result_items",    "$button_ref": "smithing_table.smithing_table_output_slot_button"}
                         }
                       ]
                     }
