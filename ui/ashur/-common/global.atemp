@@ -690,34 +690,6 @@
             }
           ],
           "controls": [
-            {
-              "test@global.empty_stack": {
-                "size": ["100%c", "100%c"],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "collection_name": "#enchant_buttons",
-                "ignored": "(not ($touch or $pocket_edition or $pocket_screen))",
-                "layer": 10,
-                "controls": [
-                  { "0@enchanting_screen.enchant_mobile_text": { "collection_index": 0 } },
-                  { "1@enchanting_screen.enchant_mobile_text": { "collection_index": 1 } },
-                  { "2@enchanting_screen.enchant_mobile_text": { "collection_index": 2 } }
-                ],
-                "bindings": [
-                  {
-                    "binding_name": "#cost",
-                    "binding_collection_name": "#enchant_buttons",
-                    "binding_type": "collection"
-                  },
-                  {
-                    "binding_type": "view",
-                    "binding_condition": "always",
-                    "source_property_name": "((#cost * 1) > 0)",
-                    "target_property_name": "#visible"
-                  }
-                ]
-              }
-            },
             { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
             { "selected_item_details_factory@selected_item.selected_item_details_factory": {} },
             {

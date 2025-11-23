@@ -83,7 +83,7 @@
           "size": ["default", "default"],
           "layer": 30,
           "text": "#hover_text",
-        //  "shadow": true,
+          "shadow": true,
 
           "bindings": [
             {

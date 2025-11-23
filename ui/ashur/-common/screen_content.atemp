@@ -157,7 +157,6 @@
     "controls": [
       {
         "tooltip@global.hover_text": {
-          "visible": "(not ($touch or $pocket_edition or $pocket_screen))",
           "bindings": [
             {
               "binding_name": "#hover_text",
@@ -166,7 +165,7 @@
             },
             {
               "binding_type": "view",
-              "binding_condition": "always",
+              "binding_condition": "always_when_visible",
               "source_property_name": "('\u00a7r' + #hover_text - '\u00a7o')",
               "target_property_name": "#hover_text"
             }

@@ -1,6 +1,11 @@
 /*
 1.0: 
   initial update
+1.1:
+  added experimental shadow text to most tooltips
+  added a temp fix for mob effects not rendering
+1.2:
+  when useing touch input the enchanting table buttons require double press to select the enchant (this was done to combat mobile issues)
 
 
 
