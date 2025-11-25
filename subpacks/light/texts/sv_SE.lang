@@ -161,3 +161,7 @@ item.pink_bundle=§p§rRosa paket
 item.magenta_bundle=§d§rLjuslila paket
 item.purple_bundle=§5§rLila paket
 item.cyan_bundle=§3§rTurkost paket
+craftingScreen.tab.construction=sr1.atemp
+craftingScreen.tab.nature=sr1.atemp
+craftingScreen.tab.equipment=sr1.atemp
+craftingScreen.tab.items=sr1.atemp

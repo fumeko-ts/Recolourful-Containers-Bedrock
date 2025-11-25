@@ -87,7 +87,7 @@
                         {
                           "craft_all_mobile": {
                             "type": "button",
-                            "ignored": "(not ($touch or $pocket_edition or $pocket_screen))", 
+                            "ignored": "(not ($touch or $pocket_edition or $pocket_screen))",
 
                             "default_control": "default",
                             "hover_control": "hover",
@@ -256,8 +256,8 @@
                             "type": "grid",
                             "size": [162, 54],
                             "grid_dimensions": [9, 3],
-                            "$item_collection_name": "inventory_items",
-                            "grid_item_template": "global.grid_item",
+                            "$item_collection": "inventory_items",
+                            "grid_item_template": "global.container_item",
                             "collection_name": "inventory_items"
                           }
                         },

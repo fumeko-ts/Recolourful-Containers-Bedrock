@@ -282,7 +282,7 @@
       { "hover@screen_content.enchanting_button_highlight": {} },
 
       { "cost@enchanting_screen.cost": { "color": [0.475, 0.95, 0.11875] } },
-      { "runes@enchanting_screen.runes": { "color": [1.0, 1.0, 0.5] } }
+      { "runes@enchanting_screen.runes": { "color": [0.404, 0.365, 0.286] } }
     ]
   }
 }

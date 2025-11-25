@@ -76,10 +76,22 @@
       {
         "hover_text@global.empty_label": {
           "size": ["default", "default"],
-          "text": "#selected_hover_text",
+          "text": "#hover_text",
           "alpha": "@selected_item.anim_item_details_alpha",
           "shadow": true,
-          "localize": false
+          "localize": false,
+          "bindings": [
+            {
+              "binding_name": "#selected_hover_text"
+            },
+
+            {
+              "binding_type": "view",
+              "binding_condition": "always_when_visible",
+              "source_property_name": "(#selected_hover_text - '\n§9§9sr1.atemp§r')",
+              "target_property_name": "#hover_text"
+            }
+          ]
         }
       }
     ],

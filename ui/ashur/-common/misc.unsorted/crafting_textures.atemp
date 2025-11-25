@@ -70,11 +70,36 @@
       }
     ]
   },
-  "crafting_input_grid_item@global.inventory_container_item_recipe": {
+  "crafting_input_grid_item@common.container_item": {
+    "$bar_layer|default": 20,
+    
     "$item_collection_name": "crafting_input_items",
     "$background_images": "crafting_textures.main_cell_panel",
     "$item_renderer_binding_condition": "always",
-    "$button_ref": "crafting.inventory_container_slot_button"
+    "$button_ref": "crafting.inventory_container_slot_button",
+    "controls": [
+      {
+        "item_cell@global.empty_panel": {
+          "size": "$cell_image_size",
+          "layer": 0,
+          "controls": [
+            { "$background_image_control_name@$background_images": { "layer": 1 } },
+            { "durability_bar@common.durability_bar": { "layer": "$bar_layer" } },
+            { "storage_bar@common.storage_bar": { "layer": "$bar_layer" } }
+          ]
+        }
+      },
+      { "item_selected_image@common.slot_selected": { "layer": 4 } },
+      {
+        "item_button_ref@$button_ref": {
+          "tts_ignore_count": true,
+          "tts_skip_message": true,
+          "tts_inherit_siblings": true,
+          "layer": 5
+        }
+      },
+      { "bundle_slot_panel@gameplay.bundle_slot_panel": { "layer": 10 } }
+    ]
   },
   "output_cell_textures@crafting_textures.main_cell_panel": {"$cell_images_binding_condition": "always"}
 }

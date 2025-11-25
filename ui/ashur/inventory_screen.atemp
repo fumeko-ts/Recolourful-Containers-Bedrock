@@ -367,8 +367,8 @@
                                   "type": "grid",
                                   "size": [162, 54],
                                   "grid_dimensions": [9, 3],
-                                  "$item_collection_name": "inventory_items",
-                                  "grid_item_template": "global.grid_item",
+                                  "$item_collection": "inventory_items",
+                                  "grid_item_template": "global.container_item",
                                   "collection_name": "inventory_items"
                                 }
                               },

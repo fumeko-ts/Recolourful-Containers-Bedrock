@@ -165,7 +165,7 @@
             },
             {
               "binding_type": "view",
-              "binding_condition": "always_when_visible",
+              "binding_condition": "always_when_visible",// use always when visible to prevent lag on the screens load
               "source_property_name": "('\u00a7r' + #hover_text - '\u00a7o')",
               "target_property_name": "#hover_text"
             }

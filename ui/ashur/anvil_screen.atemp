@@ -128,7 +128,7 @@
                       "texture": "textures/ui/Gray",
                       "layer": 4,
                       "size": ["100%c + 6px", "100%c + 4px"],
-                      "alpha": 0.3,
+                      "alpha": 0.6,
                       "controls": [
                         {
                           "cost_label_0@anvil_screen.cost_label": {
