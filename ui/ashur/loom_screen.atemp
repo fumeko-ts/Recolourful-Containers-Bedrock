@@ -348,7 +348,7 @@
           "keep_ratio": true,
           "layer": 10,
           "texture": "#texture",
-          "size": [5, 10],
+          "size": [6, 10],
           "offset": [1, 0],
           "bindings": [
             {
@@ -372,7 +372,7 @@
           "keep_ratio": true,
           "offset": [1, 0],
           "texture": "textures/ui/ashur/banner_patterns/banner_bg",
-          "size": [5, 10],
+          "size": [6, 10],
           "layer": 6
         }
       },

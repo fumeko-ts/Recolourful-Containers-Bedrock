@@ -359,14 +359,8 @@
     ],
     "cache_screen": true,
     "send_telemetry": false,
-    "load_screen_immediately": true,
-    "low_frequency_rendering": true,
-    "render_game_behind": true,
-    "force_render_below": true,
-    "absorbs_input": true,
-    "is_showing_menu": true,
-    "close_on_player_hurt": true,
     "gamepad_cursor": true,
+    "close_on_player_hurt": true,
     "$screen_content|default": "common.base_screen_empty_panel",
     "$background_animations|default": [
       "@common.screen_exit_animation_push_alpha",
@@ -722,7 +716,7 @@
     "$default|default": "",
     "$hover|default": "",
     "$pressed|default": "",
-    "visible": "($touch or $pocket_edition or $pocket_screen)",
+    "visible": "($touch or $pocket_edition or $pocket_screen or $game_pad)",// pocket screen incase pc users want the close button
     "controls": [
       {
         "default@screen_content.image_element": {
