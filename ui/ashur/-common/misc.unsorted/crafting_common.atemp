@@ -43,14 +43,14 @@
               "golden_sword@crafting_common.tab_item_renderer": {
                 "layer": 7,
                 "offset": [4, -1],
-                "$item_id": 347
+                "$item_id": "$golden_sword_id"
               }
             },
             {
               "iron_axe@crafting_common.tab_item_renderer": {
                 "layer": 6,
                 "offset": [-7, -1],
-                "$item_id": 322
+                "$item_id": "$iron_axe_id"
               }
             }
           ]
@@ -63,7 +63,7 @@
             {
               "bricks@crafting_common.tab_item_renderer": {
                 "offset": [-1, -1],
-                "$item_id": 45
+                "$item_id": "$bricks_id"
               }
             }
           ]
@@ -77,14 +77,14 @@
               "apple@crafting_common.tab_item_renderer": {
                 "layer": 7,
                 "offset": [4, -1],
-                "$item_id": 278
+                "$item_id": "$apple_id"
               }
             },
             {
               "lava_bucket@crafting_common.tab_item_renderer": {
                 "layer": 6,
                 "offset": [-7, -1],
-                "$item_id": 388
+                "$item_id": "$bucket_lava_id"
               }
             }
           ]
@@ -97,7 +97,7 @@
             {
               "redstone_dust@crafting_common.tab_item_renderer": {
                 "offset": [-1, -1],
-                "$item_id": 398
+                "$item_id": "$redstone_id"
               }
             }
           ]

@@ -4,6 +4,18 @@
   "$container_opacity": 1,
 
 
+  
+  //tab ids can be customised useing 'https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/' if it shows the raw id like 22151168 then divide by 65536 to get the refined id
+  "$compass_id": 423,
+  "$chest_id": 54,
+  "$redstone_id": 405,
+  "$iron_sword_id": 338,
+  "$purple_froglight_id": -469,
+  "$bricks_id": 45,
+  "$apple_id": 285,
+  "$bucket_lava_id": 395,
+  "$iron_axe_id": 329,
+  "$golden_sword_id": 354,
 
 
 
