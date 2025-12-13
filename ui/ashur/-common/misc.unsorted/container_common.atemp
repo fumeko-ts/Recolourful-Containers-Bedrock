@@ -112,10 +112,6 @@
     "type": "button",
     "anchor_from": "center",
     "anchor_to": "center",
-    "locked_control": "",
-    "default_control": "1",
-    "hover_control": "2",
-    "pressed_control": "3",
     "layer": -10,
     "size": [16, 16],
     "follows_cursor": true,
@@ -125,7 +121,7 @@
       { "3@container_common.held_flying_renderer": {} },
       { "2@container_common.held_flying_renderer": {} },
       { "4@global.durability_bar_grabbed": { "layer": 61 } },
-      { "4@global.storage_bar_grabbed": { "layer": 61 } }
+      { "5@global.storage_bar_grabbed": { "layer": 61 } }
     ]
   },
   "item_remover": {

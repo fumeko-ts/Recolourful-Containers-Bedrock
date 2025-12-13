@@ -1,35 +1,27 @@
 {
-   "format_version": 2,
-   "header": {    
-      "name": "§4R§ce§6c§eo§al§2o§3ur§9fu§5l §rContainers §lBE§r",
-      "description": "Original textures by Vi_Tul\nBy Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
-      "uuid": "6d55c9b0-c450-48e0-be2d-037d419d96c2",
-      "version": [1, 0, 0],
-      "min_engine_version": [1, 16, 0]
-   },
-   "modules": [
-      {
-         "type": "resources",
-         "description": "§3By Vi_Tul",
-         "uuid": "df2caf7c-dcee-454f-8f90-fad30dd5b85f",
-         "version": [1, 0, 0]
-      }
-   ],
-    "metadata": {
-      "ui_author": ["Ashura_temps","ashura_tepes"],
-      "url": "https://www.planetminecraft.com/member/ashura_tepes/"
-    },
-  "subpacks" :[
+  "format_version": 2,
+  "header": {
+    "name": "§4R§ce§6c§eo§al§2o§3ur§9fu§5l §rContainers §lBE§r",
+    "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
+    "uuid": "6d55c9b0-c450-48e0-be2d-037d419d96c2",
+    "version": [1, 21, 130],
+    "min_engine_version": [1, 21, 130] // should fix horse netherite color
+  },
+  "modules": [
     {
-      "folder_name":"dark",
-      "name":"§lDark mode§r",
-      "memory_tier":1
-    },
-    {
-      "folder_name":"light",
-      "name":"§lLight mode§r",
-      "memory_tier":2
+      "type": "resources",
+      "description": "§3By Vi_Tul",
+      "uuid": "df2caf7c-dcee-454f-8f90-fad30dd5b85f",
+      "version": [1, 0, 0]
     }
+  ],
+  "metadata": {
+    //i think the metadata can be like array or object
+    "ui_author": ["Ashura_temps", "ashura_tepes", "https://www.planetminecraft.com/member/ashura_tepes/"],
+    "assets_creator":/*not sure if this should be creator or artist*/ ["Vi_Tul", "https://www.curseforge.com/members/vi_tul/projects"]
+  },
+  "subpacks": [
+    { "folder_name": "dark" , "name": "§lDark mode§r" , "memory_tier": 1 },
+    { "folder_name": "light", "name": "§lLight mode§r", "memory_tier": 2 }
   ]
- }
- 
+}

@@ -23,41 +23,6 @@
         "horse@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/horse.png"}
       },
       {
-        "mount_input_slots@global.empty_stack": {
-          "orientation": "vertical",
-          "size": [ 25, 53 ],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
-            {
-              "cell_holder_images@global.empty_stack": {
-                "orientation": "horizontal",
-                "size": [ 25, 36 ],
-                "controls": [
-                  {"filler_1@global.empty_panel": {"size": [ 7, "fill" ]}},
-                  {
-                    "cell_main@global.empty_stack": {
-                      "orientation": "vertical",
-                      "size": [ 18, 36 ],
-                      "controls": [
-                        {"saddle_slot@mount_misc.sprite_bindings": {"$img_src": "saddle", "$needs": "#has_saddle_slot"}},
-                        {
-                          "horse_armor_slot@mount_misc.sprite_bindings": {"$img_src": "horse_armor", "$needs": "#has_armor_and_saddle_slot"}
-                        },
-                        {
-                          "llama_armor_slot@mount_misc.sprite_bindings": {"$img_src": "llama_armor", "$needs": "#has_only_carpet_slot"}
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
         "mount_grid@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 25, 53 ],
@@ -85,6 +50,7 @@
                             "grid_item_template": "global.container_item",
                             "grid_dimension_binding": "#equip_grid_dimensions",
                             "$item_collection": "horse_equip_items",
+                            "$cell_overlay_ref": "mount_misc.cell_texture",
                             "bindings": [ {"binding_name": "#equip_grid_dimensions"} ]
                           }
                         }
@@ -159,23 +125,5 @@
       }
     ]
   },
-  "cell_texture@screen_content.image_element": {"size": [ 18, 18 ], "nineslice_size": 1, "texture": "assets/sprite_assets/container/slot"},
-  "sprite_bindings@global.empty_panel": {
-    "size": [ 18, 18 ],
-    "$overlay": "('assets/sprite_assets/container/slot/' + $img_src)",
-    "controls": [
-      {
-        "slot@screen_content.image_element": {
-          "nineslice_size": 1,
-          "texture": "assets/sprite_assets/container/slot",
-          "layer": 3,
-          "size": [ 18, 18 ]
-        }
-      },
-      {
-        "saddle_slot@screen_content.image_element": {"texture": "$overlay", "layer": 5, "size": [ 16, 16 ]}
-      }
-    ],
-    "bindings": [ {"binding_name": "$needs", "binding_name_override": "#visible"} ]
-  }
+  "cell_texture@screen_content.image_element": {"size": [ 18, 18 ], "nineslice_size": 1, "texture": "assets/sprite_assets/container/slot"}
 }
