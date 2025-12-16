@@ -21,7 +21,8 @@
 
   
   //tab ids can be customised useing 'https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/' if it shows the raw id like 22151168 then divide by 65536 to get the refined id
-  "$compass_id": 423,
+  //these are the items that are used for the tab icons in the inventory
+  "$compass_id": 423,//creative inventory only survival is a png
   "$chest_id": 54,
   "$redstone_id": 405,
   "$iron_sword_id": 338,

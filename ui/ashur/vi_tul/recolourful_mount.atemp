@@ -16,9 +16,8 @@
 
 {
   "namespace": "recolourful_mount",
-  "mount@global.empty_panel": {
+  "mount@container_common.container_details": {
     "size": [176, 166],
-    "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
     "$mount_1|default": "ui:entity.llama.name0",
@@ -30,7 +29,8 @@
     "$mount_7|default": "ui:entity.nautilus.name0",
     "$mount_8|default": "ui:entity.zombie_nautilus.name0",
     "$mount_9|default": "ui:entity.zombie_horse.name0",
-    "controls": [
+    "$mount_10|default": "ui:entity.camel_husk.name0",
+    "$screen_controls": [
       {"illama@recolourful_mount.mount_screen_bindings"          :{"$screen":"illama_screen.illama_screen"                  ,"$screen_id":"ui:entity.llama.name0"          }},
       {"trader_illama@recolourful_mount.mount_screen_bindings"   :{"$screen":"trader_illama_screen.trader_illama_screen"    ,"$screen_id":"ui:entity.trader_llama.name0"   }},
       {"donkey@recolourful_mount.mount_screen_bindings"          :{"$screen":"donkey_screen.donkey_screen"                  ,"$screen_id":"ui:entity.donkey.name0"         }},
@@ -41,11 +41,12 @@
       {"nautilus@recolourful_mount.mount_screen_bindings"        :{"$screen":"nautilus_screen.nautilus_screen"              ,"$screen_id":"ui:entity.nautilus.name0"       }},
       {"zombie_horse@recolourful_mount.mount_screen_bindings"    :{"$screen":"zombie_horse_screen.zombie_horse_screen"      ,"$screen_id":"ui:entity.zombie_horse.name0"   }},
       {"zombie_nautilus@recolourful_mount.mount_screen_bindings" :{"$screen":"zombie_nautilus_screen.zombie_nautilus_screen","$screen_id":"ui:entity.zombie_nautilus.name0"}},
+      {"camel_husk@recolourful_mount.mount_screen_bindings"      :{"$screen":"camel_husk_screen.camel_husk_screen","$screen_id":"ui:entity.camel_husk.name0"}},
       {
-        "custom_rename@container_common.container_details": {
+        "custom_rename@global.empty_panel": {
           "layer": 1,
           "size": [176, 166],
-          "$screen_controls": [
+          "controls": [
             {
               "close@global.close_button": {
                 "offset": [14, -4],
@@ -71,7 +72,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "(not ((#screen_binding = $mount_8) or (#screen_binding = $mount_9) or(#screen_binding = $mount_7) or (#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = $mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
+              "source_property_name": "(not ((#screen_binding = $mount_10) or (#screen_binding = $mount_8) or (#screen_binding = $mount_9) or(#screen_binding = $mount_7) or (#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = $mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
               "target_property_name": "#visible"
             }
           ]
@@ -79,9 +80,9 @@
       }
     ]
   },
-  "mount_screen_bindings@container_common.container_details": {
+  "mount_screen_bindings@global.empty_panel": {
     "size": [176, 166],
-    "$screen_controls": [
+    "controls": [
       {
         "close@global.close_button": {
           "offset": [14, -4],

@@ -3,22 +3,22 @@
   "header": {
     "name": "§4R§ce§6c§eo§al§2o§3ur§9fu§5l §rContainers §lBE§r",
     "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
-    "uuid": "6d55c9b0-c450-48e0-be2d-037d419d96c2",
-    "version": [1, 21, 130],
+    "uuid": "7db77049-d5a8-4f8d-b4fb-2805bd688532",
+    "version": [1, 1, 0],
     "min_engine_version": [1, 21, 130] // should fix horse netherite color
   },
   "modules": [
     {
       "type": "resources",
       "description": "§3By Vi_Tul",
-      "uuid": "df2caf7c-dcee-454f-8f90-fad30dd5b85f",
-      "version": [1, 0, 0]
+      "uuid": "e43c5ab1-b908-4178-8520-173f12f447a9",
+      "version": [1, 1, 0]
     }
   ],
+  "capabilities": ["pbr"],// not sure if this works but it may fix people not being able to use shaders with the pack 
   "metadata": {
-    //i think the metadata can be like array or object
     "ui_author": ["Ashura_temps", "ashura_tepes", "https://www.planetminecraft.com/member/ashura_tepes/"],
-    "assets_creator":/*not sure if this should be creator or artist*/ ["Vi_Tul", "https://www.curseforge.com/members/vi_tul/projects"]
+    "texture_creator": ["Vi_Tul", "https://www.curseforge.com/members/vi_tul/projects"]
   },
   "subpacks": [
     { "folder_name": "dark" , "name": "§lDark mode§r" , "memory_tier": 1 },

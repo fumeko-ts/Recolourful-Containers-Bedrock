@@ -106,21 +106,6 @@
     ]
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   "player_renderer_panel@global.empty_panel": {
     "size": [34, 45],
     "controls": [
@@ -149,23 +134,19 @@
       }
     ]
   },
-  "filter_disabled@screen_content.image_element": { "texture": "assets/sprite_assets/recipe_book/filter_disabled" },
-  "filter_disabled_highlighted@screen_content.image_element": {
-    "texture": "assets/sprite_assets/recipe_book/filter_disabled_highlighted"
-  },
-  "filter_enabled@screen_content.image_element": { "texture": "assets/sprite_assets/recipe_book/filter_enabled" },
-  "filter_enabled_highlighted@screen_content.image_element": {
-    "texture": "assets/sprite_assets/recipe_book/filter_enabled_highlighted"
-  },
-  "filter_toggle@common_toggles.switch_toggle": {
-    "size": [26, 18],
-    "$unchecked_control": "crafting_common.filter_disabled",
-    "$unchecked_hover_control": "crafting_common.filter_disabled_highlighted",
-    "$checked_control": "crafting_common.filter_enabled",
-    "$checked_hover_control": "crafting_common.filter_enabled_highlighted",
+  "filter_button_template@global.empty_image": { "size": [26, 16] },
+  "filter_toggle@toggle.radio_toggle": {
+    "$size": [26, 16],
+    "$toggle_control_name": "recipe_filter",
     "$toggle_name": "toggle.enableFiltering",
-    "$toggle_binding_type": "global",
-    "$toggle_state_binding_name": "#filtering_enabled",
+    "$toggle_binding_value": "#filtering_enabled",
+    "$is_radio_toggle": false,
+    "$controls": [
+      {"default@crafting_common.filter_button_template"      : {"texture": "assets/sprite_assets/recipe_book/filter_disabled"            }},
+      {"default_hover@crafting_common.filter_button_template": {"texture": "assets/sprite_assets/recipe_book/filter_disabled_highlighted"}},
+      {"checked_hover@crafting_common.filter_button_template": {"texture": "assets/sprite_assets/recipe_book/filter_enabled_highlighted" }},
+      {"checked@crafting_common.filter_button_template"      : {"texture": "assets/sprite_assets/recipe_book/filter_enabled"             }}
+    ],
     "$button_mappings": [
       { "to_button_id": "button.filter_toggle_hovered", "mapping_type": "pressed" },
       {
@@ -173,27 +154,7 @@
         "mapping_type": "pressed",
         "from_button_id": "button.menu_select"
       },
-      { "to_button_id": "button.menu_ok", "mapping_type": "focused", "from_button_id": "button.menu_ok" },
-      {
-        "to_button_id": "button.controller_back",
-        "mapping_type": "focused",
-        "from_button_id": "button.controller_back",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "to_button_id": "$toggle_off_button",
-        "mapping_type": "pressed",
-        "from_button_id": "button.menu_left",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      },
-      {
-        "to_button_id": "$toggle_on_button",
-        "mapping_type": "pressed",
-        "from_button_id": "button.menu_right",
-        "ignored": "(not $enable_directional_toggling)",
-        "input_mode_condition": "gamepad_and_not_gaze"
-      }
+      { "to_button_id": "button.menu_ok", "mapping_type": "focused", "from_button_id": "button.menu_ok" }
     ]
   },
   "crafting_survival_tabs@global.empty_stack": {
