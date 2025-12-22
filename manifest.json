@@ -15,7 +15,6 @@
       "version": [1, 1, 0]
     }
   ],
-  "capabilities": ["pbr"],// not sure if this works but it may fix people not being able to use shaders with the pack 
   "metadata": {
     "ui_author": ["Ashura_temps", "ashura_tepes", "https://www.planetminecraft.com/member/ashura_tepes/"],
     "texture_creator": ["Vi_Tul", "https://www.curseforge.com/members/vi_tul/projects"]
