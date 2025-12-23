@@ -243,69 +243,6 @@
             }
           ]
         }
-      },
-      {
-        "trader@screen_content.image_element": {
-          "size": [276, 166],
-          "layer": 1,
-          "uv_size": [276, 166],
-          "anchor_to": "center",
-          "anchor_from": "center",
-          "texture": "assets/advanced_sprites/villager/trader",
-          "controls": [
-            {
-              "eye_holder@global.empty_panel": {
-                "size": [160, 54],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "controls": [
-                  {
-                    "eye_base@global.empty_panel": {
-                      "size": [12, 5],
-                      "anchor_from": "bottom_left",
-                      "anchor_to": "bottom_left",
-                      "controls": [
-                        {
-                          "eye_animation@screen_content.image_element": {
-                            "layer": 20,
-                            "uv": "$uv_anim",
-                            "uv_size": [12, 5],
-                            "anchor_from": "center",
-                            "anchor_to": "center",
-                            "animation_reset_name": "screen_animation_reset",
-                            "size": [12, 5],
-                            "texture": "assets/advanced_sprites/animated/villager/wandering"
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "label_holder@global.empty_panel": {
-                "size": [170, 166],
-                "anchor_to": "right_middle",
-                "offset": [0, 5],
-                "anchor_from": "right_middle",
-                "controls": [
-                  {
-                    "label@global.empty_label": {
-                      "text": "entity.wandering_trader.name",
-                      "size": ["default", 10],
-                      "anchor_to": "top_middle",
-                      "anchor_from": "top_middle",
-                      "color": "$trade_title_text_color",
-                      "layer": 14
-                    }
-                  }
-                ]
-              }
-            }
-          ],
-          "bindings": [{ "binding_name": "(not #exp_bar_visible)", "binding_name_override": "#visible" }]
-        }
       }
     ]
   },
