@@ -52,7 +52,7 @@
                 "anchor_to": "top_right",
                 "offset": [ -28, 19 ],
                 "texture": "assets/advanced_sprites/animated/dropper/piston_1",
-                "alpha": "@dropper_screen.piston_10"
+                "uv": "@dropper_screen.piston_10"
               }
             },
             {
@@ -63,7 +63,7 @@
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",
                 "texture": "assets/advanced_sprites/animated/dropper/piston_2",
-                "alpha": "@dropper_screen.piston_20"
+                "uv": "@dropper_screen.piston_20"
               }
             }
           ]

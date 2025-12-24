@@ -53,9 +53,9 @@
 
           "$text_edit_box_label_size": ["default", 10],
           "bindings": [
-            { 
-              "binding_name": "#is_rename_mode", 
-              "binding_name_override": "#visible" 
+            {
+              "binding_name": "#is_rename_mode",
+              "binding_name_override": "#visible"
             }
           ]
         }
@@ -200,25 +200,15 @@
                       "layer": 4,
                       "uv": [226, 132],
                       "uv_size": [28, 21],
-                      "texture": "assets/sprites/cartography_table"
+                      "ignored": true,//temp ignored because i need to think of another way to do its visibility because mojang changed some essential ways bindings work
+                                      //its the same reason the villager ui needed updateing again
+                      "texture": "assets/sprites/cartography_table",
+                      "bindings": [
+                      ]
                     }
                   }
                 ]
               }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "cartography_result_items",
-              "binding_name": "#item_id_aux",
-              "binding_name_override": "#result_slot"
-            },
-            {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "(#result_slot = -1)",
-              "target_property_name": "#visible"
             }
           ]
         }
@@ -227,6 +217,20 @@
   },
   "map_image@screen_content.image_element": {
     "texture": "$map_sprite",
+    "controls": [
+      {
+        "label@global.empty_label": {
+          "layer": 40,
+          "color": "black",
+          "font_size": "medium",
+          "text": "$mode",
+          "ignored": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": ["default", "default"]
+        }
+      }
+    ],
     "bindings": [{ "binding_name": "('#is_' + $mode + '_mode')", "binding_name_override": "#visible" }]
   }
 }

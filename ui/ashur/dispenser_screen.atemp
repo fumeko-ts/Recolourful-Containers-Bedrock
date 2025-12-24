@@ -39,8 +39,7 @@
           "anchor_to": "right_middle",
           "offset": [ -8, -41 ],
           "texture": "assets/advanced_sprites/animated/dispenser/dispenser_bow.png",
-          "uv": [ 0, 154 ],
-          "alpha": "@dispenser_screen.bow_20"
+          "uv": "@dispenser_screen.bow_20"
         }
       },
       {
