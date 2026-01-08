@@ -12,7 +12,7 @@
     "$stack_count_binding_name|default": "#inventory_stack_count",
     "$stack_count_binding_condition|default": "none",
     "controls": [
-      { "$background_image_control_name@$background_images": { } },
+      { "$background_image_control_name@$background_images": {} },
       {
         "stack_count_label@global.empty_label": {
           "offset": [0, 1],
@@ -57,15 +57,70 @@
         }
       },
       {
-        "durability_renderer@container_item.custom_bar_renderer": {
-          "$bar_type": "durability"
+        "durability_bar@global.custom_renderer": {
+          "$type": "progress_bar_renderer",
+          "layer": 16,
+          "offset": [0, 5],
+          "size": [12, 1],
+          "property_bag": {
+            "drop_shadow": true,
+            "is_durability": true,
+            "round_value": true
+          },
+          "bindings": [
+            {
+              "binding_name": "#item_durability_visible",
+              "binding_name_override": "#touch_progress_bar_visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_total_amount",
+              "binding_name_override": "#progress_bar_total_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#item_durability_current_amount",
+              "binding_name_override": "#progress_bar_current_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
         }
       },
       {
-        "storage_renderer@container_item.custom_bar_renderer": {
-          "$bar_type": "storage",
-          "primary_color": [0.192, 0.678, 1.0],
-          "full_storage_color": [1.0, 0.463, 0.463]
+        "storage_bar@global.custom_renderer": {
+          "$type": "progress_bar_renderer",
+          "offset": [0, 5],
+          "size": [12, 1],
+          "layer": 16,
+          "primary_color": [0.4, 0.4, 1.0, 1.0],
+          "full_storage_color": [1.0, 0.4, 0.4],
+          "property_bag": {
+            "drop_shadow": true,
+            "is_storage_bar": true
+          },
+          "bindings": [
+            {
+              "binding_name": "#item_storage_visible",
+              "binding_name_override": "#progress_bar_visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#item_storage_total_amount",
+              "binding_name_override": "#progress_bar_total_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            },
+            {
+              "binding_name": "#item_storage_current_amount",
+              "binding_name_override": "#progress_bar_current_amount",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
         }
       },
       { "item_cell_overlay_ref@$cell_overlay_ref": {} },
@@ -124,6 +179,41 @@
                 "$z_index": 14,
                 "$renderer_type": "open_front"
               }
+            },
+
+            {
+              "storage_bar@global.custom_renderer": {
+                "$type": "progress_bar_renderer",
+                "offset": [0, 5],
+                "size": [12, 1],
+                "layer": 16,
+                "primary_color": [0.4, 0.4, 1.0, 1.0],
+                "full_storage_color": [1.0, 0.4, 0.4],
+                "property_bag": {
+                  "drop_shadow": true,
+                  "is_storage_bar": true
+                },
+                "bindings": [
+                  {
+                    "binding_name": "#item_storage_visible",
+                    "binding_name_override": "#progress_bar_visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_name": "#item_storage_total_amount",
+                    "binding_name_override": "#progress_bar_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  },
+                  {
+                    "binding_name": "#item_storage_current_amount",
+                    "binding_name_override": "#progress_bar_current_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
             }
           ],
           "bindings": [
@@ -135,47 +225,6 @@
             }
           ]
         }
-      }
-    ]
-  },
-
-  "custom_bar_renderer@global.custom_renderer": {
-    "$type": "progress_bar_renderer",
-    "layer": 20,
-    "size": [12, 1],
-    "offset": [0, -4],
-    "anchor_to": "bottom_middle",
-    "anchor_from": "bottom_middle",
-    "property_bag": "$property_bag",
-    "$property_bag": {
-      "drop_shadow": true,
-      "is_durability": true
-    },
-    "variables": {
-      "requires": "($bar_type = 'storage')",
-      "$property_bag": {
-        "drop_shadow": true,
-        "is_storage_bar": true
-      }
-    },
-    "bindings": [
-      {
-        "binding_name": "('#item_' + $bar_type + '_visible')",
-        "binding_name_override": "#touch_progress_bar_visible",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
-      },
-      {
-        "binding_name": "('#item_' + $bar_type + '_total_amount')",
-        "binding_name_override": "#progress_bar_total_amount",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
-      },
-      {
-        "binding_name": "('#item_' + $bar_type + '_current_amount')",
-        "binding_name_override": "#progress_bar_current_amount",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
       }
     ]
   },

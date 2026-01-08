@@ -185,7 +185,7 @@
       {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ]
   },
-  "cartography_output_slot_button@common.no_coalesce_container_slot_button": {
+  "cartography_output_slot_button@global.cell_button_prototype": {
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

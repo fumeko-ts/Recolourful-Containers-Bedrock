@@ -495,13 +495,11 @@
   },
   "storage_bar_grabbed@global.custom_renderer": {
     "$type": "progress_bar_renderer",
-    "size": [13, 1],
-    "anchor_to": "bottom_middle",
-    "anchor_from": "bottom_middle",
-    "offset": [0, -2.6],
+    "offset": [0, 5],
+    "size": [12, 1],
     "primary_color": [0.4, 0.4, 1.0, 1.0],
     "full_storage_color": [1.0, 0.4, 0.4],
-    "property_bag": { "drop_shadow": false, "is_storage_bar": true },
+    "property_bag": { "drop_shadow": true, "is_storage_bar": true },
     "bindings": [
       {
         "binding_name": "#selected_item_storage_visible",
@@ -522,10 +520,8 @@
   },
   "durability_bar_grabbed@global.custom_renderer": {
     "$type": "progress_bar_renderer",
-    "size": [13, 1],
-    "anchor_to": "bottom_middle",
-    "anchor_from": "bottom_middle",
-    "offset": [1, -2.6],
+    "offset": [0, 5],
+    "size": [12, 1],
     "primary_color": [0.4, 0.4, 1.0, 1.0],
     "full_storage_color": [1.0, 0.4, 0.4],
     "property_bag": { "drop_shadow": true, "is_durability": true },

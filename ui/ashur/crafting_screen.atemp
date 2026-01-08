@@ -229,15 +229,22 @@
                                         "controls": [
                                           { "output_top_spacing@global.empty_panel": { "size": ["fill", 14] } },
                                           {
-                                            "output_item@global.container_item": {
+                                            "crafting_output_holder@global.empty_panel": {
                                               "size": [26, 26],
-                                              "anchor_from": "top_left",
-                                              "anchor_to": "top_left",
-                                              "$item_collection": "crafting_output_items",
-                                              "$button_ref": "button_mappings.crafting_output_button",
-                                              "$stack_count_binding_condition": "always",
-                                              "$item_renderer_binding_condition": "always",
-                                              "$background_images": "crafting_textures.output_cell_textures"
+                                              "controls": [
+                                                {
+                                                  "output_item@global.container_item": {
+                                                    "size": [18, 18],
+                                                    "anchor_from": "center",
+                                                    "anchor_to": "center",
+                                                    "$item_collection": "crafting_output_items",
+                                                    "$button_ref": "button_mappings.crafting_output_button",
+                                                    "$stack_count_binding_condition": "always",
+                                                    "$item_renderer_binding_condition": "always",
+                                                    "$background_images": "crafting_textures.output_cell_textures"
+                                                  }
+                                                }
+                                              ]
                                             }
                                           },
                                           { "output_bottom_spacing@global.empty_panel": { "size": ["fill", 14] } }
