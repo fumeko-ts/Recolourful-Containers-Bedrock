@@ -1,24 +1,7 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "recolourful_mount",
   "mount@container_common.container_details": {
-    "size": [176, 166],
-    "$screen|default": "global.empty_panel",
+    "size": [ 176, 166 ],
     "$screen_route|default": "$container_title",
     "$mount_1|default": "ui:entity.llama.name0",
     "$mount_2|default": "ui:entity.donkey.name0",
@@ -31,31 +14,30 @@
     "$mount_9|default": "ui:entity.zombie_horse.name0",
     "$mount_10|default": "ui:entity.camel_husk.name0",
     "$screen_controls": [
-      {"illama@recolourful_mount.mount_screen_bindings"          :{"$screen":"illama_screen.illama_screen"                  ,"$screen_id":"ui:entity.llama.name0"          }},
-      {"trader_illama@recolourful_mount.mount_screen_bindings"   :{"$screen":"trader_illama_screen.trader_illama_screen"    ,"$screen_id":"ui:entity.trader_llama.name0"   }},
-      {"donkey@recolourful_mount.mount_screen_bindings"          :{"$screen":"donkey_screen.donkey_screen"                  ,"$screen_id":"ui:entity.donkey.name0"         }},
-      {"mule@recolourful_mount.mount_screen_bindings"            :{"$screen":"mule_screen.mule_screen"                      ,"$screen_id":"ui:entity.mule.name0"           }},
-      {"horse@recolourful_mount.mount_screen_bindings"           :{"$screen":"horse_screen.horse_screen"                    ,"$screen_id":"ui:entity.horse.name0"          }},
-      {"camel@recolourful_mount.mount_screen_bindings"           :{"$screen":"camel_screen.camel_screen"                    ,"$screen_id":"ui:entity.camel.name0"          }},
-      
-      {"nautilus@recolourful_mount.mount_screen_bindings"        :{"$screen":"nautilus_screen.nautilus_screen"              ,"$screen_id":"ui:entity.nautilus.name0"       }},
-      {"zombie_horse@recolourful_mount.mount_screen_bindings"    :{"$screen":"zombie_horse_screen.zombie_horse_screen"      ,"$screen_id":"ui:entity.zombie_horse.name0"   }},
-      {"zombie_nautilus@recolourful_mount.mount_screen_bindings" :{"$screen":"zombie_nautilus_screen.zombie_nautilus_screen","$screen_id":"ui:entity.zombie_nautilus.name0"}},
-      {"camel_husk@recolourful_mount.mount_screen_bindings"      :{"$screen":"camel_husk_screen.camel_husk_screen","$screen_id":"ui:entity.camel_husk.name0"}},
+      {"llama@recolourful_mount.mount_screen_bindings": {"$screen_id": "llama"}},
+      {"trader_llama@recolourful_mount.mount_screen_bindings": {"$screen_id": "trader_llama"}},
+      {"donkey@recolourful_mount.mount_screen_bindings": {"$screen_id": "donkey"}},
+      {"mule@recolourful_mount.mount_screen_bindings": {"$screen_id": "mule"}},
+      {"horse@recolourful_mount.mount_screen_bindings": {"$screen_id": "horse"}},
+      {"camel@recolourful_mount.mount_screen_bindings": {"$screen_id": "camel"}},
+      {"nautilus@recolourful_mount.mount_screen_bindings": {"$screen_id": "nautilus"}},
+      {"zombie_horse@recolourful_mount.mount_screen_bindings": {"$screen_id": "zombie_horse"}},
+      {"zombie_nautilus@recolourful_mount.mount_screen_bindings": {"$screen_id": "zombie_nautilus"}},
+      {"camel_husk@recolourful_mount.mount_screen_bindings": {"$screen_id": "camel_husk"}},
       {
         "custom_rename@global.empty_panel": {
           "layer": 1,
-          "size": [176, 166],
+          "size": [ 176, 166 ],
           "controls": [
             {
               "close@global.close_button": {
-                "offset": [14, -4],
+                "offset": [ 14, -4 ],
                 "$pressed": "textures/ui/ashur/close_pressed",
                 "$default": "textures/ui/ashur/close_default",
                 "$hover": "textures/ui/ashur/close_hover"
               }
             },
-            { "horse@mount_misc.horse_panel": {} }
+            {"horse@mount_misc.horse_panel": {}}
           ],
           "bindings": [
             {
@@ -81,17 +63,18 @@
     ]
   },
   "mount_screen_bindings@global.empty_panel": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
+    "$mount_contents|default": "($screen_id + '_screen.' + $screen_id + '_screen')",
     "controls": [
       {
         "close@global.close_button": {
-          "offset": [14, -4],
+          "offset": [ 14, -4 ],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      { "screen@$screen": {} }
+      {"screen@$mount_contents": {}}
     ],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -104,7 +87,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux)) = $screen_id)",
+        "source_property_name": "(((($screen_route - 'entity.' - '.name') + (#item_id_aux - #item_id_aux)) - '0') = $screen_id)",
         "target_property_name": "#visible"
       }
     ]

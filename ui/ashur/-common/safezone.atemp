@@ -1,0 +1,44 @@
+{
+  "namespace": "safezone",
+  "screen_holder_safezone@global.empty_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"root_screen_panel@$screen_content": {}},
+      {
+        "bundle_tooltip_wrapper@global.empty_panel": {
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "bundle_cursor_tooltip@global.custom_renderer": {
+                "$type": "bundle_tooltip_renderer",
+                "size": [ "100%c", "100%c - 26px" ],
+                "layer": 20,
+                "controls": [
+                  {
+                    "tooltip@bundle.bundle_tooltip": {
+                      "bindings": [
+                        {
+                          "binding_name": "#show_bundle_tooltip_hover",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_touch_tooltip@bundle.bundle_tooltip": {
+                "offset": [ 0, "-36px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "bindings": [ {"binding_name": "#show_bundle_tooltip_pocket", "binding_name_override": "#visible"} ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

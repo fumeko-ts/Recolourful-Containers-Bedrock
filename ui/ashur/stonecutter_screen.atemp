@@ -1,27 +1,11 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "stonecutter_screen",
   "stonecutter_panel@container_common.container_details": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "$screen_controls": [
       {
         "close@global.close_button": {
-          "offset": [14, -4],
+          "offset": [ 14, -4 ],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
@@ -32,58 +16,58 @@
           "texture": "assets/advanced_sprites/animated/sawblade.png",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "size": [168, 67],
+          "size": [ 168, 67 ],
           "layer": 2,
-          "uv_size": [168, 67],
+          "uv_size": [ 168, 67 ],
           "uv": "@sawblade.sawblade_0",
           "disable_anim_fast_forward": true
         }
       },
-      { "common_panel@screen_content.container_base": { "$stonecutter_screen": true } },
-      { "scroll_panel@stonecutter_screen.scroll_grid": {} },
+      {"common_panel@screen_content.container_base": {"$stonecutter_screen": true}},
+      {"scroll_panel@stonecutter_screen.scroll_grid": {}},
       {
         "stonecutter_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [176, 69],
+          "size": [ 176, 69 ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "filler_1@global.empty_panel": { "size": ["fill", 15] } },
+            {"filler_1@global.empty_panel": {"size": [ "fill", 15 ]}},
             {
               "container_main@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [176, 54],
+                "size": [ 176, 54 ],
                 "controls": [
-                  { "filler_1@global.empty_panel": { "size": [19, "fill"] } },
+                  {"filler_1@global.empty_panel": {"size": [ 19, "fill" ]}},
                   {
                     "input@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 54],
+                      "size": [ 18, 54 ],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 17] } },
-                        { "input_item_slot@global.container_item": { "$item_collection": "stonecutter_input_items" } },
-                        { "filler_1@global.empty_panel": { "size": ["fill", 19] } }
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
+                        {"input_item_slot@global.container_item": {"$item_collection": "stonecutter_input_items"}},
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 19 ]}}
                       ]
                     }
                   },
-                  { "filler_3@global.empty_panel": { "size": [105, "fill"] } },
+                  {"filler_3@global.empty_panel": {"size": [ 105, "fill" ]}},
                   {
                     "output_stack@global.empty_stack": {
                       "orientation": "vertical",
-                      "size": [18, 54],
+                      "size": [ 18, 54 ],
                       "controls": [
-                        { "filler_1@global.empty_panel": { "size": ["fill", 17] } },
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 17 ]}},
                         {
                           "result_item_slot@global.container_item": {
                             "$item_collection": "stonecutter_result_items",
                             "$button_ref": "button_mappings.stonecutter_result_slot_button"
                           }
                         },
-                        { "filler_1@global.empty_panel": { "size": ["fill", 19] } }
+                        {"filler_1@global.empty_panel": {"size": [ "fill", 19 ]}}
                       ]
                     }
                   },
-                  { "filler_4@global.empty_panel": { "size": [16, "fill"] } }
+                  {"filler_4@global.empty_panel": {"size": [ 16, "fill" ]}}
                 ]
               }
             }
@@ -94,11 +78,11 @@
         "locked_scroll_holder@global.empty_panel": {
           "anchor_to": "top_right",
           "anchor_from": "top_right",
-          "size": [57, 30],
+          "size": [ 57, 30 ],
           "controls": [
             {
               "locked_scroll_box@global.empty_panel": {
-                "size": [12, 15],
+                "size": [ 12, 15 ],
                 "anchor_to": "bottom_left",
                 "anchor_from": "bottom_left",
                 "controls": [
@@ -106,7 +90,7 @@
                     "locked_scroll_box@screen_content.image_element": {
                       "allow_clipping": true,
                       "texture": "assets/sprite_assets/container/stonecutter/scroller_disabled.png",
-                      "size": [12, 15],
+                      "size": [ 12, 15 ],
                       "alpha": 1,
                       "anchor_from": "center",
                       "anchor_to": "center",
@@ -128,21 +112,21 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
   },
   "button_sprite_template@screen_content.image_element": {
-    "size": [16, 18],
+    "size": [ 16, 18 ],
     "nineslice_size": 2,
     "keep_ratio": true,
     "texture": "$sprite",
     "layer": 4,
-    "offset": [1, 1]
+    "offset": [ 1, 1 ]
   },
   "stone_slot_button": {
     "type": "button",
-    "size": [16, 18],
+    "size": [ 16, 18 ],
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
@@ -194,7 +178,7 @@
         "to_button_id": "button.stone_select",
         "mapping_type": "pressed"
       },
-      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
     ],
     "bindings": [
       {
@@ -207,7 +191,7 @@
     "controls": [
       {
         "hover@global.empty_panel": {
-          "size": [16, 18],
+          "size": [ 16, 18 ],
           "controls": [
             {
               "hover_text@global.hover_text": {
@@ -226,8 +210,8 @@
             },
             {
               "hover@screen_content.image_element": {
-                "size": [16, 18],
-                "offset": [1, 1],
+                "size": [ 16, 18 ],
+                "offset": [ 1, 1 ],
                 "layer": 3,
                 "nineslice_size": 1,
                 "texture": "assets/sprite_assets/container/stonecutter/recipe_highlighted.png",
@@ -247,9 +231,9 @@
       },
       {
         "default@screen_content.image_element": {
-          "size": [16, 18],
+          "size": [ 16, 18 ],
           "nineslice_size": 1,
-          "offset": [1, 1],
+          "offset": [ 1, 1 ],
           "texture": "assets/sprite_assets/container/stonecutter/recipe.png",
           "bindings": [
             {
@@ -264,9 +248,9 @@
       },
       {
         "selected@screen_content.image_element": {
-          "size": [16, 18],
+          "size": [ 16, 18 ],
           "nineslice_size": 1,
-          "offset": [1, 1],
+          "offset": [ 1, 1 ],
           "layer": 4,
           "texture": "assets/sprite_assets/container/stonecutter/recipe_selected.png",
           "bindings": [
@@ -282,10 +266,10 @@
       },
       {
         "item_renderer@common.item_renderer": {
-          "size": [15, 15],
+          "size": [ 15, 15 ],
           "anchor_to": "center",
           "anchor_from": "center",
-          "offset": [1.2, 1.2],
+          "offset": [ 1.2, 1.2 ],
           "layer": 6,
           "bindings": [
             {
@@ -300,12 +284,12 @@
     ]
   },
   "scroll_grid@scroll_panel.scroll_panel": {
-    "$scroll_size": [12, 56],
-    "size": [80, 56],
-    "offset": [3, -39.6],
-    "$scroll_view_port_size": [79, 54.2],
-    "$scrolling_pane_size": ["100%", "100%"],
-    "$scroll_track_offset": [32.2, -1],
+    "$scroll_size": [ 12, 56 ],
+    "size": [ 80, 56 ],
+    "offset": [ 3, -39.6 ],
+    "$scroll_view_port_size": [ 79, 54.2 ],
+    "$scrolling_pane_size": [ "100%", "100%" ],
+    "$scroll_track_offset": [ 32.2, -1 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "$scroll_box_image_control": "stonecutter_screen.scroller",
@@ -313,25 +297,25 @@
   },
   "scroller@screen_content.image_element": {
     "tiled": true,
-    "nineslice_size": [6, 6, 6, 7],
-    "tiled_scale": [1, 1],
-    "offset": [2, 0.8],
+    "nineslice_size": [ 6, 6, 6, 7 ],
+    "tiled_scale": [ 1, 1 ],
+    "offset": [ 2, 0.8 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "texture": "assets/sprite_assets/container/stonecutter/scroller.png",
-    "size": [12, "100%"]
+    "size": [ 12, "100%" ]
   },
   "grid_holder@global.empty_panel": {
-    "size": [64, "100%cm"],
+    "size": [ 64, "100%cm" ],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [0, -1.4],
+    "offset": [ 0, -1.4 ],
     "controls": [
-      { "scroll_buffer@global.empty_panel": { "size": [64, "100%sm"] } },
+      {"scroll_buffer@global.empty_panel": {"size": [ 64, "100%sm" ]}},
       {
         "grid": {
           "type": "grid",
-          "size": [64, "default"],
+          "size": [ 64, "default" ],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "collection_name": "stones",

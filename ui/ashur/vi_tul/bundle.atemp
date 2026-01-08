@@ -2,31 +2,21 @@
   "namespace": "bundle",
   "bundle_cell_image@global.empty_panel": {
     "controls": [
-      { "cell_item_image@recolourful_bundle.slots": {} },
+      {"cell_item_image@recolourful_bundle.slots": {}},
       {
         "highlight_panel@global.empty_panel": {
           "controls": [
             {
               "highlight_slot@screen_content.highlight_slot": {
                 "layer": 1,
-                "bindings": [
-                  {
-                    "binding_name": "(not #using_touch)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
+                "bindings": [ {"binding_name": "(not #using_touch)", "binding_name_override": "#visible"} ]
               }
             },
             {
               "pocket_selected_slot@common.cell_image_selected": {
                 "layer": 1,
                 "visible": false,
-                "bindings": [
-                  {
-                    "binding_name": "#using_touch",
-                    "binding_name_override": "#visible"
-                  }
-                ]
+                "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]
               }
             }
           ],
@@ -42,10 +32,9 @@
       }
     ]
   },
-
-  "bundle_tooltip_slot_button@common.container_slot_button_prototype": {
+  "bundle_tooltip_slot_button@global.cell_button_prototype": {
     "$pressed_button_name": "button.tapped_bundle_item_icon",
-    "size": ["100%", "100%"],
+    "size": [ "100%", "100%" ],
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
@@ -104,12 +93,12 @@
     ]
   },
   "bundle_tooltip_slot_classic@global.empty_panel": {
-    "size": [18, 18],
+    "size": [ 18, 18 ],
     "controls": [
       {
         "item_in_bundle_tooltip_pocket@common.container_item": {
-          "size": [18, 18],
-          "offset": [3, 0],
+          "size": [ 18, 18 ],
+          "offset": [ 3, 0 ],
           "$background_images|default": "bundle.bundle_cell_image",
           "$button_ref|default": "bundle.bundle_tooltip_slot_button",
           "bindings": [
@@ -124,8 +113,8 @@
       },
       {
         "more_hidden_items_label@global.empty_label": {
-          "size": ["default", 10],
-          "offset": [3, 0],
+          "size": [ "default", 10 ],
+          "offset": [ 3, 0 ],
           "color": "$item_stack_count_color",
           "layer": 2,
           "text": "#more_hidden_items_text",
@@ -137,32 +126,25 @@
               "binding_type": "collection",
               "binding_collection_name": "$item_collection_name"
             },
-            {
-              "binding_name": "#more_hidden_items_text",
-              "binding_condition": "visible"
-            }
+            {"binding_name": "#more_hidden_items_text", "binding_condition": "visible"}
           ]
         }
       }
     ]
   },
-
   "bundle_tooltip@global.empty_panel": {
-    "size": ["100%cm", "100%cm"],
-    "min_size": [86, 58],
+    "size": [ "100%cm", "100%cm" ],
+    "min_size": [ 86, 58 ],
     "$item_collection_name|default": "bundle_items",
     "layer": 50,
-    "offset": [0, -10],
-
+    "offset": [ 0, -10 ],
     "controls": [
-      {
-        "background@recolourful_bundle.colors": {}
-      },
+      {"background@recolourful_bundle.colors": {}},
       {
         "header_stack@global.empty_stack": {
           "orientation": "horizontal",
-          "size": ["default", 15],
-          "offset": [5, 5],
+          "size": [ "default", 15 ],
+          "offset": [ 5, 5 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 2,
@@ -174,25 +156,17 @@
                 "anchor_to": "top_left",
                 "shadow": true,
                 "text": "#bundle_name",
-                "min_size": [77, "default"],
-                "bindings": [
-                  {
-                    "binding_name": "#bundle_name",
-                    "binding_condition": "always"
-                  }
-                ]
+                "min_size": [ 77, "default" ],
+                "bindings": [ {"binding_name": "#bundle_name", "binding_condition": "always"} ]
               }
             },
             {
               "close_button@common.close_button": {
                 "$pressed_button_name": "button.hide_bundle_tooltip",
-                "size": [8, 8],
+                "size": [ 8, 8 ],
                 "layer": 2,
                 "button_mappings": [
-                  {
-                    "to_button_id": "$pressed_button_name",
-                    "mapping_type": "pressed"
-                  },
+                  {"to_button_id": "$pressed_button_name", "mapping_type": "pressed"},
                   {
                     "from_button_id": "button.menu_ok",
                     "to_button_id": "$pressed_button_name",
@@ -211,27 +185,16 @@
                 ],
                 "controls": [
                   {
-                    "default@common.close_button_panel": {
-                      "$close_button_texture": "textures/ui/close_button_default_light"
-                    }
+                    "default@common.close_button_panel": {"$close_button_texture": "textures/ui/close_button_default_light"}
                   },
                   {
-                    "hover@common.close_button_panel": {
-                      "$close_button_texture": "textures/ui/close_button_hover_light"
-                    }
+                    "hover@common.close_button_panel": {"$close_button_texture": "textures/ui/close_button_hover_light"}
                   },
                   {
-                    "pressed@common.close_button_panel": {
-                      "$close_button_texture": "textures/ui/close_button_pressed_light"
-                    }
+                    "pressed@common.close_button_panel": {"$close_button_texture": "textures/ui/close_button_pressed_light"}
                   }
                 ],
-                "bindings": [
-                  {
-                    "binding_name": "#show_bundle_tooltip_pocket",
-                    "binding_name_override": "#visible"
-                  }
-                ]
+                "bindings": [ {"binding_name": "#show_bundle_tooltip_pocket", "binding_name_override": "#visible"} ]
               }
             }
           ]
@@ -241,28 +204,28 @@
         "wrapper@global.empty_panel": {
           "anchor_to": "top_left",
           "anchor_from": "top_left",
-          "size": ["100%sm", "100%c"],
+          "size": [ "100%sm", "100%c" ],
           "controls": [
             {
               "vertical_layout_stack@global.empty_stack": {
                 "orientation": "vertical",
-                "size": ["100%", "100%c"],
+                "size": [ "100%", "100%c" ],
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "layer": 2,
                 "controls": [
-                  { "header_padding@global.empty_panel": { "layer": 3, "size": [0, 18], "offset": [5, 100] } },
+                  {"header_padding@global.empty_panel": {"layer": 3, "size": [ 0, 18 ], "offset": [ 5, 100 ]}},
                   {
                     "horisontal_layout_stack@global.empty_stack": {
                       "orientation": "horizontal",
-                      "size": ["100%", "100%c"],
+                      "size": [ "100%", "100%c" ],
                       "layer": 3,
                       "controls": [
-                        { "left_padding@global.empty_panel": { "size": ["50% - 34px", 1], "layer": 4 } },
+                        {"left_padding@global.empty_panel": {"size": [ "50% - 34px", 1 ], "layer": 4}},
                         {
                           "body_stack@global.empty_stack": {
                             "orientation": "vertical",
-                            "size": ["100%c", "100%c"],
+                            "size": [ "100%c", "100%c" ],
                             "anchor_from": "bottom_left",
                             "anchor_to": "bottom_left",
                             "layer": 4,
@@ -274,23 +237,13 @@
                                   "grid_dimension_binding": "#bundle_tooltip_grid_dimensions",
                                   "collection_name": "$item_collection_name",
                                   "grid_item_template": "bundle.bundle_tooltip_slot_classic",
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#bundle_tooltip_grid_dimensions",
-                                      "binding_condition": "always_when_visible"
-                                    }
-                                  ]
+                                  "bindings": [ {"binding_name": "#bundle_tooltip_grid_dimensions", "binding_condition": "always_when_visible"} ]
                                 }
                               },
                               {
                                 "spacer@global.empty_panel": {
-                                  "size": [77, 18],
-                                  "bindings": [
-                                    {
-                                      "binding_name": "#is_selected_bundle_empty",
-                                      "binding_name_override": "#visible"
-                                    }
-                                  ]
+                                  "size": [ 77, 18 ],
+                                  "bindings": [ {"binding_name": "#is_selected_bundle_empty", "binding_name_override": "#visible"} ]
                                 }
                               },
                               {
@@ -298,15 +251,15 @@
                                   "layer": 3,
                                   "anchor_from": "bottom_middle",
                                   "anchor_to": "bottom_middle",
-                                  "size": [76, 15],
+                                  "size": [ 76, 15 ],
                                   "controls": [
                                     {
                                       "weight_bar@global.empty_panel": {
                                         "layer": 4,
                                         "anchor_from": "bottom_middle",
                                         "anchor_to": "bottom_middle",
-                                        "offset": [1, 4],
-                                        "size": [76, 12],
+                                        "offset": [ 1, 4 ],
+                                        "size": [ 76, 12 ],
                                         "controls": [
                                           {
                                             "empty_message@global.empty_label": {
@@ -314,12 +267,7 @@
                                               "layer": 5,
                                               "text": "item.bundle.empty",
                                               "shadow": true,
-                                              "bindings": [
-                                                {
-                                                  "binding_name": "#is_selected_bundle_empty",
-                                                  "binding_name_override": "#visible"
-                                                }
-                                              ]
+                                              "bindings": [ {"binding_name": "#is_selected_bundle_empty", "binding_name_override": "#visible"} ]
                                             }
                                           },
                                           {
@@ -332,34 +280,112 @@
                                               "controls": [
                                                 {
                                                   "percent@global.empty_label": {
-                                                    "size": ["default", 10],
+                                                    "size": [ "default", 10 ],
                                                     "layer": 7,
                                                     "anchor_from": "center",
                                                     "anchor_to": "center",
                                                     "text": "#text",
                                                     "shadow": true,
-
-                                                    "$1|default": 0.01,"$2|default": 0.02,"$3|default": 0.03,"$4|default": 0.04,"$5|default": 0.05,
-                                                    "$6|default": 0.06,"$7|default": 0.07,"$8|default": 0.08,"$9|default": 0.09,"$10|default": 0.1,
-                                                    "$11|default": 0.11,"$12|default": 0.12,"$13|default": 0.13,"$14|default": 0.14,"$15|default": 0.15,
-                                                    "$16|default": 0.16,"$17|default": 0.17,"$18|default": 0.18,"$19|default": 0.19,"$20|default": 0.2,
-                                                    "$21|default": 0.21,"$22|default": 0.22,"$23|default": 0.23,"$24|default": 0.24,"$25|default": 0.25,
-                                                    "$26|default": 0.26,"$27|default": 0.27,"$28|default": 0.28,"$29|default": 0.29,"$30|default": 0.3,
-                                                    "$31|default": 0.31,"$32|default": 0.32,"$33|default": 0.33,"$34|default": 0.34,"$35|default": 0.35,
-                                                    "$36|default": 0.36,"$37|default": 0.37,"$38|default": 0.38,"$39|default": 0.39,"$40|default": 0.4,
-                                                    "$41|default": 0.41,"$42|default": 0.42,"$43|default": 0.43,"$44|default": 0.44,"$45|default": 0.45,
-                                                    "$46|default": 0.46,"$47|default": 0.47,"$48|default": 0.48,"$49|default": 0.49,"$50|default": 0.5,
-                                                    "$51|default": 0.51,"$52|default": 0.52,"$53|default": 0.53,"$54|default": 0.54,"$55|default": 0.55,
-                                                    "$56|default": 0.56,"$57|default": 0.57,"$58|default": 0.58,"$59|default": 0.59,"$60|default": 0.6,
-                                                    "$61|default": 0.61,"$62|default": 0.62,"$63|default": 0.63,"$64|default": 0.64,"$65|default": 0.65,
-                                                    "$66|default": 0.66,"$67|default": 0.67,"$68|default": 0.68,"$69|default": 0.69,"$70|default": 0.7,
-                                                    "$71|default": 0.71,"$72|default": 0.72,"$73|default": 0.73,"$74|default": 0.74,"$75|default": 0.75,
-                                                    "$76|default": 0.76,"$77|default": 0.77,"$78|default": 0.78,"$79|default": 0.79,"$80|default": 0.8,
-                                                    "$81|default": 0.81,"$82|default": 0.82,"$83|default": 0.83,"$84|default": 0.84,"$85|default": 0.85,
-                                                    "$86|default": 0.86,"$87|default": 0.87,"$88|default": 0.88,"$89|default": 0.89,"$90|default": 0.9,
-                                                    "$91|default": 0.91,"$92|default": 0.92,"$93|default": 0.93,"$94|default": 0.94,"$95|default": 0.95,
-                                                    "$96|default": 0.96,"$97|default": 0.97,"$98|default": 0.98,"$99|default": 0.99,"$100|default": 1.0,
-
+                                                    "$1|default": 0.01,
+                                                    "$2|default": 0.02,
+                                                    "$3|default": 0.03,
+                                                    "$4|default": 0.04,
+                                                    "$5|default": 0.05,
+                                                    "$6|default": 0.06,
+                                                    "$7|default": 0.07,
+                                                    "$8|default": 0.08,
+                                                    "$9|default": 0.09,
+                                                    "$10|default": 0.1,
+                                                    "$11|default": 0.11,
+                                                    "$12|default": 0.12,
+                                                    "$13|default": 0.13,
+                                                    "$14|default": 0.14,
+                                                    "$15|default": 0.15,
+                                                    "$16|default": 0.16,
+                                                    "$17|default": 0.17,
+                                                    "$18|default": 0.18,
+                                                    "$19|default": 0.19,
+                                                    "$20|default": 0.2,
+                                                    "$21|default": 0.21,
+                                                    "$22|default": 0.22,
+                                                    "$23|default": 0.23,
+                                                    "$24|default": 0.24,
+                                                    "$25|default": 0.25,
+                                                    "$26|default": 0.26,
+                                                    "$27|default": 0.27,
+                                                    "$28|default": 0.28,
+                                                    "$29|default": 0.29,
+                                                    "$30|default": 0.3,
+                                                    "$31|default": 0.31,
+                                                    "$32|default": 0.32,
+                                                    "$33|default": 0.33,
+                                                    "$34|default": 0.34,
+                                                    "$35|default": 0.35,
+                                                    "$36|default": 0.36,
+                                                    "$37|default": 0.37,
+                                                    "$38|default": 0.38,
+                                                    "$39|default": 0.39,
+                                                    "$40|default": 0.4,
+                                                    "$41|default": 0.41,
+                                                    "$42|default": 0.42,
+                                                    "$43|default": 0.43,
+                                                    "$44|default": 0.44,
+                                                    "$45|default": 0.45,
+                                                    "$46|default": 0.46,
+                                                    "$47|default": 0.47,
+                                                    "$48|default": 0.48,
+                                                    "$49|default": 0.49,
+                                                    "$50|default": 0.5,
+                                                    "$51|default": 0.51,
+                                                    "$52|default": 0.52,
+                                                    "$53|default": 0.53,
+                                                    "$54|default": 0.54,
+                                                    "$55|default": 0.55,
+                                                    "$56|default": 0.56,
+                                                    "$57|default": 0.57,
+                                                    "$58|default": 0.58,
+                                                    "$59|default": 0.59,
+                                                    "$60|default": 0.6,
+                                                    "$61|default": 0.61,
+                                                    "$62|default": 0.62,
+                                                    "$63|default": 0.63,
+                                                    "$64|default": 0.64,
+                                                    "$65|default": 0.65,
+                                                    "$66|default": 0.66,
+                                                    "$67|default": 0.67,
+                                                    "$68|default": 0.68,
+                                                    "$69|default": 0.69,
+                                                    "$70|default": 0.7,
+                                                    "$71|default": 0.71,
+                                                    "$72|default": 0.72,
+                                                    "$73|default": 0.73,
+                                                    "$74|default": 0.74,
+                                                    "$75|default": 0.75,
+                                                    "$76|default": 0.76,
+                                                    "$77|default": 0.77,
+                                                    "$78|default": 0.78,
+                                                    "$79|default": 0.79,
+                                                    "$80|default": 0.8,
+                                                    "$81|default": 0.81,
+                                                    "$82|default": 0.82,
+                                                    "$83|default": 0.83,
+                                                    "$84|default": 0.84,
+                                                    "$85|default": 0.85,
+                                                    "$86|default": 0.86,
+                                                    "$87|default": 0.87,
+                                                    "$88|default": 0.88,
+                                                    "$89|default": 0.89,
+                                                    "$90|default": 0.9,
+                                                    "$91|default": 0.91,
+                                                    "$92|default": 0.92,
+                                                    "$93|default": 0.93,
+                                                    "$94|default": 0.94,
+                                                    "$95|default": 0.95,
+                                                    "$96|default": 0.96,
+                                                    "$97|default": 0.97,
+                                                    "$98|default": 0.98,
+                                                    "$99|default": 0.99,
+                                                    "$100|default": 1.0,
                                                     "bindings": [
                                                       {
                                                         "binding_name": "#bundle_weight_bar_ratio",
@@ -369,7 +395,6 @@
                                                       {
                                                         "binding_type": "view",
                                                         "binding_condition": "always_when_visible",
-                                                        //the longer the operator the more lag
                                                         "source_property_name": "((#ratio < $1) + (#ratio < $2) + (#ratio < $3) + (#ratio < $4) + (#ratio < $5) + (#ratio < $6) + (#ratio < $7) + (#ratio < $8) + (#ratio < $9) + (#ratio < $10) + (#ratio < $11) + (#ratio < $12) + (#ratio < $13) + (#ratio < $14) + (#ratio < $15) + (#ratio < $16) + (#ratio < $17) + (#ratio < $18) + (#ratio < $19) + (#ratio < $20) + (#ratio < $21) + (#ratio < $22) + (#ratio < $23) + (#ratio < $24) + (#ratio < $25) + (#ratio < $26) + (#ratio < $27) + (#ratio < $28) + (#ratio < $29) + (#ratio < $30) + (#ratio < $31) + (#ratio < $32) + (#ratio < $33) + (#ratio < $34) + (#ratio < $35) + (#ratio < $36) + (#ratio < $37) + (#ratio < $38) + (#ratio < $39) + (#ratio < $40) + (#ratio < $41) + (#ratio < $42) + (#ratio < $43) + (#ratio < $44) + (#ratio < $45) + (#ratio < $46) + (#ratio < $47) + (#ratio < $48) + (#ratio < $49) + (#ratio < $50))",
                                                         "target_property_name": "#50"
                                                       },
@@ -382,13 +407,10 @@
                                                       {
                                                         "binding_type": "view",
                                                         "binding_condition": "always_when_visible",
-                                                        "source_property_name": "('§z' + (#50 + #100) + '%%')",
+                                                        "source_property_name": "('\u00a7z' + (#50 + #100) + '%%')",
                                                         "target_property_name": "#text"
                                                       },
-                                                      {
-                                                        "binding_name": "(not #is_selected_bundle_empty)",
-                                                        "binding_name_override": "#visible"
-                                                      }
+                                                      {"binding_name": "(not #is_selected_bundle_empty)", "binding_name_override": "#visible"}
                                                     ]
                                                   }
                                                 }
@@ -399,10 +421,7 @@
                                                   "binding_name_override": "#clip_ratio",
                                                   "binding_condition": "always_when_visible"
                                                 },
-                                                {
-                                                  "binding_name": "(not #is_selected_bundle_full)",
-                                                  "binding_name_override": "#visible"
-                                                }
+                                                {"binding_name": "(not #is_selected_bundle_full)", "binding_name_override": "#visible"}
                                               ]
                                             }
                                           },
@@ -413,20 +432,10 @@
                                               "texture": "textures/bundles/bundle_full_progress.png",
                                               "controls": [
                                                 {
-                                                  "full_label@global.empty_label": {
-                                                    "color": "$sub_header_text_color",
-                                                    "layer": 2,
-                                                    "text": "item.bundle.full",
-                                                    "shadow": true
-                                                  }
+                                                  "full_label@global.empty_label": {"color": "$sub_header_text_color", "layer": 2, "text": "item.bundle.full", "shadow": true}
                                                 }
                                               ],
-                                              "bindings": [
-                                                {
-                                                  "binding_name": "#is_selected_bundle_full",
-                                                  "binding_name_override": "#visible"
-                                                }
-                                              ]
+                                              "bindings": [ {"binding_name": "#is_selected_bundle_full", "binding_name_override": "#visible"} ]
                                             }
                                           },
                                           {

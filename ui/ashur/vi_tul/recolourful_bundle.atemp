@@ -1,44 +1,77 @@
 {
   "namespace": "recolourful_bundle",
   "colors@global.empty_panel": {
-    "size": ["100%sm + 10px", "100%sm + 10px"],
-    "min_size": [87, 62],
+    "size": [ "100%sm + 10px", "100%sm + 10px" ],
+    "min_size": [ 87, 62 ],
     "$bundle_id|default": "",
     "$bundle|default": "",
     "controls": [
-      { "default@recolourful_bundle.bundle": { "$bundle_id": "§z§r", "$bundle": "textures/bundles/default_bundle" } },
-      { "black@recolourful_bundle.bundle": { "$bundle_id": "§0§r", "$bundle": "textures/bundles/black_bundle" } },
-      { "white@recolourful_bundle.bundle": { "$bundle_id": "§f§r", "$bundle": "textures/bundles/white_bundle" } },
-      { "red@recolourful_bundle.bundle": { "$bundle_id": "§c§r", "$bundle": "textures/bundles/red_bundle" } },
-      { "orange@recolourful_bundle.bundle": { "$bundle_id": "§n§r", "$bundle": "textures/bundles/orange_bundle" } },
-      { "yellow@recolourful_bundle.bundle": { "$bundle_id": "§e§r", "$bundle": "textures/bundles/yellow_bundle" } },
-      { "green@recolourful_bundle.bundle": { "$bundle_id": "§2§r", "$bundle": "textures/bundles/green_bundle" } },
-      { "lime@recolourful_bundle.bundle": { "$bundle_id": "§a§r", "$bundle": "textures/bundles/lime_bundle" } },
-      { "brown@recolourful_bundle.bundle": { "$bundle_id": "§9§r", "$bundle": "textures/bundles/brown_bundle" } },
-      {"light_gray@recolourful_bundle.bundle": {"$bundle_id":"§7§r","$bundle":"textures/bundles/light_gray_bundle"}},
-      {"light_blue@recolourful_bundle.bundle": {"$bundle_id":"§b§r","$bundle":"textures/bundles/light_blue_bundle"}},
-      { "blue@recolourful_bundle.bundle": { "$bundle_id": "§u§r", "$bundle": "textures/bundles/blue_bundle" } },
-      { "gray@recolourful_bundle.bundle": { "$bundle_id": "§8§r", "$bundle": "textures/bundles/gray_bundle" } },
-      { "pink@recolourful_bundle.bundle": { "$bundle_id": "§p§r", "$bundle": "textures/bundles/pink_bundle" } },
-      { "magenta@recolourful_bundle.bundle": { "$bundle_id": "§d§r", "$bundle": "textures/bundles/magenta_bundle" } },
-      { "purple@recolourful_bundle.bundle": { "$bundle_id": "§5§r", "$bundle": "textures/bundles/purple_bundle" } },
-      { "cyan@recolourful_bundle.bundle": { "$bundle_id": "§3§r", "$bundle": "textures/bundles/cyan_bundle" } },
+      {
+        "default@recolourful_bundle.bundle": {"$bundle_id": "\u00a7z\u00a7r", "$bundle": "textures/bundles/default_bundle"}
+      },
+      {
+        "black@recolourful_bundle.bundle": {"$bundle_id": "\u00a70\u00a7r", "$bundle": "textures/bundles/black_bundle"}
+      },
+      {
+        "white@recolourful_bundle.bundle": {"$bundle_id": "\u00a7f\u00a7r", "$bundle": "textures/bundles/white_bundle"}
+      },
+      {
+        "red@recolourful_bundle.bundle": {"$bundle_id": "\u00a7c\u00a7r", "$bundle": "textures/bundles/red_bundle"}
+      },
+      {
+        "orange@recolourful_bundle.bundle": {"$bundle_id": "\u00a7n\u00a7r", "$bundle": "textures/bundles/orange_bundle"}
+      },
+      {
+        "yellow@recolourful_bundle.bundle": {"$bundle_id": "\u00a7e\u00a7r", "$bundle": "textures/bundles/yellow_bundle"}
+      },
+      {
+        "green@recolourful_bundle.bundle": {"$bundle_id": "\u00a72\u00a7r", "$bundle": "textures/bundles/green_bundle"}
+      },
+      {
+        "lime@recolourful_bundle.bundle": {"$bundle_id": "\u00a7a\u00a7r", "$bundle": "textures/bundles/lime_bundle"}
+      },
+      {
+        "brown@recolourful_bundle.bundle": {"$bundle_id": "\u00a79\u00a7r", "$bundle": "textures/bundles/brown_bundle"}
+      },
+      {
+        "light_gray@recolourful_bundle.bundle": {"$bundle_id": "\u00a77\u00a7r", "$bundle": "textures/bundles/light_gray_bundle"}
+      },
+      {
+        "light_blue@recolourful_bundle.bundle": {"$bundle_id": "\u00a7b\u00a7r", "$bundle": "textures/bundles/light_blue_bundle"}
+      },
+      {
+        "blue@recolourful_bundle.bundle": {"$bundle_id": "\u00a7u\u00a7r", "$bundle": "textures/bundles/blue_bundle"}
+      },
+      {
+        "gray@recolourful_bundle.bundle": {"$bundle_id": "\u00a78\u00a7r", "$bundle": "textures/bundles/gray_bundle"}
+      },
+      {
+        "pink@recolourful_bundle.bundle": {"$bundle_id": "\u00a7p\u00a7r", "$bundle": "textures/bundles/pink_bundle"}
+      },
+      {
+        "magenta@recolourful_bundle.bundle": {"$bundle_id": "\u00a7d\u00a7r", "$bundle": "textures/bundles/magenta_bundle"}
+      },
+      {
+        "purple@recolourful_bundle.bundle": {"$bundle_id": "\u00a75\u00a7r", "$bundle": "textures/bundles/purple_bundle"}
+      },
+      {
+        "cyan@recolourful_bundle.bundle": {"$bundle_id": "\u00a73\u00a7r", "$bundle": "textures/bundles/cyan_bundle"}
+      },
       {
         "bundle_renamed@recolourful_bundle.bundle": {
           "$bundle": "textures/bundles/default_bundle",
-          "$source_property_name": "(((#bundle_name - '§z§r' - '§0§r' - '§f§r' - '§c§r' - '§n§r' - '§e§r' - '§2§r' - '§a§r' - '§9§r' - '§7§r' - '§b§r' - '§u§r' - '§8§r' - '§p§r' - '§d§r' - '§5§r' - '§3§r') = #bundle_name))"
+          "$source_property_name": "(((#bundle_name - '\u00a7z\u00a7r' - '\u00a70\u00a7r' - '\u00a7f\u00a7r' - '\u00a7c\u00a7r' - '\u00a7n\u00a7r' - '\u00a7e\u00a7r' - '\u00a72\u00a7r' - '\u00a7a\u00a7r' - '\u00a79\u00a7r' - '\u00a77\u00a7r' - '\u00a7b\u00a7r' - '\u00a7u\u00a7r' - '\u00a78\u00a7r' - '\u00a7p\u00a7r' - '\u00a7d\u00a7r' - '\u00a75\u00a7r' - '\u00a73\u00a7r') = #bundle_name))"
         }
       }
     ]
   },
-
   "bundle@global.empty_image": {
     "texture": "$bundle",
-    "size": ["100%", "100%"],
+    "size": [ "100%", "100%" ],
     "nineslice_size": 4,
     "layer": 1,
-    "uv_size": [32, 32],
-    "uv": [0, 0],
+    "uv_size": [ 32, 32 ],
+    "uv": [ 0, 0 ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$source_property_name|default": "(not ((#bundle_name - $bundle_id) = #bundle_name))",
@@ -46,7 +79,6 @@
       {
         "empty_button": {
           "type": "button",
-
           "$focus_id|default": "",
           "$focus_override_down|default": "",
           "$focus_override_up|default": "",
@@ -57,14 +89,11 @@
           "focus_change_up": "$focus_override_up",
           "focus_change_left": "$focus_override_left",
           "focus_change_right": "$focus_override_right",
-
           "$focus_enabled|default": true,
           "focus_enabled": true,
           "focus_magnet_enabled": true,
           "focus_wrap_enabled": true,
-
           "default_focus_precedence": 0,
-
           "sound_name": "random.click",
           "sound_volume": 1.0,
           "sound_pitch": 1.0,
@@ -84,7 +113,7 @@
               "mapping_type": "focused"
             }
           ],
-          "size": ["100%", "100%"],
+          "size": [ "100%", "100%" ],
           "layer": 1,
           "enabled": "$touch"
         }
@@ -100,29 +129,16 @@
               "item_text_label@common.item_text_label": {
                 "alpha": 1,
                 "text": "#selected_bundle_item_text",
-                "bindings": [
-                  {
-                    "binding_name": "#selected_bundle_item_text",
-                    "binding_condition": "visible"
-                  }
-                ]
+                "bindings": [ {"binding_name": "#selected_bundle_item_text", "binding_condition": "visible"} ]
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name": "#bundle_has_selected_item",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": [ {"binding_name": "#bundle_has_selected_item", "binding_name_override": "#visible"} ]
         }
       }
     ],
     "bindings": [
-      {
-        "binding_condition": "always",
-        "binding_name": "#bundle_name"
-      },
+      {"binding_condition": "always", "binding_name": "#bundle_name"},
       {
         "binding_type": "view",
         "binding_condition": "always",
@@ -131,33 +147,66 @@
       }
     ]
   },
-
   "slots@global.empty_panel": {
-    "size": ["100%", "100%"],
+    "size": [ "100%", "100%" ],
     "$bundle_id|default": "",
     "$bundle|default": "",
     "controls": [
-      {"default@recolourful_bundle.slot_bindings": {"$bundle_id":"§z§r","$bundle_slot":"textures/bundles/default_bundle"}},
-      {"black@recolourful_bundle.slot_bindings": {"$bundle_id":"§0§r","$bundle_slot":"textures/bundles/black_bundle"}},
-      {"white@recolourful_bundle.slot_bindings": {"$bundle_id":"§f§r","$bundle_slot":"textures/bundles/white_bundle"}},
-      {"red@recolourful_bundle.slot_bindings": { "$bundle_id": "§c§r", "$bundle_slot": "textures/bundles/red_bundle" }},
-      {"orange@recolourful_bundle.slot_bindings": {"$bundle_id":"§n§r","$bundle_slot":"textures/bundles/orange_bundle"}},
-      {"yellow@recolourful_bundle.slot_bindings": {"$bundle_id":"§e§r","$bundle_slot":"textures/bundles/yellow_bundle"}},
-      {"green@recolourful_bundle.slot_bindings": {"$bundle_id":"§2§r","$bundle_slot":"textures/bundles/green_bundle"}},
-      {"lime@recolourful_bundle.slot_bindings": {"$bundle_id":"§a§r","$bundle_slot":"textures/bundles/lime_bundle"}},
-      {"brown@recolourful_bundle.slot_bindings": {"$bundle_id":"§9§r","$bundle_slot":"textures/bundles/brown_bundle"}},
-      {"light_gray@recolourful_bundle.slot_bindings": {"$bundle_id":"§7§r","$bundle_slot":"textures/bundles/light_gray_bundle"}},
-      {"light_blue@recolourful_bundle.slot_bindings": {"$bundle_id":"§b§r","$bundle_slot":"textures/bundles/light_blue_bundle"}},
-      {"blue@recolourful_bundle.slot_bindings": {"$bundle_id":"§u§r","$bundle_slot":"textures/bundles/blue_bundle"}},
-      {"gray@recolourful_bundle.slot_bindings": {"$bundle_id":"§8§r","$bundle_slot":"textures/bundles/gray_bundle"}},
-      {"pink@recolourful_bundle.slot_bindings": {"$bundle_id":"§p§r","$bundle_slot":"textures/bundles/pink_bundle"}},
-      {"magenta@recolourful_bundle.slot_bindings": {"$bundle_id":"§d§r","$bundle_slot":"textures/bundles/magenta_bundle"}},
-      {"purple@recolourful_bundle.slot_bindings": {"$bundle_id":"§5§r","$bundle_slot":"textures/bundles/purple_bundle"}},
-      {"cyan@recolourful_bundle.slot_bindings": {"$bundle_id":"§3§r","$bundle_slot":"textures/bundles/cyan_bundle"}},
+      {
+        "default@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7z\u00a7r", "$bundle_slot": "textures/bundles/default_bundle"}
+      },
+      {
+        "black@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a70\u00a7r", "$bundle_slot": "textures/bundles/black_bundle"}
+      },
+      {
+        "white@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7f\u00a7r", "$bundle_slot": "textures/bundles/white_bundle"}
+      },
+      {
+        "red@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7c\u00a7r", "$bundle_slot": "textures/bundles/red_bundle"}
+      },
+      {
+        "orange@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7n\u00a7r", "$bundle_slot": "textures/bundles/orange_bundle"}
+      },
+      {
+        "yellow@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7e\u00a7r", "$bundle_slot": "textures/bundles/yellow_bundle"}
+      },
+      {
+        "green@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a72\u00a7r", "$bundle_slot": "textures/bundles/green_bundle"}
+      },
+      {
+        "lime@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7a\u00a7r", "$bundle_slot": "textures/bundles/lime_bundle"}
+      },
+      {
+        "brown@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a79\u00a7r", "$bundle_slot": "textures/bundles/brown_bundle"}
+      },
+      {
+        "light_gray@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a77\u00a7r", "$bundle_slot": "textures/bundles/light_gray_bundle"}
+      },
+      {
+        "light_blue@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7b\u00a7r", "$bundle_slot": "textures/bundles/light_blue_bundle"}
+      },
+      {
+        "blue@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7u\u00a7r", "$bundle_slot": "textures/bundles/blue_bundle"}
+      },
+      {
+        "gray@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a78\u00a7r", "$bundle_slot": "textures/bundles/gray_bundle"}
+      },
+      {
+        "pink@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7p\u00a7r", "$bundle_slot": "textures/bundles/pink_bundle"}
+      },
+      {
+        "magenta@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a7d\u00a7r", "$bundle_slot": "textures/bundles/magenta_bundle"}
+      },
+      {
+        "purple@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a75\u00a7r", "$bundle_slot": "textures/bundles/purple_bundle"}
+      },
+      {
+        "cyan@recolourful_bundle.slot_bindings": {"$bundle_id": "\u00a73\u00a7r", "$bundle_slot": "textures/bundles/cyan_bundle"}
+      },
       {
         "renamed@global.empty_image": {
           "$bundle_slot": "textures/bundles/default_bundle",
-          "$source_property_name": "(((#bundle_name - '§z§r' - '§0§r' - '§f§r' - '§c§r' - '§n§r' - '§e§r' - '§2§r' - '§a§r' - '§9§r' - '§7§r' - '§b§r' - '§u§r' - '§8§r' - '§p§r' - '§d§r' - '§5§r' - '§3§r') = #bundle_name))"
+          "$source_property_name": "(((#bundle_name - '\u00a7z\u00a7r' - '\u00a70\u00a7r' - '\u00a7f\u00a7r' - '\u00a7c\u00a7r' - '\u00a7n\u00a7r' - '\u00a7e\u00a7r' - '\u00a72\u00a7r' - '\u00a7a\u00a7r' - '\u00a79\u00a7r' - '\u00a77\u00a7r' - '\u00a7b\u00a7r' - '\u00a7u\u00a7r' - '\u00a78\u00a7r' - '\u00a7p\u00a7r' - '\u00a7d\u00a7r' - '\u00a75\u00a7r' - '\u00a73\u00a7r') = #bundle_name))"
         }
       }
     ]
@@ -165,17 +214,14 @@
   "slot_bindings@global.empty_image": {
     "texture": "$bundle_slot",
     "layer": 1,
-    "size": ["100%", "100%"],
-    "uv": [40, 0],
+    "size": [ "100%", "100%" ],
+    "uv": [ 40, 0 ],
     "nineslice_size": 1,
-    "uv_size": [18, 18],
+    "uv_size": [ 18, 18 ],
     "visible": false,
     "$source_property_name|default": "(not ((#bundle_name - $bundle_id) = #bundle_name))",
     "bindings": [
-      {
-        "binding_condition": "always",
-        "binding_name": "#bundle_name"
-      },
+      {"binding_condition": "always", "binding_name": "#bundle_name"},
       {
         "binding_type": "view",
         "binding_condition": "always",

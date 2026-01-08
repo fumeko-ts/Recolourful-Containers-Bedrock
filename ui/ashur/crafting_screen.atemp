@@ -1,19 +1,3 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "crafting_screen",
   "screen_base@global.root_panel": {
@@ -36,7 +20,7 @@
                       "size": [183, 166],
                       "orientation": "horizontal",
                       "controls": [
-                        { "tab_stack@crafting_common.crafting_survival_tabs": {} }, // 35 width
+                        { "tab_stack@crafting_common.crafting_survival_tabs": {} },
                         {
                           "recipe_base@screen_content.recipe_book": {
                             "controls": [
@@ -74,7 +58,6 @@
                                                     "$text_background_locked": "screen_content.text_field",
                                                     "$text_background_default": "screen_content.text_field",
                                                     "$text_background_hover": "screen_content.text_field_highlighted",
-
                                                     "$text_edit_binding_name": "#text_box_item_name",
                                                     "$text_edit_box_label_size": ["default", 10]
                                                   }
@@ -95,7 +78,7 @@
                             ]
                           }
                         },
-                        { "4@global.empty_panel": { "size": [1, "fill"] } } //1 width
+                        { "4@global.empty_panel": { "size": [1, "fill"] } }
                       ],
                       "bindings": [
                         {
@@ -140,14 +123,11 @@
                           "craft_all_mobile": {
                             "type": "button",
                             "ignored": "(not ($touch or $pocket_edition or $pocket_screen))",
-
                             "default_control": "default",
                             "hover_control": "hover",
                             "pressed_control": "pressed",
-
                             "anchor_from": "bottom_left",
                             "anchor_to": "bottom_left",
-
                             "size": [35, 26],
                             "layer": 7,
                             "button_mappings": [
@@ -157,10 +137,7 @@
                                 "to_button_id": "button.crafting_output_tertiary"
                               }
                             ],
-                            "property_bag": {
-                              "#collection_index": 0,
-                              "#collection_name": "crafting_output_items"
-                            },
+                            "property_bag": { "#collection_index": 0, "#collection_name": "crafting_output_items" },
                             "controls": [
                               { "default@screen_content.mobile_easy_craft_table_default": {} },
                               { "pressed@screen_content.mobile_easy_craft_table_pressed": {} },
@@ -182,11 +159,7 @@
                             "anchor_from": "top_left",
                             "size": [176, 70],
                             "controls": [
-                              {
-                                "crafting_top_margin@global.empty_panel": {
-                                  "size": ["fill", 16]
-                                }
-                              },
+                              { "crafting_top_margin@global.empty_panel": { "size": ["fill", 16] } },
                               {
                                 "crafting_body_row@global.empty_stack": {
                                   "orientation": "horizontal",
@@ -241,14 +214,13 @@
                                         "anchor_from": "top_left",
                                         "anchor_to": "top_left",
                                         "grid_dimensions": [3, 3],
-                                        "collection_name": "crafting_input_items",
+                                        "$item_collection": "crafting_input_items",
+                                        "collection_name": "$item_collection",
                                         "grid_item_template": "crafting_textures.crafting_input_grid_item"
                                       }
                                     },
                                     {
-                                      "crafting_output_horizontal_spacer@global.empty_panel": {
-                                        "size": [36, "fill"]
-                                      }
+                                      "crafting_output_horizontal_spacer@global.empty_panel": { "size": [36, "fill"] }
                                     },
                                     {
                                       "output_stack@global.empty_stack": {
@@ -257,26 +229,15 @@
                                         "controls": [
                                           { "output_top_spacing@global.empty_panel": { "size": ["fill", 14] } },
                                           {
-                                            "output_grid_3x3": {
-                                              "type": "grid",
-                                              "grid_dimensions": [1, 1],
-                                              "collection_name": "crafting_output_items",
+                                            "output_item@global.container_item": {
+                                              "size": [26, 26],
                                               "anchor_from": "top_left",
                                               "anchor_to": "top_left",
-                                              "size": [26, 26],
-                                              "controls": [
-                                                {
-                                                  "output_item@crafting.inventory_container_item": {
-                                                    "size": [26, 26],
-                                                    "$cell_image_size": [26, 26],
-                                                    "$item_collection_name": "crafting_output_items",
-                                                    "$button_ref": "crafting.output_no_coalesce_container_slot_button",
-                                                    "$stack_count_binding_condition": "always",
-                                                    "$item_renderer_binding_condition": "always",
-                                                    "$background_images": "crafting_textures.output_cell_textures"
-                                                  }
-                                                }
-                                              ]
+                                              "$item_collection": "crafting_output_items",
+                                              "$button_ref": "button_mappings.crafting_output_button",
+                                              "$stack_count_binding_condition": "always",
+                                              "$item_renderer_binding_condition": "always",
+                                              "$background_images": "crafting_textures.output_cell_textures"
                                             }
                                           },
                                           { "output_bottom_spacing@global.empty_panel": { "size": ["fill", 14] } }

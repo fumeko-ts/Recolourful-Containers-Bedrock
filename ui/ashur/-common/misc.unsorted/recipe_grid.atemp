@@ -1,30 +1,14 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "recipe_grid",
   "recipe_grid@global.empty_panel": {
     "clips_children": true,
-    "size": [125, 100],
+    "size": [ 125, 100 ],
     "layer": 4,
     "controls": [
       {
         "recipe_grid": {
           "type": "grid",
-          "size": [125, "default"],
+          "size": [ 125, "default" ],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "collection_name": "recipe_book",
@@ -38,34 +22,168 @@
               "binding_type": "collection",
               "binding_collection_name": "recipe_book"
             },
-            {"binding_type":"view","source_control_name":"page1","source_property_name":"#toggle_state","target_property_name":"#page_one"},
-            {"binding_type":"view","source_control_name":"page2","source_property_name":"#toggle_state","target_property_name":"#page_two"},
-            {"binding_type":"view","source_control_name":"page3","source_property_name":"#toggle_state","target_property_name":"#page_three"},
-            {"binding_type":"view","source_control_name":"page4","source_property_name":"#toggle_state","target_property_name":"#page_four"},
-            {"binding_type":"view","source_control_name":"page5","source_property_name":"#toggle_state","target_property_name":"#page_five"},
-            {"binding_type":"view","source_control_name":"page6","source_property_name":"#toggle_state","target_property_name":"#page_six"},
-            {"binding_type":"view","source_control_name":"page7","source_property_name":"#toggle_state","target_property_name":"#page_seven"},
-            {"binding_type":"view","source_control_name":"page8","source_property_name":"#toggle_state","target_property_name":"#page_eight"},
-            {"binding_type":"view","source_control_name":"page9","source_property_name":"#toggle_state","target_property_name":"#page_nine"},
-            {"binding_type":"view","source_control_name":"page10","source_property_name":"#toggle_state","target_property_name":"#page_ten"},
-            {"binding_type":"view","source_control_name":"page11","source_property_name":"#toggle_state","target_property_name":"#page_eleven"},
-            {"binding_type":"view","source_control_name":"page12","source_property_name":"#toggle_state","target_property_name":"#page_twelve"},
-            {"binding_type":"view","source_control_name":"page13","source_property_name":"#toggle_state","target_property_name":"#page_thirteen"},
-            {"binding_type":"view","source_control_name":"page14","source_property_name":"#toggle_state","target_property_name":"#page_fourteen"},
-            {"binding_type":"view","source_control_name":"page15","source_property_name":"#toggle_state","target_property_name":"#page_fifteen"},
-            {"binding_type":"view","source_control_name":"page16","source_property_name":"#toggle_state","target_property_name":"#page_sixteen"},
-            {"binding_type":"view","source_control_name":"page17","source_property_name":"#toggle_state","target_property_name":"#page_seventeen"},
-            {"binding_type":"view","source_control_name":"page18","source_property_name":"#toggle_state","target_property_name":"#page_eighteen"},
-            {"binding_type":"view","source_control_name":"page19","source_property_name":"#toggle_state","target_property_name":"#page_nineteen"},
-            {"binding_type":"view","source_control_name":"page20","source_property_name":"#toggle_state","target_property_name":"#page_twenty"},
-            {"binding_type":"view","source_control_name":"page21","source_property_name":"#toggle_state","target_property_name":"#page_twentyone"},
-            {"binding_type":"view","source_control_name":"page22","source_property_name":"#toggle_state","target_property_name":"#page_twentytwo"},
-            {"binding_type":"view","source_control_name":"page23","source_property_name":"#toggle_state","target_property_name":"#page_twentythree"},
-            {"binding_type":"view","source_control_name":"page24","source_property_name":"#toggle_state","target_property_name":"#page_twentyfour"},
-            {"binding_type":"view","source_control_name":"page25","source_property_name":"#toggle_state","target_property_name":"#page_twentyfive"},
-            {"binding_type":"view","source_control_name":"page26","source_property_name":"#toggle_state","target_property_name":"#page_twentysix"},
-            {"binding_type":"view","source_control_name":"page27","source_property_name":"#toggle_state","target_property_name":"#page_twentyseven"},
-
+            {
+              "binding_type": "view",
+              "source_control_name": "page1",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_one"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page2",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_two"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page3",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_three"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page4",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_four"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page5",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_five"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page6",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_six"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page7",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_seven"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page8",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_eight"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page9",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_nine"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page10",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_ten"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page11",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_eleven"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page12",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twelve"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page13",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_thirteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page14",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_fourteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page15",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_fifteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page16",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_sixteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page17",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_seventeen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page18",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_eighteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page19",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_nineteen"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page20",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twenty"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page21",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentyone"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page22",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentytwo"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page23",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentythree"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page24",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentyfour"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page25",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentyfive"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page26",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentysix"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "page27",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#page_twentyseven"
+            },
             {
               "binding_type": "view",
               "binding_condition": "always",
@@ -75,66 +193,52 @@
           ],
           "offset": "#offset",
           "property_bag": {
-            "#page_1": [0, 0],
-            "#page_2": [0, -100],
-            "#page_3": [0, -200],
-            "#page_4": [0, -300],
-            "#page_5": [0, -400],
-            "#page_6": [0, -500],
-            "#page_7": [0, -600],
-            "#page_8": [0, -700],
-            "#page_9": [0, -800],
-            "#page_10": [0, -900],
-            "#page_11": [0, -1000],
-            "#page_12": [0, -1100],
-            "#page_13": [0, -1200],
-            "#page_14": [0, -1300],
-            "#page_15": [0, -1400],
-            "#page_16": [0, -1500],
-            "#page_17": [0, -1600],
-            "#page_18": [0, -1700],
-            "#page_19": [0, -1800],
-            "#page_20": [0, -1900],
-            "#page_21": [0, -2000],
-            "#page_22": [0, -2100],
-            "#page_23": [0, -2200],
-            "#page_24": [0, -2300],
-            "#page_25": [0, -2400],
-            "#page_26": [0, -2500],
-            "#page_27": [0, -2600]
+            "#page_1": [ 0, 0 ],
+            "#page_2": [ 0, -100 ],
+            "#page_3": [ 0, -200 ],
+            "#page_4": [ 0, -300 ],
+            "#page_5": [ 0, -400 ],
+            "#page_6": [ 0, -500 ],
+            "#page_7": [ 0, -600 ],
+            "#page_8": [ 0, -700 ],
+            "#page_9": [ 0, -800 ],
+            "#page_10": [ 0, -900 ],
+            "#page_11": [ 0, -1000 ],
+            "#page_12": [ 0, -1100 ],
+            "#page_13": [ 0, -1200 ],
+            "#page_14": [ 0, -1300 ],
+            "#page_15": [ 0, -1400 ],
+            "#page_16": [ 0, -1500 ],
+            "#page_17": [ 0, -1600 ],
+            "#page_18": [ 0, -1700 ],
+            "#page_19": [ 0, -1800 ],
+            "#page_20": [ 0, -1900 ],
+            "#page_21": [ 0, -2000 ],
+            "#page_22": [ 0, -2100 ],
+            "#page_23": [ 0, -2200 ],
+            "#page_24": [ 0, -2300 ],
+            "#page_25": [ 0, -2400 ],
+            "#page_26": [ 0, -2500 ],
+            "#page_27": [ 0, -2600 ]
           }
         }
       }
     ]
   },
   "recipe_container_item@global.empty_panel": {
-    "size": [25, 25],
+    "size": [ 25, 25 ],
     "layer": 1,
     "$item_collection_name": "recipe_book",
     "controls": [
-      {
-        "item_group_bg@recipe_grid.slot_craftable": {
-          "bindings": [
-            {
-              "binding_name": "(#container_item_background_texture = textures/ui/recipe_book_group_collapsed or textures/ui/recipe_book_group_expanded or textures/ui/recipe_book_group_bg)",
-              "binding_name_override": "#visible",
-              "binding_type": "collection",
-              "binding_collection_name": "$item_collection_name"
-            }
-          ]
-        }
-      },
-      {
-        "default_item_bg@recipe_grid.slot_craftable": { "$texture_path": "textures/ui/recipe_book_item_bg" }
-      },
-      { "red_bg@recipe_grid.slot_uncraftable": { "$texture_path": "textures/ui/recipe_book_red_button" } },
+      {"default_item_bg@recipe_grid.slot_craftable": {"$texture_path": "textures/ui/recipe_book_item_bg"}},
+      {"red_bg@recipe_grid.slot_uncraftable": {"$texture_path": "textures/ui/recipe_book_red_button"}},
       {
         "selected@recipe_grid.cell_image": {
           "$texture_path": "('textures/ui/recipe_book_touch_cell_selected')",
           "controls": [
             {
               "recipe_book_touch_cell_selected@recipe_grid.slot_craftable": {
-                "property_bag": { "#collection_name": "crafting_output_items", "#collection_index": 0 },
+                "property_bag": {"#collection_name": "crafting_output_items", "#collection_index": 0},
                 "bindings": [
                   {
                     "binding_name": "(not (#container_item_background = 3))",
@@ -148,7 +252,7 @@
             },
             {
               "recipe_book_red_button@recipe_grid.slot_uncraftable": {
-                "property_bag": { "#collection_name": "crafting_output_items", "#collection_index": 0 },
+                "property_bag": {"#collection_name": "crafting_output_items", "#collection_index": 0},
                 "bindings": [
                   {
                     "binding_name": "(#container_item_background = 3)",
@@ -165,31 +269,26 @@
       },
       {
         "item_renderer@common.item_renderer": {
-          "size": [16, 16],
+          "size": [ 16, 16 ],
           "anchor_to": "center",
           "anchor_from": "center",
-          "offset": [-0.4, -0.4],
+          "offset": [ -0.4, -0.4 ],
           "layer": 7
         }
       },
       {
-        // simplified the toggle because the game is rendering all the recipe grids items at once
-        // so the more complicated the code is the more lag
         "slot": {
           "type": "toggle",
-          "size": [25, 25],
+          "size": [ 25, 25 ],
           "toggle_name": "recipe_grid_items",
-
           "focus_enabled": true,
           "focus_wrap_enabled": false,
           "default_focus_precedence": 1,
           "unchecked_hover_control": "highlight_slot",
           "checked_hover_control": "highlight_slot",
-
           "focus_magnet_enabled": true,
-
           "sound_name": "random.click",
-          "sound_volume": 0.0, // max 1.0
+          "sound_volume": 0.0,
           "layer": 5,
           "bindings": [
             {
@@ -296,28 +395,18 @@
               "to_button_id": "button.drop_all",
               "mapping_type": "pressed"
             },
-            {
-              "to_button_id": "button.shape_drawing",
-              "mapping_type": "pressed"
-            },
-            {
-              "to_button_id": "button.container_slot_hovered",
-              "mapping_type": "pressed"
-            }
+            {"to_button_id": "button.shape_drawing", "mapping_type": "pressed"},
+            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
           ],
           "controls": [
-            {
-              "highlight_slot@global.highlight_slot": {
-                "$slot_vars": "global.empty_panel"
-              }
-            }
+            {"highlight_slot@global.highlight_slot": {"$slot_vars": "global.empty_panel"}}
           ]
         }
       }
     ]
   },
   "cell_image@screen_content.image_element": {
-    "size": ["default", "default"],
+    "size": [ "default", "default" ],
     "layer": 1,
     "bindings": [
       {
@@ -328,6 +417,6 @@
       }
     ]
   },
-  "slot_craftable@recipe_grid.cell_image": { "texture": "assets/sprite_assets/recipe_book/slot_craftable" },
-  "slot_uncraftable@recipe_grid.cell_image": { "texture": "assets/sprite_assets/recipe_book/slot_uncraftable" }
+  "slot_craftable@recipe_grid.cell_image": {"texture": "assets/sprite_assets/recipe_book/slot_craftable"},
+  "slot_uncraftable@recipe_grid.cell_image": {"texture": "assets/sprite_assets/recipe_book/slot_uncraftable"}
 }

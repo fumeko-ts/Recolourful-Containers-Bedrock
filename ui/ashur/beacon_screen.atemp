@@ -1,19 +1,3 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "beacon_screen",
   "beacon_panel@container_common.container_details": {
@@ -23,7 +7,7 @@
     "$screen_controls": [
       {
         "close@global.close_button": {
-          "offset": [7, -3],
+          "offset": [ 7, -3 ],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
@@ -207,28 +191,16 @@
               }
             },
             {
-              "emerald@beacon_screen.item_renderer": {
-                "offset": [ 41, 109 ],
-                "$item_property": {"#item_id_aux": 25427968}
-              }
+              "emerald@beacon_screen.item_renderer": {"offset": [ 41, 109 ], "$item_property": {"#item_id_aux": 25427968}}
             },
             {
-              "diamond@beacon_screen.item_renderer": {
-                "offset": [ 63, 109 ],
-                "$item_property": {"#item_id_aux": 17301504}
-              }
+              "diamond@beacon_screen.item_renderer": {"offset": [ 63, 109 ], "$item_property": {"#item_id_aux": 17301504}}
             },
             {
-              "gold@beacon_screen.item_renderer": {
-                "offset": [ 86, 109 ],
-                "$item_property": {"#item_id_aux": 17432576}
-              }
+              "gold@beacon_screen.item_renderer": {"offset": [ 86, 109 ], "$item_property": {"#item_id_aux": 17432576}}
             },
             {
-              "iron@beacon_screen.item_renderer": {
-                "offset": [ 108, 109 ],
-                "$item_property": {"#item_id_aux": 17367040}
-              }
+              "iron@beacon_screen.item_renderer": {"offset": [ 108, 109 ], "$item_property": {"#item_id_aux": 17367040}}
             }
           ]
         }
@@ -268,11 +240,7 @@
     "$item_property|default": {},
     "controls": [
       {
-        "item_renderer@global.custom_renderer": {
-          "$type": "inventory_item_renderer",
-          "size": [ 16, 16 ],
-          "property_bag": "$item_property"
-        }
+        "item_renderer@global.custom_renderer": {"$type": "inventory_item_renderer", "size": [ 16, 16 ], "property_bag": "$item_property"}
       }
     ]
   },
@@ -305,19 +273,20 @@
         "binding_name_override": "#toggle_state"
       }
     ],
-    
     "button_mappings": [
-      {"from_button_id": "button.menu_select","to_button_id": "button.menu_ok","mapping_type": "pressed"},
-      {"from_button_id": "button.menu_ok"    ,"to_button_id": "button.menu_ok","mapping_type": "pressed"}
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
     ],
-
     "$unchecked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
     "$checked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_default')",
     "$locked_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
     "$unchecked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
     "$checked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_hover')",
     "$locked_hover_advanced|default": "('assets/beacon_button_sprites/' + $button_name + '_locked')",
-
     "checked_control": "checked",
     "unchecked_control": "unchecked",
     "checked_hover_control": "checked_hover",
@@ -326,14 +295,19 @@
     "unchecked_locked_control": "locked_default",
     "checked_locked_hover_control": "locked_hover",
     "unchecked_locked_hover_control": "locked_hover",
-    
     "controls": [
       {"unchecked@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_advanced"}},
       {"checked@beacon_screen.advanced_icons": {"$button_texture": "$checked_advanced"}},
       {"locked_default@beacon_screen.advanced_icons": {"$button_texture": "$locked_advanced"}},
-      {"unchecked_hover@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_hover_advanced", "controls": "$hover_control"}},
-      {"checked_hover@beacon_screen.advanced_icons": {"$button_texture": "$checked_hover_advanced", "controls": "$hover_control"}},
-      {"locked_hover@beacon_screen.advanced_icons": {"$button_texture": "$locked_hover_advanced", "controls": "$hover_control"}}
+      {
+        "unchecked_hover@beacon_screen.advanced_icons": {"$button_texture": "$unchecked_hover_advanced", "controls": "$hover_control"}
+      },
+      {
+        "checked_hover@beacon_screen.advanced_icons": {"$button_texture": "$checked_hover_advanced", "controls": "$hover_control"}
+      },
+      {
+        "locked_hover@beacon_screen.advanced_icons": {"$button_texture": "$locked_hover_advanced", "controls": "$hover_control"}
+      }
     ]
   },
   "hover_text@common.hover_text": {

@@ -1,23 +1,7 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "camel_husk_screen",
   "camel_husk_screen@global.root_panel": {
-    "size": [176, 166],
+    "size": [ 176, 166 ],
     "layer": 1,
     "anchor_from": "center",
     "anchor_to": "center",
@@ -25,18 +9,17 @@
     "controls": [
       {
         "ui@screen_content.image_element": {
-          "size": [176, 166],
+          "size": [ 176, 166 ],
           "layer": 2,
-          "uv_size": [176, 166],
+          "uv_size": [ 176, 166 ],
           "anchor_to": "center",
           "anchor_from": "center",
           "texture": "assets/advanced_sprites/llama_no_chest/saddle"
         }
       },
       {
-        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       },
-      
       {
         "saddle_slot": {
           "type": "grid",
@@ -57,15 +40,15 @@
       },
       {
         "camel_renderer@global.empty_panel": {
-          "offset": [25, 14],
-          "size": [54, 54],
+          "offset": [ 25, 14 ],
+          "size": [ 54, 54 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "controls": [
             {
               "horse_float@global.empty_panel": {
-                "size": ["30%", "30%"],
-                "offset": [0, "30%"],
+                "size": [ "30%", "30%" ],
+                "offset": [ 0, "30%" ],
                 "controls": [
                   {
                     "horse@global.custom_renderer": {
@@ -79,7 +62,7 @@
                         "@common.screen_entrance_size_animation_push",
                         "@common.screen_entrance_size_animation_pop"
                       ],
-                      "bindings": [{ "binding_name": "#entity_id" }]
+                      "bindings": [ {"binding_name": "#entity_id"} ]
                     }
                   }
                 ]
@@ -91,10 +74,10 @@
     ]
   },
   "saddle_slot_uv@screen_content.image_element": {
-    "size": [18, 18],
+    "size": [ 18, 18 ],
     "texture": "assets/advanced_sprites/horse/horse",
-    "uv": [18, 220],
-    "uv_size": [18, 18],
+    "uv": [ 18, 220 ],
+    "uv_size": [ 18, 18 ],
     "layer": 5
   }
 }

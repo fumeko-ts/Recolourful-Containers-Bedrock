@@ -1,33 +1,17 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "recolourful_chest",
   "chest@global.root_panel": {
-    "size": [192, 174],
+    "size": [ 192, 174 ],
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
     "$chest_texture|default": "",
-    "$close_position|default": [14, -4],
+    "$close_position|default": [ 14, -4 ],
     "controls": [
       {
         "1@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/sprites/chests/small_chest",
-          "$close_position": [6, 4],
+          "$close_position": [ 6, 4 ],
           "$screen_id": "ui:container.chest0"
         }
       },
@@ -38,48 +22,38 @@
         }
       },
       {
-        "3@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/sprites/chests/chest_boat",
-          "$screen_id": "ui:entity.chest_boat.name0"
-        }
+        "3@recolourful_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/chest_boat", "$screen_id": "ui:entity.chest_boat.name0"}
       },
       {
-        "4@recolourful_chest.chest_bindings": {
-          "$chest_texture": "assets/sprites/chests/chest_raft",
-          "$screen_id": "ui:entity.chest_raft.name0"
-        }
+        "4@recolourful_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/chest_raft", "$screen_id": "ui:entity.chest_raft.name0"}
       },
       {
         "5@recolourful_chest.chest_bindings": {
-          "$close_position": [6, 4],
+          "$close_position": [ 6, 4 ],
           "$chest_texture": "assets/sprites/chests/copper_chest",
           "$screen_id": "ui:container.chestCopper0"
         }
       },
       {
-        "custom_rename@screen_content.image_element": {
-          "$layer": 1,
-          "$close_position": [6, 4],
-          "texture": "assets/sprites/chests/small_chest"
-        }
+        "custom_rename@screen_content.image_element": {"$layer": 1, "$close_position": [ 6, 4 ], "texture": "assets/sprites/chests/small_chest"}
       }
     ]
   },
   "chest_bindings@global.empty_panel": {
-    "size": [192, 174],
+    "size": [ 192, 174 ],
     "$layer|default": 2,
     "controls": [
       {
         "close@global.close_button": {
           "offset": "$close_position",
-          "$pressed": "textures/ui/ashur/close_pressed", // if you wanted you could move these to each numberd control above to theme the sprites
+          "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
       {
         "chest_ui_template@screen_content.image_element": {
-          "size": [192, 174],
+          "size": [ 192, 174 ],
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": "$layer",
@@ -105,7 +79,7 @@
     ]
   },
   "chest_template@screen_content.image_element": {
-    "size": [192, 174],
+    "size": [ 192, 174 ],
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 1,

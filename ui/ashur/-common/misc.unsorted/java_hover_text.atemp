@@ -1,54 +1,21 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "java_hover_text",
   "java_tooltip_test@global.empty_panel": {
-    "size": ["200%c", "200%c"],
+    "size": [ "200%c", "200%c" ],
     "layer": 50,
     "controls": [
       {
-        "common@java_hover_text.tooltip_base": {
-          "$item_rarity": "§f",
-          "$renamed_rarity": "§o§f",
-          "$tooltip": "textures/common"
-        }
+        "common@java_hover_text.tooltip_base": {"$item_rarity": "\u00a7f", "$renamed_rarity": "\u00a7o\u00a7f", "$tooltip": "textures/common"}
       },
       {
-        "uncommon@java_hover_text.tooltip_base": {
-          "$item_rarity": "§e",
-          "$renamed_rarity": "§o§e",
-          "$tooltip": "textures/uncommon"
-        }
+        "uncommon@java_hover_text.tooltip_base": {"$item_rarity": "\u00a7e", "$renamed_rarity": "\u00a7o\u00a7e", "$tooltip": "textures/uncommon"}
       },
       {
-        "rare@java_hover_text.tooltip_base": {
-          "$item_rarity": "§b",
-          "$renamed_rarity": "§o§b",
-          "$tooltip": "textures/rare"
-        }
+        "rare@java_hover_text.tooltip_base": {"$item_rarity": "\u00a7b", "$renamed_rarity": "\u00a7o\u00a7b", "$tooltip": "textures/rare"}
       },
       {
-        "epic@java_hover_text.tooltip_base": {
-          "$item_rarity": "§d",
-          "$renamed_rarity": "§o§d",
-          "$tooltip": "textures/epic"
-        }
+        "epic@java_hover_text.tooltip_base": {"$item_rarity": "\u00a7d", "$renamed_rarity": "\u00a7o\u00a7d", "$tooltip": "textures/epic"}
       },
-
       {
         "renamed@java_hover_text.tooltip_base": {
           "$bindings": [
@@ -61,7 +28,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "((not (('%.2s' * #hover_text) = '§')) and (not ($hover_text_binding_name = '')))",
+              "source_property_name": "((not (('%.2s' * #hover_text) = '\u00a7')) and (not ($hover_text_binding_name = '')))",
               "target_property_name": "#visible"
             }
           ],
@@ -72,7 +39,7 @@
   },
   "tooltip_base@screen_content.image_element": {
     "texture": "$tooltip",
-    "size": ["100%c + 8px", "100%c + 8px"],
+    "size": [ "100%c + 8px", "100%c + 8px" ],
     "nineslice_size": 3,
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right",
@@ -80,11 +47,10 @@
     "controls": [
       {
         "hover_text@global.empty_label": {
-          "size": ["default", "default"],
+          "size": [ "default", "default" ],
           "layer": 30,
           "text": "#hover_text",
           "shadow": true,
-
           "bindings": [
             {
               "binding_name": "$hover_text_binding_name",
@@ -96,7 +62,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always_when_visible",
-              "source_property_name": "(#hover_text_extender - '\n§9§9sr1.atemp§r')",
+              "source_property_name": "(#hover_text_extender - '\n\u00a79\u00a79sr1.atemp\u00a7r')",
               "target_property_name": "#hover_text"
             }
           ]

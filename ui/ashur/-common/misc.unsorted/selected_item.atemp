@@ -1,56 +1,33 @@
 {
   "namespace": "selected_item",
-
-  "selected_item_details_factory": {
-    "type": "factory",
-    "control_name": "@selected_item.selected_item_details"
-  },
+  "selected_item_details_factory": {"type": "factory", "control_name": "@selected_item.selected_item_details"},
   "selected_item_details@global.empty_image": {
     "anchor_to": "bottom_middle",
     "anchor_from": "bottom_middle",
-    "size": ["100%c", "100%c"],
+    "size": [ "100%c", "100%c" ],
     "layer": 3000,
-    "offset": [0, -16],
+    "offset": [ 0, -16 ],
     "controls": [
       {
-        "mobile_common@selected_item.mobile_tooltip_base": {
-          "$item_rarity": "§f",
-          "$renamed_rarity": "§o§f",
-          "$tooltip": "textures/common"
-        }
+        "mobile_common@selected_item.mobile_tooltip_base": {"$item_rarity": "\u00a7f", "$renamed_rarity": "\u00a7o\u00a7f", "$tooltip": "textures/common"}
       },
       {
-        "mobile_uncommon@selected_item.mobile_tooltip_base": {
-          "$item_rarity": "§e",
-          "$renamed_rarity": "§o§e",
-          "$tooltip": "textures/uncommon"
-        }
+        "mobile_uncommon@selected_item.mobile_tooltip_base": {"$item_rarity": "\u00a7e", "$renamed_rarity": "\u00a7o\u00a7e", "$tooltip": "textures/uncommon"}
       },
       {
-        "mobile_rare@selected_item.mobile_tooltip_base": {
-          "$item_rarity": "§b",
-          "$renamed_rarity": "§o§b",
-          "$tooltip": "textures/rare"
-        }
+        "mobile_rare@selected_item.mobile_tooltip_base": {"$item_rarity": "\u00a7b", "$renamed_rarity": "\u00a7o\u00a7b", "$tooltip": "textures/rare"}
       },
       {
-        "mobile_epic@selected_item.mobile_tooltip_base": {
-          "$item_rarity": "§d",
-          "$renamed_rarity": "§o§d",
-          "$tooltip": "textures/epic"
-        }
+        "mobile_epic@selected_item.mobile_tooltip_base": {"$item_rarity": "\u00a7d", "$renamed_rarity": "\u00a7o\u00a7d", "$tooltip": "textures/epic"}
       },
-
       {
         "no_color_code@selected_item.mobile_tooltip_base": {
           "$bindings": [
-            {
-              "binding_name": "#selected_hover_text"
-            },
+            {"binding_name": "#selected_hover_text"},
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "((not (('%.2s' * #selected_hover_text) = '§')) and (not (#selected_hover_text = '')))",
+              "source_property_name": "((not (('%.2s' * #selected_hover_text) = '\u00a7')) and (not (#selected_hover_text = '')))",
               "target_property_name": "#visible"
             }
           ],
@@ -69,26 +46,23 @@
   },
   "mobile_tooltip_base@screen_content.image_element": {
     "texture": "$tooltip",
-    "size": ["100%c + 8px", "100%c + 8px"],
+    "size": [ "100%c + 8px", "100%c + 8px" ],
     "alpha": "@selected_item.anim_item_details_alpha",
     "nineslice_size": 3,
     "controls": [
       {
         "hover_text@global.empty_label": {
-          "size": ["default", "default"],
+          "size": [ "default", "default" ],
           "text": "#hover_text",
           "alpha": "@selected_item.anim_item_details_alpha",
           "shadow": true,
           "localize": false,
           "bindings": [
-            {
-              "binding_name": "#selected_hover_text"
-            },
-
+            {"binding_name": "#selected_hover_text"},
             {
               "binding_type": "view",
               "binding_condition": "always_when_visible",
-              "source_property_name": "(#selected_hover_text - '\n§9§9sr1.atemp§r')",
+              "source_property_name": "(#selected_hover_text - '\n\u00a79\u00a79sr1.atemp\u00a7r')",
               "target_property_name": "#hover_text"
             }
           ]
@@ -97,9 +71,7 @@
     ],
     "bindings": "$bindings",
     "$bindings": [
-      {
-        "binding_name": "#selected_hover_text"
-      },
+      {"binding_name": "#selected_hover_text"},
       {
         "binding_type": "view",
         "binding_condition": "always",

@@ -1,0 +1,4 @@
+{
+  "namespace": "mob_effect",
+  "effect_background": {"texture": "textures/common.png", "nineslice_size": 2}
+}

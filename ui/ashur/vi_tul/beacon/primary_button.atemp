@@ -1,44 +1,24 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "primary_button",
   "primary_button@global.empty_panel": {
-    "size": [22, 22],
+    "size": [ 22, 22 ],
     "controls": [
       {
         "hover_button": {
           "type": "button",
           "layer": 4,
-          "size": [22, 22],
-          "offset": [1, 1],
+          "size": [ 22, 22 ],
+          "offset": [ 1, 1 ],
           "default_focus_precedence": 1,
           "hover_control": "hover_text",
           "consume_event": false,
           "$disabled_placeholder|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_locked')",
           "button_mappings": [
-            { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false }
+            {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed", "consume_event": false}
           ],
           "controls": [
             {
-              "underlay_disabled@screen_content.image_element": {
-                "texture": "$disabled_placeholder",
-                "size": [22, 22],
-                "layer": 3
-              }
+              "underlay_disabled@screen_content.image_element": {"texture": "$disabled_placeholder", "size": [ 22, 22 ], "layer": 3}
             },
             {
               "hover_text@common.hover_text": {
@@ -71,7 +51,7 @@
       },
       {
         "toggle_holder@global.empty_panel": {
-          "size": [22, 22],
+          "size": [ 22, 22 ],
           "bindings": [
             {
               "binding_type": "collection",
@@ -83,9 +63,9 @@
           "controls": [
             {
               "toggle_button@common.toggle": {
-                "size": [22, 22],
+                "size": [ 22, 22 ],
                 "layer": 1,
-                "offset": [1, 1],
+                "offset": [ 1, 1 ],
                 "focus_wrap_enabled": false,
                 "$toggle_name": "$button_name",
                 "checked_control": "checked",
@@ -103,7 +83,7 @@
                     "binding_name": "#button_visible",
                     "binding_name_override": "#visible"
                   },
-                  { "binding_collection_name": "$button_name", "binding_type": "collection_details" },
+                  {"binding_collection_name": "$button_name", "binding_type": "collection_details"},
                   {
                     "binding_type": "collection",
                     "binding_name": "#selected",
@@ -117,24 +97,28 @@
                     "to_button_id": "button.menu_ok",
                     "mapping_type": "pressed"
                   },
-                  { "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed" }
+                  {"from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "pressed"}
                 ],
                 "$unchecked_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_unchecked')",
                 "$unchecked_hover_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_unchecked_hover')",
                 "$checked_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
                 "$checked_hover_sprite|default": "('assets/beacon_button_sprites/primary/primary_' + $button_name + '_checked')",
                 "controls": [
-                  { "unchecked@primary_button.image_base": { "$texture": "$unchecked_sprite" } },
+                  {"unchecked@primary_button.image_base": {"$texture": "$unchecked_sprite"}},
                   {
                     "unchecked_hover@primary_button.image_base": {
-                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
+                      "controls": [
+                        {"hover_text@primary_button.hover_text": {}}
+                      ],
                       "$texture": "$unchecked_hover_sprite"
                     }
                   },
-                  { "checked@primary_button.image_base": { "$texture": "$checked_sprite" } },
+                  {"checked@primary_button.image_base": {"$texture": "$checked_sprite"}},
                   {
                     "checked_hover@primary_button.image_base": {
-                      "controls": [{ "hover_text@primary_button.hover_text": {} }],
+                      "controls": [
+                        {"hover_text@primary_button.hover_text": {}}
+                      ],
                       "$texture": "$checked_hover_sprite"
                     }
                   }
@@ -146,7 +130,7 @@
       }
     ]
   },
-  "image_base@screen_content.image_element": { "texture": "$texture", "size": [22, 22] },
+  "image_base@screen_content.image_element": {"texture": "$texture", "size": [ 22, 22 ]},
   "hover_text@common.hover_text": {
     "layer": 999,
     "bindings": [

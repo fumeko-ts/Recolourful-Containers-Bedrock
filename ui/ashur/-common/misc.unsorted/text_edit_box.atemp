@@ -1,19 +1,3 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "text_edit_box",
   "text_edit_box@common.text_edit_box": {
@@ -24,7 +8,7 @@
     "controls": [
       {
         "centering_panel@global.empty_panel": {
-          "size": ["100% - 6px", "100% - 4px"],
+          "size": [ "100% - 6px", "100% - 4px" ],
           "controls": [
             {
               "clipper_panel@global.empty_panel": {
@@ -47,7 +31,7 @@
                   },
                   {
                     "clear_text_button_panel@global.empty_panel": {
-                      "size": ["100%", "100%"],
+                      "size": [ "100%", "100%" ],
                       "visible": "$text_clear_button_enabled",
                       "controls": [
                         {
@@ -79,45 +63,35 @@
           "$disabled_color|default": "$color",
           "controls": [
             {
-              "edit_box_indent@$text_background_locked": { "$color": "$disabled_color", "$alpha": "$disabled_alpha" }
+              "edit_box_indent@$text_background_locked": {"$color": "$disabled_color", "$alpha": "$disabled_alpha"}
             }
           ]
         }
       },
-      { "default@$text_background_default": {} },
-      { "hover@$text_background_hover": {} },
-      { "pressed@$text_background_hover": {} },
+      {"default@$text_background_default": {}},
+      {"hover@$text_background_hover": {}},
+      {"pressed@$text_background_hover": {}},
       {
         "visibility_panel@global.empty_panel": {
-          "size": ["100% - 6px", "100% - 4px"],
+          "size": [ "100% - 6px", "100% - 4px" ],
           "controls": [
             {
               "1@$extra_contents": {
-                "offset": [1, 0.4],
+                "offset": [ 1, 0.4 ],
                 "controls": [
+                  {"overlay@text_edit_box.placeholder_template": {"color": "$recipe_edit_text_color", "layer": 7}},
                   {
-                    "overlay@text_edit_box.placeholder_template": {
-                      "color": "$recipe_edit_text_color",
-                      "layer": 7
-                    }
-                  },
-                  {
-                    "underlay@text_edit_box.placeholder_template": {
-                      "color": "$recipe_edit_shadow_text_color",
-                      "layer": 5,
-                      "offset": [1, 1]
-                    }
+                    "underlay@text_edit_box.placeholder_template": {"color": "$recipe_edit_shadow_text_color", "layer": 5, "offset": [ 1, 1 ]}
                   }
                 ]
               }
             },
-
             {
               "2@common.text_edit_box_place_holder_label": {
                 "ignored": "($extra_contents = 'text_edit_box.placeholder_label')",
                 "layer": 1,
                 "shadow": true,
-                "size": ["default", 10],
+                "size": [ "default", 10 ],
                 "offset": "$text_edit_box_label_offset",
                 "anchor_from": "$text_edit_box_label_anchor_point",
                 "anchor_to": "$text_edit_box_label_anchor_point"
@@ -142,7 +116,7 @@
     "font_size": "normal",
     "text_alignment": "left",
     "localize": true,
-    "size": ["100%", 10],
+    "size": [ "100%", 10 ],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
     "text": "$place_holder_text"

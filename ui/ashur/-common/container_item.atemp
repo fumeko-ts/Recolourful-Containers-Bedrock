@@ -1,0 +1,261 @@
+{
+  "namespace": "container_item",
+  "container_item@global.empty_panel": {
+    "size": [18, 18],
+    "layer": 1,
+    "$item_collection_name|default": "$item_collection",
+    "$cell_overlay_ref|default": "global.empty_image",
+    "$button_ref|default": "container_item.item_button",
+    "$item_renderer|default": "common.item_renderer",
+    "$background_images|default": "global.empty_panel",
+    "$background_image_control_name|default": "bg",
+    "$stack_count_binding_name|default": "#inventory_stack_count",
+    "$stack_count_binding_condition|default": "none",
+    "controls": [
+      { "$background_image_control_name@$background_images": { "layer": 1 } },
+      {
+        "stack_count_label@global.empty_label": {
+          "offset": [0, 1],
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "layer": 9,
+          "shadow": true,
+          "text": "$stack_count_binding_name",
+          "bindings": [
+            {
+              "binding_name": "$stack_count_binding_name",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name",
+              "binding_condition": "$stack_count_binding_condition"
+            }
+          ]
+        }
+      },
+      {
+        "$item_renderer@$item_renderer": {
+          "size": [16, 16],
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "layer": 7
+        }
+      },
+      {
+        "durability_renderer@container_item.custom_bar_renderer": {
+          "$bar_type": "durability"
+        }
+      },
+      {
+        "storage_renderer@container_item.custom_bar_renderer": {
+          "$bar_type": "storage",
+          "primary_color": [0.192, 0.678, 1.000],
+          "full_storage_color": [1.000, 0.463, 0.463]
+        }
+      },
+      { "item_cell_overlay_ref@$cell_overlay_ref": { "layer": 3 } },
+      {
+        "slot_selected@screen_content.image_element": {
+          "texture": "textures/ui/touch_ui_selected_slot",
+          "size": [18, 18],
+          "visible": false,
+          "layer": 4,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#is_selected_slot",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      { "item_button_ref@$button_ref": {} },
+      {
+        "bundle_selected_item_panel@global.empty_panel": {
+          "size": [18, 18],
+          "layer": 10,
+          "controls": [
+            {
+              "bundle_selected_item_background_colour@global.empty_image": {
+                "texture": "textures/bundles/bundle_selected_slot",
+                "size": [18, 18],
+                "layer": 1,
+                "nineslice_size": 1,
+                "bindings": [
+                  {
+                    "binding_name": "#using_touch",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "bundle_open_icon_back@container_item.bundle_item_template": {
+                "$z_index": 12,
+                "$renderer_type": "open_back"
+              }
+            },
+            {
+              "bundle_selected_item_icon@container_item.bundle_item_template": {
+                "$z_index": 13,
+                "$renderer_type": "item_renderer_data"
+              }
+            },
+            {
+              "bundle_open_icon_front@container_item.bundle_item_template": {
+                "$z_index": 14,
+                "$renderer_type": "open_front"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#bundle_selected_item_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "custom_bar_renderer@global.custom_renderer": {
+    "$type": "progress_bar_renderer",
+    "layer": 20,
+    "size": [12, 1],
+    "offset": [0, -4],
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "property_bag": "$property_bag",
+    "$property_bag": {
+      "drop_shadow": true,
+      "is_durability": true
+    },
+    "variables": {
+      "requires": "($bar_type = 'storage')",
+      "$property_bag": {
+        "drop_shadow": true,
+        "is_storage_bar": true
+      }
+    },
+    "bindings": [
+      {
+        "binding_name": "('#item_' + $bar_type + '_visible')",
+        "binding_name_override": "#touch_progress_bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "('#item_' + $bar_type + '_total_amount')",
+        "binding_name_override": "#progress_bar_total_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "('#item_' + $bar_type + '_current_amount')",
+        "binding_name_override": "#progress_bar_current_amount",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+
+  "bundle_item_template@common.item_renderer": {
+    "size": [16, 16],
+    "layer": "$z_index",
+    "$renderer_type|default": "none",
+    "bindings": [
+      {
+        "binding_name": "#bundle_selected_item_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      },
+      {
+        "binding_name": "('#bundle_' + $renderer_type)",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "$item_renderer_binding_condition"
+      }
+    ]
+  },
+
+  "item_button": {
+    "type": "button",
+    "$highlight_control|default": "global.highlight_slot",
+    "default_focus_precedence": 1,
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      { "to_button_id": "button.shape_drawing", "mapping_type": "pressed" },
+      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
+    ],
+    "controls": [{ "hover@$highlight_control": { "ignored": "$touch" } }, { "pressed@$highlight_control": {} }]
+  }
+}

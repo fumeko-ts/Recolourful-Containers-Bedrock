@@ -65,12 +65,15 @@
     "ui/ashur/vi_tul/mounts/illama_screen.atemp",
     "ui/ashur/vi_tul/mounts/mount_misc.atemp",
     "ui/ashur/vi_tul/mounts/mule_screen.atemp",
-    "ui/ashur/vi_tul/mounts/trader_illama_screen.atemp"    ,
+    "ui/ashur/vi_tul/mounts/trader_illama_screen.atemp",
     "ui/ashur/vi_tul/mounts/nautilus_screen.atemp",
     "ui/ashur/vi_tul/mounts/zombie_nautilus_screen.atemp",
-    "ui/ashur/vi_tul/recolourful_bundle.atemp" ,
-    "ui/ashur/vi_tul/bundle.atemp"                  ,
-    "ui/ashur/-common/misc.unsorted/selected_item.atemp"  ,
-    "ui/ashur/vi_tul/recolourful_double_chest.atemp"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ,"update-logs.txt"
+    "ui/ashur/vi_tul/recolourful_bundle.atemp",
+    "ui/ashur/vi_tul/bundle.atemp",
+    "ui/ashur/-common/misc.unsorted/selected_item.atemp",
+    "ui/ashur/vi_tul/recolourful_double_chest.atemp",
+    "ui/ashur/-common/safezone.atemp",
+    "ui/ashur/-common/container_item.atemp",
+    "update-logs.txt"
   ]
 }

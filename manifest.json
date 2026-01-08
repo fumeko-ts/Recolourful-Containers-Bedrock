@@ -5,8 +5,9 @@
     "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
     "uuid": "7db77049-d5a8-4f8d-b4fb-2805bd688532",
     "version": [1, 1, 0],
-    "min_engine_version": [1, 21, 130] // should fix horse netherite color
+    "min_engine_version": [ 1, 21, 120]
   },
+  "capabilities": ["pbr"],
   "modules": [
     {
       "type": "resources",

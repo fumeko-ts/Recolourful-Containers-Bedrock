@@ -1,161 +1,150 @@
-/**
-// © 2025 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
   "namespace": "container_common",
   "container_details@global.empty_panel": {
     "anchor_to": "center",
     "anchor_from": "center",
-    "layer": 5, // so that the exit buttons will render below
-    "controls": [
-      { "4@common.flying_item_renderer": { "layer": 12 } },
-      { "7@container_common.item_flying_selected": {} },
-      { "8@common.gamepad_cursor_button": {} },
-      { "10@common.inventory_take_progress_icon_button": {} },
-      { "screen@global.empty_panel": { "size": ["100%", "100%"], "controls": "$screen_controls" } }
-    ]
-  },
-  "held_flying_renderer@global.empty_panel": {
-    "size": [18, 18],
+    "layer": 5,
     "controls": [
       {
-        "inventory_selected_icon@common.item_renderer": {
-          "layer": 50,
-          "anchor_to": "center",
+        "flying_item_renderer@global.custom_renderer": {"$type": "flying_item_renderer", "layer": 40, "property_bag": {"#flying_item_renderer": true}}
+      },
+      {
+        "item_flying_selected": {
+          "type": "button",
           "anchor_from": "center",
-          "size": [16, 16],
-          "bindings": [
+          "anchor_to": "center",
+          "layer": -10,
+          "size": [ 16, 16 ],
+          "follows_cursor": true,
+          "always_handle_pointer": true,
+          "controls": [
             {
-              "binding_name": "#inventory_selected_item",
-              "binding_name_override": "#item_id_aux",
-              "binding_condition": "always_when_visible"
+              "1@global.empty_panel": {
+                "size": [ 18, 18 ],
+                "controls": [
+                  {
+                    "inventory_selected_icon@common.item_renderer": {
+                      "layer": 50,
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "size": [ 16, 16 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#inventory_selected_item",
+                          "binding_name_override": "#item_id_aux",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_item_charged_item",
+                          "binding_name_override": "#charged_item",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_item_color",
+                          "binding_name_override": "#item_custom_color",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_armor_trim_material",
+                          "binding_name_override": "#armor_trim_material",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_banner_patterns",
+                          "binding_name_override": "#banner_patterns",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#shield_base_color_hovered",
+                          "binding_name_override": "#shield_base_color",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_banner_colors",
+                          "binding_name_override": "#banner_colors",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_banner_type",
+                          "binding_name_override": "#banner_type",
+                          "binding_condition": "always_when_visible"
+                        },
+                        {
+                          "binding_name": "#inventory_selected_decorated_pot_sherds",
+                          "binding_name_override": "#decorated_pot_sherds",
+                          "binding_condition": "always_when_visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "stack_text@global.empty_label": {
+                      "anchor_to": "bottom_right",
+                      "anchor_from": "bottom_right",
+                      "layer": 53,
+                      "shadow": true,
+                      "offset": [ 0, 1 ],
+                      "color": "$selected_item_stack_count_color",
+                      "text": "#inventory_selected_item_stack_count",
+                      "bindings": [
+                        {"binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible"}
+                      ]
+                    }
+                  },
+                  {
+                    "hover_text@common.hover_text": {"layer": 59, "bindings": [ {"binding_name": "#using_touch", "binding_name_override": "#visible"} ]}
+                  }
+                ]
+              }
             },
+            {"2@global.durability_bar_grabbed": {"layer": 61}},
+            {"3@global.storage_bar_grabbed": {"layer": 61}}
+          ]
+        }
+      },
+      {
+        "gamepad_cursor_button": {
+          "type": "button",
+          "visible": false,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": -10,
+          "size": [ 16, 16 ],
+          "follows_cursor": true,
+          "always_handle_pointer": true,
+          "controls": [
             {
-              "binding_name": "#inventory_selected_item_charged_item",
-              "binding_name_override": "#charged_item",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_item_color",
-              "binding_name_override": "#item_custom_color",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_armor_trim_material",
-              "binding_name_override": "#armor_trim_material",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_patterns",
-              "binding_name_override": "#banner_patterns",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#shield_base_color_hovered",
-              "binding_name_override": "#shield_base_color",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_colors",
-              "binding_name_override": "#banner_colors",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_banner_type",
-              "binding_name_override": "#banner_type",
-              "binding_condition": "always_when_visible"
-            },
-            {
-              "binding_name": "#inventory_selected_decorated_pot_sherds",
-              "binding_name_override": "#decorated_pot_sherds",
-              "binding_condition": "always_when_visible"
+              "gamepad_cursor_image@global.empty_image": {
+                "texture": "textures/ui/pointer",
+                "size": [ 14, 14 ],
+                "layer": 60,
+                "follows_cursor": true,
+                "bindings": [
+                  {
+                    "binding_name": "#gamepad_cursor_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
             }
           ]
         }
       },
       {
-        "stack_text@global.empty_label": {
-          "anchor_to": "bottom_right",
-          "anchor_from": "bottom_right",
-          "layer": 53,
-          "shadow": true,
-          "offset": [0, 1],
-          "color": "$selected_item_stack_count_color",
-          "text": "#inventory_selected_item_stack_count",
+        "10@global.custom_renderer": {
+          "$type": "progress_bar_renderer",
+          "layer": 70,
+          "offset": [ 0, -12 ],
+          "size": [ 15, 3 ],
           "bindings": [
-            { "binding_name": "#inventory_selected_item_stack_count", "binding_condition": "always_when_visible" }
+            {"binding_name": "#progress_bar_visible", "binding_condition": "always"},
+            {"binding_name": "#progress_bar_total_amount", "binding_condition": "always_when_visible"},
+            {"binding_name": "#progress_bar_current_amount", "binding_condition": "always_when_visible"}
           ]
         }
       },
-      {
-        "hover_text@common.hover_text": {
-          "layer": 59,
-          "bindings": [{ "binding_name": "#using_touch", "binding_name_override": "#visible" }]
-        }
-      }
-    ]
-  },
-  "item_flying_selected": {
-    "type": "button",
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "layer": -10,
-    "size": [16, 16],
-    "follows_cursor": true,
-    "always_handle_pointer": true,
-    "controls": [
-      { "1@container_common.held_flying_renderer": {} },
-      { "3@container_common.held_flying_renderer": {} },
-      { "2@container_common.held_flying_renderer": {} },
-      { "4@global.durability_bar_grabbed": { "layer": 61 } },
-      { "5@global.storage_bar_grabbed": { "layer": 61 } }
-    ]
-  },
-  "item_remover": {
-    "type": "toggle",
-    "size": [18, 18],
-    "unchecked_control": "",
-    "checked_control": "",
-    "unchecked_hover_control": "default_hover",
-    "checked_hover_control": "default_hover",
-    "$white_highlight_slot_offset": [1, 1],
-    "controls": [
-      {"default_hover@screen_content.highlight_slot":{"size": [16, 16]}}
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.destroy_selection",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_auto_place",
-        "to_button_id": "button.menu_clear",
-        "mapping_type": "pressed"
-      }
+      {"screen@global.empty_panel": {"size": [ "100%", "100%" ], "controls": "$screen_controls"}}
     ]
   }
 }
