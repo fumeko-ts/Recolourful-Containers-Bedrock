@@ -6,9 +6,6 @@
     "layer": 5,
     "controls": [
       {
-        "flying_item_renderer@global.custom_renderer": {"$type": "flying_item_renderer", "layer": 40, "property_bag": {"#flying_item_renderer": true}}
-      },
-      {
         "item_flying_selected": {
           "type": "button",
           "anchor_from": "center",

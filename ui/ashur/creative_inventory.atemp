@@ -277,13 +277,9 @@
                             "controls": [
                               { "buffer_1@global.empty_panel": { "size": ["default", 14] } },
                               {
-                                "offhand_slot_creative": {
-                                  "type": "grid",
+                                "offhand_slot_creative@global.container_item": {
                                   "size": [18, 18],
-                                  "$item_collection": "offhand_items",
-                                  "collection_name": "$item_collection",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
-                                  "grid_item_template": "global.container_item"
+                                  "$item_collection": "offhand_items"
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["default", 13] } }
@@ -301,7 +297,6 @@
                               {
                                 "armor_item_index_0@global.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 0
                                 }
                               },
@@ -309,7 +304,6 @@
                               {
                                 "armor_item_index_1@global.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_chest",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 1
                                 }
                               }
@@ -329,7 +323,6 @@
                               {
                                 "armor_item_index_2@global.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_legs",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 2
                                 }
                               },
@@ -337,7 +330,6 @@
                               {
                                 "armor_item_index_3@global.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_image_feet",
-                                  "$button_ref": "crafting.no_coalesce_container_slot_button",
                                   "collection_index": 3
                                 }
                               }

@@ -31,6 +31,8 @@
           "$item_rarity|default": "",
           "$renamed_rarity|default": "",
           "$tooltip|default": "",
+
+          "layer": 6,
           "controls": [
             {
               "java@global.empty_panel": {
@@ -59,7 +61,6 @@
     "default_focus_precedence": 1,
     "hover_control": "hover",
     "pressed_control": "pressed",
-    "layer": 1,
     "bindings": [
       {
         "binding_type": "collection_details",
@@ -381,19 +382,19 @@
               "to_button_id": "button.inventory_right",
               "mapping_type": "global"
             },
-            {"from_button_id":"button.return"  ,"to_button_id":"button.return"   ,"mapping_type":"global"},
-            {"from_button_id":"button.arrow_up","to_button_id":"button.arrow_key","mapping_type":"global"},
-            {"from_button_id":"button.turn_up" ,"to_button_id":"button.scroll_up","mapping_type":"global"},
-            {"from_button_id":"button.slot0","to_button_id":"button.slot_0","mapping_type":"global"},
-            {"from_button_id":"button.slot1","to_button_id":"button.slot_1","mapping_type":"global"},
-            {"from_button_id":"button.slot2","to_button_id":"button.slot_2","mapping_type":"global"},
-            {"from_button_id":"button.slot3","to_button_id":"button.slot_3","mapping_type":"global"},
-            {"from_button_id":"button.slot4","to_button_id":"button.slot_4","mapping_type":"global"},
-            {"from_button_id":"button.slot5","to_button_id":"button.slot_5","mapping_type":"global"},
-            {"from_button_id":"button.slot6","to_button_id":"button.slot_6","mapping_type":"global"},
-            {"from_button_id":"button.slot7","to_button_id":"button.slot_7","mapping_type":"global"},
-            {"from_button_id":"button.slot8","to_button_id":"button.slot_8","mapping_type":"global"},
-            {"from_button_id":"button.slot9","to_button_id":"button.slot_9","mapping_type":"global"}
+            { "from_button_id": "button.return", "to_button_id": "button.return", "mapping_type": "global" },
+            { "from_button_id": "button.arrow_up", "to_button_id": "button.arrow_key", "mapping_type": "global" },
+            { "from_button_id": "button.turn_up", "to_button_id": "button.scroll_up", "mapping_type": "global" },
+            { "from_button_id": "button.slot0", "to_button_id": "button.slot_0", "mapping_type": "global" },
+            { "from_button_id": "button.slot1", "to_button_id": "button.slot_1", "mapping_type": "global" },
+            { "from_button_id": "button.slot2", "to_button_id": "button.slot_2", "mapping_type": "global" },
+            { "from_button_id": "button.slot3", "to_button_id": "button.slot_3", "mapping_type": "global" },
+            { "from_button_id": "button.slot4", "to_button_id": "button.slot_4", "mapping_type": "global" },
+            { "from_button_id": "button.slot5", "to_button_id": "button.slot_5", "mapping_type": "global" },
+            { "from_button_id": "button.slot6", "to_button_id": "button.slot_6", "mapping_type": "global" },
+            { "from_button_id": "button.slot7", "to_button_id": "button.slot_7", "mapping_type": "global" },
+            { "from_button_id": "button.slot8", "to_button_id": "button.slot_8", "mapping_type": "global" },
+            { "from_button_id": "button.slot9", "to_button_id": "button.slot_9", "mapping_type": "global" }
           ],
           "controls": [
             { "selected_item_details_factory@selected_item.selected_item_details_factory": {} },

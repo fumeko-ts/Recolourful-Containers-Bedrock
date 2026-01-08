@@ -1,84 +1,63 @@
 {
   "namespace": "recolourful_shulker",
   "recolourful_shulker@global.root_panel": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "anchor_from": "center",
     "anchor_to": "center",
-    "layer": 1,
     "controls": [
+      { "1@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§f§r", "$shulker_texel": "white" } },
+      { "2@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§p§r", "$shulker_texel": "orange" } },
+      { "3@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§5§r", "$shulker_texel": "magenta" } },
+      { "4@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§b§r", "$shulker_texel": "light_blue" } },
+      { "5@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§e§r", "$shulker_texel": "yellow" } },
+      { "6@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§a§r", "$shulker_texel": "lime" } },
+      { "7@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§d§r", "$shulker_texel": "pink" } },
+      { "8@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§8§r", "$shulker_texel": "gray" } },
+      { "9@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§7§r", "$shulker_texel": "light_gray" } },
+      { "10@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§3§r", "$shulker_texel": "cyan" } },
+      { "11@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§u§r", "$shulker_texel": "purple" } },
+      { "12@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§9§r", "$shulker_texel": "blue" } },
+      { "13@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§n§r", "$shulker_texel": "brown" } },
+      { "14@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§2§r", "$shulker_texel": "green" } },
+      { "15@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§c§r", "$shulker_texel": "red" } },
+      { "16@recolourful_shulker.colored_bindings": { "$shulker_id": "ui:§0§r", "$shulker_texel": "black" } },
       {
-        "1@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7f\u00a7r", "$shulker_texel": "white"}
-      },
-      {
-        "2@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7p\u00a7r", "$shulker_texel": "orange"}
-      },
-      {
-        "3@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a75\u00a7r", "$shulker_texel": "magenta"}
-      },
-      {
-        "4@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7b\u00a7r", "$shulker_texel": "light_blue"}
-      },
-      {
-        "5@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7e\u00a7r", "$shulker_texel": "yellow"}
-      },
-      {
-        "6@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7a\u00a7r", "$shulker_texel": "lime"}
-      },
-      {
-        "7@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7d\u00a7r", "$shulker_texel": "pink"}
-      },
-      {
-        "8@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a78\u00a7r", "$shulker_texel": "gray"}
-      },
-      {
-        "9@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a77\u00a7r", "$shulker_texel": "light_gray"}
-      },
-      {
-        "10@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a73\u00a7r", "$shulker_texel": "cyan"}
-      },
-      {
-        "11@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7u\u00a7r", "$shulker_texel": "purple"}
-      },
-      {
-        "12@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a79\u00a7r", "$shulker_texel": "blue"}
-      },
-      {
-        "13@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7n\u00a7r", "$shulker_texel": "brown"}
-      },
-      {
-        "14@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a72\u00a7r", "$shulker_texel": "green"}
-      },
-      {
-        "15@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a7c\u00a7r", "$shulker_texel": "red"}
-      },
-      {
-        "16@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:\u00a70\u00a7r", "$shulker_texel": "black"}
-      },
-      {
-        "17@recolourful_shulker.colored_bindings": {"$shulker_id": "ui:contai", "$shulker_texel": "default"}
-      },
-      {
-        "custom_renamed@screen_content.image_element": {
-          "size": [ 176, 166 ],
-          "layer": 1,
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "uv_size": [ 176, 166 ],
-          "texture": "assets/sprites/chests/shulker-underlay"
+        "custom_renamed@recolourful_shulker.colored_bindings": {
+          "$shulker_texel": "default",
+
+          "$bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "('%.9s' * ('ui:' + #screen_route + (#item_id_aux - #item_id_aux)))",
+              "target_property_name": "#screen_path"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(not ((#screen_path = 'ui:§f§r') or (#screen_path = 'ui:§p§r') or (#screen_path = 'ui:§5§r') or (#screen_path = 'ui:§b§r') or (#screen_path = 'ui:§e§r') or (#screen_path = 'ui:§a§r') or (#screen_path = 'ui:§d§r') or (#screen_path = 'ui:§8§r') or (#screen_path = 'ui:§7§r') or (#screen_path = 'ui:§3§r') or (#screen_path = 'ui:§u§r') or (#screen_path = 'ui:§9§r') or (#screen_path = 'ui:§n§r') or (#screen_path = 'ui:§2§r') or (#screen_path = 'ui:§c§r') or (#screen_path = 'ui:§0§r')))",
+              "target_property_name": "#visible"
+            }
+          ]
         }
       }
     ]
   },
   "colored_bindings@screen_content.image_element": {
     "$shulker_texture|default": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
-    "size": [ 176, 166 ],
-    "layer": 2,
+    "size": [176, 166],
     "anchor_from": "center",
     "anchor_to": "center",
-    "uv_size": [ 176, 166 ],
+    "uv_size": [176, 166],
     "texture": "$shulker_texture",
-    "property_bag": {"#screen_route": "$container_title"},
-    "bindings": [
+    "property_bag": { "#screen_route": "$container_title" },
+    "bindings": "$bindings",
+    "$bindings": [
       {
         "binding_name": "#item_id_aux",
         "binding_type": "collection",

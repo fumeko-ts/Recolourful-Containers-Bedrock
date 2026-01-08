@@ -1,17 +1,17 @@
 {
   "namespace": "recolourful_chest",
   "chest@global.root_panel": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "layer": 1,
     "$screen|default": "global.empty_panel",
     "$screen_route|default": "$container_title",
     "$chest_texture|default": "",
-    "$close_position|default": [ 14, -4 ],
+    "$close_position|default": [14, -4],
     "controls": [
       {
         "1@recolourful_chest.chest_bindings": {
           "$chest_texture": "assets/sprites/chests/small_chest",
-          "$close_position": [ 6, 4 ],
+          "$close_position": [6, 4],
           "$screen_id": "ui:container.chest0"
         }
       },
@@ -22,26 +22,53 @@
         }
       },
       {
-        "3@recolourful_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/chest_boat", "$screen_id": "ui:entity.chest_boat.name0"}
+        "3@recolourful_chest.chest_bindings": {
+          "$chest_texture": "assets/sprites/chests/chest_boat",
+          "$screen_id": "ui:entity.chest_boat.name0"
+        }
       },
       {
-        "4@recolourful_chest.chest_bindings": {"$chest_texture": "assets/sprites/chests/chest_raft", "$screen_id": "ui:entity.chest_raft.name0"}
+        "4@recolourful_chest.chest_bindings": {
+          "$chest_texture": "assets/sprites/chests/chest_raft",
+          "$screen_id": "ui:entity.chest_raft.name0"
+        }
       },
       {
         "5@recolourful_chest.chest_bindings": {
-          "$close_position": [ 6, 4 ],
+          "$close_position": [6, 4],
           "$chest_texture": "assets/sprites/chests/copper_chest",
           "$screen_id": "ui:container.chestCopper0"
         }
       },
       {
-        "custom_rename@screen_content.image_element": {"$layer": 1, "$close_position": [ 6, 4 ], "texture": "assets/sprites/chests/small_chest"}
+        "custom_rename@recolourful_chest.chest_bindings": {
+          "$close_position": [6, 4],
+          "$chest_texture": "assets/sprites/chests/small_chest",
+          "$bindings": [
+            {
+              "binding_name": "#item_id_aux",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "('ui:' + $screen_route + (#item_id_aux - #item_id_aux))",
+              "target_property_name": "#screen_path"
+            },
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_property_name": "(not ((#screen_path = 'ui:container.chestCopper0') or (#screen_path = 'ui:entity.chest_raft.name0') or (#screen_path = 'ui:entity.chest_boat.name0') or (#screen_path = 'ui:entity.chest_minecart.name0') or (#screen_path = 'ui:container.chest0')))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },
   "chest_bindings@global.empty_panel": {
-    "size": [ 192, 174 ],
-    "$layer|default": 2,
+    "size": [192, 174],
     "controls": [
       {
         "close@global.close_button": {
@@ -53,10 +80,9 @@
       },
       {
         "chest_ui_template@screen_content.image_element": {
-          "size": [ 192, 174 ],
+          "size": [192, 174],
           "anchor_from": "center",
           "anchor_to": "center",
-          "layer": "$layer",
           "texture": "$chest_texture"
         }
       }
@@ -79,10 +105,9 @@
     ]
   },
   "chest_template@screen_content.image_element": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "anchor_from": "center",
     "anchor_to": "center",
-    "layer": 1,
     "texture": "$chest_texture"
   }
 }

@@ -1,43 +1,47 @@
 {
   "namespace": "recolourful_mount",
   "mount@container_common.container_details": {
-    "size": [ 176, 166 ],
+    "size": [176, 166],
     "$screen_route|default": "$container_title",
-    "$mount_1|default": "ui:entity.llama.name0",
-    "$mount_2|default": "ui:entity.donkey.name0",
-    "$mount_3|default": "ui:entity.mule.name0",
-    "$mount_4|default": "ui:entity.horse.name0",
-    "$mount_5|default": "ui:entity.camel.name0",
-    "$mount_6|default": "ui:entity.trader_llama.name0",
-    "$mount_7|default": "ui:entity.nautilus.name0",
-    "$mount_8|default": "ui:entity.zombie_nautilus.name0",
-    "$mount_9|default": "ui:entity.zombie_horse.name0",
-    "$mount_10|default": "ui:entity.camel_husk.name0",
+
+    "$mount_1|default" :"ui:entity.llama.name0"          ,
+    "$mount_2|default" :"ui:entity.donkey.name0"         ,
+    "$mount_3|default" :"ui:entity.mule.name0"           ,
+    "$mount_4|default" :"ui:entity.horse.name0"          ,
+    "$mount_5|default" :"ui:entity.camel.name0"          ,
+    "$mount_6|default" :"ui:entity.trader_llama.name0"   ,
+    "$mount_7|default" :"ui:entity.nautilus.name0"       ,
+    "$mount_8|default" :"ui:entity.zombie_nautilus.name0",
+    "$mount_9|default" :"ui:entity.zombie_horse.name0"   ,
+    "$mount_10|default":"ui:entity.camel_husk.name0"     ,
+   
+    "$mount_contents|default": "global.empty_panel",
+    "$screen_id":"$mount_1",
+
     "$screen_controls": [
-      {"llama@recolourful_mount.mount_screen_bindings": {"$screen_id": "llama"}},
-      {"trader_llama@recolourful_mount.mount_screen_bindings": {"$screen_id": "trader_llama"}},
-      {"donkey@recolourful_mount.mount_screen_bindings": {"$screen_id": "donkey"}},
-      {"mule@recolourful_mount.mount_screen_bindings": {"$screen_id": "mule"}},
-      {"horse@recolourful_mount.mount_screen_bindings": {"$screen_id": "horse"}},
-      {"camel@recolourful_mount.mount_screen_bindings": {"$screen_id": "camel"}},
-      {"nautilus@recolourful_mount.mount_screen_bindings": {"$screen_id": "nautilus"}},
-      {"zombie_horse@recolourful_mount.mount_screen_bindings": {"$screen_id": "zombie_horse"}},
-      {"zombie_nautilus@recolourful_mount.mount_screen_bindings": {"$screen_id": "zombie_nautilus"}},
-      {"camel_husk@recolourful_mount.mount_screen_bindings": {"$screen_id": "camel_husk"}},
+      {"llama@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_1" ,"$mount_contents": "llama_screen.llama_screen"}},
+      {"donkey@recolourful_mount.mount_screen_bindings"         :{"$screen_id":"$mount_2" ,"$mount_contents": "donkey_screen.donkey_screen"}},
+      {"mule@recolourful_mount.mount_screen_bindings"           :{"$screen_id":"$mount_3" ,"$mount_contents": "mule_screen.mule_screen"}},
+      {"horse@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_4" ,"$mount_contents": "horse_screen.horse_screen"}},
+      {"camel@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_5" ,"$mount_contents": "camel_screen.camel_screen"}},
+      {"trader_llama@recolourful_mount.mount_screen_bindings"   :{"$screen_id":"$mount_6" ,"$mount_contents": "trader_llama_screen.trader_llama_screen"}},
+      {"nautilus@recolourful_mount.mount_screen_bindings"       :{"$screen_id":"$mount_7" ,"$mount_contents": "nautilus_screen.nautilus_screen"}},
+      {"zombie_nautilus@recolourful_mount.mount_screen_bindings":{"$screen_id":"$mount_8" ,"$mount_contents": "zombie_nautilus_screen.zombie_nautilus_screen"}},
+      {"zombie_horse@recolourful_mount.mount_screen_bindings"   :{"$screen_id":"$mount_9" ,"$mount_contents": "zombie_horse_screen.zombie_horse_screen"}},
+      {"camel_husk@recolourful_mount.mount_screen_bindings"     :{"$screen_id":"$mount_10","$mount_contents": "camel_husk_screen.camel_husk_screen"}},
       {
         "custom_rename@global.empty_panel": {
-          "layer": 1,
-          "size": [ 176, 166 ],
+          "size": [176, 166],
           "controls": [
             {
               "close@global.close_button": {
-                "offset": [ 14, -4 ],
+                "offset": [14, -4],
                 "$pressed": "textures/ui/ashur/close_pressed",
                 "$default": "textures/ui/ashur/close_default",
                 "$hover": "textures/ui/ashur/close_hover"
               }
             },
-            {"horse@mount_misc.horse_panel": {}}
+            { "horse@mount_misc.horse_panel": {} }
           ],
           "bindings": [
             {
@@ -63,18 +67,17 @@
     ]
   },
   "mount_screen_bindings@global.empty_panel": {
-    "size": [ 176, 166 ],
-    "$mount_contents|default": "($screen_id + '_screen.' + $screen_id + '_screen')",
+    "size": [176, 166],
     "controls": [
       {
         "close@global.close_button": {
-          "offset": [ 14, -4 ],
+          "offset": [14, -4],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      {"screen@$mount_contents": {}}
+      { "screen@$mount_contents": {} }
     ],
     "anchor_to": "center",
     "anchor_from": "center",
@@ -87,7 +90,7 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(((($screen_route - 'entity.' - '.name') + (#item_id_aux - #item_id_aux)) - '0') = $screen_id)",
+        "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux)) = $screen_id)",
         "target_property_name": "#visible"
       }
     ]
