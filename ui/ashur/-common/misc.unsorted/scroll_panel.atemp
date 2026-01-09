@@ -23,7 +23,7 @@
     "consume_hover_events": "$scroll_panel_consume_hover_events",
     "$scroll_view_name|default": "scroll_view",
     "tts_ignore_count": true,
-    "bindings": [
+    "button_mappings": [
       {
         "from_button_id": "button.menu_select",
         "to_button_id": "button.container_reset_held",
@@ -83,6 +83,12 @@
               "to_button_id": "button.scrollbar_touch",
               "mapping_type": "pressed",
               "button_up_right_of_first_refusal": true
+            }
+          ],
+
+          "bindings": [
+            {
+              "binding_name": "#gesture_control_enabled"
             }
           ],
           "controls": [

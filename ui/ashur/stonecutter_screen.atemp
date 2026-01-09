@@ -126,7 +126,7 @@
   },
   "stone_slot_button": {
     "type": "button",
-    "size": [ 16, 18 ],
+    "size": [16, 18],
     "sound_name": "random.click",
     "sound_volume": 1.0,
     "sound_pitch": 1.0,
@@ -178,7 +178,7 @@
         "to_button_id": "button.stone_select",
         "mapping_type": "pressed"
       },
-      {"to_button_id": "button.container_slot_hovered", "mapping_type": "pressed"}
+      { "to_button_id": "button.container_slot_hovered", "mapping_type": "pressed" }
     ],
     "bindings": [
       {
@@ -191,7 +191,7 @@
     "controls": [
       {
         "hover@global.empty_panel": {
-          "size": [ 16, 18 ],
+          "size": [16, 18],
           "controls": [
             {
               "hover_text@global.hover_text": {
@@ -210,8 +210,7 @@
             },
             {
               "hover@screen_content.image_element": {
-                "size": [ 16, 18 ],
-                "offset": [ 1, 1 ],
+                "size": [16, 18],
                 "layer": 3,
                 "nineslice_size": 1,
                 "texture": "assets/sprite_assets/container/stonecutter/recipe_highlighted.png",
@@ -231,9 +230,8 @@
       },
       {
         "default@screen_content.image_element": {
-          "size": [ 16, 18 ],
+          "size": [16, 18],
           "nineslice_size": 1,
-          "offset": [ 1, 1 ],
           "texture": "assets/sprite_assets/container/stonecutter/recipe.png",
           "bindings": [
             {
@@ -248,9 +246,8 @@
       },
       {
         "selected@screen_content.image_element": {
-          "size": [ 16, 18 ],
+          "size": [16, 18],
           "nineslice_size": 1,
-          "offset": [ 1, 1 ],
           "layer": 4,
           "texture": "assets/sprite_assets/container/stonecutter/recipe_selected.png",
           "bindings": [
@@ -266,10 +263,9 @@
       },
       {
         "item_renderer@common.item_renderer": {
-          "size": [ 15, 15 ],
+          "size": [14, 14],
           "anchor_to": "center",
           "anchor_from": "center",
-          "offset": [ 1.2, 1.2 ],
           "layer": 6,
           "bindings": [
             {
@@ -283,6 +279,7 @@
       }
     ]
   },
+
   "scroll_grid@scroll_panel.scroll_panel": {
     "$scroll_size": [ 12, 56 ],
     "size": [ 80, 56 ],
