@@ -6,23 +6,56 @@
     "size": "$scrolling_pane_size",
     "offset": "$scrolling_pane_offset",
     "anchor_to": "top_left",
-    "$scrolling_pane_size|default": [ "100%", "100%" ],
-    "$scrolling_pane_offset|default": [ 0, 0 ],
-    "$scroll_view_control_size|default": [ "100%", "100%" ],
-    "$scroll_view_port_size|default": [ "100%", "100%" ],
-    "$scroll_view_port_offset|default": [ 0, 0 ],
-    "$view_port_size|default": [ "fill", "100%" ],
-    "$scroll_size|default": [ 4, "100%" ],
-    "$scroll_box_size|default": [ "100%", "100%" ],
+    "$scrolling_pane_size|default": ["100%", "100%"],
+    "$scrolling_pane_offset|default": [0, 0],
+    "$scroll_view_control_size|default": ["100%", "100%"],
+    "$scroll_view_port_size|default": ["100%", "100%"],
+    "$scroll_view_port_offset|default": [0, 0],
+    "$view_port_size|default": ["fill", "100%"],
+    "$scroll_size|default": [4, "100%"],
+    "$scroll_box_size|default": ["100%", "100%"],
     "$wider_scroll_area|default": false,
     "$scroll_box_visible|default": true,
-    "$scroll_track_offset": [ 0, 0 ],
+    "$scroll_track_offset": [0, 0],
     "$scroll_box_image_control": "global.empty_image",
     "anchor_from": "top_left",
     "$scroll_panel_consume_hover_events|default": true,
     "consume_hover_events": "$scroll_panel_consume_hover_events",
     "$scroll_view_name|default": "scroll_view",
     "tts_ignore_count": true,
+    "bindings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      }
+    ],
     "controls": [
       {
         "$scroll_view_name": {
@@ -57,7 +90,7 @@
               "panel@global.empty_panel": {
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "$view_port_size|default": [ "100%", "100%" ],
+                "$view_port_size|default": ["100%", "100%"],
                 "clips_children": true,
                 "controls": [
                   {
@@ -110,13 +143,11 @@
                                 "track": {
                                   "type": "scroll_track",
                                   "size": "$scroll_track_sise",
-                                  "$scroll_track_sise|default": [ "default", "default" ],
+                                  "$scroll_track_sise|default": ["default", "default"],
                                   "layer": 4,
                                   "anchor_from": "center",
                                   "anchor_to": "center",
-                                  "controls": [
-                                    {"bar_indent@global.empty_panel": {}}
-                                  ],
+                                  "controls": [{ "bar_indent@global.empty_panel": {} }],
                                   "button_mappings": [
                                     {
                                       "from_button_id": "button.menu_select",
@@ -149,9 +180,7 @@
                                             "button_up_right_of_first_refusal": true
                                           }
                                         ],
-                                        "controls": [
-                                          {"mouse_box@$scroll_box_image_control": {}}
-                                        ]
+                                        "controls": [{ "mouse_box@$scroll_box_image_control": {} }]
                                       }
                                     }
                                   ]
