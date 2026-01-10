@@ -1,15 +1,31 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "ender_chest",
   "ender_chest@container_common.container_details": {
-    "size": [ 192, 174 ],
+    "size": [192, 174],
     "$screen_controls": [
       {
         "root@global.root_panel": {
-          "size": [ 192, 174 ],
+          "size": [192, 174],
           "controls": [
             {
               "close@global.close_button": {
-                "offset": [ 6, 4 ],
+                "offset": [6, 4],
                 "$pressed": "textures/ui/ashur/close_pressed",
                 "$default": "textures/ui/ashur/close_default",
                 "$hover": "textures/ui/ashur/close_hover"
@@ -17,7 +33,7 @@
             },
             {
               "chest_template@screen_content.image_element": {
-                "size": [ 192, 174 ],
+                "size": [192, 174],
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "layer": 1,
@@ -30,26 +46,26 @@
       {
         "main_holder@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 192, 174 ],
+          "size": [192, 174],
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 8 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 8] } },
             {
               "main_stack@global.empty_stack": {
-                "size": [ 192, 166 ],
+                "size": [192, 166],
                 "orientation": "horizontal",
                 "controls": [
-                  {"left_filler@global.empty_panel": {"size": [ 8, "fill" ]}},
+                  { "left_filler@global.empty_panel": { "size": [8, "fill"] } },
                   {
                     "main_content@global.empty_panel": {
-                      "size": [ 176, 166 ],
+                      "size": [176, 166],
                       "controls": [
                         {
                           "ender_eye@screen_content.image_element": {
                             "texture": "assets/advanced_sprites/animated/ender_eye.png",
-                            "uv_size": [ 10, 10 ],
-                            "size": [ 10, 10 ],
+                            "uv_size": [10, 10],
+                            "size": [10, 10],
                             "layer": 10,
-                            "offset": [ 0, 6 ],
+                            "offset": [0, 6],
                             "anchor_to": "top_middle",
                             "anchor_from": "top_middle",
                             "animation_reset_name": "screen_animation_reset",
@@ -60,28 +76,28 @@
                         {
                           "ender_chest_top_half@global.empty_stack": {
                             "orientation": "vertical",
-                            "size": [ 176, 77 ],
+                            "size": [176, 77],
                             "anchor_from": "top_middle",
                             "anchor_to": "top_middle",
                             "controls": [
-                              {"filler@global.empty_panel": {"size": [ 176, 17 ]}},
+                              { "filler@global.empty_panel": { "size": [176, 17] } },
                               {
                                 "chest_grid_holder@global.empty_stack": {
                                   "orientation": "horizontal",
-                                  "size": [ 176, 54 ],
+                                  "size": [176, 54],
                                   "controls": [
-                                    {"filler_3@global.empty_panel": {"size": [ 7, "fill" ]}},
+                                    { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                                     {
                                       "ender_chest_grid": {
                                         "type": "grid",
-                                        "size": [ 162, 54 ],
-                                        "grid_dimensions": [ 9, 3 ],
-                            "$item_collection": "container_items",
-                            "collection_name": "$item_collection",
-                            "grid_item_template": "global.container_item"
+                                        "size": [162, 54],
+                                        "grid_dimensions": [9, 3],
+                                        "$item_collection": "container_items",
+                                        "collection_name": "$item_collection",
+                                        "grid_item_template": "global.container_item"
                                       }
                                     },
-                                    {"filler_4@global.empty_panel": {"size": [ 7, "fill" ]}}
+                                    { "filler_4@global.empty_panel": { "size": [7, "fill"] } }
                                   ]
                                 }
                               }
@@ -89,12 +105,15 @@
                           }
                         },
                         {
-                          "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+                          "bottom@global.inventory_bottom_half": {
+                            "anchor_to": "bottom_middle",
+                            "anchor_from": "bottom_middle"
+                          }
                         }
                       ]
                     }
                   },
-                  {"right_filler@global.empty_panel": {"size": [ 8, "fill" ]}}
+                  { "right_filler@global.empty_panel": { "size": [8, "fill"] } }
                 ]
               }
             }

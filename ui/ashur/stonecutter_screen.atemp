@@ -1,3 +1,19 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "stonecutter_screen",
   "stonecutter_panel@container_common.container_details": {
@@ -115,14 +131,6 @@
         "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
       }
     ]
-  },
-  "button_sprite_template@screen_content.image_element": {
-    "size": [ 16, 18 ],
-    "nineslice_size": 2,
-    "keep_ratio": true,
-    "texture": "$sprite",
-    "layer": 4,
-    "offset": [ 1, 1 ]
   },
   "stone_slot_button": {
     "type": "button",
@@ -283,10 +291,10 @@
   "scroll_grid@scroll_panel.scroll_panel": {
     "$scroll_size": [ 12, 56 ],
     "size": [ 80, 56 ],
-    "offset": [ 3, -39.6 ],
+    "offset": [ 3, -40 ],
     "$scroll_view_port_size": [ 79, 54.2 ],
     "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_track_offset": [ 32.2, -1 ],
+    "$scroll_track_offset": [ 32.2, 0 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "$scroll_box_image_control": "stonecutter_screen.scroller",
@@ -296,7 +304,7 @@
     "tiled": true,
     "nineslice_size": [ 6, 6, 6, 7 ],
     "tiled_scale": [ 1, 1 ],
-    "offset": [ 2, 0.8 ],
+    "offset": [ 2, 0 ],
     "anchor_to": "center",
     "anchor_from": "center",
     "texture": "assets/sprite_assets/container/stonecutter/scroller.png",
@@ -306,7 +314,6 @@
     "size": [ 64, "100%cm" ],
     "anchor_to": "center",
     "anchor_from": "center",
-    "offset": [ 0, -1.4 ],
     "controls": [
       {"scroll_buffer@global.empty_panel": {"size": [ 64, "100%sm" ]}},
       {
@@ -314,6 +321,7 @@
           "type": "grid",
           "size": [ 64, "default" ],
           "anchor_to": "top_middle",
+          "offset": [1, 0],
           "anchor_from": "top_middle",
           "collection_name": "stones",
           "grid_rescaling_type": "horizontal",

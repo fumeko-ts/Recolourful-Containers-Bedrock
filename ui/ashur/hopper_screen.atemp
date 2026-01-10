@@ -1,42 +1,58 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "hopper_screen",
   "hopper_panel@container_common.container_details": {
-    "size": [ 176, 133 ],
+    "size": [176, 133],
     "$screen_controls": [
       {
         "close@global.close_button": {
-          "offset": [ 14, -4 ],
+          "offset": [14, -4],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      {"common_panel@screen_content.container_base": {"$hopper_screen": true}},
+      { "common_panel@screen_content.container_base": { "$hopper_screen": true } },
       {
         "hopper_top_half@global.empty_stack": {
           "orientation": "vertical",
-          "size": [ 176, 37 ],
+          "size": [176, 37],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            {"filler_1@global.empty_panel": {"size": [ "fill", 19 ]}},
+            { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
             {
               "hopper_grid_holder@global.empty_stack": {
                 "orientation": "horizontal",
-                "size": [ 176, 18 ],
+                "size": [176, 18],
                 "controls": [
-                  {"filler_2@global.empty_panel": {"size": [ 43, "fill" ]}},
+                  { "filler_2@global.empty_panel": { "size": [43, "fill"] } },
                   {
                     "hopper_input_grid": {
                       "type": "grid",
-                      "size": [ 90, 18 ],
-                      "grid_dimensions": [ 5, 1 ],
-                            "$item_collection": "container_items",
-                            "collection_name": "$item_collection",
-                            "grid_item_template": "global.container_item"
+                      "size": [90, 18],
+                      "grid_dimensions": [5, 1],
+                      "$item_collection": "container_items",
+                      "collection_name": "$item_collection",
+                      "grid_item_template": "global.container_item"
                     }
                   },
-                  {"filler_3@global.empty_panel": {"size": [ 43, "fill" ]}}
+                  { "filler_3@global.empty_panel": { "size": [43, "fill"] } }
                 ]
               }
             }
@@ -44,7 +60,7 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": {"anchor_to": "bottom_middle", "anchor_from": "bottom_middle"}
+        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
       }
     ]
   }
