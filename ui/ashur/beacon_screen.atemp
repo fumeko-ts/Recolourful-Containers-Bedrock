@@ -21,6 +21,7 @@
     "anchor_from": "center",
     "anchor_to": "center",
     "$screen_controls": [
+      {"extension@rcc-extensions.beacon_screen":{}},
       {
         "close@global.close_button": {
           "offset": [ 7, -3 ],

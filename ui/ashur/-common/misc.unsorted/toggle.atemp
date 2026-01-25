@@ -215,7 +215,6 @@
   "radio_toggle@global.empty_panel": {
     "size": "$size",
     "$size": [ 18, 18 ],
-    "$controls|default": [],
     "$is_radio_toggle|default": true,
     "$radio_collection_name|default": "none",
     "$is_default_active|default": false,
@@ -252,6 +251,16 @@
     ],
     "$property_bag|default": {"#toggle_state": true},
     "$button_volume|default": 1.0,
+    "$unchecked|default": "global.empty_panel",
+    "$unchecked_hover|default": "global.empty_panel",
+    "$checked|default": "global.empty_panel",
+    "$checked_hover|default": "global.empty_panel",
+    "$controls|default": [
+      {"default@$unchecked":{}},
+      {"default_hover@$unchecked_hover":{}},
+      {"checked@$checked":{}},
+      {"checked_hover@$checked_hover":{}}
+    ],
     "controls": [
       {
         "$toggle_control_name": {

@@ -19,6 +19,7 @@
   "barrel@container_common.container_details": {
     "size": [192, 174],
     "$screen_controls": [
+      {"extension@rcc-extensions.barrel":{}},
       {
         "close@global.close_button": {
           "offset": [6, 4],

@@ -3,16 +3,15 @@
   "header": {
     "name": "§4R§ce§6c§eo§al§2o§3ur§9fu§5l §rContainers §lBE§r",
     "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
-    "uuid": "7db77049-d5a8-4f8d-b4fb-2805bd688532",
+    "uuid": "5af785d1-32fa-4098-baf3-be202c719d99",
     "version": [1, 1, 0],
-    "min_engine_version": [ 1, 21, 120]
+    "min_engine_version": [1,21,70]
   },
-  "capabilities": ["pbr"],
   "modules": [
     {
       "type": "resources",
       "description": "§3By Vi_Tul",
-      "uuid": "e43c5ab1-b908-4178-8520-173f12f447a9",
+      "uuid": "c4555b83-d908-44ff-a014-6bac73db368a",
       "version": [1, 1, 0]
     }
   ],

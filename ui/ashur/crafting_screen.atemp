@@ -90,7 +90,7 @@
                                 }
                               },
                               { "recipe_items@recipe_grid.recipe_grid": { "offset": [1, 0] } },
-                              { "page_navigation@pagination.base_page_logic": { "offset": [-1, 0] } }
+                              { "page_navigation@pagination.base_page_logic": {"ignored": "(not $recolorful_java_recipe_book)",  "offset": [-1, 0] } }
                             ]
                           }
                         },
@@ -120,6 +120,7 @@
               "inventory@global.root_panel": {
                 "size": [176, 166],
                 "controls": [
+                  { "extension@rcc-extensions.crafting_screen": {} },
                   {
                     "close@global.close_button": {
                       "offset": [14, -4],

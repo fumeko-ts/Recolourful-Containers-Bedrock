@@ -3,6 +3,8 @@
   //set UI transparency 0.0 - 1.0
   "$container_opacity": 1,
 
+  "$recolorful_java_recipe_book": true,
+
 
   
   //tab ids can be customised useing 'https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/' if it shows the raw id like 22151168 then divide by 65536 to get the refined id

@@ -1,5 +1,6 @@
 {
   "ui_defs": [
+    //container screen files
     "ui/ashur/anvil_screen.atemp",
     "ui/ashur/barrel.atemp",
     "ui/ashur/beacon_screen.atemp",
@@ -25,6 +26,8 @@
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
     "ui/ashur/tradeing_screen.atemp",
+
+    //unsorted contents
     "ui/ashur/-common/container_item.atemp",
     "ui/ashur/-common/global.atemp",
     "ui/ashur/-common/safezone.atemp",
@@ -35,7 +38,6 @@
     "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
     "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
     "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",
-    "ui/ashur/-common/misc.unsorted/page_count.atemp",
     "ui/ashur/-common/misc.unsorted/recipe_grid.atemp",
     "ui/ashur/-common/misc.unsorted/scroll_panel.atemp",
     "ui/ashur/-common/misc.unsorted/selected_item.atemp",
@@ -44,6 +46,8 @@
     "ui/ashur/-common/misc.unsorted/toggle.atemp",
     "ui/ashur/-common/misc.unsorted/trade_global.atemp",
     "ui/ashur/-common/misc.unsorted/scroll_panel/NEW-scroll_panel.atemp",
+
+    // special ui code   (used for advanced coloring and or themeing)
     "ui/ashur/vi_tul/bundle.atemp",
     "ui/ashur/vi_tul/recolourful_bundle.atemp",
     "ui/ashur/vi_tul/recolourful_chest.atemp",
@@ -51,14 +55,25 @@
     "ui/ashur/vi_tul/recolourful_mount.atemp",
     "ui/ashur/vi_tul/recolourful_shulker.atemp",
     "ui/ashur/vi_tul/recolourful_villager.atemp",
+
+    // advanced
     "ui/ashur/vi_tul/selected_trade_invalid.atemp",
+
+    // this file is modifieable
+    "ui/ashur/extensions/extensions.atemp",
+
+    // animations  (anims i did not migrate to this directory will be added eventualy)
     "ui/ashur/vi_tul/animations/compass.atemp",
     "ui/ashur/vi_tul/animations/ender_eye_animation.atemp",
-    "ui/ashur/vi_tul/animations/portral.atemp",
+    "ui/ashur/vi_tul/animations/portal.atemp",
     "ui/ashur/vi_tul/animations/sawblade.atemp",
     "ui/ashur/vi_tul/animations/smithing_animations.atemp",
+
+    // beacon buttons (x and confirm buttons are defined within beacon_screen.atemp at the bottom)
     "ui/ashur/vi_tul/beacon/primary_button.atemp",
     "ui/ashur/vi_tul/beacon/secondary_button.atemp",
+
+    //mount ui code
     "ui/ashur/vi_tul/mounts/camel_husk_screen.atemp",
     "ui/ashur/vi_tul/mounts/camel_screen.atemp",
     "ui/ashur/vi_tul/mounts/donkey_screen.atemp",

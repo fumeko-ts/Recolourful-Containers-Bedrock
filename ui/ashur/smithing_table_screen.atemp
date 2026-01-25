@@ -19,6 +19,7 @@
   "smithing_table_panel@container_common.container_details": {
     "size": [ 176, 166 ],
     "$screen_controls": [
+      { "extension@rcc-extensions.smithing_table_screen": {} },
       {
         "close@global.close_button": {
           "offset": [ 14, -4 ],

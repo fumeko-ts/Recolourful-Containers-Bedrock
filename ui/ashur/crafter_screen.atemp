@@ -20,6 +20,7 @@
     "layer": 1,
     "size": [176, 166],
     "$screen_controls": [
+      {"extension@rcc-extensions.crafter_screen":{}},
       {
         "close@global.close_button": {
           "offset": [14, -4],

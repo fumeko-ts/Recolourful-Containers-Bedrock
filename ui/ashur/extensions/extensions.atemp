@@ -1,0 +1,59 @@
+{
+  //this file if campatibility perposes
+  "namespace": "rcc-extensions",
+  /*
+      this file is intended to be copied and placed into another pack
+      it allows you to add new ui elements.
+  */
+
+  // for now the mount uis wont be supported via this file (it would complicate things)
+
+  // all containers have a exit button on the top right so watch out for them
+
+  "anvil_screen@rcc-extensions.campatibility": {},
+  "barrel@rcc-extensions.campatibility": {},
+  "beacon_screen@rcc-extensions.campatibility": {},// theres some empty space on each side of the screen (to lazy to remove it)
+  "blast_furnace_screen@rcc-extensions.campatibility": {},
+  "brewing_stand_screen@rcc-extensions.campatibility": {},
+
+  "cartography_screen@rcc-extensions.campatibility": {},// top middle there is a search box thats not always visible so keep that in mind 
+
+  "crafter_screen@rcc-extensions.campatibility": {},
+  "crafting_screen@rcc-extensions.campatibility": {},
+  "creative_inventory@rcc-extensions.campatibility": {},
+  "dispenser_screen@rcc-extensions.campatibility": {},
+  "double_chest_screen@rcc-extensions.campatibility": {},
+  "dropper_screen@rcc-extensions.campatibility": {},
+  "enchanting_screen@rcc-extensions.campatibility": {},
+  "ender_chest@rcc-extensions.campatibility": {},
+  "furnace_screen@rcc-extensions.campatibility": {},
+  "grindstone_screen@rcc-extensions.campatibility": {},
+  "hopper_screen@rcc-extensions.campatibility": {},
+  "inventory_screen@rcc-extensions.campatibility": {},
+  "loom_screen@rcc-extensions.campatibility": {},
+  "shulker_screen@rcc-extensions.campatibility": {},
+  "small_chest@rcc-extensions.campatibility": {},
+  "smithing_table_screen@rcc-extensions.campatibility": {},
+  "smoker_screen@rcc-extensions.campatibility": {},
+  "stonecutter_screen@rcc-extensions.campatibility": {},
+  "tradeing_screen@rcc-extensions.campatibility": {},
+
+  "campatibility": {// this is a example use case
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "element@global.empty_image": {
+          "ignored": true,
+          "texture": "textures/ui/white",
+          "nineslice_size": 2,
+          "size": [24, 24],
+          "layer": 50,
+          "offset": [5, 0],
+          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_right"
+        }
+      }
+    ]
+  }
+}

@@ -20,6 +20,7 @@
     "type": "panel",
     "size": [176, 222],
     "$screen_controls": [
+      { "extension@rcc-extensions.double_chest_screen": {} },
       {
         "close@global.close_button": {
           "offset": [14, -4],

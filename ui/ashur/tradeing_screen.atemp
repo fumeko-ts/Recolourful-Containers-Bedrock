@@ -19,9 +19,10 @@
   "screen_panel@container_common.container_details": {
     "size": [ 276, 166 ],
     "$screen_controls": [
+      { "extension@rcc-extensions.tradeing_screen": {} },
       {
         "close@global.close_button": {
-          "offset": [ 14, -4 ],
+          "offset": [ 14, -1 ],
           "$pressed": "textures/ui/ashur/close_pressed",
           "$default": "textures/ui/ashur/close_default",
           "$hover": "textures/ui/ashur/close_hover"

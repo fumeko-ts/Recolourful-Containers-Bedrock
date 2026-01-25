@@ -22,6 +22,7 @@
     "anchor_from": "center",
     "$is_creative_survival_tab": true,
     "controls": [
+      { "extension@rcc-extensions.creative_inventory": {} },
       {
         "tab_stack@global.empty_stack": {
           "orientation": "horizontal",

@@ -19,6 +19,7 @@
   "ender_chest@container_common.container_details": {
     "size": [192, 174],
     "$screen_controls": [
+      { "extension@rcc-extensions.ender_chest": {} },
       {
         "root@global.root_panel": {
           "size": [192, 174],

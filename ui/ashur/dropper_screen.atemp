@@ -20,6 +20,7 @@
     "type": "panel",
     "size": [ 176, 166 ],
     "$screen_controls": [
+      { "extension@rcc-extensions.dropper_screen": {} },
       {
         "close@global.close_button": {
           "offset": [ 14, -4 ],

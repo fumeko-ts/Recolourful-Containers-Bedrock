@@ -19,6 +19,7 @@
   "hopper_panel@container_common.container_details": {
     "size": [176, 133],
     "$screen_controls": [
+      { "extension@rcc-extensions.hopper_screen": {} },
       {
         "close@global.close_button": {
           "offset": [14, -4],
