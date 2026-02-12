@@ -20,34 +20,20 @@
     "size": [192, 174],
     "$screen_controls": [
       { "extension@rcc-extensions.ender_chest": {} },
+      { "common_panel@container_content.ender_chest_screen": {} },
       {
-        "root@global.root_panel": {
-          "size": [192, 174],
-          "controls": [
-            {
-              "close@global.close_button": {
-                "offset": [6, 4],
-                "$pressed": "textures/ui/ashur/close_pressed",
-                "$default": "textures/ui/ashur/close_default",
-                "$hover": "textures/ui/ashur/close_hover"
-              }
-            },
-            {
-              "chest_template@screen_content.image_element": {
-                "size": [192, 174],
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "layer": 1,
-                "texture": "assets/sprites/chests/ender_chest"
-              }
-            }
-          ]
+        "close@global.close_button": {
+          "offset": [6, 4],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
         }
       },
       {
         "main_holder@global.empty_stack": {
           "orientation": "vertical",
           "size": [192, 174],
+          "layer": 2,
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 8] } },
             {
@@ -95,7 +81,7 @@
                                         "grid_dimensions": [9, 3],
                                         "$item_collection": "container_items",
                                         "collection_name": "$item_collection",
-                                        "grid_item_template": "global.container_item"
+                                        "grid_item_template": "container_item.container_item"
                                       }
                                     },
                                     { "filler_4@global.empty_panel": { "size": [7, "fill"] } }

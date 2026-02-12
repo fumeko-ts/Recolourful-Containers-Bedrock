@@ -17,33 +17,6 @@
 {
   "namespace": "screen_content",
   "image_element@global.empty_image": {"alpha": "$container_opacity"},
-  "container_base@global.root_panel": {
-    "size": "$size",
-    "$size": [ 176, 166 ],
-    "variables": [
-      {"requires": "($anvil_screen = true)", "$container": "anvil"},
-      {"requires": "($beacon_screen = true)", "$container": "beacon", "$size": [ 230, 219 ]},
-      {"requires": "($blast_furnace_screen = true)", "$container": "blast_furnace"},
-      {"requires": "($brewing_stand_screen = true)", "$container": "brewing_stand"},
-      {"requires": "($cartography_screen = true)", "$container": "cartography"},
-      {"requires": "($crafting_screen = true)", "$container": "crafting"},
-      {"requires": "($crafter_screen = true)", "$container": "crafter"},
-      {"requires": "($dispenser_screen = true)", "$container": "dispenser"},
-      {"requires": "($dropper_screen = true)", "$container": "dropper"},
-      {"requires": "($enchanting_screen = true)", "$container": "enchanting"},
-      {"requires": "($furnace_screen = true)", "$container": "furnace"},
-      {"requires": "($grindstone_screen = true)", "$container": "grindstone"},
-      {"requires": "($hopper_screen = true)", "$container": "hopper", "$size": [ 176, 133 ]},
-      {"requires": "($loom_screen = true)", "$container": "loom"},
-      {"requires": "($smithing_screen = true)", "$container": "smithing"},
-      {"requires": "($smoker_screen = true)", "$container": "smoker"},
-      {"requires": "($stonecutter_screen = true)", "$container": "stonecutter"},
-      {"requires": "($inventory_screen = true)", "$container": "inventory"}
-    ],
-    "controls": [
-      {"all_misc@$container": {}}
-    ]
-  },
   "highlight_slot@screen_content.image_element": {
     "texture": "textures/ui/ashur/white_slot",
     "size": "$white_highlight_slot_size",
@@ -66,40 +39,36 @@
     "texture": "assets/sprites/creative_inventory/tab_item_search",
     "layer": 3
   },
-  "anvil@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/anvil"},
-  "beacon@screen_content.image_element": {"uv_size": [ 230, 219 ], "texture": "assets/sprites/beacon"},
-  "blast_furnace@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/blast_furnace"},
-  "brewing_stand@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/brewing_stand"},
-  "cartography@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/cartography_table"},
-  "crafter@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/crafter"},
-  "dispenser@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/dispenser"},
-  "dropper@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/dropper"},
-  "enchanting@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/enchanting_table"},
-  "furnace@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/furnace"},
-  "grindstone@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/grindstone"},
-  "hopper@screen_content.image_element": {"uv_size": [ 176, 133 ], "texture": "assets/sprites/hopper"},
-  "loom@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/loom"},
-  "shulker_box@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/shulker_box"},
-  "smithing@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/smithing"},
-  "smoker@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/smoker"},
-  "stonecutter@screen_content.image_element": {"uv_size": [ 176, 166 ], "layer": 1, "texture": "assets/sprites/stonecutter"},
   "anvil_edit_box@screen_content.image_element": {"texture": "assets/sprite_assets/container/anvil/text_field_disabled"},
   "anvil_edit_box_hover@screen_content.image_element": {"texture": "assets/sprite_assets/container/anvil/text_field"},
   "armor_overlay@screen_content.image_element": {
     "size": [ 16, 16 ],
+    "layer": 2,
     "bindings": [
       {
         "binding_name": "#empty_armor_image_visible",
         "binding_name_override": "#visible",
         "binding_type": "collection",
-        "binding_collection_name": "$item_collection_name"
+        "binding_collection_name": "$item_collection"
       }
     ]
   },
-  "armor_overlay_helmet@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprite_assets/container/slot/helmet"},
-  "armor_overlay_chest@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprite_assets/container/slot/chestplate"},
-  "armor_overlay_legs@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprite_assets/container/slot/leggings"},
-  "armor_image_feet@screen_content.armor_overlay": {"size": [ 16, 16 ], "texture": "assets/sprite_assets/container/slot/boots"},
+  
+  "debug_element@screen_content.image_element": {
+    "texture": "textures/ui/white",
+    "alpha": 0.4,
+    "nineslice_size": 1,
+    "uv": [2, 2],
+    "uv_size": [1, 1],
+    "ignored": "(not $rcc:dev)",
+    "color": "cyan",
+    "size": ["100%", "100%"],
+    "layer": 30
+  },
+  "armor_overlay_helmet@screen_content.armor_overlay": {"texture": "assets/sprite_assets/container/slot/helmet"},
+  "armor_overlay_chest@screen_content.armor_overlay": {"texture": "assets/sprite_assets/container/slot/chestplate"},
+  "armor_overlay_legs@screen_content.armor_overlay": {"texture": "assets/sprite_assets/container/slot/leggings"},
+  "armor_image_feet@screen_content.armor_overlay": {"texture": "assets/sprite_assets/container/slot/boots"},
   "crafter_disabled_slot@screen_content.image_element": {
     "size": [ 18, 18 ],
     "nineslice_size": 1,
@@ -165,8 +134,6 @@
     "texture": "assets/sprite_assets/container/anvil/text_field",
     "size": [ 110, 16 ]
   },
-  "crafting@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/crafting_table"},
-  "inventory@screen_content.image_element": {"uv_size": [ 176, 166 ], "texture": "assets/sprites/inventory"},
   "screen_background@global.empty_image": {
     "texture": "textures/ui/screen_background",
     "layer": -1000,

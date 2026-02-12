@@ -28,6 +28,7 @@
           "size": [176, 166],
           "$screen_controls": [
             { "extension@rcc-extensions.furnace_screen": {} },
+            { "common_panel@container_content.furnace_screen": {} },
             {
               "close@global.close_button": {
                 "offset": [14, -4],
@@ -36,11 +37,11 @@
                 "$hover": "textures/ui/ashur/close_hover"
               }
             },
-            { "common_panel@screen_content.container_base": { "$furnace_screen": true } },
             {
               "furnace_top_half@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [176, 70],
+                "layer": 2,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
@@ -57,7 +58,7 @@
                             "size": [18, 54],
                             "controls": [
                               {
-                                "smelt_input_item@global.container_item": {
+                                "smelt_input_item@container_item.container_item": {
                                   "$item_collection": "furnace_ingredient_items"
                                 }
                               },
@@ -89,7 +90,7 @@
                                   ]
                                 }
                               },
-                              { "fuel_input_item@global.container_item": { "$item_collection": "furnace_fuel_items" } }
+                              { "fuel_input_item@container_item.container_item": { "$item_collection": "furnace_fuel_items" } }
                             ]
                           }
                         },
@@ -140,7 +141,7 @@
                                   "size": [26, 26],
                                   "controls": [
                                     {
-                                      "output_item@global.container_item": {
+                                      "output_item@container_item.container_item": {
                                         "anchor_to": "center",
                                         "anchor_from": "center",
                                         "$item_collection": "furnace_output_items"

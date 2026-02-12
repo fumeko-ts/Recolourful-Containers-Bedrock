@@ -216,6 +216,11 @@
                   }
                 ]
               }
+            },
+            {
+              "debug@screen_content.debug_element": {
+                "color": "purple"
+              }
             }
           ]
         }

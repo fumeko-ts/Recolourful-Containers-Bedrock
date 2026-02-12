@@ -1,10 +1,5 @@
 localize beacon toggles for better performance
 search for other areas to localize
-remake the creative inventory to avoid impacting survival inventorys performance
 recheck the looms code for issues
 make more compatibility improvements
 simplify furnace, smoker, blast furnaces code (because mojang has set the foundations for a vanilla furnace recipe book in bedrock)
-
-optimise the recipe books page logic - [
-   currently its already the most advanced / performant pagination code in minecarft bedrock but i have plans to improve it more
-]

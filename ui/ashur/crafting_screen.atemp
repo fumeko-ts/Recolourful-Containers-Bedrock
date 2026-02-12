@@ -25,7 +25,7 @@
           "anchor_from": "center",
           "min_size": [176, 166],
           "max_size": [359, 166],
-          "layer": 1,
+          "layer": 2,
           "controls": [
             {
               "2@global.empty_panel": {
@@ -90,7 +90,12 @@
                                 }
                               },
                               { "recipe_items@recipe_grid.recipe_grid": { "offset": [1, 0] } },
-                              { "page_navigation@pagination.base_page_logic": {"ignored": "(not $recolorful_java_recipe_book)",  "offset": [-1, 0] } }
+                              {
+                                "page_navigation@pagination.base_page_logic": {
+                                  "ignored": "(not $recolorful_java_recipe_book)",
+                                  "offset": [-1, 0]
+                                }
+                              }
                             ]
                           }
                         },
@@ -121,6 +126,7 @@
                 "size": [176, 166],
                 "controls": [
                   { "extension@rcc-extensions.crafting_screen": {} },
+                  { "common_panel@container_content.crafting_screen": {} },
                   {
                     "close@global.close_button": {
                       "offset": [14, -4],
@@ -129,7 +135,6 @@
                       "$hover": "textures/ui/ashur/close_hover"
                     }
                   },
-                  { "container@screen_content.container_base": { "$crafting_screen": true } },
                   {
                     "mobile_craft_holder@global.empty_panel": {
                       "size": [92, 56],
@@ -168,6 +173,7 @@
                   {
                     "crafting_top_stack@global.empty_panel": {
                       "size": [176, 166],
+                      "layer": 2,
                       "controls": [
                         {
                           "crafting_stack_wrapper@global.empty_stack": {
@@ -187,19 +193,19 @@
                                         "orientation": "vertical",
                                         "size": [29, 54],
                                         "controls": [
-                                          { "toggle_top_spacing@global.empty_panel": { "size": ["fill", 17] } },
+                                          { "toggle_top_spacing@global.empty_panel": { "size": ["fill", 12] } },
                                           {
                                             "toggle_row@global.empty_stack": {
                                               "orientation": "horizontal",
-                                              "size": [29, 18],
+                                              "size": [29, 21],
                                               "controls": [
-                                                { "toggle_left_margin@global.empty_panel": { "size": [4, "fill"] } },
+                                                { "toggle_left_margin@global.empty_panel": { "size": [5, "fill"] } },
                                                 { "recipe_toggle@crafting_common.recipe_layout_toggle": {} },
-                                                { "toggle_right_margin@global.empty_panel": { "size": [5, "fill"] } }
+                                                { "toggle_right_margin@global.empty_panel": { "size": [4, "fill"] } }
                                               ]
                                             }
                                           },
-                                          { "toggle_bottom_spacing@global.empty_panel": { "size": ["fill", 19] } }
+                                          { "toggle_bottom_spacing@global.empty_panel": { "size": ["fill", 21] } }
                                         ],
                                         "bindings": [
                                           {
@@ -250,7 +256,7 @@
                                               "size": [26, 26],
                                               "controls": [
                                                 {
-                                                  "output_item@global.container_item": {
+                                                  "output_item@container_item.container_item": {
                                                     "size": [18, 18],
                                                     "anchor_from": "center",
                                                     "anchor_to": "center",
@@ -282,6 +288,7 @@
                     "inventory_bottom_half_with_label@global.empty_stack": {
                       "orientation": "vertical",
                       "size": [162, 95],
+                      "layer": 2,
                       "offset": "$grid_cell_offset",
                       "$grid_cell_offset": [0, 0],
                       "anchor_to": "bottom_middle",
@@ -294,7 +301,7 @@
                             "size": [162, 54],
                             "grid_dimensions": [9, 3],
                             "$item_collection": "inventory_items",
-                            "grid_item_template": "global.container_item",
+                            "grid_item_template": "container_item.container_item",
                             "collection_name": "inventory_items"
                           }
                         },

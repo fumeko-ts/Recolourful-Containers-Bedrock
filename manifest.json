@@ -5,7 +5,7 @@
     "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
     "uuid": "5af785d1-32fa-4098-baf3-be202c719d99",
     "version": [1, 1, 0],
-    "min_engine_version": [1,21,70]
+    "min_engine_version": [ 1, 21, 100 ]
   },
   "modules": [
     {

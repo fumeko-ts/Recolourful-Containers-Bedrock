@@ -19,7 +19,8 @@
   "barrel@container_common.container_details": {
     "size": [192, 174],
     "$screen_controls": [
-      {"extension@rcc-extensions.barrel":{}},
+      { "extension@rcc-extensions.barrel": {} },
+      { "common_panel@container_content.barrel_screen": {} },
       {
         "close@global.close_button": {
           "offset": [6, 4],
@@ -29,18 +30,10 @@
         }
       },
       {
-        "chest_template@screen_content.image_element": {
-          "size": [192, 174],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "layer": 1,
-          "texture": "assets/sprites/chests/barrel"
-        }
-      },
-      {
         "main_holder@global.empty_stack": {
           "orientation": "vertical",
           "size": [192, 174],
+          "layer": 2,
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 8] } },
             {
@@ -74,7 +67,7 @@
                                         "grid_dimensions": [9, 3],
                                         "$item_collection": "container_items",
                                         "collection_name": "$item_collection",
-                                        "grid_item_template": "global.container_item"
+                                        "grid_item_template": "container_item.container_item"
                                       }
                                     },
                                     { "filler_4@global.empty_panel": { "size": [7, "fill"] } }

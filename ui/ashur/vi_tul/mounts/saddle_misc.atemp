@@ -1,0 +1,47 @@
+{
+  "namespace": "saddle_misc",
+  "main_content@container_content.root_panel": {
+    "size": [176, 166],
+    "$type|default": "",
+    "controls": [
+      { "extension@rcc-extensions.saddle_misc": {} },
+      {
+        "not_chested@saddle_misc.saddle_bindings": {
+          "texture": "assets/advanced_sprites/llama_no_chest/saddle",
+          "bindings": [
+            {
+              "binding_name": "(not #is_chested)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chested@saddle_misc.saddle_bindings": {
+          "texture": "assets/advanced_sprites/horse/saddle",
+          "bindings": [
+            {
+              "binding_name": "#is_chested",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      { "binding_name": "#has_saddle_slot" },
+      { "binding_name": "#has_nautilus_armor_and_saddle_slot" },
+      { "binding_name": "#has_horse_armor_and_saddle_slot" },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(#has_saddle_slot and (not #has_nautilus_armor_and_saddle_slot) and (not #has_horse_armor_and_saddle_slot))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "saddle_bindings@screen_content.image_element": {
+    "size": [176, 166],
+    "uv_size": [176, 166]
+  }
+}

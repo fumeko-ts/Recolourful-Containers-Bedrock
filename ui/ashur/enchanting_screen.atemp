@@ -21,6 +21,7 @@
     "layer": 5,
     "$screen_controls": [
       { "extension@rcc-extensions.enchanting_screen": {} },
+      { "common_panel@container_content.enchanting_screen": {} },
       {
         "close@global.close_button": {
           "offset": [ 14, -4 ],
@@ -43,11 +44,11 @@
           "disable_anim_fast_forward": true
         }
       },
-      {"base_panel@screen_content.container_base": {"$enchanting_screen": true}},
       {
         "top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 117, 71 ],
+          "layer": 2,
           "anchor_to": "top_right",
           "anchor_from": "top_right",
           "controls": [
@@ -87,6 +88,7 @@
         "lapis_and_book_stack@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 90, 64 ],
+          "layer": 2,
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
@@ -97,9 +99,9 @@
                 "size": [ 52, 18 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ 14, "fill" ]}},
-                  {"item_input@global.container_item": {"$item_collection": "enchanting_input_items"}},
+                  {"item_input@container_item.container_item": {"$item_collection": "enchanting_input_items"}},
                   {"filler_2@global.empty_panel": {"size": [ 2, "fill" ]}},
-                  {"lapis_input@global.container_item": {"$item_collection": "enchanting_lapis_items"}}
+                  {"lapis_input@container_item.container_item": {"$item_collection": "enchanting_lapis_items"}}
                 ]
               }
             }
@@ -110,6 +112,7 @@
         "enchanting_book@global.empty_stack": {
           "orientation": "vertical",
           "size": [ 53, 46 ],
+          "layer": 2,
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [

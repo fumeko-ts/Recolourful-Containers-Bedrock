@@ -119,11 +119,5 @@
         "target_property_name": "#visible"
       }
     ]
-  },
-  "chest_template@screen_content.image_element": {
-    "size": [192, 174],
-    "anchor_from": "center",
-    "anchor_to": "center",
-    "texture": "$chest_texture"
   }
 }

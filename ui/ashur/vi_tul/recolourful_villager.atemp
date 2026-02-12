@@ -49,7 +49,7 @@
                   {
                     "eye_animation@screen_content.image_element": {
                       "layer": 3,
-                      "uv": "@recolourful_villager.default_eyes_0",
+                      "uv": "@villager_animation.default_eyes_0",
                       "uv_size": [ 12, 5 ],
                       "anchor_from": "center",
                       "animation_reset_name": "screen_animation_reset",
@@ -107,21 +107,11 @@
                     "second_label@global.empty_panel": {
                       "size": [ "100%c", 10 ],
                       "controls": [
-                        {
-                          "tier_1@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.1", "$villager_tier_index": "index_1"}
-                        },
-                        {
-                          "tier_2@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.2", "$villager_tier_index": "index_2"}
-                        },
-                        {
-                          "tier_3@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.3", "$villager_tier_index": "index_3"}
-                        },
-                        {
-                          "tier_4@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.4", "$villager_tier_index": "index_4"}
-                        },
-                        {
-                          "tier_5@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.5", "$villager_tier_index": "index_5"}
-                        }
+                        {"tier_1@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.1", "$villager_tier_index": "index_1"}},
+                        {"tier_2@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.2", "$villager_tier_index": "index_2"}},
+                        {"tier_3@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.3", "$villager_tier_index": "index_3"}},
+                        {"tier_4@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.4", "$villager_tier_index": "index_4"}},
+                        {"tier_5@recolourful_villager.label_bypass_bindings": {"$villager_mastery": "atemp.trade.level.5", "$villager_tier_index": "index_5"}}
                       ]
                     }
                   }
@@ -222,7 +212,7 @@
       {
         "12@recolourful_villager.gui_bindings": {
           "$profession_sprite": "weaponsmith",
-          "$uv_anim": "@recolourful_villager.weaponsmith_eyes_0",
+          "$uv_anim": "@villager_animation.weaponsmith_eyes_0",
           "$entity_index": "ui:l",
           "$profession": "weapon",
           "$anim_sprite": "assets/advanced_sprites/animated/villager/default/weaponsmith"
@@ -244,7 +234,7 @@
     "anchor_to": "center",
     "$entity_index_main|default": "$entity_index",
     "$profession_text|default": "(atemp.entity.villager. + $profession)",
-    "$uv_anim|default": "@recolourful_villager.default_eyes_0",
+    "$uv_anim|default": "@villager_animation.default_eyes_0",
     "controls": [
       {
         "main@global.empty_panel": {
@@ -327,21 +317,11 @@
                           "second_label@global.empty_panel": {
                             "size": [ "100%c", 10 ],
                             "controls": [
-                              {
-                                "1@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.1", "$visiblilty_binding_value": "index_1"}
-                              },
-                              {
-                                "2@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.2", "$visiblilty_binding_value": "index_2"}
-                              },
-                              {
-                                "3@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.3", "$visiblilty_binding_value": "index_3"}
-                              },
-                              {
-                                "4@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.4", "$visiblilty_binding_value": "index_4"}
-                              },
-                              {
-                                "5@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.5", "$visiblilty_binding_value": "index_5"}
-                              }
+                              {"1@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.1", "$visiblilty_binding_value": "index_1"}},
+                              {"2@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.2", "$visiblilty_binding_value": "index_2"}},
+                              {"3@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.3", "$visiblilty_binding_value": "index_3"}},
+                              {"4@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.4", "$visiblilty_binding_value": "index_4"}},
+                              {"5@recolourful_villager.secondary_label": {"$secondary_label_text": "atemp.trade.level.5", "$visiblilty_binding_value": "index_5"}}
                             ]
                           }
                         }
@@ -394,26 +374,5 @@
         "target_property_name": "#visible"
       }
     ]
-  },
-  "villager_uv_anim_template": {
-    "anim_type": "uv",
-    "from": "$frame",
-    "to": "$frame",
-    "duration": "$frame_time",
-    "next": "(@recolourful_villager. + $next_frame)"
-  },
-  "default_eyes_0@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "default_eyes_1", "$frame_time": 5.0},
-  "default_eyes_1@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 5 ], "$next_frame": "default_eyes_2", "$frame_time": 3.0},
-  "default_eyes_2@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "default_eyes_3", "$frame_time": 3.0},
-  "default_eyes_3@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 10 ], "$next_frame": "default_eyes_4", "$frame_time": 1.0},
-  "default_eyes_4@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 20 ], "$next_frame": "default_eyes_5", "$frame_time": 0.1},
-  "default_eyes_5@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 25 ], "$next_frame": "default_eyes_6", "$frame_time": 0.1},
-  "default_eyes_6@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 30 ], "$next_frame": "default_eyes_0", "$frame_time": 0.1},
-  "weaponsmith_eyes_0@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "weaponsmith_eyes_1", "$frame_time": 5.0},
-  "weaponsmith_eyes_1@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 5 ], "$next_frame": "weaponsmith_eyes_2", "$frame_time": 1.0},
-  "weaponsmith_eyes_2@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 15 ], "$next_frame": "weaponsmith_eyes_3", "$frame_time": 0.1},
-  "weaponsmith_eyes_3@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 20 ], "$next_frame": "weaponsmith_eyes_4", "$frame_time": 0.1},
-  "weaponsmith_eyes_4@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 25 ], "$next_frame": "weaponsmith_eyes_5", "$frame_time": 0.1},
-  "weaponsmith_eyes_5@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "weaponsmith_eyes_6", "$frame_time": 3.0},
-  "weaponsmith_eyes_6@recolourful_villager.villager_uv_anim_template": {"$frame": [ 0, 10 ], "$next_frame": "weaponsmith_eyes_0", "$frame_time": 2.0}
+  }
 }

@@ -1,0 +1,163 @@
+{
+  "namespace": "container_content",
+  "container_template@container_content.root_panel": {
+    "$size|default": [176, 166],
+    "$container|default": "",
+    "$texture_path|default": "('assets/sprites/' + $container)",
+    "controls": [
+      {
+        "$container@screen_content.image_element": {
+          "size": "$size",
+          "uv_size": "$size",
+          "layer": 1,
+          "texture": "$texture_path"
+        }
+      }
+    ]
+  },
+  //additional scale
+  "beacon_screen@container_content.container_template": { "$size": [230, 219], "$container": "beacon" },
+  "hopper_screen@container_content.container_template": { "$size": [176, 133], "$container": "hopper" },
+  //default scale
+  "smithing_table_screen@container_content.container_template": { "$container": "smithing" },
+  "horse_screen@container_content.container_template": { "$texture_path": "textures/ui/ashur/horse" },
+  "blast_furnace_screen@container_content.container_template": { "$container": "blast_furnace" },
+  "brewing_stand_screen@container_content.container_template": { "$container": "brewing_stand" },
+  "cartography_screen@container_content.container_template": { "$container": "cartography_table" },
+  "stonecutter_screen@container_content.container_template": { "$container": "stonecutter" },
+  "shulker_box_screen@container_content.container_template": { "$container": "shulker_box" },
+  "enchanting_screen@container_content.container_template": { "$container": "enchanting_table" },
+  "grindstone_screen@container_content.container_template": { "$container": "grindstone" },
+  "dispenser_screen@container_content.container_template": { "$container": "dispenser" },
+  "crafter_screen@container_content.container_template": { "$container": "crafter" },
+  "dropper_screen@container_content.container_template": { "$container": "dropper" },
+  "furnace_screen@container_content.container_template": { "$container": "furnace" },
+  "smoker_screen@container_content.container_template": { "$container": "smoker" },
+  "anvil_screen@container_content.container_template": { "$container": "anvil" },
+  "loom_screen@container_content.container_template": { "$container": "loom" },
+  
+  "crafting_screen@container_content.container_template": {"$container": "crafting_table"},
+  "inventory_screen@container_content.container_template": {"$container": "inventory"},
+
+  "barrel_screen@container_content.container_template": {
+    "controls": [
+      {
+        "barrel_bg@screen_content.image_element": {
+          "size": [192, 174],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "texture": "assets/sprites/chests/barrel"
+        }
+      }
+    ]
+  },
+  "ender_chest_screen@container_content.container_template": {
+    "controls": [
+      {
+        "ender_chest_bg@screen_content.image_element": {
+          "size": [192, 174],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "texture": "assets/sprites/chests/ender_chest"
+        }
+      }
+    ]
+  },
+  // to prevent items from dropping threw the uis and to allow scroll panes to work
+  "root_panel": {
+    "type": "input_panel",
+    "layer": 1,
+    "size": "$root_panel_size",
+    "$root_panel_size": ["100%c", "100%c"],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.return",
+        "to_button_id": "button.return",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_up",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_down",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_left",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.arrow_right",
+        "to_button_id": "button.arrow_key",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_reset_held",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.turn_up",
+        "to_button_id": "button.scroll_up",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_down",
+        "to_button_id": "button.scroll_down",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_left",
+        "to_button_id": "button.scroll_left",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.turn_right",
+        "to_button_id": "button.scroll_right",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.inventory_left",
+        "to_button_id": "button.inventory_left",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.inventory_right",
+        "to_button_id": "button.inventory_right",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

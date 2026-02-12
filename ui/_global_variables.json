@@ -19,11 +19,12 @@
   //set UI transparency 0.0 - 1.0
   "$container_opacity": 1,
 
+  // this var is unconfigured meaning it just removes the recipe pages currently cause i have yet to think of how to do the bedrock layout
   "$recolorful_java_recipe_book": true,
 
+
   
-  //tab ids can be customised useing 'https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/' if it shows the raw id like 22151168 then divide by 65536 to get the refined id
-  //these are the items that are used for the tab icons in the inventory
+  //tab ids can be customised useing https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
   "$compass_id": 423,//creative inventory only survival is a png
   "$chest_id": 54,
   "$redstone_id": 405,
@@ -49,37 +50,5 @@
   "$enchant_dark_green": [0.318, 0.475, 0.216],                     
   "$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667]                                                                                                                                                                                                                                                            ,
 
-
-  //dont change the contents below
-  "$direction": "right",
-
-  //alot of these are unused but i wont remove them yet
-  "$loom_screen": false,
-  "$anvil_screen": false,
-  "$barrel_screen": false,
-  "$beacon_screen": false,
-  "$blast_furnace_screen": false,
-  "$brewing_stand_screen": false,
-  "$cartography_screen": false,
-  "$crafting_screen": false,
-  "$crafter_screen": false,
-  "$dispenser_screen": false,
-  "$dropper_screen": false,
-  "$enchanting_screen": false,
-  "$furnace_screen": false,
-  "$double_chest_screen": false,
-  "$grindstone_screen": false,
-  "$hopper_screen": false,
-  "$horse_screen": false,
-  "$inventory_screen": false,
-  "$shulker_screen": false,
-  "$smithing_screen": false,
-  "$smoker_screen": false,
-  "$stonecutter_screen": false,
-  "$tradeing_screen": false,
-  "$recipe_book": false,
-  "$small_chest_screen": false,
-  "$ender_chest_screen": false,
-
-  "$rcc:dev": true
+  "$rcc:dev": false// displays the debug elements used for development
 }

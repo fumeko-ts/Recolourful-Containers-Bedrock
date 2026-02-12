@@ -59,7 +59,7 @@
                 "size": [ 18, 55 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ "fill", 36 ]}},
-                  {"input_1@global.container_item": {"$item_collection": "trade2_ingredient1_item"}},
+                  {"input_1@container_item.container_item": {"$item_collection": "trade2_ingredient1_item"}},
                   {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
                 ]
               }
@@ -71,7 +71,7 @@
                 "size": [ 18, 55 ],
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ "fill", 36 ]}},
-                  {"input_2@global.container_item": {"$item_collection": "trade2_ingredient2_item"}},
+                  {"input_2@container_item.container_item": {"$item_collection": "trade2_ingredient2_item"}},
                   {"filler_2@global.empty_panel": {"size": [ "fill", 1 ]}}
                 ]
               }
@@ -84,7 +84,7 @@
                 "controls": [
                   {"filler_1@global.empty_panel": {"size": [ "fill", 36 ]}},
                   {
-                    "result@global.container_item": {
+                    "result@container_item.container_item": {
                       "$item_collection": "trade2_result_item",
                       "$button_ref": "button_mappings.trade_result_item_slot_button"
                     }
@@ -219,7 +219,7 @@
                         {
                           "eye_animation@screen_content.image_element": {
                             "layer": 20,
-                            "uv": "@recolourful_villager.default_eyes_0",
+                            "uv": "@villager_animation.default_eyes_0",
                             "uv_size": [ 12, 5 ],
                             "anchor_from": "center",
                             "anchor_to": "center",

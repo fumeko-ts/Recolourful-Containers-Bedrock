@@ -16,5 +16,6 @@
 
 {
   "namespace": "mob_effect",
-  "effect_background": {"texture": "textures/common.png", "nineslice_size": 2}
+  "effect_background/default_background": {"texture": "textures/common","nineslice_size": 2},
+  "effect_background/ambient_background": {"texture": "textures/rare","nineslice_size": 2}
 }

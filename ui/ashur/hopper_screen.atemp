@@ -20,6 +20,7 @@
     "size": [176, 133],
     "$screen_controls": [
       { "extension@rcc-extensions.hopper_screen": {} },
+      { "common_panel@container_content.hopper_screen": {} },
       {
         "close@global.close_button": {
           "offset": [14, -4],
@@ -28,13 +29,13 @@
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      { "common_panel@screen_content.container_base": { "$hopper_screen": true } },
       {
         "hopper_top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 37],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
+          "layer": 2,
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
             {
@@ -50,7 +51,7 @@
                       "grid_dimensions": [5, 1],
                       "$item_collection": "container_items",
                       "collection_name": "$item_collection",
-                      "grid_item_template": "global.container_item"
+                      "grid_item_template": "container_item.container_item"
                     }
                   },
                   { "filler_3@global.empty_panel": { "size": [43, "fill"] } }

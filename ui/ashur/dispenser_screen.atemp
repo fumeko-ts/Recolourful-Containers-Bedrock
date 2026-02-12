@@ -20,6 +20,7 @@
     "size": [176, 166],
     "$screen_controls": [
       { "extension@rcc-extensions.dispenser_screen": {} },
+      { "common_panel@container_content.dispenser_screen": {} },
       {
         "close@global.close_button": {
           "offset": [14, -4],
@@ -28,7 +29,6 @@
           "$hover": "textures/ui/ashur/close_hover"
         }
       },
-      { "common_panel@screen_content.container_base": { "layer": 1, "$dispenser_screen": true } },
       {
         "4@screen_content.image_element": {
           "size": [51, 68],
@@ -65,6 +65,7 @@
         "dispenser_top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 70],
+          "layer": 2,
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
@@ -88,7 +89,7 @@
                             "grid_dimensions": [3, 3],
                             "$item_collection": "container_items",
                             "collection_name": "$item_collection",
-                            "grid_item_template": "global.container_item"
+                            "grid_item_template": "container_item.container_item"
                           }
                         }
                       ]

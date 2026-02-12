@@ -3,6 +3,8 @@
   //set UI transparency 0.0 - 1.0
   "$container_opacity": 1,
 
+
+  // this var is unconfigured meaning it just removes the recipe pages currently cause i have yet to think of how to do the bedrock layout
   "$recolorful_java_recipe_book": true,
 
 
@@ -73,8 +75,6 @@
   //////// Profile Create Character Picker  ////////
   "$profile_create_character_selected_color": [1, 1, 1],
 
-  "$chest_texture": "('assets/' + $ui_is)",
-
   // text colors for the button in the enchanting table also rgb and rgba max value is 1.0
   "$enchant_light_green": [0.475, 0.95, 0.11875],
   "$enchant_light_yellow": [0.404, 0.365, 0.286],
@@ -84,37 +84,5 @@
   "$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,
 
 
-
-  //dont change the contents below
-  "$direction": "right",
-
-  //alot of these are unused but i wont remove them yet
-  "$loom_screen": false,
-  "$anvil_screen": false,
-  "$barrel_screen": false,
-  "$beacon_screen": false,
-  "$blast_furnace_screen": false,
-  "$brewing_stand_screen": false,
-  "$cartography_screen": false,
-  "$crafting_screen": false,
-  "$crafter_screen": false,
-  "$dispenser_screen": false,
-  "$dropper_screen": false,
-  "$enchanting_screen": false,
-  "$furnace_screen": false,
-  "$double_chest_screen": false,
-  "$grindstone_screen": false,
-  "$hopper_screen": false,
-  "$horse_screen": false,
-  "$inventory_screen": false,
-  "$shulker_screen": false,
-  "$smithing_screen": false,
-  "$smoker_screen": false,
-  "$stonecutter_screen": false,
-  "$tradeing_screen": false,
-  "$recipe_book": false,
-  "$small_chest_screen": false,
-  "$ender_chest_screen": false,
-
-  "$rcc:dev": true// 
+  "$rcc:dev": false// set to false for the dark mode cause i cant be botherd to switch it over and over again 
 }

@@ -36,7 +36,7 @@
                 "size": [ 18, 18 ],
                 "controls": [
                   {
-                    "inventory_selected_icon@common.item_renderer": {
+                    "inventory_selected_icon@container_item.item_renderer": {
                       "layer": 50,
                       "anchor_to": "center",
                       "anchor_from": "center",

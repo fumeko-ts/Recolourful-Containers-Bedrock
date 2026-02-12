@@ -14,90 +14,246 @@
 // By using this project, you agree to these terms.
 */
 
+/*
+1. #has_saddle_slot -                      [1] - mule donkey camel_husk camel
+2. #has_only_horse_armor_slot -            [2]    - appears to be unused?
+3. #has_only_carpet_slot -                 [3] - Llama and trader_llama
+4. #has_only_nautilus_armor_slot -         [4]    - appears to be unused?
+5. #has_horse_armor_and_saddle_slot -      [5] - horse and zombie_horse
+6. #has_carpet_and_saddle_slot -           [6]    - appears to be unused?
+7. #has_nautilus_armor_and_saddle_slot -   [7] - Nautilus and zombie_Nautilus
+*/
+
 {
   "namespace": "recolourful_mount",
-  "mount@container_common.container_details": {
+  "main_contents@container_common.container_details": {
     "size": [176, 166],
-    "$screen_route|default": "$container_title",
-
-    "$mount_1|default" :"ui:entity.llama.name0"          ,
-    "$mount_2|default" :"ui:entity.donkey.name0"         ,
-    "$mount_3|default" :"ui:entity.mule.name0"           ,
-    "$mount_4|default" :"ui:entity.horse.name0"          ,
-    "$mount_5|default" :"ui:entity.camel.name0"          ,
-    "$mount_6|default" :"ui:entity.trader_llama.name0"   ,
-    "$mount_7|default" :"ui:entity.nautilus.name0"       ,
-    "$mount_8|default" :"ui:entity.zombie_nautilus.name0",
-    "$mount_9|default" :"ui:entity.zombie_horse.name0"   ,
-    "$mount_10|default":"ui:entity.camel_husk.name0"     ,
-   
-    "$mount_contents|default": "global.empty_panel",
-    "$screen_id":"$mount_1",
-
     "$screen_controls": [
-      {"llama@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_1" ,"$mount_contents": "llama_screen.llama_screen"}},
-      {"donkey@recolourful_mount.mount_screen_bindings"         :{"$screen_id":"$mount_2" ,"$mount_contents": "donkey_screen.donkey_screen"}},
-      {"mule@recolourful_mount.mount_screen_bindings"           :{"$screen_id":"$mount_3" ,"$mount_contents": "mule_screen.mule_screen"}},
-      {"horse@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_4" ,"$mount_contents": "horse_screen.horse_screen"}},
-      {"camel@recolourful_mount.mount_screen_bindings"          :{"$screen_id":"$mount_5" ,"$mount_contents": "camel_screen.camel_screen"}},
-      {"trader_llama@recolourful_mount.mount_screen_bindings"   :{"$screen_id":"$mount_6" ,"$mount_contents": "trader_llama_screen.trader_llama_screen"}},
-      {"nautilus@recolourful_mount.mount_screen_bindings"       :{"$screen_id":"$mount_7" ,"$mount_contents": "nautilus_screen.nautilus_screen"}},
-      {"zombie_nautilus@recolourful_mount.mount_screen_bindings":{"$screen_id":"$mount_8" ,"$mount_contents": "zombie_nautilus_screen.zombie_nautilus_screen"}},
-      {"zombie_horse@recolourful_mount.mount_screen_bindings"   :{"$screen_id":"$mount_9" ,"$mount_contents": "zombie_horse_screen.zombie_horse_screen"}},
-      {"camel_husk@recolourful_mount.mount_screen_bindings"     :{"$screen_id":"$mount_10","$mount_contents": "camel_husk_screen.camel_husk_screen"}},
       {
-        "custom_rename@global.empty_panel": {
-          "size": [176, 166],
+        "common_panel@global.empty_panel": {
+          "controls": [
+            { "horse_armor@horse_screen.main_content": {} }, //horse and zombie_horse
+            { "carpet@llama_screen.main_content": {} }, //Llama and trader_llama
+            { "nautilus_armor@nautilus_screen.main_content": {} }, //Nautilus and zombie_Nautilus
+            { "saddle@saddle_misc.main_content": {} } // mule donkey camel_husk camel     [currently these use the same texture but it can be changed if needed]
+          ]
+        }
+      },
+      {
+        "close@global.close_button": {
+          "offset": [14, 3],
+          "$pressed": "textures/ui/ashur/close_pressed",
+          "$default": "textures/ui/ashur/close_default",
+          "$hover": "textures/ui/ashur/close_hover"
+        }
+      },
+      {
+        "top_half@global.empty_panel": {
+          "size": [176, 83],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
           "controls": [
             {
-              "close@global.close_button": {
-                "offset": [14, -4],
-                "$pressed": "textures/ui/ashur/close_pressed",
-                "$default": "textures/ui/ashur/close_default",
-                "$hover": "textures/ui/ashur/close_hover"
+              "horse_renderer@global.empty_panel": {
+                "offset": [25, 14],
+                "size": [54, 54],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "horse_float@global.empty_panel": {
+                      "size": ["30%", "30%"],
+                      "offset": [-1, "30%"],
+                      "controls": [
+                        {
+                          "horse@global.custom_renderer": {
+                            "$type": "live_horse_renderer",
+                            "anchor_from": "center",
+                            "anchor_to": "center",
+                            "layer": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "#entity_id"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
-            { "horse@mount_misc.horse_panel": {} }
-          ],
-          "bindings": [
             {
-              "binding_name": "#item_id_aux",
-              "binding_type": "collection",
-              "binding_collection_name": "horse_equip_items"
+              "inventory@global.empty_panel": {
+                "size": [97, 71],
+                "anchor_to": "top_right",
+                "anchor_from": "top_right",
+                "controls": [
+                  {
+                    "inventory_grid": {
+                      "type": "grid",
+                      "anchor_to": "bottom_left",
+                      "anchor_from": "bottom_left",
+                      "$item_collection": "container_items",
+                      "collection_name": "$item_collection",
+                      "grid_item_template": "container_item.container_item",
+                      "grid_dimension_binding": "#inv_grid_dimensions",
+                      "$background_images": "recolourful_mount.slot_collection",
+                      "bindings": [{ "binding_name": "#inv_grid_dimensions" }]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#is_chested",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
             },
             {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux))",
-              "target_property_name": "#screen_binding"
+              "input_contents_stack@global.empty_stack": {
+                "size": [25, 71],
+                "orientation": "vertical",
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [
+                  { "top_filler@global.empty_panel": { "size": [25, 17] } },
+                  {
+                    "input_and_underlay_container@global.empty_stack": {
+                      "orientation": "horizontal",
+                      "size": [25, 54],
+                      "controls": [
+                        { "left_filler@global.empty_panel": { "size": [7, 54] } },
+                        {
+                          "input_grids_holder@global.empty_stack": {
+                            "size": [18, 54],
+                            "orientation": "vertical", // dynamic sizeing because its beter this way   probaly :)
+                            "controls": [
+                              {
+                                "top_filler@global.empty_panel": {
+                                  "size": [18, "fill"],
+                                  "bindings": [
+                                    { "binding_name": "#has_only_carpet_slot", "binding_name_override": "#visible" }
+                                  ]
+                                }
+                              },
+                              {
+                                "equip_grid": {
+                                  "type": "grid",
+                                  "max_size": [18, 36],
+                                  "min_size": [18, 18],
+                                  "collection_name": "horse_equip_items",
+                                  "grid_item_template": "recolourful_mount.container_item",
+                                  "grid_dimension_binding": "#equip_grid_dimensions",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#equip_grid_dimensions"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "bottom_expanding_filler@global.empty_panel": {
+                                  "size": [18, "fill"],
+                                  "bindings": [
+                                    { "binding_name": "#has_only_carpet_slot", "binding_name_override": "#visible" }
+                                  ]
+                                }
+                              },
+                              {
+                                "bottom_filler@global.empty_panel": {
+                                  "size": [18, 18],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "(not #has_only_carpet_slot)",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bottom_half@global.inventory_bottom_half": {
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
+      }
+    ]
+  },
+  "container_item@global.empty_panel": {
+    "size": [18, 18],
+    "controls": [
+      {
+        "slot@container_item.container_item": {
+          "$item_collection": "horse_equip_items"
+        }
+      },
+      {
+        "slot_underlays@global.empty_panel": {
+          "size": [18, 18],
+          "controls": [
+            {
+              "saddle_slot@recolourful_mount.slot_icon_template": {
+                "$texture": "textures/ui/ashur/cell_icons/underlays/saddle.png",
+                "$binding_name": "#has_saddle_slot",
+                "$index": 0
+              }
             },
             {
-              "binding_type": "view",
-              "binding_condition": "always",
-              "source_property_name": "(not ((#screen_binding = $mount_10) or (#screen_binding = $mount_8) or (#screen_binding = $mount_9) or(#screen_binding = $mount_7) or (#screen_binding = $mount_1) or (#screen_binding = $mount_2) or (#screen_binding = $mount_3) or (#screen_binding = $mount_4) or (#screen_binding = $mount_5) or (#screen_binding = $mount_6)))",
-              "target_property_name": "#visible"
+              "carpet_slot@recolourful_mount.slot_icon_template": {
+                "$texture": "textures/ui/ashur/cell_icons/underlays/llama_armor.png",
+                "$binding_name": "#has_only_carpet_slot",
+                "$index": 0
+              }
+            },
+            {
+              "horse_armor_slot@recolourful_mount.slot_icon_template": {
+                "$texture": "textures/ui/ashur/cell_icons/underlays/horse_armor.png",
+                "$binding_name": "#has_horse_armor_and_saddle_slot",
+                "$index": 1
+              }
+            },
+            {
+              "nautilus_armor_slot@recolourful_mount.slot_icon_template": {
+                "$texture": "textures/ui/ashur/cell_icons/underlays/nautilus_armor_inventory.png",
+                "$binding_name": "#has_nautilus_armor_and_saddle_slot",
+                "$index": 1
+              }
             }
           ]
         }
       }
     ]
   },
-  "mount_screen_bindings@global.empty_panel": {
-    "size": [176, 166],
-    "controls": [
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
-      { "screen@$mount_contents": {} }
-    ],
-    "anchor_to": "center",
+  "slot_icon_template@screen_content.image_element": {
+    "layer": 7,
+    "texture": "$texture",
+    "$texture": "",
+    "size": [16, 16],
     "anchor_from": "center",
+    "anchor_to": "center",
+    "$binding_name|default": "#has_saddle_slot",
+    "$index|default": 0,
     "bindings": [
+      { "binding_name": "$binding_name" },
+      {
+        "binding_name": "#collection_index",
+        "binding_type": "collection_details",
+        "binding_collection_name": "horse_equip_items"
+      },
       {
         "binding_name": "#item_id_aux",
         "binding_type": "collection",
@@ -106,9 +262,16 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(('ui:' + $screen_route + (#item_id_aux - #item_id_aux)) = $screen_id)",
+        "source_property_name": "(((#collection_index = $index) and $binding_name) and (#item_id_aux = -1))",
         "target_property_name": "#visible"
       }
     ]
+  },
+  "slot_collection@screen_content.image_element": {
+    "texture": "assets/advanced_sprites/llama_no_chest/saddle",
+    "layer": 2,
+    "uv": [72, 184],
+    "uv_size": [18, 18],
+    "size": [18, 18]
   }
 }

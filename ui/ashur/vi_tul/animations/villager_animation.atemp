@@ -1,0 +1,25 @@
+{
+  "namespace": "villager_animation",
+  "villager_uv_anim_template": {
+    "anim_type": "uv",
+    "from": "$frame",
+    "to": "$frame",
+    "duration": "$frame_time",
+    "next": "('@villager_animation.' + $next_frame)"
+  },
+  "default_eyes_0@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "default_eyes_1", "$frame_time": 5.0},
+  "default_eyes_1@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 5 ], "$next_frame": "default_eyes_2", "$frame_time": 3.0},
+  "default_eyes_2@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "default_eyes_3", "$frame_time": 3.0},
+  "default_eyes_3@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 10 ], "$next_frame": "default_eyes_4", "$frame_time": 1.0},
+  "default_eyes_4@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 20 ], "$next_frame": "default_eyes_5", "$frame_time": 0.1},
+  "default_eyes_5@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 25 ], "$next_frame": "default_eyes_6", "$frame_time": 0.1},
+  "default_eyes_6@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 30 ], "$next_frame": "default_eyes_0", "$frame_time": 0.1},
+  
+  "weaponsmith_eyes_0@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "weaponsmith_eyes_1", "$frame_time": 5.0},
+  "weaponsmith_eyes_1@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 5 ], "$next_frame": "weaponsmith_eyes_2", "$frame_time": 1.0},
+  "weaponsmith_eyes_2@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 15 ], "$next_frame": "weaponsmith_eyes_3", "$frame_time": 0.1},
+  "weaponsmith_eyes_3@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 20 ], "$next_frame": "weaponsmith_eyes_4", "$frame_time": 0.1},
+  "weaponsmith_eyes_4@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 25 ], "$next_frame": "weaponsmith_eyes_5", "$frame_time": 0.1},
+  "weaponsmith_eyes_5@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 0 ], "$next_frame": "weaponsmith_eyes_6", "$frame_time": 3.0},
+  "weaponsmith_eyes_6@villager_animation.villager_uv_anim_template": {"$frame": [ 0, 10 ], "$next_frame": "weaponsmith_eyes_0", "$frame_time": 2.0}
+}

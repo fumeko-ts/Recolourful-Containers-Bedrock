@@ -24,6 +24,27 @@
     "controls": [
       { "extension@rcc-extensions.creative_inventory": {} },
       {
+        "disabled_scroller@screen_content.image_element": {
+          "texture": "assets/sprite_assets/container/creative_inventory/scroller.png",
+          "layer": 20,
+          "offset": [-8, 46],
+          "alpha": 0.4,
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [12, 15],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "binding_condition": "always",
+              "source_control_name": "creative_recipe_grid",
+              "source_property_name": "(#maximum_grid_items < 45)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+
+      {
         "tab_stack@global.empty_stack": {
           "orientation": "horizontal",
           "size": [195, 32],
@@ -31,48 +52,15 @@
           "anchor_from": "top_middle",
           "$is_creative": true,
           "controls": [
-            {
-              "construction_tab@creative_inventory.top_tab": {
-                "$is_top_left_tab": true,
-                "$tab_view_binding_name": "construction_tab_toggle",
-                "$toggle_group_forced_index": "$construction_index",
-                "$toggle_state_binding_name": "#is_left_tab_construct"
-              }
-            },
+            { "construction@creative_inventory.construction_tab": {} },
             { "buffer_1@global.empty_panel": { "size": [1, "default"] } },
-            {
-              "equipment_tab@creative_inventory.top_tab": {
-                "$tab_view_binding_name": "equipment_tab_toggle",
-                "$toggle_group_forced_index": "$equipment_index",
-                "$toggle_state_binding_name": "#is_left_tab_equipment"
-              }
-            },
+            { "equipment@creative_inventory.equipment_tab": {} },
             { "buffer_2@global.empty_panel": { "size": [1, "default"] } },
-            {
-              "nature_tab@creative_inventory.top_tab": {
-                "$tab_view_binding_name": "nature_tab_toggle",
-                "$toggle_group_forced_index": "$nature_index",
-                "$toggle_state_binding_name": "#is_left_tab_nature"
-              }
-            },
+            { "nature@creative_inventory.nature_tab": {} },
             { "buffer_3@global.empty_panel": { "size": [1, "default"] } },
-            {
-              "items_tab@creative_inventory.top_tab": {
-                "$tab_view_binding_name": "items_tab_toggle",
-                "$toggle_group_forced_index": "$items_index",
-                "$toggle_state_binding_name": "#is_left_tab_items"
-              }
-            },
+            { "items@creative_inventory.items_tab": {} },
             { "buffer_4@global.empty_panel": { "size": [62, "default"] } },
-            {
-              "search_tab@creative_inventory.top_tab": {
-                "$is_top_right_tab": true,
-                "$toggle_default_state": true,
-                "$tab_view_binding_name": "search_tab_toggle",
-                "$toggle_group_forced_index": "$search_index",
-                "$toggle_state_binding_name": "#is_left_tab_search"
-              }
-            }
+            { "search_tab@creative_inventory.search_tab": {} }
           ]
         }
       },
@@ -160,7 +148,7 @@
     "controls": [
       { "scroll_buffer@global.empty_panel": { "size": [162, "100%sm"] } },
       {
-        "scroll_grid": {
+        "creative_recipe_grid": {
           "type": "grid",
           "size": [162, "default"],
           "offset": [0.2, 0],
@@ -188,74 +176,108 @@
   },
   "item_renderer@global.custom_renderer": {
     "$type": "inventory_item_renderer",
-    "size": ["100%", "100%"],
+    "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
     "layer": 7,
     "property_bag": { "#item_id_aux": "($item_identifier * 65536)" }
   },
   "icon_control@global.empty_panel": {
-    "size": [16, 16],
+    "size": [24, 25],
     "anchor_from": "center",
     "anchor_to": "center",
     "controls": [
       {
         "inventory@creative_inventory.item_renderer": {
           "$item_identifier": "$chest_id",
-          "visible": "($tab_view_binding_name = 'inventory_tab_toggle')"
+          "offset": [0, -1],
+          "visible": "($toggle_control_name = 'inventory_tab_toggle')"
         }
       },
       {
         "search@creative_inventory.item_renderer": {
           "$item_identifier": "$compass_id",
-          "visible": "($tab_view_binding_name = 'search_tab_toggle')"
+          "visible": "($toggle_control_name = 'search_tab_toggle')"
         }
       },
       {
         "items@creative_inventory.item_renderer": {
           "$item_identifier": "$redstone_id",
-          "visible": "($tab_view_binding_name = 'items_tab_toggle')"
+          "visible": "($toggle_control_name = 'items_tab_toggle')"
         }
       },
       {
         "equipment@creative_inventory.item_renderer": {
           "$item_identifier": "$iron_sword_id",
-          "visible": "($tab_view_binding_name = 'equipment_tab_toggle')"
+          "visible": "($toggle_control_name = 'equipment_tab_toggle')"
         }
       },
       {
         "nature@creative_inventory.item_renderer": {
           "$item_identifier": "$purple_froglight_id",
-          "visible": "($tab_view_binding_name = 'nature_tab_toggle')"
+          "visible": "($toggle_control_name = 'nature_tab_toggle')"
         }
       },
       {
         "construction@creative_inventory.item_renderer": {
           "$item_identifier": "$bricks_id",
-          "visible": "($tab_view_binding_name = 'construction_tab_toggle')"
+          "visible": "($toggle_control_name = 'construction_tab_toggle')"
         }
       }
     ]
   },
-  "icon_holder@global.empty_panel": { "size": [24, 25], "controls": [{ "img@$tab_icon": {} }] },
-  "top_tab@toggle.toggle": {
-    "size": [26, 32],
-    "$toggle_binding_type": "global",
-    "$toggle_focus_enabled": true,
-    "$toggle_name": "navigation_tab",
-    "$tab_icon": "creative_inventory.icon_control",
-    "$toggle_group_default_selected|default": 6,
-    "$toggle_state_binding_name": "#toggle_state",
-    "$tab_content": "creative_inventory.icon_holder"
-  },
 
+  "top_tab@toggle.tab_toggle": {
+    "$toggle_name": "navigation_tab",
+
+    "$tab_texture_unchecked_offset": [0, 0],
+    "$tab_texture_checked_offset": [0, 0],
+
+    "$icon_checked_offset": [0, -2],
+
+    "$checked_hover_layer": 5,
+    "$checked_layer": 5,
+    "$default_hover_layer": 2,
+    "$default_layer": 2,
+
+    "$extra_contents": "creative_inventory.icon_control",
+    "$size": [26, 32]
+  },
+  "search_tab@creative_inventory.top_tab": {
+    "$is_top_right_tab": true,
+    "$toggle_control_name": "search_tab_toggle",
+    "$toggle_group_forced_index": "$search_index",
+    "$toggle_binding_value": "#is_left_tab_search"
+  },
+  "equipment_tab@creative_inventory.top_tab": {
+    "$toggle_control_name": "equipment_tab_toggle",
+    "$toggle_group_forced_index": "$equipment_index",
+    "$toggle_binding_value": "#is_left_tab_equipment"
+  },
+  "nature_tab@creative_inventory.top_tab": {
+    "$toggle_control_name": "nature_tab_toggle",
+    "$toggle_group_forced_index": "$nature_index",
+    "$toggle_binding_value": "#is_left_tab_nature"
+  },
+  "items_tab@creative_inventory.top_tab": {
+    "$toggle_control_name": "items_tab_toggle",
+    "$toggle_group_forced_index": "$items_index",
+    "$toggle_binding_value": "#is_left_tab_items"
+  },
+  "construction_tab@creative_inventory.top_tab": {
+    "$is_top_left_tab": true,
+    "$toggle_control_name": "construction_tab_toggle",
+    "$toggle_group_forced_index": "$construction_index",
+    "$toggle_binding_value": "#is_left_tab_construct"
+  },
   "inventory_tab@creative_inventory.top_tab": {
     "$is_bottom_right_tab": true,
-    "$unchecked_offset|default": [0, -2],
-    "$checked_offset|default": [0, 2],
-    "$tab_view_binding_name": "inventory_tab_toggle",
-    "$toggle_group_forced_index": 6
+    "$icon_checked_offset": [0, 2],
+    "$toggle_control_name": "inventory_tab_toggle",
+    "$toggle_group_forced_index": "($search_index + 1)",
+    "$toggle_binding_value": "#inventory_tab"
   },
+
   "tab_base_template@common.root_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
   "inventory_page@creative_inventory.tab_base_template": {
     "controls": [
@@ -294,7 +316,7 @@
                             "controls": [
                               { "buffer_1@global.empty_panel": { "size": ["default", 14] } },
                               {
-                                "offhand_slot_creative@global.container_item": {
+                                "offhand_slot_creative@container_item.container_item": {
                                   "size": [18, 18],
                                   "$item_collection": "offhand_items"
                                 }
@@ -312,14 +334,14 @@
                             "collection_name": "$item_collection",
                             "controls": [
                               {
-                                "armor_item_index_0@global.container_item": {
+                                "armor_item_index_0@container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_helmet",
                                   "collection_index": 0
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["fill", 9] } },
                               {
-                                "armor_item_index_1@global.container_item": {
+                                "armor_item_index_1@container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_chest",
                                   "collection_index": 1
                                 }
@@ -338,14 +360,14 @@
                             "collection_name": "$item_collection",
                             "controls": [
                               {
-                                "armor_item_index_2@global.container_item": {
+                                "armor_item_index_2@container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_overlay_legs",
                                   "collection_index": 2
                                 }
                               },
                               { "buffer_1@global.empty_panel": { "size": ["default", 9] } },
                               {
-                                "armor_item_index_3@global.container_item": {
+                                "armor_item_index_3@container_item.container_item": {
                                   "$cell_overlay_ref": "screen_content.armor_image_feet",
                                   "collection_index": 3
                                 }

@@ -45,13 +45,16 @@
     "ui/ashur/-common/misc.unsorted/text_edit_box.atemp",
     "ui/ashur/-common/misc.unsorted/toggle.atemp",
     "ui/ashur/-common/misc.unsorted/trade_global.atemp",
-    "ui/ashur/-common/misc.unsorted/scroll_panel/NEW-scroll_panel.atemp",
+    "ui/ashur/-common/misc.unsorted/scroll_panel/-scroll_panel.atemp",
 
     // special ui code   (used for advanced coloring and or themeing)
+    "ui/ashur/vi_tul/container_content.atemp",
     "ui/ashur/vi_tul/bundle.atemp",
+    "ui/ashur/vi_tul/mount_info.lang",
     "ui/ashur/vi_tul/recolourful_bundle.atemp",
     "ui/ashur/vi_tul/recolourful_chest.atemp",
     "ui/ashur/vi_tul/recolourful_double_chest.atemp",
+    "ui/ashur/vi_tul/recolourful_mount.atemp",
     "ui/ashur/vi_tul/recolourful_mount.atemp",
     "ui/ashur/vi_tul/recolourful_shulker.atemp",
     "ui/ashur/vi_tul/recolourful_villager.atemp",
@@ -68,22 +71,24 @@
     "ui/ashur/vi_tul/animations/portal.atemp",
     "ui/ashur/vi_tul/animations/sawblade.atemp",
     "ui/ashur/vi_tul/animations/smithing_animations.atemp",
+    "ui/ashur/vi_tul/animations/villager_animation.atemp",
+
+    //smithing animations
+    "ui/ashur/vi_tul/animations/smithing_slots/smithing_armor.atemp",
+    "ui/ashur/vi_tul/animations/smithing_slots/smiting_armor_and_items.atemp",
+    "ui/ashur/vi_tul/animations/smithing_slots/smithing_template.atemp",
+    "ui/ashur/vi_tul/animations/smithing_slots/smithing_material.atemp",
 
     // beacon buttons (x and confirm buttons are defined within beacon_screen.atemp at the bottom)
     "ui/ashur/vi_tul/beacon/primary_button.atemp",
     "ui/ashur/vi_tul/beacon/secondary_button.atemp",
 
     //mount ui code
-    "ui/ashur/vi_tul/mounts/camel_husk_screen.atemp",
-    "ui/ashur/vi_tul/mounts/camel_screen.atemp",
-    "ui/ashur/vi_tul/mounts/donkey_screen.atemp",
     "ui/ashur/vi_tul/mounts/horse_screen.atemp",
     "ui/ashur/vi_tul/mounts/llama_screen.atemp",
-    "ui/ashur/vi_tul/mounts/mount_misc.atemp",
-    "ui/ashur/vi_tul/mounts/mule_screen.atemp",
     "ui/ashur/vi_tul/mounts/nautilus_screen.atemp",
-    "ui/ashur/vi_tul/mounts/trader_llama_screen.atemp",
-    "ui/ashur/vi_tul/mounts/zombie_horse_screen.atemp",
-    "ui/ashur/vi_tul/mounts/zombie_nautilus_screen.atemp"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ,"update-logs.txt"
+    "ui/ashur/vi_tul/mounts/saddle_misc.atemp",
+
+    "update-logs.txt"//secret encoded code
   ]
 }

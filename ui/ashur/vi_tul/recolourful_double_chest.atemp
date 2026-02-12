@@ -45,7 +45,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "((not ((#screen_path = 'ui:container.chestDoubleCopper0') or (#screen_path = 'ui:container.chestDouble0'))) or (#screen_path = 'ui:container.chestDouble0'))",
+              "source_property_name": "((not (#screen_path = 'ui:container.chestDoubleCopper0')) or (#screen_path = 'ui:container.chestDouble0'))",
               "target_property_name": "#visible"
             }
           ]
