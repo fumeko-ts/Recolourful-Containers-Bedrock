@@ -174,9 +174,9 @@
         "binding_name_override": "#toggle_state"
       }
     ],
+    "$property_bag|default": { "#toggle_state": true },
     "$default_selected_index|default": 0,
     "$extra_contents|default": "global.empty_panel",
-    "$property_bag|default": { "#toggle_state": true },
     "$button_volume|default": 1.0,
     "$unchecked|default": "global.empty_panel",
     "$unchecked_hover|default": "global.empty_panel",

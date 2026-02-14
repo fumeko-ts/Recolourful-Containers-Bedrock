@@ -71,3 +71,70 @@
     ]
   }
 }
+
+
+// experimental code was made for performace and clarity but for now it wont be added untill its confirmed to be safe to use
+/*
+{
+  "namespace": "recolourful_shulker",
+  "recolourful_shulker@global.root_panel": {
+    "size": [176, 166],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$shulker_id|default": "",
+    "controls": [
+      { "shulkers@recolourful_shulker.colored_bindings": {}},
+      {
+        "custom_renamed@recolourful_shulker.colored_bindings": {
+          "texture": "assets/advanced_sprites/shulker_box/default",
+          "$target_property_name": "#visible",
+          "$shulker_property_name": "((#screen_route - '§f§r' - '§p§r' - '§5§r' - '§b§r' - '§e§r' - '§a§r' - '§d§r' - '§8§r' - '§7§r' - '§3§r' - '§u§r' - '§9§r' - '§n§r' - '§2§r' - '§c§r' - '§0§r') = #screen_route)"
+        }
+      }
+    ]
+  },
+  "colored_bindings@screen_content.image_element": {
+    "size": [176, 166],
+    "uv_size": [176, 166],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "property_bag": {
+      "#screen_route": "$container_title",
+      "#shulker_0§f§r": "assets/advanced_sprites/shulker_box/white",
+      "#shulker_0§p§r": "assets/advanced_sprites/shulker_box/orange",
+      "#shulker_0§5§r": "assets/advanced_sprites/shulker_box/magenta",
+      "#shulker_0§b§r": "assets/advanced_sprites/shulker_box/light_blue",
+      "#shulker_0§e§r": "assets/advanced_sprites/shulker_box/yellow",
+      "#shulker_0§a§r": "assets/advanced_sprites/shulker_box/lime",
+      "#shulker_0§d§r": "assets/advanced_sprites/shulker_box/pink",
+      "#shulker_0§8§r": "assets/advanced_sprites/shulker_box/gray",
+      "#shulker_0§7§r": "assets/advanced_sprites/shulker_box/light_gray",
+      "#shulker_0§3§r": "assets/advanced_sprites/shulker_box/cyan",
+      "#shulker_0§u§r": "assets/advanced_sprites/shulker_box/purple",
+      "#shulker_0§9§r": "assets/advanced_sprites/shulker_box/blue",
+      "#shulker_0§n§r": "assets/advanced_sprites/shulker_box/brown",
+      "#shulker_0§2§r": "assets/advanced_sprites/shulker_box/green",
+      "#shulker_0§c§r": "assets/advanced_sprites/shulker_box/red",
+      "#shulker_0§0§r": "assets/advanced_sprites/shulker_box/black"
+    },
+    "allow_debug_missing_texture": false,
+    "texture": "#texture",
+    "$shulker_property_name|default": "('#shulker_' + (#item_id_aux - #item_id_aux) + ('%.6s' * #screen_route))",
+    "$target_property_name|default": "#texture",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "hotbar_items",
+        "binding_name": "#item_id_aux"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "$shulker_property_name",
+        "target_property_name": "$target_property_name"
+      }
+    ]
+  }
+}
+
+*/
