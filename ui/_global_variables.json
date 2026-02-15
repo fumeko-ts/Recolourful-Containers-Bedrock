@@ -18,10 +18,8 @@
   "$is_recolorful_containers": true,
   //set UI transparency 0.0 - 1.0
   "$container_opacity": 1,
-
-  // this var is unconfigured meaning it just removes the recipe pages currently cause i have yet to think of how to do the bedrock layout
-  "$recolorful_java_recipe_book": true,
-
+  
+  "$use_experimental_page_logic": true,// enables the recipe pages reseting to page 1 when current page is more than max page
 
   
   //tab ids can be customised useing https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/

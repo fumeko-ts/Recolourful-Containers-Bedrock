@@ -89,11 +89,59 @@
                                   ]
                                 }
                               },
-                              { "recipe_items@recipe_grid.recipe_grid": { "offset": [1, 0] } },
                               {
-                                "page_navigation@pagination.base_page_logic": {
-                                  "ignored": "(not $recolorful_java_recipe_book)",
-                                  "offset": [-1, 0]
+                                "java_recipe_book@global.empty_panel": {
+                                  "ignored": "$pocket_screen",
+                                  "controls": [
+                                    { "recipe_items@recipe_grid.recipe_grid": { "offset": [1, 0] } },
+                                    {
+                                      "page_navigation@pagination.base_page_logic": {
+                                        "offset": [-1, 0]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "bedrock_recipe_book@global.empty_panel": {
+                                  "ignored": "$desktop_screen",
+                                  "controls": [
+                                    {
+                                      "scroller@screen_content.image_element": {
+                                        "texture": "textures/bedrock_recipe_book/scroll_bar.png",
+                                        "size": [16, 15],
+                                        "alpha": 0.6,
+                                        "offset": [-12, 30],
+                                        "grayscale": true,
+                                        "anchor_from": "top_right",
+                                        "anchor_to": "top_right",
+                                        "layer": 6,
+                                        "bindings": [
+                                          {
+                                            "binding_type": "view",
+                                            "binding_condition": "always",
+                                            "source_control_name": "bedrock_recipe_grid.bedrock_recipe_book_grid",
+                                            "source_property_name": "(#maximum_grid_items < 31)",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "recipe_grid@bedrock_recipe_grid.scroll_panel": {}
+                                    },
+                                    {
+                                      "scroll_track_underlay@screen_content.image_element": {
+                                        "texture": "textures/bedrock_recipe_book/scroll_track.png",
+                                        "anchor_from": "bottom_right",
+                                        "anchor_to": "bottom_right",
+                                        "size": [18, 126],
+                                        "nineslice_size": 1,
+                                        "offset": [-11, -11],
+                                        "layer": 3
+                                      }
+                                    }
+                                  ]
                                 }
                               }
                             ]

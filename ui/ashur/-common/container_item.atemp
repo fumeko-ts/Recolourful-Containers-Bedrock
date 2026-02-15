@@ -388,7 +388,7 @@
       {
         "hover_text_controler@global.empty_panel": {
           "size": ["100%", "100%"],
-          "ignored": "($touch or $pocket_edition or $dont_render_hover_text)", // temp fix
+          "ignored": "($touch or $dont_render_hover_text)", // temp fix
           "layer": 290,
           "$hover_text_binding_name|default": "#hover_text",
           "controls": [

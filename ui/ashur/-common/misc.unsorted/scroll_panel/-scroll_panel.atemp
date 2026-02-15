@@ -23,6 +23,7 @@
     "$scroll_track_size|default": [18, "100%"],
     "$scroll_bar_spacer_size|default": [4, "fill"],
     "$view_port_size|default": [100, 100],
+    "$scroll_track_offset|default": [0, 0],
     "layer": 20,
     "controls": [
       {
@@ -30,28 +31,28 @@
           "type": "input_panel",
           "consume_hover_events": true,
           "layer": 20,
-          "$scroll_view_name|default": "(($scrolling_content - '.') + '_scrolling_panel')",
+          "$scroll_area_name|default": "($scrolling_content + '_area')",
           "controls": [
             {
-              "$scroll_view_name": {
+              "$scroll_area_name": {
                 "type": "scroll_view",
                 "layer": 20,
 
                 "scrollbar_track_button": "button.scrollbar_skip_track",
                 "scrollbar_touch_button": "button.scrollbar_touch",
 
-                "scroll_speed": "$container_scrolling_speed",
 
                 "allow_scroll_even_when_content_fits": false,
+                "jump_to_bottom_on_update": false,
+
                 "always_listen_to_input": true,
                 "always_handle_pointer": true,
                 "always_handle_scrolling": false,
-                "scrollbar_always_visible": "$touch",
-                "jump_to_bottom_on_update": false,
+                "scrollbar_always_visible": false,
 
                 "scrollbar_track": "track",
                 "scrollbar_box": "box",
-                "scroll_content": "scrolling_content",
+                "scroll_content": "$scrolling_content",
                 "scroll_view_port": "scroll_view_port_area",
                 "scroll_box_and_track_panel": "bar_and_track",
                 "button_mappings": [
@@ -77,10 +78,9 @@
                           "scroll_view_port_area@global.empty_panel": {
                             "size": "$view_port_size",
                             "clips_children": true,
-                            "enable_scissor_test": true,
                             "controls": [
                               {
-                                "scrolling_content@$scrolling_content": {
+                                "$scrolling_content@$scrolling_content": {
                                   "anchor_from": "top_left",
                                   "anchor_to": "top_left"
                                 }
@@ -90,39 +90,38 @@
                         },
                         { "scroll_bar_spacer@global.empty_panel": { "size": "$scroll_bar_spacer_size" } },
                         {
-                          "bar_and_track@global.empty_panel": {
-                            "size": "$scroll_track_size",
+                          "bar_holder@global.empty_panel": {
                             "controls": [
                               {
-                                "track": {
-                                  "type": "scroll_track",
+                                "bar_and_track@global.empty_panel": {
                                   "size": "$scroll_track_size",
-                                  "anchor_from": "top_middle",
-                                  "anchor_to": "top_middle",
-                                  "button_mappings": [
-                                    {
-                                      "from_button_id": "button.menu_select",
-                                      "to_button_id": "button.scrollbar_skip_track",
-                                      "mapping_type": "pressed"
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "scroll_box@global.empty_panel": {
-                                  "anchor_from": "top_middle",
-                                  "anchor_to": "top_middle",
+                                  "offset": "$scroll_track_offset",
                                   "controls": [
+                                    {
+                                      "track": {
+                                        "type": "scroll_track",
+                                        "size": "$scroll_track_size",
+                                        "anchor_from": "top_middle",
+                                        "anchor_to": "top_middle",
+                                        "layer": 10,
+                                        "button_mappings": [
+                                          {
+                                            "from_button_id": "button.menu_select",
+                                            "to_button_id": "button.scrollbar_skip_track",
+                                            "mapping_type": "pressed"
+                                          }
+                                        ]
+                                      }
+                                    },
                                     {
                                       "box": {
                                         "type": "scrollbar_box",
-                                        "contained": true,
                                         "anchor_from": "top_middle",
                                         "anchor_to": "top_middle",
                                         "draggable": "vertical",
                                         "size": ["100%", "100%"],
-                                        "alpha": 1,
                                         "layer": 20,
+                                        "contained": true,
                                         "button_mappings": [
                                           {
                                             "from_button_id": "button.menu_select",

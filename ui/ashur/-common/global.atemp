@@ -401,6 +401,18 @@
             { "stack_splitting_overlay@stack_splitting_overlay.stack_splitting_overlay": {} },
             { "extra_content@global.empty_panel": { "controls": "$extra_screen_controls" } },
             {
+              "debug_text@global.empty_label": {
+                "layer": 999,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": ["default", "default"],
+                "ignored": "(not $rcc:dev)",
+                "shadow": true,
+                "text": "$text",
+                "$text": "('$pocket_screen: ' + $pocket_screen + '\n$desktop_screen: ' + $desktop_screen + '\n$pocket_edition: ' + $pocket_edition + '\n$is_desktop: ' + $is_desktop)"
+              }
+            },
+            {
               "screen_background@screen_content.screen_background": {
                 "anims": [
                   "@common.screen_exit_animation_push_alpha",
