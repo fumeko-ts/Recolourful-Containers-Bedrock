@@ -8,7 +8,7 @@
   when using touch input the enchanting table buttons require double press to select the enchant (this was done to combat mobile issues)
 1.3:
   fixed villager buttons breaking when the user has effect "village hero" set above 1
-  fixed the small bugs that came with minecraft v1.20.60 release
+  fixed the small bugs that came with minecraft v26.0 release
   updated the smithing input slots to include the new items 
   added anvil text blinker
   max page in the recipe book is now 30 (was 64 but it was kinda laggy so i reduced)
