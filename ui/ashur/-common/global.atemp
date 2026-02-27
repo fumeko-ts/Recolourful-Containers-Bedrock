@@ -50,7 +50,7 @@
               }
             }
           ],
-          "ignored": "($touch or $pocket_edition)" // temp fix
+          "ignored": "($touch or $pocket_edition)" 
         }
       }
     ]
@@ -224,6 +224,8 @@
     "send_telemetry": false,
     "gamepad_cursor": true,
     "close_on_player_hurt": true,
+    "render_game_behind": true,
+    "force_render_below": "$show_hud_in_containers",
     "$screen_content|default": "global.empty_panel",
     "$extra_screen_controls|default": [],
     "button_mappings": [

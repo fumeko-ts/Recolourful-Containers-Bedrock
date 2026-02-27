@@ -1,8 +1,9 @@
 {
   "namespace": "container_content",
   "container_template@container_content.root_panel": {
-    "$size|default": [176, 166],
+    "$size": [176, 166],
     "$container|default": "",
+    "size": "$size",
     "$texture_path|default": "('assets/sprites/' + $container)",
     "controls": [
       {
@@ -35,9 +36,9 @@
   "smoker_screen@container_content.container_template": { "$container": "smoker" },
   "anvil_screen@container_content.container_template": { "$container": "anvil" },
   "loom_screen@container_content.container_template": { "$container": "loom" },
-  
-  "crafting_screen@container_content.container_template": {"$container": "crafting_table"},
-  "inventory_screen@container_content.container_template": {"$container": "inventory"},
+
+  "crafting_screen@container_content.container_template": { "$container": "crafting_table" },
+  "inventory_screen@container_content.container_template": { "$container": "inventory" },
 
   "barrel_screen@container_content.container_template": {
     "controls": [
@@ -69,8 +70,6 @@
   "root_panel": {
     "type": "input_panel",
     "layer": 1,
-    "size": "$root_panel_size",
-    "$root_panel_size": ["100%c", "100%c"],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

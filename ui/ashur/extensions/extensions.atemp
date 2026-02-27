@@ -8,25 +8,17 @@
 
   // all containers have a exit button on the top right so watch out for them
 
-
-
   //mounts
-  
   "horse_screen@rcc-extensions.campatibility": {},
   "llama_screen@rcc-extensions.campatibility": {},
   "nautilus_screen@rcc-extensions.campatibility": {},
   "saddle_misc@rcc-extensions.campatibility": {},// mounts that only have a saddle slot
-
-
-
   "anvil_screen@rcc-extensions.campatibility": {},
   "barrel@rcc-extensions.campatibility": {},
   "beacon_screen@rcc-extensions.campatibility": {},// theres some empty space on each side of the screen (to lazy to remove it)
   "blast_furnace_screen@rcc-extensions.campatibility": {},
   "brewing_stand_screen@rcc-extensions.campatibility": {},
-
   "cartography_screen@rcc-extensions.campatibility": {},// top middle there is a search box thats not always visible so keep that in mind 
-
   "crafter_screen@rcc-extensions.campatibility": {},
   "crafting_screen@rcc-extensions.campatibility": {},
   "creative_inventory@rcc-extensions.campatibility": {},

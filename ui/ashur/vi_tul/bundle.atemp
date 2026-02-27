@@ -307,7 +307,7 @@
                                             }
                                           },
                                           {
-                                            "weight_bar_fill@global.empty_image": {
+                                            "weight_bar_fill@screen_content.image_element": {
                                               "layer": 5,
                                               "nineslice_size": 2,
                                               "texture": "textures/bundles/bundle_progress.png",
@@ -468,7 +468,7 @@
                                             }
                                           },
                                           {
-                                            "weight_bar_full@global.empty_image": {
+                                            "weight_bar_full@screen_content.image_element": {
                                               "layer": 5,
                                               "nineslice_size": 2,
                                               "texture": "textures/bundles/bundle_full_progress.png",
@@ -491,7 +491,7 @@
                                             }
                                           },
                                           {
-                                            "weight_bar_border@global.empty_image": {
+                                            "weight_bar_border@screen_content.image_element": {
                                               "nineslice_size": 4,
                                               "alpha": 0.4,
                                               "texture": "textures/bundles/empty_stack_progress_bar.png",

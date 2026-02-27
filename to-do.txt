@@ -1,5 +1,4 @@
+
 localize beacon toggles for better performance
-search for other areas to localize
-recheck the looms code for issues
-make more compatibility improvements
+make more compatibility improvements -- (even more than there currently is)
 simplify furnace, smoker, blast furnaces code (because mojang has set the foundations for a vanilla furnace recipe book in bedrock)

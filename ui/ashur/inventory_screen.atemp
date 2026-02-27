@@ -16,10 +16,10 @@
 
 {
   "namespace": "inventory_screen",
-  "screen_base@global.root_panel": {
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "controls": [
+  "screen_base@container_common.container_details": {
+    "min_size": [176, 166],
+    "max_size": [359, 166],
+    "$screen_controls": [
       {
         "base_horizontal_Stack@global.empty_stack": {
           "orientation": "horizontal",
@@ -32,6 +32,7 @@
             {
               "2@global.empty_panel": {
                 "size": ["100%c", 166],
+                "ignored": "$is_jei_recipe_book_layout_pack",
                 "controls": [
                   {
                     "3@global.empty_stack": {
@@ -93,54 +94,11 @@
                               },
                               {
                                 "java_recipe_book@global.empty_panel": {
-                                  "ignored": "$pocket_screen",
                                   "controls": [
                                     { "recipe_items@recipe_grid.recipe_grid": { "offset": [1, 0] } },
                                     {
                                       "page_navigation@pagination.base_page_logic": {
                                         "offset": [-1, 0]
-                                      }
-                                    }
-                                  ]
-                                }
-                              },
-                              {
-                                "bedrock_recipe_book@global.empty_panel": {
-                                  "ignored": "$desktop_screen",
-                                  "controls": [
-                                    {
-                                      "scroller@screen_content.image_element": {
-                                        "texture": "textures/bedrock_recipe_book/scroll_bar.png",
-                                        "size": [16, 15],
-                                        "alpha": 0.6,
-                                        "offset": [-12, 30],
-                                        "grayscale": true,
-                                        "anchor_from": "top_right",
-                                        "anchor_to": "top_right",
-                                        "layer": 6,
-                                        "bindings": [
-                                          {
-                                            "binding_type": "view",
-                                            "binding_condition": "always",
-                                            "source_control_name": "bedrock_recipe_grid.bedrock_recipe_book_grid",
-                                            "source_property_name": "(#maximum_grid_items < 31)",
-                                            "target_property_name": "#visible"
-                                          }
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "recipe_grid@bedrock_recipe_grid.scroll_panel": {}
-                                    },
-                                    {
-                                      "scroll_track_underlay@screen_content.image_element": {
-                                        "texture": "textures/bedrock_recipe_book/scroll_track.png",
-                                        "anchor_from": "bottom_right",
-                                        "anchor_to": "bottom_right",
-                                        "size": [18, 126],
-                                        "nineslice_size": 1,
-                                        "offset": [-11, -11],
-                                        "layer": 3
                                       }
                                     }
                                   ]
@@ -203,7 +161,7 @@
                                     "@common.screen_entrance_size_animation_push",
                                     "@common.screen_entrance_size_animation_pop"
                                   ],
-                                  "layer": 10,
+                                  "layer": 20,// above all the armor item cells contents(item renderer progress bar ect)
                                   "anchor_from": "center",
                                   "anchor_to": "center"
                                 }

@@ -161,7 +161,5 @@ item.pink_bundle=§p§rΡοζ συλλογή
 item.magenta_bundle=§d§rΦούξια Συλλογή
 item.purple_bundle=§5§rΜοβ Συλλογή
 item.cyan_bundle=§3§rΚυανή Συλλογή
-craftingScreen.tab.construction=sr1.atemp
-craftingScreen.tab.nature=sr1.atemp
-craftingScreen.tab.equipment=sr1.atemp
-craftingScreen.tab.items=sr1.atemp
+
+container.enchant.clue=%s §r. . . ?

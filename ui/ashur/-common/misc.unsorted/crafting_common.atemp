@@ -323,7 +323,7 @@
       }
     ]
   },
-  "filter_button_template@global.empty_image": { "size": [26, 16] },
+  "filter_button_template@screen_content.image_element": { "size": [26, 16] },
   "filter_toggle@toggle.radio_toggle": {
     "$size": [26, 16],
     "$toggle_control_name": "recipe_filter",

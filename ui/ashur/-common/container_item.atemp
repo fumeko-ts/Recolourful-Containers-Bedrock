@@ -22,16 +22,10 @@
     "$cell_hover_text_bindings|default": [
       {
         "binding_name": "$hover_text_binding_name",
-        "binding_name_override": "#hover_remove_text",
+        "binding_name_override": "#hover_text",
         "binding_condition": "always",
         "binding_type": "collection",
         "binding_collection_name": "$item_collection"
-      },
-      {
-        "binding_type": "view",
-        "binding_condition": "always_when_visible",
-        "source_property_name": "(#hover_remove_text - '\n§9§9sr1.atemp§r')",
-        "target_property_name": "#hover_text"
       }
     ],
     "controls": [
@@ -153,7 +147,7 @@
           ]
         }
       },
-      { "item_cell_overlay_ref@$cell_overlay_ref": {} },
+      { "item_cell_overlay@$cell_overlay_ref": {} },
       {
         "slot_selected@screen_content.image_element": {
           "texture": "textures/ui/touch_ui_selected_slot",
@@ -387,8 +381,7 @@
       },
       {
         "hover_text_controler@global.empty_panel": {
-          "size": ["100%", "100%"],
-          "ignored": "($touch or $dont_render_hover_text)", // temp fix
+          "ignored": "($touch or $dont_render_hover_text)", 
           "layer": 290,
           "$hover_text_binding_name|default": "#hover_text",
           "controls": [

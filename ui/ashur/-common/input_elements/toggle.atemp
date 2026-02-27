@@ -92,7 +92,7 @@
             {
               "binding_type": "view",
               "binding_condition": "always",
-              "source_property_name": "('#icon_offset_' + (#tab_selected * 1))",
+              "source_property_name": "('#icon_offset_' + (#tab_selected * 1))",//doing *1 is optional all that iy dose is convert a boolean to a int
               "target_property_name": "#offset"
             }
           ]

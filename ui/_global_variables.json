@@ -1,29 +1,20 @@
-/**
-// © 2026 ashura_temps,    All Rights Reserved.
-//
-// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
-// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
-// layout structure, or design.
-//
-// Not allowed:
-//   - Editing the UI (even for private/personal use)
-//   - Using parts of the code or layout in your own pack
-//   - Reuploading, redistributing, or hosting these files elsewhere
-//   - Converting texture packs to Bedrock using this UI
-//
-// By using this project, you agree to these terms.
-*/
-
 {
+  //used for compatibility
   "$is_recolorful_containers": true,
-  //set UI transparency 0.0 - 1.0
-  "$container_opacity": 1,
-  
-  "$use_experimental_page_logic": true,// enables the recipe pages reseting to page 1 when current page is more than max page
 
-  
-  //tab ids can be customised useing https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
-  "$compass_id": 423,//creative inventory only survival is a png
+  //set UI transparency 0 - 1 (can be a float or a int)
+  "$container_opacity": 1,
+
+  //enables recipe books page resetting when current page is more than max page
+  "$use_experimental_page_logic": true,
+
+  //renders the hud/hotbar behind the current ui
+  //currently its disabled because it may clash with the player renderer within the inventory
+  "$show_hud_in_containers": false,
+
+  //these ids are whats used to render the items in the tab icons (inventory and crafting table)
+  //you can find the ids for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+  "$compass_id": 423, //creative inventory only survival is a png
   "$chest_id": 54,
   "$redstone_id": 405,
   "$iron_sword_id": 338,
@@ -34,19 +25,30 @@
   "$iron_axe_id": 329,
   "$golden_sword_id": 354,
 
+  //villager label colors    'if needed the wandering traders color can be separated'
+  "$villager_name_color": [0.247, 0.247, 0.247, 1.0],
+  "$villager_trade_color": [0.247, 0.247, 0.247, 1.0], //trade label above scroll pane
 
-
-  "$trade_title_text_color": [0.247, 0.247, 0.247, 1.0],
+  //recipe book
   "$recipe_edit_shadow_text_color": [0.717765, 0.717765, 0.717765],
   "$recipe_text_box_content_color": [0.247, 0.247, 0.247, 1.0],
   "$recipe_edit_text_color": [0.8392, 0.8392, 0.8392, 1.0],
   "$page_count_shadow_color": [0.717765, 0.717765, 0.717765],
   "$recipe_page_count_color": [0.95686, 0.95686, 0.95686, 1.0],
-  "$enchant_light_green": [0.518, 0.922, 0.208],
-  "$enchant_light_yellow": [0.404, 0.365, 0.286],
-  "$enchant_light_brown": [0.2, 0.18, 0.145],
-  "$enchant_dark_green": [0.318, 0.475, 0.216],                     
-  "$beacon_power_title_text_color": [0.8667, 0.8667, 0.8667]                                                                                                                                                                                                                                                            ,
 
-  "$rcc:dev": false// displays the debug elements used for development
+  //enchanting table text  'can add hover states for the colors if wanted'
+  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
+  "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
+
+  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
+  "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
+
+  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
+  "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
+
+  //displays the debug elements used for development
+  "$rcc:dev": false,
+
+  //external pack variables
+  "$is_jei_recipe_book_layout_pack": false
 }

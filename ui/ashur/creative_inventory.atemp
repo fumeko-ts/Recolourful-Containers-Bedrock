@@ -35,9 +35,20 @@
           "bindings": [
             {
               "binding_type": "view",
+              "source_control_name": "search_tab_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#is_search_tab"
+            },
+            {
+              "binding_type": "view",
               "binding_condition": "always",
               "source_control_name": "creative_recipe_grid",
               "source_property_name": "(#maximum_grid_items < 45)",
+              "target_property_name": "#less_than_45_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#less_than_45_items and #is_search_tab)",
               "target_property_name": "#visible"
             }
           ]
@@ -67,7 +78,7 @@
       {
         "inventory@creative_inventory.tab_contents": {
           "$tab_contents_is": "inventory_page",
-          "$tab_binding": "inventory_tab_toggle"
+          "$tab_binding": "survival_tab_toggle"
         }
       },
       { "construction@creative_inventory.tab_contents": { "$tab_binding": "construction_tab_toggle" } },
@@ -84,14 +95,21 @@
         "inventory_tab@creative_inventory.inventory_tab": { "anchor_to": "bottom_right", "anchor_from": "bottom_right" }
       },
       {
-        "scroll_panel@creative_inventory.scroll_panel": {
-          "size": [180, 112],
-          "anchor_to": "center",
+        "scroll_panel@scroll_panel.scroll_panel": {
+          "size": [181, 112],
+          "offset": [0.6, 5],
           "anchor_from": "center",
+          "anchor_to": "center",
+          "$scroll_size": [12, 112],
+          "$scroll_track_offset": [81, 0],
+          "$scroll_view_port_size": [180, 90],
+          "$scrolling_pane_size": ["100%", "100%"],
+          "$scroll_box_image_control": "creative_inventory.scroller",
+          "$scrolling_content": "creative_inventory.scroll_grid_holder",
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "inventory_tab_toggle",
+              "source_control_name": "survival_tab_toggle",
               "source_property_name": "(not #toggle_state)",
               "target_property_name": "#visible"
             }
@@ -119,18 +137,6 @@
       }
     ]
   },
-  "scroll_panel@scroll_panel.scroll_panel": {
-    "$scroll_track_offset": [81.2, 0],
-    "offset": [0.4, 5],
-    "anchor_to": "center",
-    "anchor_from": "center",
-    "$scroll_size": [12, 112],
-    "size": [181, 112],
-    "$scroll_view_port_size": [180, 90],
-    "$scrolling_pane_size": ["100%", "100%"],
-    "$scroll_box_image_control": "creative_inventory.scroller",
-    "$scrolling_content": "creative_inventory.scroll_grid_holder"
-  },
   "scroller@screen_content.image_element": {
     "tiled": true,
     "nineslice_size": [6, 7, 6, 6],
@@ -151,7 +157,7 @@
         "creative_recipe_grid": {
           "type": "grid",
           "size": [162, "default"],
-          "offset": [0.2, 0],
+          "offset": [0.4, 0],
           "$binding_condition|default": "visible",
           "$grid_item_template|default": "creative_recipe_item.recipe_container_item",
           "collection_name": "$collection_name",
@@ -191,7 +197,7 @@
         "inventory@creative_inventory.item_renderer": {
           "$item_identifier": "$chest_id",
           "offset": [0, -1],
-          "visible": "($toggle_control_name = 'inventory_tab_toggle')"
+          "visible": "($toggle_control_name = 'survival_tab_toggle')"
         }
       },
       {
@@ -241,6 +247,7 @@
     "$default_layer": 2,
 
     "$extra_contents": "creative_inventory.icon_control",
+    "$toggle_binding_value": "#toggle_state",
     "$size": [26, 32]
   },
   "search_tab@creative_inventory.top_tab": {
@@ -273,9 +280,8 @@
   "inventory_tab@creative_inventory.top_tab": {
     "$is_bottom_right_tab": true,
     "$icon_checked_offset": [0, 2],
-    "$toggle_control_name": "inventory_tab_toggle",
-    "$toggle_group_forced_index": "($search_index + 1)",
-    "$toggle_binding_value": "#inventory_tab"
+    "$toggle_control_name": "survival_tab_toggle",
+    "$toggle_group_forced_index": "$survival_index"
   },
 
   "tab_base_template@common.root_panel": { "size": [195, 136], "anchor_to": "center", "anchor_from": "center" },
@@ -391,8 +397,6 @@
               "item_remover": {
                 "type": "toggle",
                 "size": [18, 18],
-                "unchecked_control": "",
-                "checked_control": "",
                 "offset": [-6, -8],
                 "anchor_to": "bottom_right",
                 "anchor_from": "bottom_right",
@@ -564,3 +568,15 @@
     ]
   }
 }
+
+// {
+//   "namespace": "creative_inventory",
+//   "screen_base@global.empty_panel": {
+//     "size": [195, 192],
+//     "controls": [
+//       {
+//         "tabs@global.empty_panel": {}
+//       }
+//     ]
+//   }
+// }

@@ -5,42 +5,50 @@
   added experimental shadow text to most tooltips
   added a temp fix for mob effects not rendering
 1.2:
-  when useing touch input the enchanting table buttons require double press to select the enchant (this was done to combat mobile issues)
+  when using touch input the enchanting table buttons require double press to select the enchant (this was done to combat mobile issues)
 1.3:
-  fixed villager buttons breaking when the user has effect "villager hero" set above 1
-  fixed the small bugs that came with minecraft v26.0 release
+  fixed villager buttons breaking when the user has effect "village hero" set above 1
+  fixed the small bugs that came with minecraft v1.20.60 release
   updated the smithing input slots to include the new items 
   added anvil text blinker
-  max page in the recipe book is now 30 (was 64 but it was kinda lagy so i reduced)
-  centralised all item slots code for compatability perposes
-  compleatly remade the mounts ui so now if a mountable mob with a gui is renamed they wont default to the vanilla ui (the mount ui is experimental so may contain bugs)
+  max page in the recipe book is now 30 (was 64 but it was kinda laggy so i reduced)
+  centralized all item slots code for compatibility purposes
+  completely remade the mounts ui so now if a mountable mob with a gui is renamed they won't default to the vanilla ui (the mount ui is experimental so may contain bugs)
   added ambient effect to mob effects screen 
-  hopefully made pack compatible with vibrant visuals? if not then in not sure how to (i cant use shaders so i cant test)
-  fixed issues where in some screens the bundle wasent usable
-  the new mount uis code was written within the span of 8 hours wile i was half asleep so there are very likely bugs i have not encounterd
-  made the recipe book open and close toggle acurate the the java version of the pack
-  made the pc slot highlight more acurate to the java version of the game
+  hopefully made pack compatible with vibrant visuals? if not then i'm not sure how to (i can't use shaders so i can't test)
+  fixed issues where in some screens the bundle wasn't usable
+  the new mount uis code was written within the span of 8 hours while i was half asleep so there are very likely bugs i have not encountered
+  made the recipe book open and close toggle accurate to the java version of the pack
+  made the pc slot highlight more accurate to the java version of the game
   reworked how the tab toggles work in the inventory
   items in the trade uis trade panel no longer flicker on first hover
-  fixed a bug where the brewing stands bottle input icons would not become invisible on item input (ec when a splash potion is input) - seems to be a bug in the java pack? 
-  fixed sevral layering issues with each containers background sprite
+  fixed a bug where the brewing stands bottle input icons would not become invisible on item input (e.g. when a splash potion is input) - seems to be a bug in the java pack? 
+  fixed several layering issues with each containers background sprite
   added some more controller support in the inventory ui and crafting ui
-  fixed a bug where if you hoverd over a bundle to fast its popup would resize incorrectly
+  fixed a bug where if you hovered over a bundle too fast its popup would resize incorrectly
   fixed a vanilla bug with the looms pattern input slot not resetting when empty
-  fixed crafter powered animation not working when useing pocket ui layout
+  fixed crafter powered animation not working when using pocket ui layout
   added locator map indication to cartography table
-  touch users can now use scroll panels without useing the scroll bar
-  added support for useing number keys to move items
+  touch users can now use scroll panels without using the scroll bar
+  added support for using number keys to move items
   fixed a dark mode bug with certain text in the marketplace menu
+  fixed layering issue with player renderer in inventory (it's above the ui bg because when it was below it looked weird)
+  added exit and entrance animation to entity renderer within mount uis
+  removed touch scroll recipe panel for recipe book because it was causing too much lag
+  added vanilla screen safe area
+  remade enchant buttons to fix some visibility bugs
+  made customization using _global_variables.json more clear
+  made the ui bg conditions for the shulker box more strict
+  made the pack compatible with https://www.curseforge.com/minecraft-bedrock/texture-packs/jei-recipe-book-layout (load recolourful below)
+  fixed some offset layering issues with the flying item renderer
+
   
 Compatibility: 
-  There is a new file within the pack called extensions.atemp (namespace is rcc-extensions) it is intended for people to use in other packs so they can add things to this packs ui such as item movement buttons brewing guides ect
-  but if you make use of that file do not copy eany of the packs main code only copy whats in extensions.atemp and or container_item.atemp
+  There is a new file within the pack called extensions.atemp (namespace is rcc-extensions) it is intended for people to use in other packs so they can add things to this packs ui such as item movement buttons brewing guides etc.
+  but if you make use of that file do not copy any of the packs main code only copy whats in extensions.atemp and or container_item.atemp
 
 
-  if there are eany issues with modifieing the mount ui useing extensions.atemp then inform me (ashura_tepes) about it so i can see if its fixable or not
-
-
+  if there are any issues with modifying the mount ui using extensions.atemp then inform me (ashura_tepes) about it so i can see if its fixable or not
 
 
 

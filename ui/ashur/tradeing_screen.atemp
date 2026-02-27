@@ -114,7 +114,7 @@
                     "label@global.empty_label": {
                       "text": "atemp.merchant.trades",
                       "size": [ "default", 10 ],
-                      "color": "$trade_title_text_color",
+                      "color": "$villager_trade_color",
                       "layer": 14,
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
@@ -247,7 +247,7 @@
                       "size": [ "default", 10 ],
                       "anchor_to": "top_middle",
                       "anchor_from": "top_middle",
-                      "color": "$trade_title_text_color",
+                      "color": "$villager_name_color",
                       "layer": 14
                     }
                   }

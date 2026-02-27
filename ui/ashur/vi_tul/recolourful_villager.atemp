@@ -87,7 +87,7 @@
                           "label@global.empty_label": {
                             "text": "#final_index",
                             "size": [ "default", 10 ],
-                            "color": "$trade_title_text_color",
+                            "color": "$villager_name_color",
                             "layer": 2,
                             "bindings": [
                               {"binding_name": "#name_label", "binding_condition": "always"},
@@ -306,7 +306,7 @@
                                 "label@global.empty_label": {
                                   "text": "$profession_text",
                                   "size": [ "default", 10 ],
-                                  "color": "$trade_title_text_color",
+                                  "color": "$villager_name_color",
                                   "layer": 14
                                 }
                               }
@@ -348,7 +348,7 @@
   "secondary_label@global.empty_label": {
     "text": "$secondary_label_text",
     "size": [ "default", 10 ],
-    "color": "$trade_title_text_color",
+    "color": "$villager_name_color",
     "layer": 14,
     "bindings": [
       {"binding_name": "#name_label", "binding_condition": "always"},
@@ -364,7 +364,7 @@
     "text": "$villager_mastery",
     "size": [ "default", 10 ],
     "layer": 2,
-    "color": "$trade_title_text_color",
+    "color": "$villager_name_color",
     "bindings": [
       {"binding_name": "#name_label", "binding_condition": "always"},
       {

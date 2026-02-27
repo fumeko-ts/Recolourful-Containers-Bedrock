@@ -161,7 +161,5 @@ item.pink_bundle=§p§rBundle rosa
 item.magenta_bundle=§d§rBundle magenta
 item.purple_bundle=§5§rBundle viola
 item.cyan_bundle=§3§rBundle ciano
-craftingScreen.tab.construction=sr1.atemp
-craftingScreen.tab.nature=sr1.atemp
-craftingScreen.tab.equipment=sr1.atemp
-craftingScreen.tab.items=sr1.atemp
+
+container.enchant.clue=%s §r. . . ?
