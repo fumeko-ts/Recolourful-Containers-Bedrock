@@ -44,9 +44,9 @@
     "controls": [
       {
         "barrel_bg@screen_content.image_element": {
-          "size": [192, 174],
-          "anchor_from": "center",
-          "anchor_to": "center",
+          "size": [176, 166],
+          "uv": [8, 8],
+          "uv_size": [176, 166],
           "layer": 1,
           "texture": "assets/sprites/chests/barrel"
         }

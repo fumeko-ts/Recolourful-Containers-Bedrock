@@ -177,9 +177,6 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
-      },
-      {
         "error_containment@global.empty_panel": {
           "size": [63, 52],
           "anchor_from": "top_left",
@@ -207,6 +204,9 @@
             }
           ]
         }
+      },
+      {
+        "bottom_section@global.container_bottom_section": {}
       }
     ]
   },

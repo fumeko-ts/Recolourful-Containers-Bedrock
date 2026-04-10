@@ -13,9 +13,7 @@
 //
 // By using this project, you agree to these terms.
 */
-
 {
-  // i plan of rewriteing this code compleatly to add touch scrolling support (i dont know how yet so i will tweak the vanilla one till i find it out)
   "namespace": "scroll_panel",
   "scroll_panel": {
     "type": "input_panel",
@@ -35,44 +33,11 @@
     "$scroll_track_offset": [0, 0],
     "$scroll_box_image_control": "global.empty_image",
     "anchor_from": "top_left",
-    "$scroll_track_anchor|default": "center",
     "$scroll_panel_consume_hover_events|default": true,
     "consume_hover_events": "$scroll_panel_consume_hover_events",
+    "$scroll_track_icon|default": "global.empty_panel",
     "$scroll_view_name|default": "scroll_view",
     "tts_ignore_count": true,
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_back",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed",
-        "ignored": "(not $is_ps4)"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      }
-    ],
     "controls": [
       {
         "$scroll_view_name": {
@@ -102,7 +67,6 @@
               "button_up_right_of_first_refusal": true
             }
           ],
-
           "bindings": [
             {
               "binding_name": "#gesture_control_enabled"
@@ -114,14 +78,12 @@
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
                 "$view_port_size|default": ["100%", "100%"],
-                "clips_children": true,
                 "controls": [
                   {
                     "viewport@global.empty_panel": {
                       "size": "$view_port_size",
                       "anchor_from": "top_left",
                       "anchor_to": "top_left",
-                      "clips_children": true,
                       "$scrolling_content_anchor_from|default": "top_left",
                       "$scrolling_content_anchor_to|default": "top_left",
                       "controls": [
@@ -140,6 +102,11 @@
                                   "anchor_from": "$scrolling_content_anchor_from",
                                   "anchor_to": "$scrolling_content_anchor_to"
                                 }
+                              },
+                              {
+                                "debug@screen_content.debug_element": {
+                                  "color": "purple"
+                                }
                               }
                             ]
                           }
@@ -151,8 +118,8 @@
                     "bar_and_track@global.empty_panel": {
                       "clips_children": true,
                       "size": "$scrolling_pane_size",
-                      "anchor_from": "$scroll_track_anchor",
-                      "anchor_to": "$scroll_track_anchor",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
                       "controls": [
                         {
                           "centered_panel@global.empty_panel": {
@@ -170,7 +137,7 @@
                                   "layer": 4,
                                   "anchor_from": "center",
                                   "anchor_to": "center",
-                                  "controls": [{ "bar_indent@global.empty_panel": {} }],
+                                  "controls": [{ "bar_indent@$scroll_track_icon": {} }],
                                   "button_mappings": [
                                     {
                                       "from_button_id": "button.menu_select",
@@ -216,11 +183,6 @@
                     }
                   }
                 ]
-              }
-            },
-            {
-              "debug@screen_content.debug_element": {
-                "color": "purple"
               }
             }
           ]

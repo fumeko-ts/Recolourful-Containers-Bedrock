@@ -1,6 +1,8 @@
 {
   "ui_defs": [
     //container screen files
+    "ui/ashur/-common/recipe_book.atemp",
+    
     "ui/ashur/anvil_screen.atemp",
     "ui/ashur/barrel.atemp",
     "ui/ashur/beacon_screen.atemp",
@@ -34,14 +36,14 @@
     "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
     "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
     "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",
-    "ui/ashur/-common/misc.unsorted/recipe_grid.atemp",
+    "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp",
     "ui/ashur/-common/misc.unsorted/selected_item.atemp",
     "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp",
 
     //input elements 
     "ui/ashur/-common/input_elements/enchant_button.atemp",
     "ui/ashur/-common/input_elements/scroll_panel.atemp",
-    "ui/ashur/-common/input_elements/text_edit_box.atemp",
+    "ui/ashur/-common/input_elements/text_edit_area.atemp",
     "ui/ashur/-common/input_elements/toggle.atemp",
 
     //globals
@@ -75,6 +77,7 @@
     "ui/ashur/vi_tul/animations/smithing_animations.atemp",
     "ui/ashur/vi_tul/animations/villager_animation.atemp",
     "ui/ashur/vi_tul/selected_trade_invalid.atemp",
+    "ui/ashur/vi_tul/animations/anvil_hammer.atemp",
 
     //beacon buttons (x and confirm buttons are defined within beacon_screen.atemp at the bottom)
     "ui/ashur/vi_tul/beacon/primary_button.atemp",

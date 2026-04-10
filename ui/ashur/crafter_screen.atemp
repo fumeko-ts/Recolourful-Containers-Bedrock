@@ -225,7 +225,13 @@
                                       }
                                     },
                                     {
-                                      "output_stack_count_label@global.stack_count_label": {
+                                      "output_stack_count_label": {
+                                        "type": "label",
+                                        "offset": [0, 1],
+                                        "anchor_to": "bottom_right",
+                                        "anchor_from": "bottom_right",
+                                        "shadow": true,
+                                        "text": "#inventory_stack_count",
                                         "layer": 20,
                                         "bindings": [
                                           {
@@ -253,7 +259,7 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+        "bottom_section@global.container_bottom_section": {}
       }
     ]
   },

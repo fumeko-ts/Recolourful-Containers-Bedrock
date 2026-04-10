@@ -15,7 +15,7 @@
 */
 
 {
-  "empty_progress_bar@screen_content.image_element": { "texture": "textures/ui/experience_bar_empty" },
+  "empty_progress_bar@global.empty_image": { "texture": "textures/ui/experience_bar_empty" },
   "exp_full_template@global.empty_image": {
     "clip_direction": "left",
     "uv": {
@@ -50,7 +50,7 @@
                 ],
                 "controls": [
                   {
-                    "classic_empty@screen_content.image_element": {
+                    "classic_empty@global.empty_image": {
                       "texture": "textures/ui/experience_bar_empty",
                       "uv_size": [182, 5],
                       "size": [182, 5]
@@ -78,7 +78,7 @@
                 ],
                 "controls": [
                   {
-                    "pocket_empty@screen_content.image_element": {
+                    "pocket_empty@global.empty_image": {
                       "texture": "textures/ui/experience_bar_mobile_empty",
                       "uv_size": [202, 5],
                       "size": [202, 5]

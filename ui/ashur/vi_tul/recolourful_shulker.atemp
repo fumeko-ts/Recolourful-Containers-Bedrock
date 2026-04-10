@@ -11,61 +11,102 @@
 //   - Reuploading, redistributing, or hosting these files elsewhere
 //   - Converting texture packs to Bedrock using this UI
 //
-// - redstone chicken stay out of this file ik you been reading these
 //
 // By using this project, you agree to these terms.
 */
-
 {
   "namespace": "recolourful_shulker",
-  "recolourful_shulker@global.root_panel": {
+  //possibly the current best way of doing this (it i way less likely to break than the other version)
+  "recolourful_shulker@global.empty_panel": {
     "size": [176, 166],
     "anchor_from": "center",
     "anchor_to": "center",
-    "$shulker_texel|default": "",
+    "$container_name|default": "$container_title",
     "controls": [
-      { "1@recolourful_shulker.colored_bindings": { "$shulker_id": "§f§r", "$shulker_texel": "white" } },
-      { "2@recolourful_shulker.colored_bindings": { "$shulker_id": "§p§r", "$shulker_texel": "orange" } },
-      { "3@recolourful_shulker.colored_bindings": { "$shulker_id": "§5§r", "$shulker_texel": "magenta" } },
-      { "4@recolourful_shulker.colored_bindings": { "$shulker_id": "§b§r", "$shulker_texel": "light_blue" } },
-      { "5@recolourful_shulker.colored_bindings": { "$shulker_id": "§e§r", "$shulker_texel": "yellow" } },
-      { "6@recolourful_shulker.colored_bindings": { "$shulker_id": "§a§r", "$shulker_texel": "lime" } },
-      { "7@recolourful_shulker.colored_bindings": { "$shulker_id": "§d§r", "$shulker_texel": "pink" } },
-      { "8@recolourful_shulker.colored_bindings": { "$shulker_id": "§8§r", "$shulker_texel": "gray" } },
-      { "9@recolourful_shulker.colored_bindings": { "$shulker_id": "§7§r", "$shulker_texel": "light_gray" } },
-      { "10@recolourful_shulker.colored_bindings": { "$shulker_id": "§3§r", "$shulker_texel": "cyan" } },
-      { "11@recolourful_shulker.colored_bindings": { "$shulker_id": "§u§r", "$shulker_texel": "purple" } },
-      { "12@recolourful_shulker.colored_bindings": { "$shulker_id": "§9§r", "$shulker_texel": "blue" } },
-      { "13@recolourful_shulker.colored_bindings": { "$shulker_id": "§n§r", "$shulker_texel": "brown" } },
-      { "14@recolourful_shulker.colored_bindings": { "$shulker_id": "§2§r", "$shulker_texel": "green" } },
-      { "15@recolourful_shulker.colored_bindings": { "$shulker_id": "§c§r", "$shulker_texel": "red" } },
-      { "16@recolourful_shulker.colored_bindings": { "$shulker_id": "§0§r", "$shulker_texel": "black" } },
-      { "17@recolourful_shulker.colored_bindings": { "$shulker_id": "§z§r", "$shulker_texel": "default" } },
       {
-        "custom_renamed@recolourful_shulker.colored_bindings": {
-          "$shulker_texel": "default",
-          // should now account for all states?
-          "$shulker_property_name": "((not ((('%.6s' * #screen_route) - 'f' - 'p' - 'z' - '5' - 'b' - 'e' - 'a' - 'd' - '8' - '7' - '3' - 'u' - '9' - 'n' - '2' - 'c' - '0') = '§§r')) or ('%.5s' * #screen_route) = '§§r')"
+        "colors@screen_content.image_element": {
+          "uv_size": [176, 166],
+          "size": [176, 166],
+          "$shulker_texture": "assets/advanced_sprites/shulker_box/default",
+          "texture": "$shulker_texture",
+          /*
+            redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
+          */
+          "variables": [
+            {"requires":"(('%.6s' * $container_name) = '§f§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/white"      },
+            {"requires":"(('%.6s' * $container_name) = '§p§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/orange"     },
+            {"requires":"(('%.6s' * $container_name) = '§5§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/magenta"    },
+            {"requires":"(('%.6s' * $container_name) = '§b§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/light_blue" },
+            {"requires":"(('%.6s' * $container_name) = '§e§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/yellow"     },
+            {"requires":"(('%.6s' * $container_name) = '§a§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/lime"       },
+            {"requires":"(('%.6s' * $container_name) = '§d§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/pink"       },
+            {"requires":"(('%.6s' * $container_name) = '§8§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/gray"       },
+            {"requires":"(('%.6s' * $container_name) = '§7§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/light_gray" },
+            {"requires":"(('%.6s' * $container_name) = '§3§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/cyan"       },
+            {"requires":"(('%.6s' * $container_name) = '§u§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/purple"     },
+            {"requires":"(('%.6s' * $container_name) = '§9§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/blue"       },
+            {"requires":"(('%.6s' * $container_name) = '§n§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/brown"      },
+            {"requires":"(('%.6s' * $container_name) = '§2§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/green"      },
+            {"requires":"(('%.6s' * $container_name) = '§c§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/red"        },
+            {"requires":"(('%.6s' * $container_name) = '§0§r')","$shulker_texture":"assets/advanced_sprites/shulker_box/black"      }
+          ]
         }
-      }
-    ]
-  },
-  "colored_bindings@screen_content.image_element": {
-    "uv_size": [176, 166],
-    "size": [176, 166],
-    "$shulker_id|default": "",
-    "property_bag": {
-      "#screen_route": "$container_title"
-    },
-    "$shulker_texture": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
-    "$shulker_property_name|default": "(($shulker_id + (#screen_route - $shulker_id)) = #screen_route)",
-    "texture": "$shulker_texture",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_property_name": "$shulker_property_name",
-        "target_property_name": "#visible"
       }
     ]
   }
 }
+//old version
+// kept incase the above has some unfound side effects
+// {
+//   "namespace": "recolourful_shulker",
+//   "recolourful_shulker@global.root_panel": {
+//     "size": [176, 166],
+//     "anchor_from": "center",
+//     "anchor_to": "center",
+//     "$shulker_texel|default": "",
+//     "controls": [
+//       { "1@recolourful_shulker.colored_bindings": { "$shulker_id": "§f§r", "$shulker_texel": "white" } },
+//       { "2@recolourful_shulker.colored_bindings": { "$shulker_id": "§p§r", "$shulker_texel": "orange" } },
+//       { "3@recolourful_shulker.colored_bindings": { "$shulker_id": "§5§r", "$shulker_texel": "magenta" } },
+//       { "4@recolourful_shulker.colored_bindings": { "$shulker_id": "§b§r", "$shulker_texel": "light_blue" } },
+//       { "5@recolourful_shulker.colored_bindings": { "$shulker_id": "§e§r", "$shulker_texel": "yellow" } },
+//       { "6@recolourful_shulker.colored_bindings": { "$shulker_id": "§a§r", "$shulker_texel": "lime" } },
+//       { "7@recolourful_shulker.colored_bindings": { "$shulker_id": "§d§r", "$shulker_texel": "pink" } },
+//       { "8@recolourful_shulker.colored_bindings": { "$shulker_id": "§8§r", "$shulker_texel": "gray" } },
+//       { "9@recolourful_shulker.colored_bindings": { "$shulker_id": "§7§r", "$shulker_texel": "light_gray" } },
+//       { "10@recolourful_shulker.colored_bindings": { "$shulker_id": "§3§r", "$shulker_texel": "cyan" } },
+//       { "11@recolourful_shulker.colored_bindings": { "$shulker_id": "§u§r", "$shulker_texel": "purple" } },
+//       { "12@recolourful_shulker.colored_bindings": { "$shulker_id": "§9§r", "$shulker_texel": "blue" } },
+//       { "13@recolourful_shulker.colored_bindings": { "$shulker_id": "§n§r", "$shulker_texel": "brown" } },
+//       { "14@recolourful_shulker.colored_bindings": { "$shulker_id": "§2§r", "$shulker_texel": "green" } },
+//       { "15@recolourful_shulker.colored_bindings": { "$shulker_id": "§c§r", "$shulker_texel": "red" } },
+//       { "16@recolourful_shulker.colored_bindings": { "$shulker_id": "§0§r", "$shulker_texel": "black" } },
+//       { "17@recolourful_shulker.colored_bindings": { "$shulker_id": "§z§r", "$shulker_texel": "default" } },
+//       {
+//         "custom_renamed@recolourful_shulker.colored_bindings": {
+//           "$shulker_texel": "default",
+//           // should now account for all states?
+//           "$shulker_property_name": "((not ((('%.6s' * #screen_route) - 'f' - 'p' - 'z' - '5' - 'b' - 'e' - 'a' - 'd' - '8' - '7' - '3' - 'u' - '9' - 'n' - '2' - 'c' - '0') = '§§r')) or ('%.5s' * #screen_route) = '§§r')"
+//         }
+//       }
+//     ]
+//   },
+//   "colored_bindings@screen_content.image_element": {
+//     "uv_size": [176, 166],
+//     "size": [176, 166],
+//     "$shulker_id|default": "",
+//     "property_bag": {
+//       "#screen_route": "$container_title"
+//     },
+//     "$shulker_texture": "('assets/advanced_sprites/shulker_box/' + $shulker_texel)",
+//     "$shulker_property_name|default": "(($shulker_id + (#screen_route - $shulker_id)) = #screen_route)",
+//     "texture": "$shulker_texture",
+//     "bindings": [
+//       {
+//         "binding_type": "view",
+//         "source_property_name": "$shulker_property_name",
+//         "target_property_name": "#visible"
+//       }
+//     ]
+//   }
+// }

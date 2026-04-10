@@ -4,6 +4,7 @@
 
   //set UI transparency 0 - 1 (can be a float or a int)
   "$container_opacity": 1,
+  "$hover_text_opacity": 1,
 
   //enables recipe books page resetting when current page is more than max page
   "$use_experimental_page_logic": true,
@@ -36,7 +37,8 @@
   "$page_count_shadow_color": [0.5725, 0.5725, 0.5725, 1.0],
   "$recipe_page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
 
-  //enchanting table text  'can add hover states for the colors if wanted'
+
+  //enchanting table text colors
   "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
   "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
 
@@ -46,10 +48,14 @@
   "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
   "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
 
+  "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+
   //displays the debug elements used for development
   "$rcc:dev": false,
 
   //external pack variables
+  "$brewing_content": "global.empty_panel",
+  "$ashur:brewing_guide": false,
   "$is_jei_recipe_book_layout_pack": false,
 
   //vanilla variables

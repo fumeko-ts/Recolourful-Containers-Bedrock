@@ -90,7 +90,11 @@
                                   ]
                                 }
                               },
-                              { "fuel_input_item@container_item.container_item": { "$item_collection": "furnace_fuel_items" } }
+                              {
+                                "fuel_input_item@container_item.container_item": {
+                                  "$item_collection": "furnace_fuel_items"
+                                }
+                              }
                             ]
                           }
                         },
@@ -162,7 +166,7 @@
               }
             },
             {
-              "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+              "bottom_section@global.container_bottom_section": {}
             }
           ]
         }

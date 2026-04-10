@@ -1,4 +1,2 @@
-
 localize beacon toggles for better performance
 make more compatibility improvements -- (even more than there currently is)
-simplify furnace, smoker, blast furnaces code (because mojang has set the foundations for a vanilla furnace recipe book in bedrock)

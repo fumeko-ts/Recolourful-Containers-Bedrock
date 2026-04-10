@@ -29,6 +29,9 @@
   "main_contents@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
+      /*
+        redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
+      */
       {
         "common_panel@global.empty_panel": {
           "controls": [
@@ -193,10 +196,7 @@
         }
       },
       {
-        "bottom_half@global.inventory_bottom_half": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
+        "bottom_section@global.container_bottom_section": {}
       }
     ]
   },

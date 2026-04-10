@@ -16,6 +16,58 @@
 
 {
   "namespace": "screen_content",
+
+
+
+
+
+
+
+
+
+
+
+
+  // base ui template
+  "container_template@screen_content.image_element": {
+    "size": "$size",
+    "uv_size": "$size",
+    "$extra_ui_contents|default": [],
+    "controls": [
+      {
+        "extra_content@global.empty_panel": {
+          "size": "$size",
+          "controls": "$extra_ui_contents"
+        }
+      }
+    ]
+  },  // creative inventory sprites
+
+  "creative_inventory@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/sprites/creative_inventory/tab_inventory",
+    "layer": 3
+  },
+  "creative_inventory_misc@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/sprites/creative_inventory/tab_items",
+    "layer": 3
+  },
+  "creative_inventory_search@screen_content.container_template": {
+    "$size": [195, 136],
+    "texture": "assets/sprites/creative_inventory/tab_item_search",
+    "layer": 3
+  },
+
+
+
+
+
+
+
+
+
+  //old elements that need to be rewritten
   "image_element@global.empty_image": {"alpha": "$container_opacity"},
   "highlight_slot@screen_content.image_element": {
     "texture": "textures/ui/ashur/white_slot",
@@ -31,13 +83,6 @@
     "uv_size": [ 147, 166 ],
     "uv": [ 1, 1 ],
     "layer": 9
-  },
-  "creative_inventory@screen_content.image_element": {"uv_size": [ 195, 136 ], "texture": "assets/sprites/creative_inventory/tab_inventory", "layer": 3},
-  "creative_inventory_misc@screen_content.image_element": {"uv_size": [ 195, 136 ], "texture": "assets/sprites/creative_inventory/tab_items", "layer": 3},
-  "creative_inventory_search@screen_content.image_element": {
-    "uv_size": [ 195, 136 ],
-    "texture": "assets/sprites/creative_inventory/tab_item_search",
-    "layer": 3
   },
   "anvil_edit_box@screen_content.image_element": {"texture": "assets/sprite_assets/container/anvil/text_field_disabled"},
   "anvil_edit_box_hover@screen_content.image_element": {"texture": "assets/sprite_assets/container/anvil/text_field"},

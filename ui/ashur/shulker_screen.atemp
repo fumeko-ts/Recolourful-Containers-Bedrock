@@ -61,7 +61,7 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+        "bottom_section@global.container_bottom_section": {}
       }
     ]
   }

@@ -2,41 +2,28 @@
   "namespace": "horse_screen",
   "main_content@container_content.root_panel": {
     "size": [176, 166],
+    "$container_name|default": "$container_title",
     "controls": [
       { "extension@rcc-extensions.horse_screen": {} },
       {
-        "horse@horse_screen.horse_bindings": {
-          "texture": "assets/advanced_sprites/horse/horse.png",
-          "$source_property_name": "(not (#screen_route = 'entity.zombie_horse.name'))"
-        }
-      },
-      {
-        "zombie_horse@horse_screen.horse_bindings": {
-          "$mount": "entity.zombie_horse.name",
-          "texture": "assets/advanced_sprites/horse/zombie_horse.png" // fall backs onto the control above incase mobs renamed (maybe?)
+        "horse@screen_content.image_element": {
+          "size": [176, 166],
+          "uv_size": [176, 166],
+          "texture": "$texture",
+          "$texture": "assets/advanced_sprites/horse/horse.png",
+          "variables": [
+            {
+              "requires": "($container_name = 'entity.zombie_horse.name')",
+              "$texture": "assets/advanced_sprites/horse/zombie_horse.png"
+            }
+          ]
         }
       }
     ],
     "bindings": [
       {
-        "binding_name": "#has_horse_armor_and_saddle_slot",// add this so it dosent become visible for other mount uis?
+        "binding_name": "#has_horse_armor_and_saddle_slot", // add this so it dosent become visible for other mount uis?
         "binding_name_override": "#visible"
-      }
-    ]
-  },
-  "horse_bindings@screen_content.image_element": {
-    "property_bag": {
-      "#screen_route": "$container_title" // $container_title is a pre-defined global (hardcoded)
-    },
-    "size": [176, 166],
-    "uv_size": [176, 166],
-    "$source_property_name|default": "(#screen_route = $mount)",
-    "$mount|default": "none",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_property_name": "$source_property_name",
-        "target_property_name": "#visible"
       }
     ]
   }

@@ -41,7 +41,7 @@
               "smoker_top_half@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [176, 70],
-                      "layer": 2,
+                "layer": 2,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
@@ -91,7 +91,11 @@
                                   ]
                                 }
                               },
-                              { "fuel_input_item@container_item.container_item": { "$item_collection": "furnace_fuel_items" } }
+                              {
+                                "fuel_input_item@container_item.container_item": {
+                                  "$item_collection": "furnace_fuel_items"
+                                }
+                              }
                             ]
                           }
                         },
@@ -156,7 +160,7 @@
               }
             },
             {
-              "bottom@global.inventory_bottom_half": { "anchor_to": "bottom_middle", "anchor_from": "bottom_middle" }
+              "bottom_section@global.container_bottom_section": {}
             }
           ]
         }

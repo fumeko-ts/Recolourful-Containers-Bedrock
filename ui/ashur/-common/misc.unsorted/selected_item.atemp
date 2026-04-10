@@ -57,7 +57,7 @@
     "easing": "in_quint",
     "destroy_at_end": "selected_item_details",
     "duration": 2,
-    "from": 1.0,
+    "from": "$hover_text_opacity",
     "to": 0
   },
   "mobile_tooltip_base@screen_content.image_element": {
@@ -67,7 +67,8 @@
     "nineslice_size": 3,
     "controls": [
       {
-        "hover_text@global.empty_label": {
+        "hover_text": {
+          "type": "label",
           "size": [ "default", "default" ],
           "text": "#hover_text",
           "alpha": "@selected_item.anim_item_details_alpha",

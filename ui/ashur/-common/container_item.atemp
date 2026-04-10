@@ -19,20 +19,12 @@
     "$dont_render_item|default": false,
     "$dont_render_hover_text|default": false,
     "$dont_render_item_count|default": false,
-    "$cell_hover_text_bindings|default": [
-      {
-        "binding_name": "$hover_text_binding_name",
-        "binding_name_override": "#hover_text",
-        "binding_condition": "always",
-        "binding_type": "collection",
-        "binding_collection_name": "$item_collection"
-      }
-    ],
     "controls": [
       { "$background_image_control_name@$background_images": {} },
       { "$extra_contents@$extra_contents": {} },
       {
-        "stack_count_label@global.empty_label": {
+        "stack_count_label": {
+          "type": "label",
           "offset": "$stack_count_offset",
           "anchor_to": "bottom_right",
           "anchor_from": "bottom_right",
@@ -186,24 +178,10 @@
                 ]
               }
             },
-            {
-              "bundle_open_icon_back@container_item.bundle_item_template": {
-                "$z_index": 4,
-                "$renderer_type": "open_back"
-              }
-            },
-            {
-              "bundle_selected_item_icon@container_item.bundle_item_template": {
-                "$z_index": 5,
-                "$renderer_type": "item_renderer_data"
-              }
-            },
-            {
-              "bundle_open_icon_front@container_item.bundle_item_template": {
-                "$z_index": 6,
-                "$renderer_type": "open_front"
-              }
-            },
+
+            {"bundle_open_icon_back@container_item.bundle_item_template"    : {"$z_index": 4,"$renderer_type": "open_back"}},
+            {"bundle_selected_item_icon@container_item.bundle_item_template": {"$z_index": 5,"$renderer_type": "item_renderer_data"}},
+            {"bundle_open_icon_front@container_item.bundle_item_template"   : {"$z_index": 6,"$renderer_type": "open_front"}},
 
             {
               "storage_bar@global.custom_renderer": {
@@ -280,7 +258,7 @@
 
   "item_button": {
     "type": "button",
-    "focus_enabled": false,
+    "focus_enabled": "$game_pad",
     "focus_wrap_enabled": false,
     "focus_magnet_enabled": false,
     "default_focus_precedence": 1,
@@ -379,23 +357,7 @@
           "layer": 16
         }
       },
-      {
-        "hover_text_controler@global.empty_panel": {
-          "ignored": "($touch or $dont_render_hover_text)", 
-          "layer": 290,
-          "$hover_text_binding_name|default": "#hover_text",
-          "controls": [
-            {
-              "hover_text_java@global.custom_renderer": {
-                "allow_clipping": false,
-                "$type": "bundle_tooltip_renderer",
-                "layer": 29,
-                "controls": [{ "1@java_hover_text.java_tooltip_test": {} }]
-              }
-            }
-          ]
-        }
-      }
+      { "item_hover_text@java_hover_text.hover_text_renderer": {} }
     ]
   },
 

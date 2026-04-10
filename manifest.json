@@ -2,25 +2,34 @@
   "format_version": 2,
   "header": {
     "name": "§4R§ce§6c§eo§al§2o§3ur§9fu§5l §rContainers §lBE§r",
-    "description": "Original textures by Vi_Tul\nCode by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
+    "description": "Original textures by Vi_Tul\nUI Code by Ashura_temps\n§lJoin Discord! §9discord.gg/zTYjykBHkJ§r",
     "uuid": "5af785d1-32fa-4098-baf3-be202c719d99",
-    "version": [1, 1, 0],
-    "min_engine_version": [ 1, 21, 100 ]
+    "version": [1, 3, 0],
+    "min_engine_version": [ 1, 26, 10 ]
   },
   "modules": [
     {
       "type": "resources",
       "description": "§3By Vi_Tul",
       "uuid": "c4555b83-d908-44ff-a014-6bac73db368a",
-      "version": [1, 1, 0]
+      "version": [1, 3, 0]
     }
   ],
   "metadata": {
-    "ui_code_creator": ["Ashura_temps", "ashura_tepes", "https://www.planetminecraft.com/member/ashura_tepes/"],
-    "texture_creator": ["Vi_Tul", "https://www.curseforge.com/members/vi_tul/projects"]
+    "authors": [
+      // texture creator
+      "Vi_Tul",
+      "https://www.curseforge.com/members/vi_tul/projects",
+      // ui code developer
+      "Ashura_temps",
+      "https://www.planetminecraft.com/member/ashura_tepes/"
+    ],
+    // offical download!
+    "url": "https://www.curseforge.com/minecraft-bedrock/texture-packs/recolourful-containers-be"
   },
   "subpacks": [
     { "folder_name": "dark" , "name": "§lDark mode§r" , "memory_tier": 1 },
     { "folder_name": "light", "name": "§lLight mode§r", "memory_tier": 2 }
-  ]
+  ],
+  "capabilities": ["pbr"]
 }

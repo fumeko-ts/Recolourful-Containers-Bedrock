@@ -43,7 +43,7 @@
   },
   "screen_holder_safezone@global.empty_stack": {
     "orientation": "horizontal",
-    "$screen_content_control_name|default": "('§r§e [' + $screen_content + '§r§e] §4§lis_invalid§r')",// used for clarity in the error logs
+    "$screen_content_control_name|default": "('§r§e [' + $screen_content + '§r§e] §r')", // used for clarity in the error logs
     "size": ["100%", "100%"],
     "controls": [
       {
@@ -79,6 +79,28 @@
                 "size": ["100%", "fill"],
                 "controls": [
                   { "$screen_content_control_name@$screen_content": {} },
+                  {
+                    "gamepad_cursor_button": {
+                      "type": "button",
+                      "visible": "$game_pad",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "locked_control": "",
+                      "default_control": "default",
+                      "hover_control": "hover",
+                      "pressed_control": "pressed",
+                      "layer": -10,
+                      "size": [16, 16],
+                      "follows_cursor": true,
+                      "always_handle_pointer": true,
+                      "controls": [
+                        { "default@safezone.gamepad_cursor_image": {} },
+                        { "pressed@safezone.gamepad_cursor_image": {} },
+                        { "hover@safezone.gamepad_cursor_image": {} }
+                      ]
+                    }
+                  },
+
                   {
                     "bundle_tooltip_wrapper@global.empty_panel": {
                       "size": ["100%", "100%"],
@@ -143,5 +165,12 @@
         }
       }
     ]
+  },
+  "gamepad_cursor_image": {
+    "type": "image",
+    "texture": "textures/ui/pointer",
+    "size": [14, 14],
+    "layer": 60,
+    "follows_cursor": true
   }
 }

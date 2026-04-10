@@ -20,7 +20,7 @@
     "anim_type": "uv",
     "from": "$frame",
     "to": "$frame",
-    "duration": 0.1,
+    "duration": 0.09,
     "next": "(@portal. + $next_frame)"
   },
   "portal_0@portal.protal_uv_template": {"$frame": [ 0, 0 ], "$next_frame": "portal_1"},

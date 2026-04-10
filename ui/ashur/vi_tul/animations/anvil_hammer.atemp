@@ -1,0 +1,27 @@
+{
+  "namespace": "anvil_hammer",
+  "uv_anim_base": {
+    "anim_type": "uv",
+    "easing": "in_out_sine",
+    "from": "$frame",
+    "to": "$frame",
+    "duration": "$frame_time",
+    "$frame_time": 0.025,// had java and bedrock open so i could get the speed more acurate
+    "next": "(@anvil_hammer. + $next_frame)"
+  },
+  "hammer_0@anvil_hammer.uv_anim_base": { "$frame": [0, 0], "$next_frame": "hammer_1", "$frame_time": 10 },
+  "hammer_1@anvil_hammer.uv_anim_base": { "$frame": [0, 23], "$next_frame": "hammer_2" },
+  "hammer_2@anvil_hammer.uv_anim_base": { "$frame": [0, 46], "$next_frame": "hammer_3" },
+  "hammer_3@anvil_hammer.uv_anim_base": { "$frame": [0, 69], "$next_frame": "hammer_4" },
+  "hammer_4@anvil_hammer.uv_anim_base": { "$frame": [0, 92], "$next_frame": "hammer_5" },
+  "hammer_5@anvil_hammer.uv_anim_base": { "$frame": [0, 115], "$next_frame": "hammer_6" },
+  "hammer_6@anvil_hammer.uv_anim_base": { "$frame": [0, 138], "$next_frame": "hammer_7" },
+  "hammer_7@anvil_hammer.uv_anim_base": { "$frame": [0, 161], "$next_frame": "hammer_8" },
+  "hammer_8@anvil_hammer.uv_anim_base": { "$frame": [0, 184], "$next_frame": "hammer_9" },
+  "hammer_9@anvil_hammer.uv_anim_base": { "$frame": [0, 207], "$next_frame": "hammer_10" },
+  "hammer_10@anvil_hammer.uv_anim_base": { "$frame": [0, 230], "$next_frame": "hammer_11" },
+  "hammer_11@anvil_hammer.uv_anim_base": { "$frame": [0, 253], "$next_frame": "hammer_12" },
+  "hammer_12@anvil_hammer.uv_anim_base": { "$frame": [0, 276], "$next_frame": "hammer_13" },
+  "hammer_13@anvil_hammer.uv_anim_base": { "$frame": [0, 299], "$next_frame": "hammer_14" },
+  "hammer_14@anvil_hammer.uv_anim_base": { "$frame": [0, 322], "$next_frame": "hammer_0" }
+}

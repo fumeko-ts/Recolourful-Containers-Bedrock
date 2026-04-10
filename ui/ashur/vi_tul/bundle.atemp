@@ -23,8 +23,17 @@
         "highlight_panel@global.empty_panel": {
           "controls": [
             {
-              "highlight_slot@screen_content.highlight_slot": {
-                "layer": 1
+              "highlight_slot@global.empty_image": {
+                "texture": "textures/ui/ashur/cell_icons/slot_highlight_back.png",
+                "size": [18, 18],
+                "layer": 5
+              }
+            },
+            {
+              "highlight_slot_overlay@global.empty_image": {
+                "texture": "textures/ui/ashur/cell_icons/slot_highlight_front.png",
+                "size": [18, 18],
+                "layer": 16
               }
             }
           ],
@@ -168,7 +177,8 @@
           "layer": 2,
           "controls": [
             {
-              "bundle_label@global.empty_label": {
+              "bundle_label": {
+                "type": "label",
                 "layer": 4,
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
@@ -315,7 +325,8 @@
                                               "clip_pixelperfect": false,
                                               "controls": [
                                                 {
-                                                  "percent@global.empty_label": {
+                                                  "percent": {
+                                                    "type": "label",
                                                     "size": ["default", 10],
                                                     "layer": 7,
                                                     "anchor_from": "center",

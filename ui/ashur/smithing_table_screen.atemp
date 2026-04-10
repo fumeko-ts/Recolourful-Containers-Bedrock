@@ -136,12 +136,6 @@
         }
       },
       {
-        "bottom@global.inventory_bottom_half": {
-          "anchor_to": "bottom_middle",
-          "anchor_from": "bottom_middle"
-        }
-      },
-      {
         "craft_not_possible@global.empty_panel": {
           "size": [93, 67],
           "anchor_from": "top_left",
@@ -171,6 +165,9 @@
             }
           ]
         }
+      },
+      {
+        "bottom_section@global.container_bottom_section": {}
       }
     ]
   }

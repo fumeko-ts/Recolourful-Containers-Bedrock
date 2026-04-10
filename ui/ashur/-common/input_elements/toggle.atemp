@@ -126,10 +126,10 @@
       },
       {
         "requires": "($is_left_tab = true)",
-        "$unchecked_default_image|default": "assets/sprites/recipe_book/tab.png",
-        "$unchecked_hover_image|default"  : "assets/sprites/recipe_book/tab.png",
-        "$checked_default_image|default"  : "assets/sprites/recipe_book/tab_selected.png",
-        "$checked_hover_image|default"    : "assets/sprites/recipe_book/tab_selected.png"
+        "$unchecked_default_image|default": "assets/sprite_assets/recipe_book/tab.png",
+        "$unchecked_hover_image|default"  : "assets/sprite_assets/recipe_book/tab.png",
+        "$checked_default_image|default"  : "assets/sprite_assets/recipe_book/tab_selected.png",
+        "$checked_hover_image|default"    : "assets/sprite_assets/recipe_book/tab_selected.png"
       }
     ]
   },
@@ -158,14 +158,6 @@
         "binding_type": "collection_details",
         "binding_collection_name": "$radio_collection_name",
         "binding_condition": "$radio_collection_condition"
-      },
-      {
-        "binding_name": "#selectable_button_visibility",
-        "binding_name_override": "#enabled",
-        "binding_condition": "always",
-        "ignored": "(not ($radio_collection_name = '#enchant_buttons'))",
-        "binding_collection_name": "#enchant_buttons",
-        "binding_type": "collection"
       },
       {
         "binding_type": "global",
@@ -201,9 +193,10 @@
         "$toggle_control_name": {
           "type": "toggle",
           "size": "$size",
-          "focus_enabled": false,
+          "focus_enabled": "$game_pad",
           "focus_wrap_enabled": false,
           "focus_magnet_enabled": false,
+          "default_focus_precedence": 1,
           "$hover|default": false,
           "sound_name": "random.click",
           "sound_volume": "$button_volume",
