@@ -18,7 +18,6 @@
   "namespace": "global",
   "hotbar": {
     "type": "grid",
-    "debug": "red",
     "size": [162, 18],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
