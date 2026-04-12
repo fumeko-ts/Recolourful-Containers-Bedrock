@@ -304,7 +304,16 @@
       { "unchecked_locked@$unchecked_locked_control": {} },
       { "checked_locked@$checked_locked_control": {} },
       { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
-      { "checked_locked_hover@$checked_locked_hover_control": {} }
+      { "checked_locked_hover@$checked_locked_hover_control": {} },
+      {
+        "underlay@global.empty_image": {
+          "texture": "assets/sprite_assets/container/villager/toggle/unchecked",
+          "nineslice_size": [2, 2, 2, 2],
+          "size": [88, 20],
+          "offset": [1, 1],
+          "layer": 2
+        }
+      }
     ]
   },
   "unchecked_control@trade_global.button_state_common": {
