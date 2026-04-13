@@ -364,7 +364,7 @@
   "item_renderer@global.custom_renderer": {
     "$type": "inventory_item_renderer",
     "layer": 10,
-    "$item_renderer_binding_condition|default": "always",
+    "$item_renderer_binding_condition|default": "visible",
     "bindings": [
       { "binding_type": "collection_details", "binding_collection_name": "$item_collection" },
       {
