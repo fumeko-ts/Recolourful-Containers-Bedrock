@@ -76,3 +76,10 @@ item.purple_bundle=§5§rLilla pakke
 item.cyan_bundle=§3§rCyanfarget pakke
 
 container.enchant.clue=%s §r. . . ?
+
+atemp.recipe_book.searchBox=§oSøk...
+ashur.tab.items=Gjenstander
+ashur.tab.nature=Natur
+ashur.tab.equipment=Utstyr
+ashur.tab.construction=Konstruksjon
+ashur.tab.search=Søk

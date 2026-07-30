@@ -1,0 +1,31 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "dispenser_bow",
+  "bow_uv_template": {
+    "anim_type": "uv",
+    "from": "$frame",
+    "to": "$frame",
+    "easing": "in_out_sine",
+    "duration": "$frame_time",
+    "next": "('@dispenser_bow.' + $next_frame)"
+  },
+  "bow_20@dispenser_bow.bow_uv_template": { "$frame": [0, 0]   , "$next_frame": "bow_21" , "$frame_time": 8   },
+  "bow_21@dispenser_bow.bow_uv_template": { "$frame": [0, 68]  , "$next_frame": "bow_22" , "$frame_time": 0.1 },
+  "bow_22@dispenser_bow.bow_uv_template": { "$frame": [0, 136] , "$next_frame": "bow_23" , "$frame_time": 1   },
+  "bow_23@dispenser_bow.bow_uv_template": { "$frame": [0, 68]  , "$next_frame": "bow_20" , "$frame_time": 0.1 }
+}

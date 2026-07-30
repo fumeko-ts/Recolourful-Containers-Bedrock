@@ -1,10 +1,28 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
 {
   "namespace": "llama_screen",
-  "main_content@container_content.root_panel": {
+  "main_content@global.empty_panel": {
     "$mount|default": "",
     "size": [176, 166],
     "controls": [
-      { "extension@rcc-extensions.llama_screen": {} },
+      /*
+        redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
+      */
       {
         "llama@llama_screen.llama_template": {
           "$source_property_name": "(not (#screen_route = 'entity.trader_llama.name'))"
@@ -31,7 +49,7 @@
     "controls": [
       {
         "not_chested@global.empty_panel": {
-          "$type": "llama_no_chest",
+          "$type": "unchested/",
           "controls": [
             { "red@llama_screen.llama_bindings": { "$carpet": "red", "$carpet_id": -610 } },
             { "orange@llama_screen.llama_bindings": { "$carpet": "orange", "$carpet_id": -597 } },
@@ -62,7 +80,7 @@
       },
       {
         "chested@global.empty_panel": {
-          "$type": "horse",
+          "$type": "chested/",
           "controls": [
             { "red@llama_screen.llama_bindings": { "$carpet": "red", "$carpet_id": -610 } },
             { "orange@llama_screen.llama_bindings": { "$carpet": "orange", "$carpet_id": -597 } },
@@ -107,7 +125,7 @@
     "size": [176, 166],
     "uv_size": [176, 166],
     "texture": "$texture_path",
-    "$texture_path": "('assets/advanced_sprites/' + $type + '/llama/' + $carpet)",
+    "$texture_path": "('assets/variants/mounts/llama/' + $type + $carpet)",
     "bindings": [
       {
         "binding_name": "#item_id_aux",

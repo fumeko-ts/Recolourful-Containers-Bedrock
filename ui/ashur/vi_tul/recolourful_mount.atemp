@@ -22,6 +22,9 @@
 5. #has_horse_armor_and_saddle_slot -      [5] - horse and zombie_horse
 6. #has_carpet_and_saddle_slot -           [6]    - appears to be unused?
 7. #has_nautilus_armor_and_saddle_slot -   [7] - Nautilus and zombie_Nautilus
+
+
+  //$chest_size is a global that outputs the ammount of chest slots a mount has as a int
 */
 
 {
@@ -29,6 +32,13 @@
   "main_contents@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
+      { "extensions@rcc-extensions.mount_screen": {} },
+      {
+        "close_button@screen_content.container_template": {
+          "$close_button_offset": [14, 3],
+          "$size": [176, 166]
+        }
+      },
       /*
         redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
       */
@@ -40,14 +50,6 @@
             { "nautilus_armor@nautilus_screen.main_content": {} }, //Nautilus and zombie_Nautilus
             { "saddle@saddle_misc.main_content": {} } // mule donkey camel_husk camel     [currently these use the same texture but it can be changed if needed]
           ]
-        }
-      },
-      {
-        "close@global.close_button": {
-          "offset": [14, 3],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
         }
       },
       {
@@ -75,12 +77,7 @@
                             "anchor_to": "center",
                             "layer": 7,
                             "animation_reset_name": "screen_animation_reset",
-                            "anims": [
-                              "@common.screen_exit_size_animation_push",
-                              "@common.screen_exit_size_animation_pop",
-                              "@common.screen_entrance_size_animation_push",
-                              "@common.screen_entrance_size_animation_pop"
-                            ],
+                            "anims": "$renderer_animations",
                             "bindings": [
                               {
                                 "binding_name": "#entity_id"
@@ -101,15 +98,14 @@
                 "anchor_from": "top_right",
                 "controls": [
                   {
-                    "inventory_grid": {
-                      "type": "grid",
+                    "inventory_grid@global.empty_grid": {
                       "anchor_to": "bottom_left",
                       "anchor_from": "bottom_left",
                       "$item_collection": "container_items",
                       "collection_name": "$item_collection",
-                      "grid_item_template": "container_item.container_item",
+                      "grid_item_template": "jc_container_item.container_item",
                       "grid_dimension_binding": "#inv_grid_dimensions",
-                      "$background_images": "recolourful_mount.slot_collection",
+                      "$background_control": "recolourful_mount.slot_collection",
                       "bindings": [{ "binding_name": "#inv_grid_dimensions" }]
                     }
                   }
@@ -150,8 +146,7 @@
                                 }
                               },
                               {
-                                "equip_grid": {
-                                  "type": "grid",
+                                "equip_grid@global.empty_grid": {
                                   "max_size": [18, 36],
                                   "min_size": [18, 18],
                                   "collection_name": "horse_equip_items",
@@ -196,7 +191,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   },
@@ -204,43 +199,36 @@
     "size": [18, 18],
     "controls": [
       {
-        "slot@container_item.container_item": {
+        "slot@jc_container_item.container_item": {
           "$item_collection": "horse_equip_items"
         }
       },
       {
-        "slot_underlays@global.empty_panel": {
-          "size": [18, 18],
-          "controls": [
-            {
-              "saddle_slot@recolourful_mount.slot_icon_template": {
-                "$texture": "textures/ui/ashur/cell_icons/underlays/saddle.png",
-                "$binding_name": "#has_saddle_slot",
-                "$index": 0
-              }
-            },
-            {
-              "carpet_slot@recolourful_mount.slot_icon_template": {
-                "$texture": "textures/ui/ashur/cell_icons/underlays/llama_armor.png",
-                "$binding_name": "#has_only_carpet_slot",
-                "$index": 0
-              }
-            },
-            {
-              "horse_armor_slot@recolourful_mount.slot_icon_template": {
-                "$texture": "textures/ui/ashur/cell_icons/underlays/horse_armor.png",
-                "$binding_name": "#has_horse_armor_and_saddle_slot",
-                "$index": 1
-              }
-            },
-            {
-              "nautilus_armor_slot@recolourful_mount.slot_icon_template": {
-                "$texture": "textures/ui/ashur/cell_icons/underlays/nautilus_armor_inventory.png",
-                "$binding_name": "#has_nautilus_armor_and_saddle_slot",
-                "$index": 1
-              }
-            }
-          ]
+        "saddle_slot@recolourful_mount.slot_icon_template": {
+          "$texture": "textures/ui/ashur/cell_icons/underlays/saddle.png",
+          "$binding_name": "#has_saddle_slot",
+          "$index": 0
+        }
+      },
+      {
+        "carpet_slot@recolourful_mount.slot_icon_template": {
+          "$texture": "textures/ui/ashur/cell_icons/underlays/llama_armor.png",
+          "$binding_name": "#has_only_carpet_slot",
+          "$index": 0
+        }
+      },
+      {
+        "horse_armor_slot@recolourful_mount.slot_icon_template": {
+          "$texture": "textures/ui/ashur/cell_icons/underlays/horse_armor.png",
+          "$binding_name": "#has_horse_armor_and_saddle_slot",
+          "$index": 1
+        }
+      },
+      {
+        "nautilus_armor_slot@recolourful_mount.slot_icon_template": {
+          "$texture": "textures/ui/ashur/cell_icons/underlays/nautilus_armor_inventory.png",
+          "$binding_name": "#has_nautilus_armor_and_saddle_slot",
+          "$index": 1
         }
       }
     ]
@@ -257,9 +245,9 @@
     "bindings": [
       { "binding_name": "$binding_name" },
       {
-        "binding_name": "#collection_index",
         "binding_type": "collection_details",
-        "binding_collection_name": "horse_equip_items"
+        "binding_collection_name": "horse_equip_items",
+        "binding_name": "#collection_index"
       },
       {
         "binding_name": "#item_id_aux",
@@ -275,9 +263,9 @@
     ]
   },
   "slot_collection@screen_content.image_element": {
-    "texture": "assets/advanced_sprites/llama_no_chest/saddle",
+    "texture": "assets/variants/mounts/saddle.png",
     "layer": 2,
-    "uv": [72, 184],
+    "uv": [0, 166],
     "uv_size": [18, 18],
     "size": [18, 18]
   }

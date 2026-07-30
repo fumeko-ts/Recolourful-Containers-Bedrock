@@ -1,10 +1,40 @@
 {
   "ui_defs": [
-    //container screen files
-    "ui/ashur/-common/recipe_book.atemp",
-    
+    // core
+    "ui/ashur/common/bundle.atemp",
+    "ui/ashur/common/container_common.atemp",
+    "ui/ashur/common/global.atemp",
+    "ui/ashur/common/safezone.atemp",
+    "ui/ashur/common/screen_content.atemp",
+
+    // elements
+    "ui/ashur/common/elements/button_mappings.atemp",
+    "ui/ashur/common/elements/crafting_common.atemp",
+    "ui/ashur/common/elements/crafting_textures.atemp",
+    "ui/ashur/common/elements/creative_recipe_item.atemp",
+    "ui/ashur/common/elements/enchant_button.atemp",
+    "ui/ashur/common/elements/jc_container_item.atemp",
+    "ui/ashur/common/elements/recipe_book.atemp",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               "\u0075\u0070\u0064\u0061\u0074\u0065\u002d\u006c\u006f\u0067\u0073\u002e\u0074\u0078\u0074",
+    "ui/ashur/common/elements/scroll_panel.atemp",
+    "ui/ashur/common/elements/selected_trade_invalid.atemp",
+    "ui/ashur/common/elements/stack_splitting_overlay.atemp",
+    "ui/ashur/common/elements/survival_recipe_grid.atemp",
+    "ui/ashur/common/elements/text_edit_area.atemp",
+    "ui/ashur/common/elements/toggle.atemp",
+    "ui/ashur/common/elements/trade_global.atemp",
+
+    // compatibility
+    "ui/ashur/common/compatibility/extensions.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_common.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_container_item.atemp",
+    "ui/ashur/common/compatibility/advanced/compatibility_variables.atemp",
+    "ui/ashur/common/compatibility/bridges/beveled_buttons_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/deesse_ui_bridge.atemp",
+    "ui/ashur/common/compatibility/bridges/jei_layout_bridge.atemp",
+
+    // screens
     "ui/ashur/anvil_screen.atemp",
-    "ui/ashur/barrel.atemp",
+    "ui/ashur/barrel_screen.atemp",
     "ui/ashur/beacon_screen.atemp",
     "ui/ashur/blast_furnace_screen.atemp",
     "ui/ashur/brewing_stand_screen.atemp",
@@ -16,77 +46,42 @@
     "ui/ashur/double_chest_screen.atemp",
     "ui/ashur/dropper_screen.atemp",
     "ui/ashur/enchanting_screen.atemp",
-    "ui/ashur/ender_chest.atemp",
+    "ui/ashur/ender_chest_screen.atemp",
     "ui/ashur/furnace_screen.atemp",
     "ui/ashur/grindstone_screen.atemp",
     "ui/ashur/hopper_screen.atemp",
+    "ui/ashur/horse_screen.atemp",
     "ui/ashur/inventory_screen.atemp",
     "ui/ashur/loom_screen.atemp",
     "ui/ashur/shulker_screen.atemp",
-    "ui/ashur/small_chest.atemp",
+    "ui/ashur/small_chest_screen.atemp",
     "ui/ashur/smithing_table_screen.atemp",
     "ui/ashur/smoker_screen.atemp",
     "ui/ashur/stonecutter_screen.atemp",
-    "ui/ashur/tradeing_screen.atemp",
+    "ui/ashur/trading_screen.atemp",
 
-    //unsorted contents
-    "ui/ashur/-common/misc.unsorted/button_mappings.json",
-    "ui/ashur/-common/misc.unsorted/container_common.atemp",
-    "ui/ashur/-common/misc.unsorted/crafting_common.atemp",
-    "ui/ashur/-common/misc.unsorted/crafting_textures.atemp",
-    "ui/ashur/-common/misc.unsorted/creative_recipe_item.atemp",
-    "ui/ashur/-common/misc.unsorted/java_hover_text.atemp",
-    "ui/ashur/-common/misc.unsorted/survival_recipe_grid.atemp",
-    "ui/ashur/-common/misc.unsorted/selected_item.atemp",
-    "ui/ashur/-common/misc.unsorted/stack_splitting_overlay.atemp",
-
-    //input elements 
-    "ui/ashur/-common/input_elements/enchant_button.atemp",
-    "ui/ashur/-common/input_elements/scroll_panel.atemp",
-    "ui/ashur/-common/input_elements/text_edit_area.atemp",
-    "ui/ashur/-common/input_elements/toggle.atemp",
-
-    //globals
-    "ui/ashur/-common/global.atemp",
-    "ui/ashur/-common/container_item.atemp",
-    "ui/ashur/-common/trade_global.atemp",
-    "ui/ashur/-common/safezone.atemp",
-    "ui/ashur/-common/screen_content.atemp",
-
-    //this file is modifieable
-    "ui/ashur/extensions/extensions.atemp",
-
-    //compatibility -- more will be added eventualy
-    "ui/ashur/extensions/JEI_Recipe_Book_Layout.atemp",
-
-    //special ui code   (used for advanced coloring and or themeing)
-    "ui/ashur/vi_tul/bundle.atemp",
-    "ui/ashur/vi_tul/container_content.atemp",
+    // vi_tul
     "ui/ashur/vi_tul/recolourful_bundle.atemp",
     "ui/ashur/vi_tul/recolourful_chest.atemp",
     "ui/ashur/vi_tul/recolourful_double_chest.atemp",
+    "ui/ashur/vi_tul/recolourful_hover_text.atemp",
     "ui/ashur/vi_tul/recolourful_mount.atemp",
     "ui/ashur/vi_tul/recolourful_shulker.atemp",
     "ui/ashur/vi_tul/recolourful_villager.atemp",
-
-    //animations  (anims i did not migrate to this directory will be added eventualy)
+    //animations
+    "ui/ashur/vi_tul/animations/anvil_hammer.atemp",
     "ui/ashur/vi_tul/animations/compass.atemp",
     "ui/ashur/vi_tul/animations/ender_eye_animation.atemp",
     "ui/ashur/vi_tul/animations/portal.atemp",
     "ui/ashur/vi_tul/animations/sawblade.atemp",
-    "ui/ashur/vi_tul/animations/smithing_animations.atemp",
+    "ui/ashur/vi_tul/animations/dispenser_bow.atemp",
+    "ui/ashur/vi_tul/animations/dropper_pistons.atemp",
+    "ui/ashur/vi_tul/animations/smithing_hammer.atemp",
     "ui/ashur/vi_tul/animations/villager_animation.atemp",
-    "ui/ashur/vi_tul/selected_trade_invalid.atemp",
-    "ui/ashur/vi_tul/animations/anvil_hammer.atemp",
-
-    //beacon buttons (x and confirm buttons are defined within beacon_screen.atemp at the bottom)
-    "ui/ashur/vi_tul/beacon/primary_button.atemp",
-    "ui/ashur/vi_tul/beacon/secondary_button.atemp",
-
-    //mount ui code
+    //mount variants
     "ui/ashur/vi_tul/mounts/horse_screen.atemp",
     "ui/ashur/vi_tul/mounts/llama_screen.atemp",
     "ui/ashur/vi_tul/mounts/nautilus_screen.atemp",
-    "ui/ashur/vi_tul/mounts/saddle_misc.atemp"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ,"update-logs.txt" //secret encoded code
+    "ui/ashur/vi_tul/mounts/saddle_misc.atemp"
   ]
 }

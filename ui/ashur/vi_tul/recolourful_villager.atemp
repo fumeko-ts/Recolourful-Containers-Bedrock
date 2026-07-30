@@ -16,7 +16,7 @@
 
 {
   "namespace": "recolourful_villager",
-  "villager_panel@container_content.root_panel": {
+  "villager_panel@global.empty_panel": {
     "size": [276, 166],
     "layer": 1,
     "$profession|default": "none",
@@ -29,7 +29,7 @@
           "size": [276, 166],
           "uv_size": [276, 166],
           "layer": 1,
-          "texture": "assets/sprites/villager/villager"
+          "texture": "assets/variants/trade/villager"
           // for now i am just underlaying this because useing this binding makes the screen flicker with no texture on first load 
           //,
           // "bindings": [
@@ -50,19 +50,19 @@
           "texture": "#texture",
           "allow_debug_missing_texture": false,
           "property_bag": {
-            "#profession_id::ws:": "assets/sprites/villager/weapon",
-            "#profession_id::ar:": "assets/sprites/villager/armor",
-            "#profession_id::bt:": "assets/sprites/villager/butcher",
-            "#profession_id::ct:": "assets/sprites/villager/cartographer",
-            "#profession_id::cl:": "assets/sprites/villager/cleric",
-            "#profession_id::fr:": "assets/sprites/villager/farmer",
-            "#profession_id::fs:": "assets/sprites/villager/fisherman",
-            "#profession_id::fl:": "assets/sprites/villager/fletcher",
-            "#profession_id::lt:": "assets/sprites/villager/leather",
-            "#profession_id::lb:": "assets/sprites/villager/librarian",
-            "#profession_id::ms:": "assets/sprites/villager/mason",
-            "#profession_id::sh:": "assets/sprites/villager/shepherd",
-            "#profession_id::tl:": "assets/sprites/villager/tool"
+            "#profession_id::ws:": "assets/variants/trade/weapon",
+            "#profession_id::ar:": "assets/variants/trade/armor",
+            "#profession_id::bt:": "assets/variants/trade/butcher",
+            "#profession_id::ct:": "assets/variants/trade/cartographer",
+            "#profession_id::cl:": "assets/variants/trade/cleric",
+            "#profession_id::fr:": "assets/variants/trade/farmer",
+            "#profession_id::fs:": "assets/variants/trade/fisherman",
+            "#profession_id::fl:": "assets/variants/trade/fletcher",
+            "#profession_id::lt:": "assets/variants/trade/leather",
+            "#profession_id::lb:": "assets/variants/trade/librarian",
+            "#profession_id::ms:": "assets/variants/trade/mason",
+            "#profession_id::sh:": "assets/variants/trade/shepherd",
+            "#profession_id::tl:": "assets/variants/trade/tool"
           },
           "bindings": [
             { "binding_name": "#name_label", "binding_condition": "always" },
@@ -108,21 +108,21 @@
                     // underlays the others
                     "default@recolourful_villager.villager_eye_template": {
                       "layer": 3,
-                      "texture": "assets/advanced_sprites/animated/villager/default/default",
+                      "texture": "assets/variants/animated/trade/default/default",
                       "bindings": []
                     }
                   },
                   {
                     "weaponsmith@recolourful_villager.villager_eye_template": {
-                      "texture": "assets/advanced_sprites/animated/villager/default/weaponsmith",
+                      "texture": "assets/variants/animated/trade/default/weaponsmith",
                       "uv": "@villager_animation.weaponsmith_eyes_0",
                       "$profession": "id::ws:"
                     }
                   },
-                  {"armorer@recolourful_villager.villager_eye_template"      : {"texture": "assets/advanced_sprites/animated/villager/default/armorer"      ,  "$profession": "id::ar:"}},
-                  {"cartographer@recolourful_villager.villager_eye_template" : {"texture": "assets/advanced_sprites/animated/villager/default/cartographer" ,  "$profession": "id::ct:"}},
-                  {"farmer@recolourful_villager.villager_eye_template"       : {"texture": "assets/advanced_sprites/animated/villager/default/farmer"       ,  "$profession": "id::fr:"}},
-                  {"fletcher@recolourful_villager.villager_eye_template"     : {"texture": "assets/advanced_sprites/animated/villager/default/fletcher"     ,  "$profession": "id::fl:"}}
+                  {"armorer@recolourful_villager.villager_eye_template"      : {"texture": "assets/variants/animated/trade/default/armorer"      ,  "$profession": "id::ar:"}},
+                  {"cartographer@recolourful_villager.villager_eye_template" : {"texture": "assets/variants/animated/trade/default/cartographer" ,  "$profession": "id::ct:"}},
+                  {"farmer@recolourful_villager.villager_eye_template"       : {"texture": "assets/variants/animated/trade/default/farmer"       ,  "$profession": "id::fr:"}},
+                  {"fletcher@recolourful_villager.villager_eye_template"     : {"texture": "assets/variants/animated/trade/default/fletcher"     ,  "$profession": "id::fl:"}}
                 ]
               }
             },
@@ -199,6 +199,12 @@
             }
           ]
         }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#exp_bar_visible",
+        "binding_name_override": "#visible"
       }
     ]
   },

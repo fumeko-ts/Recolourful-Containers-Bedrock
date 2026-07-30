@@ -19,16 +19,8 @@
   "shulker_box@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      { "extension@rcc-extensions.shulker_screen": {} },
-      { "common_panel@recolourful_shulker.recolourful_shulker": {} },
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+      { "common_panel@recolourful_shulker.shulker_box": {} },
+      { "extensions@rcc-extensions.shulker_screen": {} },
       {
         "shulker_top_half@global.empty_stack": {
           "orientation": "vertical",
@@ -36,7 +28,7 @@
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "filler@global.empty_panel": { "size": [176, 17] } },
+            { "filler_0@global.empty_panel": { "size": [176, 17] } },
             {
               "chest_grid_holder@global.empty_stack": {
                 "orientation": "horizontal",
@@ -44,13 +36,12 @@
                 "controls": [
                   { "filler_3@global.empty_panel": { "size": [7, "fill"] } },
                   {
-                    "shulker_grid": {
-                      "type": "grid",
+                    "shulker_grid@global.empty_grid": {
                       "size": [162, 54],
                       "grid_dimensions": [9, 3],
+                      "grid_item_template": "jc_container_item.container_item",
                       "$item_collection": "container_items",
-                      "collection_name": "$item_collection",
-                      "grid_item_template": "container_item.container_item"
+                      "collection_name": "$item_collection"
                     }
                   },
                   { "filler_4@global.empty_panel": { "size": [7, "fill"] } }
@@ -61,7 +52,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   }

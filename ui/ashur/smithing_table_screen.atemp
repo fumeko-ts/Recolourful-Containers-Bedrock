@@ -19,48 +19,35 @@
   "smithing_table_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      { "extension@rcc-extensions.smithing_table_screen": {} },
-      { "common_panel@container_content.smithing_table_screen": {} },
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+      { "common_panel@screen_content.smithing": {} },
+      { "extensions@rcc-extensions.smithing_table_screen": {} },
       {
         "smithing_hammer@screen_content.image_element": {
-          "texture": "assets/advanced_sprites/animated/smithing.png",
+          "texture": "assets/variants/animated/smithing.png",
           "uv_size": [23, 23],
           "size": [23, 23],
-          "layer": 6,
+          "layer": 3,
           "offset": [25, 6],
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "animation_reset_name": "screen_animation_reset",
-          "uv": "@smithing_animations.smithing_hammer_0"
+          "uv": "@smithing_hammer.smithing_hammer_0"
         }
       },
       {
-        "armor_stand_preview@global.empty_panel": {
+        "result_item_preview_inner@global.empty_panel": {
           "size": [30, 24],
           "anchor_to": "right_middle",
           "anchor_from": "right_middle",
           "offset": [-17, -40],
           "controls": [
             {
-              "armor_stand_renderer@global.custom_renderer": {
+              "smithing_preview_renderer@global.custom_renderer": {
                 "$type": "equipment_preview_renderer",
-                "animation_reset_name": "screen_animation_reset",
-                "anims": [
-                  "@common.screen_exit_size_animation_push",
-                  "@common.screen_exit_size_animation_pop",
-                  "@common.screen_entrance_size_animation_push",
-                  "@common.screen_entrance_size_animation_pop"
-                ],
-                "layer": 8,
+                "layer": 4,
                 "rotation_x": 30,
+                "animation_reset_name": "screen_animation_reset",
+                "anims": "$renderer_animations",
                 "rotation_y": -30,
                 "bindings": [
                   {
@@ -92,41 +79,40 @@
       {
         "smithing_content@global.empty_stack": {
           "size": [176, 65],
-          "layer": 2,
           "orientation": "vertical",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 47] } },
             {
-              "cell_holding_stack@global.empty_stack": {
+              "cell_inputs_holding_stack@global.empty_stack": {
                 "orientation": "horizontal",
                 "size": [176, 18],
                 "controls": [
                   { "cell_filler_1@global.empty_panel": { "size": [7, 18] } },
                   {
-                    "template_slot@container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_animations.smithing_slot_underlay",
+                    "template_slot@jc_container_item.container_item": {
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_template_items"
                     }
                   },
                   {
-                    "upgrade_slot@container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_animations.smithing_slot_underlay",
+                    "upgrade_slot@jc_container_item.container_item": {
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_input_items"
                     }
                   },
                   {
-                    "material_slot@container_item.container_item": {
-                      "$cell_overlay_ref": "smithing_animations.smithing_slot_underlay",
+                    "material_slot@jc_container_item.container_item": {
+                      "$background_control": "smithing_table_screen.slot_overlay",
                       "$item_collection": "smithing_table_material_items"
                     }
                   },
                   { "cell_filler_2@global.empty_panel": { "size": [36, 18] } },
                   {
-                    "result_item_slot@container_item.container_item": {
+                    "result_item_slot@jc_container_item.container_item": {
                       "$item_collection": "smithing_table_result_items",
-                      "$button_ref": "button_mappings.smithing_table_output_slot_button"
+                      "$button_control": "button_mappings.smithing_output_button"
                     }
                   }
                 ]
@@ -149,15 +135,10 @@
                 "controls": [
                   {
                     "cross_out_icon_image@screen_content.image_element": {
-                      "texture": "assets/sprite_assets/container/smithing/error.png",
+                      "texture": "assets/sprites/container/smithing/error",
                       "size": [28, 21],
-                      "layer": 5,
-                      "bindings": [
-                        {
-                          "binding_name": "#cross_out_icon",
-                          "binding_name_override": "#visible"
-                        }
-                      ]
+                      "layer": 3,
+                      "bindings": [{ "binding_name": "#cross_out_icon", "binding_name_override": "#visible" }]
                     }
                   }
                 ]
@@ -167,8 +148,74 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
+  },
+  "slot_overlay@global.empty_panel": {
+    "size": [16, 16],
+    "layer": 2,
+    "controls": [
+      {
+        "template_slot@global.empty_panel": {
+          "ignored": "(not ($item_collection = smithing_table_template_items))",
+          "controls": [
+            {
+              "1@smithing_table_screen.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_template_slot",
+                "bindings": [{ "binding_name": "#show_input_overlay_templates", "binding_name_override": "#visible" }]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "equipment_slot@global.empty_panel": {
+          "ignored": "(not ($item_collection = smithing_table_input_items))",
+          "controls": [
+            {
+              "1@smithing_table_screen.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/only_armor",
+                "bindings": [{ "binding_name": "#show_input_overlay_armors", "binding_name_override": "#visible" }]
+              }
+            },
+            {
+              "2@smithing_table_screen.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_equipment_slot",
+                "bindings": [
+                  { "binding_name": "#show_input_overlay_armors_and_tools", "binding_name_override": "#visible" }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "material_slot@global.empty_panel": {
+          "ignored": "(not ($item_collection = smithing_table_material_items))",
+          "controls": [
+            {
+              "1@smithing_table_screen.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/smithing_material_slot",
+                "bindings": [{ "binding_name": "#show_material_overlay_all", "binding_name_override": "#visible" }]
+              }
+            },
+            {
+              "2@smithing_table_screen.slot_sprite_renderer": {
+                "$slot_spritesheet": "textures/ui/ashur/smithing_icons/netherite",
+                "bindings": [{ "binding_name": "#show_material_overlay_ingot", "binding_name_override": "#visible" }]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot_sprite_renderer@global.empty_image": {
+    "size": [16, 16],
+    "texture": "$slot_spritesheet",
+    "disable_anim_fast_forward": true,
+    "uv": { "anim_type": "aseprite_flip_book", "initial_uv": [0, 0] },
+    "uv_size": [16, 16]
   }
 }

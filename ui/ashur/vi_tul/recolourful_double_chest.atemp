@@ -16,23 +16,24 @@
 
 {
   "namespace": "recolourful_double_chest",
-  "double_chest@container_content.root_panel": {
+  "double_chest@screen_content.image_element": {
     "size": [176, 222],
-    "layer": 1,
+    "texture": "$texture",
     "$container_name|default": "$container_title",
+    "$texture": "assets/variants/chests/double_chest",
+    "$close_button_offset|default":[ 14, -4 ],
     "controls": [
       {
-        "chest@screen_content.image_element": {
-          "size": [176, 222],
-          "$texture": "assets/sprites/chests/double_chest",
-          "texture": "$texture",
-          "variables": [
-            {
-              "requires": "($container_name = 'container.chestDoubleCopper')",
-              "$texture": "assets/sprites/chests/double_copper_chest"
-            }
-          ]
-        }
+        "close_button@global.close_button": {}
+      }
+    ],
+    /*
+      redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
+    */
+    "variables": [
+      {
+        "requires": "($container_name = 'container.chestDoubleCopper')",
+        "$texture": "assets/variants/chests/double_copper_chest"
       }
     ]
   }

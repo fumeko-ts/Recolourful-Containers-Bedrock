@@ -1,0 +1,47 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "smithing_hammer",
+  "uv_anim_base": {
+    "anim_type": "uv",
+    "easing": "in_out_sine",
+    "from": "$frame",
+    "to": "$frame",
+    "duration": "$frame_time",
+    "next": "(@smithing_hammer. + $next_frame)",
+    "$frame_time": 0.025
+  },
+  "smithing_hammer_0@smithing_hammer.uv_anim_base": {
+    "$frame": [0, 0],
+    "$next_frame": "smithing_hammer_1",
+    "$frame_time": 10
+  },
+  "smithing_hammer_1@smithing_hammer.uv_anim_base": { "$frame": [0, 23], "$next_frame": "smithing_hammer_2" },
+  "smithing_hammer_2@smithing_hammer.uv_anim_base": { "$frame": [0, 46], "$next_frame": "smithing_hammer_3" },
+  "smithing_hammer_3@smithing_hammer.uv_anim_base": { "$frame": [0, 69], "$next_frame": "smithing_hammer_4" },
+  "smithing_hammer_4@smithing_hammer.uv_anim_base": { "$frame": [0, 92], "$next_frame": "smithing_hammer_5" },
+  "smithing_hammer_5@smithing_hammer.uv_anim_base": { "$frame": [0, 115], "$next_frame": "smithing_hammer_6" },
+  "smithing_hammer_6@smithing_hammer.uv_anim_base": { "$frame": [0, 138], "$next_frame": "smithing_hammer_7" },
+  "smithing_hammer_7@smithing_hammer.uv_anim_base": { "$frame": [0, 161], "$next_frame": "smithing_hammer_8" },
+  "smithing_hammer_8@smithing_hammer.uv_anim_base": { "$frame": [0, 184], "$next_frame": "smithing_hammer_9" },
+  "smithing_hammer_9@smithing_hammer.uv_anim_base": { "$frame": [0, 207], "$next_frame": "smithing_hammer_10" },
+  "smithing_hammer_10@smithing_hammer.uv_anim_base": { "$frame": [0, 230], "$next_frame": "smithing_hammer_11" },
+  "smithing_hammer_11@smithing_hammer.uv_anim_base": { "$frame": [0, 253], "$next_frame": "smithing_hammer_12" },
+  "smithing_hammer_12@smithing_hammer.uv_anim_base": { "$frame": [0, 276], "$next_frame": "smithing_hammer_13" },
+  "smithing_hammer_13@smithing_hammer.uv_anim_base": { "$frame": [0, 299], "$next_frame": "smithing_hammer_14" },
+  "smithing_hammer_14@smithing_hammer.uv_anim_base": { "$frame": [0, 322], "$next_frame": "smithing_hammer_0" }
+}

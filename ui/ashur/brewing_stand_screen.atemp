@@ -16,7 +16,6 @@
 
 {
   "namespace": "brewing_stand_screen",
-
   "brewing_panel@global.empty_stack": {
     "orientation": "horizontal",
     "anchor_to": "center",
@@ -24,25 +23,16 @@
     "min_size": [176, 166],
     "max_size": [359, 166],
     "controls": [
-      { "$brewing_content@$brewing_content": { "ignored": "(not $ashur:brewing_guide)" } },
+      { "recipe_book@rcc-extensions.brewing_guide": {} },
       {
         "right_half@container_common.container_details": {
           "size": [176, 166],
           "$screen_controls": [
-            { "extension@rcc-extensions.brewing_stand_screen": {} },
-            { "common_panel@container_content.brewing_stand_screen": {} },
-            {
-              "close@global.close_button": {
-                "offset": [14, -4],
-                "$pressed": "textures/ui/ashur/close_pressed",
-                "$default": "textures/ui/ashur/close_default",
-                "$hover": "textures/ui/ashur/close_hover"
-              }
-            },
+            { "common_panel@screen_content.brewing_stand": {} },
+            { "extensions@rcc-extensions.brewing_stand_screen": {} },
             {
               "sprite_stack@global.empty_stack": {
                 "size": [176, 48],
-                "layer": 2,
                 "orientation": "horizontal",
                 "anchor_to": "top_middle",
                 "anchor_from": "top_middle",
@@ -111,11 +101,10 @@
               "brewing_top_stack@global.empty_stack": {
                 "orientation": "vertical",
                 "size": [176, 75],
-                "layer": 2,
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "controls": [
-                  { "filler@global.empty_panel": { "size": [176, 16] } },
+                  { "filler_1@global.empty_panel": { "size": ["fill", 16] } },
                   {
                     "main_content@global.empty_stack": {
                       "orientation": "horizontal",
@@ -128,7 +117,9 @@
                             "size": [18, 59],
                             "controls": [
                               {
-                                "fuel_item@container_item.container_item": { "$item_collection": "brewing_fuel_item" }
+                                "fuel_item@jc_container_item.container_item": {
+                                  "$item_collection": "brewing_fuel_item"
+                                }
                               },
                               { "filler_1@global.empty_panel": { "size": ["fill", 41] } }
                             ]
@@ -149,7 +140,7 @@
                           "bottle_output_2@brewing_stand_screen.collection_template": {
                             "controls": [
                               {
-                                "input_item@container_item.container_item": {
+                                "input_item@jc_container_item.container_item": {
                                   "$item_collection": "brewing_input_item",
                                   "$collection_type": "brewing_input_item"
                                 }
@@ -177,22 +168,22 @@
               }
             },
             {
-              "bottom_section@global.container_bottom_section": {}
+              "inventory_and_hotbar@container_common.container_bottom_section": {}
             }
           ]
         }
       }
     ]
   },
-  "bottle_template@container_item.container_item": {
+  "bottle_template@jc_container_item.container_item": {
     "$item_collection": "$collection_type",
-    "$cell_overlay_ref": "brewing_stand_screen.brewing_bottle"
+    "$background_control": "brewing_stand_screen.brewing_bottle"
   },
   "brewing_bottle@screen_content.image_element": {
     "size": [16, 16],
     "anchor_from": "center",
     "anchor_to": "center",
-    "layer": 7,
+    "layer": 2,
     "texture": "textures/ui/ashur/cell_icons/underlays/potion.png",
     "bindings": [
       {
@@ -211,7 +202,7 @@
   },
   "image_panel@global.empty_panel": {
     "size": "$image_size",
-    "$sprite_src|default": "('assets/sprite_assets/container/brewing_stand/' + $sprite)",
+    "$sprite_src|default": "('assets/sprites/container/brewing_stand/' + $sprite)",
     "controls": [
       {
         "brewing_texture_template@screen_content.image_element": {

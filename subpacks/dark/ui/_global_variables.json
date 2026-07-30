@@ -1,31 +1,61 @@
 {
   //used for compatibility
-  "$is_recolorful_containers": true,
-
-  //set UI transparency 0 - 1 (can be a float or a int)
+  "$is_recolourful_containers": true,
+  "$_pack_name": "recolourful",
+  //set UI transparency
   "$container_opacity": 1,
-  "$hover_text_opacity": 1,
+  "$background_blur_opacity": 0.4,//the base png is transparent
 
-  //enables recipe books page resetting when current page is more than max page
-  "$use_experimental_page_logic": true,
+  //if true forces the container close buttons to render no matter the input type
+  "$show_exit_buttons": false,
+  //if true allows pc users to trigger the page buttons useing the scroll wheel
+  "$use_experimental_recipe_scroll_input": false,
+  //if true allows the user to hover over a tab to auto select it
+  "$use_experimental_tab_toggle_input": false,
+  //if false it will remove the container open animation
+  "$use_container_ui_animations": true,
+  //if true will unlock villager trades
+  "$use_unlocked_villager_trades": false,
+  //if true removes the empty bundle text and makes the bundle ui more compact
+  "$use_slim_bundle_tooltips": true,
 
-  //renders the hud/hotbar behind the current ui
-  //currently its disabled because it may clash with the player renderer within the inventory
-  "$show_hud_in_containers": false,
+  
+  //title text color
+  "$container_title_color": [1, 1, 1],
 
-  //these ids are whats used to render the items in the tab icons (inventory and crafting table)
-  //you can find the ids for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
-  "$compass_id": 423, //creative inventory only survival is a png
-  "$chest_id": 54,
-  "$redstone_id": 405,
-  "$iron_sword_id": 338,
-  "$purple_froglight_id": -469,
-  "$bricks_id": 45,
-  "$apple_id": 285,
-  "$bucket_lava_id": 395,
-  "$iron_axe_id": 329,
-  "$golden_sword_id": 354,
+  //these item indexes are whats used to render the items in the recipe book tabs
+  //you can find the index for a item useing this --> https://www.planetminecraft.com/texture-pack/item-id-visualizer-mcbe-mcpe/
+  //item_index = (#item_id_aux / 65536)
 
+  //creative inventory tabs
+  "$chest_item_index": 54,
+  "$redstone_item_index": 405,
+  "$iron_sword_item_index": 338,
+  "$purple_froglight_item_index": -469,
+  "$bricks_item_index": 45,
+
+  //crafting recipe book tabs
+  "$apple_item_index": 285,
+  "$bucket_lava_item_index": 395,
+  "$golden_sword_item_index": 354,
+  "$iron_axe_item_index": 329,
+
+  //furnace recipe book tabs
+  "$raw_porkchop_item_index": 291,
+  "$stone_item_index": 1,
+  "$emerald_item_index": 552,
+
+  //blast furnace recipe book tabs
+  "$golden_leggings_item_index": 385,
+  "$iron_shovel_item_index": 327,
+
+  //development variables (dont modify)
+  //will add links to each creators pages when i get the chance
+  "$is_jei_recipe_book_layout_pack": false,
+  "$is_déesse_ui_pack": false,
+
+  "$pack_scope": "global",
+  
   //villager label colors    'if needed the wandering traders color can be separated'
   "$villager_name_color": [0.247, 0.247, 0.247, 1.0],
   "$villager_trade_color": [0.247, 0.247, 0.247, 1.0],// trade label above scroll pane
@@ -35,7 +65,7 @@
   "$recipe_edit_text_color": [0.67059, 0.67059, 0.67059, 1.0],
   "$recipe_text_box_content_color": [0.247, 0.247, 0.247, 1.0],
   "$page_count_shadow_color": [0.5725, 0.5725, 0.5725, 1.0],
-  "$recipe_page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
+  "$page_count_color": [0.7647, 0.7647, 0.7647, 1.0],
 
 
   //enchanting table text colors
@@ -50,13 +80,6 @@
 
   "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
 
-  //displays the debug elements used for development
-  "$rcc:dev": false,
-
-  //external pack variables
-  "$brewing_content": "global.empty_panel",
-  "$ashur:brewing_guide": false,
-  "$is_jei_recipe_book_layout_pack": false,
 
   //vanilla variables
   "$light_button_default_text_color": [1, 1, 1],

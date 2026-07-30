@@ -19,23 +19,14 @@
   "hopper_panel@container_common.container_details": {
     "size": [176, 133],
     "$screen_controls": [
-      { "extension@rcc-extensions.hopper_screen": {} },
-      { "common_panel@container_content.hopper_screen": {} },
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+      { "common_panel@screen_content.hopper": {} },
+      { "extensions@rcc-extensions.hopper_screen": {} },
       {
         "hopper_top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 37],
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
-          "layer": 2,
           "controls": [
             { "filler_1@global.empty_panel": { "size": ["fill", 19] } },
             {
@@ -45,13 +36,12 @@
                 "controls": [
                   { "filler_2@global.empty_panel": { "size": [43, "fill"] } },
                   {
-                    "hopper_input_grid": {
-                      "type": "grid",
+                    "hopper_input_grid@global.empty_grid": {
                       "size": [90, 18],
                       "grid_dimensions": [5, 1],
                       "$item_collection": "container_items",
                       "collection_name": "$item_collection",
-                      "grid_item_template": "container_item.container_item"
+                      "grid_item_template": "jc_container_item.container_item"
                     }
                   },
                   { "filler_3@global.empty_panel": { "size": [43, "fill"] } }
@@ -62,7 +52,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   }

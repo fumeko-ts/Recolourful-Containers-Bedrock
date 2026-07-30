@@ -16,53 +16,46 @@
 
 {
   "namespace": "recolourful_chest",
-  "chest@container_content.root_panel": {
+  "chest@screen_content.image_element": {
     "size": [192, 174],
-    "layer": 1,
+    "offset": [0, 166],
+    "texture": "$texture",
     "$container_name|default": "$container_title",
+    "$texture": "assets/variants/chests/small_chest",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "top_middle",
+    "$close_button_offset|default": [6, 4],
     "controls": [
       {
-        "chest@screen_content.image_element": {
-          "size": [192, 174], // for some unknown reason height was set to 222? no clue why
-          "texture": "$texture",
-          "controls": [
-            {
-              "close@global.close_button": {
-                "offset": "$close_position",
-                "$pressed": "textures/ui/ashur/close_pressed",
-                "$default": "textures/ui/ashur/close_default",
-                "$hover": "textures/ui/ashur/close_hover"
-              }
-            }
-          ],
-          "$close_position|default": [6, 4],
-          "$texture": "assets/sprites/chests/small_chest",
-          "variables": [
-            //entity
-            {
-              "requires": "($container_name = 'entity.chest_minecart.name')",
-              "$texture": "assets/sprites/chests/chest_minecart",
-              "$close_position|default": [14, -4]
-            },
-            {
-              "requires": "($container_name = 'entity.chest_boat.name')",
-              "$texture": "assets/sprites/chests/chest_boat",
-              "$close_position|default": [14, -4]
-            },
-            {
-              "requires": "($container_name = 'entity.chest_raft.name')",
-              "$texture": "assets/sprites/chests/chest_raft",
-              "$close_position|default": [14, -4]
-            },
-            //blocks
-            {
-              "requires": "($container_name = 'container.chestCopper')",
-              "$texture": "assets/sprites/chests/copper_chest"
-            }
-            // eastereggs add here
-          ]
-        }
+        "close_button@global.close_button": {}
       }
+    ],
+    /*
+      redstone chicken stay out of this file ik you been reading these if your going to yoink my code again atleast credit me this time
+    */
+    "variables": [
+      //entity
+      {
+        "requires": "($container_name = 'entity.chest_minecart.name')",
+        "$close_button_offset|default": [14, -4],
+        "$texture": "assets/variants/chests/chest_minecart"
+      },
+      {
+        "requires": "($container_name = 'entity.chest_boat.name')",
+        "$close_button_offset|default": [14, -4],
+        "$texture": "assets/variants/chests/chest_boat"
+      },
+      {
+        "requires": "($container_name = 'entity.chest_raft.name')",
+        "$close_button_offset|default": [14, -4],
+        "$texture": "assets/variants/chests/chest_raft"
+      },
+      //blocks
+      {
+        "requires": "($container_name = 'container.chestCopper')",
+        "$texture": "assets/variants/chests/copper_chest"
+      }
+      // eastereggs add here
     ]
   }
 }

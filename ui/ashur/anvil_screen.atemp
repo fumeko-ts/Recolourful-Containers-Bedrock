@@ -19,25 +19,30 @@
   "anvil_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      { "extension@rcc-extensions.anvil_screen": {} },
-      { "common_panel@container_content.anvil_screen": {} },
+      { "common_panel@screen_content.anvil": {} },
+      { "extensions@rcc-extensions.anvil_screen": {} },
       {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
+        "anvil_hammer_anim@screen_content.image_element": {
+          "texture": "assets/variants/animated/anvil.png",
+          "uv_size": [23, 23],
+          "size": [23, 23],
+          "layer": 2,
+          "offset": [25, 9],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "animation_reset_name": "screen_animation_reset",
+          "uv": "@anvil_hammer.hammer_0",
+          "disable_anim_fast_forward": true
         }
       },
       {
         "anvil_top_half@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 66],
-          "layer": 2,
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
-            { "filler_1?@global.empty_panel": { "size": [176, 20] } },
+            { "filler_1@global.empty_panel": { "size": ["fill", 20] } },
             {
               "anvil_text_edit@global.empty_stack": {
                 "orientation": "horizontal",
@@ -48,10 +53,7 @@
                     "anvil_text_control@text_edit_area.text_edit_box": {
                       "size": [110, 16],
                       "$edit_label_offset": [1, 0],
-                      "max_length": 160,
-
                       "$text_edit_color": [0.231, 0.231, 0.231, 1],
-
                       "$default_control": "global.empty_panel",
                       "$locked_control": "global.empty_panel",
                       "$hover_control": "global.empty_panel",
@@ -60,9 +62,14 @@
                       "$text_edit_text_control": "anvil_text_input",
                       "bindings": [
                         {
+                          "binding_type": "collection",
+                          "binding_collection_name": "anvil_input_items",
+                          "binding_name": "#item_id_aux",
+                          "binding_name_override": "#anvil_input_items"
+                        },
+                        {
                           "binding_type": "view",
                           "binding_condition": "always",
-                          "source_control_name": "anvil_highlight",
                           "source_property_name": "(not (#anvil_input_items = -1))",
                           "target_property_name": "#enabled"
                         }
@@ -87,7 +94,9 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
                         {
-                          "input_item_slot@container_item.container_item": { "$item_collection": "anvil_input_items" }
+                          "input_item_slot@jc_container_item.container_item": {
+                            "$item_collection": "anvil_input_items"
+                          }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 2] } }
                       ]
@@ -101,7 +110,7 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
                         {
-                          "material_item_slot@container_item.container_item": {
+                          "material_item_slot@jc_container_item.container_item": {
                             "$item_collection": "anvil_material_items"
                           }
                         },
@@ -111,14 +120,13 @@
                   },
                   { "filler_3@global.empty_panel": { "size": [6, "fill"] } },
                   {
-                    "anvil_ex_holder@global.empty_panel": {
+                    "error_holder@global.empty_panel": {
                       "size": [28, 21],
                       "controls": [
                         {
                           "cross_out_icon@screen_content.image_element": {
-                            "texture": "assets/sprite_assets/container/anvil/error.png",
+                            "texture": "assets/sprites/container/anvil/error",
                             "size": [28, 21],
-                            "keep_ratio": true,
                             "bindings": [{ "binding_name": "#cross_out_icon", "binding_name_override": "#visible" }]
                           }
                         }
@@ -133,9 +141,9 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 1] } },
                         {
-                          "result_item_slot@container_item.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "anvil_result_items",
-                            "$button_ref": "button_mappings.anvil_output_slot_button"
+                            "$button_control": "button_mappings.anvil_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 2] } }
@@ -150,33 +158,32 @@
         }
       },
       {
-        "cost@global.empty_panel": {
+        "status_holder@global.empty_panel": {
           "size": [167, 79],
-          "layer": 2,
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
             {
-              "cost_labels@global.empty_panel": {
+              "status@global.empty_panel": {
                 "size": ["100%c", "100%c"],
                 "anchor_to": "bottom_right",
                 "anchor_from": "bottom_right",
                 "controls": [
                   {
-                    "anvil_info@screen_content.image_element": {
+                    "anvil_status_label@screen_content.image_element": {
                       "texture": "textures/ui/Gray",
                       "layer": 4,
                       "size": ["100%c + 6px", "100%c + 4px"],
                       "alpha": 0.3,
                       "controls": [
                         {
-                          "cost_label_0@anvil_screen.cost_label": {
-                            "color": "$anvil_cost_fail_text_color",
+                          "cost_text_red@anvil_screen.cost_label": {
+                            "color": [1.0, 0.35, 0.35],
                             "$cost_bindings": "#cost_text_red"
                           }
                         },
                         {
-                          "cost_label_1@anvil_screen.cost_label": {
+                          "cost_text_green@anvil_screen.cost_label": {
                             "color": [0.494, 0.988, 0.125, 1.0],
                             "$cost_bindings": "#cost_text_green"
                           }
@@ -201,41 +208,26 @@
         }
       },
       {
-        "anvil_hammer_anim@screen_content.image_element": {
-          "texture": "assets/advanced_sprites/animated/anvil.png",
-          "uv_size": [23, 23],
-          "size": [23, 23],
-          "layer": 2,
-          "offset": [25, 9],
-          "anchor_to": "top_left",
-          "anchor_from": "top_left",
-          "animation_reset_name": "screen_animation_reset",
-          "uv": "@anvil_hammer.hammer_0",
-          "disable_anim_fast_forward": true
-        }
-      },
-      {
-        "anvil_highlight@screen_content.image_element": {
+        "anvil_highlight@global.empty_image": {
           "texture": "textures/anvil_highlight.png",
           "alpha": "@anvil_screen.anvil_highlight_alpha_1",
           "size": [68, 33],
-          "offset": [1, 0],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "layer": 18,
           "bindings": [
-            {
-              "binding_type": "collection",
-              "binding_collection_name": "anvil_input_items",
-              "binding_name": "#item_id_aux",
-              "binding_name_override": "#anvil_input_items"
-            },
             {
               "binding_type": "view",
               "binding_condition": "always",
               "source_control_name": "anvil_text_input",
               "source_property_name": "(#item_name = '')",
               "target_property_name": "#no_text"
+            },
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "anvil_input_items",
+              "binding_name": "#item_id_aux",
+              "binding_name_override": "#anvil_input_items"
             },
             {
               "binding_type": "view",
@@ -247,7 +239,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   },
@@ -268,7 +260,7 @@
         }
       },
       {
-        "anvil_edit_box_focused@screen_content.anvil_edit_box_hover": {
+        "anvil_edit_box_focused@screen_content.anvil_edit_box_focused": {
           "bindings": [
             {
               "binding_type": "view",

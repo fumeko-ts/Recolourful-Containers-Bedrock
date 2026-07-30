@@ -1,0 +1,58 @@
+/**
+// © 2026 ashura_temps,    All Rights Reserved.
+//
+// This UI is custom-made. You are allowed to use it **only as-is**, inside the game.
+// Do not modify, extract, reuse, or share any part of this UI including .json, .atemp files,
+// layout structure, or design.
+//
+// Not allowed:
+//   - Editing the UI (even for private/personal use)
+//   - Using parts of the code or layout in your own pack
+//   - Reuploading, redistributing, or hosting these files elsewhere
+//   - Converting texture packs to Bedrock using this UI
+//
+// By using this project, you agree to these terms.
+*/
+
+{
+  "namespace": "dropper_pistons",
+  "piston_uv_template": {
+    "anim_type": "uv",
+    "from": "$frame",
+    "to": "$frame",
+    "easing": "in_out_sine",
+    "duration": "$frame_time",
+    "next": "('@dropper_pistons.' + $next_frame)"
+  },
+  "piston_10@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_11"  , "$frame_time": 9                 },
+  "piston_11@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_12"  , "$frame_time": 0.05              },
+  "piston_12@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 64 ] , "$next_frame": "piston_13"  , "$frame_time": 2                 },
+  "piston_13@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_14"  , "$frame_time": 0.05              },
+  "piston_14@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_15"  , "$frame_time": 10                },
+  "piston_15@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 96 ] , "$next_frame": "piston_16"  , "$frame_time": 1                 },
+  "piston_16@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_17"  , "$frame_time": 5                 },
+  "piston_17@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_18"  , "$frame_time": 0.05              },
+  "piston_18@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 64 ] , "$next_frame": "piston_19"  , "$frame_time": 2                 },
+  "piston_19@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_110" , "$frame_time": 0.05              },
+  "piston_110@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_111" , "$frame_time": 10                },
+  "piston_111@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 32 ] , "$next_frame": "piston_112" , "$frame_time": 0.05              },
+  "piston_112@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 64 ] , "$next_frame": "piston_113" , "$frame_time": 2                 },
+  "piston_113@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 32 ] , "$next_frame": "piston_114" , "$frame_time": 0.05              },
+  "piston_114@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_10"  , "$frame_time": 1                 },
+
+  "piston_20@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_21"  , "$frame_time": 9.200000000000001 },
+  "piston_21@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 16 ] , "$next_frame": "piston_22"  , "$frame_time": 0.05              },
+  "piston_22@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_23"  , "$frame_time": 2                 },
+  "piston_23@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 16 ] , "$next_frame": "piston_24"  , "$frame_time": 0.05              },
+  "piston_24@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_25"  , "$frame_time": 10                },
+  "piston_25@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_26"  , "$frame_time": 1                 },
+  "piston_26@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_27"  , "$frame_time": 5                 },
+  "piston_27@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 16 ] , "$next_frame": "piston_28"  , "$frame_time": 0.05              },
+  "piston_28@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 32 ] , "$next_frame": "piston_29"  , "$frame_time": 2                 },
+  "piston_29@dropper_pistons.piston_uv_template"  : { "$frame": [ 0, 16 ] , "$next_frame": "piston_210" , "$frame_time": 0.05              },
+  "piston_210@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_211" , "$frame_time": 10                },
+  "piston_211@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 16 ] , "$next_frame": "piston_212" , "$frame_time": 0.05              },
+  "piston_212@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 32 ] , "$next_frame": "piston_213" , "$frame_time": 2                 },
+  "piston_213@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 16 ] , "$next_frame": "piston_214" , "$frame_time": 0.05              },
+  "piston_214@dropper_pistons.piston_uv_template" : { "$frame": [ 0, 0 ]  , "$next_frame": "piston_20"  , "$frame_time": 0.8               }
+}

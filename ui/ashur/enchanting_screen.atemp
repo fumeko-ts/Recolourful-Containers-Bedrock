@@ -18,22 +18,13 @@
   "namespace": "enchanting_screen",
   "enchanting_panel@container_common.container_details": {
     "size": [176, 166],
-    "layer": 5,
     "$screen_controls": [
-      { "extension@rcc-extensions.enchanting_screen": {} },
-      { "common_panel@container_content.enchanting_screen": {} },
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+      { "common_panel@screen_content.enchanting": {} },
+      { "extensions@rcc-extensions.enchanting_screen": {} },
       {
         "portal@screen_content.image_element": {
-          "layer": 5,
-          "texture": "assets/advanced_sprites/animated/enchant.png",
+          "layer": 2,
+          "texture": "assets/variants/animated/enchant.png",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "size": [16, 16],
@@ -60,32 +51,16 @@
                 "controls": [
                   { "left_filler@global.empty_panel": { "size": [1, "fill"] } },
                   {
-                    "enchantments_button_grid": {
-                      "type": "grid",
+                    "enchantments_button_grid@global.empty_grid": {
                       "layer": 6,
                       "size": [108, 57],
                       "collection_name": "#enchant_buttons",
                       "$collection_index|default": 0,
                       "grid_dimensions": [1, 3],
                       "controls": [
-                        {
-                          "button1@enchant_button.button": {
-                            "grid_position": [0, 0],
-                            "$collection_index": 1
-                          }
-                        },
-                        {
-                          "button2@enchant_button.button": {
-                            "grid_position": [0, 1],
-                            "$collection_index": 2
-                          }
-                        },
-                        {
-                          "button3@enchant_button.button": {
-                            "grid_position": [0, 2],
-                            "$collection_index": 3
-                          }
-                        }
+                        { "button1@enchant_button.button": { "grid_position": [0, 0], "$collection_index": 1 } },
+                        { "button2@enchant_button.button": { "grid_position": [0, 1], "$collection_index": 2 } },
+                        { "button3@enchant_button.button": { "grid_position": [0, 2], "$collection_index": 3 } }
                       ]
                     }
                   },
@@ -100,7 +75,6 @@
         "lapis_and_book_stack@global.empty_stack": {
           "orientation": "vertical",
           "size": [90, 64],
-          "layer": 2,
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
@@ -111,9 +85,13 @@
                 "size": [52, 18],
                 "controls": [
                   { "filler_1@global.empty_panel": { "size": [14, "fill"] } },
-                  { "item_input@container_item.container_item": { "$item_collection": "enchanting_input_items" } },
+                  { "item_input@jc_container_item.container_item": { "$item_collection": "enchanting_input_items" } },
                   { "filler_2@global.empty_panel": { "size": [2, "fill"] } },
-                  { "lapis_input@container_item.container_item": { "$item_collection": "enchanting_lapis_items" } }
+                  {
+                    "lapis_input@jc_container_item.container_item": {
+                      "$item_collection": "enchanting_lapis_items"
+                    }
+                  }
                 ]
               }
             }
@@ -124,7 +102,6 @@
         "enchanting_book@global.empty_stack": {
           "orientation": "vertical",
           "size": [53, 46],
-          "layer": 2,
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "controls": [
@@ -143,16 +120,11 @@
                           "enchanting_book@global.custom_renderer": {
                             "$type": "enchanting_book_renderer",
                             "layer": 13,
-                            "offset": [0, 4],
+                            "animation_reset_name": "screen_animation_reset",
+                            "anims": "$renderer_animations",
+                            "offset": [0, 5],
                             "anchor_to": "center",
                             "anchor_from": "center",
-                            "animation_reset_name": "screen_animation_reset",
-                            "anims": [
-                              "@common.screen_exit_size_animation_push",
-                              "@common.screen_exit_size_animation_pop",
-                              "@common.screen_entrance_size_animation_push",
-                              "@common.screen_entrance_size_animation_pop"
-                            ],
                             "bindings": [{ "binding_name": "#open", "binding_type": "global" }]
                           }
                         }
@@ -166,7 +138,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   }

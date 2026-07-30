@@ -19,21 +19,12 @@
   "grindstone_panel@container_common.container_details": {
     "size": [176, 166],
     "$screen_controls": [
-      { "extension@rcc-extensions.grindstone_screen": {} },
-      { "common_panel@container_content.grindstone_screen": {} },
-      {
-        "close@global.close_button": {
-          "offset": [14, -4],
-          "$pressed": "textures/ui/ashur/close_pressed",
-          "$default": "textures/ui/ashur/close_default",
-          "$hover": "textures/ui/ashur/close_hover"
-        }
-      },
+      { "common_panel@screen_content.grindstone": {} },
+      { "extensions@rcc-extensions.grindstone_screen": {} },
       {
         "grindstone_top_stack@global.empty_stack": {
           "orientation": "vertical",
           "size": [176, 57],
-          "layer": 2,
           "anchor_to": "top_middle",
           "anchor_from": "top_middle",
           "controls": [
@@ -49,9 +40,9 @@
                       "orientation": "vertical",
                       "size": [18, 39],
                       "controls": [
-                        { "1@container_item.container_item": { "$item_collection": "grindstone_input_items" } },
+                        { "1@jc_container_item.container_item": { "$item_collection": "grindstone_input_items" } },
                         { "filler_1@global.empty_panel": { "size": ["fill", 3] } },
-                        { "2@container_item.container_item": { "$item_collection": "grindstone_additional_items" } }
+                        { "2@jc_container_item.container_item": { "$item_collection": "grindstone_additional_items" } }
                       ]
                     }
                   },
@@ -63,9 +54,9 @@
                       "controls": [
                         { "filler_1@global.empty_panel": { "size": ["fill", 15] } },
                         {
-                          "result_item_slot@container_item.container_item": {
+                          "result_item_slot@jc_container_item.container_item": {
                             "$item_collection": "grindstone_result_items",
-                            "$button_ref": "button_mappings.grindstone_output_slot_button"
+                            "$button_control": "button_mappings.grindstone_output_button"
                           }
                         },
                         { "filler_2@global.empty_panel": { "size": ["fill", 6] } }
@@ -80,7 +71,7 @@
         }
       },
       {
-        "bottom_section@global.container_bottom_section": {}
+        "inventory_and_hotbar@container_common.container_bottom_section": {}
       }
     ]
   }
