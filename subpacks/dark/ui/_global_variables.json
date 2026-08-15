@@ -53,6 +53,7 @@
   //will add links to each creators pages when i get the chance
   "$is_jei_recipe_book_layout_pack": false,
   "$is_déesse_ui_pack": false,
+  "$is_overcomplicated_brewing_guide": false,
 
   "$pack_scope": "global",
   

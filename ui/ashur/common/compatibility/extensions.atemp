@@ -67,7 +67,7 @@
         "requires": "$is_d\u00e9esse_ui_pack",
         "$compatibility_content|default": "deesse_ui_bridge.desse_main_content"
       }
-/*
+      /*
       ,
      
        // if you want to inject a single element or a tree of elements (like a stack panel)
@@ -151,6 +151,10 @@
       {
         "requires": "$is_d\u00e9esse_ui_pack",
         "$recipe_book_content|default": "d\u00e9esse_brewing.brewing_guide_panel"
+      },
+      {
+        "requires": "$is_overcomplicated_brewing_guide",
+        "$recipe_book_content": "brewing_recipe_book.recolourful_recipe_book"
       }
     ],
     "$recipe_book_content|default": "rcc-extensions.empty_panel",
