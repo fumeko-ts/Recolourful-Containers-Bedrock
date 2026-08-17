@@ -16,10 +16,13 @@
   "$use_container_ui_animations": true,
   //if true will unlock villager trades
   "$use_unlocked_villager_trades": false,
+  //if true will show villager trades
+  "$use_view_villager_trades": false,
   //if true removes the empty bundle text and makes the bundle ui more compact
   "$use_slim_bundle_tooltips": true,
+  //if true will make the tooltip text have shadow
+  "$use_tooltip_text_shadow": false,
 
-  
   //title text color
   "$container_title_color": [0.247, 0.247, 0.247],
 
@@ -50,16 +53,16 @@
   "$iron_shovel_item_index": 298,
 
   //enchanting table text colors
-  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
+  "$xp_price_color_enabled_state": [0.475, 0.95, 0.11875],
   "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
 
-  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
+  "$xp_price_color_disabled_state": [0.318, 0.475, 0.216],
   "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
 
-  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
-  "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
+  "$runes_disabled_color": [0.2, 0.18, 0.145],
+  "$runes_enabled_color": [0.2, 0.18, 0.145],
 
-  "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+  "$runes_enabled_hover_color": [0.404, 0.365, 0.286],
 
   //villager label colors    'if needed the wandering traders color can be separated'
   "$villager_name_color": [0.247, 0.247, 0.247, 1.0],

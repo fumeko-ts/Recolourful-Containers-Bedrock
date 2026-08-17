@@ -247,6 +247,6 @@
     "type": "label",
     "size": ["default", "default"],
     "layer": 30,
-    "shadow": true
+    "shadow": "$use_tooltip_text_shadow"
   }
 }

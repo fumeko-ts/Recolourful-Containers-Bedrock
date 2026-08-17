@@ -4,7 +4,7 @@
   "$_pack_name": "recolourful",
   //set UI transparency
   "$container_opacity": 1,
-  "$background_blur_opacity": 0.4,//the base png is transparent
+  "$background_blur_opacity": 0.4, //the base png is transparent
 
   //if true forces the container close buttons to render no matter the input type
   "$show_exit_buttons": false,
@@ -16,9 +16,12 @@
   "$use_container_ui_animations": true,
   //if true will unlock villager trades
   "$use_unlocked_villager_trades": false,
+  //if true will show villager trades
+  "$use_view_villager_trades": false,
   //if true removes the empty bundle text and makes the bundle ui more compact
   "$use_slim_bundle_tooltips": true,
-
+  //if true will make the tooltip text have shadow
+  "$use_tooltip_text_shadow": false,
   
   //title text color
   "$container_title_color": [1, 1, 1],
@@ -70,19 +73,40 @@
 
 
   //enchanting table text colors
-  "$xp_price_color_enabled_state": [0.4941, 0.9882, 0.1255, 1],
+  "$xp_price_color_enabled_state": [0.475, 0.95, 0.11875],
   "$xp_price_shadow_color_enabled_state": [0.1255, 0.2431, 0.0314, 1],
 
-  "$xp_price_color_disabled_state": [0.2471, 0.4941, 0.0627, 1],
+  "$xp_price_color_disabled_state": [0.318, 0.475, 0.216],
   "$xp_price_shadow_color_disabled_state": [0.0627, 0.1216, 0.0157, 1],
 
-  "$runes_disabled_color": [0.2, 0.1804, 0.1451, 1],
-  "$runes_enabled_color": [0.4039, 0.3647, 0.2863, 1],
+  "$runes_disabled_color": [0.2, 0.18, 0.145],
+  "$runes_enabled_color": [0.2, 0.18, 0.145],
 
-  "$runes_enabled_hover_color": [0.988, 0.988, 0.494],
+  "$runes_enabled_hover_color": [0.404, 0.365, 0.286],
 
 
   //vanilla variables
+  "$light_glyph_default_color": [1, 1, 1],
+
+  //Dropdown item background colors
+  "$dropdown_radio_background_unchecked_color": [0.17, 0.17, 0.17],
+  "$dropdown_radio_background_checked_color": [0.22, 0.22, 0.22],
+  "$dropdown_radio_background_hover_color": [0.35, 0.35, 0.35],
+
+  //Store colors
+  "$store_sales_banner_text_color": [1, 1, 1],
+  "$new_offer_icon_text_color": [1, 1, 1],
+  "$store_dark_grey_text_color": [1, 1, 1],
+
+  //Dressing Room colors
+  "$dressing_room_sub_category_seperator_color": [1, 1, 1],
+  "$dressing_room_right_side_dark_text_color": [1, 1, 1],
+  "$dressing_room_dark_button_color": [1, 1, 1],
+
+  //Profile Create Character Picker 
+  "$profile_create_character_selected_color": [1, 1, 1],
+ 
+  //other
   "$light_button_default_text_color": [1, 1, 1],
   "$light_toggle_default_text_color": [1, 1, 1],
   "$light_toggle_checked_default_text_color": [1, 1, 1],
@@ -104,26 +128,5 @@
   "$tab_checked_locked_glyph_color": [1, 1, 1],
   "$tab_checked_locked_hover_glyph_color": [1, 1, 1],
   "$dark_body_text_color": [1, 1, 1],
-  "$book_page_number_color": [0.665, 0.575, 0.475],
-
-  //////// Glyph colors ////////
-  "$light_glyph_default_color": [1, 1, 1],
-
-  //////// Dropdown item background colors ////////
-  "$dropdown_radio_background_unchecked_color": [0.17, 0.17, 0.17],
-  "$dropdown_radio_background_checked_color": [0.22, 0.22, 0.22],
-  "$dropdown_radio_background_hover_color": [0.35, 0.35, 0.35],
-
-  //////// Store colors ////////
-  "$store_sales_banner_text_color": [1, 1, 1],
-  "$new_offer_icon_text_color": [1, 1, 1],
-  "$store_dark_grey_text_color": [1, 1, 1],
-
-  //////// Dressing Room colors ////////
-  "$dressing_room_sub_category_seperator_color": [1, 1, 1],
-  "$dressing_room_right_side_dark_text_color": [1, 1, 1],
-  "$dressing_room_dark_button_color": [1, 1, 1],
-
-  //////// Profile Create Character Picker  ////////
-  "$profile_create_character_selected_color": [1, 1, 1]
+  "$book_page_number_color": [0.665, 0.575, 0.475]
 }
